@@ -178,7 +178,8 @@
   "cidades": [
     {
       "_id": "04f0d774",
-      "cidade": "São Paulo"
+      "cidade": "São Paulo",
+      "uf": "SP"
     }
   ],
   "etapas": [],
@@ -188,5 +189,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:58:23.978Z"
+  "atualizadoEm": "2026-10-07T23:58:27.012Z"
 }
