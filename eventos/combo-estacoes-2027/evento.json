@@ -179,7 +179,8 @@
     {
       "_id": "04f0d774",
       "cidade": "São Paulo",
-      "uf": "SP"
+      "uf": "SP",
+      "regiao": "Sudeste"
     }
   ],
   "etapas": [],
@@ -189,5 +190,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:58:27.012Z"
+  "atualizadoEm": "2026-10-07T23:58:29.470Z"
 }
