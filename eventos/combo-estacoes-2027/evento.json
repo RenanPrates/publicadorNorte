@@ -3,10 +3,144 @@
   "slug": "combo-estacoes-2027",
   "nome": "Combo Estações 2027",
   "formato": "tapume_praca",
-  "paginas": {},
-  "vars": {},
+  "paginas": {
+    "tapume": {
+      "arquivo": "combo-estacoes-tapume.html",
+      "bytes": 639102,
+      "enviadoEm": "2026-10-07T23:27:27.220Z",
+      "convertido": true
+    }
+  },
+  "vars": {
+    "ano": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "total_aberta": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "total_breve": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "regiao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "total_cidades": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "url": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "uf": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_outono": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_inverno": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_primavera": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_verao": {
+      "dono": "cidade",
+      "ignorar": false
+    }
+  },
   "gerais": {},
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "c95bc910",
+      "regiao": "Sudeste",
+      "status": "aberta"
+    },
+    {
+      "_id": "1a07186e",
+      "regiao": "Sudeste",
+      "status": "aberta"
+    },
+    {
+      "_id": "da5bed39",
+      "regiao": "Sudeste",
+      "status": "aberta"
+    },
+    {
+      "_id": "3a307543",
+      "regiao": "Sudeste"
+    },
+    {
+      "_id": "b47a1621",
+      "regiao": "Sudeste"
+    },
+    {
+      "_id": "3794c5e5",
+      "regiao": "Sudeste"
+    },
+    {
+      "_id": "22cbfd30",
+      "regiao": "Sudeste"
+    },
+    {
+      "_id": "85231100",
+      "regiao": "Sul",
+      "status": "aberta"
+    },
+    {
+      "_id": "2f9f4e35",
+      "regiao": "Sul"
+    },
+    {
+      "_id": "103b1441",
+      "regiao": "Sul"
+    },
+    {
+      "_id": "bab90bb4",
+      "regiao": "Nordeste",
+      "status": "aberta"
+    },
+    {
+      "_id": "64aed2a6",
+      "regiao": "Nordeste"
+    },
+    {
+      "_id": "21f61d94",
+      "regiao": "Nordeste"
+    },
+    {
+      "_id": "48fb9ded",
+      "regiao": "Centro-Oeste"
+    },
+    {
+      "_id": "81aa8261",
+      "regiao": "Norte"
+    },
+    {
+      "_id": "0d410c6b",
+      "regiao": "Norte"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -14,5 +148,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:27:19.915Z"
+  "atualizadoEm": "2026-10-07T23:27:38.652Z"
 }
