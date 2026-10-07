@@ -10,7 +10,9 @@ export async function POST(req: Request) {
     await new Promise((r) => setTimeout(r, 800)); // atrasa quem tenta adivinhar
     return erro(401, 'Senha incorreta.');
   }
-  const seguro = new URL(req.url).protocol === 'https:' ? '; Secure' : '';
+  // atrás do proxy da hospedagem o pedido chega como http; o cabeçalho diz o protocolo original
+  const https = req.headers.get('x-forwarded-proto') === 'https' || new URL(req.url).protocol === 'https:';
+  const seguro = https ? '; Secure' : '';
   return new Response(null, {
     status: 204,
     headers: { 'Set-Cookie': `${COOKIE}=${await valorSessao(senha)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 24 * 30}${seguro}` },
