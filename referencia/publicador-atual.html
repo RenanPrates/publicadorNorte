@@ -1,0 +1,1851 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+<title>Publicador de Hotsites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: trilho de passos à esquerda (topo no celular) + painel de trabalho; variáveis sempre como "marca-texto" mono */
+:root{
+  --paper:#F1F2EE; --panel:#FFFFFF; --sunk:#E8EAE4; --ink:#16181D; --mute:#5D626C; --line:#D6D9D1;
+  --accent:#2A3DCF; --accent-ink:#FFFFFF; --accent-soft:#E3E6FB;
+  --mark-bg:#F3E35A; --mark-fg:#2B2600;
+  --ok:#1C7A4C; --ok-soft:#DDF0E5; --warn:#A35A06; --warn-soft:#FBEBD5; --bad:#B42318; --bad-soft:#FBE1DE;
+  --f-ui:"Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:8px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111317; --panel:#191C21; --sunk:#14161A; --ink:#E8E9E5; --mute:#9BA0A9; --line:#2C3038;
+  --accent:#8C99FF; --accent-ink:#0C0F2A; --accent-soft:#232848;
+  --mark-bg:#4E4712; --mark-fg:#FFF2A0;
+  --ok:#5CCB92; --ok-soft:#14301F; --warn:#F0A04B; --warn-soft:#3A2810; --bad:#FF8A7E; --bad-soft:#3D1814;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111317; --panel:#191C21; --sunk:#14161A; --ink:#E8E9E5; --mute:#9BA0A9; --line:#2C3038;
+  --accent:#8C99FF; --accent-ink:#0C0F2A; --accent-soft:#232848;
+  --mark-bg:#4E4712; --mark-fg:#FFF2A0;
+  --ok:#5CCB92; --ok-soft:#14301F; --warn:#F0A04B; --warn-soft:#3A2810; --bad:#FF8A7E; --bad-soft:#3D1814;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.5}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.v{font-family:var(--f-mono);font-size:.86em;background:var(--mark-bg);color:var(--mark-fg);padding:.05em .35em;border-radius:3px;white-space:nowrap}
+.muted{color:var(--mute)}
+.small{font-size:13px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:600}
+
+/* topo */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:16px;padding:12px 20px;max-width:1320px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;background:none;border:0;padding:0;cursor:pointer}
+.brand svg{flex:none}
+.crumb{color:var(--mute);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.versao{font-size:12px;color:var(--mute);font-family:var(--f-mono);white-space:nowrap;margin-left:auto}
+.save{font-size:13px;color:var(--mute);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.save i{width:8px;height:8px;border-radius:50%;background:var(--mute);display:inline-block}
+.save[data-s="ok"] i{background:var(--ok)} .save[data-s="pend"] i{background:var(--warn)} .save[data-s="erro"] i{background:var(--bad)}
+
+/* estrutura */
+.shell{display:grid;grid-template-columns:232px minmax(0,1fr);gap:32px;max-width:1320px;margin:0 auto;padding:28px 20px 80px}
+.shell.home{grid-template-columns:minmax(0,1fr)}
+.rail{position:sticky;top:76px;align-self:start;display:flex;flex-direction:column;gap:2px}
+.rail button{display:grid;grid-template-columns:28px 1fr;align-items:center;gap:10px;text-align:left;padding:9px 10px;border-radius:var(--r);border:0;background:none;cursor:pointer;color:var(--mute)}
+.rail button:hover{background:var(--sunk);color:var(--ink)}
+.rail button[aria-current="step"]{background:var(--panel);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.rail .n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;border:1.5px solid currentColor;font-variant-numeric:tabular-nums}
+.rail .done .n{background:var(--ok);border-color:var(--ok);color:var(--panel)}
+.rail .lbl{font-weight:600;font-size:14px}
+.rail .sub{display:block;font-weight:400;font-size:12px;color:var(--mute)}
+.rail hr{border:0;border-top:1px solid var(--line);margin:12px 4px}
+.rail .back{grid-template-columns:28px 1fr;font-size:13px}
+
+/* painel */
+.main{min-width:0;display:flex;flex-direction:column;gap:24px}
+.head{display:flex;flex-direction:column;gap:8px;max-width:70ch}
+.head h1{font-size:32px;letter-spacing:-.02em;font-weight:700}
+.head p{color:var(--mute);font-size:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.stack{display:flex;flex-direction:column;gap:16px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);cursor:pointer;font-weight:600;font-size:14px;text-decoration:none}
+.btn:hover{border-color:var(--ink)}
+.btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.pri:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;border-color:transparent;color:var(--mute)}
+.btn.ghost:hover{color:var(--ink);background:var(--sunk)}
+.btn.danger{color:var(--bad)}
+.btn.sm{padding:6px 10px;font-size:13px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.iconbtn{width:30px;height:30px;display:inline-grid;place-items:center;border-radius:6px;border:0;background:none;cursor:pointer;color:var(--mute)}
+.iconbtn:hover{background:var(--sunk);color:var(--ink)}
+
+label.f{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
+label.f small{font-weight:400;color:var(--mute)}
+.inp{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+.inp:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft)}
+.inp.big{font-size:20px;font-weight:600;padding:12px 14px}
+
+/* formatos */
+.fmt{position:relative;display:flex;flex-direction:column;gap:12px;padding:18px;border:1.5px solid var(--line);border-radius:12px;background:var(--panel);cursor:pointer;text-align:left}
+.fmt:hover{border-color:var(--mute)}
+.fmt[aria-checked="true"]{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.fmt svg.dg{width:100%;height:96px}
+.dg-k{fill:var(--accent)}
+.fmt .tick svg{display:block}
+.fmt h3{font-size:17px}
+.fmt p{font-size:13.5px;color:var(--mute)}
+.fmt .tick{position:absolute;top:12px;right:12px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center}
+.fmt[aria-checked="true"] .tick{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.dg-box{fill:var(--sunk);stroke:var(--mute);stroke-width:1.2}
+.dg-key{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dg-ln{stroke:var(--mute);stroke-width:1.2;fill:none}
+.dg-t{fill:var(--mute);font:600 9px var(--f-ui);letter-spacing:.06em}
+
+/* páginas */
+.pg{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}
+.pg h3{font-size:19px}
+.drop{border:1.5px dashed var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;color:var(--mute);cursor:pointer;background:var(--sunk)}
+.drop.over{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+.file{display:flex;gap:14px;align-items:center;padding:12px 14px;border-radius:10px;background:var(--sunk);flex-wrap:wrap}
+.file .nm{font-weight:600;min-width:0;overflow-wrap:anywhere}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--sunk);color:var(--mute);white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.warn{background:var(--warn-soft);color:var(--warn)} .pill.bad{background:var(--bad-soft);color:var(--bad)} .pill.acc{background:var(--accent-soft);color:var(--accent)}
+.diff{font-size:13.5px;padding:10px 12px;border-radius:8px;background:var(--accent-soft)}
+
+/* regra */
+.rule{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.rule > div{padding:14px 16px;border-radius:10px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.rule b{font-size:14px}
+.rule p{font-size:13.5px;color:var(--mute)}
+
+/* tabelas */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{font-size:12px;text-align:left;font-weight:600;color:var(--mute);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel);vertical-align:bottom}
+td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.ctx{font-family:var(--f-mono);font-size:12.5px;color:var(--mute);max-width:420px;min-width:220px}
+td.ctx .v{font-size:12px}
+.sel{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+.grid-ed td{padding:0;border-right:1px solid var(--line)}
+.grid-ed td:last-child{border-right:0}
+.grid-ed input,.grid-ed select{width:100%;min-width:140px;border:0;background:none;padding:10px 12px}
+.grid-ed input:focus,.grid-ed select:focus{outline:2px solid var(--accent);outline-offset:-2px;background:var(--accent-soft)}
+.grid-ed input::placeholder{color:var(--mute);opacity:.7}
+.grid-ed .idx{width:44px;min-width:44px;text-align:center;color:var(--mute);font-variant-numeric:tabular-nums;font-size:13px;padding:0 8px}
+.grid-ed .act{width:1%;white-space:nowrap;padding:0 6px}
+.grid-ed th .v{font-size:11.5px}
+.grid-ed .file-col input{font-family:var(--f-mono);font-size:13px}
+.empty{padding:28px;text-align:center;color:var(--mute)}
+
+/* conferir */
+.check{display:grid;grid-template-columns:280px minmax(0,1fr);gap:20px;align-items:start}
+.plist{display:flex;flex-direction:column;gap:2px;max-height:72vh;overflow:auto;padding:6px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.plist button{display:flex;justify-content:space-between;gap:8px;align-items:center;text-align:left;padding:8px 10px;border:0;border-radius:7px;background:none;cursor:pointer}
+.plist button:hover{background:var(--sunk)}
+.plist button[aria-pressed="true"]{background:var(--accent-soft)}
+.plist .t{font-weight:600;font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.plist .a{font-family:var(--f-mono);font-size:11.5px;color:var(--mute);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.plist .ind{padding-left:22px}
+.plist .grp{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding:10px 10px 4px;font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;background:var(--ok)} .dot.w{background:var(--warn)}
+.stage{display:flex;flex-direction:column;gap:10px;min-width:0}
+.frame-wrap{background:var(--sunk);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;justify-content:center;overflow:hidden}
+.frame-wrap{position:relative}
+.frame-wrap iframe{flex:none;border:0;background:#fff;border-radius:6px;box-shadow:0 1px 0 var(--line),0 8px 24px rgba(0,0,0,.08);transform-origin:top left}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--panel);padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;color:var(--mute)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.warns{display:flex;flex-direction:column;gap:8px}
+.w-item{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding:10px 12px;border-radius:8px;font-size:14px}
+.w-item.bad{background:var(--bad-soft)} .w-item.warn{background:var(--warn-soft)} .w-item.info{background:var(--sunk)}
+.w-item b{display:block}
+.w-item .ic{font-weight:700;width:18px;text-align:center}
+.w-item.bad .ic{color:var(--bad)} .w-item.warn .ic{color:var(--warn)}
+
+/* dica (?) */
+.com-dica{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.dica{position:relative;display:inline-flex}
+.dica-btn{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--mute);background:none;color:var(--mute);font-size:12px;font-weight:700;line-height:1;cursor:help;display:grid;place-items:center;padding:0}
+.dica-btn:hover,.dica-btn:focus-visible{border-color:var(--accent);color:var(--accent)}
+.dica-box{position:absolute;z-index:8;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);width:min(300px,80vw);padding:12px 14px;border-radius:10px;background:var(--ink);color:var(--paper);font-size:13.5px;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:opacity .15s}
+.dica-box b{display:block;margin-bottom:4px}
+.dica-box .v{font-size:12px}
+.dica:hover .dica-box,.dica:focus-within .dica-box{opacity:1;visibility:visible}
+@media (max-width:700px){.dica-box{left:auto;right:-8px;transform:none}}
+
+/* variáveis */
+.vgrps{display:flex;flex-direction:column;gap:12px}
+.vgrp{display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:20px;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;align-items:start}
+.vgrp-h h2{font-size:17px;display:flex;align-items:center;gap:8px}
+.vgrp-h p{font-size:13.5px;color:var(--mute);margin-top:4px}
+.cnt{font-size:12px;font-weight:600;color:var(--mute);background:var(--sunk);border-radius:999px;padding:1px 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chipw{position:relative}
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:13.5px;padding:6px 10px;border-radius:6px;border:1px solid transparent;background:var(--mark-bg);color:var(--mark-fg);cursor:pointer}
+.chip:hover,.chip[aria-expanded="true"]{border-color:var(--mark-fg)}
+.chip svg{opacity:.6}
+.chip.off{background:var(--sunk);color:var(--mute);text-decoration:line-through}
+.menu{position:absolute;z-index:6;top:calc(100% + 6px);left:0;min-width:230px;display:flex;flex-direction:column;padding:6px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.menu-t{font-size:12px;color:var(--mute);padding:6px 8px}
+.menu button{text-align:left;border:0;background:none;padding:8px;border-radius:6px;cursor:pointer;font-size:14px}
+.menu button:hover{background:var(--sunk)}
+@media (max-width:700px){.vgrp{grid-template-columns:minmax(0,1fr);gap:12px}}
+
+/* cadastro: colunas */
+.colh{position:relative;padding:0!important}
+.colh.drop-antes{box-shadow:inset 3px 0 0 var(--accent)}
+.colh.drop-depois{box-shadow:inset -3px 0 0 var(--accent)}
+.colh.on .colbtn{background:var(--accent-soft)}
+.colbtn{display:flex;align-items:center;gap:6px;width:100%;padding:10px 12px;border:0;background:none;cursor:grab;color:inherit;font:inherit}
+.colbtn:hover{background:var(--sunk)}
+.grip{color:var(--mute);font-size:10px;letter-spacing:-2px;opacity:.6}
+.fx{font-family:Georgia,serif;font-style:italic;font-weight:700;color:var(--accent);font-size:14px}
+td.calc{position:relative}
+td.calc input::placeholder{color:var(--accent);opacity:.85;font-style:italic}
+td.calc.manual input{font-weight:600}
+.rst{position:absolute;right:4px;top:50%;transform:translateY(-50%);border:0;background:var(--accent-soft);color:var(--accent);border-radius:5px;width:24px;height:24px;cursor:pointer;font-size:13px}
+.colpanel{display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid var(--accent);border-radius:12px;background:var(--panel)}
+.colpanel-h{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+
+/* home: excluir */
+.evw{position:relative;display:flex}
+.evw .ev{flex:1;min-width:0;padding-right:48px}
+.evx{position:absolute;top:12px;right:12px;opacity:.55}
+.evw:hover .evx,.evx:focus-visible{opacity:1}
+.evx:hover{color:var(--bad);background:var(--bad-soft)}
+.evdel{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:18px;border-radius:12px;background:var(--panel);border:1.5px solid var(--bad)}
+.evw.conf .ev{visibility:hidden}
+.btn.danger-fill{background:var(--bad);border-color:var(--bad);color:var(--panel)}
+@media (hover:none){.evx{opacity:1}}
+
+/* imagens */
+.img-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.img-lista{display:flex;flex-direction:column;gap:16px;max-height:78vh;overflow:auto;padding-right:4px}
+.img-sec{display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.img-sec h2{font-size:16px}
+.img-slot{display:flex;flex-direction:column;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
+.img-slot:first-of-type{border-top:0;padding-top:0}
+.img-slot-h{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.img-alvo{display:flex;flex-direction:column;gap:6px}
+.img-quem{font-size:13px;font-weight:600}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.thumb{flex:none;width:104px;display:flex;flex-direction:column;gap:4px;padding:4px;border:2px solid transparent;border-radius:10px;background:var(--sunk);cursor:pointer;text-align:left}
+.thumb video{width:100%;height:68px;object-fit:cover;border-radius:6px;background:var(--line);display:block}
+.thumb img{width:100%;height:68px;object-fit:cover;border-radius:6px;background:var(--line);display:block}
+.thumb span{font-size:11px;color:var(--mute);font-family:var(--f-mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thumb:hover{border-color:var(--line)}
+.thumb[aria-checked="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.img-grid .stage{position:sticky;top:76px}
+@media (max-width:980px){.img-grid{grid-template-columns:minmax(0,1fr)}.img-lista{max-height:none}.img-grid .stage{position:static}}
+
+/* ações da linha sempre à vista */
+.grid-ed th.act,.grid-ed td.act{position:sticky;right:0;z-index:2;background:var(--panel);box-shadow:-1px 0 0 var(--line)}
+.grid-ed th.idx,.grid-ed td.idx{position:sticky;left:0;z-index:2;background:var(--panel);box-shadow:1px 0 0 var(--line)}
+/* cadastro com prévia */
+.cad-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:20px;align-items:start}
+.cad-main{min-width:0}
+.cad-prev{position:sticky;top:76px;display:flex;flex-direction:column;gap:10px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);max-height:calc(100vh - 96px);overflow:auto}
+.cad-prev-h{display:flex;justify-content:space-between;align-items:center}
+.cad-prev .frame-wrap{padding:8px}
+@media (max-width:1180px){.cad-grid{grid-template-columns:minmax(0,1fr)}.cad-prev{position:static;max-height:none}}
+
+/* publicar */
+.files{columns:2 220px;font-family:var(--f-mono);font-size:13px;margin:0;padding:0;list-style:none}
+.files li{padding:3px 0;break-inside:avoid;overflow-wrap:anywhere}
+.hist{display:flex;flex-direction:column}
+.hist div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}
+.hist div:last-child{border-bottom:0}
+
+/* home */
+.evs{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.ev{display:flex;flex-direction:column;gap:12px;text-align:left;padding:18px;border-radius:12px;background:var(--panel);border:1px solid var(--line);cursor:pointer}
+.ev:hover{border-color:var(--ink)}
+.ev h3{font-size:18px}
+.ev .meta{display:flex;gap:6px;flex-wrap:wrap}
+.ev .foot{font-size:12.5px;color:var(--mute);margin-top:auto}
+.ev.new{border-style:dashed;align-items:center;justify-content:center;color:var(--mute);min-height:150px;font-weight:600}
+.ev.new:hover{color:var(--ink)}
+
+.navfoot{display:flex;justify-content:space-between;gap:12px;padding-top:8px;border-top:1px solid var(--line);flex-wrap:wrap}
+.confirm{display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);opacity:0;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:8px;font-size:14px;font-weight:500;transition:.2s;pointer-events:none;z-index:20;max-width:calc(100vw - 32px)}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+@media (max-width:860px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:16px}
+  .rail{position:static;flex-direction:row;overflow-x:auto;gap:4px;padding-bottom:4px;margin:0 -4px}
+  .rail button{grid-template-columns:24px auto;flex:none;padding:8px 10px}
+  .rail .sub,.rail hr{display:none}
+  .rail .n{width:22px;height:22px;font-size:11px}
+  .check{grid-template-columns:minmax(0,1fr)}
+  .plist{max-height:260px}
+  .head h1{font-size:26px}
+  .pg{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="top"><div class="top-in">
+  <button class="brand" id="toHome" type="button" aria-label="Ir para a lista de eventos">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" rx="6" fill="var(--ink)"/><path d="M8 18V8l10 10V8" stroke="var(--paper)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Publicador</span>
+  </button>
+  <span class="crumb" id="crumb"></span>
+  <span class="versao" title="Versão do publicador">v. 07/10 · 18h30</span>
+  <span class="save" id="save" data-s="ok"><i></i><span>Conectando…</span></span>
+</div></header>
+<div class="shell" id="shell"><nav class="rail" id="rail" aria-label="Passos"></nav><main class="main" id="main"></main></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="jszip.min.js"></script>
+<script>
+/* ============ base ============ */
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const slug = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const uid = () => Math.random().toString(36).slice(2, 10);
+const fmtData = iso => { try { return new Date(iso).toLocaleString('pt-BR', {day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'}); } catch { return ''; } };
+const kb = n => n > 1048576 ? (n/1048576).toFixed(1).replace('.', ',') + ' MB' : Math.max(1, Math.round(n/1024)) + ' KB';
+function toast(msg){ const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('on'), 2600); }
+
+const FORMATOS = {
+  unica: {nome:'One page', desc:'Página única, sem variáveis. Publica o HTML do jeito que ele é.', paginas:['unica']},
+  tapume_praca: {nome:'Tapume + praça', desc:'Uma página home que lista páginas internas por cidade.', paginas:['tapume','praca']},
+  tapume_etapa_praca: {nome:'Tapume + praça + etapa', desc:'Uma página home, um seletor de etapa e uma interna.', paginas:['tapume','praca','etapa']},
+};
+// nome e explicação de cada página mudam conforme o formato
+function pag(k){
+  const tres = S.ev && temEtapa(S.ev);
+  return ({
+    unica:  {nome:'Página', desc:'O HTML é publicado como está, num index.html.'},
+    tapume: {nome:'Tapume', desc:'A página home. Gera uma página só, o index.html.'},
+    praca:  tres ? {nome:'Praça', desc:'A página de cada cidade, com a escolha da etapa. Vira uma página para cada cidade.'}
+                 : {nome:'Praça', desc:'A página interna. Vira uma página para cada cidade cadastrada.'},
+    etapa:  {nome:'Etapa', desc:'A página interna de cada etapa. Vira uma página para cada etapa de cada cidade.'},
+  })[k] || {nome:k, desc:''};
+}
+const PASSOS = [
+  ['evento', 'Evento', 'Nome e formato'],
+  ['paginas', 'Páginas', 'Subir os HTMLs'],
+  ['variaveis', 'Variáveis', 'O que muda em cada página'],
+  ['cadastro', 'Cadastro', 'Valores de cada cidade'],
+  ['imagens', 'Mídia', 'Trocar imagens e vídeos'],
+  ['conferir', 'Conferir', 'Prévia e avisos'],
+  ['publicar', 'Publicar', 'Gerar os arquivos'],
+];
+const passosDo = ev => PASSOS.filter(([k]) => ev?.formato !== 'unica' || !['variaveis', 'cadastro', 'imagens'].includes(k));
+const passoTxt = k => { const l = passosDo(S.ev), i = l.findIndex(p => p[0] === k); return `Passo ${i + 1} de ${l.length}`; };
+const DONO = {geral:'Geral do evento', etapa:'Por etapa', cidade:'Por cidade', auto:'Automática'};
+
+/* ============ variáveis ============ */
+// @nome, @nome_N ou @{nome} (chaves quando vem texto colado depois: @{parcelamento_1}x).
+// Tudo que começa com @ é variável, exceto: e-mail (x@y), pacote npm (/@scope/), comentários,
+// at-rules de CSS dentro de <style> e chaves de JSON-LD.
+const RX = /(?<![\w.@-])@(?:\{([A-Za-z][A-Za-z0-9_]*?)(?:_(\d+))?\}|([A-Za-z][A-Za-z0-9]*(?:_[A-Za-z][A-Za-z0-9]*)*)(?:_(\d+))?(?![\w]))/g;
+const CSS_AT = new Set(['media','import','font','keyframes','supports','charset','page','namespace','container','layer','property','counter','viewport','document','scope','starting','tailwind','apply','top','bottom','left','right']);
+const LD_KEYS = new Set(['context','type','id','graph','vocab','language','list','set','value','base','reverse','index','container','nest','json']);
+const parteRx = m => ({base:(m[1] || m[3]).toLowerCase(), num:(m[2] || m[4]) ? +(m[2] || m[4]) : null});
+// cdn.../npm/@scope/pacote não é variável
+const pacote = (src, i, tok) => src[i - 1] === '/' && src[i + tok.length] === '/';
+function faixas(src, rx){ const r = []; rx.lastIndex = 0; let m; while ((m = rx.exec(src))) r.push([m.index, m.index + m[0].length]); return r; }
+// comentários (<!-- -->, /* */) são explicação do designer: nunca viram variável
+const comentarios = src => faixas(src, /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\//g);
+function zonas(src){
+  return {com:comentarios(src), css:faixas(src, /<style\b[\s\S]*?<\/style>|\sstyle\s*=\s*"[^"]*"/gi), ld:faixas(src, /<script[^>]*ld\+json[^>]*>[\s\S]*?<\/script>/gi)};
+}
+const dentro = (rs, i) => rs.some(([a, b]) => i >= a && i < b);
+// @cidade_N escrito com N literal é documentação, não variável
+const modelo = base => /_n$/.test(base);
+const ehVar = (src, z, at, tok, base) => !(pacote(src, at, tok) || modelo(base) || dentro(z.com, at) || (CSS_AT.has(base) && dentro(z.css, at)) || (LD_KEYS.has(base) && dentro(z.ld, at)));
+
+/* ---- blocos: <!-- @repetir cidades -->, <!-- @agrupar por regiao -->, <!-- @se status = aberta -->, <!-- @senao -->, <!-- @fim --> ---- */
+const MARCA = /<!--\s*@(repetir|agrupar|se|senao|fim)\b([\s\S]*?)-->/g;
+const nomeCol = s => String(s || '').trim().replace(/^@/, '').toLowerCase().replace(/[^a-z0-9_]/g, '');
+function blocos(src){
+  const raiz = {t:'raiz', filhos:[]}, pilha = [raiz], erros = [];
+  const topo = () => pilha[pilha.length - 1];
+  const destino = n => n.t === 'se' && n.emSenao ? n.senao : n.filhos;
+  let ult = 0, m; MARCA.lastIndex = 0;
+  while ((m = MARCA.exec(src))) {
+    if (m.index > ult) destino(topo()).push({t:'txt', s:src.slice(ult, m.index)});
+    ult = m.index + m[0].length;
+    const kw = m[1], arg = m[2].trim();
+    if (kw === 'repetir') { const n = {t:'repetir', alvo:/etapa/i.test(arg) ? 'etapa' : 'cidade', filhos:[]}; destino(topo()).push(n); pilha.push(n); }
+    else if (kw === 'agrupar') { const n = {t:'agrupar', col:nomeCol(arg.replace(/^por\s+/i, '')).replace(/_\d+$/, ''), filhos:[]}; destino(topo()).push(n); pilha.push(n); }
+    else if (kw === 'se') {
+      const mm = arg.match(/^@?([A-Za-z][\w]*)\s*(!=|=)?\s*([\s\S]*)$/) || [];
+      const n = {t:'se', col:nomeCol(mm[1]).replace(/_\d+$/, ''), op:mm[2] || '', val:(mm[3] || '').trim(), filhos:[], senao:[], emSenao:false};
+      if (!n.col) erros.push('@se sem coluna'); destino(topo()).push(n); pilha.push(n);
+    }
+    else if (kw === 'senao') { const n = topo(); if (n.t !== 'se' || n.emSenao) erros.push('@senao fora de um @se'); else n.emSenao = true; }
+    else { if (pilha.length === 1) erros.push('um @fim a mais'); else pilha.pop(); }
+  }
+  if (ult < src.length) destino(topo()).push({t:'txt', s:src.slice(ult)});
+  pilha.slice(1).forEach(n => erros.push('@' + (n.t === 'se' ? 'se ' + n.col : n.t) + ' sem @fim'));
+  return {raiz, erros};
+}
+// percorre os textos dizendo se estão dentro de um bloco que repete (e de quê)
+function andar(nos, laco, fn, extra){
+  for (const n of nos) {
+    if (n.t === 'txt') fn(n.s, laco);
+    else if (n.t === 'repetir') andar(n.filhos, n.alvo, fn, extra);
+    else if (n.t === 'agrupar') { extra && extra(n, laco); andar(n.filhos, laco || 'cidade', fn, extra); }
+    else if (n.t === 'se') { extra && extra(n, laco); andar(n.filhos, laco, fn, extra); andar(n.senao, laco, fn, extra); }
+  }
+}
+function acharVars(html){
+  const out = [];
+  andar(blocos(html).raiz.filhos, null, (s, laco) => {
+    const z = zonas(s); RX.lastIndex = 0; let m;
+    while ((m = RX.exec(s))) { const {base, num} = parteRx(m); if (ehVar(s, z, m.index, m[0], base)) out.push({tok:m[0], base, num, laco}); }
+  }, (n, laco) => { if (n.col) out.push({tok:'@' + n.col, base:n.col, num:null, laco:laco || 'cidade', sint:true, opc:n.t === 'se' && n.op ? n.val : null}); });
+  return out;
+}
+// @total_cidades/pracas/etapas e @total_<status> são contagens; outros @total_… (ex.: @total_categorias) são variáveis comuns
+const STATUS_CONHECIDOS = ['breve', 'em_breve', 'aberta', 'aberto', 'abertas', 'encerrada', 'encerrado', 'esgotada', 'esgotado', 'adiada', 'cancelada'];
+const AUTO_TOTAL = {test: b => { const m = /^total_(\w+)$/.exec(b); if (!m) return false; const q = m[1];
+  return ['cidades', 'pracas', 'etapas'].includes(q) || STATUS_CONHECIDOS.includes(q) || [...(S.opcoes?.status || [])].some(o => slug(o).replace(/-/g, '_') === q); }};
+const raizAbrev = (base, det) => { if (!/_abrev$/.test(base)) return null; const r = base.slice(0, -6); return det.has(r) ? r : null; };
+const abreviar = v => { const s = String(v || '').trim(); return s.length > 3 ? s.slice(0, 3) : s; };
+
+/* ============ estado ============ */
+const S = {prevAberta:true, chip:null, colMenu:null, novaCol:null, db:null, assets:null, downloads:null, pronto:false, eventos:[], ev:null, passo:'evento', html:{}, carregando:{}, diffs:{}, sel:0, device:'cel', confirm:null};
+
+function novoEvento(){
+  return {id:'ev-' + uid(), nome:'', formato:'tapume_praca', paginas:{}, vars:{}, gerais:{}, etapas:[], cidades:[], baseUrl:'', publicacoes:[], criadoEm:new Date().toISOString(), atualizadoEm:new Date().toISOString()};
+}
+const paginasDo = ev => FORMATOS[ev.formato].paginas;
+const temEtapa = ev => ev.formato === 'tapume_etapa_praca';
+const unica = ev => ev.formato === 'unica';
+
+/* detecção consolidada de todas as páginas do evento */
+function deteccao(){
+  const ev = S.ev, mapa = new Map(); S.opcoes = {};
+  for (const k of ['praca', 'etapa', 'tapume']) {
+    if (!paginasDo(ev).includes(k) || S.html[k] == null) continue;
+    for (const o of acharVars(S.html[k])) {
+      let d = mapa.get(o.base);
+      if (!d) { d = {base:o.base, por:{}, numerada:false, laco:null, nums:new Set()}; mapa.set(o.base, d); }
+      if (!o.sint) d.por[k] = (d.por[k] || 0) + 1; else d.por[k] = d.por[k] || 0;
+      if (o.num != null) { d.numerada = true; d.nums.add(o.num); }
+      if (o.laco) d.laco = d.laco || o.laco;
+      if (o.opc) (S.opcoes[o.base] = S.opcoes[o.base] || new Set()).add(o.opc);
+    }
+  }
+  // @total_breve também diz que "breve" é um status válido
+  if (S.opcoes.status) {
+    for (const b of mapa.keys()) { const m = b.match(/^total_(\w+)$/); if (m && STATUS_CONHECIDOS.includes(m[1])) S.opcoes.status.add(m[1] === 'em_breve' ? 'breve' : m[1].replace(/_/g, ' ')); }
+    // status: "em breve" é o padrão e sempre existe; "aberta" é a outra opção
+    const ops = [...S.opcoes.status].filter(o => !['breve', 'em-breve'].includes(slug(o)));
+    S.opcoes.status = new Set(['breve', ...(ops.length ? ops : ['aberta'])]);
+  }
+  return mapa;
+}
+function inferirDono(d, det){
+  if (d.base === 'url' || AUTO_TOTAL.test(d.base) || raizAbrev(d.base, det)) return 'auto';
+  if (d.laco) return d.laco === 'etapa' && temEtapa(S.ev) ? 'etapa' : 'cidade';
+  if (!d.numerada) return 'geral';
+  // home → cidade → etapa: o que só aparece na página da etapa é da etapa
+  if (temEtapa(S.ev)) return d.por.etapa && !d.por.praca && !d.por.tapume ? 'etapa' : 'cidade';
+  return 'cidade';
+}
+function sincronizarVars(){
+  const det = deteccao();
+  // o tipo é deduzido de novo a cada envio, até alguém escolher na mão
+  for (const d of det.values()) {
+    let v = S.ev.vars[d.base];
+    if (!v) v = S.ev.vars[d.base] = {dono:inferirDono(d, det), ignorar:false};
+    else if (!v.manual) v.dono = inferirDono(d, det);
+    if (v.formula === undefined && FORMULAS_PADRAO[d.base]) v.formula = FORMULAS_PADRAO[d.base];
+  }
+  return det;
+}
+function colunas(dono){
+  const det = deteccao(), ev = S.ev;
+  const extras = Object.keys(ev.vars).filter(b => ev.vars[b].extra && !det.has(b));
+  const lista = [...det.keys(), ...extras].filter(b => b !== 'url' && !ehImg(b) && ev.vars[b] && !ev.vars[b].excluida && !ev.vars[b].ignorar && ev.vars[b].dono === dono);
+  const ordem = ev.ordem?.[dono] || [];
+  const peso = b => { const i = ordem.indexOf(b); if (i >= 0) return i; const j = ORDEM_PADRAO.indexOf(b); return 1000 + (j >= 0 ? j : 500); };
+  return lista.map((b, i) => [b, i]).sort((a, b) => peso(a[0]) - peso(b[0]) || a[1] - b[1]).map(x => x[0]);
+}
+
+/* ---- colunas calculadas ---- */
+// sugestões: aplicadas quando a variável aparece pela primeira vez; dá para trocar ou tirar no cadastro
+const FORMULAS_PADRAO = {
+  preco_vista:'parcelamento * valor_parcelado',
+  // à vista também funciona: digitou o preço à vista e o parcelamento, a parcela sai sozinha
+  valor_parcelado:'preco_vista / parcelamento',
+  preco_comum:'preco_vista / (1 - porcentagem_desconto / 100)',
+  desconto_em_reais:'preco_comum - preco_vista',
+  preco_prime_parcelado:'preco_prime / parcelamento',
+  valor_adicional_prime:'preco_prime - preco_vista',
+};
+const ORDEM_PADRAO = ['cidade','uf','regiao','status','local','data_inicio','data_fim','gratuito','mes_outono','mes_inverno','mes_primavera','mes_verao','parcelamento','valor_parcelado','preco_vista','porcentagem_desconto','preco_comum','desconto_em_reais','preco_prime','preco_prime_parcelado','valor_adicional_prime','link_inscricao','link_inscricao_prime'];
+function numBR(x){
+  let s = String(x ?? '').replace(/R\$|\s|%/g, '').replace(/x$/i, '');
+  if (!s) return null;
+  if (s.includes(',')) s = s.replace(/\./g, '').replace(',', '.');
+  else if (/^-?\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
+  const n = Number(s); return Number.isFinite(n) ? n : null;
+}
+function fmtBR(n){
+  const r = Math.round(n * 100) / 100, inteiro = Math.abs(r - Math.round(r)) < 1e-9;
+  return r.toLocaleString('pt-BR', {minimumFractionDigits:inteiro ? 0 : 2, maximumFractionDigits:2});
+}
+// + − * / e parênteses; nomes = outras colunas
+function avaliar(expr, get){
+  const t = String(expr || '').match(/\d+(?:[.,]\d+)?|[A-Za-z_]\w*|[-+*/()×÷]/g) || [];
+  let i = 0; const peek = () => t[i], next = () => t[i++];
+  const prim = () => {
+    const k = next();
+    if (k === '(') { const v = soma(); if (next() !== ')') throw 0; return v; }
+    if (k === '-') return -prim();
+    if (k === undefined) throw 0;
+    if (/^\d/.test(k)) return parseFloat(k.replace(',', '.'));
+    if (!/^[A-Za-z_]/.test(k)) throw 0;
+    const v = get(k.toLowerCase()); if (v == null) throw 0; return v;
+  };
+  const prod = () => { let v = prim(); while (['*', '/', '×', '÷'].includes(peek())) { const o = next(), r = prim(); v = o === '*' || o === '×' ? v * r : v / r; } return v; };
+  const soma = () => { let v = prod(); while (peek() === '+' || peek() === '-') { const o = next(), r = prod(); v = o === '+' ? v + r : v - r; } return v; };
+  try { const v = soma(); return i < t.length || !Number.isFinite(v) ? null : v; } catch { return null; }
+}
+const numerica = base => !!S.ev.vars[base]?.formula || Object.values(S.ev.vars).some(v => v.formula && nomesFormula(v.formula).includes(base));
+const nomesFormula = f => [...new Set((String(f || '').match(/[A-Za-z_]\w*/g) || []).map(x => x.toLowerCase()))];
+// valor final de uma coluna: o que foi digitado; se vazio e houver fórmula, o cálculo
+function valorDe(it, base, vistos){
+  const v = S.ev.vars[base];
+  if (v?.excluida) return '';
+  if (ehImg(base)) return valorImagem(base, v?.dono === 'geral' ? null : it);
+  // dentro de uma conta, a própria coluna (e quem depende dela) conta como vazia: evita conta circular
+  if (vistos?.has(base)) return '';
+  const bruto = v?.dono === 'geral' || !it ? S.ev.gerais[base] : it[base];
+  if (bruto != null && String(bruto).trim() !== '') {
+    // número digitado em coluna de conta sai no mesmo formato do calculado (1720 → 1.720)
+    const t = String(bruto).trim();
+    if (/^-?[\d.]+(,\d+)?$/.test(t) && numerica(base)) { const n = numBR(t); if (n != null) return fmtBR(n); }
+    return t;
+  }
+  if (base === 'status' && it && S.opcoes?.status) return 'breve';  // sem status = em breve
+  if (!v?.formula || vistos?.has(base)) return '';
+  const s = new Set(vistos || []); s.add(base);
+  const r = avaliar(v.formula, nome => numBR(valorDe(S.ev.vars[nome]?.dono === 'geral' ? null : it, nome, s)));
+  return r == null ? '' : fmtBR(r);
+}
+const calculado = (it, base) => { const v = S.ev.vars[base]; if (!v?.formula) return ''; const r = avaliar(v.formula, n => numBR(valorDe(S.ev.vars[n]?.dono === 'geral' ? null : it, n, new Set([base])))); return r == null ? '' : fmtBR(r); };
+
+/* nomes e arquivos */
+const PREF = {cidade:['cidade','praca','nome','local'], etapa:['etapa','nome','estacao','titulo']};
+function nomeItem(tipo, item, i){
+  for (const p of PREF[tipo]) if (item[p]) return item[p];
+  const c = colunas(tipo);
+  // a coluna de nome existe mas está vazia: não usa outra coluna (ex.: UF) como nome
+  if (!PREF[tipo].some(p => c.includes(p))) for (const k of c) if (item[k]) return item[k];
+  return (tipo === 'etapa' ? 'Etapa ' : 'Cidade ') + (i + 1);
+}
+
+function idxDe(tipo, item){ return (tipo === 'etapa' ? S.ev.etapas : S.ev.cidades).indexOf(item); }
+function arqPadrao(tipo, item){
+  if (tipo === 'etapa') {
+    const e = slug(nomeItem('etapa', item, idxDe('etapa', item))) || 'etapa-' + (idxDe('etapa', item) + 1);
+    const c = S.ev.cidades.find(x => x._id === item._cidade);
+    return (c ? arquivo('cidade', c).replace(/\.html?$/i, '') + '-' : '') + e + '.html';
+  }
+  return (slug(nomeItem('cidade', item, idxDe('cidade', item))) || 'cidade-' + (idxDe('cidade', item) + 1)) + '.html';
+}
+const arquivo = (tipo, item) => (item._arquivo || '').trim() || arqPadrao(tipo, item);
+const etapasDa = c => S.ev.etapas.filter(e => e._cidade === c._id);
+const cidadeDa = e => S.ev.cidades.find(c => c._id === e._cidade);
+
+/* ============ geração ============ */
+// @media_… pode virar imagem ou vídeo: <img> com vídeo vira <video>, <video> com imagem vira <img>
+const ATTR_VIDEO = /\s(autoplay|muted|loop|playsinline|controls|preload|poster)(=("[^"]*"|'[^']*'|\S+))?/gi;
+function ajustarTagsMidia(html){
+  let mudou = false;
+  const VID = /\.(?:mp4|webm)(?:[?#][^"']*)?$/i, IMG = /\.(?:webp|png|jpe?g|gif|avif|svg)(?:[?#][^"']*)?$/i;
+  const paraVideo = (attrs, q, src) => {
+    mudou = true;
+    const at = attrs.replace(/\salt=("[^"]*"|'[^']*')/i, (x, v) => ' aria-label=' + v).replace(/\s(srcset|sizes|loading|decoding|fetchpriority)=("[^"]*"|'[^']*')/gi, '').replace(/\s*\/$/, '');
+    return `<video${at} src=${q}${src}${q} data-pub-midia autoplay muted loop playsinline></video>`;
+  };
+  // <picture> cujo <img> virou vídeo: o vídeo ocupa o lugar do <picture> inteiro (vídeo não funciona dentro de <picture>)
+  html = html.replace(/<picture\b[^>]*>([\s\S]*?)<\/picture>/gi, (todo, dentro) => {
+    const im = dentro.match(/<img\b([^>]*?)\bsrc=(["'])([^"']+)\2([^>]*)>/i);
+    if (im && VID.test(im[3])) return paraVideo(im[1] + im[4], im[2], im[3]);
+    // <source> com vídeo dentro de <picture> não toca: sai, e fica a imagem
+    const limpo = dentro.replace(/<source\b[^>]*\bsrcset=(["'])([^"']+)\1[^>]*>/gi, (t, q, u) => VID.test(u) ? (mudou = true, '') : t);
+    return todo.replace(dentro, limpo);
+  });
+  html = html
+    .replace(/<img\b([^>]*?)(?<![\w-])src=(["'])([^"']+)\2([^>]*?)\/?>/gi, (t, a, q, src, b) => VID.test(src) ? paraVideo(a + b, q, src) : t)
+    .replace(/<video\b([^>]*?)(?<![\w-])src=(["'])([^"']+)\2([^>]*)>[\s\S]*?<\/video>/gi, (t, a, q, src, b) => {
+      if (!IMG.test(src)) return t;
+      mudou = true;
+      const at = (a + b).replace(ATTR_VIDEO, '').replace(/\sdata-pub-midia/g, '').replace(/\saria-label=("[^"]*"|'[^']*')/i, (x, v) => ' alt=' + v);
+      return `<img${at} src=${q}${src}${q}${/\salt=/.test(at) ? '' : ' alt=""'} data-pub-midia>`;
+    });
+  // o vídeo que entrou no lugar de uma imagem ocupa o mesmo espaço que ela ocupava
+  if (mudou) {
+    const css = '<style>video[data-pub-midia],img[data-pub-midia]{display:block;width:100%;height:100%;object-fit:cover}</style>';
+    html = /<\/head>/i.test(html) ? html.replace(/<\/head>/i, css + '</head>') : css + html;
+  }
+  return html;
+}
+function montar(kind, ctx, nomePag, avisos, faltaG, vazios){
+  const R = {faltas:new Set(), fora:new Set(), faltaG};
+  const {raiz, erros} = blocos(S.html[kind]);
+  if (erros.length) avisos.push({nivel:'bad', pag:nomePag, titulo:pag(kind).nome + ': blocos do HTML mal fechados', det:erros.join(' · ') + '. Corrija no HTML e envie de novo.', passo:'paginas'});
+  const out = renderNos(raiz.filhos, {...ctx, kind}, R);
+  if (R.faltas.size) { avisos.marcadas = (avisos.marcadas || 0) + 1; for (const f of R.faltas) { const [t, quem] = f.split(' ('); const k = t.replace(/[{}]/g, '').replace(/_\d+$/, ''); if (!vazios.has(k)) vazios.set(k, new Set()); vazios.get(k).add(quem ? quem.replace(/\)$/, '') : nomePag); } }
+  if (R.fora.size) avisos.push({nivel:'warn', pag:nomePag, titulo:nomePag + ': a página tem mais espaços do que itens cadastrados', det:'Ficam vazios: ' + [...R.fora].join(', ') + '. Para não sobrar espaço, use um bloco que se repete.', passo:'cadastro'});
+  return out;
+}
+const renderNos = (nos, ctx, R) => nos.map(n => renderNo(n, ctx, R)).join('');
+function escopo(alvo, ctx){
+  if (alvo === 'etapa') { const c = ctx.cidade || (ctx.item && ctx.tipoItem === 'cidade' ? ctx.item : null); return c ? etapasDa(c) : S.ev.etapas; }
+  return ctx.listaG || S.ev.cidades;
+}
+function renderNo(n, ctx, R){
+  if (n.t === 'txt') return trocar(n.s, ctx, R);
+  if (n.t === 'repetir') return escopo(n.alvo, ctx).map(it => renderNos(n.filhos, {...ctx, item:it, tipoItem:n.alvo}, R)).join('');
+  if (n.t === 'agrupar') {
+    const grupos = new Map();
+    for (const c of escopo('cidade', ctx)) { const v = String(c[n.col] || '').trim(); if (!grupos.has(v)) grupos.set(v, []); grupos.get(v).push(c); }
+    if (grupos.has('')) R.faltas.add('@' + n.col + ' (' + grupos.get('').map(c => nomeItem('cidade', c, idxDe('cidade', c))).join(', ') + ')');
+    return [...grupos].map(([v, itens]) => renderNos(n.filhos, {...ctx, grupo:{col:n.col, valor:v}, listaG:itens, item:null}, R)).join('');
+  }
+  if (n.t === 'se') {
+    const v = valorCol(n.col, ctx);
+    const sl = x => slug(x) === 'em-breve' ? 'breve' : slug(x);
+    let ok = n.op ? sl(v) === sl(n.val) : !!String(v || '').trim() && !['nao', 'no', 'false', '0'].includes(slug(v));
+    if (n.op === '!=') ok = !ok;
+    return renderNos(ok ? n.filhos : n.senao, ctx, R);
+  }
+  return '';
+}
+function valorCol(col, ctx){
+  const v = S.ev.vars[col];
+  if (ctx.item && (col in ctx.item || v?.formula) && v?.dono !== 'geral') return valorDe(ctx.item, col);
+  if (ctx.grupo && ctx.grupo.col === col) return ctx.grupo.valor;
+  if (v?.dono === 'etapa' && ctx.etapa) return valorDe(ctx.etapa, col);
+  if (v?.dono === 'cidade' && ctx.cidade) return valorDe(ctx.cidade, col);
+  if (ctx.cidade && col in ctx.cidade) return valorDe(ctx.cidade, col);
+  return valorDe(null, col);
+}
+// contagens: @total_cidades e @total_<status>, dentro do grupo atual quando houver
+function contar(base, ctx){
+  const lista = ctx.listaG || S.ev.cidades;
+  const q = base.slice(6);
+  if (q === 'cidades' || q === 'pracas') return String(lista.length);
+  if (q === 'etapas') return String(escopo('etapa', ctx).length);
+  const norm = x => { const k = slug(x).replace(/-/g, '_'); return k === 'em_breve' ? 'breve' : k; };
+  return String(lista.filter(c => norm(valorDe(c, 'status')) === norm(q)).length);
+}
+function trocar(src, ctx, R){
+  const z = zonas(src);
+  return src.replace(RX, (tok, b1, n1, b2, n2, at) => {
+    const base = (b1 || b2).toLowerCase(), n = n1 || n2;
+    if (!ehVar(src, z, at, tok, base)) return tok;
+    const v = S.ev.vars[base];
+    if (!v || v.ignorar) return tok;
+    const r = resolver(base, n ? +n : null, tok, ctx, R);
+    return r == null ? tok : esc(r);
+  });
+}
+function resolver(base, num, tok, ctx, R){
+  const ev = S.ev, v = ev.vars[base], idx = num || 1;
+  if (v.excluida) return '';
+  const quem = (tipo, it) => ' (' + nomeItem(tipo, it, idxDe(tipo, it)) + ')';
+  if (AUTO_TOTAL.test(base)) return contar(base, ctx);
+  const raiz = /_abrev$/.test(base) && ev.vars[base.slice(0, -6)] ? base.slice(0, -6) : null;
+  if (raiz && v.dono === 'auto') { const r = resolver(raiz, num, tok.replace(/_abrev/, ''), ctx, R); return r == null ? r : abreviar(r); }
+  if (base === 'url') {
+    let it, tp;
+    if (ctx.item) { it = ctx.item; tp = ctx.tipoItem; }
+    else if (ctx.kind === 'tapume') { tp = 'cidade'; it = ev.cidades[idx - 1]; }
+    else if (ctx.kind === 'praca' && temEtapa(ev) && num) { tp = 'etapa'; it = etapasDa(ctx.cidade)[idx - 1]; }
+    else if (ctx.kind === 'etapa') { tp = 'etapa'; it = ctx.etapa; }
+    else { tp = 'cidade'; it = ctx.cidade; }
+    if (!it) { R.fora.add(tok); return ''; }
+    return arquivo(tp, it);
+  }
+  if (ctx.grupo && base === ctx.grupo.col && !ctx.item) return ctx.grupo.valor;
+  if (v.dono === 'geral') { const val = valorDe(null, base); if (!val) R.faltaG.add(tok); return val; }
+  let it, tipo = v.dono;
+  if (ctx.item && ctx.tipoItem === tipo) it = ctx.item;
+  else if (tipo === 'etapa') it = ctx.etapa || escopo('etapa', ctx)[idx - 1];
+  else it = ctx.cidade || (ctx.item && ctx.tipoItem === 'etapa' ? cidadeDa(ctx.item) : null) || ev.cidades[idx - 1];
+  if (!it) { R.fora.add(tok); return ''; }
+  const val = valorDe(it, base);
+  if (!val) R.faltas.add(tok + (ctx.cidade && it === ctx.cidade || ctx.etapa && it === ctx.etapa ? '' : quem(tipo, it)));
+  return val || '';
+}
+function gerar(){
+  const ev = S.ev, pags = [], avisos = [], faltaG = new Set(), vazios = new Map();
+  for (const k of paginasDo(ev)) if (S.html[k] == null) avisos.push({nivel:'bad', titulo:'Falta o HTML da página ' + pag(k).nome, det:'Sem ele, nenhuma página desse tipo é gerada.', passo:'paginas'});
+  if (unica(ev)) {
+    if (S.html.unica != null) pags.push({kind:'unica', arquivo:'index.html', titulo:'Página', html:S.html.unica, nivel:0, avisos:0});
+    return {pags, avisos, bloqueado:avisos.some(a => a.nivel === 'bad')};
+  }
+  if (!ev.cidades.length) avisos.push({nivel:'bad', titulo:'Nenhuma cidade cadastrada', det:'As páginas de praça saem do cadastro de cidades.', passo:'cadastro'});
+  if (temEtapa(ev) && !ev.etapas.length) avisos.push({nivel:'bad', titulo:'Nenhuma etapa cadastrada', det:'Neste formato, cada cidade tem as suas etapas.', passo:'cadastro'});
+  const add = (kind, arq, titulo, ctx, nivel) => {
+    if (S.html[kind] == null) return;
+    const a0 = avisos.length, m0 = avisos.marcadas || 0; const html = ajustarTagsMidia(montar(kind, ctx, titulo, avisos, faltaG, vazios));
+    pags.push({kind, arquivo:arq, titulo, html, nivel, ctx, avisos:avisos.length - a0 + (avisos.marcadas || 0) - m0});
+  };
+  if (paginasDo(ev).includes('tapume')) add('tapume', 'index.html', 'Tapume', {}, 0);
+  ev.cidades.forEach((c, i) => {
+    const nc = nomeItem('cidade', c, i);
+    add('praca', arquivo('cidade', c), nc, {cidade:c}, 0);
+    if (temEtapa(ev)) etapasDa(c).forEach(e => add('etapa', arquivo('etapa', e), nc + ' · ' + nomeItem('etapa', e, idxDe('etapa', e)), {cidade:c, etapa:e}, 1));
+  });
+  if (temEtapa(ev)) {
+    const soltas = ev.etapas.filter(e => !cidadeDa(e));
+    if (soltas.length) avisos.push({nivel:'warn', titulo:soltas.length + ' etapa(s) sem cidade', det:soltas.map(e => nomeItem('etapa', e, idxDe('etapa', e))).join(', ') + ' não geram página até escolher a cidade.', passo:'cadastro'});
+  }
+  for (const [c, set] of Object.entries(S.opcoes || {})) {
+    if (!S.ev.vars[c] || S.ev.vars[c].ignorar) continue;
+    const ok = new Set([...set].map(slug));
+    const fora = [...ev.cidades, ...ev.etapas].filter(x => String(x[c] || '').trim() && !ok.has(slug(x[c])));
+    if (fora.length) avisos.push({nivel:'warn', titulo:'@' + c + ' com valor que o HTML não conhece', det:fora.map(x => nomeItem(ev.etapas.includes(x) ? 'etapa' : 'cidade', x, idxDe(ev.etapas.includes(x) ? 'etapa' : 'cidade', x)) + ' = “' + x[c] + '”').join(', ') + '. O HTML espera: ' + [...set].join(' ou ') + '.', passo:'cadastro'});
+  }
+  for (const k of paginasDo(ev)) if (k === 'tapume' && S.html[k] != null && temCardsFixos(S.html[k])) avisos.push({nivel:'warn', titulo:pag(k).nome + ' com ' + temCardsFixos(S.html[k]) + ' cards fixos e ' + ev.cidades.length + ' cidade(s) cadastrada(s)', det:'Os cards sem cidade saem vazios e o status não muda para “em breve”. Transforme em card que se repete no passo Páginas.', passo:'paginas'});
+  const semImg = Object.keys(ev.vars).filter(b => ehImg(b) && !ev.vars[b].ignorar && (S.detCache || deteccao()).has(b) && !opcoesImg(b).length);
+  if (semImg.length) avisos.push({nivel:'warn', titulo:semImg.length + ' imagem(ns) ou vídeo(s) sem arquivo', det:'Faltam as pastas: ' + [...new Set(semImg.flatMap(pastasVer))].join(', ') + '. Envie a pasta _media no passo Páginas.', passo:'paginas'});
+  if (vazios.size) {
+    const tot = new Set([...vazios.values()].flatMap(x => [...x])).size;
+    avisos.push({nivel:'warn', titulo:'Campos vazios no cadastro: ' + vazios.size + ' variável(is) em ' + tot + ' cidade(s)', det:[...vazios].map(([k, set]) => k + ' (' + (set.size > 3 ? set.size + ' cidades' : [...set].join(', ')) + ')').join(' · ') + '. Saem em branco.', passo:'cadastro'});
+  }
+  if (faltaG.size) avisos.push({nivel:'warn', titulo:'Gerais do evento sem valor', det:[...faltaG].join(', ') + ' — saem em branco em todas as páginas.', passo:'cadastro'});
+  const cont = {}; pags.forEach(p => cont[p.arquivo] = (cont[p.arquivo] || 0) + 1);
+  const dup = Object.keys(cont).filter(k => cont[k] > 1);
+  if (dup.length) avisos.unshift({nivel:'bad', titulo:'Duas páginas com o mesmo nome de arquivo', det:dup.join(', ') + ' — uma apagaria a outra. Mude a coluna Arquivo no cadastro.', passo:'cadastro'});
+  return {pags, avisos, bloqueado:avisos.some(a => a.nivel === 'bad')};
+}
+
+/* ============ imagens e arquivos do site (assets) ============ */
+const TIPOS = {png:'image/png', jpg:'image/jpeg', jpeg:'image/jpeg', gif:'image/gif', webp:'image/webp', svg:'image/svg+xml', avif:'image/avif', mp4:'video/mp4', webm:'video/webm', woff2:'font/woff2', woff:'font/woff', ttf:'font/ttf', otf:'font/otf', css:'text/css', js:'text/javascript', json:'application/json', pdf:'application/pdf'};
+const ext = n => (String(n).split('.').pop() || '').toLowerCase();
+const arquivosDo = () => ({...(S.ev.arquivos || {}), ...(S.arqLocal || {})});
+const REF = /(?:\s(?:src|href|poster|data-src)\s*=\s*["']([^"']+)["'])|(?:url\(\s*["']?([^"')]+?)["']?\s*\))|(?:\ssrcset\s*=\s*["']([^"']+)["'])/gi;
+const externo = r => /^(?:[a-z]+:|\/\/|#|@)/i.test(r) || !r.trim();
+const normRef = r => { let x = r.trim().split(/[?#]/)[0].replace(/^\.\//, ''); try { x = decodeURI(x); } catch {} return x; };
+const REF_TXT = /["'`]([^"'`\s<>]+\.(?:mp4|webm|webp|png|jpe?g|gif|svg|avif|woff2?|ttf|otf|pdf))["'`]/gi;
+function refsDe(html){
+  const out = new Set(); REF.lastIndex = 0; let m;
+  // caminhos dentro do JavaScript, como vídeos trocados por tamanho de tela
+  REF_TXT.lastIndex = 0; while ((m = REF_TXT.exec(html))) if (!externo(m[1])) out.add(m[1]);
+  while ((m = REF.exec(html))) {
+    if (m[3]) m[3].split(',').forEach(p => { const u = p.trim().split(/\s+/)[0]; if (u && !externo(u)) out.add(u); });
+    else { const u = m[1] || m[2]; if (u && !externo(u) && !/\.html?$/i.test(normRef(u))) out.add(u); }
+  }
+  return [...out];
+}
+function acharArquivo(ref){
+  const mapa = arquivosDo(), r = normRef(ref), chaves = Object.keys(mapa);
+  if (mapa[r]) return r;
+  let k = chaves.find(c => c.endsWith('/' + r)); if (k) return k;
+  const nome = r.split('/').pop(), mesmos = chaves.filter(c => c.split('/').pop() === nome);
+  return mesmos.length ? mesmos[0] : null;
+}
+async function blobDe(k){
+  S.arqBlob = S.arqBlob || {};
+  if (S.arqBlob[k]) return S.arqBlob[k];
+  const a = arquivosDo()[k]; if (!a?.asset) return null;
+  try { const b = await lerAsset(a.asset); return b ? (S.arqBlob[k] = b) : null; } catch { return null; }
+}
+async function dataUrlDe(k){
+  S.dataUrl = S.dataUrl || {};
+  if (S.dataUrl[k]) return S.dataUrl[k];
+  const b = await blobDe(k); if (!b) return null;
+  const tipo = TIPOS[ext(k)] || b.type || 'application/octet-stream';
+  const url = await new Promise(res => { const fr = new FileReader(); fr.onload = () => res(fr.result); fr.onerror = () => res(null); fr.readAsDataURL(new Blob([b], {type:tipo})); });
+  return (S.dataUrl[k] = url);
+}
+// prévia: troca cada caminho que o HTML usa pelo arquivo enviado, sem precisar hospedar
+async function comArquivos(html){
+  for (const ref of refsDe(html)) {
+    const k = acharArquivo(ref); if (!k) continue;
+    const url = await dataUrlDe(k); if (url) html = html.split(ref).join(url);
+  }
+  return html;
+}
+function resumoArquivos(){
+  const refs = new Set();
+  for (const k of paginasDo(S.ev)) if (S.html[k] != null) refsDe(S.html[k]).forEach(r => refs.add(normRef(r)));
+  const faltam = [...refs].filter(r => !acharArquivo(r));
+  return {refs:refs.size, faltam};
+}
+async function receberArquivos(files){
+  const lista = [...files].filter(f => TIPOS[ext(f.name)] && !/(^|\/)\./.test(f.webkitRelativePath || f.name));
+  const ignorados = files.length - lista.length;
+  if (!lista.length) { toast('Nenhuma imagem, vídeo ou fonte nessa seleção'); return; }
+  S.ev.arquivos = S.ev.arquivos || {}; S.arqLocal = S.arqLocal || {}; S.arqBlob = S.arqBlob || {};
+  let feitos = 0, falhas = 0;
+  for (const f of lista) {
+    const k = f.webkitRelativePath || f.name;
+    S.envio = `Enviando ${++feitos} de ${lista.length}…`; const el = $('#arq-status'); if (el) el.textContent = S.envio;
+    S.arqBlob[k] = f; if (S.dataUrl) delete S.dataUrl[k];
+    if (S.assets) {
+      try {
+        const antigo = S.ev.arquivos[k]?.asset;
+        const r = await S.assets.upload(f, {type:TIPOS[ext(f.name)]});
+        S.ev.arquivos[k] = {asset:r.id, bytes:f.size};
+        if (antigo && antigo !== r.id) S.assets.delete(antigo).catch(() => {});
+        delete S.arqLocal[k];
+      } catch (e) { falhas++; S.arqLocal[k] = {bytes:f.size, local:true}; }
+    } else S.arqLocal[k] = {bytes:f.size, local:true};
+  }
+  S.envio = null; salvar(); render();
+  toast(`${lista.length - falhas} arquivo(s) enviados` + (falhas ? ` · ${falhas} valem só nesta sessão (grandes demais ou sem espaço)` : '') + (ignorados ? ` · ${ignorados} ignorados` : ''));
+}
+async function removerArquivos(){
+  const ids = Object.values(S.ev.arquivos || {}).map(a => a.asset).filter(Boolean);
+  S.ev.arquivos = {}; S.arqLocal = {}; S.arqBlob = {}; S.dataUrl = {}; salvar(); render();
+  if (S.assets) for (const id of ids) { try { await S.assets.delete(id); } catch {} }
+  toast('Arquivos removidos');
+}
+function cartaoArquivos(){
+  const mapa = arquivosDo(), n = Object.keys(mapa).length, tam = Object.values(mapa).reduce((a, b) => a + (b.bytes || 0), 0);
+  const {refs, faltam} = resumoArquivos(), locais = Object.keys(S.arqLocal || {}).length;
+  return `<section class="card stack" aria-labelledby="h-arq">
+    <div class="pg"><div><h3 id="h-arq">Imagens, vídeos e arquivos do site</h3><p class="small muted">Envie a pasta <b>_media</b> (ou a pasta do site que contém a <b>_media</b>), com imagens e vídeos organizados por página e seção. Fontes também entram. Com ela, a prévia mostra tudo sem hospedar nada, você troca imagens e vídeos no passo Mídia e o .zip já sai completo.</p></div>
+      ${n ? (faltam.length ? `<span class="pill warn">Faltam ${faltam.length}</span>` : `<span class="pill ok">Tudo encontrado</span>`) : refs ? `<span class="pill warn">Falta enviar</span>` : ''}</div>
+    ${n ? `<div class="file"><svg width="24" height="22" viewBox="0 0 24 22" aria-hidden="true"><path d="M2 4h7l2 2h11v13H2z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <div style="flex:1;min-width:180px"><div class="nm">${n} arquivo(s) · ${kb(tam)}</div><div class="small muted">${refs ? `${refs - faltam.length} de ${refs} caminhos dos HTMLs encontrados` : 'Os HTMLs ainda não apontam para nenhum arquivo'}${locais ? ` · <b>${locais} só nesta sessão</b>` : ''}</div></div>
+        <span class="small muted" id="arq-status">${S.envio || ''}</span>
+        <label class="btn sm">Adicionar pasta<input type="file" webkitdirectory multiple data-arqs class="sr"></label>
+        ${S.confirm === 'arqs' ? `<span class="confirm"><button class="btn sm danger" type="button" id="arqRmSim">Remover todos</button><button class="btn sm ghost" type="button" data-cancel>Cancelar</button></span>` : `<button class="btn sm ghost" type="button" id="arqRm">Remover</button>`}
+      </div>
+      ${faltam.length ? `<details class="small"><summary>${faltam.length} caminho(s) sem arquivo</summary><p class="muted" style="font-family:var(--f-mono);margin-top:6px;overflow-wrap:anywhere">${faltam.map(esc).join('<br>')}</p></details>` : ''}`
+    : `<div class="row">
+        <label class="drop" style="flex:1" data-dropdir><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 7h8l2 2h12v14H3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <b style="color:var(--ink)">Escolher a pasta _media</b><span class="small" id="arq-status">${S.envio || 'Imagens, vídeos e fontes. Outros arquivos são ignorados.'}</span>
+          <input type="file" webkitdirectory multiple data-arqs class="sr"></label>
+        <label class="btn sm">Ou escolher arquivos soltos<input type="file" multiple data-arqs class="sr"></label>
+      </div>`}
+  </section>`;
+}
+
+/* ============ modo local (arquivo aberto fora do Claude): guarda tudo no navegador ============ */
+let _idb = null;
+const abrirIdb = () => _idb || (_idb = new Promise((res, rej) => {
+  const r = indexedDB.open('publicador-hotsites', 1);
+  r.onupgradeneeded = () => { r.result.createObjectStore('eventos'); r.result.createObjectStore('arquivos'); };
+  r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+}));
+async function idbTx(store, modo, fn){
+  const d = await abrirIdb();
+  return new Promise((res, rej) => { const t = d.transaction(store, modo), req = fn(t.objectStore(store)); t.oncomplete = () => res(req?.result); t.onerror = () => rej(t.error); t.onabort = () => rej(t.error); });
+}
+const dbLocal = {
+  ouvintes:[],
+  async avisar(){ const lista = await idbTx('eventos', 'readonly', s => s.getAll()); const snap = {docs:(lista || []).map(d => ({data:() => d}))}; dbLocal.ouvintes.forEach(f => f(snap)); },
+  doc(path){ const id = path.split('/')[1]; return {
+    set: async data => { await idbTx('eventos', 'readwrite', s => s.put(data, id)); },
+    delete: async () => { await idbTx('eventos', 'readwrite', s => s.delete(id)); dbLocal.avisar(); },
+  }; },
+  collection(){ return {onSnapshot(next){ dbLocal.ouvintes.push(next); dbLocal.avisar(); return () => {}; }}; },
+};
+const assetsLocal = {
+  async upload(blob){ const id = 'loc' + uid() + uid(); await idbTx('arquivos', 'readwrite', s => s.put(blob, id)); return {id, url:'', sizeBytes:blob.size}; },
+  async delete(id){ await idbTx('arquivos', 'readwrite', s => s.delete(id)); return {deleted:true}; },
+};
+const downloadsLocal = {
+  async save({filename, data}){
+    const url = URL.createObjectURL(data instanceof Blob ? data : new Blob([data]));
+    const a = document.createElement('a'); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000); return {status:'saved'};
+  },
+};
+async function lerAsset(id){
+  if (S.local) return (await idbTx('arquivos', 'readonly', s => s.get(id))) || null;
+  const r = await fetch('/_blob/' + id); return r.ok ? r.blob() : null;
+}
+
+/* ============ tapume com cards fixos → card que se repete ============ */
+// Acha os cards numerados (@cidade_1, @cidade_2…), usa o primeiro de cada tipo como modelo e monta os blocos.
+const RX_NUM = /@(\{?)([A-Za-z][A-Za-z0-9_]*?)_(\d+)(\}?)(?![\w])/g;
+function numsDoTexto(s){ const out = new Set(); RX_NUM.lastIndex = 0; let m; while ((m = RX_NUM.exec(s || ''))) out.add(+m[3]); return out; }
+function temCardsFixos(html){
+  if (!html || /<!--\s*@repetir/i.test(html)) return 0;
+  const sem = html.replace(/<!--[\s\S]*?-->/g, '').replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '');
+  const n = numsDoTexto(sem); return n.size >= 2 ? Math.max(...n) : 0;
+}
+function converterCards(html){
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const proprios = el => { const s = new Set(); for (const a of el.attributes) numsDoTexto(a.value).forEach(n => s.add(n)); for (const c of el.childNodes) if (c.nodeType === 3) numsDoTexto(c.nodeValue).forEach(n => s.add(n)); return s; };
+  const sub = new Map();
+  (function anda(el){ const s = proprios(el); for (const c of el.children) { if (/^(SCRIPT|STYLE|TEMPLATE)$/.test(c.tagName)) continue; anda(c).forEach(n => s.add(n)); } sub.set(el, s); return s; })(doc.body);
+  // raiz de cada card: o maior elemento que só fala de um número
+  const raizes = new Map();
+  for (const [el, s] of sub) { if (s.size !== 1 || el === doc.body) continue; const p = sub.get(el.parentElement); if (p && p.size > 1) { const n = [...s][0]; if (!raizes.has(n)) raizes.set(n, []); raizes.get(n).push(el); } }
+  const nums = [...raizes.keys()].sort((a, b) => a - b);
+  if (nums.length < 2 || nums.some(n => raizes.get(n).length !== 1)) return {erro:'Não consegui identificar um card por cidade neste HTML.'};
+  // card sozinho num grupo sobe até o grupo inteiro: desce de volta até o elemento com a mesma "cara" dos outros cards
+  const cara = el => el.tagName + '.' + (el.classList[0] || '');
+  const freq = {}; nums.forEach(n => { const k = cara(raizes.get(n)[0]); freq[k] = (freq[k] || 0) + 1; });
+  const caraComum = Object.entries(freq).sort((a, b) => b[1] - a[1])[0][0], classeComum = caraComum.split('.')[1];
+  nums.forEach(n => {
+    const el = raizes.get(n)[0]; if (cara(el) === caraComum || !classeComum) return;
+    const dentro = [...el.querySelectorAll('.' + CSS.escape(classeComum))].find(x => { const s = sub.get(x); return s && s.size === 1 && s.has(n); });
+    if (dentro) raizes.set(n, [dentro]);
+  });
+  const cards = nums.map(n => ({n, el:raizes.get(n)[0]}));
+  // grupos (ex.: uma <section> por região)
+  const pais = [...new Set(cards.map(c => c.el.parentElement))];
+  let grupos = null, col = null;
+  if (pais.length > 1) {
+    const comum = (() => { let a = pais[0]; while (a && !pais.every(p => a.contains(p))) a = a.parentElement; return a; })();
+    const secao = el => { let g = el; while (g.parentElement !== comum) g = g.parentElement; return g; };
+    const gs = [...new Set(cards.map(c => secao(c.el)))];
+    const attr = [...gs[0].attributes].find(a => /^data-/.test(a.name) && new Set(gs.map(g => g.getAttribute(a.name))).size === gs.length);
+    const valor = g => attr ? g.getAttribute(attr.name) : (g.querySelector('h1,h2,h3,h4')?.firstChild?.nodeValue || '').trim();
+    col = attr ? attr.name.replace(/^data-/, '').replace(/-/g, '_') : 'grupo';
+    grupos = gs.map(g => ({el:g, valor:valor(g), cards:cards.filter(c => g.contains(c.el))}));
+    cards.forEach(c => { c.grupo = grupos.find(g => g.cards.includes(c)).valor; });
+  }
+  const escRx = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // modelo de cada card: sem número e com o grupo virando @coluna
+  const modelo = c => {
+    let h = c.el.outerHTML.replace(RX_NUM, (t, a, b, n, z) => '@' + a + b + z);
+    if (c.grupo) h = h.replace(new RegExp('(?<![\\w@])' + escRx(c.grupo) + '(?![\\w])', 'gi'), '@' + col);
+    return h;
+  };
+  const chaveVar = h => h.replace(/@\w+/g, '@');
+  const variantes = [];
+  for (const c of cards) { const h = modelo(c), k = chaveVar(h); let v = variantes.find(x => x.k === k); if (!v) variantes.push(v = {k, h, cards:[], classes:new Set(c.el.classList)}); v.cards.push(c); c.v = v; }
+  if (variantes.length > 2) return {erro:'Os cards deste HTML têm mais de dois formatos diferentes; converta à mão com @repetir e @se.'};
+  let status = null;
+  if (variantes.length === 2) {
+    const [a, b] = variantes, sa = [...a.classes].filter(x => !b.classes.has(x)), sb = [...b.classes].filter(x => !a.classes.has(x));
+    status = {aberta:sa[0] || 'aberta', outra:sb[0] || 'breve'};
+    // o formato com link vem primeiro
+    if (!/^<a\b/i.test(a.h) && /^<a\b/i.test(b.h)) { variantes.reverse(); status = {aberta:sb[0] || 'aberta', outra:sa[0] || 'breve'}; }
+    cards.forEach(c => { c.status = c.v === variantes[0] ? status.aberta : status.outra; });
+  }
+  const bloco = (variantes.length === 2
+    ? `\n<!-- @repetir cidades -->\n<!-- @se status = ${status.aberta} -->\n${variantes[0].h}\n<!-- @senao -->\n${variantes[1].h}\n<!-- @fim -->\n<!-- @fim -->\n`
+    : `\n<!-- @repetir cidades -->\n${variantes[0].h}\n<!-- @fim -->\n`);
+  const marca = 'PUBLICADOR_BLOCO_' + uid();
+  const trocarCards = (pai, lista) => { const ref = lista[0].el; ref.before(doc.createComment(marca)); lista.forEach(c => c.el.remove()); };
+  if (grupos) {
+    const g0 = grupos[0];
+    trocarCards(g0.cards[0].el.parentElement, g0.cards);
+    // cabeçalho do grupo: nome vira @regiao, número de cards vira @total_cidades
+    const it = doc.createTreeWalker(g0.el, NodeFilter.SHOW_TEXT); let t;
+    while ((t = it.nextNode())) {
+      if (t.nodeValue.trim().toLowerCase() === g0.valor.toLowerCase()) t.nodeValue = t.nodeValue.replace(new RegExp(escRx(g0.valor), 'i'), '@' + col);
+      else if (t.nodeValue.trim() === String(g0.cards.length)) t.nodeValue = t.nodeValue.replace(String(g0.cards.length), '@total_cidades');
+    }
+    for (const a of g0.el.attributes) if (a.value === g0.valor) a.value = '@' + col;
+    g0.el.before(doc.createComment(' @agrupar por ' + col + ' '));
+    g0.el.after(doc.createComment(' @fim '));
+    grupos.slice(1).forEach(g => g.el.remove());
+  } else trocarCards(cards[0].el.parentElement, cards);
+  // contagens soltas ("5 com inscrição aberta · 11 em breve")
+  if (status) {
+    const conta = {[status.aberta]:cards.filter(c => c.status === status.aberta).length, [status.outra]:cards.filter(c => c.status === status.outra).length};
+    const it = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT); let t; const textos = [];
+    while ((t = it.nextNode())) if (!t.parentElement.closest('script,style')) textos.push(t);
+    for (const t of textos) for (const [s, n] of Object.entries(conta)) {
+      if (new RegExp('(?<!\\d)' + n + '(?!\\d)').test(t.nodeValue) && t.parentElement.textContent.toLowerCase().includes(s.toLowerCase()))
+        t.nodeValue = t.nodeValue.replace(new RegExp('(?<!\\d)' + n + '(?!\\d)'), '@total_' + s.replace(/\W+/g, '_'));
+    }
+  }
+  const dt = html.match(/^\s*<!doctype[^>]*>/i)?.[0] || '<!doctype html>';
+  const final = dt + '\n' + doc.documentElement.outerHTML.replace('<!--' + marca + '-->', bloco);
+  return {html:final, cards:cards.length, col, grupos:grupos?.map(g => g.valor), status,
+    prefill:cards.map(c => ({n:c.n, grupo:c.grupo, status:c.status}))};
+}
+
+/* ============ imagens por seção ============ */
+// @img_<secao>_<nome> escolhe uma imagem e @video_<secao>_<nome> um vídeo da pasta _media/<pagina>/<secao>/.
+// Com _1 (ou dentro de bloco), é por cidade.
+// @media_<secao>_<nome> aceita imagem OU vídeo: o publicador troca a tag <img>/<video> conforme o arquivo escolhido
+const ehImg = base => /^(img|video|media)_[a-z0-9]+/.test(base);
+const ehVideoVar = base => /^video_/.test(base);
+const tipoMidia = base => base.split('_')[0];
+// versão de tela: slot ..._desktop só vê arquivos de desktop, ..._mobile só de mobile
+const RX_DESK = /(^|[_\-/.])(desktop|desk)([_\-/.]|$)/i, RX_MOB = /(^|[_\-/.])(mobile|mob|celular)([_\-/.]|$)/i;
+const versaoTela = nome => RX_DESK.test(nome) ? 'desktop' : RX_MOB.test(nome) ? 'mobile' : '';
+const secaoImg = base => base.split('_')[1] || '';
+const slotImg = base => base.split('_').slice(2).join('_') || secaoImg(base);
+const PASTA_PAG = {tapume:'tapume', praca:'praca', etapa:'etapa', unica:'pagina'};
+const ehImagemArq = k => /^image\//.test(TIPOS[ext(k)] || '');
+const ehVideoArq = k => /^video\//.test(TIPOS[ext(k)] || '');
+// _media/ (atual) ou _images/ (versão anterior do guia)
+const caminhoImg = k => { const m = k.match(/(^|\/)(_media|_images)\//); return m ? k.slice(m.index + m[1].length) : k; };
+const pastasVer = base => pastasImg(base).filter(p => p.startsWith('_media'));
+function pastasImg(base){
+  const det = S.detCache || deteccao(), d = det.get(base);
+  const kinds = d ? Object.keys(d.por) : ['praca'];
+  return [...new Set(kinds.flatMap(k => ['_media', '_images'].map(r => `${r}/${PASTA_PAG[k] || k}/${secaoImg(base)}/`)))];
+}
+// opções de uma variável de imagem: só as imagens das pastas da seção dela
+function opcoesImg(base){
+  const pastas = pastasImg(base), vistas = new Set(), out = [];
+  for (const k of Object.keys(arquivosDo())) { const c = caminhoImg(k), t = tipoMidia(base);
+    const tipoOk = t === 'video' ? ehVideoArq(c) : t === 'img' ? ehImagemArq(c) : (ehVideoArq(c) || ehImagemArq(c));
+    const vSlot = versaoTela(slotImg(base)), vArq = versaoTela(c.slice(pastas.find(p => c.startsWith(p))?.length || 0));
+    const telaOk = !vSlot || !vArq || vSlot === vArq;
+    if (tipoOk && telaOk && pastas.some(p => c.startsWith(p)) && !vistas.has(c)) { vistas.add(c); out.push({k, caminho:c}); } }
+  return out.sort((a, b) => a.caminho.localeCompare(b.caminho));
+}
+function padraoImg(base, ops){
+  const nome = slotImg(base), img = o => ehImagemArq(o.caminho);
+  const mesmos = ops.filter(o => o.caminho.split('/').pop().replace(/\.[^.]+$/, '').toLowerCase() === nome);
+  // na dúvida, começa com imagem: vídeo é escolha de quem publica
+  return (mesmos.find(img) || mesmos[0] || ops.find(img) || ops[0])?.caminho || '';
+}
+function valorImagem(base, it){
+  const ops = opcoesImg(base), escolhido = it ? it[base] : (S.ev.imagens || {})[base];
+  if (escolhido && ops.some(o => o.caminho === escolhido)) return escolhido;
+  return padraoImg(base, ops);
+}
+
+/* ============ salvar ============ */
+let saveT = null, salvando = false, denovo = false;
+function setSave(s, txt){ const el = $('#save'); el.dataset.s = s; el.lastElementChild.textContent = txt; }
+function salvar(){
+  if (!S.ev) return; S.ev.atualizadoEm = new Date().toISOString();
+  if (!S.db) { setSave('pend', 'Só nesta sessão'); return; }
+  setSave('pend', 'Salvando…'); clearTimeout(saveT); saveT = setTimeout(flush, 700);
+}
+async function flush(){
+  if (!S.db || !S.ev) return;
+  if (salvando) { denovo = true; return; }
+  salvando = true; const ev = S.ev;
+  try { await S.db.doc('eventos/' + ev.id).set(JSON.parse(JSON.stringify(ev))); setSave('ok', S.local ? 'Salvo neste navegador' : 'Salvo'); }
+  catch (e) { setSave('erro', e?.code === 'quota_exceeded' ? 'Sem espaço para salvar' : 'Não salvou — tente de novo'); }
+  salvando = false; if (denovo) { denovo = false; flush(); }
+}
+
+/* ============ render ============ */
+function render(){
+  S.detCache = null; if (S.ev) S.detCache = deteccao();
+  const home = !S.ev;
+  $('#shell').classList.toggle('home', home);
+  $('#rail').hidden = home;
+  $('#crumb').textContent = home ? '' : '/ ' + (S.ev.nome || 'Evento sem nome');
+  if (home) { renderHome(); return; }
+  renderRail();
+  const fn = {evento:pEvento, paginas:pPaginas, variaveis:pVariaveis, cadastro:pCadastro, imagens:pImagens, conferir:pConferir, publicar:pPublicar}[S.passo];
+  trocarTela(fn());
+  ligar();
+  if (S.passo === 'conferir' || S.passo === 'imagens' || (S.passo === 'cadastro' && S.prevAberta)) mostrarPrevia();
+  if (S.passo === 'imagens') carregarMiniaturas();
+}
+// troca o conteúdo da tela sem recriar a prévia (sem piscar) e sem perder rolagem e foco
+function trocarTela(html){
+  const m = $('#main'), chave = S.ev.id + ':' + S.passo;
+  const rolX = [...m.querySelectorAll('.tw')].map(t => t.scrollLeft), rolY = window.scrollY, lista = $('#img-lista')?.scrollTop;
+  const ae = document.activeElement, foco = ae && m.contains(ae) && ae.dataset?.row ? {row:ae.dataset.row, col:ae.dataset.col, ini:ae.selectionStart, fim:ae.selectionEnd} : null;
+  const novo = document.createElement('div'); novo.innerHTML = html;
+  const fundir = (O, N) => {
+    const ok = c => c.nodeType === 1 && (c.matches('[data-manter]') || c.querySelector('[data-manter]'));
+    const oK = [...O.children].find(ok), nK = [...N.children].find(ok);
+    if (!oK || !nK) return false;
+    [...O.childNodes].forEach(c => { if (c !== oK) c.remove(); });
+    const filhos = [...N.childNodes], i = filhos.indexOf(nK);
+    filhos.slice(0, i).forEach(c => O.insertBefore(c, oK)); filhos.slice(i + 1).forEach(c => O.appendChild(c));
+    if (oK.matches('[data-manter]')) return true;
+    oK.className = nK.className; return fundir(oK, nK);
+  };
+  if (!(S.telaAtual === chave && m.querySelector('[data-manter]') && novo.querySelector('[data-manter]') && fundir(m, novo))) m.innerHTML = html;
+  S.telaAtual = chave;
+  [...m.querySelectorAll('.tw')].forEach((t, i) => { if (rolX[i] != null) t.scrollLeft = rolX[i]; });
+  if (lista != null && $('#img-lista')) $('#img-lista').scrollTop = lista;
+  window.scrollTo(0, rolY);
+  if (foco) { const el = m.querySelector(`[data-row="${foco.row}"][data-col="${foco.col}"]`); if (el) { el.focus({preventScroll:true}); try { el.setSelectionRange(foco.ini, foco.fim); } catch {} } }
+}
+function feito(p){
+  const ev = S.ev;
+  if (p === 'evento') return !!ev.nome.trim();
+  if (p === 'imagens') { const imgs = Object.keys(ev.vars).filter(b => ehImg(b) && !ev.vars[b].ignorar && (S.detCache || deteccao()).has(b)); return imgs.length > 0 && imgs.every(b => opcoesImg(b).length); }
+  if (p === 'paginas') return paginasDo(ev).every(k => ev.paginas[k]);
+  if (p === 'variaveis') return paginasDo(ev).every(k => ev.paginas[k]) && Object.keys(ev.vars).length > 0;
+  if (p === 'cadastro') return ev.cidades.length > 0;
+  if (p === 'conferir') {
+    if (unica(ev)) return S.html.unica != null;
+    if (!ev.cidades.length || !paginasDo(ev).every(k => S.html[k] != null) || (temEtapa(ev) && !ev.etapas.length)) return false;
+    const nomes = [...ev.cidades.map(c => arquivo('cidade', c)), ...(temEtapa(ev) ? ev.etapas.filter(e => cidadeDa(e)).map(e => arquivo('etapa', e)) : []), 'index.html'];
+    return new Set(nomes).size === nomes.length;
+  }
+  if (p === 'publicar') return ev.publicacoes.length > 0;
+}
+function renderRail(){
+  $('#rail').innerHTML = passosDo(S.ev).map(([k, n, s], i) => `<button type="button" data-ir="${k}" class="${feito(k) ? 'done' : ''}" ${S.passo === k ? 'aria-current="step"' : ''}>
+      <span class="n">${feito(k) ? '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span class="sr">feito</span>' : i + 1}</span>
+      <span class="lbl">${n}<span class="sub">${s}</span></span></button>`).join('') +
+    `<hr><button type="button" class="back" data-home><span class="n" style="border:0">←</span><span class="lbl" style="font-weight:500">Todos os eventos</span></button>`;
+}
+function navFoot(){
+  const L = passosDo(S.ev), i = L.findIndex(p => p[0] === S.passo), prev = L[i - 1], next = L[i + 1];
+  return `<div class="navfoot">${prev ? `<button class="btn ghost" data-ir="${prev[0]}" type="button">← ${prev[1]}</button>` : '<span></span>'}
+    ${next ? `<button class="btn pri" data-ir="${next[0]}" type="button">Próximo: ${next[1]} →</button>` : ''}</div>`;
+}
+
+/* ---- home ---- */
+function renderHome(){
+  const evs = [...S.eventos].sort((a, b) => (b.atualizadoEm || '').localeCompare(a.atualizadoEm || ''));
+  $('#main').innerHTML = `
+    <div class="head"><span class="eyebrow">Norte · Sites e Portais</span><h1>Eventos</h1>
+      <p>Cada evento guarda seus HTMLs, o cadastro das cidades e o histórico do que foi gerado. Abra um para continuar de onde parou.</p></div>
+    <div class="evs">
+      <button class="ev new" type="button" id="novo">+ Novo evento</button>
+      ${!S.pronto ? '<div class="ev" style="cursor:default"><span class="muted">Carregando eventos…</span></div>' : ''}
+      ${evs.map(e => {
+        const pend = (FORMATOS[e.formato] || FORMATOS.tapume_praca).paginas.filter(k => !e.paginas?.[k]).length;
+        const ult = e.publicacoes?.[e.publicacoes.length - 1];
+        const conf = S.confirm === 'del-' + e.id;
+        return `<div class="evw ${conf ? 'conf' : ''}">
+          <button class="ev" type="button" data-abrir="${esc(e.id)}" ${conf ? 'tabindex="-1" aria-hidden="true"' : ''}>
+          <span class="eyebrow">${esc((FORMATOS[e.formato] || {nome:'One page'}).nome)}</span>
+          <h3>${esc(e.nome || 'Evento sem nome')}</h3>
+          <span class="meta">
+            <span class="pill">${e.cidades?.length || 0} cidade(s)</span>
+            ${e.formato === 'tapume_etapa_praca' ? `<span class="pill">${e.etapas?.length || 0} etapa(s)</span>` : ''}
+            ${pend ? `<span class="pill warn">Falta ${pend} HTML</span>` : '<span class="pill ok">HTMLs ok</span>'}
+          </span>
+          <span class="foot">${ult ? 'Última geração ' + fmtData(ult.em) : 'Ainda não gerado'} · editado ${fmtData(e.atualizadoEm)}</span>
+          </button>
+          ${conf ? `<div class="evdel" role="alertdialog" aria-label="Confirmar exclusão">
+              <b>Excluir “${esc(e.nome || 'Evento sem nome')}”?</b>
+              <span class="small muted">Some para todo o time: HTMLs, imagens, cadastro e histórico. Não dá para desfazer.</span>
+              <span class="row"><button class="btn sm danger-fill" type="button" data-delsim="${esc(e.id)}">Excluir</button><button class="btn sm ghost" type="button" data-cancel>Cancelar</button></span>
+            </div>`
+          : `<button class="iconbtn evx" type="button" data-del="${esc(e.id)}" aria-label="Excluir ${esc(e.nome || 'Evento sem nome')}" title="Excluir evento"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.6 8.5h5.8l.6-8.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`}
+        </div>`; }).join('')}
+    </div>
+    ${S.pronto && !S.db ? `<div class="w-item warn"><span class="ic">!</span><div><b>Nada é salvo nesta visualização</b>Os eventos ficam só enquanto a página estiver aberta.</div></div>` : ''}`;
+  $('#novo').onclick = () => { S.ev = novoEvento(); S.html = {}; S.diffs = {}; S.arqLocal = {}; S.arqBlob = {}; S.dataUrl = {}; S.colMenu = null; S.novaCol = null; S.passo = 'evento'; S.sel = 0; S.eventos.push(S.ev); salvar(); render(); setTimeout(() => $('#nome')?.focus(), 30); };
+  document.querySelectorAll('[data-abrir]').forEach(b => b.onclick = () => abrir(b.dataset.abrir));
+  document.querySelectorAll('[data-del]').forEach(b => b.onclick = () => { S.confirm = 'del-' + b.dataset.del; renderHome(); $(`[data-delsim="${b.dataset.del}"]`)?.focus(); });
+  document.querySelectorAll('[data-delsim]').forEach(b => b.onclick = () => excluirEvento(b.dataset.delsim));
+  document.querySelectorAll('#main [data-cancel]').forEach(b => b.onclick = () => { S.confirm = null; renderHome(); });
+}
+// apaga o evento e os arquivos guardados dele (HTMLs e assets)
+async function excluirEvento(id){
+  const e = S.eventos.find(x => x.id === id) || (S.ev?.id === id ? S.ev : null);
+  const nome = e?.nome || 'Evento sem nome';
+  S.eventos = S.eventos.filter(x => x.id !== id); S.confirm = null;
+  if (S.ev?.id === id) { S.ev = null; clearTimeout(saveT); }
+  render();
+  if (S.db) {
+    try { await S.db.doc('eventos/' + id).delete(); }
+    catch { toast('Não foi possível excluir agora. Tente de novo.'); return; }
+  }
+  toast('“' + nome + '” excluído');
+  if (S.assets && e) {
+    const ids = [...Object.values(e.paginas || {}), ...Object.values(e.arquivos || {})].map(x => x?.asset).filter(Boolean);
+    for (const a of ids) { try { await S.assets.delete(a); } catch {} }
+  }
+}
+async function abrir(id){
+  const e = S.eventos.find(x => x.id === id); if (!e) return;
+  S.ev = JSON.parse(JSON.stringify(e)); S.html = {}; S.diffs = {}; S.arqLocal = {}; S.arqBlob = {}; S.dataUrl = {}; S.colMenu = null; S.novaCol = null; S.sel = 0; S.confirm = null;
+  if (!FORMATOS[S.ev.formato]) S.ev.formato = S.ev.formato === 'praca' ? 'unica' : 'tapume_praca';
+  S.passo = passosDo(S.ev).find(([k]) => !feito(k))?.[0] || 'conferir';
+  render();
+  await Promise.all(Object.entries(S.ev.paginas).map(async ([k, p]) => {
+    if (!p?.asset) return;
+    S.carregando[k] = true;
+    try { const b = await lerAsset(p.asset); if (!b) throw 0; S.html[k] = await b.text(); }
+    catch { p.erro = true; }
+    S.carregando[k] = false;
+  }));
+  if (S.ev?.id === id) { sincronizarVars(); render(); }
+}
+
+/* ---- passo 1: evento ---- */
+function diagrama(f){
+  const box = (x, y, w, h, cls = 'dg-box') => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" class="${cls}"/>`;
+  const txt = (x, y, t, cls = 'dg-t') => `<text x="${x}" y="${y}" class="${cls}">${t}</text>`;
+  if (f === 'unica') return `<svg class="dg" viewBox="0 0 240 96" aria-hidden="true">${box(96, 8, 48, 64, 'dg-key')}<path class="dg-ln" d="M104 24h32M104 34h32M104 44h20"/>${txt(84, 90, 'PÁGINA ÚNICA')}</svg>`;
+  if (f === 'tapume_praca') return `<svg class="dg" viewBox="0 0 240 96" aria-hidden="true">${box(96, 4, 48, 24, 'dg-key')}<path class="dg-ln" d="M120 28v10M44 38h152M44 38v10M95 38v10M146 38v10M196 38v10"/>${[0,1,2,3].map(i => box(30 + i * 51, 48, 30, 30)).join('')}${txt(103, 20, 'HOME', 'dg-t dg-k')}${txt(30, 92, 'PRAÇAS (CIDADES)')}</svg>`;
+  // home → cidades (seletor de etapa) → etapas (internas)
+  return `<svg class="dg" viewBox="0 0 240 104" aria-hidden="true">${box(100, 2, 40, 18, 'dg-key')}${txt(106, 14, 'HOME', 'dg-t dg-k')}
+    <path class="dg-ln" d="M120 20v7M60 27h120M60 27v6M180 27v6M60 51v6M36 57h48M36 57v6M84 57v6M180 51v6M156 57h48M156 57v6M204 57v6"/>
+    ${box(42, 33, 36, 18)}${box(162, 33, 36, 18)}${[24, 72, 144, 192].map(x => box(x, 63, 24, 20)).join('')}
+    ${txt(84, 46, 'CIDADES')}${txt(92, 98, 'ETAPAS')}</svg>`;
+}
+function pEvento(){
+  const ev = S.ev, temPag = Object.keys(ev.paginas).length;
+  return `<div class="head"><span class="eyebrow">${passoTxt('evento')}</span><h1>Evento</h1><p>Dê um nome e escolha como o site é montado. O formato define quais HTMLs você vai subir no próximo passo.</p></div>
+  <label class="f">Nome do evento<input id="nome" class="inp big" value="${esc(ev.nome)}" placeholder="Ex.: Combo Circuito das Estações 2027" autocomplete="off"></label>
+  <div class="stack"><span class="eyebrow">Formato do site</span>
+  <div class="grid3" role="radiogroup" aria-label="Formato do site">
+    ${Object.entries(FORMATOS).map(([k, f]) => `<button type="button" class="fmt" role="radio" aria-checked="${ev.formato === k}" data-fmt="${k}">
+      <span class="tick">${ev.formato === k ? '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>' : ''}</span>
+      ${diagrama(k)}<h3>${f.nome}</h3><p>${f.desc}</p></button>`).join('')}
+  </div>
+  ${temPag ? `<p class="small muted">Trocar o formato não apaga os HTMLs já enviados nem o cadastro. Páginas que não fazem parte do novo formato só deixam de ser geradas.</p>` : ''}
+  </div>
+  ${navFoot()}
+  <div class="card stack" style="border-style:dashed">
+    <div><b>Excluir evento</b><p class="small muted">Apaga o cadastro e o histórico deste evento para todo o time.</p></div>
+    ${S.confirm === 'excluir' ? `<span class="confirm"><span>Excluir “${esc(ev.nome || 'Evento sem nome')}” de vez?</span><button class="btn sm danger" id="excluirSim" type="button">Sim, excluir</button><button class="btn sm ghost" data-cancel type="button">Cancelar</button></span>` : `<span><button class="btn sm danger" id="excluir" type="button">Excluir evento</button></span>`}
+  </div>`;
+}
+
+/* ---- passo 2: páginas ---- */
+function pPaginas(){
+  const ev = S.ev;
+  return `<div class="head"><span class="eyebrow">${passoTxt('paginas')}</span><h1>Páginas</h1>
+    ${unica(ev) ? `<p>Suba o HTML da página. Ele é publicado do jeito que está.</p>` : `<p>Suba o HTML de cada página.</p>
+    <p class="com-dica">Os HTMLs devem ter variáveis escritas (ex.: <span class="v">@cidade_1</span>, <span class="v">@preco_1</span>)
+      <span class="dica"><button type="button" class="dica-btn" aria-label="O que são variáveis?" aria-describedby="dica-var">?</button>
+      <span class="dica-box" role="tooltip" id="dica-var"><b>O que são variáveis?</b> São marcadores escritos no HTML com <span class="v">@</span> na frente. O publicador troca cada um pelo valor que você cadastrar. Ex.: <span class="v">@cidade_1</span> vira “São Paulo” na página de São Paulo, e <span class="v">@preco_1</span> vira o preço daquela cidade.</span></span></p>`}</div>
+  ${paginasDo(ev).map(k => {
+    const p = ev.paginas[k], d = S.diffs[k];
+    const vars = S.html[k] != null ? new Set(acharVars(S.html[k]).map(o => o.tok)).size : null;
+    return `<section class="card stack" aria-labelledby="h-${k}">
+      <div class="pg"><div><h3 id="h-${k}">${pag(k).nome}</h3><p class="small muted">${pag(k).desc}</p></div>
+      ${p ? `<span class="pill ok">Enviado</span>` : `<span class="pill warn">Falta enviar</span>`}</div>
+      ${p ? `<div class="file">
+          <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M2 2h12l6 6v16H2z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 2v6h6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div style="flex:1;min-width:180px"><div class="nm">${esc(p.arquivo)}</div>
+            <div class="small muted">${kb(p.bytes || 0)} · enviado ${fmtData(p.enviadoEm)}${p.local ? ' · <b>só nesta sessão</b>' : ''}</div></div>
+          ${S.carregando[k] ? '<span class="pill">Lendo…</span>' : p.erro ? '<span class="pill bad">Não abriu — envie de novo</span>' : vars != null ? `<span class="pill acc">${vars} variáve${vars === 1 ? 'l' : 'is'} encontrada${vars === 1 ? '' : 's'}</span>` : ''}
+          <label class="btn sm">Trocar arquivo<input type="file" accept=".html,.htm,text/html" data-up="${k}" class="sr"></label>
+        </div>` : `<label class="drop" data-drop="${k}">
+          <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 18V5M8 11l6-6 6 6M5 19v4h18v-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <b style="color:var(--ink)">Solte o HTML aqui ou clique para escolher</b><span class="small">Um arquivo .html</span>
+          <input type="file" accept=".html,.htm,text/html" data-up="${k}" class="sr"></label>`}
+      ${d ? `<div class="diff">${d}</div>` : ''}
+      ${k === 'tapume' && S.html[k] != null && temCardsFixos(S.html[k]) ? `<div class="w-item warn"><span class="ic">!</span><div><b>Este ${pag(k).nome.toLowerCase()} tem ${temCardsFixos(S.html[k])} cards fixos</b>Cards fixos aparecem mesmo sem cidade cadastrada e não mudam para “em breve” sozinhos. <button class="btn sm" type="button" data-conv="${k}" style="margin-top:8px">Transformar em card que se repete</button></div></div>` : ''}
+    </section>`; }).join('')}
+  ${cartaoArquivos()}
+  ${!S.assets && S.pronto ? `<div class="w-item warn"><span class="ic">!</span><div><b>Os HTMLs não ficam guardados nesta visualização</b>Para guardar, abra o publicador com acesso de edição. Aqui eles valem só enquanto a página estiver aberta.</div></div>` : ''}
+  ${navFoot()}`;
+}
+async function receberArquivo(k, file){
+  if (!file) return;
+  if (!/\.html?$/i.test(file.name) && file.type !== 'text/html') { toast('Esse arquivo não é .html'); return; }
+  let text = await file.text(), conv = null;
+  // listas com cards fixos (@cidade_1, @cidade_2…) viram um card que se repete
+  if (k === 'tapume' && temCardsFixos(text)) { conv = converterCards(text); if (conv.html) text = conv.html; }
+  const antes = S.html[k] != null ? new Set(acharVars(S.html[k]).map(o => o.base)) : null;
+  S.html[k] = text;
+  const depois = new Set(acharVars(text).map(o => o.base));
+  if (antes) {
+    const novas = [...depois].filter(b => !antes.has(b)), saiu = [...antes].filter(b => !depois.has(b));
+    S.diffs[k] = novas.length || saiu.length
+      ? `Arquivo trocado. ${novas.length ? 'Novas: ' + novas.map(b => `<span class="v">@${esc(b)}</span>`).join(' ') + '. ' : ''}${saiu.length ? 'Saíram: ' + saiu.map(b => `<span class="v">@${esc(b)}</span>`).join(' ') + ' (os valores ficam guardados).' : ''}${novas.length ? ' Confira o passo Variáveis.' : ''}`
+      : 'Arquivo trocado. As variáveis são as mesmas da versão anterior, o cadastro continua valendo.';
+  } else delete S.diffs[k];
+  if (conv) S.diffs[k] = msgConv(conv, k) + (S.diffs[k] ? '<br>' + S.diffs[k] : '');
+  const reg = {arquivo:file.name, bytes:text.length, enviadoEm:new Date().toISOString(), ...(conv?.html ? {convertido:true} : {})};
+  if (S.assets) {
+    try { const r = await S.assets.upload(new Blob([text], {type:'text/plain'}), {type:'text/plain'}); reg.asset = r.id; }
+    catch (e) { reg.local = true; toast(e?.code === 'too_large' ? 'Arquivo acima de 20 MB — não foi guardado' : 'Não deu para guardar o arquivo; ele vale só nesta sessão'); }
+  } else reg.local = true;
+  S.ev.paginas[k] = reg;
+  sincronizarVars(); salvar(); render();
+  toast(pag(k).nome + ': ' + depois.size + ' variáveis encontradas');
+}
+
+function msgConv(c, k){
+  if (!c.html) return `<b>Este HTML tem cards fixos numerados.</b> ${esc(c.erro)} Cards fixos ficam vazios quando há menos cidades cadastradas.`;
+  return `<b>Este HTML tinha ${c.cards} cards fixos.</b> Agora é um card só, que se repete para cada cidade cadastrada${c.col ? `, separado por <span class="v">@${esc(c.col)}</span>` : ''}${c.status ? `, e sai como “${esc(c.status.aberta)}” ou “${esc(c.status.outra === 'breve' ? 'em breve' : c.status.outra)}” conforme a coluna <span class="v">@status</span>` : ''}. As contagens viraram automáticas. <button class="btn sm ghost" type="button" data-baixarconv="${k}" style="padding:2px 6px">Baixar HTML convertido</button>`;
+}
+async function converterExistente(k){
+  const c = converterCards(S.html[k]);
+  if (!c.html) { S.diffs[k] = msgConv(c, k); render(); return; }
+  S.html[k] = c.html; const reg = {...S.ev.paginas[k], bytes:c.html.length, convertido:true, enviadoEm:new Date().toISOString()};
+  if (S.assets) { try { const r = await S.assets.upload(new Blob([c.html], {type:'text/plain'}), {type:'text/plain'}); if (reg.asset && reg.asset !== r.id) S.assets.delete(reg.asset).catch(() => {}); reg.asset = r.id; delete reg.local; } catch { reg.local = true; } }
+  S.ev.paginas[k] = reg; S.diffs[k] = msgConv(c, k); sincronizarVars(); salvar(); render(); toast(pag(k).nome + ': cards fixos viraram um card que se repete');
+}
+async function baixarConvertido(k){
+  if (!S.downloads) { toast('Download indisponível nesta visualização'); return; }
+  const nome = (S.ev.paginas[k]?.arquivo || k + '.html').replace(/\.html?$/i, '') + '-blocos.html';
+  try { await S.downloads.save({filename:nome, data:new Blob([S.html[k]], {type:'text/html'})}); } catch (e) { if (e?.code !== 'declined') toast('Não foi possível baixar'); }
+}
+
+/* ---- passo 3: variáveis ---- */
+function pVariaveis(){
+  const det = sincronizarVars(), ev = S.ev;
+  const faltaHtml = paginasDo(ev).filter(k => S.html[k] == null);
+  const todas = [...det.values()];
+  const grupo = g => todas.filter(d => g === 'excluida' ? ev.vars[d.base].excluida : ev.vars[d.base].excluida ? false : g === 'ignorar' ? ev.vars[d.base].ignorar : g === 'img' ? !ev.vars[d.base].ignorar && ehImg(d.base) : !ev.vars[d.base].ignorar && !ehImg(d.base) && ev.vars[d.base].dono === g).sort((a, b) => a.base.localeCompare(b.base));
+  const onde = d => Object.keys(d.por).map(k => pag(k).nome.toLowerCase()).join(' e ');
+  const chip = (d, g) => `<span class="chipw">
+      <button type="button" class="chip ${g === 'ignorar' ? 'off' : ''}" data-chip="${esc(d.base)}" aria-expanded="${S.chip === d.base}" title="Aparece no ${onde(d)}">@${esc(d.base)}${g === 'img' && ev.vars[d.base].dono !== 'geral' ? ' · por cidade' : ''}${g !== 'auto' ? '<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>' : ''}</button>
+      ${S.chip === d.base && g !== 'auto' ? `<span class="menu" role="menu"><span class="menu-t">Aparece no ${esc(onde(d))}. Mover para:</span>${[['geral', 'Igual em todas as páginas'], ['cidade', 'Muda em cada cidade'], ...(temEtapa(ev) ? [['etapa', 'Muda em cada etapa']] : []), ['ignorar', 'Não é variável']].filter(([k]) => k !== g).map(([k, n]) => `<button type="button" role="menuitem" data-mover="${esc(d.base)}:${k}">${n}</button>`).join('')}</span>` : ''}
+    </span>`;
+  const bloco = (g, titulo, sub) => { const l = grupo(g); if (!l.length && (g === 'ignorar' || g === 'auto' || g === 'etapa' || g === 'img' || g === 'excluida')) return '';
+    return `<section class="vgrp"><div class="vgrp-h"><h2>${titulo} <span class="cnt">${l.length}</span></h2><p>${sub}</p></div>
+      <div class="chips">${l.length ? l.map(d => chip(d, g)).join('') : '<span class="muted small">Nenhuma.</span>'}</div></section>`; };
+  return `<div class="head"><span class="eyebrow">${passoTxt('variaveis')}</span><h1>Variáveis</h1>
+    <p>Achamos ${todas.filter(d => !ev.vars[d.base].ignorar).length} variáveis nos HTMLs. O grupo de cada uma diz onde você vai preencher o valor no próximo passo. Se alguma estiver no grupo errado, clique nela para trocar.</p></div>
+  ${faltaHtml.length ? `<div class="w-item warn"><span class="ic">!</span><div><b>Falta o HTML de ${faltaHtml.map(k => pag(k).nome).join(' e ')}</b>As variáveis dessa página aparecem aqui depois do envio.</div></div>` : ''}
+  ${resumoBlocos()}
+  ${todas.length ? `<div class="vgrps">
+    ${bloco('geral', 'Igual em todas as páginas', 'Você preenche uma vez e o valor aparece em todas as páginas.')}
+    ${bloco('cidade', 'Muda em cada cidade', 'Cada uma vira uma coluna na tabela de cidades. Você preenche uma linha para cada cidade.')}
+    ${bloco('etapa', 'Muda em cada etapa', 'Cada uma vira uma coluna na tabela de etapas. Você preenche uma linha para cada etapa.')}
+    ${bloco('img', 'Imagens e vídeos', 'Cada uma escolhe um arquivo da pasta da sua seção. Você troca no passo Mídia. Clique para dizer se é igual em todas as páginas ou muda em cada cidade.')}
+    ${bloco('auto', 'Preenchidas sozinhas', 'Você não precisa preencher. O publicador cuida dos links entre as páginas, das contagens e das abreviações.')}
+    ${bloco('excluida', 'Excluídas do cadastro', 'Saem em branco na página. Clique numa delas para trazer a coluna de volta.')}
+    ${bloco('ignorar', 'Não são variáveis', 'Ficam na página do jeito que estão escritas.')}
+  </div>` : `<div class="card empty">Nenhuma variável encontrada ainda. Suba os HTMLs no passo anterior.</div>`}
+  ${navFoot()}`;
+}
+
+function resumoBlocos(){
+  const itens = [];
+  for (const k of paginasDo(S.ev)) {
+    if (S.html[k] == null) continue;
+    const {raiz, erros} = blocos(S.html[k]), frases = [];
+    const ver = (nos, grupo) => nos.forEach(n => {
+      if (n.t === 'repetir') {
+        const item = n.alvo === 'etapa' ? 'etapa' : 'cidade', se = n.filhos.find(f => f.t === 'se' && f.op);
+        let f = `O publicador cria um card para cada ${item} cadastrada`;
+        if (grupo) f += ` e junta os cards por <span class="v">@${esc(grupo)}</span>`;
+        f += '.';
+        if (se) f += ` Quando <span class="v">@${esc(se.col)}</span> é “${esc(rotuloOpcao(se.val))}”, o card usa um modelo; nos outros casos (como “em breve”), usa outro.`;
+        frases.push(f);
+      }
+      else if (n.t === 'agrupar') ver(n.filhos, n.col);
+      else if (n.t === 'se') { ver(n.filhos, grupo); ver(n.senao, grupo); }
+    });
+    ver(raiz.filhos, null);
+    if (erros.length) itens.push(`<div class="w-item bad"><span class="ic">✕</span><div><b>${pag(k).nome}: o HTML tem um bloco aberto e não fechado</b>${esc(erros.join(' · '))}. Peça ao designer para conferir.</div></div>`);
+    else if (frases.length) itens.push(`<div class="w-item info"><span class="ic">↻</span><div><b>${pag(k).nome}: tem um bloco</b>Bloco é um pedaço da página que se repete, como o card de cada cidade. ${frases.join(' ')} Sem cidade cadastrada, não aparece card.</div></div>`);
+  }
+  return itens.length ? `<div class="warns">${itens.join('')}</div>` : '';
+}
+
+/* ---- passo 4: cadastro ---- */
+const rotuloOpcao = o => slug(o) === 'breve' ? 'em breve' : o;
+function painelColuna(tipo, cols){
+  const ev = S.ev;
+  if (S.novaCol === tipo) return `<div class="colpanel">
+    <label class="f" style="flex:1;min-width:220px">Nome da nova coluna <small>Letras, números e _. Use em fórmulas ou escreva <span class="v">@nome</span> no HTML.</small>
+      <input class="inp" id="nc-in" placeholder="ex.: preco_lote_2" autocomplete="off"></label>
+    <div class="row"><button class="btn sm pri" type="button" data-ncok="${tipo}">Criar coluna</button><button class="btn sm ghost" type="button" data-nccancel>Cancelar</button></div>
+    <span class="small" id="nc-msg" style="color:var(--bad)"></span></div>`;
+  const [t, c] = (S.colMenu || '').split(':');
+  if (t !== tipo || !cols.includes(c)) return '';
+  const v = ev.vars[c], i = cols.indexOf(c);
+  return `<div class="colpanel" role="group" aria-label="Coluna @${esc(c)}">
+    <div class="colpanel-h"><span class="v">@${esc(c)}</span>
+      <span class="row" style="gap:4px"><button class="btn sm ghost" type="button" data-colmv="${tipo}:${c}:-1" ${i === 0 ? 'disabled' : ''}>← Mover</button><button class="btn sm ghost" type="button" data-colmv="${tipo}:${c}:1" ${i === cols.length - 1 ? 'disabled' : ''}>Mover →</button></span></div>
+    <label class="f">Fórmula <small>Opcional. Use nomes de outras colunas com + − * / e parênteses. Com fórmula, a coluna se preenche sozinha; o que for digitado numa célula vale mais que o cálculo.</small>
+      <input class="inp" id="fx-in" value="${esc(v.formula || '')}" placeholder="ex.: parcelamento * valor_parcelado" autocomplete="off" style="font-family:var(--f-mono)"></label>
+    <span class="small" id="fx-msg"></span>
+    <div class="row"><button class="btn sm pri" type="button" data-fxok="${tipo}:${c}">Salvar fórmula</button>
+      ${v.formula ? `<button class="btn sm" type="button" data-fxoff="${tipo}:${c}">Preencher à mão</button>` : ''}
+      ${FORMULAS_PADRAO[c] && v.formula !== FORMULAS_PADRAO[c] ? `<button class="btn sm ghost" type="button" data-fxpad="${tipo}:${c}">Voltar à sugerida</button>` : ''}
+      ${S.confirm === 'col-' + c ? '' : `<button class="btn sm danger" type="button" data-colask="${c}">Excluir coluna</button>`}
+      <button class="btn sm ghost" type="button" data-colfechar>Fechar</button></div>
+    ${S.confirm === 'col-' + c ? `<div class="w-item bad"><span class="ic">!</span><div><b>Excluir a coluna @${esc(c)}?</b>${v.extra ? 'A coluna e os valores digitados nela saem do cadastro.' : `Os valores digitados saem do cadastro e, na página, <span class="v">@${esc(c)}</span> fica em branco. Dá para trazer de volta no passo Variáveis.`}
+      <span class="row" style="margin-top:8px"><button class="btn sm danger-fill" type="button" data-colrm="${c}">Excluir</button><button class="btn sm ghost" type="button" data-cancel>Cancelar</button></span></div></div>` : ''}
+  </div>`;
+}
+function tabela(tipo){
+  const ev = S.ev, cols = colunas(tipo), lista = tipo === 'etapa' ? ev.etapas : ev.cidades;
+  const comEtapa = tipo === 'etapa' && temEtapa(ev);  // cada etapa pertence a uma cidade
+  const titulo = tipo === 'etapa' ? 'Etapas' : 'Cidades (praças)';
+  const fx = c => !!ev.vars[c]?.formula;
+  return `<section class="stack">
+    <div class="row" style="justify-content:space-between"><div><h2 style="font-size:20px">${titulo}</h2>
+      <p class="small muted">${tipo === 'etapa' ? 'Uma linha por etapa de cada cidade.' : 'Uma linha por cidade.'} Arraste o título de uma coluna para mudar a ordem; clique nele para ver ou mudar a fórmula. Colunas com <span class="fx">ƒ</span> se preenchem sozinhas.</p></div>
+      <span class="row" style="gap:8px"><button class="btn sm ghost" type="button" data-novacol="${tipo}">+ Coluna</button><button class="btn sm" type="button" data-addrow="${tipo}">+ ${tipo === 'etapa' ? 'Etapa' : 'Cidade'}</button></span></div>
+    ${painelColuna(tipo, cols)}
+    ${!cols.length && tipo === 'cidade' && !paginasDo(ev).some(k => S.html[k] != null) ? `<div class="card empty">Suba o HTML da praça para as colunas aparecerem.</div>` : `
+    <div class="tw"><table class="grid-ed">
+      <thead><tr><th class="idx">#</th>${comEtapa ? '<th>Cidade</th>' : ''}${cols.map(c => `<th draggable="true" data-coldrag="${tipo}:${esc(c)}" class="colh ${S.colMenu === tipo + ':' + c ? 'on' : ''}"><button type="button" class="colbtn" data-colmenu="${tipo}:${esc(c)}" title="Clique para fórmula e ordem; arraste para mover"><span class="grip" aria-hidden="true">⋮⋮</span><span class="v">@${esc(c)}</span>${fx(c) ? '<span class="fx" title="Calculada">ƒ</span>' : ''}</button></th>`).join('')}<th>Arquivo gerado</th><th class="act"><span class="sr">Ações</span></th></tr></thead>
+      <tbody>${lista.length ? lista.map((it, i) => `<tr data-linha="${it._id}">
+        <td class="idx">${i + 1}</td>
+        ${comEtapa ? `<td><select data-tbl="etapa" data-row="${it._id}" data-col="_cidade" aria-label="Cidade da linha ${i + 1}"><option value="">Escolha…</option>${ev.cidades.map((c, j) => `<option value="${c._id}" ${it._cidade === c._id ? 'selected' : ''}>${esc(nomeItem('cidade', c, j))}</option>`).join('')}</select></td>` : ''}
+        ${cols.map((c, j) => { const f = fx(c), calc = f ? calculado(it, c) : '', manual = calc && String(it[c] || '').trim();
+          if (!f && S.opcoes?.[c]) { const ops = [...S.opcoes[c]], cur = String(it[c] || '').trim(); if (cur && !ops.some(o => slug(o) === slug(cur)) && !(c === 'status' && slug(cur) === 'em-breve')) ops.push(cur);
+            return `<td><select data-tbl="${tipo}" data-row="${it._id}" data-col="${esc(c)}" data-ci="${j}" aria-label="@${esc(c)} da linha ${i + 1}">${c === 'status' ? '' : '<option value="">—</option>'}${ops.map(o => `<option value="${esc(o)}" ${slug(o) === slug(c === 'status' ? cur || 'breve' : cur) || (c === 'status' && slug(o) === 'breve' && slug(cur) === 'em-breve') ? 'selected' : ''}>${esc(rotuloOpcao(o))}</option>`).join('')}</select></td>`; }
+          return `<td class="${calc ? (manual ? 'calc manual' : 'calc') : ''}"><input data-tbl="${tipo}" data-row="${it._id}" data-col="${esc(c)}" data-ci="${j}" value="${esc(it[c] || '')}" ${f ? `data-fx placeholder="${esc(calc)}"` : S.opcoes?.[c] ? `list="op-${esc(c)}" placeholder="${esc([...S.opcoes[c]].join(' ou '))}"` : ''} aria-label="@${esc(c)} da linha ${i + 1}">${manual ? `<button type="button" class="rst" data-rst="${tipo}:${it._id}:${esc(c)}" title="Voltar ao valor calculado" aria-label="Voltar ao valor calculado">↺</button>` : ''}</td>`; }).join('')}
+        <td class="file-col"><input data-tbl="${tipo}" data-row="${it._id}" data-col="_arquivo" value="${esc(it._arquivo || '')}" placeholder="${esc(arqPadrao(tipo, it))}" aria-label="Arquivo da linha ${i + 1}"></td>
+        <td class="act">${S.confirm === 'rm-' + it._id
+          ? `<span class="confirm"><button class="btn sm danger" type="button" data-rmsim="${tipo}:${it._id}">Remover</button><button class="btn sm ghost" type="button" data-cancel>Não</button></span>`
+          : `<button class="iconbtn" type="button" data-dup="${tipo}:${it._id}" aria-label="Duplicar linha ${i + 1}" title="Duplicar linha"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="4.5" y="4.5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M9.5 2.5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6.5a1 1 0 0 0 1 1h.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><button class="iconbtn" type="button" data-mv="${tipo}:${it._id}:-1" aria-label="Subir linha ${i + 1}" ${i === 0 ? 'disabled' : ''}>↑</button><button class="iconbtn" type="button" data-mv="${tipo}:${it._id}:1" aria-label="Descer linha ${i + 1}" ${i === lista.length - 1 ? 'disabled' : ''}>↓</button><button class="iconbtn" type="button" data-rm="${it._id}" aria-label="Remover linha ${i + 1}">✕</button>`}</td>
+      </tr>`).join('') : `<tr><td colspan="${cols.length + 3 + (comEtapa ? 1 : 0)}" class="empty">Nenhuma ${tipo === 'etapa' ? 'etapa' : 'cidade'} ainda. Clique em “+ ${tipo === 'etapa' ? 'Etapa' : 'Cidade'}” ou cole as linhas da planilha.</td></tr>`}</tbody>
+    </table></div>`}
+    ${Object.entries(S.opcoes || {}).map(([c, set]) => `<datalist id="op-${esc(c)}">${[...set].map(v => `<option value="${esc(v)}">`).join('')}</datalist>`).join('')}
+  </section>`;
+}
+function pCadastro(){
+  const ev = S.ev, gerais = colunas('geral');
+  if (S.prevAberta) { S.ger = gerar(); if (S.sel >= S.ger.pags.length) S.sel = 0; }
+  return `<div class="head"><span class="eyebrow">${passoTxt('cadastro')}</span><h1>Cadastro</h1>
+    <p>As colunas nascem das variáveis dos HTMLs. Dá para colar direto da planilha: copie as células e cole na primeira célula da tabela.</p>
+    ${ev.vars.preco_vista || ev.vars.valor_parcelado ? `<p class="small muted">Preço: digite só o preço à vista, só as parcelas, ou os dois. O que faltar e der para calcular, o publicador calcula. Cidade sem preço aparece como “a confirmar”, se o HTML tiver esse caso.</p>` : ''}</div>
+  ${gerais.length ? `<section class="card stack"><div><h2 style="font-size:20px">Geral do evento</h2><p class="small muted">Valem para todas as páginas.</p></div>
+    <div class="grid3">${gerais.map(g => `<label class="f"><span class="v" style="align-self:flex-start">@${esc(g)}</span><input class="inp" data-geral="${esc(g)}" value="${esc(ev.gerais[g] || '')}"></label>`).join('')}</div></section>` : ''}
+  ${S.prevAberta ? '' : `<div><button class="btn sm" type="button" data-prevabrir>Mostrar prévia ao vivo</button></div>`}
+  <div class="${S.prevAberta ? 'cad-grid' : ''}"><div class="cad-main stack">
+  ${tabela('cidade')}
+  ${temEtapa(ev) ? tabela('etapa') : ''}
+  </div>${S.prevAberta ? painelPrevia() : ''}</div>
+  ${navFoot()}`;
+}
+
+/* ---- passo: imagens ---- */
+function pImagens(){
+  const ev = S.ev, g = gerar(); S.ger = g; if (S.sel >= g.pags.length) S.sel = 0;
+  const det = S.detCache || deteccao();
+  const todas = [...det.values()].filter(d => ehImg(d.base) && !ev.vars[d.base].ignorar);
+  const head = `<div class="head"><span class="eyebrow">${passoTxt('imagens')}</span><h1>Mídia</h1>
+    <p>Escolha a imagem ou o vídeo de cada lugar da página. Cada lugar só aceita os arquivos da pasta da sua seção.</p></div>`;
+  if (!todas.length) return head + `<div class="card stack"><b>Nenhuma imagem ou vídeo trocável nestes HTMLs</b>
+    <p class="small muted">Para poder trocar aqui, o HTML usa uma variável como <span class="v">@media_hero_desktop</span> (imagem ou vídeo), <span class="v">@img_kit_foto</span> ou <span class="v">@video_arena</span>, e as opções ficam na pasta <span class="v">_media/praca/hero/</span>. Veja o guia de variáveis.</p></div>${navFoot()}`;
+  const p = g.pags[S.sel];
+  const bases = p && S.html[p.kind] != null ? [...new Set(acharVars(S.html[p.kind]).filter(o => ehImg(o.base) && !ev.vars[o.base]?.ignorar).map(o => o.base))] : [];
+  const secoes = {}; bases.forEach(b => (secoes[secaoImg(b)] = secoes[secaoImg(b)] || []).push(b));
+  const lista = ev2 => (ev2 === 'etapa' ? ev.etapas : ev.cidades);
+  const linha = (base, it, tipo, rotulo) => {
+    const ops = opcoesImg(base), atual = valorImagem(base, it);
+    return `<div class="img-alvo">${rotulo ? `<span class="img-quem">${esc(rotulo)}</span>` : ''}
+      <div class="thumbs" role="radiogroup" aria-label="Imagem de @${esc(base)}${rotulo ? ' em ' + esc(rotulo) : ''}">
+        ${ops.map(o => `<button type="button" class="thumb" role="radio" aria-checked="${o.caminho === atual}" data-escolher="${esc(base)}|${tipo}|${it ? it._id : ''}|${esc(o.caminho)}" title="${esc(o.caminho.split('/').pop())}">${ehVideoArq(o.caminho) ? `<video muted playsinline preload="metadata" data-k="${esc(o.k)}"></video>` : `<img alt="" data-k="${esc(o.k)}">`}<span>${esc(o.caminho.split('/').pop())}</span></button>`).join('')}
+      </div></div>`;
+  };
+  const slot = base => {
+    const v = ev.vars[base], ops = opcoesImg(base), pastas = pastasVer(base);
+    let corpo;
+    if (!ops.length) corpo = `<div class="w-item warn"><span class="ic">!</span><div><b>Pasta sem arquivos</b>Envie as opções em <span class="v">${esc(pastas.join(' ou '))}</span> no passo Páginas (Imagens e arquivos do site).</div></div>`;
+    else if (v.dono === 'geral') corpo = linha(base, null, 'geral', '');
+    else { const t = v.dono === 'etapa' ? 'etapa' : 'cidade', alvo = p.ctx?.[t];
+      corpo = alvo ? linha(base, alvo, t, nomeItem(t, alvo, idxDe(t, alvo))) : lista(t).map((it, i) => linha(base, it, t, nomeItem(t, it, i))).join('') || `<p class="small muted">Cadastre ${t === 'etapa' ? 'etapas' : 'cidades'} para escolher.</p>`; }
+    return `<div class="img-slot"><div class="img-slot-h"><span class="v">@${esc(base)}</span><span class="small muted">${v.dono === 'geral' ? 'igual em todas as páginas' : v.dono === 'etapa' ? 'muda em cada etapa' : 'muda em cada cidade'}</span></div>${corpo}</div>`;
+  };
+  return head + `
+  <div class="row">
+    <label class="f" style="flex:1;min-width:220px">Página <select class="inp" id="img-pag">${g.pags.map((x, i) => `<option value="${i}" ${i === S.sel ? 'selected' : ''}>${esc(x.titulo)} — ${esc(x.arquivo)}</option>`).join('')}</select></label>
+  </div>
+  <div class="img-grid">
+    <div class="img-lista" id="img-lista">
+      ${Object.keys(secoes).length ? Object.entries(secoes).map(([sec, bs]) => `<section class="img-sec"><h2>Seção ${esc(sec)} <span class="small muted" style="font-weight:400">· pasta ${esc(pastasVer(bs[0]).join(', '))}</span></h2>${bs.map(slot).join('')}</section>`).join('')
+        : `<div class="card empty">Esta página não tem imagens ou vídeos trocáveis.</div>`}
+    </div>
+    <div class="stage">
+      <div class="row" style="justify-content:space-between">
+        <span class="row" style="gap:8px">${segDevice()}${botaoJanela()}</span>
+        <span class="small muted" style="font-family:var(--f-mono)">${esc(p?.arquivo || '')}</span>
+      </div>
+      <div class="frame-wrap" id="fw" data-manter></div>
+    </div>
+  </div>
+  ${navFoot()}`;
+}
+async function carregarMiniaturas(){
+  for (const im of document.querySelectorAll('img[data-k], video[data-k]')) { if (im.getAttribute('src')) continue; const u = await dataUrlDe(im.dataset.k); if (u && im.isConnected) im.src = u; }
+}
+
+/* ---- passo 5: conferir ---- */
+function pConferir(){
+  const g = gerar(); S.ger = g;
+  if (S.sel >= g.pags.length) S.sel = 0;
+  const bad = g.avisos.filter(a => a.nivel === 'bad').length, warn = g.avisos.length - bad;
+  return `<div class="head"><span class="eyebrow">${passoTxt('conferir')}</span><h1>Conferir</h1>
+    <p>Confira se as variáveis foram preenchidas corretamente.</p></div>
+  <div class="row">
+    <span class="pill acc">${g.pags.length} página(s)</span>
+    ${bad ? `<span class="pill bad">${bad} impede${bad > 1 ? 'm' : ''} a geração</span>` : ''}
+    ${warn ? `<span class="pill warn">${warn} aviso(s)</span>` : ''}
+    ${!bad && !warn ? '<span class="pill ok">Tudo preenchido</span>' : ''}
+  </div>
+  ${g.avisos.length ? `<div class="warns">${g.avisos.map(a => `<div class="w-item ${a.nivel}"><span class="ic">${a.nivel === 'bad' ? '✕' : '!'}</span><div><b>${esc(a.titulo)}</b><span class="small">${esc(a.det || '')}</span> ${a.passo ? `<button class="btn sm ghost" type="button" data-ir="${a.passo}" style="padding:2px 6px">Ir para ${PASSOS.find(p => p[0] === a.passo)[1]} →</button>` : ''}</div></div>`).join('')}</div>` : ''}
+  ${g.pags.length ? `<div class="check">
+    <div class="plist" role="list">${listaPags(g.pags)}</div>
+    <div class="stage">
+      <div class="row" style="justify-content:space-between">
+        <span class="row" style="gap:8px">${segDevice()}${botaoJanela()}</span>
+        <span class="small muted" style="font-family:var(--f-mono)">${esc(g.pags[S.sel]?.arquivo || '')}</span>
+      </div>
+      <div class="frame-wrap" id="fw" data-manter></div>
+      <label class="f">Endereço das imagens no ar <small>Opcional. Só precisa se você não enviou a pasta de assets no passo Páginas e as imagens já estão hospedadas (ex.: https://seusite.com.br/combo/).</small>
+        <input class="inp" id="baseUrl" value="${esc(S.ev.baseUrl || '')}" placeholder="https://"></label>
+    </div></div>` : ''}
+  ${navFoot()}`;
+}
+function listaPags(pags){
+  let html = '', grp = null;
+  pags.forEach((p, i) => {
+    const g = p.kind === 'tapume' ? 'Tapume' : p.kind === 'unica' ? 'Página' : temEtapa(S.ev) ? 'Praças e etapas' : 'Praças';
+    if (g !== grp) { html += `<div class="grp">${g}</div>`; grp = g; }
+    html += `<button type="button" role="listitem" data-pg="${i}" aria-pressed="${S.sel === i}" class="${p.nivel ? 'ind' : ''}"><span style="min-width:0"><span class="t">${esc(p.titulo)}</span><span class="a">${esc(p.arquivo)}</span></span><span class="dot ${p.avisos ? 'w' : ''}" title="${p.avisos ? 'Tem aviso' : 'Sem avisos'}"></span></button>`;
+  });
+  return html;
+}
+function comBase(html){
+  const b = (S.ev.baseUrl || '').trim(); if (!b) return html;
+  const tag = `<base href="${esc(b.endsWith('/') ? b : b + '/')}">`;
+  return /<head[^>]*>/i.test(html) ? html.replace(/<head([^>]*)>/i, `<head$1>${tag}`) : tag + html;
+}
+async function mostrarPrevia(){
+  const p = S.ger?.pags[S.sel]; if (!p) return;
+  const vez = (S.vezPrevia = (S.vezPrevia || 0) + 1);
+  if (S.prevPag !== p.arquivo) { S.prevPag = p.arquivo; S.prevScroll = 0; }
+  const html = await comArquivos(comBase(p.html));
+  if (vez !== S.vezPrevia) return;
+  if (S.janela && !S.janela.closed) escreverJanela(html, p.titulo + ' — ' + p.arquivo);
+  const fw = $('#fw'); if (!fw) return;
+  const W = S.device === 'cel' ? 390 : 1280, H = S.device === 'cel' ? 780 : 800;
+  const pad = parseFloat(getComputedStyle(fw).paddingLeft) || 0, sc = Math.min(1, (fw.clientWidth - pad * 2) / W);
+  const estilo = f => { f.style.width = W + 'px'; f.style.height = H + 'px'; f.style.transform = `scale(${sc})`; };
+  fw.style.height = (H * sc + pad * 2) + 'px'; fw.style.justifyContent = sc < 1 ? 'flex-start' : 'center';
+  const atual = fw.querySelector('iframe.ativo');
+  if (atual) estilo(atual);
+  if (atual && atual._html === html) return;           // nada mudou: não recarrega
+  fw.querySelectorAll('iframe:not(.ativo)').forEach(f => f.remove());
+  // a página nova carrega escondida atrás da atual e só troca quando estiver pronta (sem piscar)
+  const novo = document.createElement('iframe');
+  novo.title = 'Prévia da página'; novo.setAttribute('sandbox', 'allow-scripts'); novo._html = html; estilo(novo);
+  if (atual) Object.assign(novo.style, {position:'absolute', left:pad + 'px', top:pad + 'px', visibility:'hidden'});
+  novo.onload = () => {
+    if (!novo.isConnected) return;
+    if (atual && atual.isConnected) { atual.remove(); }
+    Object.assign(novo.style, {position:'', left:'', top:'', visibility:''});
+    fw.querySelectorAll('iframe.ativo').forEach(f => { if (f !== novo) f.remove(); });
+    novo.classList.add('ativo'); novo.id = 'prev';
+  };
+  if (!atual) { novo.classList.add('ativo'); novo.id = 'prev'; }
+  fw.appendChild(novo); novo.srcdoc = comRolagem(html, S.prevScroll);
+}
+
+/* ---- prévia ao vivo ---- */
+function idxPagina(tipo, id){
+  const g = S.ger; if (!g) return -1;
+  return g.pags.findIndex(p => tipo === 'etapa' ? p.ctx?.etapa?._id === id : p.kind === 'praca' && p.ctx?.cidade?._id === id);
+}
+function painelPrevia(){
+  const g = S.ger || gerar(); S.ger = g; if (S.sel >= g.pags.length) S.sel = 0;
+  return `<aside class="cad-prev" aria-label="Prévia ao vivo">
+    <div class="cad-prev-h"><b>Prévia ao vivo</b><button class="btn sm ghost" type="button" data-prevfechar>Esconder</button></div>
+    ${g.pags.length ? `<select class="inp" id="prev-pag" aria-label="Página da prévia">${g.pags.map((x, i) => `<option value="${i}" ${i === S.sel ? 'selected' : ''}>${esc(x.titulo)} — ${esc(x.arquivo)}</option>`).join('')}</select>
+    <div class="row" style="justify-content:space-between">${segDevice()}${botaoJanela()}</div>
+    <div class="frame-wrap" id="fw" data-manter></div>
+    <p class="small muted">Atualiza enquanto você digita. Clicar numa linha mostra a página daquela ${temEtapa(S.ev) ? 'cidade ou etapa' : 'cidade'}.</p>`
+    : `<p class="small muted">A prévia aparece quando houver HTML e pelo menos uma linha no cadastro.</p>`}
+  </aside>`;
+}
+const segDevice = () => `<div class="seg" role="group" aria-label="Tamanho da prévia"><button type="button" data-dev="cel" aria-pressed="${S.device === 'cel'}">Celular</button><button type="button" data-dev="desk" aria-pressed="${S.device === 'desk'}">Desktop</button></div>`;
+const botaoJanela = () => `<button class="btn sm" type="button" data-janela title="Abre a prévia numa janela à parte, que acompanha as mudanças">Abrir em outra janela ↗</button>`;
+let tPrevia = null;
+function agendarPrevia(){
+  clearTimeout(tPrevia);
+  tPrevia = setTimeout(() => {
+    if (!$('#fw') && !(S.janela && !S.janela.closed)) return;
+    S.ger = gerar(); mostrarPrevia();
+    const sel = $('#prev-pag');
+    if (sel) sel.innerHTML = S.ger.pags.map((x, i) => `<option value="${i}" ${i === S.sel ? 'selected' : ''}>${esc(x.titulo)} — ${esc(x.arquivo)}</option>`).join('');
+  }, 300);
+}
+// guarda a rolagem da prévia para não voltar ao topo a cada letra digitada
+window.addEventListener('message', e => { if (e.data && typeof e.data.pubScroll === 'number') S.prevScroll = e.data.pubScroll; });
+function comRolagem(html, y){
+  const js = `<script>(function(){var y=${Math.round(y || 0)};function v(){scrollTo(0,y)}addEventListener('load',v);setTimeout(v,50);setTimeout(v,400);addEventListener('scroll',function(){parent.postMessage({pubScroll:scrollY},'*')},{passive:true})})()<\/script>`;
+  return /<\/body>/i.test(html) ? html.replace(/<\/body>(?![\s\S]*<\/body>)/i, js + '</body>') : html + js;
+}
+function abrirJanela(){
+  let w = null;
+  try { w = window.open('', 'publicador-previa', 'width=440,height=900'); } catch {}
+  if (!w) { toast('O navegador bloqueou a janela. Libere pop-ups para esta página ou use a versão em .zip.'); return; }
+  S.janela = w; S.janelaPag = null; S.ger = gerar(); mostrarPrevia(); toast('Prévia aberta em outra janela');
+}
+async function escreverJanela(html, titulo){
+  const w = S.janela; if (!w || w.closed) return;
+  try {
+    const mesma = S.janelaPag === titulo, y = mesma ? (w.scrollY || 0) : 0;
+    w.document.open(); w.document.write(html); w.document.close();
+    S.janelaPag = titulo;
+    const volta = () => { try { w.scrollTo(0, y); } catch {} };
+    setTimeout(volta, 60); setTimeout(volta, 400);
+    try { w.document.title = 'Prévia · ' + titulo; } catch {}
+  } catch { S.janela = null; toast('Não foi possível atualizar a outra janela'); }
+}
+
+/* ---- passo 6: publicar ---- */
+function pPublicar(){
+  const g = gerar(); S.ger = g;
+  const hist = [...S.ev.publicacoes].reverse();
+  return `<div class="head"><span class="eyebrow">${passoTxt('publicar')}</span><h1>Publicar</h1>
+    <p>Gera todas as páginas com as variáveis trocadas, num pacote .zip com nomes de arquivo prontos para subir.</p></div>
+  <section class="card stack">
+    <div class="row" style="justify-content:space-between"><div><h2 style="font-size:20px">${g.pags.length} página(s) neste pacote</h2>
+      <p class="small muted">Todos os HTMLs ficam na mesma pasta e os arquivos enviados no passo Páginas entram no .zip nos mesmos caminhos que o HTML usa (assets/…). É só subir o conteúdo do .zip.</p></div>
+      <button class="btn pri" type="button" id="gerarZip" ${g.bloqueado || !g.pags.length ? 'disabled' : ''}>Gerar pacote .zip</button></div>
+    ${g.bloqueado ? `<div class="w-item bad"><span class="ic">✕</span><div><b>Há itens que impedem a geração</b>Resolva no passo Conferir. <button class="btn sm ghost" type="button" data-ir="conferir" style="padding:2px 6px">Ir para Conferir →</button></div></div>`
+      : g.avisos.length ? `<div class="w-item warn"><span class="ic">!</span><div><b>${g.avisos.length} aviso(s) em aberto</b>Dá para gerar assim mesmo; as variáveis sem valor saem em branco.</div></div>` : ''}
+    <ul class="files">${g.pags.map(p => `<li>${esc(p.arquivo)}</li>`).join('')}</ul>
+  </section>
+  <section class="card stack">
+    <div><h2 style="font-size:20px">Envio para o servidor</h2>
+    <p class="small muted">Ainda não configurado. Quando o time definir onde os sites ficam no ar (FTP, bucket ou servidor próprio), este passo ganha o botão “Publicar no ar” no lugar do download.</p></div>
+  </section>
+  <section class="stack"><span class="eyebrow">Histórico</span>
+    ${hist.length ? `<div class="card hist">${hist.map(h => `<div><span><b>${fmtData(h.em)}</b> · ${h.paginas} página(s)${h.avisos ? ` · ${h.avisos} aviso(s)` : ''}</span><span class="muted small" style="font-family:var(--f-mono)">${esc(h.arquivo)}</span></div>`).join('')}</div>` : `<p class="muted small">Nenhum pacote gerado ainda.</p>`}
+  </section>
+  ${navFoot()}`;
+}
+async function gerarZip(){
+  const g = gerar(); if (g.bloqueado) return;
+  if (!window.JSZip) { toast('Não foi possível montar o .zip agora'); return; }
+  if (!S.downloads) { toast('Download indisponível nesta visualização'); return; }
+  const zip = new JSZip(), postos = new Set(); g.pags.forEach(p => zip.file(p.arquivo, p.html));
+  for (const p of g.pags) for (const ref of refsDe(p.html)) {
+    const caminho = normRef(ref), k = acharArquivo(ref); if (!k || postos.has(caminho) || caminho.startsWith('/') || caminho.includes('..')) continue;
+    const b = await blobDe(k); if (b) { zip.file(caminho, b); postos.add(caminho); }
+  }
+  const d = new Date(), nome = (slug(S.ev.nome) || 'evento') + '-' + d.toISOString().slice(0, 10) + '.zip';
+  const blob = await zip.generateAsync({type:'blob'});
+  try {
+    await S.downloads.save({filename:nome, data:blob});
+    S.ev.publicacoes.push({em:d.toISOString(), paginas:g.pags.length, avisos:g.avisos.length, arquivo:nome});
+    salvar(); render(); toast('Pacote gerado: ' + nome);
+  } catch (e) { if (e?.code !== 'declined') toast('Não foi possível baixar o .zip'); }
+}
+
+/* ============ eventos da interface ============ */
+function ligar(){
+  const m = $('#main'), ev = S.ev;
+  document.querySelectorAll('[data-ir]').forEach(b => b.onclick = () => { S.passo = b.dataset.ir; S.confirm = null; render(); window.scrollTo({top:0}); });
+  document.querySelectorAll('[data-home]').forEach(b => b.onclick = irHome);
+  m.querySelectorAll('[data-cancel]').forEach(b => b.onclick = () => { S.confirm = null; render(); });
+  // evento
+  const nome = $('#nome'); if (nome) nome.oninput = () => { ev.nome = nome.value; $('#crumb').textContent = '/ ' + (ev.nome || 'Evento sem nome'); salvar(); renderRail(); ligarRail(); };
+  m.querySelectorAll('[data-fmt]').forEach(b => b.onclick = () => { ev.formato = b.dataset.fmt; sincronizarVars(); salvar(); render(); });
+  const ex = $('#excluir'); if (ex) ex.onclick = () => { S.confirm = 'excluir'; render(); };
+  const exs = $('#excluirSim'); if (exs) exs.onclick = () => excluirEvento(ev.id);
+  // páginas
+  m.querySelectorAll('[data-up]').forEach(inp => inp.onchange = () => receberArquivo(inp.dataset.up, inp.files[0]));
+  m.querySelectorAll('[data-conv]').forEach(b => b.onclick = () => converterExistente(b.dataset.conv));
+  m.querySelectorAll('[data-baixarconv]').forEach(b => b.onclick = () => baixarConvertido(b.dataset.baixarconv));
+  m.querySelectorAll('[data-arqs]').forEach(inp => inp.onchange = () => receberArquivos(inp.files));
+  const ar = $('#arqRm'); if (ar) ar.onclick = () => { S.confirm = 'arqs'; render(); };
+  const ars = $('#arqRmSim'); if (ars) ars.onclick = () => { S.confirm = null; removerArquivos(); };
+  m.querySelectorAll('[data-drop]').forEach(dz => {
+    dz.ondragover = e => { e.preventDefault(); dz.classList.add('over'); };
+    dz.ondragleave = () => dz.classList.remove('over');
+    dz.ondrop = e => { e.preventDefault(); dz.classList.remove('over'); receberArquivo(dz.dataset.drop, e.dataTransfer.files[0]); };
+  });
+  // variáveis
+  m.querySelectorAll('[data-chip]').forEach(b => b.onclick = e => { e.stopPropagation(); S.chip = S.chip === b.dataset.chip ? null : b.dataset.chip; render(); });
+  m.querySelectorAll('[data-mover]').forEach(b => b.onclick = () => {
+    const [base, g] = b.dataset.mover.split(':'), v = ev.vars[base];
+    delete v.excluida;
+    if (g === 'ignorar') v.ignorar = true; else { v.ignorar = false; v.dono = g; v.manual = true; }
+    S.chip = null; salvar(); render(); toast(g === 'ignorar' ? '@' + base + ' fica como está na página' : '@' + base + ' mudou de grupo');
+  });
+  // cadastro
+  m.querySelectorAll('[data-geral]').forEach(i => i.oninput = () => { ev.gerais[i.dataset.geral] = i.value; salvar(); agendarPrevia(); });
+  m.querySelectorAll('[data-tbl]').forEach(i => {
+    const ev2 = i.tagName === 'SELECT' ? 'onchange' : 'oninput';
+    i[ev2] = () => {
+      const it = item(i.dataset.tbl, i.dataset.row); if (!it) return;
+      it[i.dataset.col] = i.value; salvar(); agendarPrevia();
+      if (i.tagName === 'SELECT') { render(); return; }
+      // recalcula as colunas com fórmula da mesma linha sem perder o foco
+      i.closest('tr').querySelectorAll('input[data-fx]').forEach(x => {
+        const c = calculado(it, x.dataset.col), td = x.closest('td');
+        x.placeholder = c; td.classList.toggle('calc', !!c); td.classList.toggle('manual', !!c && !!x.value.trim());
+      });
+    };
+    if (i.tagName === 'INPUT' && i.dataset.ci != null) i.onpaste = e => colar(e, i);
+  });
+  m.querySelectorAll('[data-rst]').forEach(b => b.onclick = () => { const [t, id, c] = b.dataset.rst.split(':'); const it = item(t, id); if (it) { delete it[c]; salvar(); render(); } });
+  m.querySelectorAll('[data-colmenu]').forEach(b => b.onclick = () => { S.novaCol = null; S.colMenu = S.colMenu === b.dataset.colmenu ? null : b.dataset.colmenu; render(); setTimeout(() => $('#fx-in')?.focus(), 20); });
+  m.querySelectorAll('[data-colfechar]').forEach(b => b.onclick = () => { S.colMenu = null; render(); });
+  const moverCol = (tipo, c, alvo) => { const cols = colunas(tipo).filter(x => x !== c); cols.splice(Math.max(0, Math.min(alvo, cols.length)), 0, c); ev.ordem = ev.ordem || {}; ev.ordem[tipo] = cols; salvar(); render(); };
+  m.querySelectorAll('[data-colmv]').forEach(b => b.onclick = () => { const [t, c, d] = b.dataset.colmv.split(':'); moverCol(t, c, colunas(t).indexOf(c) + +d); });
+  const fxMsg = (txt, ok) => { const el = $('#fx-msg'); if (el) { el.textContent = txt; el.style.color = ok ? 'var(--ok)' : 'var(--bad)'; } };
+  const fxIn = $('#fx-in');
+  if (fxIn) {
+    const testar = () => {
+      const [t, c] = S.colMenu.split(':'), f = fxIn.value.trim(); if (!f) { fxMsg(''); return true; }
+      const desconhecidas = nomesFormula(f).filter(n => !ev.vars[n]);
+      if (desconhecidas.length) { fxMsg('Não existe coluna ' + desconhecidas.map(n => '@' + n).join(', ') + '.'); return false; }
+      if (nomesFormula(f).includes(c)) { fxMsg('A fórmula não pode usar a própria coluna.'); return false; }
+      const it = (t === 'etapa' ? ev.etapas : ev.cidades)[0];
+      if (!it) { fxMsg('Fórmula válida.', true); return true; }
+      const r = avaliar(f, n => numBR(valorDe(ev.vars[n]?.dono === 'geral' ? null : it, n, new Set([c]))));
+      fxMsg(r == null ? 'Na 1ª linha ainda falta valor em alguma coluna usada na fórmula.' : 'Na 1ª linha dá ' + fmtBR(r) + '.', r != null);
+      return true;
+    };
+    fxIn.oninput = testar; testar();
+    fxIn.onkeydown = e => { if (e.key === 'Enter') m.querySelector('[data-fxok]')?.click(); };
+  }
+  m.querySelectorAll('[data-fxok]').forEach(b => b.onclick = () => {
+    const [, c] = b.dataset.fxok.split(':'), f = fxIn.value.trim();
+    if (f && (nomesFormula(f).some(n => !ev.vars[n]) || nomesFormula(f).includes(c))) return;
+    ev.vars[c].formula = f; salvar(); S.colMenu = null; render(); toast(f ? '@' + c + ' agora se preenche sozinha' : '@' + c + ' é preenchida à mão');
+  });
+  m.querySelectorAll('[data-fxoff]').forEach(b => b.onclick = () => { const [, c] = b.dataset.fxoff.split(':'); ev.vars[c].formula = ''; salvar(); render(); toast('@' + c + ' é preenchida à mão'); });
+  m.querySelectorAll('[data-fxpad]').forEach(b => b.onclick = () => { const [, c] = b.dataset.fxpad.split(':'); ev.vars[c].formula = FORMULAS_PADRAO[c]; salvar(); render(); });
+  m.querySelectorAll('[data-colask]').forEach(b => b.onclick = () => { S.confirm = 'col-' + b.dataset.colask; render(); });
+  m.querySelectorAll('[data-colrm]').forEach(b => b.onclick = () => {
+    const c = b.dataset.colrm;
+    if (ev.vars[c]?.extra) delete ev.vars[c]; else if (ev.vars[c]) ev.vars[c].excluida = true;
+    [...ev.cidades, ...ev.etapas].forEach(x => delete x[c]); delete ev.gerais[c];
+    S.colMenu = null; S.confirm = null; salvar(); render(); toast('Coluna @' + c + ' excluída');
+  });
+  m.querySelectorAll('[data-novacol]').forEach(b => b.onclick = () => { S.colMenu = null; S.novaCol = b.dataset.novacol; render(); setTimeout(() => $('#nc-in')?.focus(), 20); });
+  m.querySelectorAll('[data-nccancel]').forEach(b => b.onclick = () => { S.novaCol = null; render(); });
+  m.querySelectorAll('[data-ncok]').forEach(b => {
+    const criar = () => {
+      const nome = slug($('#nc-in').value.replace(/^@/, '')).replace(/-/g, '_');
+      const msg = $('#nc-msg');
+      if (!/^[a-z][a-z0-9_]*$/.test(nome)) { msg.textContent = 'Use letras, números e _, começando por letra.'; return; }
+      if (ev.vars[nome]) { msg.textContent = 'Já existe uma variável @' + nome + '.'; return; }
+      ev.vars[nome] = {dono:b.dataset.ncok, ignorar:false, extra:true, manual:true}; S.novaCol = null; S.colMenu = b.dataset.ncok + ':' + nome; salvar(); render(); toast('Coluna @' + nome + ' criada');
+    };
+    b.onclick = criar; const inp = $('#nc-in'); if (inp) inp.onkeydown = e => { if (e.key === 'Enter') criar(); };
+  });
+  // arrastar colunas
+  let arrastando = null;
+  m.querySelectorAll('[data-coldrag]').forEach(th => {
+    th.ondragstart = e => { arrastando = th.dataset.coldrag; e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', arrastando); } catch {} th.style.opacity = '.5'; };
+    th.ondragend = () => { th.style.opacity = ''; m.querySelectorAll('.colh').forEach(x => x.classList.remove('drop-antes', 'drop-depois')); };
+    th.ondragover = e => {
+      if (!arrastando || arrastando.split(':')[0] !== th.dataset.coldrag.split(':')[0]) return;
+      e.preventDefault(); const r = th.getBoundingClientRect(), antes = e.clientX < r.left + r.width / 2;
+      th.classList.toggle('drop-antes', antes); th.classList.toggle('drop-depois', !antes);
+    };
+    th.ondragleave = () => th.classList.remove('drop-antes', 'drop-depois');
+    th.ondrop = e => {
+      e.preventDefault(); if (!arrastando) return;
+      const [t, c] = arrastando.split(':'), [t2, alvo] = th.dataset.coldrag.split(':'); arrastando = null;
+      if (t !== t2 || c === alvo) return;
+      const r = th.getBoundingClientRect(), antes = e.clientX < r.left + r.width / 2;
+      const cols = colunas(t).filter(x => x !== c); let i = cols.indexOf(alvo) + (antes ? 0 : 1);
+      cols.splice(i, 0, c); ev.ordem = ev.ordem || {}; ev.ordem[t] = cols; salvar(); render();
+    };
+  });
+  m.querySelectorAll('[data-addrow]').forEach(b => b.onclick = () => {
+    const t = b.dataset.addrow, lista = t === 'etapa' ? ev.etapas : ev.cidades;
+    const novo = copiaLinha(t, lista[lista.length - 1]);
+    if (t === 'etapa' && !novo._cidade && ev.cidades.length === 1) novo._cidade = ev.cidades[0]._id;
+    lista.push(novo); salvar(); render(); focarNome(t, novo);
+    if (lista.length > 1) toast('Nova linha com os dados da linha de cima. Troque o que for diferente.');
+  });
+  m.querySelectorAll('[data-dup]').forEach(b => b.onclick = () => {
+    const [t, id] = b.dataset.dup.split(':'), lista = t === 'etapa' ? ev.etapas : ev.cidades, i = lista.findIndex(x => x._id === id);
+    const novo = copiaLinha(t, lista[i]); lista.splice(i + 1, 0, novo); salvar(); render(); focarNome(t, novo); toast('Linha duplicada. Troque o que for diferente.');
+  });
+  m.querySelectorAll('[data-mv]').forEach(b => b.onclick = () => {
+    const [t, id, d] = b.dataset.mv.split(':'), lista = t === 'etapa' ? ev.etapas : ev.cidades, i = lista.findIndex(x => x._id === id), j = i + +d;
+    if (j < 0 || j >= lista.length) return; [lista[i], lista[j]] = [lista[j], lista[i]]; salvar(); render();
+  });
+  m.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { S.confirm = 'rm-' + b.dataset.rm; render(); });
+  m.querySelectorAll('[data-rmsim]').forEach(b => b.onclick = () => {
+    const [t, id] = b.dataset.rmsim.split(':');
+    if (t === 'etapa') ev.etapas = ev.etapas.filter(x => x._id !== id);
+    else { ev.cidades = ev.cidades.filter(x => x._id !== id); ev.etapas.forEach(e => { if (e._cidade === id) e._cidade = ''; }); }
+    S.confirm = null; salvar(); render();
+  });
+  // conferir
+  const ip = $('#img-pag'); if (ip) ip.onchange = () => { S.sel = +ip.value; render(); };
+  m.querySelectorAll('[data-escolher]').forEach(b => b.onclick = () => {
+    const [base, tipo, id, caminho] = b.dataset.escolher.split('|');
+    if (tipo === 'geral') { ev.imagens = ev.imagens || {}; ev.imagens[base] = caminho; }
+    else { const it = item(tipo, id); if (!it) return; it[base] = caminho; }
+    const lst = $('#img-lista'), y = lst?.scrollTop, wy = window.scrollY; salvar(); render();
+    const l2 = $('#img-lista'); if (l2 && y != null) l2.scrollTop = y; window.scrollTo(0, wy);
+  });
+  m.querySelectorAll('[data-pg]').forEach(b => b.onclick = () => { S.sel = +b.dataset.pg; m.querySelectorAll('[data-pg]').forEach(x => x.setAttribute('aria-pressed', x === b)); mostrarPrevia(); m.querySelector('.stage .row span.small').textContent = S.ger.pags[S.sel].arquivo; });
+  m.querySelectorAll('[data-janela]').forEach(b => b.onclick = abrirJanela);
+  m.querySelectorAll('[data-prevfechar]').forEach(b => b.onclick = () => { S.prevAberta = false; render(); });
+  m.querySelectorAll('[data-prevabrir]').forEach(b => b.onclick = () => { S.prevAberta = true; render(); });
+  const pp = $('#prev-pag'); if (pp) pp.onchange = () => { S.sel = +pp.value; mostrarPrevia(); };
+  // clicar numa linha do cadastro mostra a página dela
+  m.querySelectorAll('tr[data-linha]').forEach(tr => tr.addEventListener('focusin', () => {
+    if (!S.ger) return; const t = tr.closest('section')?.querySelector('[data-addrow]')?.dataset.addrow || 'cidade';
+    const i = idxPagina(t, tr.dataset.linha); if (i >= 0 && i !== S.sel) { S.sel = i; const sel = $('#prev-pag'); if (sel) sel.value = i; mostrarPrevia(); }
+  }));
+  m.querySelectorAll('[data-dev]').forEach(b => b.onclick = () => { S.device = b.dataset.dev; m.querySelectorAll('[data-dev]').forEach(x => x.setAttribute('aria-pressed', x === b)); mostrarPrevia(); });
+  const bu = $('#baseUrl'); if (bu) { bu.oninput = () => { ev.baseUrl = bu.value; salvar(); }; bu.onchange = mostrarPrevia; }
+  // publicar
+  const gz = $('#gerarZip'); if (gz) gz.onclick = gerarZip;
+  ligarRail();
+}
+function ligarRail(){
+  $('#rail').querySelectorAll('[data-ir]').forEach(b => b.onclick = () => { S.passo = b.dataset.ir; S.confirm = null; render(); window.scrollTo({top:0}); });
+  $('#rail').querySelectorAll('[data-home]').forEach(b => b.onclick = irHome);
+}
+function irHome(){
+  if (S.ev) { flush(); const i = S.eventos.findIndex(e => e.id === S.ev.id); if (i >= 0) S.eventos[i] = JSON.parse(JSON.stringify(S.ev)); }
+  S.ev = null; S.confirm = null; render(); window.scrollTo({top:0});
+}
+$('#toHome').onclick = irHome;
+document.addEventListener('click', e => { if (S.chip && !e.target.closest('.chipw')) { S.chip = null; render(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && S.chip) { S.chip = null; render(); } });
+// nova linha = cópia da de cima, sem o nome (cada linha é outra cidade/etapa) e sem o arquivo
+function copiaLinha(t, base){
+  const novo = base ? JSON.parse(JSON.stringify(base)) : {};
+  novo._id = uid(); delete novo._arquivo; delete novo.status;
+  const nome = PREF[t].find(k => colunas(t).includes(k)); if (nome) novo[nome] = '';
+  return novo;
+}
+function focarNome(t, it){
+  const nome = PREF[t].find(k => colunas(t).includes(k));
+  setTimeout(() => ($(`[data-row="${it._id}"][data-col="${nome}"]`) || $(`[data-row="${it._id}"][data-ci="0"]`))?.focus(), 20);
+}
+function item(t, id){ return (t === 'etapa' ? S.ev.etapas : S.ev.cidades).find(x => x._id === id); }
+function colar(e, inp){
+  const txt = (e.clipboardData || window.clipboardData)?.getData('text') || '';
+  if (!/[\t\n]/.test(txt.trim())) return;
+  e.preventDefault();
+  const t = inp.dataset.tbl, lista = t === 'etapa' ? S.ev.etapas : S.ev.cidades, cols = colunas(t);
+  const linhas = txt.replace(/\r/g, '').replace(/\n+$/, '').split('\n').map(l => l.split('\t'));
+  let r = lista.findIndex(x => x._id === inp.dataset.row); const c0 = +inp.dataset.ci;
+  linhas.forEach(cells => {
+    if (!lista[r]) { const n = {_id:uid()}; if (t === 'etapa' && S.ev.cidades.length === 1) n._cidade = S.ev.cidades[0]._id; lista.push(n); }
+    cells.forEach((v, k) => { const col = cols[c0 + k]; if (col) lista[r][col] = v.trim(); });
+    r++;
+  });
+  salvar(); render(); toast(linhas.length + ' linha(s) coladas');
+}
+window.addEventListener('resize', () => { if (S.passo === 'conferir' && S.ev) mostrarPrevia(); });
+
+/* ============ início ============ */
+async function boot(){
+  render();
+  const c = window.claude;
+  if (!c?.use) {
+    // fora do Claude: guarda os eventos e arquivos neste navegador
+    try { await abrirIdb(); Object.assign(S, {local:true, db:dbLocal, assets:assetsLocal, downloads:downloadsLocal}); setSave('ok', 'Salvo neste navegador'); }
+    catch { S.pronto = true; setSave('pend', 'Só nesta sessão'); render(); return; }
+    S.db.collection('eventos').onSnapshot(snap => { S.eventos = snap.docs.map(d => d.data()); if (S.ev && !S.eventos.some(e => e.id === S.ev.id)) S.eventos.push(JSON.parse(JSON.stringify(S.ev))); S.pronto = true; if (!S.ev) render(); });
+    return;
+  }
+  const [db, assets, downloads] = await Promise.all([c.use('db'), c.use('assets'), c.use('downloads')]);
+  Object.assign(S, {db, assets, downloads});
+  if (!db) { S.pronto = true; setSave('pend', 'Só nesta sessão'); render(); return; }
+  setSave('ok', 'Salvo');
+  db.collection('eventos').onSnapshot(snap => {
+    S.eventos = snap.docs.map(d => d.data());
+    if (S.ev && !S.eventos.some(e => e.id === S.ev.id)) S.eventos.push(JSON.parse(JSON.stringify(S.ev)));
+    S.pronto = true; if (!S.ev) render();
+  }, () => { S.pronto = true; setSave('erro', 'Sem conexão com os dados'); if (!S.ev) render(); });
+}
+boot();
+</script>
+
+</body>
+</html>

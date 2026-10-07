@@ -1,0 +1,23 @@
+{
+  "paginas": [
+    {
+      "arquivo": "index.html",
+      "titulo": "Tapume",
+      "avisos": 0
+    },
+    {
+      "arquivo": "sao-paulo.html",
+      "titulo": "São Paulo",
+      "avisos": 1
+    },
+    {
+      "arquivo": "curitiba.html",
+      "titulo": "Curitiba",
+      "avisos": 1
+    }
+  ],
+  "bloqueado": false,
+  "avisos": [
+    "[alerta] Campos vazios no cadastro: 11 variável(is) em 2 cidade(s) — @parcelamento (São Paulo, Curitiba) · @valor_parcelado (São Paulo, Curitiba) · @preco_vista (São Paulo, Curitiba) · @porcentagem_desconto (São Paulo, Curitiba) · @preco_comum (São Paulo, Curitiba) · @preco_prime_parcelado (São Paulo, Curitiba) · @preco_prime (São Paulo, Curitiba) · @link_inscricao (São Paulo, Curitiba) · @link_inscricao_prime (São Paulo, Curitiba) · @desconto_em_reais (São Paulo, Curitiba) · @valor_adicional_prime (São Paulo, Curitiba). Saem em branco."
+  ]
+}

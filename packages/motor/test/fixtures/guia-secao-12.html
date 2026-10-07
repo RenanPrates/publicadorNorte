@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>@evento · @cidade_1</title>
+</head>
+<body>
+<!-- Trechos copiados à risca do GUIA_VARIAVEIS_HTML.md, seções 4, 7 e 12 -->
+
+<!-- 12.2 Valor -->
+<!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista_1<!-- @senao -->A confirmar<!-- @fim --><!-- @fim -->
+
+<!-- 12.2 Frase de apoio -->
+<!-- @se gratuito = sim -->Sem custo de inscrição.<!-- @senao --><!-- @se preco_vista -->À vista, com o kit incluso.<!-- @senao -->Valor divulgado na abertura das inscrições.<!-- @fim --><!-- @fim -->
+
+<!-- 12.2 Botão de inscrição -->
+<!-- @se gratuito = sim --><a class="btn" href="@link_inscricao_1">Inscreva-se grátis</a><!-- @senao --><a class="btn" href="@link_inscricao_1">Quero minha vaga</a><!-- @fim -->
+
+<!-- 12.2 Evento parcelado -->
+<!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se valor_parcelado -->@{parcelamento_1}x R$@valor_parcelado_1<!-- @senao -->A confirmar<!-- @fim --><!-- @fim -->
+
+<!-- 12.3 Status -->
+<!-- @se status = aberta -->
+  <a class="card" href="@url">… Inscrições abertas …</a>
+<!-- @senao -->
+  <div class="card card--breve">… Em breve …</div>
+<!-- @fim -->
+
+<!-- 4 Preço — evento parcelado -->
+<!-- @se gratuito = sim -->
+  <b>Evento gratuito</b>
+<!-- @senao --><!-- @se preco_vista -->
+  <!-- @se parcelamento -->
+    <b>@{parcelamento_1}x R$@valor_parcelado_1</b>
+    <span>ou R$@preco_vista_1 à vista</span>
+  <!-- @senao -->
+    <b>R$@preco_vista_1</b>
+  <!-- @fim -->
+<!-- @senao -->
+  <b>A confirmar</b>
+<!-- @fim --><!-- @fim -->
+
+<!-- 4 Data -->
+<!-- @se data_fim -->De @data_inicio_1 a @data_fim_1<!-- @senao -->@data_inicio_1<!-- @fim -->
+
+<!-- 4 Desconto e trecho opcional -->
+<span class="badge">@porcentagem_desconto_1% OFF</span>
+<s>R$@preco_comum_1</s> — economize R$@desconto_em_reais_1
+Combo<!-- @se valor_adicional_prime --> + R$@valor_adicional_prime_1<!-- @fim -->
+
+<!-- 9 Mídia -->
+<img class="hero__bg hero__bg--desk" src="@media_hero_desktop_1" alt="Largada em @cidade_1">
+<img class="hero__bg hero__bg--mob"  src="@media_hero_mobile_1"  alt="Largada em @cidade_1">
+<img src="_media/praca/marca/logo.webp">
+
+<!-- 7 Tapume -->
+<p class="contagem">@total_aberta com inscrição aberta · @total_breve em breve</p>
+
+<!-- @agrupar por regiao -->
+<section class="regiao" data-regiao="@regiao">
+  <h3>@regiao <span>@total_cidades</span></h3>
+  <div class="grade">
+<!-- @repetir cidades -->
+<!-- @se status = aberta -->
+    <a class="card aberta" href="@url">
+      <h3>@cidade <span>@uf</span></h3>
+      <p><!-- @se data_fim -->@data_inicio a @data_fim<!-- @senao -->@data_inicio<!-- @fim --> · @local</p>
+      <p><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista<!-- @senao -->Preço a confirmar<!-- @fim --><!-- @fim --></p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+<!-- @senao -->
+    <div class="card breve" aria-disabled="true">
+      <h3>@cidade <span>@uf</span></h3>
+      <span class="tag">em breve</span>
+    </div>
+<!-- @fim -->
+<!-- @fim -->
+  </div>
+</section>
+<!-- @fim -->
+
+<!--
+  VARIÁVEIS — Exemplo — praça
+  Gerais: @evento, @ano
+  Base usadas: @cidade, @uf, @regiao, @status, @data_inicio, @data_fim, @local,
+               @gratuito, @parcelamento, @valor_parcelado, @preco_vista, @link_inscricao
+  Opcionais: O2 Prime não usado neste evento. "A confirmar" e R$@preco_vista_1 aparecem só nos blocos.
+-->
+</body>
+</html>

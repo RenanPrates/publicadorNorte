@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>@evento @ano</title>
+<style>@media (min-width:700px){.grade{display:grid}}</style>
+</head>
+<body>
+<header><h1>@evento @ano</h1>
+<p class="contagem">@total_aberta com inscrição aberta · @total_breve em breve</p></header>
+<main>
+  <!-- @agrupar por regiao --><section class="regiao" data-regiao="@regiao">
+    <h3 class="reg-nome">@regiao <span>@total_cidades</span></h3>
+    <div class="grade">
+    
+<!-- @repetir cidades -->
+<!-- @se status = aberta -->
+<a class="card aberta" href="@url" data-busca="@cidade @uf @regiao">
+      <h3>@cidade <span class="uf">@uf</span></h3>
+      <p>@data_inicio · @local</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+<!-- @senao -->
+<div class="card breve" aria-disabled="true" data-busca="@cidade @uf @regiao">
+      <h3>@cidade <span class="uf">@uf</span></h3>
+      <span class="tag">em breve</span>
+    </div>
+<!-- @fim -->
+<!-- @fim -->
+
+    
+    
+    </div>
+  </section><!-- @fim -->
+  
+  
+</main>
+<!-- Cards numerados de @cidade_1 a @cidade_N -->
+<script>document.documentElement.classList.add('js');</script>
+</body>
+</html>

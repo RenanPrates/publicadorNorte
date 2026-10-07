@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>@evento @ano</title>
+<style>@media (min-width:700px){.grade{display:grid}}</style>
+</head>
+<body>
+<header><h1>@evento @ano</h1>
+<p class="contagem"></p></header>
+<main>
+  <div class="grade">
+    <a class="card aberta" href="@url_1" data-busca="@cidade_1 @uf_1">
+      <h3>@cidade_1 <span class="uf">@uf_1</span></h3>
+      <p>@data_inicio_1 · @local_1</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+    <div class="card breve" aria-disabled="true" data-busca="@cidade_2 @uf_2">
+      <h3>@cidade_2 <span class="uf">@uf_2</span></h3>
+      <span class="tag">em breve</span>
+    </div>
+    <div class="card esgotada"><h3>@cidade_3</h3><p>Esgotado</p></div>
+    <a class="card aberta" href="@url_4" data-busca="@cidade_4 @uf_4">
+      <h3>@cidade_4 <span class="uf">@uf_4</span></h3>
+      <p>@data_inicio_4 · @local_4</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+  </div>
+</main>
+<!-- Cards numerados de @cidade_1 a @cidade_N -->
+<script>document.documentElement.classList.add('js');</script>
+</body>
+</html>

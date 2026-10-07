@@ -1,0 +1,25 @@
+{
+  "paginas": [
+    {
+      "arquivo": "index.html",
+      "titulo": "Tapume",
+      "avisos": 0
+    },
+    {
+      "arquivo": "sao-paulo.html",
+      "titulo": "São Paulo",
+      "avisos": 1
+    },
+    {
+      "arquivo": "recife.html",
+      "titulo": "Recife",
+      "avisos": 1
+    }
+  ],
+  "bloqueado": false,
+  "avisos": [
+    "[alerta] 19 imagem(ns) ou vídeo(s) sem arquivo — Faltam as pastas: _media/praca/hero/, _media/praca/arena/, _media/praca/explore/, _media/praca/kit/, _media/praca/circuito/, _media/praca/textura/. Envie a pasta _media no passo Páginas.",
+    "[alerta] Campos vazios no cadastro: 2 variável(is) em 2 cidade(s) — @img_hero_desktop (São Paulo, Recife) · @img_hero_fundo (São Paulo, Recife). Saem em branco.",
+    "[alerta] Gerais do evento sem valor — @img_arena_bannermobile, @img_arena_cena, @img_arena_banner, @img_explore_mapa, @img_explore_checkin, @img_explore_atletas, @img_explore_quadra, @img_explore_arquibancada, @img_explore_ativacoes, @img_kit_fotomobile, @img_kit_foto, @img_kit_camiseta, @img_kit_sacochila, @img_kit_medalha, @img_circuito_selo, @img_textura_mobile, @img_textura_desktop — saem em branco em todas as páginas."
+  ]
+}

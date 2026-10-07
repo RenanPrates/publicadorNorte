@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>@evento @ano</title>
+<style>@media (min-width:700px){.grade{display:grid}}</style>
+</head>
+<body>
+<header><h1>@evento @ano</h1>
+<p class="contagem">4 com inscrição aberta · 2 em breve</p></header>
+<main>
+  <section class="regiao" data-regiao="Sudeste">
+    <h3 class="reg-nome">Sudeste <span>3</span></h3>
+    <div class="grade">
+    <a class="card aberta" href="@url_1" data-busca="@cidade_1 @uf_1 Sudeste">
+      <h3>@cidade_1 <span class="uf">@uf_1</span></h3>
+      <p>@data_inicio_1 · @local_1</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+    <a class="card aberta" href="@url_2" data-busca="@cidade_2 @uf_2 Sudeste">
+      <h3>@cidade_2 <span class="uf">@uf_2</span></h3>
+      <p>@data_inicio_2 · @local_2</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+    <div class="card breve" aria-disabled="true" data-busca="@cidade_3 @uf_3 Sudeste">
+      <h3>@cidade_3 <span class="uf">@uf_3</span></h3>
+      <span class="tag">em breve</span>
+    </div>
+    </div>
+  </section>
+  <section class="regiao" data-regiao="Nordeste">
+    <h3 class="reg-nome">Nordeste <span>2</span></h3>
+    <div class="grade">
+    <a class="card aberta" href="@url_4" data-busca="@cidade_4 @uf_4 Nordeste">
+      <h3>@cidade_4 <span class="uf">@uf_4</span></h3>
+      <p>@data_inicio_4 · @local_4</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+    <div class="card breve" aria-disabled="true" data-busca="@cidade_5 @uf_5 Nordeste">
+      <h3>@cidade_5 <span class="uf">@uf_5</span></h3>
+      <span class="tag">em breve</span>
+    </div>
+    </div>
+  </section>
+  <section class="regiao" data-regiao="Sul">
+    <h3 class="reg-nome">Sul <span>1</span></h3>
+    <div class="grade">
+    <a class="card aberta" href="@url_6" data-busca="@cidade_6 @uf_6 Sul">
+      <h3>@cidade_6 <span class="uf">@uf_6</span></h3>
+      <p>@data_inicio_6 · @local_6</p>
+      <span class="tag">inscrições abertas</span>
+    </a>
+    </div>
+  </section>
+</main>
+<!-- Cards numerados de @cidade_1 a @cidade_N -->
+<script>document.documentElement.classList.add('js');</script>
+</body>
+</html>

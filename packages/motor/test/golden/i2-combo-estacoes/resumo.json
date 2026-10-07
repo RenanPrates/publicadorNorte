@@ -1,0 +1,28 @@
+{
+  "paginas": [
+    {
+      "arquivo": "index.html",
+      "titulo": "Tapume",
+      "avisos": 0
+    },
+    {
+      "arquivo": "sao-paulo.html",
+      "titulo": "São Paulo",
+      "avisos": 0
+    },
+    {
+      "arquivo": "recife.html",
+      "titulo": "Recife",
+      "avisos": 1
+    },
+    {
+      "arquivo": "rio-de-janeiro.html",
+      "titulo": "Rio de Janeiro",
+      "avisos": 1
+    }
+  ],
+  "bloqueado": false,
+  "avisos": [
+    "[alerta] Campos vazios no cadastro: 11 variável(is) em 2 cidade(s) — @porcentagem_desconto (Recife, Rio de Janeiro) · @preco_comum (Recife, Rio de Janeiro) · @preco_prime_parcelado (Recife, Rio de Janeiro) · @preco_prime (Recife, Rio de Janeiro) · @link_inscricao_prime (Recife, Rio de Janeiro) · @desconto_em_reais (Recife, Rio de Janeiro) · @valor_adicional_prime (Recife, Rio de Janeiro) · @parcelamento (Rio de Janeiro) · @valor_parcelado (Rio de Janeiro) · @preco_vista (Rio de Janeiro) · @link_inscricao (Rio de Janeiro). Saem em branco."
+  ]
+}
