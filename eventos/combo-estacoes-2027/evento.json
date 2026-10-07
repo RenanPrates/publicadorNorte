@@ -193,7 +193,7 @@
     {
       "_id": "ed85ad25",
       "cidade": "São Paulo",
-      "uf": "SP",
+      "uf": "RJ",
       "regiao": "Sudeste",
       "mes_outono": "Janeiro",
       "mes_inverno": "Fevereiro",
@@ -212,5 +212,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:59:07.213Z"
+  "atualizadoEm": "2026-10-07T23:59:26.984Z"
 }
