@@ -176,19 +176,6 @@
       "uf": "RJ"
     },
     {
-      "_id": "da5bed39",
-      "regiao": "Sudeste",
-      "status": "aberta"
-    },
-    {
-      "_id": "3a307543",
-      "regiao": "Sudeste"
-    },
-    {
-      "_id": "b47a1621",
-      "regiao": "Sudeste"
-    },
-    {
       "_id": "3794c5e5",
       "regiao": "Sudeste"
     },
@@ -242,5 +229,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:46:44.614Z"
+  "atualizadoEm": "2026-10-07T23:46:48.872Z"
 }
