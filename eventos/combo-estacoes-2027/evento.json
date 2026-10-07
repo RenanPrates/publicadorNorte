@@ -8,6 +8,11 @@
       "arquivo": "combo-estacoes-tapume.html",
       "bytes": 20797,
       "enviadoEm": "2026-10-07T23:57:42.467Z"
+    },
+    "praca": {
+      "arquivo": "combo-estacoes-praca.html",
+      "bytes": 438578,
+      "enviadoEm": "2026-10-07T23:57:45.604Z"
     }
   },
   "vars": {
@@ -52,20 +57,118 @@
       "ignorar": false
     },
     "mes_outono_abrev": {
-      "dono": "cidade",
+      "dono": "auto",
       "ignorar": false
     },
     "mes_inverno_abrev": {
-      "dono": "cidade",
+      "dono": "auto",
       "ignorar": false
     },
     "mes_primavera_abrev": {
-      "dono": "cidade",
+      "dono": "auto",
       "ignorar": false
     },
     "mes_verao_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "gratuito": {
       "dono": "cidade",
       "ignorar": false
+    },
+    "valor_parcelado": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_vista / parcelamento"
+    },
+    "parcelamento": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_vista": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "parcelamento * valor_parcelado"
+    },
+    "preco_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_prime_parcelado": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_prime / parcelamento"
+    },
+    "media_hero_principal": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hoodie_foto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "porcentagem_desconto": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_comum": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_vista / (1 - porcentagem_desconto / 100)"
+    },
+    "valor_adicional_prime": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_prime - preco_vista"
+    },
+    "link_inscricao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_inscricao_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_outono": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_inverno": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_primavera": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_verao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_kits_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_completa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "desconto_em_reais": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_comum - preco_vista"
     }
   },
   "gerais": {},
@@ -77,5 +180,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:57:53.786Z"
+  "atualizadoEm": "2026-10-07T23:57:58.255Z"
 }
