@@ -10,9 +10,9 @@
       "enviadoEm": "2026-10-07T23:45:17.710Z"
     },
     "praca": {
-      "arquivo": "combo-estacoes-interna.html",
-      "bytes": 344134,
-      "enviadoEm": "2026-10-07T23:27:29.378Z"
+      "arquivo": "combo-estacoes-praca.html",
+      "bytes": 438578,
+      "enviadoEm": "2026-10-07T23:45:22.446Z"
     }
   },
   "vars": {
@@ -125,6 +125,38 @@
     "media_destaque_fundo": {
       "dono": "geral",
       "ignorar": false
+    },
+    "gratuito": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "media_hero_principal": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hoodie_foto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_completa": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {},
@@ -206,5 +238,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:45:29.046Z"
+  "atualizadoEm": "2026-10-07T23:45:33.796Z"
 }
