@@ -175,7 +175,9 @@
       "ignorar": false
     }
   },
-  "gerais": {},
+  "gerais": {
+    "ano": "2027"
+  },
   "cidades": [
     {
       "_id": "c95bc910",
@@ -214,5 +216,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:54:38.506Z"
+  "atualizadoEm": "2026-10-07T23:54:46.871Z"
 }
