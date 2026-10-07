@@ -171,7 +171,9 @@
     {
       "_id": "1a07186e",
       "regiao": "Sudeste",
-      "status": "aberta"
+      "status": "aberta",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ"
     },
     {
       "_id": "da5bed39",
@@ -240,5 +242,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:46:10.869Z"
+  "atualizadoEm": "2026-10-07T23:46:44.614Z"
 }
