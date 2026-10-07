@@ -52,8 +52,17 @@
   "ordem": {},
   "imagens": {},
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "52fdf7bcfa0b2c80b7c0a24bdf4d27b0e650b0a6",
+      "em": "2026-10-07T23:01:45.076Z",
+      "paginas": 4,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-publicador/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-07T23:01:11.254Z",
-  "atualizadoEm": "2026-10-07T23:01:33.672Z"
+  "atualizadoEm": "2026-10-07T23:01:46.443Z"
 }
