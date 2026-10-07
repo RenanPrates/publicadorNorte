@@ -185,7 +185,8 @@
       "mes_inverno": "Fevereiro",
       "mes_primavera": "Março",
       "mes_verao": "Abril",
-      "parcelamento": "12"
+      "parcelamento": "12",
+      "valor_parcelado": "100"
     }
   ],
   "etapas": [],
@@ -195,5 +196,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:58:45.962Z"
+  "atualizadoEm": "2026-10-07T23:58:48.848Z"
 }
