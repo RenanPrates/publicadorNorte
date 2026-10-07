@@ -1,4 +1,4 @@
-import type { TipoItem } from './tipos.js';
+import type { TipoItem } from './tipos';
 
 // <!-- @repetir cidades -->, <!-- @agrupar por regiao -->, <!-- @se status = aberta -->, <!-- @senao -->, <!-- @fim -->
 export const RX_MARCA = /<!--\s*@(repetir|agrupar|se|senao|fim)\b([\s\S]*?)-->/g;

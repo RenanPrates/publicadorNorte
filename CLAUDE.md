@@ -36,7 +36,7 @@ Antes de qualquer tarefa, leia:
 pnpm install
 pnpm test              # motor + verificador
 pnpm golden            # regrava as saídas golden (só depois de aprovar a mudança)
-pnpm dev               # apps/web em http://localhost:3000 (fase 1, ainda não existe)
+pnpm dev               # apps/web em http://localhost:3000 (precisa de apps/web/.env.local, ver .env.example)
 pnpm lint && pnpm typecheck
 ```
 
@@ -61,7 +61,20 @@ packages/motor/
   test/             um arquivo por seção de CASOS_DE_TESTE (a-… a j-…)
     fixtures/       HTMLs sintéticos (cards fixos, trechos do guia)
     golden/         saídas aprovadas dos exemplos
+apps/web/           Next.js 16 (App Router). Ler node_modules/next/dist/docs antes de mexer: middleware agora é proxy.ts
+  proxy.ts          senha única da equipe (SENHA_EQUIPE); sem senha, só abre em localhost
+  app/              telas: / (eventos) e /eventos/[slug]/[passo]; rotas em app/api
+  componentes/      Editor (estado + salvamento automático) e um componente por passo
+  lib/comum/        tipos do evento, montagem (motor + mídia), arquivos (sha do git)
+  lib/servidor/     github.ts (só fetch), armazenamento.ts e destino.ts (interfaces trocáveis), config.ts
 ```
+
+## Hospedagem atual (ambiente de testes)
+
+- Repositório `RenanPrates/publicadorNorte` (público). Código em `main`; dados dos eventos no branch `dados` (`eventos/<slug>/evento.json`, `modelos/`, `arquivos/`); sites publicados no branch `gh-pages` (`<slug>/…`, com `.nojekyll`), servidos pelo GitHub Pages em `https://renanprates.github.io/publicadorNorte/<slug>/`.
+- Cada publicação é um commit em `gh-pages` + tag `<slug>-v<N>`; "voltar para esta versão" restaura a pasta daquela versão num commit novo.
+- O destino final é a Cloudflare: tudo que é do GitHub fica atrás de `Armazenamento` e `DestinoPublicacao`. O app não pode usar APIs só de Node (roda em Workers via OpenNext).
+- Imports do motor sem extensão `.js` (o Turbopack não resolve `.js` → `.ts`).
 
 ## Fluxo de trabalho
 

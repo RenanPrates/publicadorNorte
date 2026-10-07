@@ -1,7 +1,7 @@
 // F. Arquivos e URLs
 import { describe, expect, it } from 'vitest';
-import { gerar } from '../src/index.js';
-import { linha, tapume } from './ajuda.js';
+import { gerar } from '../src/index';
+import { linha, tapume } from './ajuda';
 
 const gerarPracas = (cidades: ReturnType<typeof linha>[], praca = '<h1>@cidade_1 @uf_1</h1>') =>
   gerar({ formato: 'tapume_praca', modelos: { tapume: '<!-- @repetir cidades --><a href="@url">@cidade</a><!-- @fim -->', praca }, cidades });

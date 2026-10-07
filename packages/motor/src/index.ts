@@ -1,21 +1,24 @@
 // Motor do Publicador de Hotsites: HTML-modelo + cadastro + mídia → páginas + avisos.
 // Puro: sem banco, rede, DOM do navegador ou relógio. Data/hora entram como parâmetro.
 
-export * from './tipos.js';
-export { slug, slugValor, esc, numBR, fmtBR, abreviar } from './texto.js';
-export { RX_VAR, ehMidia, varsDoTexto } from './variaveis.js';
-export { lerBlocos, RX_MARCA, type No, type NoSe, type ErroBloco } from './blocos.js';
+export { FORMATOS, NOME_PAGINA } from './tipos';
+export type { Formato, TipoPagina, TipoItem, Dono, EstadoVar, Vars, Linha, Modelos, Passo, Aviso } from './tipos';
+export { slug, slugValor, esc, numBR, fmtBR, abreviar } from './texto';
+export { RX_VAR, ehMidia, varsDoTexto } from './variaveis';
+export { lerBlocos, RX_MARCA, type No, type NoSe, type ErroBloco } from './blocos';
 export {
   acharVars, detectar, inferirDono, inferirDonos, sincronizarVars, colunas, ehContagem, raizAbrev,
   FORMULAS_PADRAO, ORDEM_PADRAO, STATUS_CONHECIDOS,
   type Deteccao, type VarDetectada, type Ocorrencia,
-} from './detectar.js';
-export { avaliar, nomesFormula } from './formulas.js';
-export { Cadastro, novaLinha, COLUNAS_NOME, type DadosCadastro } from './cadastro.js';
+} from './detectar';
+export { avaliar, nomesFormula } from './formulas';
+export { Cadastro, novaLinha, COLUNAS_NOME, type DadosCadastro } from './cadastro';
 export {
   ajustarTagsMidia, refsDeArquivo, acharArquivo, normRef, opcoesMidia, padraoMidia, valorMidia, pastasMidia,
-  versaoTela, caminhoMidia, arquivoAceito, tipoArquivo, TIPOS_ARQUIVO, CSS_MIDIA, type OpcaoMidia,
-} from './midia.js';
-export { gerar, type EntradaGerar, type PaginaGerada, type ResultadoGerar } from './gerar.js';
-export { temCardsFixos, converterCardsFixos, type ResultadoConversao, type CardPreenchido } from './conversor.js';
-export { verificarHtml, SINONIMOS, type Problema, type CodigoProblema } from './verificador.js';
+  versaoTela, caminhoMidia, secaoMidia, slotMidia, arquivoAceito, tipoArquivo, TIPOS_ARQUIVO, CSS_MIDIA, type OpcaoMidia,
+} from './midia';
+export { gerar, type EntradaGerar, type PaginaGerada, type ResultadoGerar } from './gerar';
+export { temCardsFixos } from './cards-fixos';
+export type { ResultadoConversao, CardPreenchido } from './conversor';
+// converterCardsFixos usa um parser de HTML (linkedom): importe de '@norte/motor/conversor'
+export { verificarHtml, SINONIMOS, type Problema, type CodigoProblema } from './verificador';

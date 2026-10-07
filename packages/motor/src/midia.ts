@@ -1,5 +1,5 @@
-import type { Deteccao } from './detectar.js';
-import type { TipoPagina } from './tipos.js';
+import type { Deteccao } from './detectar';
+import type { TipoPagina } from './tipos';
 
 /** Tipos aceitos na pasta _media. Arquivos ocultos e de outros tipos são ignorados. */
 export const TIPOS_ARQUIVO: Record<string, string> = {

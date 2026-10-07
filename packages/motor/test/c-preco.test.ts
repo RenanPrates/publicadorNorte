@@ -1,7 +1,7 @@
 // C. Preço e gratuito (padrão do guia)
 import { describe, expect, it } from 'vitest';
-import { fmtBR, numBR } from '../src/index.js';
-import { praca } from './ajuda.js';
+import { fmtBR, numBR } from '../src/index';
+import { praca } from './ajuda';
 
 const MODELO =
   '<span class="v"><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista_1<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></span>';

@@ -1,6 +1,6 @@
 // B. Dono (em qual tabela o valor é preenchido)
 import { describe, expect, it } from 'vitest';
-import { colunas, detectar, inferirDonos, sincronizarVars } from '../src/index.js';
+import { colunas, detectar, inferirDonos, sincronizarVars } from '../src/index';
 
 describe('B. Dono', () => {
   it('B1: variável sem número é geral', () => {

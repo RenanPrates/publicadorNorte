@@ -1,11 +1,11 @@
-import { lerBlocos, type No } from './blocos.js';
-import { Cadastro } from './cadastro.js';
-import { temCardsFixos } from './conversor.js';
-import { detectar, ehContagem, sincronizarVars, type Deteccao } from './detectar.js';
-import { ajustarTagsMidia, opcoesMidia, pastasMidia } from './midia.js';
-import { abreviar, esc, slug, slugValor } from './texto.js';
-import { FORMATOS, NOME_PAGINA, type Aviso, type Formato, type Linha, type Modelos, type TipoItem, type TipoPagina, type Vars } from './tipos.js';
-import { ehMidia, trocarVars } from './variaveis.js';
+import { lerBlocos, type No } from './blocos';
+import { Cadastro } from './cadastro';
+import { temCardsFixos } from './cards-fixos';
+import { detectar, ehContagem, sincronizarVars, type Deteccao } from './detectar';
+import { ajustarTagsMidia, opcoesMidia, pastasMidia } from './midia';
+import { abreviar, esc, slug, slugValor } from './texto';
+import { FORMATOS, NOME_PAGINA, type Aviso, type Formato, type Linha, type Modelos, type TipoItem, type TipoPagina, type Vars } from './tipos';
+import { ehMidia, trocarVars } from './variaveis';
 
 export interface EntradaGerar {
   formato: Formato;

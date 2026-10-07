@@ -1,7 +1,7 @@
 // J. Verificador de HTML
 import { describe, expect, it } from 'vitest';
-import { verificarHtml, type CodigoProblema } from '../src/index.js';
-import { fixture } from './ajuda.js';
+import { verificarHtml, type CodigoProblema } from '../src/index';
+import { fixture } from './ajuda';
 
 const codigos = (html: string) => verificarHtml(html, 'praca').map((p) => p.codigo);
 const so = (html: string, c: CodigoProblema) => verificarHtml(html, 'praca').filter((p) => p.codigo === c);

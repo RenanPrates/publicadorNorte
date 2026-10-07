@@ -1,7 +1,7 @@
-import { lerBlocos, type No, type ErroBloco } from './blocos.js';
-import { slug } from './texto.js';
-import { FORMATOS, type Dono, type EstadoVar, type Formato, type Modelos, type TipoItem, type TipoPagina, type Vars } from './tipos.js';
-import { ehMidia, varsDoTexto } from './variaveis.js';
+import { lerBlocos, type No, type ErroBloco } from './blocos';
+import { slug } from './texto';
+import { FORMATOS, type Dono, type EstadoVar, type Formato, type Modelos, type TipoItem, type TipoPagina, type Vars } from './tipos';
+import { ehMidia, varsDoTexto } from './variaveis';
 
 export interface Ocorrencia {
   tok: string;

@@ -1,7 +1,7 @@
 // G. Mídia
 import { describe, expect, it } from 'vitest';
-import { ajustarTagsMidia, arquivoAceito, CSS_MIDIA, detectar, gerar, opcoesMidia, padraoMidia, refsDeArquivo, acharArquivo } from '../src/index.js';
-import { linha, semEspacos } from './ajuda.js';
+import { ajustarTagsMidia, arquivoAceito, CSS_MIDIA, detectar, gerar, opcoesMidia, padraoMidia, refsDeArquivo, acharArquivo } from '../src/index';
+import { linha, semEspacos } from './ajuda';
 
 const HERO = ['site/_media/praca/hero/hero_desktop.webp', 'site/_media/praca/hero/hero_desktop.mp4', 'site/_media/praca/hero/mobile/hero.webp'];
 const detPraca = (html: string) => detectar({ tapume: '', praca: html }, 'tapume_praca');

@@ -1,7 +1,7 @@
 // D. Status e contagens
 import { describe, expect, it } from 'vitest';
-import { colunas, detectar, novaLinha, sincronizarVars } from '../src/index.js';
-import { linha, praca, tapume } from './ajuda.js';
+import { colunas, detectar, novaLinha, sincronizarVars } from '../src/index';
+import { linha, praca, tapume } from './ajuda';
 
 const SE_ABERTA = '<!-- @se status = aberta -->Aberta<!-- @senao -->Em breve<!-- @fim -->';
 

@@ -1,7 +1,7 @@
 // A. Detecção de variáveis
 import { describe, expect, it } from 'vitest';
-import { acharVars, colunas, detectar, ehMidia, inferirDonos, sincronizarVars } from '../src/index.js';
-import { praca } from './ajuda.js';
+import { acharVars, colunas, detectar, ehMidia, inferirDonos, sincronizarVars } from '../src/index';
+import { praca } from './ajuda';
 
 const bases = (html: string) => acharVars(html).filter((o) => !o.sint).map((o) => [o.base, o.num]);
 

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { gerar, type EntradaGerar, type Linha } from '../src/index.js';
+import { gerar, type EntradaGerar, type Linha } from '../src/index';
 
 export const raizRepo = fileURLToPath(new URL('../../../', import.meta.url));
 export const exemplo = (nome: string) => readFileSync(raizRepo + 'exemplos/' + nome, 'utf8');

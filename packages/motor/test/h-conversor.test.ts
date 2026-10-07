@@ -1,7 +1,8 @@
 // H. Conversor de cards fixos
 import { describe, expect, it } from 'vitest';
-import { converterCardsFixos, gerar, temCardsFixos } from '../src/index.js';
-import { exemplo, fixture, linha } from './ajuda.js';
+import { gerar, temCardsFixos } from '../src/index';
+import { converterCardsFixos } from '../src/conversor';
+import { exemplo, fixture, linha } from './ajuda';
 
 const conta = (s: string, sub: string) => s.split(sub).length - 1;
 

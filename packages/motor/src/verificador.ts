@@ -1,10 +1,10 @@
 // Verificador de HTML: transforma o checklist do guia (seções 9, 12.4 e 12.5) em avisos com número da linha,
 // mostrados no passo Páginas. Não bloqueia a publicação.
-import { lerBlocos, type No, type NoSe } from './blocos.js';
-import { ehImagemArq, ehVideoArq, normRef, refsDeArquivo } from './midia.js';
-import { slug, slugValor } from './texto.js';
-import type { TipoPagina } from './tipos.js';
-import { dentro, faixas, varsDoTexto, zonas } from './variaveis.js';
+import { lerBlocos, type No, type NoSe } from './blocos';
+import { ehImagemArq, ehVideoArq, normRef, refsDeArquivo } from './midia';
+import { slug, slugValor } from './texto';
+import type { TipoPagina } from './tipos';
+import { dentro, faixas, varsDoTexto, zonas } from './variaveis';
 
 export type CodigoProblema =
   | 'bloco-mal-fechado'

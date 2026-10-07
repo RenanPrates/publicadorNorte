@@ -1,7 +1,7 @@
 // E. Blocos
 import { describe, expect, it } from 'vitest';
-import { gerar } from '../src/index.js';
-import { linha, praca, tapume } from './ajuda.js';
+import { gerar } from '../src/index';
+import { linha, praca, tapume } from './ajuda';
 
 const CARD = '<!-- @repetir cidades --><a href="@url">@cidade</a><!-- @fim -->';
 

@@ -1,9 +1,9 @@
-import { colunas, type Deteccao } from './detectar.js';
-import { avaliar, nomesFormula } from './formulas.js';
-import { valorMidia } from './midia.js';
-import { fmtBR, numBR, slug } from './texto.js';
-import type { Linha, TipoItem, Vars } from './tipos.js';
-import { ehMidia } from './variaveis.js';
+import { colunas, type Deteccao } from './detectar';
+import { avaliar, nomesFormula } from './formulas';
+import { valorMidia } from './midia';
+import { fmtBR, numBR, slug } from './texto';
+import type { Linha, TipoItem, Vars } from './tipos';
+import { ehMidia } from './variaveis';
 
 export interface DadosCadastro {
   vars: Vars;
@@ -42,7 +42,7 @@ export class Cadastro {
     this.ordem = d.ordem || {};
   }
 
-  colunas(tipo: TipoItem): string[] {
+  colunas(tipo: TipoItem | 'geral'): string[] {
     let c = this.cacheCols.get(tipo);
     if (!c) this.cacheCols.set(tipo, (c = colunas(tipo, this.det, this.vars, this.ordem)));
     return c;

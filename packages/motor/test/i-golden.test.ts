@@ -4,8 +4,9 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { converterCardsFixos, gerar, type ResultadoGerar } from '../src/index.js';
-import { exemplo, fixture, linha, semEspacos } from './ajuda.js';
+import { gerar, type ResultadoGerar } from '../src/index';
+import { converterCardsFixos } from '../src/conversor';
+import { exemplo, fixture, linha, semEspacos } from './ajuda';
 
 const PASTA = fileURLToPath(new URL('./golden/', import.meta.url));
 const REGRAVAR = (import.meta as unknown as { env?: { MODE?: string } }).env?.MODE === 'golden';

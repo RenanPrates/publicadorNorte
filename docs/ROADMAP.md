@@ -5,7 +5,7 @@ Uso: equipe da Norte Marketing. Primeira entrega sem login. Prioridade absoluta:
 | Fase | Entrega | Status |
 |---|---|---|
 | 0 | Motor extraído e testado | feito — goldens aguardando aprovação |
-| 1 | App básico + mídia hospedada + publicação em URL real | a fazer — **prioridade** |
+| 1 | App básico + mídia hospedada + publicação em URL real | em teste no GitHub Pages (D2 provisório); destino: Cloudflare |
 | 2 | Rodapé padrão | mapeado |
 | 3 | Pós-evento (página e virada automática) | mapeado |
 | 4 | Login, convite e papéis | mapeado |
