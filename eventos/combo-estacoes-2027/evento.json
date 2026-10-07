@@ -184,7 +184,8 @@
       "mes_outono": "Janeiro",
       "mes_inverno": "Fevereiro",
       "mes_primavera": "Março",
-      "mes_verao": "Abril"
+      "mes_verao": "Abril",
+      "parcelamento": "12"
     }
   ],
   "etapas": [],
@@ -194,5 +195,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:58:41.674Z"
+  "atualizadoEm": "2026-10-07T23:58:45.962Z"
 }
