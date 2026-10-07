@@ -3,179 +3,373 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>@evento @ano — Praças</title>
-<meta name="description" content="@evento @ano — escolha sua praça.">
+<title>Combo @ano — @evento</title>
+<meta name="description" content="Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Escolha sua cidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Schibsted+Grotesk:wght@700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
 <style>
-/* ================================================================
-   DESIGN SYSTEM — "A Química da Corrida" (tokens herdados da página
-   de praça, para manter a mesma identidade nesta página de seleção)
-   ================================================================ */
-@font-face{font-family:"Outfit"; src:url("assets/fonts/outfit-latin-wght-normal.woff2") format("woff2"); font-weight:100 900; font-display:swap}
-@font-face{font-family:"Archivo"; src:url("assets/fonts/archivo-latin-wght-normal.woff2") format("woff2"); font-weight:100 900; font-display:swap}
+  :root{
+    --shell:min(1120px, calc(100% - 3rem));
+    --bg:#F5F2EA; --bg-2:#ECE7DB; --bg-3:#E3DCCC;
+    --fg:#11141D; --fg-prose:#2E3442; --muted:#6E7488;
+    --rule:rgba(17,20,29,.13); --rule-2:rgba(17,20,29,.17);
+    --metal:#8E6F28; --on-metal:#F7F3E8;
+    --t-outono:#CE1432; --t-inverno:#7A1FB8; --t-primavera:#6E9312; --t-verao:#D63B00;
+    --a:Archivo,system-ui,sans-serif;
+    --g:"Schibsted Grotesk",Archivo,sans-serif;
+    --s:"Newsreader",Georgia,serif;
+  }
+  :root[data-theme="dark"]{
+    --bg:#070A12; --bg-2:#0D1220; --bg-3:#141B2C;
+    --fg:#F1EEE7; --fg-prose:#D3D7E2; --muted:#8D95AA;
+    --rule:rgba(255,255,255,.09); --rule-2:rgba(255,255,255,.12);
+    --metal:#D8BE80; --on-metal:#1A1305;
+    --t-outono:#FF4D66; --t-inverno:#B45CF0; --t-primavera:#CAF34A; --t-verao:#FF6A2B;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; background:var(--bg); color-scheme:light dark}
+  body{margin:0; background:var(--bg); color:var(--fg); font-family:var(--a); font-size:17px; line-height:1.55; overflow-x:hidden}
+  img{max-width:100%; height:auto}
+  h1,h2,h3{font-family:var(--g); font-weight:900; letter-spacing:-.03em; line-height:.98; margin:0}
+  .shell{width:var(--shell); margin-inline:auto}
+  section{padding-block:clamp(4rem,10vh,7rem); scroll-margin-top:74px}
+  .prose{font-family:var(--s); font-weight:300; font-size:clamp(1.05rem,2.2vw,1.28rem); line-height:1.6; color:var(--fg-prose)}
+  .rot{font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--metal)}
 
-:root{
-  --paper:#F5F2EC;
-  --ink:#16141B;
-  --line:rgba(22,20,27,.12);
+  /* barra */
+  .topbar{position:fixed; inset:0 0 auto 0; z-index:50; border-bottom:1px solid transparent;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); transition:border-color .35s}
+  .topbar.solto{border-bottom-color:var(--rule)}
+  .tb-inner{width:var(--shell); margin-inline:auto; height:62px; display:flex; align-items:center; gap:1.4rem}
+  .marca{width:206px; height:21px; flex:none; display:block; background:var(--fg);
+    -webkit-mask:url("_media/tapume/marca/logo.png") no-repeat left center/contain;
+    mask:url("_media/tapume/marca/logo.png") no-repeat left center/contain}
+  .selos{display:none; height:24px; width:auto; flex:none; margin-left:.6rem}
+  .tb-acoes{margin-left:auto; display:flex; align-items:center; gap:.6rem}
+  .tema{width:38px; height:38px; flex:none; border-radius:999px; border:1px solid var(--rule-2);
+    background:transparent; color:var(--fg); display:grid; place-items:center; cursor:pointer}
+  .tema svg{width:19px; height:19px}
+  :root[data-theme="light"] .i-sun{display:none}
+  :root[data-theme="dark"] .i-moon{display:none}
+  .cta{display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
+    border:0; border-radius:999px; padding:1rem 2rem; cursor:pointer;
+    font-family:var(--a); font-weight:700; font-size:1rem; letter-spacing:-.01em;
+    background:var(--fg); color:var(--bg); transition:transform .2s, opacity .2s}
+  .cta:hover{transform:translateY(-2px)}
+  .cta-mini{padding:.62rem 1.15rem; font-size:.88rem; white-space:nowrap}
+  @media (min-width:620px){ .selos{display:block} }
 
-  /* estações: cor de fundo · cor de texto sobre o fundo */
-  --out:#EE2140; --out-a:#fff;
-  --inv:#9426DB; --inv-a:#15F5F8;
-  --pri:#CAF34A; --pri-a:#C00A5C;
-  --ver:#F7490A; --ver-a:#fff;
+  /* abertura compacta */
+  .abre{padding-block:clamp(4.5rem,10vh,6.5rem) clamp(1.5rem,3vh,2.2rem)}
+  .abre-grade{display:grid; grid-template-columns:minmax(0,1fr); gap:clamp(1.5rem,4vh,2.5rem); align-items:center}
+  .abre-art{width:min(440px,44svh,80%); height:auto; display:block; margin-inline:auto; overflow:visible}
+  .peca{
+    transform-box:view-box; transform-origin:50% 50%;
+    transform:translate(var(--dx),var(--dy)) rotate(var(--giro));
+    opacity:0;
+    transition:transform 1.3s cubic-bezier(.16,.84,.26,1), opacity .9s ease;
+    transition-delay:var(--atraso,0s);
+  }
+  .montada .peca{transform:translate(0,0) rotate(0deg); opacity:1}
+  .notas{opacity:0; transition:opacity 1.1s ease 1.35s}
+  .montada .notas{opacity:1}
+  @media (prefers-reduced-motion:reduce){
+    .peca{transition:none !important; transform:none !important; opacity:1 !important}
+    .notas{transition:none !important; opacity:1 !important}
+  }
+  .abre h1{font-size:clamp(2.4rem,6.4vw,4rem); margin-top:.7rem}
+  .abre .prose{max-width:46ch; margin-top:1.1rem}
+  .olho{font-size:.76rem; letter-spacing:.2em; text-transform:uppercase; color:var(--metal); font-weight:600}
+  .cidades{padding-block:clamp(1rem,2vh,1.6rem) clamp(4rem,10vh,7rem)}
+  @media (min-width:820px){
+    .abre .shell{width:min(1420px, calc(100% - 3rem))}
+    .abre-grade{grid-template-columns:1fr 1.15fr; gap:clamp(1rem,2vw,2rem)}
+    .abre h1{font-size:clamp(3rem,4.6vw,5.4rem)}
+    .abre .prose{font-size:clamp(1.15rem,1.5vw,1.5rem); max-width:24ch}
+    .abre .olho{font-size:.82rem}
+    .abre-art{width:min(100%, 76svh); max-width:none; margin-left:auto; margin-right:0}
+    .abre-txt{order:0} .abre-art{order:1}
+  }
 
-  --hex:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);
-  --ease:cubic-bezier(.2,.8,.2,1);
-  --gutter:clamp(1.25rem,4vw,2.5rem);
-}
-*{box-sizing:border-box}
-body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:"Archivo",system-ui,-apple-system,sans-serif;
-  -webkit-font-smoothing:antialiased; overflow-x:hidden;
-}
-img{max-width:100%; display:block}
-a{color:inherit}
-button{font:inherit; color:inherit}
-:focus-visible{outline:3px solid var(--inv); outline-offset:3px; border-radius:6px}
-@media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important} }
+  /* o que é */
+  .oque{background:var(--bg-2)}
+  .oque .head{max-width:34ch; margin-bottom:clamp(2rem,5vh,3rem)}
+  .tres{display:grid; grid-template-columns:1fr; gap:0}
+  .tres div{padding:1.4rem 0; border-top:1px solid var(--rule-2)}
+  .tres div:last-child{border-bottom:1px solid var(--rule-2)}
+  .tres b{display:block; font-family:var(--g); font-weight:900; font-size:clamp(1.2rem,2.6vw,1.5rem); letter-spacing:-.02em; margin-bottom:.3rem}
+  .tres span{color:var(--muted); font-size:.97rem}
+  @media (min-width:760px){ .tres{grid-template-columns:repeat(3,1fr); gap:0 2.5rem} .tres div:last-child{border-bottom:0} }
 
-.ctr{width:min(1240px, 100% - var(--gutter)*2); margin-inline:auto}
+  /* cidades */
+  .cidades .head{margin-bottom:clamp(1.2rem,3vh,2rem)}
+  .legenda{display:flex; flex-wrap:wrap; gap:1rem; margin:0 0 .5rem; font-size:.7rem;
+    font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+  .legenda span{position:relative; padding-left:.8rem}
+  .legenda span::before{content:""; position:absolute; left:0; top:.34em; width:6px; height:6px;
+    border-radius:2px; background:var(--c)}
+  .contagem{font-size:.95rem; color:var(--muted); margin-top:.9rem}
+  .contagem b{color:var(--fg); font-weight:700}
+  .grade{display:grid; grid-template-columns:minmax(0,1fr); gap:14px; margin-top:clamp(1.6rem,4vh,2.6rem)}
+  @media (min-width:700px){ .grade{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (min-width:1040px){ .grade{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  .praca{display:block; text-decoration:none; color:inherit; border:1px solid var(--rule-2);
+    border-radius:16px; padding:1.1rem 1.25rem 1rem; background:var(--bg-2); transition:border-color .2s, transform .2s}
+  .praca.aberta:hover{border-color:var(--metal); transform:translateY(-3px)}
+  .praca.breve{opacity:.62}
+  .p-topo{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.5rem .8rem; margin-bottom:.7rem}
+  .praca h3{font-size:clamp(1.25rem,2.4vw,1.55rem); min-width:0; overflow-wrap:anywhere}
+  .uf{font-family:var(--a); font-weight:600; font-size:.72rem; letter-spacing:.14em;
+    color:var(--muted); margin-left:.5rem; vertical-align:middle}
+  .tag{flex:0 0 auto; max-width:100%; white-space:nowrap;
+    font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    padding:.35rem .65rem; border-radius:999px}
+  .tag.aberta{background:var(--fg); color:var(--bg)}
+  .tag.breve{border:1px solid var(--rule-2); color:var(--muted)}
+  .p-meses{display:flex; flex-wrap:wrap; gap:.55rem; margin:0; font-size:.86rem; font-weight:600}
+  .p-meses .mes{color:var(--ct); position:relative; padding-left:.75rem}
+  .p-meses .mes::before{content:""; position:absolute; left:0; top:.42em; width:6px; height:6px;
+    border-radius:2px; background:var(--c)}
+  .p-ir{display:block; margin-top:.9rem; padding-top:.75rem; border-top:1px solid var(--rule);
+    font-size:.85rem; font-weight:600; letter-spacing:.02em; color:var(--metal)}
+  .praca.breve .p-ir{color:var(--muted)}
 
-/* ---------------- header (só a marca) ---------------- */
-header{padding-block:1.3rem}
-.wordmark{
-  display:block; height:20px; aspect-ratio:900/88; background:var(--ink);
-  -webkit-mask:url("_media/tapume/marca/logo.png") no-repeat left center/contain; mask:url("_media/tapume/marca/logo.png") no-repeat left center/contain;
-}
+  /* hoodie */
+  .hoodie{--bg:#08080A; --fg:#F1EEE7; --muted:#8D95AA; background:var(--bg); color:var(--fg);
+    text-align:center; padding-block:0 clamp(2.5rem,6vh,4.5rem)}
+  .hoodie-art{width:min(1160px,100%); margin:0 auto clamp(.5rem,2vh,1.4rem)}
+  .hoodie-art img{max-height:54svh; width:auto; margin-inline:auto;
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+      linear-gradient(to bottom, #000 0%, #000 93%, transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+      linear-gradient(to bottom, #000 0%, #000 93%, transparent 100%);
+    mask-composite:intersect}
+  .hoodie h2{font-size:clamp(1.65rem,4.6vw,2.9rem); max-width:22ch; margin-inline:auto}
+  .hoodie .prose{margin:1.1rem auto 0; max-width:40ch; color:#C3C9D6}
+  @media (max-width:859px){
+    .hoodie-art{width:100vw; max-width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw)}
+    .hoodie-art img{max-height:58svh; width:100%}
+  }
 
-/* ================= IMAGEM DE DESTAQUE ================= */
-.destaque{
-  position:relative; width:100%; aspect-ratio:16/8; max-height:620px; overflow:hidden;
-  background:linear-gradient(120deg,var(--out) 0%,var(--inv) 45%,var(--ver) 100%);
-}
-.destaque::before{
-  content:""; position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23FFFFFF' stroke-opacity='.22'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23FFFFFF' stroke-opacity='.22'/%3E%3C/svg%3E");
-}
-.destaque-media{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block}
-@media (max-width:620px){ .destaque{aspect-ratio:3/4; max-height:560px} }
+  /* rodapé */
+  footer{padding:3rem 0 4rem; border-top:1px solid var(--rule); text-align:center}
+  footer .small{font-size:.85rem; color:var(--muted)}
+  .demo-faixa{background:#C2410C; color:#fff; text-align:center; font-size:.78rem;
+    font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.5rem 1rem}
+  @media (max-width:619px){
+    .abre{padding-block:clamp(2.5rem,6vh,4rem) clamp(1rem,2vh,1.6rem)}
+    .abre-art{
+      width:100vw; max-width:100vw;
+      margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
+      overflow:hidden;
+    }
+    .abre-grade{gap:clamp(1rem,2.5vh,1.6rem)}
+    .p-ir{display:none}
+    .praca{padding:.95rem 1.1rem}
+    .p-topo{margin-bottom:.5rem}
+    .praca.aberta{position:relative}
+    .praca.aberta::after{content:"›"; position:absolute; right:1.1rem; bottom:.8rem;
+      font-size:1.4rem; line-height:1; color:var(--metal); opacity:.7}
+  }
+  @media (max-width:479px){
+    .marca{width:150px; height:16px}
+    .cta-mini{padding:.5rem .85rem; font-size:.78rem}
+    .tema{width:34px; height:34px}
+    .tb-inner{height:58px; gap:.5rem}
+    .tag{font-size:.6rem; padding:.3rem .55rem}
+    .praca h3{font-size:1.2rem}
+    .p-topo{flex-direction:column; align-items:flex-start; gap:.55rem}
+  }
 
-/* ================= CIDADES ================= */
-.cidades{padding-block:clamp(1.6rem,4vw,2.8rem) clamp(3rem,7vw,5rem)}
-.praca-grid{
-  display:grid; grid-template-columns:1fr; gap:1rem; list-style:none; margin:0; padding:0;
-}
-@media (min-width:620px){ .praca-grid{grid-template-columns:repeat(2,1fr); gap:1.2rem} }
-@media (min-width:980px){ .praca-grid{grid-template-columns:repeat(3,1fr); gap:1.4rem} }
-
-/* ciclo de cores — puramente visual (ritmo entre cards), não vem do cadastro.
-   Como o tapume agora gera os <li> a partir de um card único (@repetir
-   cidades), o ciclo é resolvido aqui por posição (nth-child) em vez de um
-   --c/--a escrito card a card. */
-#gradePracas > li:nth-child(4n+1){--c:var(--out); --a:var(--out-a)}
-#gradePracas > li:nth-child(4n+2){--c:var(--inv); --a:var(--inv-a)}
-#gradePracas > li:nth-child(4n+3){--c:var(--pri); --a:var(--pri-a)}
-#gradePracas > li:nth-child(4n+4){--c:var(--ver); --a:var(--ver-a)}
-
-.praca-tile{
-  position:relative; display:block; aspect-ratio:4/3.1; text-decoration:none; isolation:isolate;
-  transition:transform .3s var(--ease);
-}
-.praca-tile:hover, .praca-tile:focus-visible{transform:translateY(-4px)}
-.praca-tile:focus-visible{outline:3px solid var(--ink); outline-offset:5px; border-radius:18px}
-.pt-bg{
-  position:absolute; inset:0; clip-path:var(--hex); background:var(--c); z-index:0;
-  transition:transform .35s var(--ease);
-}
-.praca-tile:hover .pt-bg, .praca-tile:focus-visible .pt-bg{transform:scale(1.045)}
-.pt-body{
-  position:relative; z-index:1; height:100%; display:flex; flex-direction:column; align-items:center;
-  justify-content:center; gap:.3rem; text-align:center; padding:9% 19%; color:var(--a);
-}
-.pt-city{font-family:"Outfit",sans-serif; font-weight:800; font-size:clamp(1.25rem,2.6vw,1.65rem); letter-spacing:-.02em; line-height:1}
-.pt-uf{font-size:.82rem; font-weight:600; opacity:.85}
-
-/* praça ainda sem inscrição aberta — card sem link, visualmente apagado */
-.praca-tile.breve{pointer-events:none}
-.praca-tile.breve .pt-bg{opacity:.45}
-.praca-tile.breve .pt-body{opacity:.8}
-.pt-tag{
-  display:inline-block; margin-top:.15rem; font-size:.64rem; font-weight:700; letter-spacing:.1em;
-  text-transform:uppercase; padding:.28rem .6rem; border-radius:999px; border:1px solid currentColor; opacity:.9;
-}
+  .barra-busca{display:flex; flex-wrap:wrap; align-items:center; gap:.9rem 1.4rem; margin:.6rem 0 clamp(1.4rem,3.5vh,2.2rem)}
+  #busca{
+    flex:1 1 260px; max-width:360px; font:inherit; font-size:.95rem;
+    padding:.7rem 1rem; border-radius:999px; border:1px solid var(--rule-2);
+    background:var(--bg-2); color:var(--fg);
+  }
+  #busca:focus{outline:2px solid var(--metal); outline-offset:2px}
+  .contagem{margin:0}
+  .regiao{padding:0 0 clamp(1.4rem,3vh,2rem)}
+  .regiao[hidden]{display:none}
+  .reg-nome{
+    font-family:var(--a); font-weight:700; font-size:.76rem; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 .8rem;
+    display:flex; align-items:center; gap:.6rem;
+  }
+  .reg-nome span{font-size:.7rem; opacity:.7}
+  .reg-nome::after{content:""; flex:1; height:1px; background:var(--rule)}
+  .vazio{color:var(--muted); margin:1rem 0 3rem}
+  .praca[hidden]{display:none}
 </style>
+<script>
+  (function(){ var t="light";
+    try{ var g=localStorage.getItem("combo2027-tema"); if(g==="dark"||g==="light") t=g; }catch(e){}
+    document.documentElement.setAttribute("data-theme", t); })();
+</script>
 </head>
 <body>
 
-<header>
-  <div class="ctr">
-    <span class="wordmark" role="img" aria-label="@evento"></span>
+<header class="topbar" id="topbar">
+  <div class="tb-inner">
+    <a class="marca" href="#topo" aria-label="@evento"></a>
+    <img class="selos" src="_media/tapume/selos/estacoes.png" alt="" width="640" height="139">
+    <div class="tb-acoes">
+      <button class="tema" id="tema" type="button" aria-label="Alternar entre tema claro e escuro">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></svg>
+      </button>
+      
+    </div>
   </div>
 </header>
 
-<main>
+<div class="demo-faixa">Protótipo · cidades, meses e estados são fictícios</div>
 
-<!-- imagem grande de destaque -->
-<section class="destaque" aria-label="Imagem de destaque">
-  <img class="destaque-media" src="@media_destaque_fundo" alt="@evento @ano">
-</section>
-
-<!-- cidades -->
-<section class="cidades">
-  <div class="ctr">
-    <ul class="praca-grid" id="gradePracas">
-<!-- @repetir cidades -->
-<!-- @se status = aberta -->
-      <li>
-        <a class="praca-tile" href="@url" data-nome="@cidade @uf">
-          <span class="pt-bg" aria-hidden="true"></span>
-          <span class="pt-body">
-            <strong class="pt-city">@cidade</strong>
-            <span class="pt-uf">@uf</span>
-          </span>
-        </a>
-      </li>
-<!-- @senao -->
-      <li>
-        <div class="praca-tile breve" aria-disabled="true" data-nome="@cidade @uf">
-          <span class="pt-bg" aria-hidden="true"></span>
-          <span class="pt-body">
-            <strong class="pt-city">@cidade</strong>
-            <span class="pt-uf">@uf</span>
-            <span class="pt-tag">em breve</span>
-          </span>
-        </div>
-      </li>
-<!-- @fim -->
-<!-- @fim -->
-    </ul>
+<section class="abre" id="topo">
+  <div class="shell abre-grade">
+    <div class="abre-txt">
+      <p class="olho">@evento · @ano</p>
+      <h1>Escolha sua cidade</h1>
+      <p class="prose">Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Comece escolhendo onde você corre.</p>
+    </div>
+    <svg class="abre-art" id="mandala" viewBox="-318 -316 640 622" role="img" aria-label="Estudo da mandala do Circuito das Estações, com as quatro medalhas, suas fitas e as quatro químicas anotadas à mão">
+            <g class="notas"><image href="_media/tapume/mandala/anotacoes.webp" x="-314.53" y="-313.37" width="620.93" height="613.95"/></g>
+            <g class="peca" style="--dx:-140px; --dy:-118px; --giro:-7deg; --atraso:0.15s"><image href="_media/tapume/mandala/medalha-outono.webp" x="-298.26" y="-310.47" width="304.07" height="316.28"/></g>
+            <g class="peca" style="--dx:140px; --dy:-118px; --giro:7deg; --atraso:0.41s"><image href="_media/tapume/mandala/medalha-inverno.webp" x="-5.23" y="-297.09" width="302.33" height="302.91"/></g>
+            <g class="peca" style="--dx:140px; --dy:118px; --giro:-7deg; --atraso:0.67s"><image href="_media/tapume/mandala/medalha-primavera.webp" x="-5.23" y="-5.23" width="300.58" height="305.81"/></g>
+            <g class="peca" style="--dx:-140px; --dy:118px; --giro:7deg; --atraso:0.93s"><image href="_media/tapume/mandala/medalha-verao.webp" x="-298.26" y="-5.23" width="304.07" height="305.81"/></g>
+          </svg>
   </div>
 </section>
 
-</main>
+<section class="cidades" id="cidades">
+  <div class="shell">
+    <p class="legenda"><span style="--c:#EE2140">Outono</span><span style="--c:#9426DB">Inverno</span><span style="--c:#CAF34A">Primavera</span><span style="--c:#F7490A">Verão</span></p>
+    <div class="barra-busca">
+      <input type="search" id="busca" placeholder="Buscar cidade ou estado" autocomplete="off" aria-label="Buscar cidade">
+      <p class="contagem" id="contagem"><b>@total_aberta com inscrição aberta</b> · @total_breve em breve</p>
+    </div>
+    <p class="vazio" id="vazio" hidden>Nenhuma cidade encontrada.</p>
+<!-- @agrupar por regiao -->
+        <section class="regiao" data-regiao="@regiao">
+          <h3 class="reg-nome">@regiao <span>@total_cidades</span></h3>
+          <div class="grade">
+<!-- @repetir cidades -->
+<!-- @se status = aberta -->
+          <a class="praca aberta" href="@url" data-busca="@cidade @uf @regiao">
+            <div class="p-topo"><h3>@cidade<span class="uf">@uf</span></h3><span class="tag aberta">inscrições abertas</span></div>
+            <p class="p-meses"><span class="mes" style="--c:#EE2140; --ct:var(--t-outono)">@mes_outono_abrev</span><span class="mes" style="--c:#9426DB; --ct:var(--t-inverno)">@mes_inverno_abrev</span><span class="mes" style="--c:#CAF34A; --ct:var(--t-primavera)">@mes_primavera_abrev</span><span class="mes" style="--c:#F7490A; --ct:var(--t-verao)">@mes_verao_abrev</span></p>
+            <span class="p-ir">Ver o Combo desta cidade</span>
+          </a>
+<!-- @senao -->
+          <div class="praca breve" aria-disabled="true" data-busca="@cidade @uf @regiao">
+            <div class="p-topo"><h3>@cidade<span class="uf">@uf</span></h3><span class="tag breve">em breve</span></div>
+            <p class="p-meses"><span class="mes" style="--c:#EE2140; --ct:var(--t-outono)">@mes_outono_abrev</span><span class="mes" style="--c:#9426DB; --ct:var(--t-inverno)">@mes_inverno_abrev</span><span class="mes" style="--c:#CAF34A; --ct:var(--t-primavera)">@mes_primavera_abrev</span><span class="mes" style="--c:#F7490A; --ct:var(--t-verao)">@mes_verao_abrev</span></p>
+            <span class="p-ir">Avise-me quando abrir</span>
+          </div>
+<!-- @fim -->
+<!-- @fim -->
+          </div>
+        </section>
+<!-- @fim -->
+  </div>
+</section>
+
+<footer>
+  <div class="shell">
+    <p class="small">@evento @ano · Complete sua mandala</p>
+  </div>
+</footer>
 
 <!--
-  VARIÁVEIS — @evento — tapume
-  Gerais: @evento, @ano
-  Base usadas: @cidade, @uf, @status, @url (automática)
-  Próprias deste evento: nenhuma.
-  Imagens e vídeos (pasta _media/tapume/):
-    @media_destaque_fundo — destaque/, imagem ou vídeo de abertura; igual em
-      todas as visitas (não muda por cidade), por isso sem número.
-    _media/tapume/marca/logo.png — logo da marca usado no header; arquivo
-      fixo, sem variável (nunca é trocado pelo publicador).
-  Opcionais:
-    - @regiao existe no cadastro mas não é usado aqui: este layout é uma
-      grade única de hexágonos, sem o bloco de agrupamento por região. Se um
-      dia este tapume passar a agrupar por região, envolver o
-      <ul id="gradePracas"> (ou cada bloco de card) com o comentário que
-      abre o agrupamento por região e o comentário de fim correspondente.
-    - O ciclo de 4 cores dos hexágonos (--out/--inv/--pri/--ver) é só ritmo
-      visual entre cards, resolvido por posição via CSS (nth-child), e não
-      vem do cadastro — por isso não virou variável.
-    - O2 Prime e preços não aparecem nesta página (só seleção de cidade).
+  Variáveis (convenção do Publicador de Hotsites)
+
+  GERAIS (um valor para todas as páginas)
+  - @evento, @ano
+
+  CARDS DAS PRAÇAS — um card só, repetido pelo publicador
+  - O bloco entre "@repetir cidades" e o "@fim" correspondente sai uma vez
+    para cada cidade do cadastro, na ordem do cadastro. Cadastrou 10, saem
+    10 cards; nenhum fica vazio.
+  - "@agrupar por regiao" separa os cards em uma <section> por região, na
+    ordem em que cada região aparece pela primeira vez no cadastro.
+  - "@se status = aberta" / "@senao": cidade com status "aberta" sai como
+    link (<a>, com "inscrições abertas" e "Ver o Combo desta cidade");
+    qualquer outro status sai como card "em breve" sem link. Abrir uma
+    cidade = trocar o status dela no cadastro, sem mexer neste HTML.
+  - Dentro do card, variáveis SEM número são da cidade do card:
+    @cidade, @uf, @regiao (colunas do cadastro).
+  - @mes_outono_abrev, @mes_inverno_abrev, @mes_primavera_abrev,
+    @mes_verao_abrev: automáticas. O publicador pega @mes_outono etc. (o
+    mesmo mês por extenso que a página da praça usa, ex. "Maio") e usa as 3
+    primeiras letras ("Mai"). O mês é digitado uma vez só.
+  - @url: automática, o arquivo gerado para a página daquela cidade.
+
+  CONTAGENS (automáticas)
+  - @total_aberta, @total_breve: quantas cidades têm esse status.
+  - @total_cidades dentro da região: quantas cidades a região tem.
+
+  Ficou fixo no HTML: a faixa "Protótipo · cidades, meses e estados são
+  fictícios" no topo (remover antes de publicar de verdade).
+
+  Busca: o JS normaliza (minúsculo, sem acento) os dois lados da comparação,
+  então data-busca pode receber cidade/UF/região exatamente como estão no
+  cadastro.
 -->
 
+<script>
+  var barra = document.getElementById("topbar");
+  var aoRolar = function(){ barra.classList.toggle("solto", window.scrollY > 24); };
+  aoRolar(); window.addEventListener("scroll", aoRolar, { passive:true });
+
+  var btnTema = document.getElementById("tema");
+  btnTema.addEventListener("click", function(){
+    var atual = document.documentElement.getAttribute("data-theme");
+    var novo = atual === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", novo);
+    try { localStorage.setItem("combo2027-tema", novo); } catch(e){}
+  });
+
+  var mandala = document.getElementById("mandala");
+  if (mandala) {
+    var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduz) mandala.classList.add("montada");
+    else requestAnimationFrame(function(){
+      setTimeout(function(){ mandala.classList.add("montada"); }, 240);
+    });
+  }
+
+  var filme = document.querySelector(".hero-film video");
+  if (filme) {
+    var tentar = function(){ var pr = filme.play(); if (pr && pr.catch) pr.catch(function(){}); };
+    if (filme.readyState >= 2) tentar(); else filme.addEventListener("loadeddata", tentar, { once:true });
+    document.addEventListener("pointerdown", function(){ if (filme.paused) tentar(); }, { once:true, passive:true });
+  }
+
+  var campo = document.getElementById("busca");
+  if (campo) {
+    var cartoes = Array.prototype.slice.call(document.querySelectorAll(".praca"));
+    var regioes = Array.prototype.slice.call(document.querySelectorAll(".regiao"));
+    var vazio = document.getElementById("vazio");
+    var normaliza = function(s){ return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); };
+    campo.addEventListener("input", function(){
+      var t = normaliza(campo.value.trim());
+      var achou = 0;
+      cartoes.forEach(function(c){
+        var ok = !t || normaliza(c.dataset.busca).indexOf(t) !== -1;
+        c.hidden = !ok; if (ok) achou++;
+      });
+      regioes.forEach(function(r){
+        r.hidden = !r.querySelector(".praca:not([hidden])");
+      });
+      vazio.hidden = achou > 0;
+    });
+  }
+</script>
 </body>
 </html>
