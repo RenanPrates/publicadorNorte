@@ -5,10 +5,9 @@
   "formato": "tapume_praca",
   "paginas": {
     "tapume": {
-      "arquivo": "combo-estacoes-tapume.html",
-      "bytes": 639102,
-      "enviadoEm": "2026-10-07T23:27:27.220Z",
-      "convertido": true
+      "arquivo": "tapume_1.html",
+      "bytes": 7716,
+      "enviadoEm": "2026-10-07T23:45:17.710Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-interna.html",
@@ -122,6 +121,10 @@
       "dono": "cidade",
       "ignorar": false,
       "formula": "preco_comum - preco_vista"
+    },
+    "media_destaque_fundo": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {},
@@ -203,5 +206,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:27:42.360Z"
+  "atualizadoEm": "2026-10-07T23:45:29.046Z"
 }
