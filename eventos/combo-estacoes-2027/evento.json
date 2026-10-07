@@ -176,7 +176,8 @@
     }
   },
   "gerais": {
-    "ano": "2027"
+    "ano": "2027",
+    "evento": "Combo Estações"
   },
   "cidades": [
     {
@@ -216,5 +217,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:54:46.871Z"
+  "atualizadoEm": "2026-10-07T23:54:51.173Z"
 }
