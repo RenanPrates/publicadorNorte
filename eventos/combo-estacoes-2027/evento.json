@@ -171,7 +171,7 @@
       "mes_inverno": "Fevereiro",
       "mes_primavera": "Março",
       "mes_verao": "Abril",
-      "parcelamento": "12x",
+      "parcelamento": "12",
       "valor_parcelado": "100",
       "porcentagem_desconto": "30%",
       "preco_prime": "130"
@@ -186,7 +186,7 @@
       "mes_inverno": "Fevereiro",
       "mes_primavera": "Março",
       "mes_verao": "Abril",
-      "parcelamento": "12x",
+      "parcelamento": "12",
       "valor_parcelado": "120",
       "porcentagem_desconto": "30%"
     }
@@ -198,5 +198,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:48:15.075Z"
+  "atualizadoEm": "2026-10-07T23:48:30.678Z"
 }
