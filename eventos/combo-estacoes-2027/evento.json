@@ -175,7 +175,12 @@
     "ano": "2027",
     "evento": "Combo Estações"
   },
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "04f0d774",
+      "cidade": "São Paulo"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -183,5 +188,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:58:18.968Z"
+  "atualizadoEm": "2026-10-07T23:58:23.978Z"
 }
