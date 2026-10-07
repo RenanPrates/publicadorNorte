@@ -176,27 +176,6 @@
       "uf": "RJ"
     },
     {
-      "_id": "3794c5e5",
-      "regiao": "Sudeste"
-    },
-    {
-      "_id": "22cbfd30",
-      "regiao": "Sudeste"
-    },
-    {
-      "_id": "85231100",
-      "regiao": "Sul",
-      "status": "aberta"
-    },
-    {
-      "_id": "2f9f4e35",
-      "regiao": "Sul"
-    },
-    {
-      "_id": "103b1441",
-      "regiao": "Sul"
-    },
-    {
       "_id": "bab90bb4",
       "regiao": "Nordeste",
       "status": "aberta"
@@ -229,5 +208,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:46:48.872Z"
+  "atualizadoEm": "2026-10-07T23:47:03.568Z"
 }
