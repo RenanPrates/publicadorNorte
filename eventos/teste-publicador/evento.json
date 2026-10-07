@@ -5,8 +5,49 @@
   "formato": "tapume_praca",
   "paginas": {},
   "vars": {},
-  "gerais": {},
-  "cidades": [],
+  "gerais": {
+    "evento": "Circuito das Estações",
+    "ano": "2027"
+  },
+  "cidades": [
+    {
+      "_id": "c1",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "regiao": "Sudeste",
+      "status": "aberta",
+      "parcelamento": "10",
+      "preco_vista": "1425",
+      "mes_outono": "Maio",
+      "mes_inverno": "Julho",
+      "mes_primavera": "Setembro",
+      "mes_verao": "Dezembro",
+      "link_inscricao": "https://example.com"
+    },
+    {
+      "_id": "c2",
+      "cidade": "Recife",
+      "uf": "PE",
+      "regiao": "Nordeste",
+      "status": "aberta",
+      "parcelamento": "10",
+      "preco_vista": "1290",
+      "mes_outono": "Maio",
+      "mes_inverno": "Julho",
+      "mes_primavera": "Setembro",
+      "mes_verao": "Dezembro"
+    },
+    {
+      "_id": "c3",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ",
+      "regiao": "Sudeste",
+      "mes_outono": "Maio",
+      "mes_inverno": "Julho",
+      "mes_primavera": "Setembro",
+      "mes_verao": "Dezembro"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -14,5 +55,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:01:11.254Z",
-  "atualizadoEm": "2026-10-07T23:01:11.254Z"
+  "atualizadoEm": "2026-10-07T23:01:33.672Z"
 }
