@@ -5,9 +5,9 @@
   "formato": "tapume_praca",
   "paginas": {
     "tapume": {
-      "arquivo": "tapume_1.html",
-      "bytes": 7716,
-      "enviadoEm": "2026-10-07T23:45:17.710Z"
+      "arquivo": "combo-estacoes-tapume.html",
+      "bytes": 20797,
+      "enviadoEm": "2026-10-07T23:54:27.148Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
@@ -157,6 +157,22 @@
     "img_mandala_completa": {
       "dono": "geral",
       "ignorar": false
+    },
+    "mes_outono_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "mes_inverno_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "mes_primavera_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "mes_verao_abrev": {
+      "dono": "auto",
+      "ignorar": false
     }
   },
   "gerais": {},
@@ -198,5 +214,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:49:23.209Z"
+  "atualizadoEm": "2026-10-07T23:54:38.506Z"
 }
