@@ -173,7 +173,7 @@
       "mes_verao": "Abril",
       "parcelamento": "12x",
       "valor_parcelado": "100",
-      "porcentagem_desconto": "30"
+      "porcentagem_desconto": "30%"
     },
     {
       "_id": "1a07186e",
@@ -186,7 +186,8 @@
       "mes_primavera": "Março",
       "mes_verao": "Abril",
       "parcelamento": "12x",
-      "valor_parcelado": "120"
+      "valor_parcelado": "120",
+      "porcentagem_desconto": "30%"
     }
   ],
   "etapas": [],
@@ -196,5 +197,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:47:40.181Z"
+  "atualizadoEm": "2026-10-07T23:47:45.970Z"
 }
