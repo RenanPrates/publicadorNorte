@@ -9,6 +9,11 @@
       "bytes": 639102,
       "enviadoEm": "2026-10-07T23:27:27.220Z",
       "convertido": true
+    },
+    "praca": {
+      "arquivo": "combo-estacoes-interna.html",
+      "bytes": 344134,
+      "enviadoEm": "2026-10-07T23:27:29.378Z"
     }
   },
   "vars": {
@@ -67,6 +72,56 @@
     "mes_verao": {
       "dono": "cidade",
       "ignorar": false
+    },
+    "parcelamento": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "valor_parcelado": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_vista / parcelamento"
+    },
+    "preco_vista": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "parcelamento * valor_parcelado"
+    },
+    "porcentagem_desconto": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_comum": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_vista / (1 - porcentagem_desconto / 100)"
+    },
+    "valor_adicional_prime": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_prime - preco_vista"
+    },
+    "preco_prime_parcelado": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_prime / parcelamento"
+    },
+    "preco_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_inscricao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_inscricao_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "desconto_em_reais": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_comum - preco_vista"
     }
   },
   "gerais": {},
@@ -148,5 +203,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:27:38.652Z"
+  "atualizadoEm": "2026-10-07T23:27:42.360Z"
 }
