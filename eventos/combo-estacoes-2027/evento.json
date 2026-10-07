@@ -174,7 +174,7 @@
       "parcelamento": "12x",
       "valor_parcelado": "100",
       "porcentagem_desconto": "30%",
-      "preco_prime": "1200"
+      "preco_prime": "850"
     },
     {
       "_id": "1a07186e",
@@ -198,5 +198,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:48:07.792Z"
+  "atualizadoEm": "2026-10-07T23:48:11.170Z"
 }
