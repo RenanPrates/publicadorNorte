@@ -13,7 +13,7 @@
     {
       "_id": "c1",
       "cidade": "São Paulo",
-      "uf": "RJ ",
+      "uf": "SP",
       "regiao": "Sudeste",
       "status": "aberta",
       "parcelamento": "10",
@@ -64,5 +64,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-07T23:01:11.254Z",
-  "atualizadoEm": "2026-10-07T23:04:23.570Z"
+  "atualizadoEm": "2026-10-07T23:04:46.924Z"
 }
