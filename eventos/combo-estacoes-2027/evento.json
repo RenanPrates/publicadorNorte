@@ -174,31 +174,6 @@
       "status": "aberta",
       "cidade": "Rio de Janeiro",
       "uf": "RJ"
-    },
-    {
-      "_id": "bab90bb4",
-      "regiao": "Nordeste",
-      "status": "aberta"
-    },
-    {
-      "_id": "64aed2a6",
-      "regiao": "Nordeste"
-    },
-    {
-      "_id": "21f61d94",
-      "regiao": "Nordeste"
-    },
-    {
-      "_id": "48fb9ded",
-      "regiao": "Centro-Oeste"
-    },
-    {
-      "_id": "81aa8261",
-      "regiao": "Norte"
-    },
-    {
-      "_id": "0d410c6b",
-      "regiao": "Norte"
     }
   ],
   "etapas": [],
@@ -208,5 +183,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:47:03.568Z"
+  "atualizadoEm": "2026-10-07T23:47:08.669Z"
 }
