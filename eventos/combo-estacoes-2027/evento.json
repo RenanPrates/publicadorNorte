@@ -170,7 +170,9 @@
       "mes_outono": "Janeiro",
       "mes_inverno": "Fevereiro",
       "mes_primavera": "Março",
-      "mes_verao": "Abril"
+      "mes_verao": "Abril",
+      "parcelamento": "12x",
+      "valor_parcelado": "100"
     },
     {
       "_id": "1a07186e",
@@ -181,7 +183,8 @@
       "mes_outono": "Janeiro",
       "mes_inverno": "Fevereiro",
       "mes_primavera": "Março",
-      "mes_verao": "Abril"
+      "mes_verao": "Abril",
+      "parcelamento": "12x"
     }
   ],
   "etapas": [],
@@ -191,5 +194,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:47:29.080Z"
+  "atualizadoEm": "2026-10-07T23:47:35.675Z"
 }
