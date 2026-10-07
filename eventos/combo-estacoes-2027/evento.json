@@ -3,8 +3,71 @@
   "slug": "combo-estacoes-2027",
   "nome": "Combo Estações 2027",
   "formato": "tapume_praca",
-  "paginas": {},
-  "vars": {},
+  "paginas": {
+    "tapume": {
+      "arquivo": "combo-estacoes-tapume.html",
+      "bytes": 20797,
+      "enviadoEm": "2026-10-07T23:57:42.467Z"
+    }
+  },
+  "vars": {
+    "ano": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "total_aberta": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "total_breve": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "regiao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "total_cidades": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "url": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "uf": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_outono_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_inverno_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_primavera_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_verao_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    }
+  },
   "gerais": {},
   "cidades": [],
   "etapas": [],
@@ -14,5 +77,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-07T23:57:41.860Z"
+  "atualizadoEm": "2026-10-07T23:57:53.786Z"
 }
