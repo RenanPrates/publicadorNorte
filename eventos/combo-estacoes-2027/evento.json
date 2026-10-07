@@ -166,14 +166,22 @@
       "regiao": "Sudeste",
       "status": "aberta",
       "cidade": "São Paulo",
-      "uf": "SP"
+      "uf": "SP",
+      "mes_outono": "Janeiro",
+      "mes_inverno": "Fevereiro",
+      "mes_primavera": "Março",
+      "mes_verao": "Abril"
     },
     {
       "_id": "1a07186e",
       "regiao": "Sudeste",
       "status": "aberta",
       "cidade": "Rio de Janeiro",
-      "uf": "RJ"
+      "uf": "RJ",
+      "mes_outono": "Janeiro",
+      "mes_inverno": "Fevereiro",
+      "mes_primavera": "Março",
+      "mes_verao": "Abril"
     }
   ],
   "etapas": [],
@@ -183,5 +191,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-07T23:27:19.915Z",
-  "atualizadoEm": "2026-10-07T23:47:08.669Z"
+  "atualizadoEm": "2026-10-07T23:47:29.080Z"
 }
