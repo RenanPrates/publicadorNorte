@@ -2,11 +2,14 @@
 import { Conflito, NaoEncontrado } from './armazenamento';
 import { ConfigFaltando } from './config';
 import { ErroGitHub } from './github';
+import { autorizadoReq } from './sessao';
 
 export const erro = (status: number, mensagem: string) => Response.json({ erro: mensagem }, { status });
 
-export async function responder(fn: () => Promise<Response>): Promise<Response> {
+/** roda a rota: confere a senha da equipe (a não ser em rotas públicas) e traduz os erros */
+export async function responder(req: Request, fn: () => Promise<Response>, opcoes: { publico?: boolean } = {}): Promise<Response> {
   try {
+    if (!opcoes.publico && !(await autorizadoReq(req))) return erro(401, 'Entre com a senha da equipe.');
     return await fn();
   } catch (e) {
     if (e instanceof Conflito) return erro(409, e.message);

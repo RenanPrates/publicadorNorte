@@ -5,8 +5,8 @@ import { erro, responder } from '@/lib/servidor/rotas';
 import type { ArquivoPublicado } from '@/lib/servidor/destino';
 
 /** gera as páginas com o que está salvo e publica como versão nova */
-export async function POST(_req: Request, { params }: { params: Promise<{ slug: string }> }) {
-  return responder(async () => {
+export async function POST(req: Request, { params }: { params: Promise<{ slug: string }> }) {
+  return responder(req, async () => {
     const { slug } = await params;
     const { armazenamento, destino } = servicos();
     const c = await armazenamento.ler(slug);

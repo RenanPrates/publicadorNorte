@@ -3,12 +3,12 @@ import type { Evento } from '@/lib/comum/tipos';
 import { servicos } from '@/lib/servidor/config';
 import { erro, responder } from '@/lib/servidor/rotas';
 
-export async function GET() {
-  return responder(async () => Response.json(await servicos().armazenamento.listar()));
+export async function GET(req: Request) {
+  return responder(req, async () => Response.json(await servicos().armazenamento.listar()));
 }
 
 export async function POST(req: Request) {
-  return responder(async () => {
+  return responder(req, async () => {
     const { nome, formato } = (await req.json()) as { nome?: string; formato?: Formato };
     if (!nome?.trim()) return erro(400, 'Dê um nome ao evento.');
     if (!formato || !(formato in FORMATOS)) return erro(400, 'Escolha o formato.');

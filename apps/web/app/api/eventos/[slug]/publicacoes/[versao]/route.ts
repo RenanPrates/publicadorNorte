@@ -2,8 +2,8 @@ import { servicos } from '@/lib/servidor/config';
 import { erro, responder } from '@/lib/servidor/rotas';
 
 /** "voltar para esta versão": o site passa a mostrar a versão escolhida */
-export async function POST(_req: Request, { params }: { params: Promise<{ slug: string; versao: string }> }) {
-  return responder(async () => {
+export async function POST(req: Request, { params }: { params: Promise<{ slug: string; versao: string }> }) {
+  return responder(req, async () => {
     const { slug, versao } = await params;
     const { armazenamento, destino } = servicos();
     const c = await armazenamento.ler(slug);

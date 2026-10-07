@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "publicador-norte",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "observability": { "enabled": true },
+  // configurações sem segredo; GITHUB_TOKEN e SENHA_EQUIPE entram como "secrets" (wrangler secret put)
+  "vars": {
+    "GITHUB_REPO": "RenanPrates/publicadorNorte",
+    "GITHUB_BRANCH_DADOS": "dados",
+    "GITHUB_BRANCH_SITE": "gh-pages"
+  }
+}

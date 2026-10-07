@@ -4,8 +4,8 @@ import { servicos } from '@/lib/servidor/config';
 import { erro, responder } from '@/lib/servidor/rotas';
 
 /** .zip com as páginas e só os arquivos que elas usam, nos caminhos que o HTML espera */
-export async function GET(_req: Request, { params }: { params: Promise<{ slug: string }> }) {
-  return responder(async () => {
+export async function GET(req: Request, { params }: { params: Promise<{ slug: string }> }) {
+  return responder(req, async () => {
     const { slug } = await params;
     const { armazenamento } = servicos();
     const c = await armazenamento.ler(slug);

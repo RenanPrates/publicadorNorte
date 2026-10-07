@@ -13,6 +13,11 @@ export async function api<T = unknown>(caminho: string, init: RequestInit = {}):
   } catch {
     throw new ErroApi(0, 'Sem conexão com o publicador. Ele está rodando?');
   }
+  // sessão expirou ou senha trocada: volta para a tela de entrada
+  if (r.status === 401 && caminho !== '/api/entrar') {
+    location.href = '/entrar';
+    throw new ErroApi(401, 'Entre com a senha da equipe.');
+  }
   if (!r.ok) {
     let dados: { erro?: string } | undefined;
     try { dados = await r.json(); } catch { /* sem corpo */ }
