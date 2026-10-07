@@ -1,0 +1,18 @@
+{
+  "id": "a830d3dc-9f27-44bf-a334-094c3db7caaa",
+  "slug": "teste-publicador",
+  "nome": "Teste Publicador",
+  "formato": "tapume_praca",
+  "paginas": {},
+  "vars": {},
+  "gerais": {},
+  "cidades": [],
+  "etapas": [],
+  "ordem": {},
+  "imagens": {},
+  "baseUrl": "",
+  "publicacoes": [],
+  "versaoAtiva": null,
+  "criadoEm": "2026-10-07T23:01:11.254Z",
+  "atualizadoEm": "2026-10-07T23:01:11.254Z"
+}
