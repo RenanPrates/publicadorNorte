@@ -157,20 +157,7 @@
       "nome": "Realização",
       "tamanho": "P",
       "aoLado": true
-    },
-    {
-      "id": "cota",
-      "nome": "",
-      "tamanho": "P",
-      "aoLado": false,
-      "tituloBloco": "TESTE bloco"
-    },
-    {
-      "id": "cota-2",
-      "nome": "",
-      "tamanho": "P",
-      "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T22:31:19.244Z"
+  "atualizadoEm": "2026-10-08T22:31:45.982Z"
 }
