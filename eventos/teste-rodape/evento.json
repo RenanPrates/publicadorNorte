@@ -25,5 +25,39 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:38:09.199Z",
-  "atualizadoEm": "2026-10-08T20:38:21.083Z"
+  "atualizadoEm": "2026-10-08T20:38:47.816Z",
+  "secoes": {
+    "ocultas": [
+      "praca#@rodape"
+    ],
+    "porLinha": {},
+    "ordem": {}
+  },
+  "rodape": {
+    "ativo": true,
+    "geral": {
+      "fonte": "",
+      "corFundo": "#16181d",
+      "corTexto": "#ffcc00",
+      "corLinks": "#f3e35a",
+      "descricao": "Realização: Norte Marketing",
+      "links": [
+        {
+          "texto": "Regulamento",
+          "url": "https://norte.com/reg"
+        }
+      ],
+      "redes": [
+        {
+          "rede": "instagram",
+          "url": "https://instagram.com/norte"
+        }
+      ]
+    },
+    "porLinha": {
+      "sp": {
+        "ativo": false
+      }
+    }
+  }
 }
