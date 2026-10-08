@@ -327,7 +327,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:44:27.201Z",
+  "atualizadoEm": "2026-10-08T20:52:31.351Z",
   "secoes": {
     "ocultas": [
       "praca#@rodape"
@@ -367,7 +367,8 @@
       "corLinks": "#f3e35a",
       "descricao": "teste",
       "links": [],
-      "redes": []
+      "redes": [],
+      "logo": "_media/praca/marca/logo.webp"
     },
     "porLinha": {}
   }
