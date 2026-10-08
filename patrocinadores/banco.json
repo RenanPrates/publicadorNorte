@@ -3,7 +3,7 @@
     {
       "id": "teste-patro",
       "nome": "TESTE Patro",
-      "url": "",
+      "url": "https://exemplo.com",
       "ativo": true,
       "logo": "teste-patro.svg",
       "sha": "99e97ea7703222a5912719b7b5f953c6b5555731",
@@ -44,5 +44,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:46:15.593Z"
+  "atualizadoEm": "2026-10-08T21:46:56.467Z"
 }
