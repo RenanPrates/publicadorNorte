@@ -10,12 +10,12 @@
     {
       "_id": "sp1",
       "cidade": "São Paulo",
-      "uf": "SP"
+      "uf": "SP-novo"
     },
     {
-      "_id": "rj1",
-      "cidade": "Rio",
-      "uf": "RJ"
+      "_id": "3dee1ce8",
+      "cidade": "Recife",
+      "uf": "PE"
     }
   ],
   "etapas": [],
@@ -25,5 +25,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T23:30:12.912Z",
-  "atualizadoEm": "2026-10-08T23:30:19.782Z"
+  "atualizadoEm": "2026-10-08T23:30:52.545Z"
 }
