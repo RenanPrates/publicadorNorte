@@ -69,6 +69,16 @@
       "sha": "071c992c772499cfb501b512f43d4984c4360188",
       "bytes": 7882,
       "criadoEm": "2026-10-08T21:56:53.130Z"
+    },
+    {
+      "id": "yelum",
+      "nome": "Yelum",
+      "url": "",
+      "ativo": true,
+      "logo": "yelum-8db68df.png",
+      "sha": "8db68dfa8684de91881e895614515d6c45d15a9e",
+      "bytes": 7140,
+      "criadoEm": "2026-10-08T21:56:58.250Z"
     }
   ],
   "cotas": [
@@ -104,5 +114,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:54.087Z"
+  "atualizadoEm": "2026-10-08T21:56:59.226Z"
 }
