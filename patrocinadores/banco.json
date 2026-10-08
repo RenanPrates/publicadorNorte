@@ -145,7 +145,8 @@
     {
       "id": "ticketeria",
       "nome": "Ticketeria",
-      "tamanho": "P"
+      "tamanho": "P",
+      "aoLado": true
     },
     {
       "id": "realizacao",
@@ -154,5 +155,5 @@
       "aoLado": false
     }
   ],
-  "atualizadoEm": "2026-10-08T22:16:32.837Z"
+  "atualizadoEm": "2026-10-08T22:16:38.398Z"
 }
