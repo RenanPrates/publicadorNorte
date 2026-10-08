@@ -125,17 +125,20 @@
     {
       "id": "master",
       "nome": "Master",
-      "tamanho": "GG"
+      "tamanho": "GG",
+      "aoLado": false
     },
     {
       "id": "gold",
       "nome": "Gold",
-      "tamanho": "G"
+      "tamanho": "G",
+      "aoLado": false
     },
     {
       "id": "silver",
       "nome": "Silver",
-      "tamanho": "M"
+      "tamanho": "M",
+      "aoLado": false
     },
     {
       "id": "apoio",
@@ -153,8 +156,8 @@
       "id": "realizacao",
       "nome": "Realização",
       "tamanho": "P",
-      "aoLado": true
+      "aoLado": false
     }
   ],
-  "atualizadoEm": "2026-10-08T22:17:23.427Z"
+  "atualizadoEm": "2026-10-08T22:29:19.019Z"
 }
