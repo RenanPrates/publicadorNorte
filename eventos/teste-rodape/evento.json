@@ -25,7 +25,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:38:09.199Z",
-  "atualizadoEm": "2026-10-08T20:39:10.051Z",
+  "atualizadoEm": "2026-10-08T20:39:13.604Z",
   "secoes": {
     "ocultas": [
       "praca#@rodape"
@@ -54,6 +54,28 @@
         }
       ]
     },
-    "porLinha": {}
+    "porLinha": {
+      "rj": {
+        "config": {
+          "fonte": "Montserrat",
+          "corFundo": "#16181d",
+          "corTexto": "#ffcc00",
+          "corLinks": "#f3e35a",
+          "descricao": "Só no Rio",
+          "links": [
+            {
+              "texto": "Regulamento",
+              "url": "https://norte.com/reg"
+            }
+          ],
+          "redes": [
+            {
+              "rede": "instagram",
+              "url": "https://instagram.com/norte"
+            }
+          ]
+        }
+      }
+    }
   }
 }
