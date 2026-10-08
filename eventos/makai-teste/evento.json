@@ -279,8 +279,8 @@
     {
       "_id": "6c37f9d3",
       "cidade": "São Paulo",
-      "uf": "PB",
-      "regiao": "Nordeste",
+      "uf": "SP",
+      "regiao": "Sude",
       "status": "aberta",
       "local": "Praia alguma coisa",
       "data_inicio": "01/01",
@@ -325,7 +325,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:30:36.719Z",
+  "atualizadoEm": "2026-10-08T19:30:39.809Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
