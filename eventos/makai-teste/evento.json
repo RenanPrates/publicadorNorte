@@ -280,7 +280,7 @@
       "_id": "6c37f9d3",
       "cidade": "São Paulo",
       "uf": "SP",
-      "regiao": "Sude",
+      "regiao": "Sudeste",
       "status": "aberta",
       "local": "Praia alguma coisa",
       "data_inicio": "01/01",
@@ -325,7 +325,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:30:39.809Z",
+  "atualizadoEm": "2026-10-08T19:30:42.978Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
