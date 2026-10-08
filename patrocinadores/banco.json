@@ -29,6 +29,16 @@
       "sha": "421f4a37a4af75e7817243613d3f45968ae2377f",
       "bytes": 9405,
       "criadoEm": "2026-10-08T21:56:20.179Z"
+    },
+    {
+      "id": "prefeitura-vitoria",
+      "nome": "Prefeitura Vitoria",
+      "url": "",
+      "ativo": true,
+      "logo": "prefeitura-vitoria-785b971.png",
+      "sha": "785b971309081997633f34fe492eeddce7d254ca",
+      "bytes": 38414,
+      "criadoEm": "2026-10-08T21:56:29.694Z"
     }
   ],
   "cotas": [
@@ -64,5 +74,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:22.504Z"
+  "atualizadoEm": "2026-10-08T21:56:31.887Z"
 }
