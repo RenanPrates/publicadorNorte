@@ -79,6 +79,46 @@
       "sha": "67fe05f8e387bd1f73ac761bc54bc4e69f39b144",
       "bytes": 33333,
       "criadoEm": "2026-10-08T21:57:05.138Z"
+    },
+    {
+      "id": "yelum-2",
+      "nome": "Yelum",
+      "url": "",
+      "ativo": true,
+      "logo": "yelum-230242c.webp",
+      "sha": "230242c4f57febbd37bde811c6b764854b66dad4",
+      "bytes": 9272,
+      "criadoEm": "2026-10-08T21:57:32.909Z"
+    },
+    {
+      "id": "clubsocial",
+      "nome": "ClubSocial",
+      "url": "",
+      "ativo": true,
+      "logo": "clubsocial-3e04f7f.png",
+      "sha": "3e04f7faf4d0fa34e463b961723047fff1ce965c",
+      "bytes": 42491,
+      "criadoEm": "2026-10-08T21:57:32.909Z"
+    },
+    {
+      "id": "notredame-saude",
+      "nome": "NotreDame Saude",
+      "url": "",
+      "ativo": true,
+      "logo": "notredame-saude-56ba3e2.png",
+      "sha": "56ba3e23ce0732523279194570f2c9457c57f01d",
+      "bytes": 10690,
+      "criadoEm": "2026-10-08T21:57:32.909Z"
+    },
+    {
+      "id": "believe",
+      "nome": "Believe",
+      "url": "",
+      "ativo": true,
+      "logo": "believe-d693340.png",
+      "sha": "d693340ec5bcacbaecfd72624cc442e885bfb108",
+      "bytes": 21348,
+      "criadoEm": "2026-10-08T21:57:32.909Z"
     }
   ],
   "cotas": [
@@ -114,5 +154,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:57:25.298Z"
+  "atualizadoEm": "2026-10-08T21:57:33.789Z"
 }
