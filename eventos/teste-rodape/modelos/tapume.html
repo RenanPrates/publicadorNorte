@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>@evento @ano</title>
+<meta name="description" content="@evento @ano — escolha sua etapa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+2:800%7CManrope:500,600,700,800&display=swap">
+<style>
+/* ================= TOKENS (design system Makai) ================= */
+:root{
+  color-scheme: dark;
+  --cream:#FBEAD1; --sand:#F6D9A6; --gold:#FBB040; --orange:#F4802E; --sunset:#EA4E1E; --red:#C62A0E;
+  --dark:#2A0D04; --dark-2:#3A1206; --ink:#2C1508; --ink-strong:#1D0B04; --white:#FFF8EE; --brand-text:#A8390F;
+  --line-dark:rgba(255,248,238,.16); --line-light:rgba(44,21,8,.14);
+  --shadow:0 18px 44px -18px rgba(42,13,4,.5);
+  --ease:cubic-bezier(.22,.68,.32,1); --dur-s:.25s; --dur-m:.6s;
+  --r-m:16px; --r-l:28px;
+  --f-display:"Baloo 2", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --f-text:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-title:clamp(2rem, 1rem + 2.6vw, 4rem);
+  --fs-sub:clamp(1.5rem, .9rem + 1.2vw, 2.25rem);
+  --fs-body:1rem; --fs-small:.875rem; --fs-label:.75rem;
+  --gut:20px; --bar-h:64px;
+  --star:polygon(50% 0%,61% 20%,85% 10%,70% 32%,100% 35%,74% 50%,100% 65%,70% 68%,85% 90%,61% 80%,50% 100%,39% 80%,15% 90%,30% 68%,0% 65%,26% 50%,0% 35%,30% 32%,15% 10%,39% 20%);
+}
+
+
+*,*::before,*::after{ box-sizing:border-box; }
+[hidden]{ display:none!important; }
+html,body{ height:100%; }
+body{ margin:0; background:var(--dark); color:var(--white); font-family:var(--f-text); font-size:var(--fs-body); line-height:1.45; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+button{ font:inherit; color:inherit; background:none; border:0; padding:0; cursor:pointer; }
+a{ color:inherit; text-decoration:none; }
+img,video{ max-width:100%; display:block; }
+h1,h2,h3,p{ margin:0; }
+.sr{ position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+a:focus-visible, button:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; border-radius:8px; }
+.on-light a:focus-visible, .on-light button:focus-visible{ outline-color:var(--sunset); }
+
+.star-bit{ display:inline-block; width:11px; height:11px; flex:none; background:currentColor; clip-path:var(--star); }
+.eyebrow{ display:inline-flex; align-items:center; gap:8px; font-size:var(--fs-label); font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.display{ font-family:var(--f-display); font-weight:800; line-height:.9; letter-spacing:-.01em; text-wrap:balance; }
+.num{ font-variant-numeric:tabular-nums; }
+.media{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+/* seta circular (linguagem de CTA em todas as propostas) */
+.arrow{ width:48px; height:48px; flex:none; border-radius:100px; display:grid; place-items:center; font-weight:800; font-size:20px; transition:transform var(--dur-s) var(--ease), background var(--dur-s) var(--ease), color var(--dur-s) var(--ease); }
+.soon{ display:inline-flex; align-items:center; height:28px; padding:0 12px; border-radius:100px; font-size:var(--fs-label); font-weight:800; letter-spacing:.1em; text-transform:uppercase; box-shadow:inset 0 0 0 1.5px currentColor; white-space:nowrap; }
+
+/* ================= BARRA ================= */
+.bar{ position:fixed; z-index:50; top:0; left:0; right:0; padding:calc(env(safe-area-inset-top,0px) + 10px) var(--gut) 10px; display:flex; align-items:center; gap:10px; color:var(--bar-ink, var(--white)); pointer-events:none; transition:color .3s; }
+.bar > *{ pointer-events:auto; }
+.brand{ display:flex; align-items:center; gap:10px; margin-right:auto; }
+.brand img{ width:46px; height:auto; }
+.brand span{ font-size:var(--fs-label); font-weight:800; letter-spacing:.12em; text-transform:uppercase; line-height:1.25; }
+.brand span b{ display:block; font-weight:600; letter-spacing:.08em; }
+.pausebtn{ width:44px; height:44px; flex:none; border-radius:100px; display:grid; place-items:center; background:rgba(20,8,3,.55); color:var(--white); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+.pausebtn svg{ width:16px; height:16px; fill:currentColor; }
+.pausebtn .i-play{ display:none; } .pausebtn[aria-pressed="true"] .i-play{ display:block; } .pausebtn[aria-pressed="true"] .i-pause{ display:none; }
+
+
+.v{ position:relative; min-height:100vh; min-height:100dvh; overflow:hidden; isolation:isolate; }
+
+/* ======================================================================
+   TAPUME · PÔSTER — o KV manda; as cidades são uma lista de partida
+   ====================================================================== */
+.p1{ display:flex; flex-direction:column; background:var(--dark); }
+.p1__kv{ position:relative; height:max(300px, 54svh); }
+.p1__kv .media{ object-position:50% 16%; }
+
+.p1__kv::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,8,3,.45) 0%, rgba(20,8,3,0) 22%, rgba(20,8,3,0) 52%, var(--dark) 100%); }
+.p1__head{ position:relative; z-index:2; margin-top:-44px; padding:0 var(--gut); display:grid; gap:8px; }
+.p1__title{ font-family:var(--f-text); font-weight:700; font-size:clamp(1.125rem, 1rem + .6vw, 1.5rem); line-height:1.2; color:rgba(255,248,238,.92); }
+.p1__title span{ color:var(--gold); margin-left:4px; }
+.p1__list{ list-style:none; grid-template-columns:minmax(0,1fr); margin:18px 0 0; padding:0 var(--gut) calc(20px + env(safe-area-inset-bottom,0px)); display:grid; }
+.row{ position:relative; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:4px 14px; padding:18px 0; border-top:1px solid var(--line-dark); }
+.row::before{ content:""; position:absolute; inset:0 calc(var(--gut) * -1); background:var(--gold); transform:scaleY(0); transform-origin:50% 100%; transition:transform .45s var(--ease); z-index:-1; }
+.row__eye > span + span::before{ content:"·"; margin-right:8px; }
+.row.is-breve{ cursor:default; }
+.row__eye{ grid-column:1 / -1; color:var(--gold); transition:color var(--dur-s); }
+.row__name{ font-size:clamp(2.2rem, 1rem + 5vw, 4.4rem); overflow-wrap:anywhere; min-width:0; transition:color var(--dur-s); }
+.p1__list.is-fit .row__name{ overflow-wrap:normal; }
+.row__meta{ grid-column:1; display:flex; flex-wrap:wrap; gap:4px 14px; font-size:var(--fs-small); font-weight:600; color:rgba(255,248,238,.9); transition:color var(--dur-s); }
+.row__meta .cd{ color:var(--gold); font-weight:800; transition:color var(--dur-s); }
+.row .arrow{ grid-column:2; grid-row:2 / span 2; background:var(--orange); color:var(--ink-strong); }
+.row .soon{ grid-column:2; grid-row:2 / span 2; color:var(--white); }
+a.row:active::before{ transform:scaleY(1); }
+
+
+
+/* toast */
+.toast{ position:fixed; z-index:80; left:50%; bottom:calc(20px + env(safe-area-inset-bottom,0px)); transform:translate(-50%, 20px); opacity:0; max-width:calc(100% - 32px); background:var(--ink-strong); color:var(--white); padding:12px 18px; border-radius:100px; font-size:var(--fs-small); font-weight:700; transition:opacity .3s, transform .3s var(--ease); pointer-events:none; text-align:center; }
+.toast.is-on{ opacity:1; transform:translate(-50%,0); }
+</style>
+<style media="(max-width:340px)">
+.brand span{ display:none; }
+</style>
+<style media="(max-width:899px) and (max-height:720px)">
+.p1__kv{ height:max(220px, 40svh); } .row{ padding:12px 0; } .p1__list{ margin-top:10px; }
+</style>
+<style media="(hover:hover)">
+a.row:hover::before, a.row:focus-visible::before{ transform:scaleY(1); }
+  a.row:hover .row__eye, a.row:hover .row__name, a.row:hover .row__meta, a.row:hover .row__meta .cd{ color:var(--ink-strong); }
+  .row:hover .arrow{ background:var(--ink-strong); color:var(--gold); transform:translateX(4px); }
+</style>
+<style media="(min-width:900px)">
+:root{ --gut:48px; --bar-h:76px; }
+.p1{ display:block; }
+  .p1__kv{ position:absolute; inset:0; height:auto; }
+  .p1__kv .media{ object-position:50% 30%; }
+  .p1__kv::after{ background:linear-gradient(90deg, rgba(20,8,3,.72) 0%, rgba(20,8,3,.2) 38%, rgba(20,8,3,0) 60%), linear-gradient(180deg, rgba(20,8,3,.4) 0%, rgba(20,8,3,0) 20%, rgba(20,8,3,0) 50%, rgba(20,8,3,.92) 100%); }
+  .p1__inner{ position:relative; z-index:2; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; justify-content:flex-end; padding-bottom:40px; }
+  .p1__head{ margin:0; max-width:620px; }
+  .p1__list{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:0 40px; margin-top:28px; padding-bottom:0; }
+  .row{ padding:24px 0 8px; border-top-width:2px; }
+  .row::before{ inset:0 -20px; border-radius:var(--r-m); }
+</style>
+<style media="(prefers-reduced-motion: reduce)">
+*{ animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; }
+</style>
+</head>
+<body>
+<header class="bar" id="bar">
+  <a class="brand" href="#main" aria-label="@evento — início">
+    <img src="_media/tapume/marca/logo.webp" alt="" width="200" height="193">
+    <span>Beach Tennis<b>Experience @ano</b></span>
+  </a>
+  <button type="button" class="pausebtn" id="pause" aria-pressed="false" aria-label="Pausar vídeo">
+    <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
+    <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11a.6.6 0 0 0 .9.5l9-5.5a.6.6 0 0 0 0-1l-9-5.5a.6.6 0 0 0-.9.5z"/></svg>
+  </button>
+</header>
+
+<main id="main">
+<h1 class="sr">@evento @ano — escolha sua etapa</h1>
+
+<section class="v p1" id="tapume" data-ano="@ano" aria-label="Escolha sua etapa">
+  <div class="p1__kv" aria-hidden="true">
+    <video class="media" muted playsinline loop preload="none" tabindex="-1" poster="@img_destaque_mobile"></video>
+  </div>
+  <div class="p1__inner">
+    <div class="p1__head">
+      <h2 class="p1__title enter">Escolha sua etapa <span aria-hidden="true">↓</span></h2>
+    </div>
+    <ul class="p1__list">
+<!-- @repetir cidades -->
+<!-- @se status = aberta -->
+      <li class="enter">
+        <a class="row" href="@url" data-inicio="@data_inicio" data-fim="@data_fim">
+          <span class="eyebrow row__eye"><i class="star-bit"></i><span>@uf</span><span>@regiao</span></span>
+          <span class="display row__name">@cidade</span>
+          <span class="arrow" aria-hidden="true">→</span>
+          <span class="row__meta">
+            <span class="num"><!-- @se data_fim -->@data_inicio — @data_fim<!-- @senao -->@data_inicio<!-- @fim --></span>
+            <span>@local</span>
+            <span><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista<!-- @senao -->Preço a confirmar<!-- @fim --><!-- @fim --></span>
+            <span class="cd" data-cd></span>
+          </span>
+        </a>
+      </li>
+<!-- @senao -->
+      <li class="enter">
+        <div class="row is-breve" aria-disabled="true" data-inicio="@data_inicio" data-fim="@data_fim">
+          <span class="eyebrow row__eye"><i class="star-bit"></i><span>@uf</span><span>@regiao</span></span>
+          <span class="display row__name">@cidade</span>
+          <span class="soon">Em breve</span>
+          <span class="row__meta">
+            <span class="num"><!-- @se data_fim -->@data_inicio — @data_fim<!-- @senao -->@data_inicio<!-- @fim --></span>
+            <span>@local</span>
+            <span class="cd" data-cd></span>
+          </span>
+        </div>
+      </li>
+<!-- @fim -->
+<!-- @fim -->
+    </ul>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  var tapume = document.getElementById("tapume");
+
+  /* ---------- limpeza: campos vazios não deixam separador solto ---------- */
+  tapume.querySelectorAll(".row__meta > span").forEach(function(el){
+    if (!el.hasAttribute("data-cd") && !el.textContent.trim()) el.remove();
+  });
+  tapume.querySelectorAll(".row__eye > span").forEach(function(el){ if (!el.textContent.trim()) el.remove(); });
+
+  /* ---------- contagem regressiva (datas dd/mm + ano da edição) ---------- */
+  var ano = parseInt(tapume.getAttribute("data-ano"), 10);
+  function dia(txt, fimDoDia){
+    var m = /^(\d{1,2})\/(\d{1,2})/.exec((txt || "").trim());
+    if (!m || !ano) return null;
+    var d = new Date(ano, +m[2] - 1, +m[1]);
+    if (fimDoDia) d.setHours(23, 59, 59);
+    return d;
+  }
+  tapume.querySelectorAll("[data-inicio]").forEach(function(row){
+    var cd = row.querySelector("[data-cd]"), ini = dia(row.getAttribute("data-inicio"));
+    var fim = dia(row.getAttribute("data-fim"), true) || dia(row.getAttribute("data-inicio"), true);
+    if (!ini){ cd.remove(); return; }
+    var now = new Date();
+    if (now > fim) cd.textContent = "Etapa encerrada";
+    else if (now >= ini) cd.textContent = "Acontecendo agora";
+    else { var n = Math.ceil((ini - now) / 864e5); cd.textContent = n === 1 ? "Falta 1 dia" : "Faltam " + n + " dias"; }
+  });
+
+  tapume.querySelectorAll(".row__meta").forEach(function(el){ if (!el.children.length) el.remove(); });
+
+  /* ---------- nome de cidade longo: reduz a fonte até a palavra caber ---------- */
+  var list = tapume.querySelector(".p1__list");
+  function fit(){
+    list.classList.add("is-fit");
+    tapume.querySelectorAll(".row__name").forEach(function(el){
+      el.style.fontSize = "";
+      var size = parseFloat(getComputedStyle(el).fontSize), min = 24;
+      while (el.scrollWidth > el.clientWidth + 1 && size > min){ size -= 2; el.style.fontSize = size + "px"; }
+    });
+  }
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  var rt; addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(fit, 150); });
+
+  /* ---------- nome acessível de cada linha ---------- */
+  tapume.querySelectorAll("a.row").forEach(function(row){
+    var parts = [row.querySelector(".row__name")].concat(Array.prototype.slice.call(row.querySelectorAll(".row__meta > span")))
+      .map(function(el){ return el ? el.textContent.replace(/\s+/g, " ").trim() : ""; }).filter(Boolean);
+    row.setAttribute("aria-label", parts.join(", ") + " — entrar na etapa");
+  });
+
+  /* ---------- entrada em cascata (90 ms entre blocos) ---------- */
+  if (!reduce.matches && document.body.animate){
+    tapume.querySelectorAll(".enter").forEach(function(el, i){
+      el.animate([{ opacity:0, transform:"translateY(22px) scale(.985)" }, { opacity:1, transform:"none" }],
+                 { duration:800, delay:i * 90, easing:"cubic-bezier(.22,.68,.32,1)", fill:"backwards" });
+    });
+  }
+
+  /* ---------- vídeo do KV ---------- */
+  var conn = navigator.connection || {};
+  var allowVideo = !reduce.matches && !conn.saveData && !/(^|-)2g$/.test(conn.effectiveType || "");
+  var desk = matchMedia("(min-width:900px)");
+  var video = tapume.querySelector("video"), paused = false, pauseBtn = document.getElementById("pause");
+  /* mídia do destaque: variáveis do passo Mídia, trocadas por largura de tela */
+  var MIDIA = desk.matches
+    ? { video:'@video_destaque_desktop', capa:'@img_destaque_desktop' }
+    : { video:'@video_destaque_mobile',  capa:'@img_destaque_mobile' };
+  if (desk.matches) video.poster = MIDIA.capa;
+  function play(){
+    if (!allowVideo) return;
+    if (!video.getAttribute("src")) video.src = MIDIA.video;
+    if (!paused){ var p = video.play(); if (p && p.catch) p.catch(function(){ setPaused(true); }); }
+  }
+  function setPaused(p){
+    paused = p;
+    pauseBtn.setAttribute("aria-pressed", String(p));
+    pauseBtn.setAttribute("aria-label", p ? "Reproduzir vídeo" : "Pausar vídeo");
+    if (p) video.pause(); else play();
+  }
+  pauseBtn.addEventListener("click", function(){ setPaused(!paused); });
+  if (!allowVideo) pauseBtn.hidden = true;
+  document.addEventListener("visibilitychange", function(){ if (document.hidden) video.pause(); else if (!paused) play(); });
+  play();
+})();
+</script>
+
+<!--
+  VARIÁVEIS — Makai Beach Tennis Experience — tapume
+  Gerais: @evento ("Makai Beach Tennis Experience"), @ano ("2026")
+  Base usadas no card (sem número, dentro do bloco de repetição das cidades):
+    @cidade, @uf, @regiao, @status (aberta | breve), @local, @data_inicio, @data_fim,
+    @gratuito, @preco_vista
+  Forma de cobrança: à vista (sem variáveis de parcela).
+  Automáticas: @url (página da cidade, só no card aberta)
+  Imagens e vídeos (pasta _media/tapume/):
+    @video_destaque_mobile  — destaque/, vídeo do KV no celular (padrão: mobile.mp4, 432x768), igual em todas
+    @video_destaque_desktop — destaque/, vídeo do KV no desktop (padrão: desktop.mp4, 1280x720), igual em todas
+    @img_destaque_mobile    — destaque/, capa do vídeo no celular (padrão: mobile.webp), igual em todas
+    @img_destaque_desktop   — destaque/, capa do vídeo no desktop (padrão: desktop.webp), igual em todas
+    Vídeos trocados no JS por largura de tela (900px). A capa aparece antes do vídeo carregar e no
+    lugar dele com movimento reduzido ou economia de dados: ao trocar um vídeo, troque a capa junto.
+    Fixa, sem variável: _media/tapume/marca/logo.webp
+  Próprias deste evento: nenhuma.
+  Opcionais: O2 Prime não usado neste evento.
+  Notas:
+    - Um card só, com versão "aberta" (link para a página da cidade) e "breve" (sem link).
+    - @data_inicio e @data_fim no formato dd/mm; o ano vem de @ano e alimenta a contagem
+      regressiva (calculada no navegador). Data inválida ou vazia: a contagem não aparece.
+    - Campo vazio some sem deixar separador (limpeza em JavaScript).
+    - Preço só aparece no card aberto, no padrão à vista do guia: "Evento gratuito",
+      "R$" + @preco_vista, ou "Preço a confirmar" quando o preço ainda não foi cadastrado.
+    - O CSS não usa regras com arroba (media queries ficam em style media="..."; animação de
+      entrada em JavaScript) e a fonte usa a API v1 do Google Fonts, para que o Publicador
+      não leia nada do CSS como variável.
+-->
+</body>
+</html>
