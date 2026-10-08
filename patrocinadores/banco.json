@@ -79,6 +79,16 @@
       "sha": "8db68dfa8684de91881e895614515d6c45d15a9e",
       "bytes": 7140,
       "criadoEm": "2026-10-08T21:56:58.250Z"
+    },
+    {
+      "id": "tirolez",
+      "nome": "Tirolez",
+      "url": "",
+      "ativo": true,
+      "logo": "tirolez-67fe05f.png",
+      "sha": "67fe05f8e387bd1f73ac761bc54bc4e69f39b144",
+      "bytes": 33333,
+      "criadoEm": "2026-10-08T21:57:05.138Z"
     }
   ],
   "cotas": [
@@ -114,5 +124,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:59.226Z"
+  "atualizadoEm": "2026-10-08T21:57:06.068Z"
 }
