@@ -21,16 +21,6 @@
       "criadoEm": "2026-10-08T21:56:15.942Z"
     },
     {
-      "id": "fpbt-2",
-      "nome": "FPBT",
-      "url": "",
-      "ativo": true,
-      "logo": "fpbt-421f4a3.png",
-      "sha": "421f4a37a4af75e7817243613d3f45968ae2377f",
-      "bytes": 9405,
-      "criadoEm": "2026-10-08T21:56:20.179Z"
-    },
-    {
       "id": "prefeitura-vitoria",
       "nome": "Prefeitura Vitoria",
       "url": "",
@@ -124,5 +114,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:57:06.068Z"
+  "atualizadoEm": "2026-10-08T21:57:25.298Z"
 }
