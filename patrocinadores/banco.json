@@ -9,6 +9,16 @@
       "sha": "659b1f1d7a61d500404e2e54fcd328a83565d4a4",
       "bytes": 10942,
       "criadoEm": "2026-10-08T21:56:03.882Z"
+    },
+    {
+      "id": "sinergia",
+      "nome": "Sinergia",
+      "url": "",
+      "ativo": true,
+      "logo": "sinergia-8f9afbd.png",
+      "sha": "8f9afbd0986852efe708f8c84336e40a518a11ea",
+      "bytes": 58008,
+      "criadoEm": "2026-10-08T21:56:15.942Z"
     }
   ],
   "cotas": [
@@ -44,5 +54,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:04.826Z"
+  "atualizadoEm": "2026-10-08T21:56:16.913Z"
 }
