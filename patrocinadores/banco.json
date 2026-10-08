@@ -39,6 +39,16 @@
       "sha": "785b971309081997633f34fe492eeddce7d254ca",
       "bytes": 38414,
       "criadoEm": "2026-10-08T21:56:29.694Z"
+    },
+    {
+      "id": "nutry",
+      "nome": "Nutry",
+      "url": "",
+      "ativo": true,
+      "logo": "nutry-7acd8db.png",
+      "sha": "7acd8dbe2aaefbc4e675f1cd45a8db2056420483",
+      "bytes": 13715,
+      "criadoEm": "2026-10-08T21:56:36.117Z"
     }
   ],
   "cotas": [
@@ -74,5 +84,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:31.887Z"
+  "atualizadoEm": "2026-10-08T21:56:40.333Z"
 }
