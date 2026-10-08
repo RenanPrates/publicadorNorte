@@ -275,7 +275,8 @@
       "data_fim": "04/01",
       "preco_vista": "150",
       "img_galeria_foto6": "_media/praca/galeria/foto5.webp",
-      "media_hero_desktop": "_media/praca/hero/desktop.mp4"
+      "media_hero_desktop": "_media/praca/hero/desktop.mp4",
+      "media_hero_mobile": "!oculta:_media/praca/hero/mobile.mp4"
     },
     {
       "_id": "6c37f9d3",
@@ -326,7 +327,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:59:34.182Z",
+  "atualizadoEm": "2026-10-08T20:08:44.547Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
