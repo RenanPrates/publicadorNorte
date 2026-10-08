@@ -19,6 +19,16 @@
       "sha": "8f9afbd0986852efe708f8c84336e40a518a11ea",
       "bytes": 58008,
       "criadoEm": "2026-10-08T21:56:15.942Z"
+    },
+    {
+      "id": "fpbt-2",
+      "nome": "FPBT",
+      "url": "",
+      "ativo": true,
+      "logo": "fpbt-421f4a3.png",
+      "sha": "421f4a37a4af75e7817243613d3f45968ae2377f",
+      "bytes": 9405,
+      "criadoEm": "2026-10-08T21:56:20.179Z"
     }
   ],
   "cotas": [
@@ -54,5 +64,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:16.913Z"
+  "atualizadoEm": "2026-10-08T21:56:22.504Z"
 }
