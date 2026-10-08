@@ -25,7 +25,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:38:09.199Z",
-  "atualizadoEm": "2026-10-08T20:38:47.816Z",
+  "atualizadoEm": "2026-10-08T20:39:10.051Z",
   "secoes": {
     "ocultas": [
       "praca#@rodape"
@@ -36,7 +36,7 @@
   "rodape": {
     "ativo": true,
     "geral": {
-      "fonte": "",
+      "fonte": "Montserrat",
       "corFundo": "#16181d",
       "corTexto": "#ffcc00",
       "corLinks": "#f3e35a",
@@ -54,10 +54,6 @@
         }
       ]
     },
-    "porLinha": {
-      "sp": {
-        "ativo": false
-      }
-    }
+    "porLinha": {}
   }
 }
