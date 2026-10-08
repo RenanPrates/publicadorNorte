@@ -272,7 +272,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T22:03:12.745Z",
+  "atualizadoEm": "2026-10-08T23:18:53.714Z",
   "patrocinios": {
     "porPagina": {
       "04f0d774": {
@@ -288,13 +288,28 @@
             ]
           }
         ]
+      },
+      "ed85ad25": {
+        "blocos": [
+          {
+            "id": "14e096ea",
+            "cota": "apoio",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
       }
     }
   },
   "pendencia": {
     "desde": "2026-10-08T22:03:12.745Z",
     "motivos": [
-      "Patrocínios: Believe entrou em São Paulo (Silver)"
+      "Patrocínios: Believe entrou em São Paulo (Silver)",
+      "Patrocínios: Believe entrou em Rio de Janeiro (Apoio)"
     ]
   }
 }
