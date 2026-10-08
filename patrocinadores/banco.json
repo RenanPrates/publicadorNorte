@@ -162,7 +162,8 @@
       "id": "cota",
       "nome": "",
       "tamanho": "P",
-      "aoLado": false
+      "aoLado": false,
+      "tituloBloco": "TESTE bloco"
     },
     {
       "id": "cota-2",
@@ -171,5 +172,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T22:29:48.241Z"
+  "atualizadoEm": "2026-10-08T22:31:19.244Z"
 }
