@@ -1,0 +1,18 @@
+{
+  "id": "f6030b65-1c3c-4eec-9dde-4ff35eb93e9a",
+  "slug": "teste-secoes-vazio",
+  "nome": "TESTE secoes vazio",
+  "formato": "tapume_praca",
+  "paginas": {},
+  "vars": {},
+  "gerais": {},
+  "cidades": [],
+  "etapas": [],
+  "ordem": {},
+  "imagens": {},
+  "baseUrl": "",
+  "publicacoes": [],
+  "versaoAtiva": null,
+  "criadoEm": "2026-10-08T22:38:55.232Z",
+  "atualizadoEm": "2026-10-08T22:38:55.232Z"
+}
