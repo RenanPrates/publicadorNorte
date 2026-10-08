@@ -291,11 +291,11 @@
   "ordem": {},
   "imagens": {
     "media_arena_desktop": "_media/praca/arena/desktop.mp4",
-    "media_arena_mobile": "_media/praca/arena/mobile.mp4"
+    "media_arena_mobile": "_media/praca/arena/cena.webp"
   },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:08:47.770Z"
+  "atualizadoEm": "2026-10-08T00:08:51.343Z"
 }
