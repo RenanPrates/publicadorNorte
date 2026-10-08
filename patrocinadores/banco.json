@@ -140,7 +140,8 @@
     {
       "id": "apoio",
       "nome": "Apoio",
-      "tamanho": "P"
+      "tamanho": "P",
+      "aoLado": true
     },
     {
       "id": "ticketeria",
@@ -155,5 +156,5 @@
       "aoLado": false
     }
   ],
-  "atualizadoEm": "2026-10-08T22:16:38.398Z"
+  "atualizadoEm": "2026-10-08T22:16:45.399Z"
 }
