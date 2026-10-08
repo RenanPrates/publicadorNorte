@@ -25,5 +25,56 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T21:14:52.487Z",
-  "atualizadoEm": "2026-10-08T21:15:04.586Z"
+  "atualizadoEm": "2026-10-08T21:15:31.748Z",
+  "patrocinios": {
+    "porPagina": {
+      "tapume": {
+        "blocos": [
+          {
+            "id": "35cfe59d",
+            "cota": "master",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-alfa"
+              }
+            ]
+          },
+          {
+            "id": "8a93629b",
+            "cota": "gold",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-zeta"
+              },
+              {
+                "patrocinador": "teste-gama"
+              }
+            ]
+          },
+          {
+            "id": "d6a6f73a",
+            "cota": "ticketeria",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-gama"
+              }
+            ]
+          },
+          {
+            "id": "e4370e85",
+            "cota": "realizacao",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-zeta"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
