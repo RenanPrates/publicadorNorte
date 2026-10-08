@@ -326,13 +326,14 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:56:36.111Z",
+  "atualizadoEm": "2026-10-08T19:56:39.416Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
   },
   "midiaOculta": [
     "_media/praca/arena/mobile.mp4",
-    "_media/praca/arena/banner.webp"
+    "_media/praca/arena/banner.webp",
+    "_media/praca/arena/bannermobile.webp"
   ]
 }
