@@ -272,7 +272,8 @@
       "local": "Praia alguma coisa",
       "data_inicio": "01/01",
       "data_fim": "04/01",
-      "preco_vista": "150"
+      "preco_vista": "150",
+      "img_galeria_foto6": "_media/praca/galeria/foto5.webp"
     },
     {
       "_id": "5d73b8a5",
@@ -306,5 +307,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:09:58.782Z"
+  "atualizadoEm": "2026-10-08T00:26:29.478Z"
 }
