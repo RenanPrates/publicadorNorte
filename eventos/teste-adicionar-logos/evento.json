@@ -6,7 +6,16 @@
   "paginas": {},
   "vars": {},
   "gerais": {},
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "c1",
+      "cidade": "Santos"
+    },
+    {
+      "_id": "c2",
+      "cidade": "Recife"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -14,5 +23,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T21:59:54.872Z",
-  "atualizadoEm": "2026-10-08T21:59:54.872Z"
+  "atualizadoEm": "2026-10-08T21:59:59.100Z"
 }
