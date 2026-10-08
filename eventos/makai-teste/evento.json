@@ -324,9 +324,11 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:29:12.272Z",
+  "atualizadoEm": "2026-10-08T19:29:32.841Z",
   "secoes": {
-    "ocultas": [],
+    "ocultas": [
+      "praca#inscricao"
+    ],
     "porLinha": {}
   }
 }
