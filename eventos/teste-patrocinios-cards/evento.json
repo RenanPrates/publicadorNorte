@@ -19,7 +19,7 @@
   "publicacoes": [],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T21:46:19.765Z",
-  "atualizadoEm": "2026-10-08T21:46:24.650Z",
+  "atualizadoEm": "2026-10-08T21:46:46.254Z",
   "patrocinios": {
     "porPagina": {
       "tapume": {
@@ -39,8 +39,8 @@
       "c1": {
         "blocos": [
           {
-            "id": "b2",
-            "cota": "apoio",
+            "id": "2346443a",
+            "cota": "silver",
             "ordem": "alfabetica",
             "itens": [
               {
@@ -51,5 +51,11 @@
         ]
       }
     }
+  },
+  "pendencia": {
+    "desde": "2026-10-08T21:46:46.254Z",
+    "motivos": [
+      "Patrocínios: TESTE Patro foi para Silver"
+    ]
   }
 }
