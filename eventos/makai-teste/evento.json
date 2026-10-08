@@ -294,8 +294,17 @@
     "media_arena_mobile": "_media/praca/arena/mobile.mp4"
   },
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "daa56a25172bd1e4bb4489f1d63185154a1d3145",
+      "em": "2026-10-08T00:09:57.701Z",
+      "paginas": 3,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/makai-teste/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:09:51.375Z"
+  "atualizadoEm": "2026-10-08T00:09:58.782Z"
 }
