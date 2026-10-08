@@ -4,15 +4,61 @@
   "nome": "Teste automático do publicador",
   "formato": "tapume_praca",
   "paginas": {},
-  "vars": {},
-  "gerais": {},
-  "cidades": [],
+  "vars": {
+    "media_arena_mobile": {
+      "dono": "cidade",
+      "manual": true
+    }
+  },
+  "gerais": {
+    "evento": "Makai TESTE v1",
+    "ano": "2027"
+  },
+  "cidades": [
+    {
+      "_id": "sp",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "status": "aberta",
+      "preco_vista": "150"
+    },
+    {
+      "_id": "rj",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ",
+      "media_arena_mobile": "_media/praca/arena/cena.webp"
+    }
+  ],
   "etapas": [],
   "ordem": {},
-  "imagens": {},
+  "imagens": {
+    "media_arena_mobile": "_media/praca/arena/mobile.mp4"
+  },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:20:09.345Z",
-  "atualizadoEm": "2026-10-08T20:20:09.345Z"
+  "atualizadoEm": "2026-10-08T20:20:31.372Z",
+  "secoes": {
+    "ocultas": [
+      "praca#faq"
+    ],
+    "porLinha": {
+      "sp": {
+        "praca#sobre": false
+      }
+    },
+    "ordem": {
+      "praca": [
+        "topo",
+        "galeria",
+        "sobre",
+        "arena",
+        "informacoes",
+        "inscricao",
+        "circuito",
+        "faq"
+      ]
+    }
+  }
 }
