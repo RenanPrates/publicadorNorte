@@ -214,7 +214,7 @@
       "mes_primavera": "Março",
       "mes_verao": "Abril",
       "parcelamento": "12",
-      "valor_parcelado": "100",
+      "valor_parcelado": "120",
       "preco_comum": "1860",
       "preco_prime": "1400",
       "status": "aberta"
@@ -263,5 +263,5 @@
   ],
   "versaoAtiva": 2,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T00:04:33.469Z"
+  "atualizadoEm": "2026-10-08T00:11:44.180Z"
 }
