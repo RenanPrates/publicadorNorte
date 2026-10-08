@@ -30,5 +30,23 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T23:02:25.910Z",
-  "atualizadoEm": "2026-10-08T23:02:30.210Z"
+  "atualizadoEm": "2026-10-08T23:02:35.629Z",
+  "patrocinios": {
+    "porPagina": {
+      "e1": {
+        "blocos": [
+          {
+            "id": "72d756ef",
+            "cota": "gold",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
