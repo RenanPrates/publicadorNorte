@@ -163,7 +163,13 @@
       "nome": "",
       "tamanho": "P",
       "aoLado": false
+    },
+    {
+      "id": "cota-2",
+      "nome": "",
+      "tamanho": "P",
+      "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T22:29:44.348Z"
+  "atualizadoEm": "2026-10-08T22:29:48.241Z"
 }
