@@ -265,7 +265,12 @@
   "cidades": [
     {
       "_id": "e71a47e1",
-      "cidade": "João Pessoa"
+      "cidade": "João Pessoa",
+      "uf": "PB",
+      "regiao": "Nordeste",
+      "status": "aberta",
+      "local": "Praia alguma coisa",
+      "data_inicio": "01/01"
     }
   ],
   "etapas": [],
@@ -275,5 +280,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:06:44.080Z"
+  "atualizadoEm": "2026-10-08T00:06:57.778Z"
 }
