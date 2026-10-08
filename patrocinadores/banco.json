@@ -1,36 +1,5 @@
 {
-  "patrocinadores": [
-    {
-      "id": "teste-zeta",
-      "nome": "TESTE Zeta",
-      "url": "https://zeta.com",
-      "ativo": true,
-      "logo": "teste-zeta-d0533d9.png",
-      "sha": "d0533d94b2de44187cf12b2b8cd97cc2b561a3a0",
-      "bytes": 29112,
-      "criadoEm": "2026-10-08T21:14:46.972Z"
-    },
-    {
-      "id": "teste-alfa",
-      "nome": "TESTE Alfa",
-      "url": "https://alfa.com",
-      "ativo": true,
-      "logo": "teste-alfa-d082f13.webp",
-      "sha": "d082f1399e2326ca4850f993b2edaec7271ca434",
-      "bytes": 39172,
-      "criadoEm": "2026-10-08T21:14:46.972Z"
-    },
-    {
-      "id": "teste-gama",
-      "nome": "TESTE Gama",
-      "url": "",
-      "ativo": true,
-      "logo": "teste-gama-c176d60.webp",
-      "sha": "c176d60a19dd5916fa4d1b179fbfa8fdb4f20e9e",
-      "bytes": 54708,
-      "criadoEm": "2026-10-08T21:14:46.972Z"
-    }
-  ],
+  "patrocinadores": [],
   "cotas": [
     {
       "id": "master",
@@ -53,11 +22,6 @@
       "tamanho": "P"
     },
     {
-      "id": "teste-apoio-de-midia",
-      "nome": "TESTE Apoio de mídia",
-      "tamanho": "P"
-    },
-    {
       "id": "ticketeria",
       "nome": "Ticketeria",
       "tamanho": "P"
@@ -69,5 +33,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:16:42.743Z"
+  "atualizadoEm": "2026-10-08T21:16:59.737Z"
 }
