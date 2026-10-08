@@ -216,7 +216,7 @@
       "parcelamento": "12",
       "valor_parcelado": "120",
       "preco_comum": "1860",
-      "preco_prime": "",
+      "preco_prime": "1400",
       "status": "aberta"
     },
     {
@@ -263,5 +263,5 @@
   ],
   "versaoAtiva": 2,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T00:13:24.936Z"
+  "atualizadoEm": "2026-10-08T14:16:19.367Z"
 }
