@@ -327,10 +327,21 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:08:48.061Z",
+  "atualizadoEm": "2026-10-08T20:24:05.866Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
   },
-  "midiaOculta": []
+  "midiaOculta": [],
+  "ordemMidia": {
+    "praca": [
+      "arena",
+      "circuito",
+      "explore",
+      "hero",
+      "galeria",
+      "kit",
+      "textura"
+    ]
+  }
 }
