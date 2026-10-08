@@ -326,9 +326,12 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:31:37.608Z",
+  "atualizadoEm": "2026-10-08T19:56:17.343Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
-  }
+  },
+  "midiaOculta": [
+    "_media/praca/arena/mobile.mp4"
+  ]
 }
