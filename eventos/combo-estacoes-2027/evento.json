@@ -6,8 +6,8 @@
   "paginas": {
     "tapume": {
       "arquivo": "combo-estacoes-tapume.html",
-      "bytes": 20797,
-      "enviadoEm": "2026-10-07T23:57:42.467Z"
+      "bytes": 21288,
+      "enviadoEm": "2026-10-08T00:03:20.754Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
@@ -169,6 +169,34 @@
       "dono": "cidade",
       "ignorar": false,
       "formula": "preco_comum - preco_vista"
+    },
+    "img_marca_logo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_selos_estacoes": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_anotacoes": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_verao": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -222,5 +250,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T00:01:22.723Z"
+  "atualizadoEm": "2026-10-08T00:03:32.068Z"
 }
