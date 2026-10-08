@@ -53,6 +53,11 @@
       "tamanho": "P"
     },
     {
+      "id": "teste-apoio-de-midia",
+      "nome": "TESTE Apoio de mídia",
+      "tamanho": "P"
+    },
+    {
       "id": "ticketeria",
       "nome": "Ticketeria",
       "tamanho": "P"
@@ -64,5 +69,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:14:46.986Z"
+  "atualizadoEm": "2026-10-08T21:16:42.743Z"
 }
