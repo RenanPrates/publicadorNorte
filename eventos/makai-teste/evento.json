@@ -278,7 +278,7 @@
     },
     {
       "_id": "6c37f9d3",
-      "cidade": "João Pessoa",
+      "cidade": "",
       "uf": "PB",
       "regiao": "Nordeste",
       "status": "aberta",
@@ -325,7 +325,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:30:24.157Z",
+  "atualizadoEm": "2026-10-08T19:30:28.488Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
