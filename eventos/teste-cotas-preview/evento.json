@@ -205,14 +205,14 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T22:12:16.227Z",
-  "atualizadoEm": "2026-10-08T22:12:25.714Z",
+  "atualizadoEm": "2026-10-08T22:13:22.921Z",
   "patrocinios": {
     "porPagina": {
       "tapume": {
         "blocos": [
           {
-            "id": "b1",
-            "cota": "master",
+            "id": "e54e496c",
+            "cota": "gold",
             "ordem": "alfabetica",
             "itens": [
               {
