@@ -276,8 +276,8 @@
     },
     {
       "_id": "5d73b8a5",
-      "cidade": "João Pessoa",
-      "uf": "PB",
+      "cidade": "S",
+      "uf": "SP",
       "regiao": "Sudeste",
       "status": "",
       "local": "Praia alguma coisa",
@@ -294,5 +294,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:07:28.143Z"
+  "atualizadoEm": "2026-10-08T00:07:31.873Z"
 }
