@@ -3,8 +3,80 @@
   "slug": "makai-teste",
   "nome": "Makai teste",
   "formato": "tapume_praca",
-  "paginas": {},
-  "vars": {},
+  "paginas": {
+    "tapume": {
+      "arquivo": "tapume.html",
+      "bytes": 18071,
+      "enviadoEm": "2026-10-08T00:05:35.868Z"
+    }
+  },
+  "vars": {
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "ano": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_destaque_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "url": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "data_inicio": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_fim": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "uf": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "regiao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "local": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "gratuito": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_vista": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "parcelamento * valor_parcelado"
+    },
+    "video_destaque_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_destaque_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "video_destaque_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    }
+  },
   "gerais": {},
   "cidades": [],
   "etapas": [],
@@ -14,5 +86,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:05:33.084Z"
+  "atualizadoEm": "2026-10-08T00:05:47.183Z"
 }
