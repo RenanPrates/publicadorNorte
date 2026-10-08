@@ -324,11 +324,9 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:29:08.132Z",
+  "atualizadoEm": "2026-10-08T19:29:12.272Z",
   "secoes": {
-    "ocultas": [
-      "praca#arena"
-    ],
+    "ocultas": [],
     "porLinha": {}
   }
 }
