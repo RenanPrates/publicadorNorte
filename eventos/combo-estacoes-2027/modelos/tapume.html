@@ -44,8 +44,8 @@
   .topbar.solto{border-bottom-color:var(--rule)}
   .tb-inner{width:var(--shell); margin-inline:auto; height:62px; display:flex; align-items:center; gap:1.4rem}
   .marca{width:206px; height:21px; flex:none; display:block; background:var(--fg);
-    -webkit-mask:url("_media/tapume/marca/logo.png") no-repeat left center/contain;
-    mask:url("_media/tapume/marca/logo.png") no-repeat left center/contain}
+    -webkit-mask:url("@img_marca_logo") no-repeat left center/contain;
+    mask:url("@img_marca_logo") no-repeat left center/contain}
   .selos{display:none; height:24px; width:auto; flex:none; margin-left:.6rem}
   .tb-acoes{margin-left:auto; display:flex; align-items:center; gap:.6rem}
   .tema{width:38px; height:38px; flex:none; border-radius:999px; border:1px solid var(--rule-2);
@@ -217,7 +217,7 @@
 <header class="topbar" id="topbar">
   <div class="tb-inner">
     <a class="marca" href="#topo" aria-label="@evento"></a>
-    <img class="selos" src="_media/tapume/selos/estacoes.png" alt="" width="640" height="139">
+    <img class="selos" src="@img_selos_estacoes" alt="" width="640" height="139">
     <div class="tb-acoes">
       <button class="tema" id="tema" type="button" aria-label="Alternar entre tema claro e escuro">
         <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
@@ -238,11 +238,11 @@
       <p class="prose">Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Comece escolhendo onde você corre.</p>
     </div>
     <svg class="abre-art" id="mandala" viewBox="-318 -316 640 622" role="img" aria-label="Estudo da mandala do Circuito das Estações, com as quatro medalhas, suas fitas e as quatro químicas anotadas à mão">
-            <g class="notas"><image href="_media/tapume/mandala/anotacoes.webp" x="-314.53" y="-313.37" width="620.93" height="613.95"/></g>
-            <g class="peca" style="--dx:-140px; --dy:-118px; --giro:-7deg; --atraso:0.15s"><image href="_media/tapume/mandala/medalha-outono.webp" x="-298.26" y="-310.47" width="304.07" height="316.28"/></g>
-            <g class="peca" style="--dx:140px; --dy:-118px; --giro:7deg; --atraso:0.41s"><image href="_media/tapume/mandala/medalha-inverno.webp" x="-5.23" y="-297.09" width="302.33" height="302.91"/></g>
-            <g class="peca" style="--dx:140px; --dy:118px; --giro:-7deg; --atraso:0.67s"><image href="_media/tapume/mandala/medalha-primavera.webp" x="-5.23" y="-5.23" width="300.58" height="305.81"/></g>
-            <g class="peca" style="--dx:-140px; --dy:118px; --giro:7deg; --atraso:0.93s"><image href="_media/tapume/mandala/medalha-verao.webp" x="-298.26" y="-5.23" width="304.07" height="305.81"/></g>
+            <g class="notas"><image href="@img_mandala_anotacoes" x="-314.53" y="-313.37" width="620.93" height="613.95"/></g>
+            <g class="peca" style="--dx:-140px; --dy:-118px; --giro:-7deg; --atraso:0.15s"><image href="@img_mandala_medalha_outono" x="-298.26" y="-310.47" width="304.07" height="316.28"/></g>
+            <g class="peca" style="--dx:140px; --dy:-118px; --giro:7deg; --atraso:0.41s"><image href="@img_mandala_medalha_inverno" x="-5.23" y="-297.09" width="302.33" height="302.91"/></g>
+            <g class="peca" style="--dx:140px; --dy:118px; --giro:-7deg; --atraso:0.67s"><image href="@img_mandala_medalha_primavera" x="-5.23" y="-5.23" width="300.58" height="305.81"/></g>
+            <g class="peca" style="--dx:-140px; --dy:118px; --giro:7deg; --atraso:0.93s"><image href="@img_mandala_medalha_verao" x="-298.26" y="-5.23" width="304.07" height="305.81"/></g>
           </svg>
   </div>
 </section>
@@ -313,6 +313,15 @@
   CONTAGENS (automáticas)
   - @total_aberta, @total_breve: quantas cidades têm esse status.
   - @total_cidades dentro da região: quantas cidades a região tem.
+
+  IMAGENS (pasta _media/tapume/) — sem número: iguais em todas as visitas,
+  não mudam por cidade. Nenhuma é vídeo, por isso @img_ (não @media_):
+  - @img_marca_logo — _media/tapume/marca/, logo da marca (máscara CSS no topbar)
+  - @img_selos_estacoes — _media/tapume/selos/, selo das 4 estações (topbar)
+  - @img_mandala_anotacoes — _media/tapume/mandala/, camada de anotações da mandala de abertura
+  - @img_mandala_medalha_outono, @img_mandala_medalha_inverno,
+    @img_mandala_medalha_primavera, @img_mandala_medalha_verao —
+    _media/tapume/mandala/, as 4 medalhas-peça da mandala de abertura
 
   Ficou fixo no HTML: a faixa "Protótipo · cidades, meses e estados são
   fictícios" no topo (remover antes de publicar de verdade).
