@@ -258,7 +258,9 @@
       "ignorar": false
     }
   },
-  "gerais": {},
+  "gerais": {
+    "evento": "Makai Beach Tennis"
+  },
   "cidades": [],
   "etapas": [],
   "ordem": {},
@@ -267,5 +269,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:05:50.646Z"
+  "atualizadoEm": "2026-10-08T00:06:31.026Z"
 }
