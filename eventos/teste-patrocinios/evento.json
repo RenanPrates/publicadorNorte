@@ -25,7 +25,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T21:14:52.487Z",
-  "atualizadoEm": "2026-10-08T21:15:31.748Z",
+  "atualizadoEm": "2026-10-08T21:15:57.460Z",
   "patrocinios": {
     "porPagina": {
       "tapume": {
@@ -65,6 +65,58 @@
           },
           {
             "id": "e4370e85",
+            "cota": "realizacao",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-zeta"
+              }
+            ]
+          }
+        ]
+      },
+      "rj": {
+        "blocos": [
+          {
+            "id": "b9e54a08",
+            "cota": "master",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-alfa",
+                "tamanho": "P"
+              },
+              {
+                "patrocinador": "teste-gama"
+              }
+            ],
+            "titulo": ""
+          },
+          {
+            "id": "b49053dc",
+            "cota": "gold",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-zeta"
+              },
+              {
+                "patrocinador": "teste-gama"
+              }
+            ]
+          },
+          {
+            "id": "c7b52277",
+            "cota": "ticketeria",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "teste-gama"
+              }
+            ]
+          },
+          {
+            "id": "8d0844df",
             "cota": "realizacao",
             "ordem": "alfabetica",
             "itens": [
