@@ -1,5 +1,26 @@
 {
-  "patrocinadores": [],
+  "patrocinadores": [
+    {
+      "id": "teste-marca-um",
+      "nome": "TESTE marca um",
+      "url": "",
+      "ativo": true,
+      "logo": "teste-marca-um-180312b.svg",
+      "sha": "180312b2f0f806b2fc553ecd741c69d303fae5b7",
+      "bytes": 183,
+      "criadoEm": "2026-10-08T21:53:26.256Z"
+    },
+    {
+      "id": "teste-marca-dois",
+      "nome": "TESTE marca dois",
+      "url": "https://exemplo.com",
+      "ativo": true,
+      "logo": "teste-marca-dois-7f3cbbe.svg",
+      "sha": "7f3cbbe7b45be4ab30f252cc5b7f2340ab466774",
+      "bytes": 185,
+      "criadoEm": "2026-10-08T21:53:26.256Z"
+    }
+  ],
   "cotas": [
     {
       "id": "master",
@@ -33,5 +54,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:47:43.028Z"
+  "atualizadoEm": "2026-10-08T21:53:27.431Z"
 }
