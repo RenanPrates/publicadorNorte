@@ -272,5 +272,29 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T19:10:38.147Z"
+  "atualizadoEm": "2026-10-08T22:03:12.745Z",
+  "patrocinios": {
+    "porPagina": {
+      "04f0d774": {
+        "blocos": [
+          {
+            "id": "0dbd667a",
+            "cota": "silver",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "pendencia": {
+    "desde": "2026-10-08T22:03:12.745Z",
+    "motivos": [
+      "Patrocínios: Believe entrou em São Paulo (Silver)"
+    ]
+  }
 }
