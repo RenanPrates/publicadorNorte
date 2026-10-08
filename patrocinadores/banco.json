@@ -143,6 +143,11 @@
       "tamanho": "P"
     },
     {
+      "id": "teste-cota",
+      "nome": "TESTE cota",
+      "tamanho": "P"
+    },
+    {
       "id": "ticketeria",
       "nome": "Ticketeria",
       "tamanho": "P"
@@ -154,5 +159,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:57:33.789Z"
+  "atualizadoEm": "2026-10-08T22:13:45.872Z"
 }
