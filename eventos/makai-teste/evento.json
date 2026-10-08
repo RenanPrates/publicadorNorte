@@ -327,7 +327,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:43:45.681Z",
+  "atualizadoEm": "2026-10-08T20:44:11.755Z",
   "secoes": {
     "ocultas": [
       "praca#@rodape"
@@ -365,7 +365,7 @@
       "corFundo": "#16181d",
       "corTexto": "#f1f2ee",
       "corLinks": "#f3e35a",
-      "descricao": "",
+      "descricao": "testes",
       "links": [],
       "redes": []
     },
