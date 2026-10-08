@@ -11,7 +11,7 @@
     }
   },
   "gerais": {
-    "evento": "Makai TESTE v1",
+    "evento": "Makai TESTE v2",
     "ano": "2027"
   },
   "cidades": [
@@ -47,7 +47,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T20:20:09.345Z",
-  "atualizadoEm": "2026-10-08T20:20:42.074Z",
+  "atualizadoEm": "2026-10-08T20:20:46.478Z",
   "secoes": {
     "ocultas": [
       "praca#faq"
