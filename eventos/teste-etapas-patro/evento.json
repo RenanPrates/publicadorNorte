@@ -6,13 +6,29 @@
   "paginas": {},
   "vars": {},
   "gerais": {},
-  "cidades": [],
-  "etapas": [],
+  "cidades": [
+    {
+      "_id": "c1",
+      "cidade": "Rio"
+    }
+  ],
+  "etapas": [
+    {
+      "_id": "e1",
+      "etapa": "Outono",
+      "_cidade": "c1"
+    },
+    {
+      "_id": "e2",
+      "etapa": "Inverno",
+      "_cidade": "c1"
+    }
+  ],
   "ordem": {},
   "imagens": {},
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T23:02:25.910Z",
-  "atualizadoEm": "2026-10-08T23:02:25.910Z"
+  "atualizadoEm": "2026-10-08T23:02:30.210Z"
 }
