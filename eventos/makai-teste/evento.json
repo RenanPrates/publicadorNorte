@@ -327,7 +327,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:29:31.027Z",
+  "atualizadoEm": "2026-10-08T20:29:53.268Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
@@ -349,10 +349,10 @@
     "praca": [
       "hero",
       "arena",
+      "kit",
       "circuito",
       "explore",
       "galeria",
-      "kit",
       "textura"
     ]
   }
