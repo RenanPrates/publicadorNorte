@@ -19,7 +19,7 @@
   "publicacoes": [],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T21:46:19.765Z",
-  "atualizadoEm": "2026-10-08T21:46:46.254Z",
+  "atualizadoEm": "2026-10-08T21:47:01.677Z",
   "patrocinios": {
     "porPagina": {
       "tapume": {
@@ -55,7 +55,8 @@
   "pendencia": {
     "desde": "2026-10-08T21:46:46.254Z",
     "motivos": [
-      "Patrocínios: TESTE Patro foi para Silver"
+      "Patrocínios: TESTE Patro foi para Silver",
+      "Patrocínios: TESTE Patro mudou no cadastro"
     ]
   }
 }
