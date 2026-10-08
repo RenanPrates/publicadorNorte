@@ -1,16 +1,5 @@
 {
-  "patrocinadores": [
-    {
-      "id": "teste-patro",
-      "nome": "TESTE Patro",
-      "url": "https://exemplo.com",
-      "ativo": true,
-      "logo": "teste-patro.svg",
-      "sha": "99e97ea7703222a5912719b7b5f953c6b5555731",
-      "bytes": 177,
-      "criadoEm": "2026-10-08T21:46:14.486Z"
-    }
-  ],
+  "patrocinadores": [],
   "cotas": [
     {
       "id": "master",
@@ -44,5 +33,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:46:56.467Z"
+  "atualizadoEm": "2026-10-08T21:47:43.028Z"
 }
