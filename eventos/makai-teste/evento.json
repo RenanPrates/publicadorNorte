@@ -324,10 +324,11 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:28:52.528Z",
+  "atualizadoEm": "2026-10-08T19:28:58.949Z",
   "secoes": {
     "ocultas": [
-      "praca#topo"
+      "praca#topo",
+      "praca#sobre"
     ],
     "porLinha": {}
   }
