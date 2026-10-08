@@ -1,5 +1,16 @@
 {
-  "patrocinadores": [],
+  "patrocinadores": [
+    {
+      "id": "fpbt",
+      "nome": "FPBT",
+      "url": "",
+      "ativo": true,
+      "logo": "fpbt-659b1f1.webp",
+      "sha": "659b1f1d7a61d500404e2e54fcd328a83565d4a4",
+      "bytes": 10942,
+      "criadoEm": "2026-10-08T21:56:03.882Z"
+    }
+  ],
   "cotas": [
     {
       "id": "master",
@@ -33,5 +44,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:53:43.677Z"
+  "atualizadoEm": "2026-10-08T21:56:04.826Z"
 }
