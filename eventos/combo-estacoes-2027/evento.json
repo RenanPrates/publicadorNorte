@@ -268,11 +268,19 @@
       "paginas": 3,
       "avisos": 1,
       "url": "https://renanprates.github.io/publicadorNorte/combo-estacoes-2027/"
+    },
+    {
+      "versao": 4,
+      "commit": "fdf075d91798198742e7ba0f317d897a09294c19",
+      "em": "2026-10-08T23:19:30.811Z",
+      "paginas": 3,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/combo-estacoes-2027/"
     }
   ],
-  "versaoAtiva": 3,
+  "versaoAtiva": 4,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T23:18:53.714Z",
+  "atualizadoEm": "2026-10-08T23:19:32.140Z",
   "patrocinios": {
     "porPagina": {
       "04f0d774": {
@@ -304,12 +312,5 @@
         ]
       }
     }
-  },
-  "pendencia": {
-    "desde": "2026-10-08T22:03:12.745Z",
-    "motivos": [
-      "Patrocínios: Believe entrou em São Paulo (Silver)",
-      "Patrocínios: Believe entrou em Rio de Janeiro (Apoio)"
-    ]
   }
 }
