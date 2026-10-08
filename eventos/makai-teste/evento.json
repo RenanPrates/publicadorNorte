@@ -327,14 +327,14 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:25:03.229Z",
+  "atualizadoEm": "2026-10-08T20:25:06.495Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
     "ordem": {
       "praca": [
-        "sobre",
         "topo",
+        "sobre",
         "arena",
         "informacoes",
         "inscricao",
