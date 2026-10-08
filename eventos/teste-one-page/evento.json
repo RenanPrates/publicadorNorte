@@ -5,11 +5,14 @@
   "formato": "unica",
   "paginas": {},
   "vars": {},
-  "gerais": {},
+  "gerais": {
+    "evento": "Makai Open"
+  },
   "cidades": [
     {
       "_id": "2eec2026",
-      "cidade": ""
+      "cidade": "Santos",
+      "local": "Praia do Gonzaga"
     }
   ],
   "etapas": [],
@@ -19,5 +22,23 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T22:59:56.855Z",
-  "atualizadoEm": "2026-10-08T23:00:12.053Z"
+  "atualizadoEm": "2026-10-08T23:00:26.343Z",
+  "patrocinios": {
+    "porPagina": {
+      "unica": {
+        "blocos": [
+          {
+            "id": "b1",
+            "cota": "master",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
