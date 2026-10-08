@@ -43,11 +43,19 @@
       "paginas": 3,
       "avisos": 3,
       "url": "https://renanprates.github.io/publicadorNorte/teste-automatico-do-publicador/"
+    },
+    {
+      "versao": 2,
+      "commit": "60c8f7d94f8e0c7559ac8b4c10d6f335c7b21509",
+      "em": "2026-10-08T20:20:55.242Z",
+      "paginas": 3,
+      "avisos": 3,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-automatico-do-publicador/"
     }
   ],
-  "versaoAtiva": 1,
+  "versaoAtiva": 2,
   "criadoEm": "2026-10-08T20:20:09.345Z",
-  "atualizadoEm": "2026-10-08T20:20:46.478Z",
+  "atualizadoEm": "2026-10-08T20:20:56.615Z",
   "secoes": {
     "ocultas": [
       "praca#faq"
