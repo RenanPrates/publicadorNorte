@@ -279,7 +279,7 @@
       "cidade": "João Pessoa",
       "uf": "PB",
       "regiao": "Nordeste",
-      "status": "aberta",
+      "status": "",
       "local": "Praia alguma coisa",
       "data_inicio": "01/01",
       "data_fim": "04/01",
@@ -294,5 +294,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:07:22.377Z"
+  "atualizadoEm": "2026-10-08T00:07:25.607Z"
 }
