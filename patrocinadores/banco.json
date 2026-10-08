@@ -59,6 +59,16 @@
       "sha": "08f89b8a4ad4df2b6831844a72e294df770a5f9e",
       "bytes": 94396,
       "criadoEm": "2026-10-08T21:56:47.956Z"
+    },
+    {
+      "id": "dux-company",
+      "nome": "Dux Company",
+      "url": "",
+      "ativo": true,
+      "logo": "dux-company-071c992.png",
+      "sha": "071c992c772499cfb501b512f43d4984c4360188",
+      "bytes": 7882,
+      "criadoEm": "2026-10-08T21:56:53.130Z"
     }
   ],
   "cotas": [
@@ -94,5 +104,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:48.863Z"
+  "atualizadoEm": "2026-10-08T21:56:54.087Z"
 }
