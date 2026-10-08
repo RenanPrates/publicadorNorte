@@ -292,7 +292,7 @@
   "ordem": {},
   "imagens": {
     "media_arena_desktop": "_media/praca/arena/desktop.mp4",
-    "media_arena_mobile": "_media/praca/arena/cena.webp"
+    "media_arena_mobile": "_media/praca/arena/mobile.mp4"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -307,5 +307,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T18:43:22.207Z"
+  "atualizadoEm": "2026-10-08T18:43:25.680Z"
 }
