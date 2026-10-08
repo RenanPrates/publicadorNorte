@@ -22,7 +22,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T22:59:56.855Z",
-  "atualizadoEm": "2026-10-08T23:00:26.343Z",
+  "atualizadoEm": "2026-10-08T23:02:39.811Z",
   "patrocinios": {
     "porPagina": {
       "unica": {
@@ -34,6 +34,16 @@
             "itens": [
               {
                 "patrocinador": "believe"
+              }
+            ]
+          },
+          {
+            "id": "d3580522",
+            "cota": "apoio",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "nutry"
               }
             ]
           }
