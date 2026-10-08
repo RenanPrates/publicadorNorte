@@ -270,7 +270,9 @@
       "regiao": "Nordeste",
       "status": "aberta",
       "local": "Praia alguma coisa",
-      "data_inicio": "01/01"
+      "data_inicio": "01/01",
+      "data_fim": "04/01",
+      "preco_vista": "150"
     }
   ],
   "etapas": [],
@@ -280,5 +282,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:06:57.778Z"
+  "atualizadoEm": "2026-10-08T00:07:06.268Z"
 }
