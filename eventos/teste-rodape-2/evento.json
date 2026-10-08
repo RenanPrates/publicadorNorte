@@ -20,19 +20,42 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:48:24.112Z",
-  "atualizadoEm": "2026-10-08T20:49:05.456Z",
+  "atualizadoEm": "2026-10-08T20:49:16.867Z",
   "rodape": {
     "ativo": true,
     "geral": {
-      "fonte": "",
-      "corFundo": "#16181d",
-      "corTexto": "#f1f2ee",
-      "corLinks": "#f1f2ee",
-      "logo": "",
-      "descricao": "",
-      "tituloLinks": "",
-      "links": [],
-      "redes": []
+      "fonte": "Nunito",
+      "corFundo": "#8a5000",
+      "corTexto": "#ffffff",
+      "corLinks": "#ffffff",
+      "logo": "_media/rodape/logo-circuito.png",
+      "descricao": "Em 2026, o maior circuito de corridas de rua do mundo chega aos 20 anos celebrando histórias como a sua. No **Circuito das Estações**, cada etapa é um novo capítulo de superação, movimento e conquista.",
+      "tituloLinks": "Dúvidas",
+      "links": [
+        {
+          "texto": "Política de Privacidade",
+          "url": "https://norte.com/privacidade"
+        },
+        {
+          "texto": "Perguntas Frequentes",
+          "url": "https://norte.com/faq"
+        },
+        {
+          "texto": "Minhas Compras",
+          "url": "https://norte.com/compras"
+        },
+        {
+          "texto": "Fale Conosco",
+          "url": "mailto:contato@norte.com"
+        }
+      ],
+      "redes": [
+        {
+          "rede": "instagram",
+          "url": "https://instagram.com/circuitodasestacoes",
+          "texto": "Siga no Instagram"
+        }
+      ]
     },
     "porLinha": {}
   },
