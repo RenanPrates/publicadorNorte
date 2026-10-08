@@ -327,9 +327,11 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:30:26.883Z",
+  "atualizadoEm": "2026-10-08T20:43:42.621Z",
   "secoes": {
-    "ocultas": [],
+    "ocultas": [
+      "praca#@rodape"
+    ],
     "porLinha": {},
     "ordem": {
       "praca": [
