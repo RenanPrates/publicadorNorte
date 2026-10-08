@@ -23,5 +23,37 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T21:59:54.872Z",
-  "atualizadoEm": "2026-10-08T21:59:59.100Z"
+  "atualizadoEm": "2026-10-08T22:00:29.672Z",
+  "patrocinios": {
+    "porPagina": {
+      "tapume": {
+        "blocos": [
+          {
+            "id": "a48fc26e",
+            "cota": "master",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
+      },
+      "c1": {
+        "blocos": [
+          {
+            "id": "8a84b32a",
+            "cota": "master",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
