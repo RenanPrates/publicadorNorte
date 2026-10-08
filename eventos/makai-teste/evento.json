@@ -327,7 +327,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:53:06.889Z",
+  "atualizadoEm": "2026-10-08T22:04:16.666Z",
   "secoes": {
     "ocultas": [
       "praca#@rodape"
@@ -371,5 +371,29 @@
       "logo": "_media/praca/marca/logo.webp"
     },
     "porLinha": {}
+  },
+  "patrocinios": {
+    "porPagina": {
+      "e71a47e1": {
+        "blocos": [
+          {
+            "id": "e07cb3a6",
+            "cota": "apoio",
+            "ordem": "alfabetica",
+            "itens": [
+              {
+                "patrocinador": "believe"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "pendencia": {
+    "desde": "2026-10-08T22:04:16.666Z",
+    "motivos": [
+      "Patrocínios: Believe entrou em João Pessoa (Apoio)"
+    ]
   }
 }
