@@ -259,9 +259,15 @@
     }
   },
   "gerais": {
-    "evento": "Makai Beach Tennis"
+    "evento": "Makai Beach Tennis",
+    "ano": "2027"
   },
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "e71a47e1",
+      "cidade": ""
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -269,5 +275,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:06:31.026Z"
+  "atualizadoEm": "2026-10-08T00:06:33.855Z"
 }
