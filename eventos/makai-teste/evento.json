@@ -312,9 +312,17 @@
       "paginas": 3,
       "avisos": 1,
       "url": "https://renanprates.github.io/publicadorNorte/makai-teste/"
+    },
+    {
+      "versao": 3,
+      "commit": "f5a126246bcc8bafc333c67efb393bffb359b479",
+      "em": "2026-10-08T19:04:52.043Z",
+      "paginas": 3,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/makai-teste/"
     }
   ],
-  "versaoAtiva": 2,
+  "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:04:42.465Z"
+  "atualizadoEm": "2026-10-08T19:04:53.399Z"
 }
