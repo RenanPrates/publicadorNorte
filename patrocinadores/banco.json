@@ -49,6 +49,16 @@
       "sha": "7acd8dbe2aaefbc4e675f1cd45a8db2056420483",
       "bytes": 13715,
       "criadoEm": "2026-10-08T21:56:36.117Z"
+    },
+    {
+      "id": "youfm",
+      "nome": "youfm",
+      "url": "",
+      "ativo": true,
+      "logo": "youfm-08f89b8.png",
+      "sha": "08f89b8a4ad4df2b6831844a72e294df770a5f9e",
+      "bytes": 94396,
+      "criadoEm": "2026-10-08T21:56:47.956Z"
     }
   ],
   "cotas": [
@@ -84,5 +94,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T21:56:40.333Z"
+  "atualizadoEm": "2026-10-08T21:56:48.863Z"
 }
