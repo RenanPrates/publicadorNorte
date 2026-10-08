@@ -326,10 +326,12 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:56:48.480Z",
+  "atualizadoEm": "2026-10-08T19:59:22.287Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
   },
-  "midiaOculta": []
+  "midiaOculta": [
+    "_media/praca/explore/checkin.webp"
+  ]
 }
