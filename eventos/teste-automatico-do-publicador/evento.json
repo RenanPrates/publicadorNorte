@@ -1,0 +1,18 @@
+{
+  "id": "aa8059e6-f959-4826-b404-e113ab292a10",
+  "slug": "teste-automatico-do-publicador",
+  "nome": "Teste automático do publicador",
+  "formato": "tapume_praca",
+  "paginas": {},
+  "vars": {},
+  "gerais": {},
+  "cidades": [],
+  "etapas": [],
+  "ordem": {},
+  "imagens": {},
+  "baseUrl": "",
+  "publicacoes": [],
+  "versaoAtiva": null,
+  "criadoEm": "2026-10-08T20:20:09.345Z",
+  "atualizadoEm": "2026-10-08T20:20:09.345Z"
+}
