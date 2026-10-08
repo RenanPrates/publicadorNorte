@@ -20,5 +20,27 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:48:24.112Z",
-  "atualizadoEm": "2026-10-08T20:48:36.042Z"
+  "atualizadoEm": "2026-10-08T20:49:05.456Z",
+  "rodape": {
+    "ativo": true,
+    "geral": {
+      "fonte": "",
+      "corFundo": "#16181d",
+      "corTexto": "#f1f2ee",
+      "corLinks": "#f1f2ee",
+      "logo": "",
+      "descricao": "",
+      "tituloLinks": "",
+      "links": [],
+      "redes": []
+    },
+    "porLinha": {}
+  },
+  "secoes": {
+    "ocultas": [
+      "praca#@rodape"
+    ],
+    "porLinha": {},
+    "ordem": {}
+  }
 }
