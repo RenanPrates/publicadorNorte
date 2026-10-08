@@ -290,11 +290,12 @@
   "etapas": [],
   "ordem": {},
   "imagens": {
-    "media_arena_desktop": "_media/praca/arena/desktop.mp4"
+    "media_arena_desktop": "_media/praca/arena/desktop.mp4",
+    "media_arena_mobile": "_media/praca/arena/foto-mobile.webp"
   },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T00:08:31.977Z"
+  "atualizadoEm": "2026-10-08T00:08:39.478Z"
 }
