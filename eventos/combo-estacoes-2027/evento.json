@@ -241,7 +241,7 @@
     "img_mandala_medalha_inverno": "_media/tapume/mandala/medalha-inverno.webp",
     "img_mandala_medalha_primavera": "_media/tapume/mandala/medalha-primavera.webp",
     "img_mandala_medalha_verao": "_media/tapume/mandala/medalha-verao.webp",
-    "media_hero_principal": "_media/praca/hero/capa.webp"
+    "media_hero_principal": "_media/praca/hero/principal.mp4"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -272,5 +272,5 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T19:10:34.357Z"
+  "atualizadoEm": "2026-10-08T19:10:38.147Z"
 }
