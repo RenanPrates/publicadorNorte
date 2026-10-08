@@ -110,8 +110,9 @@
       "ignorar": false
     },
     "media_arena_mobile": {
-      "dono": "geral",
-      "ignorar": false
+      "dono": "cidade",
+      "ignorar": false,
+      "manual": true
     },
     "media_arena_desktop": {
       "dono": "geral",
@@ -325,7 +326,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T19:31:19.504Z",
+  "atualizadoEm": "2026-10-08T19:31:31.100Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {}
