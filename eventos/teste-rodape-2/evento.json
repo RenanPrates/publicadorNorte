@@ -6,7 +6,13 @@
   "paginas": {},
   "vars": {},
   "gerais": {},
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "sp",
+      "cidade": "São Paulo",
+      "uf": "SP"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -14,5 +20,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-08T20:48:24.112Z",
-  "atualizadoEm": "2026-10-08T20:48:24.112Z"
+  "atualizadoEm": "2026-10-08T20:48:36.042Z"
 }
