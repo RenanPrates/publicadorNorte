@@ -210,8 +210,17 @@
   "ordem": {},
   "imagens": {},
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "bcc4e57357433f50ebb90e6c05b642f3206ba50d",
+      "em": "2026-10-08T00:01:21.891Z",
+      "paginas": 3,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/combo-estacoes-2027/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T00:01:14.522Z"
+  "atualizadoEm": "2026-10-08T00:01:22.723Z"
 }
