@@ -327,10 +327,22 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T20:24:05.866Z",
+  "atualizadoEm": "2026-10-08T20:25:03.229Z",
   "secoes": {
     "ocultas": [],
-    "porLinha": {}
+    "porLinha": {},
+    "ordem": {
+      "praca": [
+        "sobre",
+        "topo",
+        "arena",
+        "informacoes",
+        "inscricao",
+        "circuito",
+        "faq",
+        "galeria"
+      ]
+    }
   },
   "midiaOculta": [],
   "ordemMidia": {
