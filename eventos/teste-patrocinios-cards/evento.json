@@ -19,7 +19,7 @@
   "publicacoes": [],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T21:46:19.765Z",
-  "atualizadoEm": "2026-10-08T21:47:01.677Z",
+  "atualizadoEm": "2026-10-08T21:47:24.213Z",
   "patrocinios": {
     "porPagina": {
       "tapume": {
@@ -33,6 +33,12 @@
                 "patrocinador": "teste-patro"
               }
             ]
+          },
+          {
+            "id": "55cbf5f0",
+            "cota": "apoio-de-midia",
+            "ordem": "alfabetica",
+            "itens": []
           }
         ]
       },
@@ -50,7 +56,45 @@
           }
         ]
       }
-    }
+    },
+    "cotas": [
+      {
+        "id": "master",
+        "nome": "Master",
+        "tamanho": "GG"
+      },
+      {
+        "id": "gold",
+        "nome": "Gold",
+        "tamanho": "G"
+      },
+      {
+        "id": "silver",
+        "nome": "Silver",
+        "tamanho": "M"
+      },
+      {
+        "id": "apoio",
+        "nome": "Apoio",
+        "tamanho": "P"
+      },
+      {
+        "id": "apoio-de-midia",
+        "nome": "Apoio de midia",
+        "tamanho": "P"
+      },
+      {
+        "id": "ticketeria",
+        "nome": "Ticketeria",
+        "tamanho": "P"
+      },
+      {
+        "id": "realizacao",
+        "nome": "Realização",
+        "tamanho": "P",
+        "aoLado": true
+      }
+    ]
   },
   "pendencia": {
     "desde": "2026-10-08T21:46:46.254Z",
