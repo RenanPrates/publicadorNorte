@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 438578,
-      "enviadoEm": "2026-10-07T23:57:45.604Z"
+      "bytes": 439830,
+      "enviadoEm": "2026-10-08T23:52:31.829Z"
     }
   },
   "vars": {
@@ -280,7 +280,7 @@
   ],
   "versaoAtiva": 4,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-08T23:19:32.140Z",
+  "atualizadoEm": "2026-10-08T23:52:32.891Z",
   "patrocinios": {
     "porPagina": {
       "04f0d774": {
