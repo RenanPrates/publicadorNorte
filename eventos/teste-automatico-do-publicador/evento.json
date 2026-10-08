@@ -8,6 +8,243 @@
     "media_arena_mobile": {
       "dono": "cidade",
       "manual": true
+    },
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "media_hero_desktop": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "media_hero_mobile": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "ano": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "data_fim": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_inicio": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "dias_competicao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "local": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "uf": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "ranking": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "dias_extenso": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "qtd_categorias": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "total_cidades": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "media_arena_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_explore_mapa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_explore_checkin": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_explore_atletas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_explore_quadra": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_explore_arquibancada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_explore_ativacoes": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "referencia_local": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "formato_torneio": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "categoria_dia1": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "categoria_dia2": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "categoria_dia3": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "categoria_dia4": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "categoria_dia5": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "categoria_dia6": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "gratuito": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_vista": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "parcelamento * valor_parcelado"
+    },
+    "retirada_kit": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "premiacao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_clinica": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_regulamento": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_kit_fotomobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kit_foto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kit_camiseta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kit_sacochila": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_inscricao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_kit_medalha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_circuito_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "url": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "img_textura_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_textura_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto1": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto2": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto3": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto4": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto5": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto6": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto7": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_galeria_foto8": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_destaque_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "regiao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "video_destaque_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_destaque_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "video_destaque_mobile": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -20,7 +257,8 @@
       "cidade": "São Paulo",
       "uf": "SP",
       "status": "aberta",
-      "preco_vista": "150"
+      "preco_vista": "150",
+      "media_arena_mobile": "_media/praca/arena/mobile.webp"
     },
     {
       "_id": "rj",
@@ -55,7 +293,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-08T20:20:09.345Z",
-  "atualizadoEm": "2026-10-08T20:21:06.209Z",
+  "atualizadoEm": "2026-10-08T20:21:53.750Z",
   "secoes": {
     "ocultas": [
       "praca#faq"
