@@ -327,7 +327,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-08T00:05:33.084Z",
-  "atualizadoEm": "2026-10-08T22:04:16.666Z",
+  "atualizadoEm": "2026-10-08T22:16:50.760Z",
   "secoes": {
     "ocultas": [
       "praca#@rodape"
@@ -393,7 +393,8 @@
   "pendencia": {
     "desde": "2026-10-08T22:04:16.666Z",
     "motivos": [
-      "Patrocínios: Believe entrou em João Pessoa (Apoio)"
+      "Patrocínios: Believe entrou em João Pessoa (Apoio)",
+      "Patrocínios: as cotas mudaram"
     ]
   }
 }
