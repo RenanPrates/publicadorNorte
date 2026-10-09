@@ -628,7 +628,8 @@
     "preco_vista": "",
     "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185",
     "a_confirmar": "11h00",
-    "equipe3_nome": "Pedro Donini"
+    "equipe3_nome": "Pedro Donini",
+    "equipe3_funcao": "Designer"
   },
   "cidades": [
     {
@@ -667,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T18:25:50.795Z",
+  "atualizadoEm": "2026-10-09T18:25:54.944Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
