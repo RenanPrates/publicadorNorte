@@ -659,7 +659,7 @@
       "gratuito": "sim",
       "preco_vista": "",
       "datas_provisorias": "",
-      "horario": "8 às 17h0",
+      "horario": "8h00 às 17h00",
       "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185"
     },
     {
@@ -796,7 +796,7 @@
   ],
   "versaoAtiva": 4,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T20:30:11.646Z",
+  "atualizadoEm": "2026-10-09T20:30:14.719Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
