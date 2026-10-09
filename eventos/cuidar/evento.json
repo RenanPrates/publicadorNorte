@@ -559,7 +559,6 @@
     "tema3_texto": "A prevenção começa na triagem, com uma avaliação inicial das suas necessidades, e continua nas orientações, com os resultados e, quando necessário, encaminhamento para outros serviços.",
     "tema4_texto": "É o foco de todas as etapas. As atividades físicas orientadas cuidam do corpo, e as palestras mostram os benefícios de uma rotina mais ativa.",
     "tema5_texto": "Tema dedicado nas palestras, com informação para cuidar da saúde com mais autonomia. Nas orientações, você recebe recomendações individuais.",
-    "tema6_texto": "",
     "sala1_texto": "Registro dos participantes e coleta das informações necessárias para o atendimento.",
     "sala2_texto": "Avaliação inicial para identificar necessidades e orientar os próximos passos.",
     "sala3_texto": "Testes e orientações individuais para conhecer o condicionamento físico e promover mais saúde e qualidade de vida.",
@@ -630,8 +629,7 @@
     "gratuito": "ad",
     "preco_vista": "",
     "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185",
-    "a_confirmar": "11h00",
-    "tema6_titulo": "testes"
+    "a_confirmar": "11h00"
   },
   "cidades": [
     {
@@ -670,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:51:58.635Z",
+  "atualizadoEm": "2026-10-09T17:52:07.954Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
