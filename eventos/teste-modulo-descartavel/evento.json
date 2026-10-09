@@ -11,10 +11,19 @@
   "ordem": {},
   "imagens": {},
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "bc7d0e937ac4b2d17e705ad2308b0c74e3432a22",
+      "em": "2026-10-09T22:24:34.451Z",
+      "paginas": 1,
+      "avisos": 0,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-modulo-descartavel/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-09T22:21:22.422Z",
-  "atualizadoEm": "2026-10-09T22:24:02.401Z",
+  "atualizadoEm": "2026-10-09T22:24:42.166Z",
   "rodape": {
     "ativo": false,
     "geral": {
