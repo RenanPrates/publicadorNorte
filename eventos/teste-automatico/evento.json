@@ -628,8 +628,8 @@
       "_id": "c1",
       "cidade": "Cotia",
       "uf": "SP",
-      "data_inicio": "13/10/2026",
-      "data_fim": "23/10/2026",
+      "data_inicio": "01/10/2026",
+      "data_fim": "05/10/2026",
       "status": "aberta"
     },
     {
@@ -651,7 +651,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T17:53:52.033Z",
-  "atualizadoEm": "2026-10-09T17:54:04.501Z",
+  "atualizadoEm": "2026-10-09T17:54:14.769Z",
   "automacao": {
     "ativo": true,
     "horas": 8
