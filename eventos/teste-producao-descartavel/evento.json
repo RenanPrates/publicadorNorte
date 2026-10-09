@@ -11,8 +11,17 @@
   "ordem": {},
   "imagens": {},
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "712bb6d4a986e8dccb6cfd69b9f6146787d4b5a4",
+      "em": "2026-10-09T19:55:03.535Z",
+      "paginas": 1,
+      "avisos": 0,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-producao-descartavel/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-09T19:54:56.079Z",
-  "atualizadoEm": "2026-10-09T19:54:56.079Z"
+  "atualizadoEm": "2026-10-09T19:55:11.466Z"
 }
