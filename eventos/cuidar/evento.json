@@ -390,8 +390,10 @@
       "manual": true
     },
     "uf": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "data_inicio": {
       "dono": "geral",
@@ -412,8 +414,10 @@
       "manual": true
     },
     "local": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "horario": {
       "dono": "geral",
@@ -434,9 +438,11 @@
       "manual": true
     },
     "preco_vista": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false,
-      "formula": "parcelamento * valor_parcelado"
+      "formula": "parcelamento * valor_parcelado",
+      "excluida": false,
+      "manual": true
     },
     "faq1_pergunta": {
       "dono": "geral",
@@ -649,7 +655,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:40:28.119Z",
+  "atualizadoEm": "2026-10-09T16:40:31.332Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
