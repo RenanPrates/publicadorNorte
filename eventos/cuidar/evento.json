@@ -796,13 +796,25 @@
   ],
   "versaoAtiva": 4,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T20:30:17.837Z",
+  "atualizadoEm": "2026-10-09T21:05:47.851Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
     ],
     "porLinha": {},
-    "ordem": {}
+    "ordem": {
+      "unica": [
+        "topo",
+        "como-participar",
+        "patrocinadores",
+        "sobre",
+        "projeto",
+        "atividades",
+        "equipe",
+        "na-sua-cidade",
+        "duvidas"
+      ]
+    }
   },
   "rodape": {
     "ativo": false,
