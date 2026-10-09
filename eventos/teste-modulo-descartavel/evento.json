@@ -14,7 +14,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T22:21:22.422Z",
-  "atualizadoEm": "2026-10-09T22:21:51.562Z",
+  "atualizadoEm": "2026-10-09T22:21:58.472Z",
   "rodape": {
     "ativo": false,
     "geral": {
@@ -22,7 +22,7 @@
       "corFundo": "#16181d",
       "corTexto": "#f1f2ee",
       "corLinks": "#f1f2ee",
-      "logo": "_media/rodape/faixa-teste.png",
+      "logo": "_media/rodape/logo-teste.svg",
       "descricao": "",
       "tituloLinks": "",
       "links": [],
