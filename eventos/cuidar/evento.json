@@ -526,7 +526,12 @@
     }
   },
   "gerais": {},
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "485b95e0",
+      "cidade": ""
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -534,5 +539,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:41:16.195Z"
+  "atualizadoEm": "2026-10-09T14:43:10.886Z"
 }
