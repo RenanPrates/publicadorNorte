@@ -1,16 +1,3 @@
 {
-  "sites": {
-    "teste-publicador.example.com": {
-      "slug": "teste-producao-descartavel",
-      "commit": "712bb6d4a986e8dccb6cfd69b9f6146787d4b5a4",
-      "versao": 1,
-      "principal": "teste-publicador.example.com"
-    },
-    "www.teste-publicador.example.com": {
-      "slug": "teste-producao-descartavel",
-      "commit": "712bb6d4a986e8dccb6cfd69b9f6146787d4b5a4",
-      "versao": 1,
-      "principal": "teste-publicador.example.com"
-    }
-  }
+  "sites": {}
 }
