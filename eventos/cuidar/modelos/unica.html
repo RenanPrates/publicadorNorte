@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CUIDAR · Laboratório Itinerante</title>
+<title>@evento · Laboratório Itinerante</title>
 <meta name="description" content="CUIDAR: saúde que chega perto, cuidado que transforma. Carreta-Laboratório Itinerante com atividades físicas orientadas, avaliações e informação sobre saúde. Gratuito, sem agendamento prévio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -716,12 +716,12 @@ button,input{font:inherit;color:inherit}
     <aside class="menu__aside" aria-label="Informações rápidas">
       <dl class="menu__card">
         <div><dt>Próxima parada</dt><dd data-next-stop>—</dd></div>
-        <div><dt>Entrada</dt><dd>Gratuito</dd></div>
-        <div><dt>Público</dt><dd>A partir de 16 anos</dd></div>
-        <div><dt>Atendimento</dt><dd>Sem agendamento</dd></div>
+        <div><dt>Entrada</dt><dd>@info_custo</dd></div>
+        <div><dt>Público</dt><dd>@info_publico</dd></div>
+        <div><dt>Atendimento</dt><dd>@info_agendamento</dd></div>
       </dl>
       <a class="btn" href="#na-sua-cidade"><svg class="px" aria-hidden="true"><use href="#plus"/></svg>Confira a programação completa</a>
-      <p class="menu__tag"><span>#</span>EUMECUIDO</p>
+      <p class="menu__tag"><span>#</span>@hashtag</p>
     </aside>
     <button class="menu__close" type="button" data-menu-close><svg aria-hidden="true"><use href="#close"/></svg>Fechar menu</button>
   </div>
@@ -735,15 +735,15 @@ button,input{font:inherit;color:inherit}
       <div class="hero__copy">
         <img class="hero__logo" src="_media/pagina/marca/logo.webp" alt="CUIDAR" width="710" height="159">
         <h1 id="hero-title">Todo lugar, todo cuidado.</h1>
-        <p class="hero__lead">O Cuidar leva saúde para mais perto das pessoas, promovendo prevenção e bem-estar por meio de avaliações, atividades físicas orientadas e informações que ajudam a cuidar da saúde.</p>
+        <p class="hero__lead">@hero_texto</p>
         <div class="hero__ctas">
           <a class="btn" href="#na-sua-cidade"><svg class="px" aria-hidden="true"><use href="#plus"/></svg>Confira a programação completa</a>
         </div>
       </div>
     </div>
     <div class="hero__media">
-      <img class="hero__bg hero__bg--desk" src="_media/pagina/hero/desktop.webp" alt="Ilustração do KV: o médico do CUIDAR mede a pressão de uma participante dentro da carreta." width="1920" height="1080" fetchpriority="high">
-      <img class="hero__bg hero__bg--mob" src="_media/pagina/hero/mobile.webp" alt="Ilustração do KV: o médico do CUIDAR mede a pressão de uma participante dentro da carreta." width="1090" height="1080" fetchpriority="high">
+      <img class="hero__bg hero__bg--desk" src="@media_hero_desktop" alt="Ilustração do KV: o médico do CUIDAR mede a pressão de uma participante dentro da carreta." width="1920" height="1080" fetchpriority="high">
+      <img class="hero__bg hero__bg--mob" src="@media_hero_mobile" alt="Ilustração do KV: o médico do CUIDAR mede a pressão de uma participante dentro da carreta." width="1090" height="1080" fetchpriority="high">
     </div>
   </section>
 
@@ -751,22 +751,22 @@ button,input{font:inherit;color:inherit}
   <section class="spons" aria-labelledby="spons-title">
     <div class="wrap spons__in">
       <h2 id="spons-title" class="sr-only">Patrocinadores, apoiadores e instituições envolvidas</h2>
-      <div class="spons__grp spons__grp--wide"><p>Patrocínio</p><ul><li><img class="spons__logo" src="_media/pagina/logos/patrocinio1.webp" alt="Patrocinador 1" width="320" height="128" loading="lazy"></li><li><img class="spons__logo" src="_media/pagina/logos/patrocinio2.webp" alt="Patrocinador 2" width="320" height="128" loading="lazy"></li></ul></div>
-      <div class="spons__grp spons__grp--wide"><p>Apoio</p><ul><li><img class="spons__logo" src="_media/pagina/logos/apoio1.webp" alt="Apoiador 1" width="320" height="128" loading="lazy"></li><li><img class="spons__logo" src="_media/pagina/logos/apoio2.webp" alt="Apoiador 2" width="320" height="128" loading="lazy"></li></ul></div>
-      <div class="spons__grp"><p>Incentivo</p><ul><li><img class="spons__logo" src="_media/pagina/logos/incentivo1.webp" alt="Incentivo" width="320" height="128" loading="lazy"></li></ul></div>
-      <div class="spons__grp"><p>Realização</p><ul><li><img class="spons__logo" src="_media/pagina/logos/realizacao1.webp" alt="Realização" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp spons__grp--wide"><p>Patrocínio</p><ul><li><img class="spons__logo" src="@img_logos_patrocinio1" alt="@logo_patrocinio1_nome" width="320" height="128" loading="lazy"></li><li><img class="spons__logo" src="@img_logos_patrocinio2" alt="@logo_patrocinio2_nome" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp spons__grp--wide"><p>Apoio</p><ul><li><img class="spons__logo" src="@img_logos_apoio1" alt="@logo_apoio1_nome" width="320" height="128" loading="lazy"></li><li><img class="spons__logo" src="@img_logos_apoio2" alt="@logo_apoio2_nome" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp"><p>Incentivo</p><ul><li><img class="spons__logo" src="@img_logos_incentivo1" alt="@logo_incentivo1_nome" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp"><p>Realização</p><ul><li><img class="spons__logo" src="@img_logos_realizacao1" alt="@logo_realizacao1_nome" width="320" height="128" loading="lazy"></li></ul></div>
     </div>
   </section>
 
   <!-- PORTAL -->
   <section class="portal on-dark" id="sobre" aria-labelledby="portal-title">
     <div class="portal__stage" data-portal>
-      <div class="portal__img"><img class="portal__bg" src="_media/pagina/sobre/fundo.webp" alt="Recepção da carreta, com o logo CUIDAR e a frase Todo lugar, todo cuidado na parede." width="1600" height="896" loading="lazy"></div>
+      <div class="portal__img"><img class="portal__bg" src="@media_sobre_fundo" alt="Recepção da carreta, com o logo CUIDAR e a frase Todo lugar, todo cuidado na parede." width="1600" height="896" loading="lazy"></div>
       <p class="portal__title" aria-hidden="true"><span>Saúde que chega perto,</span><span>cuidado que transforma</span></p>
       <div class="portal__copy">
         <p class="eyebrow"><svg class="px" aria-hidden="true"><use href="#plus"/></svg>Sobre o projeto</p>
         <h2 class="h2" id="portal-title">Saúde que chega perto, cuidado que transforma</h2>
-        <p>CUIDAR aproxima saúde e esporte em uma experiência itinerante. A proposta é criar oportunidades para que mais pessoas pratiquem atividades físicas com orientação profissional e conheçam os benefícios de uma rotina mais ativa.</p>
+        <p>@sobre_texto</p>
       </div>
       <p class="portal__cap">Imagem ilustrativa do projeto da carreta</p>
     </div>
@@ -783,16 +783,16 @@ button,input{font:inherit;color:inherit}
       <div class="belt belt--b" data-belt="-1"><span>Gratuito</span><svg class="px"><use href="#plus"/></svg><span>Acessível</span><svg class="px"><use href="#plus"/></svg><span>Itinerante</span><svg class="px"><use href="#plus"/></svg><span>Gratuito</span><svg class="px"><use href="#plus"/></svg><span>Acessível</span><svg class="px"><use href="#plus"/></svg><span>Itinerante</span><svg class="px"><use href="#plus"/></svg></div>
     </div>
     <div class="wrap mani__body">
-      <p data-reveal>O CUIDAR foi criado para ampliar o acesso da população à prática de atividade física orientada e acompanhada por profissionais qualificados. Por meio de uma carreta planejada e acessível, o projeto une saúde clínica e atividade física de forma gratuita, em lugares de fácil acesso.</p>
+      <p data-reveal>@projeto_texto</p>
       <div class="themes">
         <p class="themes__t">Na programação</p>
         <div class="themes__list">
-          <details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">Sedentarismo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>Nas atividades físicas, profissionais orientam exercícios adaptados a cada participante. É o primeiro passo para sair do lugar e começar a se movimentar no seu ritmo.</p><a class="theme__go" href="#atividades" data-room-go="4">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a></div></details>
-          <details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">Alimentação saudável</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>Alimentação é um dos temas das palestras: encontros educativos com informação prática para fazer escolhas mais saudáveis no dia a dia.</p><a class="theme__go" href="#atividades" data-room-go="4">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a></div></details>
-          <details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">Prevenção de doenças</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>A prevenção começa na triagem, com uma avaliação inicial das suas necessidades, e continua nas orientações, com os resultados e, quando necessário, encaminhamento para outros serviços.</p><a class="theme__go" href="#atividades" data-room-go="2">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a></div></details>
-          <details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">Saúde física e mental</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>É o foco de todas as etapas. As atividades físicas orientadas cuidam do corpo, e as palestras mostram os benefícios de uma rotina mais ativa.</p><a class="theme__go" href="#atividades" data-room-go="4">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a></div></details>
-          <details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">Saúde da mulher</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>Tema dedicado nas palestras, com informação para cuidar da saúde com mais autonomia. Nas orientações, você recebe recomendações individuais.</p><a class="theme__go" href="#atividades" data-room-go="4">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a></div></details>
-          
+          <!-- @se tema1_titulo --><details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">@tema1_titulo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>@tema1_texto</p><!-- @se tema1_etapa --><a class="theme__go" href="#atividades" data-room-go="@tema1_etapa">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a><!-- @fim --></div></details><!-- @fim -->
+          <!-- @se tema2_titulo --><details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">@tema2_titulo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>@tema2_texto</p><!-- @se tema2_etapa --><a class="theme__go" href="#atividades" data-room-go="@tema2_etapa">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a><!-- @fim --></div></details><!-- @fim -->
+          <!-- @se tema3_titulo --><details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">@tema3_titulo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>@tema3_texto</p><!-- @se tema3_etapa --><a class="theme__go" href="#atividades" data-room-go="@tema3_etapa">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a><!-- @fim --></div></details><!-- @fim -->
+          <!-- @se tema4_titulo --><details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">@tema4_titulo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>@tema4_texto</p><!-- @se tema4_etapa --><a class="theme__go" href="#atividades" data-room-go="@tema4_etapa">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a><!-- @fim --></div></details><!-- @fim -->
+          <!-- @se tema5_titulo --><details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">@tema5_titulo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>@tema5_texto</p><!-- @se tema5_etapa --><a class="theme__go" href="#atividades" data-room-go="@tema5_etapa">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a><!-- @fim --></div></details><!-- @fim -->
+          <!-- @se tema6_titulo --><details class="theme" name="temas" data-reveal><summary><span class="theme__n"></span><span class="theme__name">@tema6_titulo</span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></summary><div class="theme__body"><p>@tema6_texto</p><!-- @se tema6_etapa --><a class="theme__go" href="#atividades" data-room-go="@tema6_etapa">Ver na carreta<svg aria-hidden="true"><use href="#right"/></svg></a><!-- @fim --></div></details><!-- @fim -->
         </div>
       </div>
     </div>
@@ -809,12 +809,12 @@ button,input{font:inherit;color:inherit}
       </div>
       <div class="tour__bar">
         <div class="tabs" role="group" aria-label="Etapas" data-tabs>
-          <button class="tab" type="button">Cadastro</button>
-          <button class="tab" type="button">Triagem</button>
-          <button class="tab" type="button">Avaliação</button>
-          <button class="tab" type="button">Atividades físicas e palestras</button>
-          <button class="tab" type="button">Orientações e encaminhamentos</button>
-          
+          <!-- @se sala1_titulo --><button class="tab" type="button">@sala1_titulo</button><!-- @fim -->
+          <!-- @se sala2_titulo --><button class="tab" type="button">@sala2_titulo</button><!-- @fim -->
+          <!-- @se sala3_titulo --><button class="tab" type="button">@sala3_titulo</button><!-- @fim -->
+          <!-- @se sala4_titulo --><button class="tab" type="button">@sala4_titulo</button><!-- @fim -->
+          <!-- @se sala5_titulo --><button class="tab" type="button">@sala5_titulo</button><!-- @fim -->
+          <!-- @se sala6_titulo --><button class="tab" type="button">@sala6_titulo</button><!-- @fim -->
         </div>
         <div class="tour__arrows">
           <button class="ibtn" type="button" data-prev aria-label="Etapa anterior"><svg aria-hidden="true"><use href="#left"/></svg></button>
@@ -846,12 +846,12 @@ button,input{font:inherit;color:inherit}
           </svg>
         </div>
         <div class="trailer" data-trailer>
-          <article class="room" data-room><div class="room__win"><img class="room__media" src="_media/pagina/carreta/sala1.webp" alt="Cadastro: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>Cadastro</h3><p>Registro dos participantes e coleta das informações necessárias para o atendimento.</p></div></article>
-          <article class="room" data-room><div class="room__win"><img class="room__media" src="_media/pagina/carreta/sala2.webp" alt="Triagem: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>Triagem</h3><p>Avaliação inicial para identificar necessidades e orientar os próximos passos.</p></div></article>
-          <article class="room" data-room><div class="room__win"><img class="room__media" src="_media/pagina/carreta/sala3.webp" alt="Avaliação: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>Avaliação</h3><p>Testes e orientações individuais para conhecer o condicionamento físico e promover mais saúde e qualidade de vida.</p></div></article>
-          <article class="room" data-room><div class="room__win"><img class="room__media" src="_media/pagina/carreta/sala4.webp" alt="Atividades físicas e palestras: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>Atividades físicas e palestras</h3><p>Práticas orientadas por profissionais, com exercícios adaptados aos participantes, e encontros educativos sobre saúde da mulher, alimentação e prática de atividades físicas.</p></div></article>
-          <article class="room" data-room><div class="room__win"><img class="room__media" src="_media/pagina/carreta/sala5.webp" alt="Orientações e encaminhamentos: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>Orientações e encaminhamentos</h3><p>Apresentação dos resultados, orientações individuais e, quando necessário, encaminhamento para outros serviços.</p></div></article>
-          
+          <!-- @se sala1_titulo --><article class="room" data-room><div class="room__win"><img class="room__media" src="@media_carreta_sala1" alt="@sala1_titulo: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>@sala1_titulo</h3><p>@sala1_texto</p></div></article><!-- @fim -->
+          <!-- @se sala2_titulo --><article class="room" data-room><div class="room__win"><img class="room__media" src="@media_carreta_sala2" alt="@sala2_titulo: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>@sala2_titulo</h3><p>@sala2_texto</p></div></article><!-- @fim -->
+          <!-- @se sala3_titulo --><article class="room" data-room><div class="room__win"><img class="room__media" src="@media_carreta_sala3" alt="@sala3_titulo: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>@sala3_titulo</h3><p>@sala3_texto</p></div></article><!-- @fim -->
+          <!-- @se sala4_titulo --><article class="room" data-room><div class="room__win"><img class="room__media" src="@media_carreta_sala4" alt="@sala4_titulo: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>@sala4_titulo</h3><p>@sala4_texto</p></div></article><!-- @fim -->
+          <!-- @se sala5_titulo --><article class="room" data-room><div class="room__win"><img class="room__media" src="@media_carreta_sala5" alt="@sala5_titulo: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>@sala5_titulo</h3><p>@sala5_texto</p></div></article><!-- @fim -->
+          <!-- @se sala6_titulo --><article class="room" data-room><div class="room__win"><img class="room__media" src="@media_carreta_sala6" alt="@sala6_titulo: imagem ilustrativa da etapa." width="1280" height="717" loading="lazy" draggable="false"><span class="room__tint room__tint--s" aria-hidden="true"></span><span class="room__tint room__tint--m" aria-hidden="true"></span><span class="room__cap">Imagem ilustrativa</span></div><div class="room__txt"><h3>@sala6_titulo</h3><p>@sala6_texto</p></div></article><!-- @fim -->
           <div class="wheels" aria-hidden="true"><i class="wheel"></i><i class="wheel"></i><i class="wheel"></i></div>
         </div>
       </div>
@@ -871,18 +871,18 @@ button,input{font:inherit;color:inherit}
         <p class="lead">Conheça quem conduz o CUIDAR em cada cidade.</p>
       </div>
       <div class="team__grid">
-        <div class="feat__photo" data-feat-photo><img class="feat__img" src="_media/pagina/equipe/membro1.webp" alt="Foto de Yandra Trevisan" width="960" height="1200" loading="lazy" data-member-photo><img class="feat__img" src="_media/pagina/equipe/membro2.webp" alt="Foto de Marlon Abboud" width="960" height="1200" loading="lazy" data-member-photo></div>
+        <div class="feat__photo" data-feat-photo><!-- @se equipe1_nome --><img class="feat__img" src="@img_equipe_membro1" alt="Foto de @equipe1_nome" width="960" height="1200" loading="lazy" data-member-photo><!-- @fim --><!-- @se equipe2_nome --><img class="feat__img" src="@img_equipe_membro2" alt="Foto de @equipe2_nome" width="960" height="1200" loading="lazy" data-member-photo><!-- @fim --><!-- @se equipe3_nome --><img class="feat__img" src="@img_equipe_membro3" alt="Foto de @equipe3_nome" width="960" height="1200" loading="lazy" data-member-photo><!-- @fim --><!-- @se equipe4_nome --><img class="feat__img" src="@img_equipe_membro4" alt="Foto de @equipe4_nome" width="960" height="1200" loading="lazy" data-member-photo><!-- @fim --></div>
         <div class="people" role="group" aria-label="Escolha um profissional" data-people>
-          <button class="person" type="button" aria-pressed="false" data-person><i data-member-n></i><span><b>Yandra Trevisan</b><small>Educadora e responsável técnica</small></span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></button>
-          <button class="person" type="button" aria-pressed="false" data-person><i data-member-n></i><span><b>Marlon Abboud</b><small>Produtor</small></span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></button>
-          
-          
+          <!-- @se equipe1_nome --><button class="person" type="button" aria-pressed="false" data-person><i data-member-n></i><span><b>@equipe1_nome</b><small>@equipe1_funcao</small></span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></button><!-- @fim -->
+          <!-- @se equipe2_nome --><button class="person" type="button" aria-pressed="false" data-person><i data-member-n></i><span><b>@equipe2_nome</b><small>@equipe2_funcao</small></span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></button><!-- @fim -->
+          <!-- @se equipe3_nome --><button class="person" type="button" aria-pressed="false" data-person><i data-member-n></i><span><b>@equipe3_nome</b><small>@equipe3_funcao</small></span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></button><!-- @fim -->
+          <!-- @se equipe4_nome --><button class="person" type="button" aria-pressed="false" data-person><i data-member-n></i><span><b>@equipe4_nome</b><small>@equipe4_funcao</small></span><svg class="px" aria-hidden="true"><use href="#plus"/></svg></button><!-- @fim -->
         </div>
         <div class="feat" aria-live="polite" data-feat>
-          <div class="feat__p" data-member><p class="feat__n">Equipe CUIDAR · <span data-member-n></span></p><h3>Yandra Trevisan</h3><dl><div><dt>Função</dt><dd>Educadora e responsável técnica</dd></div><div><dt>Formação</dt><dd>Educação Física (USP)</dd></div><div><dt>Sobre</dt><dd>Profissional de Educação Física formada pela USP, com experiência em treinamento, mobilidade, atendimento personalizado, gestão de academias e liderança de equipes. Atua como Personal Trainer e professora de mobilidade, combinando conhecimento técnico, gestão operacional e experiência com diferentes públicos.</dd></div></dl></div>
-          <div class="feat__p" data-member><p class="feat__n">Equipe CUIDAR · <span data-member-n></span></p><h3>Marlon Abboud</h3><dl><div><dt>Função</dt><dd>Produtor</dd></div><div><dt>Formação</dt><dd>Educação Física, com pós-graduação em Administração e Marketing Esportivo</dd></div><div><dt>Sobre</dt><dd>Profissional de Educação Física, bacharel desde 2007, com pós-graduação em Administração e Marketing Esportivo, além de Treinamento Desportivo e Fisiologia do Exercício. Atua na produção e gestão de projetos culturais, esportivos, educativos e audiovisuais, incluindo eventos, exposições, teatro, cinema, transmissões e conteúdos digitais. Possui experiência na produção de projetos para diferentes públicos e formatos, com destaque para iniciativas apresentadas no Rio2C e parcerias com importantes empresas do setor audiovisual.</dd></div></dl></div>
-          
-          
+          <!-- @se equipe1_nome --><div class="feat__p" data-member><p class="feat__n">Equipe CUIDAR · <span data-member-n></span></p><h3>@equipe1_nome</h3><dl><div><dt>Função</dt><dd>@equipe1_funcao</dd></div><!-- @se equipe1_formacao --><div><dt>Formação</dt><dd>@equipe1_formacao</dd></div><!-- @fim --><!-- @se equipe1_bio --><div><dt>Sobre</dt><dd>@equipe1_bio</dd></div><!-- @fim --></dl></div><!-- @fim -->
+          <!-- @se equipe2_nome --><div class="feat__p" data-member><p class="feat__n">Equipe CUIDAR · <span data-member-n></span></p><h3>@equipe2_nome</h3><dl><div><dt>Função</dt><dd>@equipe2_funcao</dd></div><!-- @se equipe2_formacao --><div><dt>Formação</dt><dd>@equipe2_formacao</dd></div><!-- @fim --><!-- @se equipe2_bio --><div><dt>Sobre</dt><dd>@equipe2_bio</dd></div><!-- @fim --></dl></div><!-- @fim -->
+          <!-- @se equipe3_nome --><div class="feat__p" data-member><p class="feat__n">Equipe CUIDAR · <span data-member-n></span></p><h3>@equipe3_nome</h3><dl><div><dt>Função</dt><dd>@equipe3_funcao</dd></div><!-- @se equipe3_formacao --><div><dt>Formação</dt><dd>@equipe3_formacao</dd></div><!-- @fim --><!-- @se equipe3_bio --><div><dt>Sobre</dt><dd>@equipe3_bio</dd></div><!-- @fim --></dl></div><!-- @fim -->
+          <!-- @se equipe4_nome --><div class="feat__p" data-member><p class="feat__n">Equipe CUIDAR · <span data-member-n></span></p><h3>@equipe4_nome</h3><dl><div><dt>Função</dt><dd>@equipe4_funcao</dd></div><!-- @se equipe4_formacao --><div><dt>Formação</dt><dd>@equipe4_formacao</dd></div><!-- @fim --><!-- @se equipe4_bio --><div><dt>Sobre</dt><dd>@equipe4_bio</dd></div><!-- @fim --></dl></div><!-- @fim -->
         </div>
       </div>
     </div>
@@ -894,22 +894,22 @@ button,input{font:inherit;color:inherit}
       <div>
         <p class="eyebrow"><svg class="px" aria-hidden="true"><use href="#plus"/></svg>Participação</p>
         <h2 class="h2" id="join-title">Como participar</h2>
-        <p class="join__lead">Atendimento presencial sem necessidade de agendamento prévio.</p>
+        <p class="join__lead">@participar_texto</p>
         <div class="join__cta">
           <a class="btn" href="#na-sua-cidade"><svg class="px" aria-hidden="true"><use href="#plus"/></svg>Confira a programação completa</a>
         </div>
       </div>
       <div>
         <ol class="steps">
-          <li class="step" data-reveal><div><h3>Confira a programação completa</h3><p>Veja quando a carreta chega à sua cidade e onde ela vai ficar.</p></div></li>
-          <li class="step" data-reveal><div><h3>Vá até a carreta</h3><p>O atendimento é presencial e não precisa de agendamento. Leve um documento de identificação.</p></div></li>
-          <li class="step" data-reveal><div><h3>Comece pelo cadastro</h3><p>Depois, siga para a triagem, a avaliação, as atividades físicas e palestras e, por fim, as orientações.</p></div></li>
-          
+          <!-- @se passo1_titulo --><li class="step" data-reveal><div><h3>@passo1_titulo</h3><p>@passo1_texto</p></div></li><!-- @fim -->
+          <!-- @se passo2_titulo --><li class="step" data-reveal><div><h3>@passo2_titulo</h3><p>@passo2_texto</p></div></li><!-- @fim -->
+          <!-- @se passo3_titulo --><li class="step" data-reveal><div><h3>@passo3_titulo</h3><p>@passo3_texto</p></div></li><!-- @fim -->
+          <!-- @se passo4_titulo --><li class="step" data-reveal><div><h3>@passo4_titulo</h3><p>@passo4_texto</p></div></li><!-- @fim -->
         </ol>
         <ul class="keys">
-          <li class="key"><svg aria-hidden="true"><use href="#i-free"/></svg><div><b>Gratuito</b><span>Para todos os participantes</span></div></li>
-          <li class="key"><svg aria-hidden="true"><use href="#i-adult"/></svg><div><b>A partir de 16 anos</b><span>Público do projeto</span></div></li>
-          <li class="key"><svg aria-hidden="true"><use href="#i-cal"/></svg><div><b>Sem agendamento</b><span>Atendimento presencial</span></div></li>
+          <li class="key"><svg aria-hidden="true"><use href="#i-free"/></svg><div><b>@info_custo</b><span>@info_custo_detalhe</span></div></li>
+          <li class="key"><svg aria-hidden="true"><use href="#i-adult"/></svg><div><b>@info_publico</b><span>@info_publico_detalhe</span></div></li>
+          <li class="key"><svg aria-hidden="true"><use href="#i-cal"/></svg><div><b>@info_agendamento</b><span>@info_agendamento_detalhe</span></div></li>
         </ul>
       </div>
     </div>
@@ -922,7 +922,7 @@ button,input{font:inherit;color:inherit}
         <div>
           <p class="eyebrow"><svg class="px" aria-hidden="true"><use href="#plus"/></svg>Na sua cidade</p>
           <h2 class="h2" id="agenda-title">Confira quando o projeto chega à sua cidade</h2>
-          <p class="agenda__note">São <b>8</b> cidades entre outubro de 2026 e março de 2027. Toque em uma cidade para ver todos os detalhes da etapa.</p>
+          <p class="agenda__note">São <b>@total_cidades</b> cidades @periodo_roteiro. Toque em uma cidade para ver todos os detalhes da etapa.</p>
         </div>
         <div class="search">
           <label for="busca">Busque sua cidade</label>
@@ -933,167 +933,27 @@ button,input{font:inherit;color:inherit}
       <div class="stops">
         <div class="stops__head" aria-hidden="true"><span>Nº</span><span>Cidade — UF</span><span>Datas</span><span>Local</span><span>Horário</span><span>Status</span><span></span></div>
         <ul data-stops>
-
+<!-- @repetir cidades -->
           <li class="stop" data-stop-li>
             <button class="stop__btn" type="button" aria-haspopup="dialog">
               <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Cotia — SP</span>
-              <span class="stop__meta"><span class="dt" data-ini="13/10/2026" data-fim="23/10/2026">13/10/2026 a 23/10/2026</span></span>
-              <span class="stop__col"><span class="dt" data-ini="13/10/2026" data-fim="23/10/2026">13/10/2026 a 23/10/2026</span></span>
-              <span class="stop__col" data-stop-local>Praça dos Romeiros (Caucaia do Alto)</span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
+              <span class="stop__city" data-stop-city>@cidade<!-- @se uf --> — @uf<!-- @fim --></span>
+              <span class="stop__meta"><span class="dt" data-ini="@data_inicio" data-fim="@data_fim"><!-- @se data_fim -->@data_inicio a @data_fim<!-- @senao -->@data_inicio<!-- @fim --></span><!-- @se datas_provisorias = sim --><span class="stop__prov" data-prov> · provisório</span><!-- @fim --></span>
+              <span class="stop__col"><span class="dt" data-ini="@data_inicio" data-fim="@data_fim"><!-- @se data_fim -->@data_inicio a @data_fim<!-- @senao -->@data_inicio<!-- @fim --></span></span>
+              <span class="stop__col" data-stop-local><!-- @se local -->@local<!-- @senao --><span class="tbc">[A CONFIRMAR]</span><!-- @fim --></span>
+              <span class="stop__col"><!-- @se horario -->@horario<!-- @senao --><span class="tbc">[A CONFIRMAR]</span><!-- @fim --></span>
               <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
             </button>
             <div class="stop__data" hidden>
               <dl>
-                <div><dt>Local</dt><dd>Praça dos Romeiros (Caucaia do Alto)</dd></div>
-                <div><dt>Endereço</dt><dd><span data-endereco>Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
+                <div><dt>Local</dt><dd><!-- @se local -->@local<!-- @senao --><span class="tbc">[A CONFIRMAR]</span><!-- @fim --></dd></div>
+                <div><dt>Endereço</dt><dd><!-- @se endereco --><span data-endereco>@endereco</span><!-- @senao --><span class="tbc">[A CONFIRMAR]</span><!-- @fim --></dd></div>
+                <div><dt>Horário de funcionamento</dt><dd><!-- @se horario -->@horario<!-- @senao --><span class="tbc">[A CONFIRMAR]</span><!-- @fim --></dd></div>
+                <div><dt>Atendimento</dt><dd><!-- @se gratuito = sim -->Gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista<!-- @senao -->A confirmar<!-- @fim --><!-- @fim -->, presencial e sem agendamento</dd></div>
               </dl>
             </div>
           </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Recife — PE</span>
-              <span class="stop__meta"><span class="dt" data-ini="03/11/2026" data-fim="13/11/2026">03/11/2026 a 13/11/2026</span></span>
-              <span class="stop__col"><span class="dt" data-ini="03/11/2026" data-fim="13/11/2026">03/11/2026 a 13/11/2026</span></span>
-              <span class="stop__col" data-stop-local><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Endereço</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Cabo de Santo Agostinho — PE</span>
-              <span class="stop__meta"><span class="dt" data-ini="16/11/2026" data-fim="26/11/2026">16/11/2026 a 26/11/2026</span></span>
-              <span class="stop__col"><span class="dt" data-ini="16/11/2026" data-fim="26/11/2026">16/11/2026 a 26/11/2026</span></span>
-              <span class="stop__col" data-stop-local>Parque da Igrejinha Ayrton Cardoso</span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd>Parque da Igrejinha Ayrton Cardoso</dd></div>
-                <div><dt>Endereço</dt><dd><span data-endereco>R. Projetada C – Garapu, Cabo de Santo Agostinho – PE, 54517-015</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Salvador — BA</span>
-              <span class="stop__meta"><span class="dt" data-ini="30/11/2026" data-fim="09/12/2026">30/11/2026 a 09/12/2026</span></span>
-              <span class="stop__col"><span class="dt" data-ini="30/11/2026" data-fim="09/12/2026">30/11/2026 a 09/12/2026</span></span>
-              <span class="stop__col" data-stop-local><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Endereço</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Itapevi — SP</span>
-              <span class="stop__meta"><span class="dt" data-ini="11/01/2027" data-fim="21/01/2027">11/01/2027 a 21/01/2027</span></span>
-              <span class="stop__col"><span class="dt" data-ini="11/01/2027" data-fim="21/01/2027">11/01/2027 a 21/01/2027</span></span>
-              <span class="stop__col" data-stop-local><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Endereço</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Belo Horizonte — MG</span>
-              <span class="stop__meta"><span class="dt" data-ini="25/01/2027" data-fim="04/02/2027">25/01/2027 a 04/02/2027</span><span class="stop__prov" data-prov> · provisório</span></span>
-              <span class="stop__col"><span class="dt" data-ini="25/01/2027" data-fim="04/02/2027">25/01/2027 a 04/02/2027</span></span>
-              <span class="stop__col" data-stop-local><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Endereço</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>Vitória — ES</span>
-              <span class="stop__meta"><span class="dt" data-ini="15/02/2027" data-fim="25/02/2027">15/02/2027 a 25/02/2027</span><span class="stop__prov" data-prov> · provisório</span></span>
-              <span class="stop__col"><span class="dt" data-ini="15/02/2027" data-fim="25/02/2027">15/02/2027 a 25/02/2027</span></span>
-              <span class="stop__col" data-stop-local><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Endereço</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
-          <li class="stop" data-stop-li>
-            <button class="stop__btn" type="button" aria-haspopup="dialog">
-              <span class="stop__n" data-stop-n></span>
-              <span class="stop__city" data-stop-city>São Paulo — SP</span>
-              <span class="stop__meta"><span class="dt" data-ini="02/03/2027" data-fim="12/03/2027">02/03/2027 a 12/03/2027</span><span class="stop__prov" data-prov> · provisório</span></span>
-              <span class="stop__col"><span class="dt" data-ini="02/03/2027" data-fim="12/03/2027">02/03/2027 a 12/03/2027</span></span>
-              <span class="stop__col" data-stop-local><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__col"><span class="tbc">[A CONFIRMAR]</span></span>
-              <span class="stop__st"><span class="status" data-status></span><span class="stop__ico" aria-hidden="true"><svg class="px"><use href="#plus"/></svg></span></span>
-            </button>
-            <div class="stop__data" hidden>
-              <dl>
-                <div><dt>Local</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Endereço</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Horário de funcionamento</dt><dd><span class="tbc">[A CONFIRMAR]</span></dd></div>
-                <div><dt>Atendimento</dt><dd>Gratuito, presencial e sem agendamento</dd></div>
-              </dl>
-            </div>
-          </li>
-
+<!-- @fim -->
           <li class="stops__empty" hidden data-empty></li>
         </ul>
       </div>
@@ -1111,23 +971,23 @@ button,input{font:inherit;color:inherit}
       <div>
         <div class="qgroup">
           <h3>Participação</h3>
-          <details><summary>Quanto custa participar?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Nada. O CUIDAR é gratuito para todos.</p></details>
-          <details><summary>Preciso agendar?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Não. O atendimento é presencial, sem necessidade de agendamento prévio.</p></details>
-          <details><summary>Quem pode participar?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Pessoas a partir de 16 anos.</p></details>
-          <details><summary>Preciso levar alguma coisa?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Sim, um documento de identificação.</p></details>
-          
+          <!-- @se faq1_pergunta --><details><summary>@faq1_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq1_resposta</p></details><!-- @fim -->
+          <!-- @se faq2_pergunta --><details><summary>@faq2_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq2_resposta</p></details><!-- @fim -->
+          <!-- @se faq3_pergunta --><details><summary>@faq3_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq3_resposta</p></details><!-- @fim -->
+          <!-- @se faq4_pergunta --><details><summary>@faq4_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq4_resposta</p></details><!-- @fim -->
+          <!-- @se faq5_pergunta --><details><summary>@faq5_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq5_resposta</p></details><!-- @fim -->
         </div>
         <div class="qgroup">
           <h3>Programação</h3>
-          <details><summary>Como são as atividades físicas?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">São práticas orientadas por profissionais, com exercícios adaptados aos participantes.</p></details>
-          <details><summary>Sobre o que são as palestras?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Encontros educativos sobre saúde da mulher, alimentação e prática de atividades físicas.</p></details>
-          <details><summary>Vou receber o resultado das avaliações?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Ao final, você receberá orientações gerais sobre os resultados das avaliações e, se necessário, será orientado a procurar a Unidade Básica de Saúde (UBS) mais próxima para acompanhamento.</p></details>
-          
+          <!-- @se faq6_pergunta --><details><summary>@faq6_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq6_resposta</p></details><!-- @fim -->
+          <!-- @se faq7_pergunta --><details><summary>@faq7_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq7_resposta</p></details><!-- @fim -->
+          <!-- @se faq8_pergunta --><details><summary>@faq8_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq8_resposta</p></details><!-- @fim -->
+          <!-- @se faq9_pergunta --><details><summary>@faq9_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq9_resposta</p></details><!-- @fim -->
         </div>
         <div class="qgroup">
           <h3>Agenda</h3>
-          <details><summary>Quando a carreta chega na minha cidade?<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">Confira a programação completa na seção “Na sua cidade”. São 8 cidades entre outubro de 2026 e março de 2027, e algumas datas ainda são provisórias.</p></details>
-          
+          <!-- @se faq10_pergunta --><details><summary>@faq10_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq10_resposta</p></details><!-- @fim -->
+          <!-- @se faq11_pergunta --><details><summary>@faq11_pergunta<i aria-hidden="true"><svg class="px"><use href="#plus"/></svg></i></summary><p class="a">@faq11_resposta</p></details><!-- @fim -->
         </div>
       </div>
     </div>
@@ -1144,7 +1004,7 @@ button,input{font:inherit;color:inherit}
     <div>
       <img class="ft__logo" src="_media/pagina/marca/logo.webp" alt="CUIDAR" width="710" height="159" loading="lazy">
       <p class="ft__tag">Todo lugar, todo cuidado.</p>
-      <p class="ft__text">O CUIDAR leva atividade física orientada, avaliações e informação sobre saúde para as comunidades, aproximando saúde, esporte e qualidade de vida. Uma experiência itinerante que cria oportunidades para uma rotina mais ativa, com ações educativas sobre sedentarismo, alimentação saudável e prevenção de doenças.</p>
+      <p class="ft__text">@rodape_texto</p>
     </div>
     <div>
       <h2>Navegue</h2>
@@ -1160,12 +1020,12 @@ button,input{font:inherit;color:inherit}
     <div>
       <h2>Informações</h2>
       <div class="ft__info">
-        <span>Contato <span class="tbc">[A CONFIRMAR]</span></span>
-        <p class="ft__hash"><span>#</span>EUMECUIDO</p>
+        <span>Contato <!-- @se contato -->@contato<!-- @senao --><span class="tbc">[A CONFIRMAR]</span><!-- @fim --></span>
+        <p class="ft__hash"><span>#</span>@hashtag</p>
       </div>
     </div>
   </div>
-  <div class="ft__base"><div class="wrap"><span>© 2026 CUIDAR · Laboratório Itinerante</span></div></div>
+  <div class="ft__base"><div class="wrap"><span>© @ano @evento · Laboratório Itinerante</span></div></div>
 </footer>
 
 
@@ -1524,5 +1384,79 @@ button,input{font:inherit;color:inherit}
 })();
 </script>
 
+<!--
+  VARIÁVEIS — CUIDAR — página única (One page, pasta _media/pagina/)
+  Formato: uma página só, com a lista de cidades repetida por "repetir cidades".
+  Fora da lista, as variáveis não têm número (valem para a página toda).
+  Dentro da lista, as variáveis da cidade também não têm número (cada item já é uma cidade).
+
+  Gerais: @evento, @ano
+  Automática: @total_cidades (quantidade de cidades cadastradas)
+
+  Base usadas (por cidade, dentro da lista "Na sua cidade"):
+    @cidade, @uf, @local, @data_inicio, @data_fim, @gratuito, @preco_vista
+    @regiao — não aparece na página; pode ficar no cadastro para uso futuro.
+    @gratuito — "sim" em todas as cidades (o CUIDAR é gratuito). @preco_vista fica vazio.
+    @data_inicio / @data_fim — use DD/MM/AAAA (ex.: 13/10/2026). Com o ano, a página
+      formata as datas ("13 a 23 out 2026") e calcula sozinha o selo da etapa
+      (Encerrado, Acontecendo, Próxima parada, Confirmado). Sem o ano, mostra o texto digitado.
+  Não usadas: @status e @link_inscricao (o projeto não tem inscrição), parcelamento, desconto, O2 Prime.
+
+  Próprias deste evento — por cidade (dentro da lista):
+    @endereco — endereço completo; quando preenchido, aparece o botão "Como chegar" (Google Maps)
+    @horario — horário de funcionamento, texto livre (ex.: "9h às 17h")
+    @datas_provisorias — "sim" quando as datas ainda não estão confirmadas; vazio nos outros casos
+    Campos vazios de local, endereço e horário aparecem como [A CONFIRMAR].
+
+  Próprias deste evento — gerais (textos de cadastro, sem número):
+    @hero_texto — texto do banner principal
+    @sobre_texto — texto de "Sobre o projeto"
+    @projeto_texto — texto do bloco vermelho "O projeto"
+    @participar_texto — frase de "Como participar"
+    @rodape_texto — texto do rodapé
+    @periodo_roteiro — período da agenda (ex.: "entre outubro de 2026 e março de 2027")
+    @info_custo, @info_custo_detalhe — cartão 1 de "Como participar" e linha "Entrada" do menu
+    @info_publico, @info_publico_detalhe — cartão 2 e linha "Público" do menu
+    @info_agendamento, @info_agendamento_detalhe — cartão 3 e linha "Atendimento" do menu
+    @hashtag — sem o "#" (ex.: EUMECUIDO)
+    @contato — vazio aparece como [A CONFIRMAR]
+
+  Acordeão "Na programação" (6 espaços; tema sem título não aparece):
+    @tema1_titulo … @tema6_titulo — nome do tema
+    @tema1_texto … @tema6_texto — texto que abre no "+"
+    @tema1_etapa … @tema6_etapa — número da etapa da carreta que o botão "Ver na carreta" abre
+      (1 = primeira sala, 2 = segunda…). Vazio: o botão não aparece.
+
+  Carreta "Entre na carreta" (6 salas; sala sem título não aparece, nem a aba dela):
+    @sala1_titulo … @sala6_titulo, @sala1_texto … @sala6_texto
+
+  Equipe (4 espaços; profissional sem nome não aparece):
+    @equipe1_nome … @equipe4_nome, @equipe1_funcao …, @equipe1_formacao …, @equipe1_bio …
+    Formação e bio vazias somem do perfil.
+
+  Como participar (4 passos; passo sem título não aparece):
+    @passo1_titulo … @passo4_titulo, @passo1_texto … @passo4_texto
+
+  Acordeão "Dúvidas" (pergunta sem texto não aparece):
+    Participação: @faq1_pergunta/@faq1_resposta … @faq5_pergunta/@faq5_resposta
+    Programação:  @faq6_… a @faq9_…
+    Agenda:       @faq10_… e @faq11_…
+
+  Logos (nome usado como texto alternativo da imagem):
+    @logo_patrocinio1_nome, @logo_patrocinio2_nome, @logo_apoio1_nome, @logo_apoio2_nome,
+    @logo_incentivo1_nome, @logo_realizacao1_nome
+
+  Imagens e vídeos (pasta _media/pagina/):
+    @media_hero_desktop, @media_hero_mobile — hero/, imagem ou vídeo, igual em todas as páginas
+    @media_sobre_fundo — sobre/, imagem ou vídeo (abre na cruz do "Sobre o projeto")
+    @media_carreta_sala1 … @media_carreta_sala6 — carreta/, imagem ou vídeo de cada sala
+      (a página aplica sozinha o efeito roxo nas salas inativas)
+    @img_equipe_membro1 … @img_equipe_membro4 — equipe/, foto 4:5 de cada profissional
+    @img_logos_patrocinio1, @img_logos_patrocinio2, @img_logos_apoio1, @img_logos_apoio2,
+    @img_logos_incentivo1, @img_logos_realizacao1 — logos/ (hoje com marcadores "LOGO")
+    Fixo, sem variável: _media/pagina/marca/logo.webp
+
+  Galeria: fora deste template até chegarem as fotos reais.
+-->
 </body>
 </html>
