@@ -820,10 +820,11 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T22:48:24.666Z",
+  "atualizadoEm": "2026-10-09T22:48:28.186Z",
   "secoes": {
     "ocultas": [
-      "unica#patrocinadores"
+      "unica#patrocinadores",
+      "unica#pub-img-old1rs"
     ],
     "porLinha": {},
     "ordem": {
