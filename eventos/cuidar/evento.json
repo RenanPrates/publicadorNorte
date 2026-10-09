@@ -649,9 +649,11 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:57:13.018Z",
+  "atualizadoEm": "2026-10-09T14:58:05.224Z",
   "secoes": {
-    "ocultas": [],
+    "ocultas": [
+      "unica#@rodape"
+    ],
     "porLinha": {},
     "ordem": {}
   },
