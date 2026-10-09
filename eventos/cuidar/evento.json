@@ -651,7 +651,7 @@
       "uf": "SP",
       "local": "Praça dos Romeiros (Caucaia do Alto)",
       "data_inicio": "13",
-      "data_fim": "23/10/2026",
+      "data_fim": "23 out 2026",
       "gratuito": "sim",
       "preco_vista": "",
       "datas_provisorias": "",
@@ -668,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:33:01.560Z",
+  "atualizadoEm": "2026-10-09T17:33:08.281Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
