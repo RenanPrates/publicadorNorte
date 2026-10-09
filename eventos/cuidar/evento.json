@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 113358,
-      "enviadoEm": "2026-10-09T14:41:14.959Z"
+      "bytes": 111597,
+      "enviadoEm": "2026-10-09T17:14:27.028Z"
     }
   },
   "vars": {
@@ -543,6 +543,10 @@
     "ano": {
       "dono": "geral",
       "ignorar": false
+    },
+    "a_confirmar": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -651,7 +655,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:14:06.906Z",
+  "atualizadoEm": "2026-10-09T17:14:28.299Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
