@@ -640,9 +640,7 @@
       "_id": "485b95e0"
     },
     {
-      "_id": "zz1",
-      "cidade": "Ibiúna",
-      "uf": "SP"
+      "_id": "zz1"
     }
   ],
   "etapas": [],
@@ -652,5 +650,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T17:23:11.920Z",
-  "atualizadoEm": "2026-10-09T17:23:20.487Z"
+  "atualizadoEm": "2026-10-09T17:23:31.158Z"
 }
