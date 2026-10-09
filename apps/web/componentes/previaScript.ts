@@ -27,7 +27,8 @@ function scriptPrevia() {
   var morph = function (vivo: Node, velho: Node, novo: Node): boolean {
     if (vivo.nodeType === 1 && (vivo as Element).tagName === 'PUB-V' && focado(vivo)) return true;
     if (novo.nodeType === 3) {
-      if (velho.nodeValue === novo.nodeValue || focado(vivo)) return true;
+      // já está certo (ex.: outra cópia do campo que está sendo digitado) ou é o campo com o cursor
+      if (velho.nodeValue === novo.nodeValue || vivo.nodeValue === novo.nodeValue || focado(vivo)) return true;
       // o JS da página reescreveu este texto (ex.: formatou uma data): recarrega para ele refazer
       if (vivo.nodeValue !== velho.nodeValue) return false;
       vivo.nodeValue = novo.nodeValue;
@@ -95,6 +96,8 @@ function scriptPrevia() {
       if (d.y) scrollTo(0, d.y);
       editar(d.editar);
       if (d.foco) focar(d.foco.v, d.foco.l || '');
+      // pronto para aparecer (o publicador troca o quadro só depois de desenhar, sem piscar branco)
+      requestAnimationFrame(function () { requestAnimationFrame(function () { envia({ tipo: 'pub-visivel' }); }); });
     } else if (d.tipo === 'pub-atualizar') {
       var novo = new DOMParser().parseFromString(d.html, 'text/html');
       var ok = false;
