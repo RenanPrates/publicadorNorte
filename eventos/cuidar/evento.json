@@ -644,6 +644,19 @@
       "datas_provisorias": "",
       "horario": "",
       "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185"
+    },
+    {
+      "_id": "12f009ec",
+      "cidade": "",
+      "uf": "SP",
+      "local": "Praça dos Romeiros (Caucaia do Alto)",
+      "data_inicio": "13/10/2026",
+      "data_fim": "23/10/2026",
+      "gratuito": "sim",
+      "preco_vista": "",
+      "datas_provisorias": "",
+      "horario": "",
+      "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185"
     }
   ],
   "etapas": [],
@@ -655,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:24:51.782Z",
+  "atualizadoEm": "2026-10-09T17:31:30.838Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
