@@ -104,7 +104,7 @@
       "ignorar": false
     },
     "tema1_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema1_texto": {
@@ -112,11 +112,11 @@
       "ignorar": false
     },
     "tema1_etapa": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema2_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema2_texto": {
@@ -124,11 +124,11 @@
       "ignorar": false
     },
     "tema2_etapa": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema3_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema3_texto": {
@@ -136,11 +136,11 @@
       "ignorar": false
     },
     "tema3_etapa": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema4_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema4_texto": {
@@ -148,11 +148,11 @@
       "ignorar": false
     },
     "tema4_etapa": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema5_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema5_texto": {
@@ -160,11 +160,11 @@
       "ignorar": false
     },
     "tema5_etapa": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema6_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "tema6_texto": {
@@ -172,31 +172,31 @@
       "ignorar": false
     },
     "tema6_etapa": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "sala1_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "sala2_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "sala3_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "sala4_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "sala5_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "sala6_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "media_carreta_sala1": {
@@ -248,7 +248,7 @@
       "ignorar": false
     },
     "equipe1_nome": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "img_equipe_membro1": {
@@ -256,7 +256,7 @@
       "ignorar": false
     },
     "equipe2_nome": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "img_equipe_membro2": {
@@ -264,7 +264,7 @@
       "ignorar": false
     },
     "equipe3_nome": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "img_equipe_membro3": {
@@ -272,7 +272,7 @@
       "ignorar": false
     },
     "equipe4_nome": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "img_equipe_membro4": {
@@ -296,35 +296,35 @@
       "ignorar": false
     },
     "equipe1_formacao": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe1_bio": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe2_formacao": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe2_bio": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe3_formacao": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe3_bio": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe4_formacao": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "equipe4_bio": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "participar_texto": {
@@ -332,7 +332,7 @@
       "ignorar": false
     },
     "passo1_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "passo1_texto": {
@@ -340,7 +340,7 @@
       "ignorar": false
     },
     "passo2_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "passo2_texto": {
@@ -348,7 +348,7 @@
       "ignorar": false
     },
     "passo3_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "passo3_texto": {
@@ -356,7 +356,7 @@
       "ignorar": false
     },
     "passo4_titulo": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "passo4_texto": {
@@ -384,8 +384,10 @@
       "ignorar": false
     },
     "cidade": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "uf": {
       "dono": "cidade",
@@ -425,7 +427,7 @@
       "formula": "parcelamento * valor_parcelado"
     },
     "faq1_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq1_resposta": {
@@ -433,7 +435,7 @@
       "ignorar": false
     },
     "faq2_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq2_resposta": {
@@ -441,7 +443,7 @@
       "ignorar": false
     },
     "faq3_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq3_resposta": {
@@ -449,7 +451,7 @@
       "ignorar": false
     },
     "faq4_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq4_resposta": {
@@ -457,7 +459,7 @@
       "ignorar": false
     },
     "faq5_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq5_resposta": {
@@ -465,7 +467,7 @@
       "ignorar": false
     },
     "faq6_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq6_resposta": {
@@ -473,7 +475,7 @@
       "ignorar": false
     },
     "faq7_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq7_resposta": {
@@ -481,7 +483,7 @@
       "ignorar": false
     },
     "faq8_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq8_resposta": {
@@ -489,7 +491,7 @@
       "ignorar": false
     },
     "faq9_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq9_resposta": {
@@ -497,7 +499,7 @@
       "ignorar": false
     },
     "faq10_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq10_resposta": {
@@ -505,7 +507,7 @@
       "ignorar": false
     },
     "faq11_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq11_resposta": {
@@ -517,7 +519,7 @@
       "ignorar": false
     },
     "contato": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "ano": {
@@ -635,7 +637,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:39:11.891Z",
+  "atualizadoEm": "2026-10-09T16:40:22.058Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
