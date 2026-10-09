@@ -34,6 +34,8 @@ No formato com etapas, cada etapa pertence a uma cidade (campo interno `_cidade`
 
 ---
 
+**Status pelas datas** (Cadastro): manual ou automático. No automático, cada cidade/etapa vira `realizado` depois de 0h do último dia (`data_fim`, ou `data_inicio`) + N horas (padrão 8, horário de Brasília). Vale em todo lugar que usa o status (`@se status`, contagens). Como o site é estático, o GitHub Actions (`.github/workflows/automacao.yml`) chama `POST /api/automacao` de hora em hora com `AUTOMACAO_TOKEN`; o publicador republica os eventos publicados em que a lista de realizados mudou desde a última publicação.
+
 **Datas:** variável chamada `data` ou `data_…` é campo de data com calendário no Cadastro (guarda dd/mm/aaaa). O HTML escolhe o formato pelo fim do nome (`_dia`, `_mes`, `_mes_abrev`, `_mes_nome`, `_ano`, `_curta`, `_semana`, `_semana_abrev`, `_extenso`) e `@periodo` / `@periodo_extenso` juntam início e fim (guia, seção 4). Usar uma variação já cria a coluna da data.
 
 Na prévia editável, o "A confirmar" no `@senao` de um `@se campo` vazio vira o campo daquele dado: digitar por cima preenche o dado (daquela cidade). `@a_confirmar` ainda funciona (texto geral, padrão "A confirmar"), mas o guia não recomenda.

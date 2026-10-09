@@ -40,6 +40,8 @@ export interface Evento {
   patrocinios?: { porPagina: Record<string, ComposicaoPatrocinio>; estilo?: EstiloPatrocinio; /** cotas do evento (sem isso, as padrão) */ cotas?: Cota[] };
   /** mudanças feitas fora do evento (ex.: na aba Patrocínios) que ainda não foram publicadas */
   pendencia?: { desde: string; motivos: string[] };
+  /** modo automático: depois do último dia (+ horas) a cidade/etapa vira "realizado" e o site é republicado sozinho */
+  automacao?: { ativo: boolean; horas: number; /** linhas que já saíram como "realizado" na última publicação */ realizados?: string[] };
   /** ordem dos blocos de mídia na tela do publicador, por página (não muda o site) */
   ordemMidia?: Partial<Record<TipoPagina, string[]>>;
   publicacoes: Publicacao[];

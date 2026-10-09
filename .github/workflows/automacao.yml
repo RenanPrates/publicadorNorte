@@ -1,0 +1,22 @@
+# Modo automático dos eventos: de hora em hora, pede ao publicador para republicar
+# os eventos em que alguma cidade passou a "realizado" (depois do último dia + horas configuradas).
+# Precisa do segredo AUTOMACAO_TOKEN aqui no GitHub e da mesma chave na variável AUTOMACAO_TOKEN do publicador.
+name: Automação (status realizado)
+
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+jobs:
+  conferir:
+    # só no repositório principal (a cópia da infra-csc não roda)
+    if: github.repository == 'RenanPrates/publicadorNorte'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chamar o publicador
+        env:
+          TOKEN: ${{ secrets.AUTOMACAO_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then echo "Falta o segredo AUTOMACAO_TOKEN"; exit 1; fi
+          curl -fsS -X POST -H "Authorization: Bearer $TOKEN" https://publicador-norte.infraestrutura-685.workers.dev/api/automacao

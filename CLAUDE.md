@@ -16,7 +16,7 @@ Antes de qualquer tarefa, leia:
 - **O motor não muda sem teste.** Toda alteração em `packages/motor` vem com teste novo ou ajustado em `CASOS_DE_TESTE`. Nenhum PR passa com teste vermelho.
 - **O motor é puro.** Sem acesso a banco, rede, DOM ou `Date.now()` direto. Recebe HTML + cadastro + arquivos e devolve páginas + avisos. Data/hora entram como parâmetro.
 - **Nomes de variáveis da base são fixos** (`cidade`, `uf`, `regiao`, `status`, `local`, `data_inicio`, `data_fim`, `gratuito`, `preco_vista`, `parcelamento`, `valor_parcelado`, `porcentagem_desconto`, `preco_comum`, `desconto_em_reais`, `link_inscricao`, `preco_prime`, `preco_prime_parcelado`, `valor_adicional_prime`, `link_inscricao_prime`). Não renomeie, não crie sinônimos.
-- **Status só tem `em breve` (padrão, vazio) e `aberta`.** `@se status = em breve` e `= breve` são equivalentes.
+- **Status só tem `em breve` (padrão, vazio), `aberta` e `realizado`.** `@se status = em breve` e `= breve` são equivalentes. No modo automático do evento, a cidade vira `realizado` sozinha depois do último dia (mais as horas configuradas).
 - **O guia é contrato.** Se uma mudança altera o que o HTML precisa conter, atualize `docs/GUIA_VARIAVEIS_HTML.md` no mesmo PR e o verificador de HTML.
 - **Interface em português do Brasil**, textos curtos e diretos, sem jargão técnico para quem publica (designers e atendimento, não devs).
 - **Nunca apague dados do usuário sem confirmação.** Eventos, cadastros e mídias têm exclusão com confirmação.
@@ -76,6 +76,7 @@ apps/web/           Next.js 16 (App Router). Ler node_modules/next/dist/docs ant
 - Publicador no ar: https://publicador-norte.infraestrutura-685.workers.dev (senha da equipe).
 - O publicador roda na **Cloudflare** a partir de uma cópia deste repositório na organização infra-csc: a cada push na main, `.github/workflows/avisar-cloudflare.yml` avisa a cópia (segredo DISPARO_CLOUDFLARE) e o deploy sai na hora. A configuração do Worker está em apps/web/wrangler.jsonc e open-next.config.ts (`pnpm cf:build`); o CI monta esse build a cada push.
 - O destino final é a Cloudflare: tudo que é do GitHub fica atrás de `Armazenamento` e `DestinoPublicacao`. O app não pode usar APIs só de Node (roda em Workers via OpenNext).
+- Modo automático (status `realizado`): `.github/workflows/automacao.yml` chama `POST /api/automacao` de hora em hora com o segredo `AUTOMACAO_TOKEN` (no GitHub) — a mesma chave precisa estar na variável `AUTOMACAO_TOKEN` do publicador na Cloudflare.
 - Imports do motor sem extensão `.js` (o Turbopack não resolve `.js` → `.ts`).
 - As rotas de eventos ficam em `/api/hotsites`, não `/api/eventos`: a lista EasyPrivacy (bloqueador do Opera, uBlock, Brave) tem a regra `||workers.dev/api/event`, que derruba qualquer caminho `/api/event…` em `*.workers.dev`. Antes de criar rota nova, confira que o caminho não esbarra em listas de bloqueio.
 
