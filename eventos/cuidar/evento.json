@@ -574,8 +574,6 @@
     "sala6_texto": "",
     "equipe1_funcao": "Educadora e responsável técnica",
     "equipe2_funcao": "Produtor",
-    "equipe3_funcao": "",
-    "equipe4_funcao": "",
     "participar_texto": "Atendimento presencial sem necessidade de agendamento prévio.",
     "passo1_texto": "Veja quando a carreta chega à sua cidade e onde ela vai ficar.",
     "passo2_texto": "O atendimento é presencial e não precisa de agendamento. Leve um documento de identificação.",
@@ -636,8 +634,7 @@
     "data_inicio": "asd",
     "data_fim": "asd",
     "gratuito": "ad",
-    "preco_vista": "",
-    "equipe3_nome": "Douglas Soa"
+    "preco_vista": ""
   },
   "cidades": [
     {
@@ -663,7 +660,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:47:07.385Z",
+  "atualizadoEm": "2026-10-09T16:47:10.802Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
