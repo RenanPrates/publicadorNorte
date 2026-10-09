@@ -609,8 +609,8 @@
       "sala6_titulo": "",
       "equipe1_nome": "Yandra Trevisan",
       "equipe2_nome": "Marlon Abboud",
-      "equipe3_nome": "",
-      "equipe4_nome": "",
+      "equipe3_nome": "dsdf",
+      "equipe4_nome": "dfssdf",
       "equipe1_formacao": "Educação Física (USP)",
       "equipe1_bio": "Profissional de Educação Física formada pela USP, com experiência em treinamento, mobilidade, atendimento personalizado, gestão de academias e liderança de equipes. Atua como Personal Trainer e professora de mobilidade, combinando conhecimento técnico, gestão operacional e experiência com diferentes públicos.",
       "equipe2_formacao": "Educação Física, com pós-graduação em Administração e Marketing Esportivo",
@@ -649,5 +649,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:52:24.566Z"
+  "atualizadoEm": "2026-10-09T14:53:05.933Z"
 }
