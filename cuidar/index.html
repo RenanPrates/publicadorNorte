@@ -1334,7 +1334,7 @@ button,input{font:inherit;color:inherit}
     if (i === active && rooms[i].classList.contains('is-on')) return;
     active = i;
     rooms.forEach((r, k) => r.classList.toggle('is-on', k === i));
-    tabs.forEach((t, k) => { if (k === i) { t.setAttribute('aria-current', 'step'); t.scrollIntoView({ block: 'nearest', inline: 'nearest' }); } else t.removeAttribute('aria-current'); });
+    tabs.forEach((t, k) => { if (k === i) { t.setAttribute('aria-current', 'step'); const bar = t.parentElement; if (bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: t.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' }); } else t.removeAttribute('aria-current'); });
     prevB.disabled = i === 0 && scroller.scrollLeft < 8; nextB.disabled = i === rooms.length - 1;
   }
   function onScrollTrack() {
