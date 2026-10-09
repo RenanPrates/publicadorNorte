@@ -649,10 +649,25 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:56:30.057Z",
+  "atualizadoEm": "2026-10-09T14:57:02.875Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
     "ordem": {}
+  },
+  "rodape": {
+    "ativo": true,
+    "geral": {
+      "fonte": "",
+      "corFundo": "#16181d",
+      "corTexto": "#f1f2ee",
+      "corLinks": "#f1f2ee",
+      "logo": "",
+      "descricao": "",
+      "tituloLinks": "",
+      "links": [],
+      "redes": []
+    },
+    "porLinha": {}
   }
 }
