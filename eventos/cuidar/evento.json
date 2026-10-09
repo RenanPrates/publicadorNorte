@@ -736,7 +736,7 @@
       "data_fim": "25/02/2027",
       "gratuito": "sim",
       "preco_vista": "",
-      "datas_provisorias": "sim",
+      "datas_provisorias": "",
       "horario": "",
       "endereco": ""
     },
@@ -763,7 +763,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T19:16:25.785Z",
+  "atualizadoEm": "2026-10-09T19:17:04.541Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
