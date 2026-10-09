@@ -6,8 +6,10 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
   "observability": { "enabled": true },
+  // modo automático (status "realizado"): de hora em hora, worker.ts → scheduled → /api/automacao
+  "triggers": { "crons": ["7 * * * *"] },
   // worker.ts: os domínios dos sites em produção são servidos antes do Next (lib/servidor/sitesProducao.ts)
-  // configurações sem segredo; GITHUB_TOKEN, SENHA_EQUIPE, AUTOMACAO_TOKEN e CLOUDFLARE_API_TOKEN entram como "secrets"
+  // configurações sem segredo; GITHUB_TOKEN, SENHA_EQUIPE e CLOUDFLARE_API_TOKEN entram como "secrets"
   "vars": {
     "GITHUB_REPO": "RenanPrates/publicadorNorte",
     "GITHUB_BRANCH_DADOS": "dados",

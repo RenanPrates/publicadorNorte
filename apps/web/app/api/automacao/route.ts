@@ -1,15 +1,16 @@
 // Modo automático: republica os eventos publicados em que alguma cidade/etapa passou a "realizado"
 // (e a produção também, se ela estava na mesma versão do teste).
-// Chamada de hora em hora (GitHub Actions) com Authorization: Bearer <AUTOMACAO_TOKEN>.
+// Chamada de hora em hora pelo cron da Cloudflare (worker.ts → scheduled) com Authorization: Bearer <chaveAutomacao>.
 import { realizadosAgora } from '@/lib/comum/montagem';
+import { chaveAutomacao } from '@/lib/servidor/automacaoChave';
 import { servicos } from '@/lib/servidor/config';
 import { NaoPublicavel, publicarEvento } from '@/lib/servidor/publicar';
 import { erro, responder } from '@/lib/servidor/rotas';
 
 export async function POST(req: Request) {
   return responder(req, async () => {
-    const chave = process.env.AUTOMACAO_TOKEN;
-    if (!chave) return erro(503, 'Automação não configurada (falta AUTOMACAO_TOKEN).');
+    const chave = await chaveAutomacao({ AUTOMACAO_TOKEN: process.env.AUTOMACAO_TOKEN, GITHUB_TOKEN: process.env.GITHUB_TOKEN });
+    if (!chave) return erro(503, 'Automação não configurada (falta GITHUB_TOKEN).');
     if (req.headers.get('authorization') !== `Bearer ${chave}`) return erro(401, 'Chave da automação inválida.');
     const { armazenamento, destino } = servicos();
     const agora = new Date();
