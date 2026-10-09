@@ -3,7 +3,13 @@
   "slug": "cuidar",
   "nome": "Cuidar",
   "formato": "unica",
-  "paginas": {},
+  "paginas": {
+    "unica": {
+      "arquivo": "index.html",
+      "bytes": 117691,
+      "enviadoEm": "2026-10-09T14:37:47.932Z"
+    }
+  },
   "vars": {},
   "gerais": {},
   "cidades": [],
@@ -14,5 +20,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:37:05.185Z"
+  "atualizadoEm": "2026-10-09T14:37:49.140Z"
 }
