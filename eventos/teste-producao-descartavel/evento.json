@@ -23,12 +23,9 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-09T19:54:56.079Z",
-  "atualizadoEm": "2026-10-09T19:56:08.697Z",
+  "atualizadoEm": "2026-10-09T19:56:15.183Z",
   "producao": {
-    "dominios": [
-      "teste-publicador.example.com",
-      "www.teste-publicador.example.com"
-    ],
+    "dominios": [],
     "versao": null,
     "commit": null,
     "historico": [
