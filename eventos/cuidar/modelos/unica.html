@@ -468,7 +468,7 @@ button,input{font:inherit;color:inherit}
 .qgroup details[open]::details-content{block-size:auto}
 
 /* ================= FOOTER ================= */
-.spons{position:relative;background:var(--white);color:var(--ink);border-bottom:1px solid var(--ink-line)}
+.spons{position:relative;background:var(--white);color:var(--ink);border-block:1px solid var(--ink-line)}
 .spons__in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .spons__grp{padding:16px 0 18px;min-width:0}
 .spons__grp:nth-of-type(even){padding-left:14px;border-left:1px solid var(--ink-line)}
@@ -610,7 +610,7 @@ button,input{font:inherit;color:inherit}
   .spons__in{grid-template-columns:2fr 2fr 1fr 1fr}
   .spons__grp,.spons__grp:nth-of-type(n){padding:26px clamp(20px,2.6vw,40px) 28px;border-top:0;border-left:1px solid var(--ink-line)}
   .spons__grp:first-of-type{border-left:0;padding-left:0}
-  .spons__grp:last-child{padding-right:0}
+  .spons__grp:last-of-type{padding-right:0}
   .spons__grp li{flex:0 1 150px}
   .spons__logo{height:64px}
   .team__grid{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);grid-template-rows:auto 1fr;grid-template-areas:"photo people" "photo feat";column-gap:clamp(40px,5.5vw,96px);row-gap:clamp(28px,3vw,44px);margin-top:48px}
@@ -742,6 +742,17 @@ button,input{font:inherit;color:inherit}
     <div class="hero__media">
       <img class="hero__bg hero__bg--desk" src="@media_hero_desktop" alt="Ilustração do KV: o médico do CUIDAR mede a pressão de uma participante dentro da carreta." width="1920" height="1080" fetchpriority="high">
       <img class="hero__bg hero__bg--mob" src="@media_hero_mobile" alt="Ilustração do KV: o médico do CUIDAR mede a pressão de uma participante dentro da carreta." width="1090" height="1080" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- PATROCÍNIO E REALIZAÇÃO (módulo independente) -->
+  <section class="spons" id="patrocinadores" aria-label="Patrocínio, apoio, incentivo e realização">
+    <div class="wrap spons__in">
+      <h2 class="sr-only">Patrocínio, apoio, incentivo e realização</h2>
+      <div class="spons__grp"><p>Patrocínio</p><ul><li><img class="spons__logo" src="@img_logos_patrocinio1" alt="@logo_patrocinio1_nome" width="320" height="128" loading="lazy"></li><li><img class="spons__logo" src="@img_logos_patrocinio2" alt="@logo_patrocinio2_nome" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp"><p>Apoio</p><ul><li><img class="spons__logo" src="@img_logos_apoio1" alt="@logo_apoio1_nome" width="320" height="128" loading="lazy"></li><li><img class="spons__logo" src="@img_logos_apoio2" alt="@logo_apoio2_nome" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp"><p>Incentivo</p><ul><li><img class="spons__logo" src="@img_logos_incentivo1" alt="@logo_incentivo1_nome" width="320" height="128" loading="lazy"></li></ul></div>
+      <div class="spons__grp"><p>Realização</p><ul><li><img class="spons__logo" src="@img_logos_realizacao1" alt="@logo_realizacao1_nome" width="320" height="128" loading="lazy"></li></ul></div>
     </div>
   </section>
 
@@ -1438,8 +1449,13 @@ button,input{font:inherit;color:inherit}
     @img_equipe_membro1 … @img_equipe_membro4 — equipe/, foto 4:5 de cada profissional
     Fixo, sem variável: _media/pagina/marca/logo.webp
 
-  Patrocinadores: não ficam no HTML; o publicador monta a seção (banco geral de logos) antes do rodapé.
-  Seções (podem ser escondidas ou reordenadas no passo Seções): #topo (banner), #sobre, #projeto,
+  Patrocinadores: módulo próprio logo abaixo do banner, <section id="patrocinadores"> (pedido do cliente).
+    Se o publicador também gerar a seção automática antes do rodapé, esconda uma das duas no passo Seções.
+    @logo_patrocinio1_nome, @logo_patrocinio2_nome, @logo_apoio1_nome, @logo_apoio2_nome,
+    @logo_incentivo1_nome, @logo_realizacao1_nome — nome de cada marca (texto alternativo da imagem)
+    @img_logos_patrocinio1, @img_logos_patrocinio2, @img_logos_apoio1, @img_logos_apoio2,
+    @img_logos_incentivo1, @img_logos_realizacao1 — logos/ (hoje com marcadores "LOGO")
+  Seções (podem ser escondidas ou reordenadas no passo Seções): #topo (banner), #patrocinadores, #sobre, #projeto,
     #atividades (carreta), #equipe, #como-participar, #na-sua-cidade, #duvidas. Rodapé em <footer> fora delas.
   Galeria: fora deste template até chegarem as fotos reais.
 -->
