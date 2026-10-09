@@ -812,7 +812,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T22:05:20.931Z",
+  "atualizadoEm": "2026-10-09T22:05:35.507Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
@@ -852,14 +852,18 @@
       "circuitocuidar.com.br",
       "www.circuitocuidar.com.br"
     ],
-    "versao": 5,
-    "commit": "8c718819a01faddc7942f7e0ec6cabb95447a637",
+    "versao": 6,
+    "commit": "ea5a2677b8701e0b15822467f30921b8cbd2117b",
     "historico": [
       {
         "versao": 5,
         "em": "2026-10-09T21:35:00.545Z"
+      },
+      {
+        "versao": 6,
+        "em": "2026-10-09T22:05:35.507Z"
       }
     ],
-    "em": "2026-10-09T21:35:00.545Z"
+    "em": "2026-10-09T22:05:35.507Z"
   }
 }

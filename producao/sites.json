@@ -2,14 +2,14 @@
   "sites": {
     "circuitocuidar.com.br": {
       "slug": "cuidar",
-      "commit": "8c718819a01faddc7942f7e0ec6cabb95447a637",
-      "versao": 5,
+      "commit": "ea5a2677b8701e0b15822467f30921b8cbd2117b",
+      "versao": 6,
       "principal": "circuitocuidar.com.br"
     },
     "www.circuitocuidar.com.br": {
       "slug": "cuidar",
-      "commit": "8c718819a01faddc7942f7e0ec6cabb95447a637",
-      "versao": 5,
+      "commit": "ea5a2677b8701e0b15822467f30921b8cbd2117b",
+      "versao": 6,
       "principal": "circuitocuidar.com.br"
     }
   }
