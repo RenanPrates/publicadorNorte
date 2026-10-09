@@ -384,65 +384,55 @@
       "ignorar": false
     },
     "cidade": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "uf": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "data_inicio": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "data_fim": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "datas_provisorias": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "local": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "horario": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "endereco": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "gratuito": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "preco_vista": {
-      "dono": "geral",
+      "dono": "cidade",
       "ignorar": false,
       "formula": "parcelamento * valor_parcelado",
-      "excluida": false,
-      "manual": true
+      "excluida": false
     },
     "faq1_pergunta": {
       "dono": "geral",
@@ -643,7 +633,17 @@
   },
   "cidades": [
     {
-      "_id": "485b95e0"
+      "_id": "485b95e0",
+      "cidade": "Cotia",
+      "uf": "SP",
+      "local": "Praça dos Romeiros (Caucaia do Alto)",
+      "data_inicio": "13/10/2026",
+      "data_fim": "23/10/2026",
+      "gratuito": "sim",
+      "preco_vista": "",
+      "datas_provisorias": "",
+      "horario": "",
+      "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185"
     }
   ],
   "etapas": [],
@@ -655,7 +655,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:15:52.205Z",
+  "atualizadoEm": "2026-10-09T17:24:51.782Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
