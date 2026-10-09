@@ -628,7 +628,7 @@
     "preco_vista": "",
     "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185",
     "a_confirmar": "",
-    "contato": "Produção David França +55 71 9294-3793 Marlon Abboud +55 31 9912-3244",
+    "contato": "Produção David França +55 71 9294-3793\nMarlon Abboud +55 31 9912-3244",
     "tema6_titulo": "",
     "tema6_texto": "",
     "tema6_etapa": "",
@@ -804,7 +804,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T21:18:35.122Z",
+  "atualizadoEm": "2026-10-09T21:18:38.029Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
