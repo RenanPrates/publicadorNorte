@@ -2645,7 +2645,7 @@ html.hdr-off .scroll-prog{transform:translateY(0) scaleX(var(--sp,0))}
   }
 
   /* ---------- respiro do módulo aberto ---------- */
-  #mod-gerador section, #mod-carta section{padding-block:0}
+  #mod-gerador .step, #mod-carta .cw-step{padding-block:0}
   #mod-gerador .wrap{
     min-height:0; justify-content:flex-start;
     padding-block:clamp(2rem,5vh,3.2rem) clamp(2.5rem,7vh,4.5rem);
@@ -3177,7 +3177,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 }
 /* dúvidas → extras: sem linha e respiro sobrando */
 .extras-head{border-top:0 !important}
-@media (max-width:999px){ #duvidas{padding-bottom:1.5rem !important} }
+@media (max-width:999px){ .extras-head{padding-top:clamp(2.5rem,7vw,4rem)} }
 @media (max-width:699px){
   .kp{height:calc(100svh - var(--hdr, 66px) - 120px - var(--i) * 12px) !important; min-height:430px !important}
   .kp-img{min-height:150px}
@@ -3521,7 +3521,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 #compra.is-o2 .cp-sel--prime{display:flex !important}
 #compra.is-o2 .cp-go--prime{display:inline-flex !important}
 .cp-breve{background:rgba(22,20,27,.08) !important; color:var(--ink-soft) !important; cursor:default; box-shadow:none !important}
-@media (min-width:860px){ .cp-opts > .cp-opt:only-child{grid-column:1 / -1; max-width:560px; justify-self:center; width:100%} }
+@media (min-width:860px){ .cp-opts > .cp-opt:only-of-type{grid-column:1 / -1; max-width:560px; justify-self:center; width:100%} }
 </style>
 <style>:where(video[data-pub-midia],img[data-pub-midia]){display:block;width:100%;height:100%;object-fit:cover}</style></head>
 <body>
@@ -3602,7 +3602,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 <main>
 
 <!-- ================= 1 · HERO ================= -->
-<section class="hero hero--oferta" id="topo" data-chem="dark">
+<section class="hero hero--oferta" id="topo" aria-label="Abertura do combo" data-chem="dark">
   <div class="ctr hero-grid">
     <div class="hero-kick">
       <span class="ho-tag">Combo Estações 2027<span class="ho-sp"> · Rio de Janeiro</span></span>
@@ -3651,7 +3651,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 </section>
 
 <!-- ================= 3 · COMPRA — escolha do combo ================= -->
-<section class="compra sec cp-sec" id="compra">
+<section class="compra sec cp-sec" id="compra" aria-label="Escolha seu combo">
   <div class="ctr">
     <div class="cp-head">
       <span class="kicker reveal"><span class="dot"></span> Escolha seu combo</span>
@@ -3699,7 +3699,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 </section>
 
 <!-- ================= 4 · OS KITS / AS QUATRO ETAPAS ================= -->
-<section class="sec" id="etapas" data-from style="--from:var(--paper-2)">
+<section class="sec" id="etapas" aria-label="Kits das etapas">
   <div class="ctr">
     <div class="sec-head etapas-head">
       <div>
@@ -3757,7 +3757,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 </section>
 
 <!-- ================= 5 · TEMA — A QUÍMICA DA CORRIDA — capítulo contado pelo scroll ================= -->
-<section class="quim" id="como-funciona" data-step="0">
+<section class="quim" id="como-funciona" aria-label="A química da corrida" data-step="0">
   <div class="quim-pin" data-chem="dark">
     <div class="ctr quim-grid">
       <div class="quim-txt" aria-live="polite">
@@ -3839,7 +3839,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 </section>
 
 <!-- ================= 7 · DÚVIDAS ================= -->
-<section class="faq sec" id="duvidas" data-from style="--from:var(--paper-2)">
+<section class="faq sec" id="duvidas" aria-label="Dúvidas">
   <div class="ctr faq-grid">
     <div>
       <span class="kicker reveal"><span class="dot"></span> Dúvidas</span>
@@ -3876,12 +3876,14 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 </section>
 
 <!-- ================= 8 · EXTRAS ================= -->
+<section class="extras" id="extras" aria-label="Extras">
 <div class="ctr extras-head">
   <span class="kicker reveal"><span class="dot"></span> Extras</span>
   <h2 class="h2 reveal d1">Enquanto a largada não chega.</h2>
   <p class="lead reveal d2">Descubra qual das quatro químicas combina com você e escreva a carta com os tempos que você promete para 2027.</p>
 </div>
-  <section class="modulo" id="mod-gerador">
+</section>
+  <section class="modulo" id="mod-gerador" aria-label="Teste: qual a sua química?">
     <details class="mod-fold">
       <summary class="mod-abre capa">
         <div class="capa-art" aria-hidden="true">
@@ -3899,27 +3901,27 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     <div class="mod-caixa">
 
 <div class="wrap">
-  <main class="g-shell">
+  <div class="g-shell">
 
     <!-- ---------- abertura ---------- -->
-    <section class="step on" id="s-intro">
+    <div class="step on" id="s-intro">
       <h1>Qual a sua química?</h1>
       <p class="g-prose" style="margin-top:1.3rem; max-width:34ch">Descubra aqui e compartilhe.</p>
       <p style="margin-top:2.2rem"><button class="g-cta" id="go">Começar</button></p>
       <p class="g-small" style="margin-top:1rem">Leva menos de um minuto</p>
-    </section>
+    </div>
 
     <!-- ---------- perguntas ---------- -->
-    <section class="step" id="s-quiz">
+    <div class="step" id="s-quiz">
       <button class="g-voltar" id="voltar" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4.5m4.5-4.5L4.5 10 9 14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
       <div class="bar" id="bar"><i></i><i></i><i></i></div>
       <p class="qnum" id="qnum">Pergunta 1 de 3</p>
       <h2 id="qtext"></h2>
       <div class="opts" id="opts"></div>
-    </section>
+    </div>
 
     <!-- ---------- nome ---------- -->
-    <section class="step" id="s-name">
+    <div class="step" id="s-name">
       <button class="g-voltar" id="voltarNome" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4.5m4.5-4.5L4.5 10 9 14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
       <div class="bar"><i class="done"></i><i class="done"></i><i class="done"></i></div>
       <h2>Quase lá. Como você assina?</h2>
@@ -3929,10 +3931,10 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
         <input id="nome" type="text" maxlength="22" autocomplete="given-name" placeholder="Ex.: Pipo" enterkeyhint="done">
       </div>
       <p style="margin-top:1.8rem"><button class="g-cta" id="gerar" disabled>Gerar meu card</button></p>
-    </section>
+    </div>
 
     <!-- ---------- resultado ---------- -->
-    <section class="step" id="s-card">
+    <div class="step" id="s-card">
       <div class="result">
         <div class="canvas-box">
           <div class="fmt">
@@ -3953,9 +3955,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <p class="again"><button id="refazer">Refazer o teste</button></p>
         </div>
       </div>
-    </section>
+    </div>
 
-  </main>
+  </div>
 </div>
 
 
@@ -3964,7 +3966,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     </details>
   </section>
 
-  <section class="modulo" id="mod-carta">
+  <section class="modulo" id="mod-carta" aria-label="Cartas para o futuro">
     <details class="mod-fold">
       <summary class="mod-abre capa capa-c">
         <div class="capa-art" aria-hidden="true"><span class="cq-hex"></span><img class="selo-c" src="_media/praca/carta/selo.webp" alt="" width="760" height="866"></div>
@@ -3977,7 +3979,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     <div class="mod-caixa">
 <div class="cw" id="cw">
 
-  <section class="cw-step on" id="cw-etapa" aria-live="polite">
+  <div class="cw-step on" id="cw-etapa" aria-live="polite">
     <button class="cw-voltar" id="cwVoltar" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4.5m4.5-4.5L4.5 10 9 14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
     <div class="cw-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     <p class="cw-k" id="cwNum">Etapa 1 de 4</p>
@@ -4002,9 +4004,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     <div class="cw-pace vazio" id="cwPace"><b id="cwPaceN">—</b><span>min por km</span></div>
     <p class="cw-alerta" id="cwAlerta"></p>
     <button class="cw-cta" id="cwProx" type="button">Próxima etapa <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-  </section>
+  </div>
 
-  <section class="cw-step" id="cw-assina">
+  <div class="cw-step" id="cw-assina">
     <button class="cw-voltar" id="cwVoltarA" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4.5m4.5-4.5L4.5 10 9 14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar</button>
     <div class="cw-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     <p class="cw-k">Quase lá</p>
@@ -4025,9 +4027,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <p class="cw-erro">Marque a autorização para selar a promessa.</p>
     </div>
     <button class="cw-cta" id="selar" type="button">Selar minha promessa <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-  </section>
+  </div>
 
-  <section class="cw-step" id="cw-carta">
+  <div class="cw-step" id="cw-carta">
     <p class="cw-k">Promessa selada</p>
     <h2 class="cw-h">Sua carta para 2027</h2>
     <p class="cw-q" id="envio"></p>
@@ -4058,7 +4060,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       </div>
     </div>
     <p class="cw-edit"><button type="button" id="editar">Editar minha promessa</button></p>
-  </section>
+  </div>
 
 </div>
     </div>
@@ -4068,7 +4070,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 
 
 <!-- ================= 9 · FECHO ================= -->
-<section class="fecho sec" id="fecho" data-chem="light" data-from style="--from:#F4F1EA">
+<section class="fecho sec" id="fecho" aria-label="Fechamento" data-chem="light">
   <div class="ctr">
     <div class="fecho-els reveal" aria-hidden="true">
       <img src="_media/praca/icones/outono.webp" alt="" width="393" height="395" loading="lazy">
@@ -4261,12 +4263,12 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     var marcado = document.querySelector('input[name="versao"]:checked');
     var o2 = !!marcado && marcado.value === "o2";
     var cs = document.querySelector(o2 ? ".cp-sel--prime" : ".cp-sel--combo"); if (cs) { cs.classList.remove("flash"); void cs.offsetWidth; cs.classList.add("flash"); }
-    $("compra").classList.toggle("is-o2", o2);
-    document.getElementById("sticky").classList.toggle("is-o2", o2);
+    if ($("compra")) $("compra").classList.toggle("is-o2", o2);
+    if ($("sticky")) $("sticky").classList.toggle("is-o2", o2);
   }
   radios.forEach(function(r){ r.addEventListener("change", atualizaResumo); });
   atualizaResumo();
-  $("buyBox").addEventListener("submit", function(e){ e.preventDefault(); });
+  if ($("buyBox")) $("buyBox").addEventListener("submit", function(e){ e.preventDefault(); });
 
   /* ---------- links ainda sem destino real: feedback em vez de silêncio (H1/H9) ---------- */
   var toast = $("toast"), tt;
@@ -4337,7 +4339,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   var econ = $("economia") || $("compra"), hero = $("topo"), inc = $("incluso"), compra = $("compra"), box = $("buyBox"), fecho = $("fecho");
   var sticky = $("sticky"), stickyBtn = $("stickyBtn"), viuPreco = false;
 
-  function visivel(el, vh){ var r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < vh; }
+  function visivel(el, vh){ if (!el) return false; var r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < vh; }
   function tick(){
     var y = window.scrollY, vh = window.innerHeight, H = document.documentElement.scrollHeight - vh;
     quimica(); hoodieGrow(); quimica.tot = 0;
@@ -4373,11 +4375,11 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     if (atual >= 0 && navSecs[atual].getBoundingClientRect().bottom < vh * .2) atual = -1;
     navLinks.forEach(function(a, i){ var on = i === atual; if (on !== a.hasAttribute("aria-current")) { if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); } });
 
-    if (econ.getBoundingClientRect().top < vh * .6 || compra.getBoundingClientRect().top < vh * .75) viuPreco = true;
+    if ((econ && econ.getBoundingClientRect().top < vh * .6) || (compra && compra.getBoundingClientRect().top < vh * .75)) viuPreco = true;
     sticky.classList.toggle("priced", viuPreco);
-    var sbT = viuPreco ? "Garantir" : "Ver preço"; if (stickyBtn.textContent !== sbT) stickyBtn.textContent = sbT;
-    var passouHero = hero.getBoundingClientRect().bottom < 0;
-    var viuValor = inc.getBoundingClientRect().top < vh * .4;
+    var sbT = viuPreco ? "Garantir" : "Ver preço"; if (stickyBtn && stickyBtn.textContent !== sbT) stickyBtn.textContent = sbT;
+    var passouHero = hero ? hero.getBoundingClientRect().bottom < 0 : y > vh * .5;
+    var viuValor = inc ? inc.getBoundingClientRect().top < vh * .4 : passouHero;
     var qFim = quim && quim.getAttribute("data-step") === "5" && visivel(quim, vh);
     var hdBig = hdGrow && hdGrow.classList.contains("is-big") && !reduce && visivel(inc2, vh);
     var ecCta = document.querySelector(".ec5-cta");
@@ -4404,7 +4406,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     k.addEventListener("focus", function(){ ativaKit(i); });
     if (hoverOk) k.addEventListener("mouseenter", function(){ clearTimeout(ht); ht = setTimeout(function(){ ativaKit(i); }, 120); });
   });
-  if (hoverOk) document.getElementById("kits").addEventListener("mouseleave", function(){ clearTimeout(ht); });
+  if (hoverOk && document.getElementById("kits")) document.getElementById("kits").addEventListener("mouseleave", function(){ clearTimeout(ht); });
   l2.forEach(function(b, i){ b.addEventListener("click", function(){ ativaKit(i); }); });
 
   /* ---------- economia: contador do desconto ---------- */
@@ -4448,6 +4450,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 
 (function(){
   "use strict";
+  if (!document.getElementById("mod-gerador")) return; /* seção escondida no publicador */
 
   /* ============ dados ============ */
   var QUIMICAS = {
@@ -4940,6 +4943,9 @@ window.CardShare = (function(){
   return { F: F, SER: SER, img: img, fontes: fontes, txt: txt, cabe: cabe, hex: hex, rr: rr, malha: malha, tinge: tinge, logo: logo, ls: ls, enviar: enviar, prepara: prepara };
 })();
 
+/* Cartas para o futuro: só roda se a seção existir (o publicador pode escondê-la) */
+(function(){
+if (!document.getElementById("mod-carta")) return;
 /* ============ PARÂMETROS EDITÁVEIS ============ */
 /* Etapas e distâncias disponíveis em cada uma. */
 var ETAPAS = [
@@ -5212,6 +5218,7 @@ carrega();
   var cp = document.querySelector("#mod-carta .capa");
   if (cp && "IntersectionObserver" in window) new IntersectionObserver(function(es, ob){ if (es[0].isIntersecting) { cp.classList.add("in-cq"); ob.disconnect(); } }, { threshold:.35 }).observe(cp);
 })();
+})();
 
 </script>
 
@@ -5430,6 +5437,14 @@ carrega();
     @img_mandala_completa — mandala/, igual em todas as páginas
   Fixos (sem variável, dentro de _media/praca/): marca/, icones/, mandala/peca-*, quimica/, teste/, carta/.
   Fontes Outfit e Archivo embutidas no CSS.
+  Seções (podem ser escondidas ou mudar de ordem no passo Seções; cada uma se sustenta sozinha):
+    #topo (abertura), #incluso (hoodie), #compra (escolha do combo), #etapas (kits),
+    #como-funciona (química da corrida), #duvidas, #extras (abertura do teste e da carta),
+    #mod-gerador (teste "Qual a sua química?"), #mod-carta (Cartas para o futuro), #fecho.
+    Se esconder #mod-gerador e #mod-carta, esconda #extras junto.
+  Patrocinadores: não há seção no HTML (o publicador insere antes do rodapé).
+  Rodapé: <footer> fora das seções; só marca, evento/cidade e link do regulamento.
+  Card do Prime opcional: CSS usa :only-of-type para o card do combo ocupar a largura toda sem o Prime.
   Ficaram fixos no HTML: distâncias da Carta para o futuro (JS), textos de química e frases de cada estação.
 -->
 </body>
