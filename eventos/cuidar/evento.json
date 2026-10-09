@@ -649,7 +649,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:58:08.492Z",
+  "atualizadoEm": "2026-10-09T14:58:27.465Z",
   "secoes": {
     "ocultas": [
       "unica#@rodape"
@@ -661,7 +661,7 @@
     "ativo": true,
     "geral": {
       "fonte": "",
-      "corFundo": "#16181d",
+      "corFundo": "#6a4ff5",
       "corTexto": "#f1f2ee",
       "corLinks": "#f1f2ee",
       "logo": "",
