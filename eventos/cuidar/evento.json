@@ -647,7 +647,7 @@
     },
     {
       "_id": "12f009ec",
-      "cidade": "Paiva city",
+      "cidade": "ipaiva city",
       "uf": "SP",
       "local": "Praça dos Romeiros (Caucaia do Alto)",
       "data_inicio": "13/10/2026",
@@ -668,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:31:44.088Z",
+  "atualizadoEm": "2026-10-09T17:31:50.860Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
