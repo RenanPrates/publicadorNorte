@@ -636,7 +636,7 @@
     "data_inicio": "asd",
     "data_fim": "asd",
     "gratuito": "ad",
-    "preco_vista": "asd"
+    "preco_vista": ""
   },
   "cidades": [
     {
@@ -662,7 +662,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:41:18.996Z",
+  "atualizadoEm": "2026-10-09T16:41:22.242Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
