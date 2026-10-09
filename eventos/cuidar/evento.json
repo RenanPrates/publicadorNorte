@@ -746,7 +746,7 @@
       "uf": "SP",
       "local": "",
       "data_inicio": "02/03/2027",
-      "data_fim": "25/02/2027",
+      "data_fim": "12/03/2027",
       "gratuito": "sim",
       "preco_vista": "",
       "datas_provisorias": "sim",
@@ -763,7 +763,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T19:16:20.513Z",
+  "atualizadoEm": "2026-10-09T19:16:25.785Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
