@@ -564,7 +564,7 @@
     "sala3_texto": "Testes e orientações individuais para conhecer o condicionamento físico e promover mais saúde e qualidade de vida.",
     "sala4_texto": "Práticas orientadas por profissionais, com exercícios adaptados aos participantes, e encontros educativos sobre saúde da mulher, alimentação e prática de atividades físicas.",
     "sala5_texto": "Apresentação dos resultados, orientações individuais e, quando necessário, encaminhamento para outros serviços.",
-    "sala6_texto": "",
+    "sala6_texto": "teste",
     "equipe1_funcao": "Educadora e responsável técnica",
     "equipe2_funcao": "Produtor",
     "participar_texto": "Atendimento presencial sem necessidade de agendamento prévio.",
@@ -669,7 +669,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:52:18.670Z",
+  "atualizadoEm": "2026-10-09T17:52:22.680Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
