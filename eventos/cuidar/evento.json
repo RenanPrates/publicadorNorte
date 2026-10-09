@@ -654,7 +654,7 @@
       "data_fim": "23/10/2026",
       "gratuito": "sim",
       "preco_vista": "",
-      "datas_provisorias": "sim",
+      "datas_provisorias": "",
       "horario": "",
       "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185"
     }
@@ -668,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:34:06.282Z",
+  "atualizadoEm": "2026-10-09T17:34:09.734Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
