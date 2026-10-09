@@ -23,5 +23,14 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-09T19:54:56.079Z",
-  "atualizadoEm": "2026-10-09T19:55:11.466Z"
+  "atualizadoEm": "2026-10-09T19:55:17.876Z",
+  "producao": {
+    "dominios": [
+      "teste-publicador.example.com",
+      "www.teste-publicador.example.com"
+    ],
+    "versao": null,
+    "commit": null,
+    "historico": []
+  }
 }
