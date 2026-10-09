@@ -525,7 +525,7 @@
     "info_publico": "A partir de 16 anos",
     "info_agendamento": "Sem agendamento",
     "hashtag": "EUMECUIDO",
-    "hero_texto": "O Cuidar leva saúde para mais perto das pessoas, promovendo prevenção e bem-estar por meio de avaliações, atividades físicas orientadas e informações que ajudam a cuidar da saúde. ABC",
+    "hero_texto": "O Cuidar leva saúde para mais perto das pessoas, promovendo prevenção e bem-estar por meio de avaliações, atividades físicas orientadas e informações que ajudam a cuidar da saúde.",
     "logo_patrocinio1_nome": "Patrocinador 1",
     "logo_patrocinio2_nome": "Patrocinador 2",
     "logo_apoio1_nome": "Apoiador 1",
@@ -629,5 +629,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T15:19:45.273Z",
-  "atualizadoEm": "2026-10-09T15:25:33.335Z"
+  "atualizadoEm": "2026-10-09T15:25:36.390Z"
 }
