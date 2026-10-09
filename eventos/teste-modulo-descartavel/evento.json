@@ -14,7 +14,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T22:21:22.422Z",
-  "atualizadoEm": "2026-10-09T22:23:20.455Z",
+  "atualizadoEm": "2026-10-09T22:23:51.454Z",
   "rodape": {
     "ativo": false,
     "geral": {
@@ -29,5 +29,22 @@
       "redes": []
     },
     "porLinha": {}
+  },
+  "secoes": {
+    "ocultas": [],
+    "porLinha": {},
+    "ordem": {},
+    "modulos": {
+      "unica": [
+        {
+          "id": "pub-img-j260ib",
+          "largura": 60,
+          "espaco": "m",
+          "fundo": "",
+          "arquivo": "_media/modulos/faixa-teste.png",
+          "nome": "faixa-teste.png"
+        }
+      ]
+    }
   }
 }
