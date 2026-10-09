@@ -163,6 +163,7 @@ Os tapumes de cards fixos dos casos H1–H4 são fixtures sintéticos em `packag
 | J10 | `<div data-gratuito="@gratuito_1">` | problema: decisão guardada em atributo |
 | J11 | `<img src="assets/foto.webp">` | problema: mídia fora de `_media/` |
 | J12 | `@total_categorias_1`, `<!-- @se gratuito_1 == "sim" -->` | problemas: `total_` próprio; sintaxe do `@se` |
+| J13 | `<script>tab.scrollIntoView(…)</script>` | problema: rolagem da página inteira (o site abre no meio); `barra.scrollTo({ left })` não é problema |
 
 ## K. Seções (esconder e mostrar)
 

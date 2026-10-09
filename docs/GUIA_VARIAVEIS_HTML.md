@@ -548,6 +548,7 @@ Não use `@total_` para outra coisa. Para o número de categorias, use um nome s
 | Usar outro nome (`gratis`, `evento_gratuito`, `free`, `valor`, `preco`) | Os nomes são `gratuito` e `preco_vista` (ou `parcelamento` e `valor_parcelado`) |
 | Testar o status contra `aberto`, `abertas` ou `open` | O valor é `aberta` |
 | Calcular status, "próxima parada" ou "realizado" por JavaScript com a data do navegador | O publicador decide pelo modo automático; use `@se status = realizado` |
+| `elemento.scrollIntoView(…)` no JavaScript (ex.: trazer a aba ativa à vista) | Rola a página inteira até o elemento: o site abre no meio, não no topo. Role só a barra: `barra.scrollTo({ left: aba.offsetLeft - 16 })` |
 
 
 ### 12.5 Conferência antes de entregar o HTML
@@ -561,5 +562,6 @@ Procure no arquivo e confirme cada item:
 - [ ] Número de `<!-- @se` + `<!-- @repetir` + `<!-- @agrupar` = número de `<!-- @fim`
 - [ ] O status é testado como `<!-- @se status = realizado -->` e `<!-- @se status = aberta -->` (sem status calculado por JavaScript)
 - [ ] Nenhuma variável própria começa com `total_`
+- [ ] Nenhum `scrollIntoView` no JavaScript (o site precisa abrir no topo)
 
 Se algum item falhar, corrija antes de entregar.

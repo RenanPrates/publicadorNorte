@@ -161,7 +161,7 @@ tr:last-child td { border-bottom: 0; }
 @media (max-width: 1180px) { .split { grid-template-columns: minmax(0, 1fr); } .split > .lado { position: static; } }
 
 .prev { display: flex; flex-direction: column; gap: 10px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
-.frame-wrap { background: var(--sunk); border: 1px solid var(--line); border-radius: 12px; padding: 10px; overflow: hidden; position: relative; }
+.frame-wrap { background: var(--sunk); border: 1px solid var(--line); border-radius: 12px; padding: 10px; overflow: hidden; overflow: clip; position: relative; }
 .frame-wrap iframe { border: 0; background: #fff; border-radius: 6px; transform-origin: top left; display: block; }
 .frame-wrap iframe.atras { position: absolute; top: 10px; left: 10px; opacity: 0; pointer-events: none; }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
