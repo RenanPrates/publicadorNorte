@@ -1,4 +1,5 @@
-// Modo automático: republica os eventos publicados em que alguma cidade/etapa passou a "realizado".
+// Modo automático: republica os eventos publicados em que alguma cidade/etapa passou a "realizado"
+// (e a produção também, se ela estava na mesma versão do teste).
 // Chamada de hora em hora (GitHub Actions) com Authorization: Bearer <AUTOMACAO_TOKEN>.
 import { realizadosAgora } from '@/lib/comum/montagem';
 import { servicos } from '@/lib/servidor/config';
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
       const antes = e.automacao.realizados || [];
       if (agoraR.length === antes.length && agoraR.every((x, i) => x === antes[i])) continue;
       try {
-        const p = await publicarEvento(armazenamento, destino, r.slug, agora);
+        const p = await publicarEvento(armazenamento, destino, r.slug, agora, { acompanharProducao: true });
         feitos.push({ slug: r.slug, resultado: `publicado v${p.publicacao.versao} (${agoraR.length} realizado)` });
       } catch (x) {
         feitos.push({ slug: r.slug, resultado: 'não publicou: ' + (x instanceof NaoPublicavel ? x.message : String(x)) });

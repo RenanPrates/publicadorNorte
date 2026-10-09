@@ -326,6 +326,15 @@ Cada aviso leva ao passo onde se corrige.
 
 Gera `.zip` com `index.html`, as páginas e só os arquivos referenciados, na mesma estrutura de pastas. Registra no evento: data, número de páginas, avisos e nome do arquivo. No programa novo isso vira publicação em URL (ROADMAP, fase 1), mantendo o zip como opção de download.
 
+### 11.1 Teste e produção (programa novo)
+
+- **Teste:** "Publicar" gera as páginas e coloca a versão nova no GitHub Pages (`renanprates.github.io/publicadorNorte/<slug>/`). Cada publicação é uma versão; "Voltar o teste para esta versão" restaura uma anterior.
+- **Produção:** cada evento tem um **domínio próprio** (o primeiro da lista é o principal; os outros, como `www.`, redirecionam 301 para ele). "Levar a versão N para produção" (com confirmação) faz o domínio mostrar exatamente a versão N que está no teste; "Tirar do ar" (com confirmação) desliga. O passo Publicar mostra se a produção está igual ao teste ou atrás.
+- **Como o domínio é servido:** os domínios apontam para o próprio Worker do publicador na Cloudflare (Custom Domains). `apps/web/worker.ts` atende antes do Next: se o host não é do painel (`*.workers.dev`, `localhost` ou `PUBLICADOR_HOSTS`), procura o domínio no índice `producao/sites.json` do branch de dados e entrega a pasta do evento no commit da versão (conteúdo imutável, cache da Cloudflare). Um domínio de site nunca abre o painel. Mudanças de produção chegam ao domínio em até ~1 minuto.
+- **Ligar o domínio:** com `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`, o publicador liga/desliga sozinho os domínios no Worker (a zona precisa estar na conta da Cloudflare da Norte). Sem a chave, o passo Publicar mostra o passo a passo manual.
+- O mesmo domínio não pode estar em dois eventos. Evento com domínio não pode ser renomeado nem excluído (tire os domínios antes).
+- **Modo automático:** quando a automação republica (status "realizado"), a produção vai junto **se estava na mesma versão do teste**. Publicar pelo botão muda só o teste.
+
 ---
 
 ## 12. Dados de um evento (formato do protótipo)
