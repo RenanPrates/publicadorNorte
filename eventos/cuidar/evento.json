@@ -394,16 +394,22 @@
       "ignorar": false
     },
     "data_inicio": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "data_fim": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "datas_provisorias": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "local": {
       "dono": "cidade",
@@ -637,7 +643,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:40:22.058Z",
+  "atualizadoEm": "2026-10-09T16:40:25.196Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
