@@ -628,7 +628,7 @@
     "preco_vista": "",
     "endereco": "Av. Roque Celestino Pires, 1142 – Centro (Caucaia do Alto), Cotia – SP, 06727-185",
     "a_confirmar": "",
-    "contato": "Em breve",
+    "contato": "",
     "tema6_titulo": "",
     "tema6_texto": "",
     "tema6_etapa": "",
@@ -804,7 +804,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T21:06:27.346Z",
+  "atualizadoEm": "2026-10-09T21:17:30.337Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
