@@ -14,5 +14,20 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T22:21:22.422Z",
-  "atualizadoEm": "2026-10-09T22:21:22.422Z"
+  "atualizadoEm": "2026-10-09T22:21:51.562Z",
+  "rodape": {
+    "ativo": false,
+    "geral": {
+      "fonte": "",
+      "corFundo": "#16181d",
+      "corTexto": "#f1f2ee",
+      "corLinks": "#f1f2ee",
+      "logo": "_media/rodape/faixa-teste.png",
+      "descricao": "",
+      "tituloLinks": "",
+      "links": [],
+      "redes": []
+    },
+    "porLinha": {}
+  }
 }
