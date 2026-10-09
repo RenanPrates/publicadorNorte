@@ -649,7 +649,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:58:35.756Z",
+  "atualizadoEm": "2026-10-09T14:58:39.876Z",
   "secoes": {
     "ocultas": [
       "unica#@rodape"
@@ -664,7 +664,7 @@
       "corFundo": "#ffffff",
       "corTexto": "#f1f2ee",
       "corLinks": "#f1f2ee",
-      "logo": "",
+      "logo": "_media/pagina/logos/apoio1.webp",
       "descricao": "",
       "tituloLinks": "",
       "links": [],
