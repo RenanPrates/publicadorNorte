@@ -416,16 +416,22 @@
       "ignorar": false
     },
     "horario": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "endereco": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "gratuito": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "excluida": false,
+      "manual": true
     },
     "preco_vista": {
       "dono": "cidade",
@@ -643,7 +649,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:40:25.196Z",
+  "atualizadoEm": "2026-10-09T16:40:28.119Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
