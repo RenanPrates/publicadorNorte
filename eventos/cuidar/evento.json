@@ -649,14 +649,14 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T14:57:02.875Z",
+  "atualizadoEm": "2026-10-09T14:57:13.018Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
     "ordem": {}
   },
   "rodape": {
-    "ativo": true,
+    "ativo": false,
     "geral": {
       "fonte": "",
       "corFundo": "#16181d",
