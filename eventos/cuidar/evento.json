@@ -763,9 +763,11 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T19:17:50.137Z",
+  "atualizadoEm": "2026-10-09T19:26:24.349Z",
   "secoes": {
-    "ocultas": [],
+    "ocultas": [
+      "unica#patrocinadores"
+    ],
     "porLinha": {},
     "ordem": {}
   },
