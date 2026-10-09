@@ -570,7 +570,6 @@
     "passo1_texto": "Veja quando a carreta chega à sua cidade e onde ela vai ficar.",
     "passo2_texto": "O atendimento é presencial e não precisa de agendamento. Leve um documento de identificação.",
     "passo3_texto": "Depois, siga para a triagem, a avaliação, as atividades físicas e palestras e, por fim, as orientações.",
-    "passo4_texto": "",
     "info_custo_detalhe": "Para todos os participantes",
     "info_publico_detalhe": "Público do projeto",
     "info_agendamento_detalhe": "Atendimento presencial",
@@ -667,7 +666,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:52:29.510Z",
+  "atualizadoEm": "2026-10-09T17:53:29.503Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
