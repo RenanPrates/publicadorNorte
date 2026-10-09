@@ -650,7 +650,7 @@
       "cidade": "Ipava city",
       "uf": "SP",
       "local": "Praça dos Romeiros (Caucaia do Alto)",
-      "data_inicio": "13",
+      "data_inicio": "13/10",
       "data_fim": "23 out 2026",
       "gratuito": "sim",
       "preco_vista": "",
@@ -668,7 +668,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T17:33:08.281Z",
+  "atualizadoEm": "2026-10-09T17:33:43.249Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
