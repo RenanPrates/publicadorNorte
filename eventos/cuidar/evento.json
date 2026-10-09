@@ -796,7 +796,7 @@
   ],
   "versaoAtiva": 4,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T20:01:41.643Z",
+  "atualizadoEm": "2026-10-09T20:07:42.502Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
@@ -818,5 +818,14 @@
       "redes": []
     },
     "porLinha": {}
+  },
+  "producao": {
+    "dominios": [
+      "circuitocuidar.com.br",
+      "www.circuitocuidar.com.br"
+    ],
+    "versao": null,
+    "commit": null,
+    "historico": []
   }
 }
