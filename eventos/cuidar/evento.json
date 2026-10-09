@@ -768,11 +768,19 @@
       "paginas": 1,
       "avisos": 0,
       "url": "https://renanprates.github.io/publicadorNorte/cuidar/"
+    },
+    {
+      "versao": 2,
+      "commit": "18979ecdd20f54d950fe432e7cf7f3419c3dd9e3",
+      "em": "2026-10-09T19:50:07.667Z",
+      "paginas": 1,
+      "avisos": 0,
+      "url": "https://renanprates.github.io/publicadorNorte/cuidar/"
     }
   ],
-  "versaoAtiva": 1,
+  "versaoAtiva": 2,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T19:37:49.443Z",
+  "atualizadoEm": "2026-10-09T19:50:09.061Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
