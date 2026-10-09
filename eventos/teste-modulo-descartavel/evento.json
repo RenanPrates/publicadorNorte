@@ -14,7 +14,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T22:21:22.422Z",
-  "atualizadoEm": "2026-10-09T22:23:51.454Z",
+  "atualizadoEm": "2026-10-09T22:24:02.401Z",
   "rodape": {
     "ativo": false,
     "geral": {
@@ -33,7 +33,15 @@
   "secoes": {
     "ocultas": [],
     "porLinha": {},
-    "ordem": {},
+    "ordem": {
+      "unica": [
+        "a",
+        "pub-img-j260ib",
+        "b",
+        "c",
+        "pub-img-dkz0v7"
+      ]
+    },
     "modulos": {
       "unica": [
         {
@@ -43,6 +51,15 @@
           "fundo": "",
           "arquivo": "_media/modulos/faixa-teste.png",
           "nome": "faixa-teste.png"
+        },
+        {
+          "id": "pub-img-dkz0v7",
+          "largura": 30,
+          "espaco": "m",
+          "fundo": "#ffe9a8",
+          "svg": "<svg viewBox=\"0 0 200 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"80\" height=\"80\" fill=\"#ff8800\"/><circle cx=\"150\" cy=\"50\" r=\"40\" fill=\"#0066ff\"/></svg>",
+          "nome": "logo-teste.svg",
+          "cor": "#7a00cc"
         }
       ]
     }
