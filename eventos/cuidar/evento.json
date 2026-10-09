@@ -629,7 +629,8 @@
     "faq6_pergunta": "Como são as atividades físicas?",
     "faq7_pergunta": "Sobre o que são as palestras?",
     "faq8_pergunta": "Vou receber o resultado das avaliações?",
-    "faq10_pergunta": "Quando a carreta chega na minha cidade?"
+    "faq10_pergunta": "Quando a carreta chega na minha cidade?",
+    "cidade": "douglas city"
   },
   "cidades": [
     {
@@ -655,7 +656,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T16:40:31.332Z",
+  "atualizadoEm": "2026-10-09T16:40:58.546Z",
   "secoes": {
     "ocultas": [],
     "porLinha": {},
