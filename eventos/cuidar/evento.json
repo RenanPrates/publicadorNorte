@@ -820,7 +820,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-09T22:43:45.212Z",
+  "atualizadoEm": "2026-10-09T22:43:50.041Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores"
@@ -829,8 +829,8 @@
     "ordem": {
       "unica": [
         "topo",
-        "como-participar",
         "pub-img-dakvy3",
+        "como-participar",
         "patrocinadores",
         "sobre",
         "projeto",
