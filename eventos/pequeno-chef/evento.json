@@ -406,7 +406,8 @@
     }
   },
   "gerais": {
-    "preco_vista": ""
+    "preco_vista": "",
+    "equipe1_nome": "Douglas"
   },
   "cidades": [
     {
@@ -442,5 +443,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:38:14.836Z"
+  "atualizadoEm": "2026-10-13T17:38:31.963Z"
 }
