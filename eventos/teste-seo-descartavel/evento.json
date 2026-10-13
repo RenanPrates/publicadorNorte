@@ -14,5 +14,13 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:52:35.478Z",
-  "atualizadoEm": "2026-10-13T14:52:35.478Z"
+  "atualizadoEm": "2026-10-13T14:53:43.650Z",
+  "seo": {
+    "titulo": "Cuidar · saúde que chega perto",
+    "share": {
+      "titulo": "O Cuidar chegou na sua cidade",
+      "imagem": "_media/pagina/hero/foto.png"
+    },
+    "favicon": "_media/marca/logo.svg"
+  }
 }
