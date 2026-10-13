@@ -2524,5 +2524,9 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:09:16.101Z"
+  "atualizadoEm": "2026-10-13T20:10:12.847Z",
+  "automacao": {
+    "ativo": true,
+    "horas": 8
+  }
 }
