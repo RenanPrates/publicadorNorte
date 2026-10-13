@@ -23,7 +23,7 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T18:49:50.258Z",
-  "atualizadoEm": "2026-10-13T18:50:35.201Z",
+  "atualizadoEm": "2026-10-13T18:50:40.731Z",
   "galerias": {
     "galeria": [
       {
@@ -41,7 +41,7 @@
       {
         "id": "cwochgez",
         "arquivo": "_media/galerias/galeria/sao-paulo/aula3.png",
-        "cidade": "sp1",
+        "cidade": "rj1",
         "legenda": ""
       }
     ]
