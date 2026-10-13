@@ -581,18 +581,6 @@
     "rotulo_link_inscricao": "Link de inscrição:",
     "rotulo_contato": "Contato:",
     "contato": "",
-    "faq7_pergunta": "",
-    "faq7_resposta": "",
-    "faq8_pergunta": "",
-    "faq8_resposta": "",
-    "faq9_pergunta": "",
-    "faq9_resposta": "",
-    "faq10_pergunta": "",
-    "faq10_resposta": "",
-    "faq11_pergunta": "",
-    "faq11_resposta": "",
-    "faq12_pergunta": "",
-    "faq12_resposta": "",
     "galeria_eyebrow": "Galeria",
     "galeria_titulo": "Álbum",
     "galeria_titulo_destaque": "da estrada",
@@ -795,5 +783,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:39:47.448Z"
+  "atualizadoEm": "2026-10-13T20:42:24.290Z"
 }
