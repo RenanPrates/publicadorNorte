@@ -416,7 +416,7 @@
     },
     {
       "_id": "b6d6f15e",
-      "cidade": "",
+      "cidade": "asfaf",
       "local": "Osasco"
     }
   ],
@@ -439,5 +439,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:37:40.955Z"
+  "atualizadoEm": "2026-10-13T17:37:53.006Z"
 }
