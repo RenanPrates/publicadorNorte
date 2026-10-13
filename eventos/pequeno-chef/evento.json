@@ -2156,7 +2156,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:06:33.917Z",
+  "atualizadoEm": "2026-10-13T21:06:47.138Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2184,7 +2184,7 @@
       {
         "id": "bqrp9y3l",
         "arquivo": "_media/galerias/galeria/fortaleza/camiseta-frente-mmsp-27-1.png",
-        "cidade": "26203233",
+        "cidade": "ad56a3e2",
         "legenda": ""
       },
       {
