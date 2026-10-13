@@ -408,7 +408,12 @@
   "gerais": {
     "preco_vista": ""
   },
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "28164bd6",
+      "cidade": ""
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {
@@ -428,5 +433,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:34:59.819Z"
+  "atualizadoEm": "2026-10-13T17:37:04.527Z"
 }
