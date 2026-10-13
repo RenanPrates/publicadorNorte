@@ -406,7 +406,8 @@
     }
   },
   "gerais": {
-    "preco_vista": ""
+    "preco_vista": "",
+    "galeria_foto1_legenda": "tet"
   },
   "cidades": [],
   "etapas": [],
@@ -416,5 +417,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:32:10.581Z"
+  "atualizadoEm": "2026-10-13T17:32:22.208Z"
 }
