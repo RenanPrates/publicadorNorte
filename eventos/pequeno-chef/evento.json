@@ -411,7 +411,8 @@
   "cidades": [
     {
       "_id": "28164bd6",
-      "cidade": "São Paulo"
+      "cidade": "São Paulo",
+      "local": "Osasco"
     }
   ],
   "etapas": [],
@@ -433,5 +434,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:37:14.650Z"
+  "atualizadoEm": "2026-10-13T17:37:18.997Z"
 }
