@@ -405,6 +405,1378 @@
     "data_fim": {
       "dono": "cidade",
       "ignorar": false
+    },
+    "img_marca_logopequeno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_menusobre": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_sobre": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_menucarreta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_carreta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_menuequipe": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_equipe": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_menudatas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_datas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_menuduvidas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_duvidas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_inscricao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_abrir": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_menuinscricao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_botao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_botao_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_topo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_marca_logo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_logo_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_selo_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_texto_inicio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_texto_destaque1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_texto_destaque2_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_texto_destaque2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_texto_fim": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "publico": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_cidades": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_periodo_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "data_inicio_mes_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "data_inicio_ano": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "data_fim_mes_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "data_fim_ano": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "hero_link_datas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_ilustracao_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hero_base": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hero_pontos": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hero_folhas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hero_tomate": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_queijo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_batedor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_pimenta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_avental": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_tomate": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_rolo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo1_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_carreta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo1_imagem_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo1_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo2_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_massachef": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo2_imagem_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_massatigela": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_massasaco": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_massafarinha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo2_texto_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo2_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo3_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_panelabase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo3_imagem_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_panelavapor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_panelabolhas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo3_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo4_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_pratobase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo4_imagem_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_pratoprato": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_vapor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_brilhoclaro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_brilhoescuro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo4_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo5_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_passo5": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo5_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo6_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_passo6": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo6_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo7_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_passo7": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo7_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo8_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_sobre_passo8": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "passo8_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_rotulo_aulas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_aulas_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_aulas_pago": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_rotulo_idade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sobre_rotulo_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_onda1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_tigela": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_tabua2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_fora": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_dentro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_nota": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_girar_esquerda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_girar_direita": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_recolher": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_externa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_onda2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_chapeu": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_sem_foto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_rotulo_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe7_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto7": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe7_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe7_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe8_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto8": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe8_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe8_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_vazio_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe_vazio_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_aviso_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_aviso": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_dias": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_escolha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "rotulo_local": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "rotulo_horario": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "contagem_botao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "contagem_encerrada_status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "contagem_encerrada_texto": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "contagem_botao_encerrada": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_icones_compartilhar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_compartilhar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_pdf": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_arquivo_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_arquivo_tipo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "arquivo_material_aula": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_disponivel": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_rotulo_paginas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_rotulo_tamanho": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_baixar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_botao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_abrir": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_botao_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_livro_abrir": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_livro_pagina": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_livro_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_capa_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_capa_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_capa_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_capa_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_cenoura": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_alecrim": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_panela": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_abrir_todas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq1_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq1_resposta_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq1_resposta_preco": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq1_resposta_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq2_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq2_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq3_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq3_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq3_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq4_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq5_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone5": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq6_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone6": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "rotulo_link_inscricao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "rotulo_contato": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq7_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone7": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq7_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq8_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone8": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq8_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq9_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone9": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq9_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq10_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone10": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq10_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq11_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone11": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq11_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq12_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_duvidas_icone12": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq12_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_mural": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_mural": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_umauma": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_uma": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_filtro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_anterior": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_proxima": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_miniaturas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_apresentacao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_texto_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_item_gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_item1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_item2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_item3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_inscricao_chef": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_imagem_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "inscricao_proxima": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_folha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_eyebrow": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_nome_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_cor_verde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_cor_laranja": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_cor_noite": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_formato": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_formato_stories": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_formato_post": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_botao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_salvar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_whatsapp": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_facebook": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_copiar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_nota": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_abrir_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_previa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_agua": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_bancada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_corredor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_cozinha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_plateia": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carreta_adesivochef": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hero_chef": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_marca_logocard": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_alho": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_azeite": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_balanca": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_bolo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_cebola": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_cogumelo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_concha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_copo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_dolma": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_escorredor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_espatula": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_farelo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_frigideira": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_moedor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_pao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_pegador": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_pizza": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_pontos": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_ralador": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_sopa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_sorvete": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_tabua": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_tracos": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_xicara": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_dia": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_fim": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_encerrada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_msg": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contagem_msg_encerrada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_contador": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_vazio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_play": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_assistir": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "videos_nao_publicado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_livro_fechar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_todas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_sem_foto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_reservado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_fechar_todas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_msg": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_card_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_card_eu": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_card_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_card_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_card_rodape": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_ok": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_sem_suporte": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_erro_imagem": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_salva": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_erro_salvar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_download": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_salva_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhe_copiado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_abrir": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto1_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto1_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto2_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto2_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto3_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto3_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto4_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto4_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto5_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto5_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto6_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto6_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto7_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto7_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto8_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto8_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto9_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carreta_ponto9_texto": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -768,7 +2140,8 @@
     "img_galeria_foto9": "_media/pagina/galeria/foto2.png",
     "img_galeria_foto10": "_media/pagina/galeria/foto1.png",
     "img_galeria_foto11": "_media/pagina/galeria/foto2.png",
-    "img_equipe_foto1": "_media/pagina/equipe/foto1.png"
+    "img_equipe_foto1": "_media/pagina/equipe/foto1.png",
+    "img_carreta_externa": "_media/pagina/carreta/int-agua.webp"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -783,7 +2156,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:50:48.307Z",
+  "atualizadoEm": "2026-10-13T20:51:03.068Z",
   "automacao": {
     "ativo": false,
     "horas": 8
