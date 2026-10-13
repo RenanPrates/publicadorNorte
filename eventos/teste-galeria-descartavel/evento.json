@@ -23,5 +23,27 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T18:49:50.258Z",
-  "atualizadoEm": "2026-10-13T18:49:58.360Z"
+  "atualizadoEm": "2026-10-13T18:50:35.201Z",
+  "galerias": {
+    "galeria": [
+      {
+        "id": "4cy39cdn",
+        "arquivo": "_media/galerias/galeria/sao-paulo/aula1.png",
+        "cidade": "sp1",
+        "legenda": ""
+      },
+      {
+        "id": "ougt2kx3",
+        "arquivo": "_media/galerias/galeria/sao-paulo/aula2.png",
+        "cidade": "sp1",
+        "legenda": ""
+      },
+      {
+        "id": "cwochgez",
+        "arquivo": "_media/galerias/galeria/sao-paulo/aula3.png",
+        "cidade": "sp1",
+        "legenda": ""
+      }
+    ]
+  }
 }
