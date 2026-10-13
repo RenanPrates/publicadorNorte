@@ -407,7 +407,8 @@
   },
   "gerais": {
     "preco_vista": "",
-    "galeria_foto1_legenda": "tetste"
+    "galeria_foto1_legenda": "tetste",
+    "galeria_foto1_cidade": "teste"
   },
   "cidades": [],
   "etapas": [],
@@ -417,5 +418,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:32:25.662Z"
+  "atualizadoEm": "2026-10-13T17:32:38.123Z"
 }
