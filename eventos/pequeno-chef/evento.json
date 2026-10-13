@@ -1841,7 +1841,7 @@
     "sobre_aulas_pago": "abertas ao público geral",
     "sobre_rotulo_idade": "Idade",
     "sobre_rotulo_duracao": "Duração de cada aula",
-    "duracao_aula": "anaa",
+    "duracao_aula": "ananotte",
     "carreta_eyebrow": "Por fora e por dentro",
     "carreta_titulo": "Dê uma volta pela carreta",
     "carreta_texto": "Gire a carreta, abra e recolha a parte expansível, espie o lado de dentro e toque nos pontos laranja para ver cada espaço.",
@@ -2156,7 +2156,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:09:44.189Z",
+  "atualizadoEm": "2026-10-13T21:09:48.196Z",
   "automacao": {
     "ativo": false,
     "horas": 8
