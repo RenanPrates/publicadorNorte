@@ -11,12 +11,6 @@
       "commit": "52497baac0b16cc81745ef2e0df32ff5138a926b",
       "versao": 10,
       "principal": "circuitocuidar.com.br"
-    },
-    "projetopequenochef.com.br": {
-      "slug": "pequeno-chef",
-      "commit": "7364fa705a39f0a0533d1afe3546efe6c8cffcb7",
-      "versao": 2,
-      "principal": "projetopequenochef.com.br"
     }
   }
 }
