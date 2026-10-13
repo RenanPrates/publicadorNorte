@@ -783,7 +783,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:47:12.464Z",
+  "atualizadoEm": "2026-10-13T20:47:37.884Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -799,6 +799,24 @@
       {
         "id": "r8vbrb0p",
         "arquivo": "_media/galerias/galeria/fortaleza/logo-catuai-palladium-aplicacao-principal.png",
+        "cidade": "1448c3b4",
+        "legenda": ""
+      },
+      {
+        "id": "3xcloyql",
+        "arquivo": "_media/galerias/galeria/fortaleza/mala-tubo-mmsp-27.png",
+        "cidade": "1448c3b4",
+        "legenda": ""
+      },
+      {
+        "id": "bqrp9y3l",
+        "arquivo": "_media/galerias/galeria/fortaleza/camiseta-frente-mmsp-27-1.png",
+        "cidade": "1448c3b4",
+        "legenda": ""
+      },
+      {
+        "id": "uv8g8p0h",
+        "arquivo": "_media/galerias/galeria/fortaleza/chatgpt-image-24-de-jun-de-2025-18-22-33-2-1.png",
         "cidade": "1448c3b4",
         "legenda": ""
       }
