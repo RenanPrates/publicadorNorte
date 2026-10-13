@@ -407,7 +407,9 @@
   },
   "gerais": {
     "preco_vista": "",
-    "equipe1_nome": "Douglas"
+    "equipe1_nome": "Douglas",
+    "equipe1_funcao": "teste",
+    "equipe1_bio": "teste"
   },
   "cidades": [
     {
@@ -443,5 +445,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:38:31.963Z"
+  "atualizadoEm": "2026-10-13T17:38:35.049Z"
 }
