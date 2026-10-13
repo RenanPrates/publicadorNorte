@@ -2135,7 +2135,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:26:11.503Z",
+  "atualizadoEm": "2026-10-13T21:27:02.265Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2197,5 +2197,8 @@
       "redes": []
     },
     "porLinha": {}
+  },
+  "seo": {
+    "favicon": "_media/pagina/marca/logo.webp"
   }
 }
