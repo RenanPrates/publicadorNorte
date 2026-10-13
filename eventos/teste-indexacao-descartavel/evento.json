@@ -11,8 +11,17 @@
   "ordem": {},
   "imagens": {},
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "c570fab7cc4095cc921dd83ba7df2ff8bd2ad97d",
+      "em": "2026-10-13T17:11:25.869Z",
+      "paginas": 1,
+      "avisos": 0,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-indexacao-descartavel/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-13T17:11:18.983Z",
-  "atualizadoEm": "2026-10-13T17:11:18.983Z"
+  "atualizadoEm": "2026-10-13T17:11:34.917Z"
 }
