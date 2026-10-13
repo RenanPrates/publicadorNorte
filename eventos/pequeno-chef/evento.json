@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 223273,
-      "enviadoEm": "2026-10-13T17:07:34.755Z"
+      "bytes": 225574,
+      "enviadoEm": "2026-10-13T17:15:41.117Z"
     }
   },
   "vars": {
@@ -414,5 +414,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:07:38.005Z"
+  "atualizadoEm": "2026-10-13T17:15:44.402Z"
 }
