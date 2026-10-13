@@ -19,11 +19,19 @@
       "paginas": 1,
       "avisos": 0,
       "url": "https://renanprates.github.io/publicadorNorte/teste-seo-descartavel/"
+    },
+    {
+      "versao": 2,
+      "commit": "3ec454ea97996f3c20510829f2b3d28d2028ea96",
+      "em": "2026-10-13T14:54:41.026Z",
+      "paginas": 1,
+      "avisos": 0,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-seo-descartavel/"
     }
   ],
-  "versaoAtiva": 1,
+  "versaoAtiva": 2,
   "criadoEm": "2026-10-13T14:52:35.478Z",
-  "atualizadoEm": "2026-10-13T14:54:15.243Z",
+  "atualizadoEm": "2026-10-13T14:54:49.710Z",
   "seo": {
     "titulo": "Cuidar · saúde que chega perto",
     "share": {
