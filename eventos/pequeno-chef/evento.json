@@ -559,7 +559,7 @@
     "material_livro_titulo": "Conteúdo da aula",
     "material_capa_selo": "PDF",
     "material_capa_linha1": "Material",
-    "material_capa_linha2": "damnbccnv",
+    "material_capa_linha2": "da",
     "material_capa_destaque": "aula",
     "duvidas_eyebrow": "Antes de se inscrever",
     "duvidas_titulo": "Dúvidas rápidas",
@@ -3975,5 +3975,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:21:46.525Z"
+  "atualizadoEm": "2026-10-13T20:21:55.118Z"
 }
