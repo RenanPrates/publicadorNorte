@@ -766,66 +766,6 @@
       "contagem_botao_encerrada": "Ver próximas cidades"
     },
     {
-      "_id": "ec1888c6",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
-      "_id": "5e93868b",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
-      "_id": "bbba2883",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
-      "_id": "4ea0bbe6",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
       "_id": "45339d91",
       "cidade": "",
       "status": "",
@@ -4140,5 +4080,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:20:26.382Z"
+  "atualizadoEm": "2026-10-13T20:20:33.065Z"
 }
