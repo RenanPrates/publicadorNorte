@@ -413,7 +413,7 @@
     "equipe1_funcao": "teste",
     "equipe1_bio": "teste",
     "gratuito": "sim",
-    "link_inscricao": "",
+    "link_inscricao": "https://www.google.com/",
     "evento": "Pequeno Chef",
     "menu_sobre": "Sobre o projeto",
     "menu_carreta": "A carreta",
@@ -783,5 +783,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:42:24.290Z"
+  "atualizadoEm": "2026-10-13T20:44:23.216Z"
 }
