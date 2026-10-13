@@ -411,716 +411,3824 @@
     "preco_vista": "",
     "equipe1_nome": "Douglas",
     "equipe1_funcao": "teste",
-    "equipe1_bio": "teste"
+    "equipe1_bio": "teste",
+    "gratuito": "sim",
+    "link_inscricao": "",
+    "evento": "Pequeno Chef",
+    "menu_sobre": "Sobre o projeto",
+    "menu_carreta": "A carreta",
+    "menu_equipe": "Equipe",
+    "menu_datas": "Datas",
+    "menu_duvidas": "Dúvidas",
+    "menu_inscricao": "Inscrição",
+    "menu_abrir": "Abrir menu",
+    "inscricao_botao": "Fazer minha inscrição",
+    "inscricao_botao_breve": "Inscrições em breve",
+    "menu_topo": "Voltar ao topo",
+    "hero_logo_alt": "Ministério da Cultura apresenta: Pequeno Chef",
+    "hero_selo_gratuito": "Oficina de culinária gratuita",
+    "hero_selo": "Oficina de culinária",
+    "hero_titulo": "Aprender, cozinhar",
+    "hero_titulo_destaque": "e compartilhar",
+    "hero_texto_inicio": "Uma",
+    "hero_texto_destaque1": "carreta-cozinha itinerante",
+    "hero_texto_destaque2_gratuito": "aulas gratuitas",
+    "hero_texto_destaque2": "aulas",
+    "hero_texto_fim": "e experiências gastronômicas que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira.",
+    "publico": "a partir de 16 anos",
+    "hero_cidades": "cidades",
+    "hero_periodo_rotulo": "Período",
+    "hero_link_datas": "Ver datas por cidade",
+    "hero_ilustracao_alt": "Ilustração de um chef com uma tigela azul cheia de legumes, temperando com a outra mão",
+    "sobre_eyebrow": "Sobre o projeto",
+    "sobre_titulo": "Uma cozinha sobre rodas",
+    "sobre_texto": "O projeto transforma uma carreta em uma cozinha adaptada e em um espaço de encontro. Em cada cidade, o público é convidado a participar de atividades práticas, descobrir novas possibilidades na cozinha e trocar conhecimentos sobre alimentação e cultura.",
+    "passo1_titulo": "A carreta chega",
+    "passo1_imagem_alt": "Ilustração da carreta do Pequeno Chef chegando à cidade puxada pelo caminhão: ela estaciona, a parte expansível desliza para fora, a porta abre, a escada desce e o elevador para PCD baixa até o chão",
+    "passo1_texto": "A carreta-cozinha itinerante chega à cidade e se abre como uma cozinha adaptada e um espaço de encontro.",
+    "passo2_titulo": "Aprender com o chef",
+    "passo2_imagem_alt": "Ilustração de uma chef sovando massa sobre a bancada, com uma tigela de ingredientes, um saco de farinha e um rolo de massa",
+    "passo2_texto_gratuito": "Nas aulas gratuitas, você aprende a cozinhar com um chef, dentro da carreta.",
+    "passo2_texto": "Nas aulas, você aprende a cozinhar com um chef, dentro da carreta.",
+    "passo3_titulo": "Cozinhar na prática",
+    "passo3_imagem_alt": "Ilustração de um chef mexendo uma panela azul cercada de legumes",
+    "passo3_texto": "Atividades práticas para descobrir novas possibilidades na cozinha e os sabores da culinária brasileira.",
+    "passo4_titulo": "Compartilhar",
+    "passo4_imagem_alt": "Ilustração de um chef sorridente servindo um prato colorido",
+    "passo4_texto": "Um espaço para trocar saberes sobre alimentação, cultura e as tradições da nossa cozinha.",
+    "passo5_titulo": "",
+    "passo5_texto": "",
+    "passo6_titulo": "",
+    "passo6_texto": "",
+    "passo7_titulo": "",
+    "passo7_texto": "",
+    "passo8_titulo": "",
+    "passo8_texto": "",
+    "sobre_rotulo_aulas": "Aulas",
+    "sobre_aulas_gratuito": "Gratuitas e abertas ao público geral",
+    "sobre_aulas_pago": "abertas ao público geral",
+    "sobre_rotulo_idade": "Idade",
+    "sobre_rotulo_duracao": "Duração de cada aula",
+    "duracao_aula": "",
+    "carreta_eyebrow": "Por fora e por dentro",
+    "carreta_titulo": "Dê uma volta pela carreta",
+    "carreta_texto": "Gire a carreta, abra e recolha a parte expansível, espie o lado de dentro e toque nos pontos laranja para ver cada espaço.",
+    "carreta_fora": "Por fora",
+    "carreta_dentro": "Por dentro",
+    "carreta_nota": "Representação 3D feita a partir da planta do projeto.",
+    "carreta_girar_esquerda": "Girar para a esquerda",
+    "carreta_girar_direita": "Girar para a direita",
+    "carreta_dica": "Arraste para os lados para girar",
+    "carreta_recolher": "Recolher a parte expansível",
+    "videos_eyebrow": "Vídeos do projeto",
+    "videos_titulo": "A carreta",
+    "videos_titulo_destaque": "em cena",
+    "videos_texto": "Escolha um vídeo da lista e aperte o play.",
+    "yt1_link": "",
+    "yt1_titulo": "",
+    "yt1_duracao": "",
+    "yt2_link": "",
+    "yt2_titulo": "",
+    "yt2_duracao": "",
+    "yt3_link": "",
+    "yt3_titulo": "",
+    "yt3_duracao": "",
+    "yt4_link": "",
+    "yt4_titulo": "",
+    "yt4_duracao": "",
+    "yt5_link": "",
+    "yt5_titulo": "",
+    "yt5_duracao": "",
+    "yt6_link": "",
+    "yt6_titulo": "",
+    "yt6_duracao": "",
+    "equipe_eyebrow": "Equipe",
+    "equipe_titulo": "Quem vai cozinhar com você",
+    "equipe_texto": "Conheça quem conduz as aulas dentro da carreta.",
+    "equipe_sem_foto": "Foto em breve",
+    "equipe_rotulo_funcao": "Função:",
+    "equipe2_nome": "",
+    "equipe2_funcao": "",
+    "equipe2_bio": "",
+    "equipe3_nome": "",
+    "equipe3_funcao": "",
+    "equipe3_bio": "",
+    "equipe4_nome": "",
+    "equipe4_funcao": "",
+    "equipe4_bio": "",
+    "equipe5_nome": "",
+    "equipe5_funcao": "",
+    "equipe5_bio": "",
+    "equipe6_nome": "",
+    "equipe6_funcao": "",
+    "equipe6_bio": "",
+    "equipe7_nome": "",
+    "equipe7_funcao": "",
+    "equipe7_bio": "",
+    "equipe8_nome": "",
+    "equipe8_funcao": "",
+    "equipe8_bio": "",
+    "equipe_vazio_titulo": "Equipe",
+    "equipe_vazio_texto": "Em breve",
+    "contagem_eyebrow": "Contagem regressiva",
+    "contagem_titulo": "A cozinha está",
+    "contagem_titulo_destaque": "quase no ponto",
+    "contagem_texto": "Escolha a sua cidade e veja quanto falta para a carreta chegar.",
+    "contagem_aviso_gratuito": "Aulas gratuitas, abertas a participantes",
+    "contagem_aviso": "Aulas abertas a participantes",
+    "contagem_dias": "dias",
+    "contagem_escolha": "Escolha sua cidade",
+    "contagem_compartilhar": "Avisar quem vai comigo",
+    "material_eyebrow": "Material da aula",
+    "material_titulo": "Leve a aula",
+    "material_titulo_destaque": "com você",
+    "material_texto": "O conteúdo da aula em um único PDF, para baixar e consultar quando quiser.",
+    "material_arquivo_nome": "Material da aula",
+    "material_arquivo_tipo": "Arquivo em PDF",
+    "material_disponivel": "Disponível",
+    "material_breve": "Em breve",
+    "material_rotulo_paginas": "Páginas",
+    "material_paginas": "",
+    "material_rotulo_tamanho": "Tamanho",
+    "material_tamanho": "",
+    "material_botao": "Baixar PDF",
+    "material_abrir": "Abrir no navegador",
+    "material_botao_breve": "Disponível em breve",
+    "material_livro_abrir": "Toque para abrir",
+    "material_livro_pagina": "Página 1",
+    "material_livro_titulo": "Conteúdo da aula",
+    "material_capa_selo": "PDF",
+    "material_capa_linha1": "Material",
+    "material_capa_linha2": "da",
+    "material_capa_destaque": "aula",
+    "duvidas_eyebrow": "Antes de se inscrever",
+    "duvidas_titulo": "Dúvidas rápidas",
+    "duvidas_texto": "Toque na pergunta para ver a resposta.",
+    "duvidas_abrir_todas": "Abrir todas",
+    "faq1_pergunta": "Quanto custa?",
+    "faq1_resposta_gratuito": "Sem custo de inscrição. As aulas são abertas ao público geral.",
+    "faq1_resposta_preco": "Valor da inscrição, à vista.",
+    "faq1_resposta_breve": "Valor divulgado na abertura das inscrições.",
+    "faq2_pergunta": "Quem pode participar?",
+    "faq2_resposta": "Qualquer pessoa",
+    "faq3_pergunta": "Onde e quando acontece?",
+    "faq3_resposta": "Dentro da carreta-cozinha, nestas cidades:",
+    "faq3_link": "Ver local e horário de cada cidade",
+    "faq4_pergunta": "Quanto tempo dura cada aula?",
+    "faq5_pergunta": "E se eu tiver alergia ou restrição alimentar?",
+    "info_alergia": "",
+    "faq6_pergunta": "Como faço a inscrição e com quem falo?",
+    "rotulo_link_inscricao": "Link de inscrição:",
+    "rotulo_contato": "Contato:",
+    "contato": "",
+    "faq7_pergunta": "",
+    "faq7_resposta": "",
+    "faq8_pergunta": "",
+    "faq8_resposta": "",
+    "faq9_pergunta": "",
+    "faq9_resposta": "",
+    "faq10_pergunta": "",
+    "faq10_resposta": "",
+    "faq11_pergunta": "",
+    "faq11_resposta": "",
+    "faq12_pergunta": "",
+    "faq12_resposta": "",
+    "galeria_eyebrow": "Galeria",
+    "galeria_titulo": "Álbum",
+    "galeria_titulo_destaque": "da estrada",
+    "galeria_texto": "As fotos das aulas em cada cidade entram aqui. Veja todas juntas no mural ou uma de cada vez.",
+    "galeria_mural": "Mural",
+    "galeria_uma": "Uma a uma",
+    "galeria_filtro": "Filtrar por cidade",
+    "galeria_anterior": "Foto anterior",
+    "galeria_proxima": "Próxima foto",
+    "galeria_miniaturas": "Miniaturas",
+    "galeria_apresentacao": "Apresentação",
+    "inscricao_eyebrow": "Inscrição",
+    "inscricao_titulo": "Garanta sua participação",
+    "inscricao_texto_gratuito": "As aulas são gratuitas e abertas ao público geral,",
+    "inscricao_texto": "As aulas são abertas ao público geral,",
+    "inscricao_item_gratuito": "Aulas gratuitas",
+    "inscricao_item1": "Aulas práticas com um chef",
+    "inscricao_item2": "",
+    "inscricao_item3": "",
+    "inscricao_imagem_alt": "Ilustração de um chef batendo massa numa tigela azul com a batedeira, ao lado de um pacote de farinha",
+    "inscricao_proxima": "Próxima parada",
+    "compartilhe_eyebrow": "Já se inscreveu?",
+    "compartilhe_titulo": "Conte para todo mundo",
+    "compartilhe_texto": "Monte um card com o seu nome e compartilhe nas suas redes.",
+    "compartilhe_nome": "Seu nome",
+    "compartilhe_nome_exemplo": "Ex.: Laura",
+    "compartilhe_cor": "Cor do card",
+    "compartilhe_cor_verde": "Verde",
+    "compartilhe_cor_laranja": "Laranja",
+    "compartilhe_cor_noite": "Noite",
+    "compartilhe_formato": "Formato",
+    "compartilhe_formato_stories": "Stories",
+    "compartilhe_formato_post": "Post",
+    "compartilhe_botao": "Compartilhar",
+    "compartilhe_salvar": "Salvar imagem",
+    "compartilhe_instagram": "Instagram",
+    "compartilhe_whatsapp": "WhatsApp",
+    "compartilhe_facebook": "Facebook",
+    "compartilhe_copiar": "Copiar texto",
+    "compartilhe_nota": "No celular, o botão Instagram abre direto o compartilhamento. No computador, a imagem é salva para você publicar.",
+    "link_instagram": "https://www.instagram.com/",
+    "compartilhe_abrir_instagram": "Abrir o Instagram",
+    "compartilhe_previa": "Prévia do card",
+    "contagem_dia": "dia",
+    "contagem_fim": "fim",
+    "contagem_encerrada": "encerrada",
+    "contagem_msg": "A carreta do {evento} chega em {cidade} em {dias}. Aulas de culinária com um chef, para quem tem {publico}. Bora junto?",
+    "contagem_msg_encerrada": "Conheça o {evento}, uma carreta-cozinha com aulas de culinária. Bora junto?",
+    "videos_rotulo": "Vídeo",
+    "videos_contador": "Vídeo {n} de {total}",
+    "videos_vazio": "Vídeos em breve",
+    "videos_play": "Aperte o play",
+    "videos_assistir": "Assistir",
+    "videos_breve": "Em breve",
+    "videos_nao_publicado": "Este vídeo ainda não foi publicado",
+    "material_livro_fechar": "Toque para fechar",
+    "galeria_todas": "Todas",
+    "galeria_sem_foto": "Foto em breve",
+    "galeria_reservado": "Espaço reservado para a foto.",
+    "duvidas_fechar_todas": "Fechar todas",
+    "compartilhe_msg": "Acabei de me inscrever nas aulas de culinária do {evento}, dentro de uma carreta-cozinha itinerante! Inscreva-se também:",
+    "compartilhe_card_selo": "Inscrição feita!",
+    "compartilhe_card_eu": "Eu vou cozinhar no",
+    "compartilhe_card_nome": "vai cozinhar no",
+    "compartilhe_card_titulo": "{evento}!",
+    "compartilhe_card_rodape": "{evento} · Aulas de culinária",
+    "compartilhe_ok": "Obrigado por compartilhar!",
+    "compartilhe_erro": "Não foi possível abrir o compartilhamento aqui. Use “Salvar imagem” ou os botões abaixo.",
+    "compartilhe_sem_suporte": "Seu navegador não abre o compartilhamento direto. Use “Salvar imagem” ou os botões abaixo.",
+    "compartilhe_erro_imagem": "Não foi possível gerar a imagem.",
+    "compartilhe_salva": "Imagem salva!",
+    "compartilhe_erro_salvar": "Não foi possível salvar aqui. Toque e segure a prévia para salvar.",
+    "compartilhe_download": "Se o download não começar, toque e segure a prévia para salvar.",
+    "compartilhe_salva_instagram": "Imagem salva! Agora é só publicar no Instagram.",
+    "compartilhe_copiado": "Texto copiado!",
+    "carreta_abrir": "Abrir a parte expansível",
+    "carreta_legenda": "Imagem ilustrativa do projeto",
+    "carreta_ponto1_titulo": "Porta de entrada",
+    "carreta_ponto1_texto": "A entrada é por uma única porta, com escada, que leva ao hall de entrada.",
+    "carreta_ponto2_titulo": "Elevador para PCD",
+    "carreta_ponto2_texto": "Uma plataforma elevatória na lateral dá acesso a pessoas com deficiência ou mobilidade reduzida.",
+    "carreta_ponto3_titulo": "Parte expansível",
+    "carreta_ponto3_texto": "A lateral se abre e amplia a carreta. É ali que ficam as cadeiras e o banco-baú do auditório.",
+    "carreta_ponto4_titulo": "Ilustrações da marca",
+    "carreta_ponto4_texto": "Por fora, a carreta é toda adesivada com as ilustrações do Pequeno Chef.",
+    "carreta_ponto5_titulo": "Cozinha",
+    "carreta_ponto5_texto": "Bancada central com cuba, calha para lavar legumes e hortaliças e cooktop.",
+    "carreta_ponto6_titulo": "Parede de utensílios",
+    "carreta_ponto6_texto": "Painel ripado com prateleiras, tábuas de corte e monitores.",
+    "carreta_ponto7_titulo": "Auditório",
+    "carreta_ponto7_texto": "Na parte expansível ficam as cadeiras e o banco-baú. É aqui que o público se acomoda durante as atividades.",
+    "carreta_ponto8_titulo": "Fornos e água",
+    "carreta_ponto8_texto": "Torre de fornos com espaço para filtro de água e porta-copos.",
+    "carreta_ponto9_titulo": "Hall de entrada",
+    "carreta_ponto9_texto": "Logo na entrada, um painel de tábuas de corte com o logo iluminado, pronto para fotos."
   },
   "cidades": [
     {
-      "_id": "1448c3b4"
-    },
-    {
-      "_id": "26203233"
-    },
-    {
-      "_id": "737d4ca8"
-    },
-    {
-      "_id": "5b763016"
-    },
-    {
-      "_id": "ad56a3e2"
-    },
-    {
-      "_id": "9d4554fd"
-    },
-    {
-      "_id": "b0120c59"
-    },
-    {
-      "_id": "3963b17d"
-    },
-    {
-      "_id": "04fb0690"
-    },
-    {
-      "_id": "308a149c"
-    },
-    {
-      "_id": "05e17dd4"
-    },
-    {
-      "_id": "7eb1a85d"
-    },
-    {
-      "_id": "2ffd3bac"
-    },
-    {
-      "_id": "ec1888c6"
-    },
-    {
-      "_id": "5e93868b"
-    },
-    {
-      "_id": "bbba2883"
-    },
-    {
-      "_id": "4ea0bbe6"
-    },
-    {
-      "_id": "45339d91"
-    },
-    {
-      "_id": "8f90399d"
-    },
-    {
-      "_id": "1a231367"
-    },
-    {
-      "_id": "e3e9eb4c"
-    },
-    {
-      "_id": "d1a257b7"
-    },
-    {
-      "_id": "d67e1042"
-    },
-    {
-      "_id": "0a508d01"
-    },
-    {
-      "_id": "cde7db08"
-    },
-    {
-      "_id": "e3802346"
-    },
-    {
-      "_id": "42abf330"
-    },
-    {
-      "_id": "87466409"
-    },
-    {
-      "_id": "f3e4cff2"
-    },
-    {
-      "_id": "93e40f70"
-    },
-    {
-      "_id": "c01928cc"
-    },
-    {
-      "_id": "09f32fdf"
-    },
-    {
-      "_id": "e709a75c"
-    },
-    {
-      "_id": "ccb15712"
-    },
-    {
-      "_id": "4ed54ee8"
-    },
-    {
-      "_id": "0f909dfb"
-    },
-    {
-      "_id": "38867289"
-    },
-    {
-      "_id": "11ff4451"
-    },
-    {
-      "_id": "7bad5c23"
-    },
-    {
-      "_id": "fc71c75b"
-    },
-    {
-      "_id": "49ffe375"
-    },
-    {
-      "_id": "68efbf72"
-    },
-    {
-      "_id": "f067837e"
-    },
-    {
-      "_id": "ca5b6817"
-    },
-    {
-      "_id": "fd76d356"
-    },
-    {
-      "_id": "7a674bad"
-    },
-    {
-      "_id": "09c07717"
-    },
-    {
-      "_id": "9d42ee5f"
-    },
-    {
-      "_id": "6c29edca"
-    },
-    {
-      "_id": "39e9fa26"
-    },
-    {
-      "_id": "9d38bedf"
-    },
-    {
-      "_id": "20677bf8"
-    },
-    {
-      "_id": "e43b0738"
-    },
-    {
-      "_id": "fa3a25da"
-    },
-    {
-      "_id": "255473f5"
-    },
-    {
-      "_id": "fc09943f"
-    },
-    {
-      "_id": "1e710c71"
-    },
-    {
-      "_id": "77dd8051"
-    },
-    {
-      "_id": "179c6ff3"
-    },
-    {
-      "_id": "14cdb33a"
-    },
-    {
-      "_id": "f8a5c256"
-    },
-    {
-      "_id": "04c3ebcc"
-    },
-    {
-      "_id": "36be3856"
-    },
-    {
-      "_id": "242ebe9d"
-    },
-    {
-      "_id": "92315fcd"
-    },
-    {
-      "_id": "175a317d"
-    },
-    {
-      "_id": "d7d8ff11"
-    },
-    {
-      "_id": "c9d23e9c"
-    },
-    {
-      "_id": "2e51144d"
-    },
-    {
-      "_id": "87a10be3"
-    },
-    {
-      "_id": "c2daa3e5"
-    },
-    {
-      "_id": "deea00a5"
-    },
-    {
-      "_id": "0f3a2ec8"
-    },
-    {
-      "_id": "434429d4"
-    },
-    {
-      "_id": "052777ad"
-    },
-    {
-      "_id": "b0941bc5"
-    },
-    {
-      "_id": "3433f2d2"
-    },
-    {
-      "_id": "e66957a0"
-    },
-    {
-      "_id": "ead8c4d7"
-    },
-    {
-      "_id": "19f17132"
-    },
-    {
-      "_id": "20780adb"
-    },
-    {
-      "_id": "3cd7b62e"
-    },
-    {
-      "_id": "fd57a706"
-    },
-    {
-      "_id": "81203f8c"
-    },
-    {
-      "_id": "b7f483d4"
-    },
-    {
-      "_id": "0fd81c21"
-    },
-    {
-      "_id": "5e1aa582"
-    },
-    {
-      "_id": "70bf7920"
-    },
-    {
-      "_id": "166b25df"
-    },
-    {
-      "_id": "9c0cb77b"
-    },
-    {
-      "_id": "5a25f777"
-    },
-    {
-      "_id": "06885676"
-    },
-    {
-      "_id": "29404107"
-    },
-    {
-      "_id": "e7a051fd"
-    },
-    {
-      "_id": "174194b0"
-    },
-    {
-      "_id": "ea96f77a"
-    },
-    {
-      "_id": "e12e8581"
-    },
-    {
-      "_id": "d6eea525"
-    },
-    {
-      "_id": "aa0ea604"
-    },
-    {
-      "_id": "a59ffd9a"
-    },
-    {
-      "_id": "27322f93"
-    },
-    {
-      "_id": "6b1dd0ab"
-    },
-    {
-      "_id": "88919659"
-    },
-    {
-      "_id": "e1622779"
-    },
-    {
-      "_id": "e5b64c6e"
-    },
-    {
-      "_id": "a9c555b2"
-    },
-    {
-      "_id": "4af8a3ef"
-    },
-    {
-      "_id": "0d99242c"
-    },
-    {
-      "_id": "f1399a8f"
-    },
-    {
-      "_id": "783399dc"
-    },
-    {
-      "_id": "04ada3a8"
-    },
-    {
-      "_id": "ba547435"
-    },
-    {
-      "_id": "87a10381"
-    },
-    {
-      "_id": "5a7df448"
-    },
-    {
-      "_id": "245ae38a"
-    },
-    {
-      "_id": "4c75dbae"
-    },
-    {
-      "_id": "91d3d70d"
-    },
-    {
-      "_id": "caf079c9"
-    },
-    {
-      "_id": "b4d439b6"
-    },
-    {
-      "_id": "9f488744"
-    },
-    {
-      "_id": "38d24142"
-    },
-    {
-      "_id": "1b466590"
-    },
-    {
-      "_id": "3fa807c0"
-    },
-    {
-      "_id": "5cd9d0a7"
-    },
-    {
-      "_id": "07aa2eb1"
-    },
-    {
-      "_id": "7ae22580"
-    },
-    {
-      "_id": "bed3443f"
-    },
-    {
-      "_id": "186d3e92"
-    },
-    {
-      "_id": "54a0a6c2"
-    },
-    {
-      "_id": "b945c5ae"
-    },
-    {
-      "_id": "22652cd6"
-    },
-    {
-      "_id": "55748bf6"
-    },
-    {
-      "_id": "214aa3a4"
-    },
-    {
-      "_id": "e59167b1"
-    },
-    {
-      "_id": "54642089"
-    },
-    {
-      "_id": "f4c4f17d"
-    },
-    {
-      "_id": "f4f6d380"
-    },
-    {
-      "_id": "3316a85c"
-    },
-    {
-      "_id": "cc681f4f"
-    },
-    {
-      "_id": "a9c03aca"
-    },
-    {
-      "_id": "5694f7d2"
-    },
-    {
-      "_id": "352f53b0"
-    },
-    {
-      "_id": "f2e08b69"
-    },
-    {
-      "_id": "7c9bc753"
-    },
-    {
-      "_id": "9f9d79a5"
-    },
-    {
-      "_id": "80bcc86c"
-    },
-    {
-      "_id": "bed1d5b1"
-    },
-    {
-      "_id": "6f8cdeed"
-    },
-    {
-      "_id": "5e9188ee"
-    },
-    {
-      "_id": "84b3ddc2"
-    },
-    {
-      "_id": "783e69db"
-    },
-    {
-      "_id": "bd38c640"
-    },
-    {
-      "_id": "c5f496ec"
-    },
-    {
-      "_id": "6494a812"
-    },
-    {
-      "_id": "403014f5"
-    },
-    {
-      "_id": "20494d9a"
-    },
-    {
-      "_id": "13c2ff1e"
-    },
-    {
-      "_id": "3f7690b4"
-    },
-    {
-      "_id": "030d4959"
-    },
-    {
-      "_id": "5f0024b1"
-    },
-    {
-      "_id": "5cdac727"
-    },
-    {
-      "_id": "0f064cf2"
-    },
-    {
-      "_id": "d08b58ef"
-    },
-    {
-      "_id": "12d33092"
-    },
-    {
-      "_id": "a412b262"
-    },
-    {
-      "_id": "6181c069"
-    },
-    {
-      "_id": "e5246ab1"
-    },
-    {
-      "_id": "2413155d"
-    },
-    {
-      "_id": "703ef347"
-    },
-    {
-      "_id": "8f638268"
-    },
-    {
-      "_id": "a9185f4c"
-    },
-    {
-      "_id": "5fa45def"
-    },
-    {
-      "_id": "20445bc2"
-    },
-    {
-      "_id": "7a85acb0"
-    },
-    {
-      "_id": "3f4441e0"
-    },
-    {
-      "_id": "2e5fc787"
-    },
-    {
-      "_id": "d8a83595"
-    },
-    {
-      "_id": "9664cfe7"
-    },
-    {
-      "_id": "a858d973"
-    },
-    {
-      "_id": "0f70bd99"
-    },
-    {
-      "_id": "282a15a6"
-    },
-    {
-      "_id": "f908e051"
-    },
-    {
-      "_id": "bbf8d968"
-    },
-    {
-      "_id": "542a1835"
-    },
-    {
-      "_id": "ff654bde"
-    },
-    {
-      "_id": "e62c3be6"
-    },
-    {
-      "_id": "83bfee67"
-    },
-    {
-      "_id": "f5a3426d"
-    },
-    {
-      "_id": "7f8c9bfe"
-    },
-    {
-      "_id": "fd5cda00"
-    },
-    {
-      "_id": "925b678f"
-    },
-    {
-      "_id": "0d2ec4c0"
-    },
-    {
-      "_id": "88944f44"
-    },
-    {
-      "_id": "1bf32607"
-    },
-    {
-      "_id": "c9fe5f78"
-    },
-    {
-      "_id": "511a1408"
-    },
-    {
-      "_id": "ebb5d56b"
-    },
-    {
-      "_id": "58cf4ab9"
-    },
-    {
-      "_id": "2e813c99"
-    },
-    {
-      "_id": "912a25aa"
-    },
-    {
-      "_id": "d550c187"
-    },
-    {
-      "_id": "ce8b2df9"
-    },
-    {
-      "_id": "156c7442"
-    },
-    {
-      "_id": "51781964"
-    },
-    {
-      "_id": "75de50f8"
-    },
-    {
-      "_id": "da3955a1"
-    },
-    {
-      "_id": "c43c0326"
-    },
-    {
-      "_id": "9144d551"
-    },
-    {
-      "_id": "3345a28c"
-    },
-    {
-      "_id": "0e0cfc3b"
-    },
-    {
-      "_id": "fc9b2f63"
-    },
-    {
-      "_id": "16f29ca2"
-    },
-    {
-      "_id": "3751a015"
-    },
-    {
-      "_id": "6c63c006"
-    },
-    {
-      "_id": "20c8eb0b"
-    },
-    {
-      "_id": "bf82a60e"
-    },
-    {
-      "_id": "d832e8f4"
-    },
-    {
-      "_id": "09e78257"
-    },
-    {
-      "_id": "561203e8"
-    },
-    {
-      "_id": "56974964"
-    },
-    {
-      "_id": "3388a000"
-    },
-    {
-      "_id": "12fd8398"
-    },
-    {
-      "_id": "75443c77"
-    },
-    {
-      "_id": "e17bb236"
-    },
-    {
-      "_id": "76487c98"
-    },
-    {
-      "_id": "68f88cb5"
-    },
-    {
-      "_id": "d03321a4"
-    },
-    {
-      "_id": "b4b1bfd7"
-    },
-    {
-      "_id": "da55de6d"
-    },
-    {
-      "_id": "1a83a594"
-    },
-    {
-      "_id": "82357116"
-    },
-    {
-      "_id": "dadc3d32"
-    },
-    {
-      "_id": "ec75228d"
-    },
-    {
-      "_id": "4a7faf4c"
-    },
-    {
-      "_id": "595bcebf"
-    },
-    {
-      "_id": "e7f9358e"
+      "_id": "1448c3b4",
+      "cidade": "Fortaleza",
+      "status": "em breve",
+      "local": "",
+      "data_inicio": "17/10/2026",
+      "data_fim": "29/10/2026",
+      "rotulo_local": "Local:",
+      "rotulo_horario": "Horário:",
+      "horario": "",
+      "contagem_botao": "Quero minha vaga em",
+      "contagem_encerrada_status": "Encerrada.",
+      "contagem_encerrada_texto": "Veja as próximas cidades.",
+      "contagem_botao_encerrada": "Ver próximas cidades"
+    },
+    {
+      "_id": "26203233",
+      "cidade": "Maracanaú",
+      "status": "em breve",
+      "local": "",
+      "data_inicio": "31/10/2026",
+      "data_fim": "12/11/2026",
+      "rotulo_local": "Local:",
+      "rotulo_horario": "Horário:",
+      "horario": "",
+      "contagem_botao": "Quero minha vaga em",
+      "contagem_encerrada_status": "Encerrada.",
+      "contagem_encerrada_texto": "Veja as próximas cidades.",
+      "contagem_botao_encerrada": "Ver próximas cidades"
+    },
+    {
+      "_id": "737d4ca8",
+      "cidade": "Salvador",
+      "status": "em breve",
+      "local": "",
+      "data_inicio": "16/11/2026",
+      "data_fim": "26/11/2026",
+      "rotulo_local": "Local:",
+      "rotulo_horario": "Horário:",
+      "horario": "",
+      "contagem_botao": "Quero minha vaga em",
+      "contagem_encerrada_status": "Encerrada.",
+      "contagem_encerrada_texto": "Veja as próximas cidades.",
+      "contagem_botao_encerrada": "Ver próximas cidades"
+    },
+    {
+      "_id": "5b763016",
+      "cidade": "Campos do Jordão",
+      "status": "em breve",
+      "local": "",
+      "data_inicio": "07/12/2026",
+      "data_fim": "19/12/2026",
+      "rotulo_local": "Local:",
+      "rotulo_horario": "Horário:",
+      "horario": "",
+      "contagem_botao": "Quero minha vaga em",
+      "contagem_encerrada_status": "Encerrada.",
+      "contagem_encerrada_texto": "Veja as próximas cidades.",
+      "contagem_botao_encerrada": "Ver próximas cidades"
+    },
+    {
+      "_id": "ad56a3e2",
+      "cidade": "São Paulo",
+      "status": "em breve",
+      "local": "",
+      "data_inicio": "11/01/2027",
+      "data_fim": "23/01/2027",
+      "rotulo_local": "Local:",
+      "rotulo_horario": "Horário:",
+      "horario": "",
+      "contagem_botao": "Quero minha vaga em",
+      "contagem_encerrada_status": "Encerrada.",
+      "contagem_encerrada_texto": "Veja as próximas cidades.",
+      "contagem_botao_encerrada": "Ver próximas cidades"
+    },
+    {
+      "_id": "9d4554fd",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "b0120c59",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3963b17d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "04fb0690",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "308a149c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "05e17dd4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7eb1a85d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "2ffd3bac",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ec1888c6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5e93868b",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "bbba2883",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "4ea0bbe6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "45339d91",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "8f90399d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "1a231367",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e3e9eb4c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d1a257b7",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d67e1042",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0a508d01",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "cde7db08",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e3802346",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "42abf330",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "87466409",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f3e4cff2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "93e40f70",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "c01928cc",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "09f32fdf",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e709a75c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ccb15712",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "4ed54ee8",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0f909dfb",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "38867289",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "11ff4451",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7bad5c23",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fc71c75b",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "49ffe375",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "68efbf72",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f067837e",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ca5b6817",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fd76d356",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7a674bad",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "09c07717",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9d42ee5f",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "6c29edca",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "39e9fa26",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9d38bedf",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "20677bf8",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e43b0738",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fa3a25da",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "255473f5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fc09943f",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "1e710c71",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "77dd8051",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "179c6ff3",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "14cdb33a",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f8a5c256",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "04c3ebcc",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "36be3856",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "242ebe9d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "92315fcd",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "175a317d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d7d8ff11",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "c9d23e9c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "2e51144d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "87a10be3",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "c2daa3e5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "deea00a5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0f3a2ec8",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "434429d4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "052777ad",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "b0941bc5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3433f2d2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e66957a0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ead8c4d7",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "19f17132",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "20780adb",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3cd7b62e",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fd57a706",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "81203f8c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "b7f483d4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0fd81c21",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5e1aa582",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "70bf7920",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "166b25df",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9c0cb77b",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5a25f777",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "06885676",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "29404107",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e7a051fd",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "174194b0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ea96f77a",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e12e8581",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d6eea525",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "aa0ea604",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "a59ffd9a",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "27322f93",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "6b1dd0ab",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "88919659",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e1622779",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e5b64c6e",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "a9c555b2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "4af8a3ef",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0d99242c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f1399a8f",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "783399dc",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "04ada3a8",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ba547435",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "87a10381",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5a7df448",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "245ae38a",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "4c75dbae",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "91d3d70d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "caf079c9",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "b4d439b6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9f488744",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "38d24142",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "1b466590",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3fa807c0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5cd9d0a7",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "07aa2eb1",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7ae22580",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "bed3443f",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "186d3e92",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "54a0a6c2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "b945c5ae",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "22652cd6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "55748bf6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "214aa3a4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e59167b1",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "54642089",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f4c4f17d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f4f6d380",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3316a85c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "cc681f4f",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "a9c03aca",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5694f7d2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "352f53b0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f2e08b69",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7c9bc753",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9f9d79a5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "80bcc86c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "bed1d5b1",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "6f8cdeed",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5e9188ee",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "84b3ddc2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "783e69db",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "bd38c640",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "c5f496ec",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "6494a812",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "403014f5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "20494d9a",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "13c2ff1e",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3f7690b4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "030d4959",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5f0024b1",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5cdac727",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0f064cf2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d08b58ef",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "12d33092",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "a412b262",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "6181c069",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e5246ab1",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "2413155d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "703ef347",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "8f638268",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "a9185f4c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "5fa45def",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "20445bc2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7a85acb0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3f4441e0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "2e5fc787",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d8a83595",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9664cfe7",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "a858d973",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0f70bd99",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "282a15a6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f908e051",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "bbf8d968",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "542a1835",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ff654bde",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e62c3be6",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "83bfee67",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "f5a3426d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "7f8c9bfe",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fd5cda00",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "925b678f",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0d2ec4c0",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "88944f44",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "1bf32607",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "c9fe5f78",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "511a1408",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ebb5d56b",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "58cf4ab9",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "2e813c99",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "912a25aa",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d550c187",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ce8b2df9",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "156c7442",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "51781964",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "75de50f8",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "da3955a1",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "c43c0326",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "9144d551",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3345a28c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "0e0cfc3b",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "fc9b2f63",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "16f29ca2",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3751a015",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "6c63c006",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "20c8eb0b",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "bf82a60e",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d832e8f4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "09e78257",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "561203e8",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "56974964",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "3388a000",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "12fd8398",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "75443c77",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e17bb236",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "76487c98",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "68f88cb5",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "d03321a4",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "b4b1bfd7",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "da55de6d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "1a83a594",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "82357116",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "dadc3d32",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "ec75228d",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "4a7faf4c",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "595bcebf",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
+    },
+    {
+      "_id": "e7f9358e",
+      "cidade": "",
+      "status": "",
+      "local": "",
+      "data_inicio": "",
+      "data_fim": "",
+      "rotulo_local": "",
+      "rotulo_horario": "",
+      "horario": "",
+      "contagem_botao": "",
+      "contagem_encerrada_status": "",
+      "contagem_encerrada_texto": "",
+      "contagem_botao_encerrada": ""
     }
   ],
   "etapas": [],
@@ -1152,5 +4260,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:11:47.882Z"
+  "atualizadoEm": "2026-10-13T20:13:20.123Z"
 }
