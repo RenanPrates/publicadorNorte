@@ -444,8 +444,17 @@
     "img_equipe_foto1": "_media/pagina/equipe/foto1.png"
   },
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "2803f4938606aed5569f8ccc76fa4e6f90b294ba",
+      "em": "2026-10-13T19:49:33.029Z",
+      "paginas": 1,
+      "avisos": 3,
+      "url": "https://renanprates.github.io/publicadorNorte/pequeno-chef/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T18:46:06.331Z"
+  "atualizadoEm": "2026-10-13T19:49:43.515Z"
 }
