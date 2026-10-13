@@ -2156,7 +2156,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:51:11.041Z",
+  "atualizadoEm": "2026-10-13T21:06:33.917Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2172,7 +2172,7 @@
       {
         "id": "r8vbrb0p",
         "arquivo": "_media/galerias/galeria/fortaleza/logo-catuai-palladium-aplicacao-principal.png",
-        "cidade": "1448c3b4",
+        "cidade": "737d4ca8",
         "legenda": ""
       },
       {
