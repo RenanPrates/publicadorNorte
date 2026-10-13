@@ -6,7 +6,16 @@
   "paginas": {},
   "vars": {},
   "gerais": {},
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "sp1",
+      "cidade": "São Paulo"
+    },
+    {
+      "_id": "rj1",
+      "cidade": "Rio de Janeiro"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -14,5 +23,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T18:49:50.258Z",
-  "atualizadoEm": "2026-10-13T18:49:50.258Z"
+  "atualizadoEm": "2026-10-13T18:49:58.360Z"
 }
