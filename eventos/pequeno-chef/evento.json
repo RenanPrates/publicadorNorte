@@ -1066,21 +1066,6 @@
       "contagem_botao_encerrada": ""
     },
     {
-      "_id": "ca5b6817",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
       "_id": "fd76d356",
       "cidade": "",
       "status": "",
@@ -3990,5 +3975,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:21:03.231Z"
+  "atualizadoEm": "2026-10-13T20:21:07.087Z"
 }
