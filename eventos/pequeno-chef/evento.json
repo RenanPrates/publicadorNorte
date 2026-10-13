@@ -693,7 +693,7 @@
     {
       "_id": "1448c3b4",
       "cidade": "Fortaleza",
-      "status": "realizado",
+      "status": "aberta",
       "local": "",
       "data_inicio": "17/10/2026",
       "data_fim": "29/10/2026",
@@ -795,5 +795,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:39:42.855Z"
+  "atualizadoEm": "2026-10-13T20:39:47.448Z"
 }
