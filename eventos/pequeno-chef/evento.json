@@ -411,10 +411,12 @@
   "cidades": [],
   "etapas": [],
   "ordem": {},
-  "imagens": {},
+  "imagens": {
+    "img_galeria_foto1": "_media/pagina/galeria/foto1.png"
+  },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:33:12.643Z"
+  "atualizadoEm": "2026-10-13T17:34:01.592Z"
 }
