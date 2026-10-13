@@ -2135,7 +2135,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:22:53.118Z",
+  "atualizadoEm": "2026-10-13T21:22:59.655Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2188,7 +2188,7 @@
       "corFundo": "#16181d",
       "corTexto": "#f1f2ee",
       "corLinks": "#f1f2ee",
-      "logo": "",
+      "logo": "_media/pagina/marca/logo-pc-sm.webp",
       "descricao": "",
       "tituloLinks": "",
       "links": [],
