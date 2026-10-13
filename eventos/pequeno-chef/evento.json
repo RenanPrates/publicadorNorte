@@ -766,36 +766,6 @@
       "contagem_botao_encerrada": "Ver próximas cidades"
     },
     {
-      "_id": "b0120c59",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
-      "_id": "3963b17d",
-      "cidade": "",
-      "status": "",
-      "local": "",
-      "data_inicio": "",
-      "data_fim": "",
-      "rotulo_local": "",
-      "rotulo_horario": "",
-      "horario": "",
-      "contagem_botao": "",
-      "contagem_encerrada_status": "",
-      "contagem_encerrada_texto": "",
-      "contagem_botao_encerrada": ""
-    },
-    {
       "_id": "04fb0690",
       "cidade": "",
       "status": "",
@@ -4245,5 +4215,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:20:17.705Z"
+  "atualizadoEm": "2026-10-13T20:20:21.466Z"
 }
