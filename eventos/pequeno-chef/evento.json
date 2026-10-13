@@ -413,11 +413,20 @@
   "ordem": {},
   "imagens": {
     "img_galeria_foto1": "_media/pagina/galeria/foto1.png",
-    "img_galeria_foto2": "_media/pagina/galeria/foto2.png"
+    "img_galeria_foto2": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto3": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto4": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto5": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto6": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto7": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto8": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto9": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto10": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto11": "_media/pagina/galeria/foto2.png"
   },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:34:36.142Z"
+  "atualizadoEm": "2026-10-13T17:34:46.356Z"
 }
