@@ -257,8 +257,9 @@
       "ignorar": false
     },
     "img_galeria_foto1": {
-      "dono": "geral",
-      "ignorar": false
+      "dono": "cidade",
+      "ignorar": false,
+      "manual": true
     },
     "galeria_foto1_legenda": {
       "dono": "geral",
@@ -445,5 +446,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:52:59.692Z"
+  "atualizadoEm": "2026-10-13T17:55:51.626Z"
 }
