@@ -406,8 +406,7 @@
     }
   },
   "gerais": {
-    "preco_vista": "",
-    "galeria_foto1_legenda": "teste"
+    "preco_vista": ""
   },
   "cidades": [],
   "etapas": [],
@@ -417,5 +416,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:33:01.848Z"
+  "atualizadoEm": "2026-10-13T17:33:12.643Z"
 }
