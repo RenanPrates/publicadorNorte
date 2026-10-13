@@ -3,8 +3,408 @@
   "slug": "pequeno-chef",
   "nome": "Pequeno Chef",
   "formato": "unica",
-  "paginas": {},
-  "vars": {},
+  "paginas": {
+    "unica": {
+      "arquivo": "index.html",
+      "bytes": 216931,
+      "enviadoEm": "2026-10-13T14:36:30.334Z"
+    }
+  },
+  "vars": {
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "gratuito": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "total_cidades": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "temporada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "preco_vista": {
+      "dono": "geral",
+      "ignorar": false,
+      "formula": "parcelamento * valor_parcelado"
+    },
+    "duracao_aula": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt1_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt1_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt1_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt2_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt2_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt2_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt3_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt3_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt3_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt4_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt4_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt4_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt5_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt5_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt5_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt6_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt6_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "yt6_duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe1_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe1_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe1_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe2_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe2_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe2_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe3_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe3_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe3_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe4_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe4_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe4_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe5_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto5": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe5_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe5_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe6_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_equipe_foto6": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe6_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe6_bio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_inicio": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_inicio_curta": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "periodo_extenso": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "local": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "horario": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_material": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_paginas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_tamanho": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "info_alergia": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_inscricao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "contato": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto1_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto1_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto2_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto2_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto3_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto3_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto4_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto4_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto5": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto5_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto5_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto6": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto6_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto6_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto7": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto7_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto7_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto8": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto8_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto8_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto9": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto9_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto9_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto10": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto10_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto10_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto11": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto11_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto11_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_galeria_foto12": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto12_legenda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "galeria_foto12_cidade": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "data_fim": {
+      "dono": "cidade",
+      "ignorar": false
+    }
+  },
   "gerais": {},
   "cidades": [],
   "etapas": [],
@@ -14,5 +414,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T14:34:49.865Z"
+  "atualizadoEm": "2026-10-13T14:36:34.261Z"
 }
