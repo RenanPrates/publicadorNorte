@@ -418,7 +418,7 @@
     "img_galeria_foto4": "_media/pagina/galeria/foto2.png",
     "img_galeria_foto5": "_media/pagina/galeria/foto1.png",
     "img_galeria_foto6": "_media/pagina/galeria/foto2.png",
-    "img_galeria_foto7": "_media/pagina/galeria/foto2.png",
+    "img_galeria_foto7": "_media/pagina/galeria/foto1.png",
     "img_galeria_foto8": "_media/pagina/galeria/foto2.png",
     "img_galeria_foto9": "_media/pagina/galeria/foto2.png",
     "img_galeria_foto10": "_media/pagina/galeria/foto1.png",
@@ -428,5 +428,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:34:56.811Z"
+  "atualizadoEm": "2026-10-13T17:34:59.819Z"
 }
