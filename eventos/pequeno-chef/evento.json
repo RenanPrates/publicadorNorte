@@ -412,12 +412,14 @@
     {
       "_id": "28164bd6",
       "cidade": "São Paulo",
-      "local": "Osasco"
+      "local": "Osasco",
+      "horario": "affa"
     },
     {
       "_id": "b6d6f15e",
       "cidade": "asfaf",
-      "local": "Osasco"
+      "local": "Osasco",
+      "horario": "afasf"
     }
   ],
   "etapas": [],
@@ -439,5 +441,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:37:53.006Z"
+  "atualizadoEm": "2026-10-13T17:37:56.151Z"
 }
