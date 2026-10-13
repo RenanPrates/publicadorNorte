@@ -62,7 +62,7 @@ section{position:relative;scroll-margin-top:96px}
 .head-icons img:nth-child(2){animation-delay:-.8s;height:50px}
 .head-icons img:nth-child(3){animation-delay:-1.6s}
 @keyframes hop{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-7px) rotate(5deg)}}
-.wave{display:block;width:100%;height:32px;position:absolute;left:0;top:1px;transform:translateY(-100%);pointer-events:none}
+.wave{display:block;width:100%;height:32px;background:currentColor;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;position:absolute;left:0;top:1px;transform:translateY(-100%);pointer-events:none}
 
 /* ================= HEADER FLUTUANTE ================= */
 .fh{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:95;width:min(1140px,calc(100% - 24px));transform:translateX(-50%);transition:transform .45s cubic-bezier(.3,1.3,.5,1)}
@@ -195,28 +195,28 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .how{background:var(--paper);padding-block:64px}
 .steps{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:1fr;gap:34px;max-width:520px}
 .step{position:relative;border:3px solid var(--ink);border-radius:28px;padding:30px 18px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;box-shadow:0 7px 0 var(--ink)}
-.step:nth-child(1){background:var(--deep);color:var(--cream)}
-.step:nth-child(2){background:#fff}
-.step:nth-child(3){background:var(--cream)}
-.step:nth-child(4){background:var(--orange)}
+.step.s1{background:var(--deep);color:var(--cream)}
+.step.s2{background:#fff}
+.step.s3{background:var(--cream)}
+.step.s4{background:var(--orange)}
 .step-num{position:absolute;top:-22px;left:50%;margin-left:-24px;width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--f-display);font-weight:900;font-size:1.7rem;display:grid;place-items:center;border:3px solid var(--paper)}
 .step-media{position:relative;width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;display:flex;justify-content:center;align-items:center;padding:12px}
-.step:nth-child(1) .step-media{background:var(--cream)}
-.step:nth-child(2) .step-media{background:var(--deep)}
-.step:nth-child(3) .step-media{background:var(--green)}
-.step:nth-child(4) .step-media{background:var(--orange)}
+.step.s1 .step-media{background:var(--cream)}
+.step.s2 .step-media{background:var(--deep)}
+.step.s3 .step-media{background:var(--green)}
+.step.s4 .step-media{background:var(--orange)}
 .step-media > img{width:100%;height:100%;object-fit:contain}
 .step-media > svg{width:100%;height:100%;display:block}
 .step h3{min-height:1.9em;display:flex;align-items:center;justify-content:center}
 .truck-ill{width:100%;height:100%;display:block}
-.step:nth-child(1) .step-media{padding:0}
+.step.s1 .step-media{padding:0}
 /* ---- passos: cenas em camadas (mesma tela, sem distorção) ---- */
 .sm-art{position:relative;width:100%;aspect-ratio:var(--ar)}
 .sm-art .ly,.sm-scene{position:absolute;inset:0;width:100%;height:100%;display:block}
 .sm-glow{position:absolute;border-radius:50%;aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
-.step:nth-child(2) .sm-glow{left:47%;top:60%;width:64%;background:radial-gradient(closest-side,rgba(243,223,202,.2),rgba(243,223,202,.07) 72%,transparent)}
-.step:nth-child(3) .sm-glow{left:56%;top:52%;width:70%;background:radial-gradient(closest-side,rgba(20,76,64,.32),rgba(20,76,64,.1) 72%,transparent)}
-.step:nth-child(4) .sm-glow{left:76%;top:40%;width:52%;background:radial-gradient(closest-side,rgba(251,243,234,.55),rgba(251,243,234,.15) 70%,transparent)}
+.step.s2 .sm-glow{left:47%;top:60%;width:64%;background:radial-gradient(closest-side,rgba(243,223,202,.2),rgba(243,223,202,.07) 72%,transparent)}
+.step.s3 .sm-glow{left:56%;top:52%;width:70%;background:radial-gradient(closest-side,rgba(20,76,64,.32),rgba(20,76,64,.1) 72%,transparent)}
+.step.s4 .sm-glow{left:76%;top:40%;width:52%;background:radial-gradient(closest-side,rgba(251,243,234,.55),rgba(251,243,234,.15) 70%,transparent)}
 .fx{position:absolute;width:0;height:0;pointer-events:none}
 .fx i{position:absolute;left:0;top:0;display:block;border-radius:50%;opacity:0}
 .puff{left:47%;top:86%}
@@ -225,10 +225,10 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .boil{left:60%;top:61.5%}
 .boil i{width:9px;height:9px;margin:-4.5px;border:2px solid #F3DFCA}
 .spark{left:0;top:0;width:100%;height:100%}
-.spark svg{position:absolute;width:5.5%;height:auto;opacity:0;overflow:visible}
-.spark svg:nth-child(even){width:3.8%}
+.spark img{position:absolute;width:5.5%;height:auto;opacity:0;overflow:visible}
+.spark img:nth-of-type(even){width:3.8%}
 .wisp{position:absolute;left:62%;top:-4%;width:30%;height:34%;overflow:visible;pointer-events:none}
-.wisp path{fill:none;stroke:#FBF3EA;stroke-width:3;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0}
+.wisp img{display:block;width:100%;height:100%;opacity:0;clip-path:inset(100% 0 0 0)}
 
 /* estado inicial (só com JS e sem movimento reduzido) */
 .js-anim .step:not(.play) .step-media{clip-path:circle(0% at 50% 55%)}
@@ -269,8 +269,8 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 /* passo 4: o chef apresenta o prato, que sobe na mão; brilhos e aroma */
 .step.play .sm-scene{transform-origin:30% 100%;animation:present 1s cubic-bezier(.34,1.35,.5,1) calc(var(--sd,0s) + .3s) both}
 .step.play .ly-plate{transform-origin:82% 55%;animation:plateUp 1.1s cubic-bezier(.45,0,.3,1) calc(var(--sd,0s) + 1.2s) both}
-.step.play .spark svg{animation:twinkle 1.1s ease-in-out calc(var(--sd,0s) + 1.6s + var(--i) * .14s) 2}
-.step.play .wisp path{animation:wisp 1.6s ease-out calc(var(--sd,0s) + 1.5s + var(--i) * .3s) 2}
+.step.play .spark img{animation:twinkle 1.1s ease-in-out calc(var(--sd,0s) + 1.6s + var(--i) * .14s) 2}
+.step.play .wisp img{animation:wispImg 1.6s ease-out calc(var(--sd,0s) + 1.5s) 2}
 @keyframes present{from{transform:translateY(16%) rotate(-4deg);opacity:0}50%{opacity:1}to{transform:none;opacity:1}}
 @keyframes plateUp{0%,100%{transform:none}40%{transform:translateY(-7%) rotate(-5deg)}70%{transform:translateY(1%) rotate(1.5deg)}}
 @keyframes twinkle{0%{transform:scale(0) rotate(0);opacity:0}35%{transform:scale(1) rotate(45deg);opacity:1}65%{transform:scale(.7) rotate(70deg);opacity:1}100%{transform:scale(0) rotate(90deg);opacity:0}}
@@ -674,7 +674,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .tm-go{width:100%;max-width:26rem;font-size:1.3rem;border-color:var(--orange)}
 .tm-go b{font-weight:900;color:var(--ink);background:linear-gradient(transparent 62%,rgba(255,255,255,.45) 62%)}
 .tm-tell{white-space:nowrap;display:inline-flex;align-items:center;gap:.5em;color:var(--cream);font-weight:700;text-decoration:underline;text-underline-offset:4px;min-height:44px}
-.tm-tell svg{width:18px;height:18px}
+.tm-tell .ico{width:18px;height:18px}
 .tm-dial.ring .tm-svg{transform-origin:50% 54%;animation:ring .6s ease-in-out}
 @keyframes ring{0%,100%{transform:none}20%{transform:rotate(-3deg)}40%{transform:rotate(3deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(1deg)}}
 .js-anim .timer:not(.play) .tm-copy,.js-anim .timer:not(.play) .tm-pick,.js-anim .timer:not(.play) .tm-cta{opacity:0}
@@ -790,7 +790,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .mat-note{margin:0;font-weight:700;font-size:.85rem}
 .mf{width:100%;max-width:440px;margin-top:10px;padding:18px;border-radius:22px;background:var(--ink);color:var(--cream);text-align:left;box-shadow:0 20px 40px rgba(22,17,37,.28)}
 .mf-row{display:flex;align-items:center;gap:14px}
-.mf-row svg{flex:none;width:44px;height:54px}
+.mf-row .mf-ic{flex:none;width:44px;height:54px;display:block}
 .mf-name{flex:1;min-width:0}
 .mf-name b{display:block;font-family:var(--f-display);font-weight:900;font-size:1.5rem;line-height:1;text-transform:uppercase}
 .mf-name small{display:block;margin-top:4px;font-weight:600;font-size:.82rem;color:#CFC6BB}
@@ -801,8 +801,8 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .mf-meta dt{font-weight:800;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:#CFC6BB}
 .mf-meta dd{margin:0;font-weight:700}
 .mf-dl{white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:58px;border-radius:14px;background:var(--orange);color:#fff;font-family:var(--f-display);font-weight:900;font-size:1.35rem;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s}
-.mf-dl svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-@media (hover:hover){ .mf-dl:not(.off):hover{transform:translateY(-2px);background:#FF8C42} .mf-dl:not(.off):hover svg{animation:dlNudge .6s ease-in-out} }
+.mf-dl .ico{width:22px;height:22px}
+@media (hover:hover){ .mf-dl:not(.off):hover{transform:translateY(-2px);background:#FF8C42} .mf-dl:not(.off):hover .ico{animation:dlNudge .6s ease-in-out} }
 @keyframes dlNudge{50%{transform:translateY(3px)}}
 .mf-dl.off{background:rgba(245,126,50,.22);color:#F3DFCA;pointer-events:none}
 .mf-open{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;min-height:44px;color:var(--cream);font-weight:700;text-decoration:underline;text-underline-offset:4px}
@@ -864,7 +864,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .gal-modes[data-mode="uma"] .ind{transform:translateX(100%)}
 .gal-modes button{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border:0;border-radius:999px;background:none;color:var(--cream);font:800 .95rem var(--f-body);cursor:pointer;transition:color .3s;white-space:nowrap}
 .gal-modes button[aria-pressed="true"]{color:#fff}
-.gal-modes svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.gal-modes .ico{width:18px;height:18px}
 .gal-modes button:focus-visible{outline:3px solid var(--cream);outline-offset:2px}
 .gal-filt{display:flex;gap:8px;overflow-x:auto;max-width:calc(100% + 2 * var(--gut));margin-inline:calc(var(--gut) * -1);padding:2px var(--gut) 6px;scrollbar-width:none}
 .gal-filt::-webkit-scrollbar{display:none}
@@ -1002,39 +1002,61 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .totop{box-shadow:0 8px 20px rgba(0,0,0,.25);border-width:2px}
 
 @media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation:none!important;transition:none!important} }
+
+/* ===== etapa 3: tudo editável ===== */
+.ico{display:inline-block;flex:none;background:currentColor;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain}
+img.truck-ill{object-fit:cover}
+@keyframes wispImg{0%{clip-path:inset(100% 0 0 0);opacity:0}20%{opacity:.85}60%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}
+.cap{display:inline-block}
+.cap::first-letter{text-transform:uppercase}
+.tp .tp-i{display:none}
+.tp .tp-i:first-of-type,.tp .tp-i:last-of-type{display:inline}
+.tp .tp-i:first-of-type .tp-b,.tp .tp-i:last-of-type .tp-a{display:none}
+.tp .tp-i:only-of-type .tp-a,.tp .tp-i:only-of-type .tp-b{display:inline}
+.tp .tp-i:last-of-type:not(:first-of-type)::before,.tp .tp-i:only-of-type .tp-b::before{content:"\00a0\2013\00a0"}
+.chip.tp{gap:0}
+.chip.tp:not(:has(.tp-i)){display:none}
+.step.s5{background:var(--deep);color:var(--cream)}.step.s6{background:#fff}.step.s7{background:var(--cream)}.step.s8{background:var(--orange)}
+.step.s5 .step-media{background:var(--cream)}.step.s6 .step-media{background:var(--deep)}.step.s7 .step-media{background:var(--green)}.step.s8 .step-media{background:var(--cream)}
+.sm-art.gen .ly{object-fit:contain}
+.cta-list li:nth-of-type(5){--i:4}.cta-list li:nth-of-type(6){--i:5}.cta-list li:nth-of-type(7){--i:6}
+.galeria:empty{display:none}
+.hero-copy,.hero-text{min-width:0;max-width:100%}
+.hero-text .h-title,.sec-head h2{overflow-wrap:break-word}
+.mb-tx,.qa .q,.qa .a,.step p,.tm-cities button{overflow-wrap:break-word}
 </style>
 </head>
 <body>
-<!-- ============ HEADER (computador) ============ -->
+<!-- ============ HEADER ============ -->
 <header class="fh" id="top">
   <div class="fh-bar">
-    <a class="fh-brand" href="#topo" aria-label="Pequeno Chef, voltar ao início"><img src="_media/pagina/marca/logo-pc-sm.webp" alt="" width="240" height="136"><span>Pequeno<br>Chef</span></a>
+    <a class="fh-brand" href="#topo" aria-label="@evento"><img src="@img_marca_logopequeno" alt="" width="240" height="136"><span>@evento</span></a>
     <nav class="fh-nav" aria-label="Seções" id="fhNav">
       <span class="fh-blob" id="fhBlob" aria-hidden="true"></span>
-      <a href="#sobre"><img src="_media/pagina/icones/m-experiencia.svg" alt="">Sobre o projeto</a>
-      <a href="#carreta"><img src="_media/pagina/icones/m-carreta.svg" alt="">A carreta</a>
-      <a href="#equipe"><img src="_media/pagina/icones/m-equipe.svg" alt="">Equipe</a>
-      <a href="#contagem"><img src="_media/pagina/icones/m-quando.svg" alt="">Datas</a>
-      <a href="#duvidas"><img src="_media/pagina/icones/m-duvidas.svg" alt="">Dúvidas</a>
+      <a href="#sobre"><img src="@img_icones_menusobre" alt="">@menu_sobre</a>
+      <a href="#carreta"><img src="@img_icones_menucarreta" alt="">@menu_carreta</a>
+      <a href="#equipe"><img src="@img_icones_menuequipe" alt="">@menu_equipe</a>
+      <a href="#contagem"><img src="@img_icones_menudatas" alt="">@menu_datas</a>
+      <a href="#duvidas"><img src="@img_icones_menuduvidas" alt="">@menu_duvidas</a>
     </nav>
     <div class="fh-right">
-    <a class="btn btn-orange fh-cta" href="#inscricao">Inscrição</a>
-    <button class="fh-burger" type="button" id="fhBurger" aria-expanded="false" aria-controls="fhMenu" aria-label="Abrir menu"><i></i></button>
+    <!-- @se link_inscricao --><a class="btn btn-orange fh-cta" href="@link_inscricao">@menu_inscricao</a><!-- @senao --><a class="btn btn-orange fh-cta" href="#inscricao">@menu_inscricao</a><!-- @fim -->
+    <button class="fh-burger" type="button" id="fhBurger" aria-expanded="false" aria-controls="fhMenu" aria-label="@menu_abrir"><i></i></button>
     </div>
     <span class="fh-prog" id="fhProg" aria-hidden="true"></span>
   </div>
   <nav class="fh-menu" id="fhMenu" aria-label="Menu">
-    <a href="#sobre"><img src="_media/pagina/icones/m-experiencia.svg" alt="">Sobre o projeto</a>
-    <a href="#carreta"><img src="_media/pagina/icones/m-carreta.svg" alt="">A carreta</a>
-    <a href="#equipe"><img src="_media/pagina/icones/m-equipe.svg" alt="">Equipe</a>
-    <a href="#contagem"><img src="_media/pagina/icones/m-quando.svg" alt="">Datas</a>
-    <a class="wide" href="#inscricao"><img src="_media/pagina/icones/m-inscrever.svg" alt="">Fazer minha inscrição</a>
+    <a href="#sobre"><img src="@img_icones_menusobre" alt="">@menu_sobre</a>
+    <a href="#carreta"><img src="@img_icones_menucarreta" alt="">@menu_carreta</a>
+    <a href="#equipe"><img src="@img_icones_menuequipe" alt="">@menu_equipe</a>
+    <a href="#contagem"><img src="@img_icones_menudatas" alt="">@menu_datas</a>
+    <!-- @se link_inscricao --><a class="wide" href="@link_inscricao"><img src="@img_icones_menuinscricao" alt="">@inscricao_botao</a><!-- @senao --><a class="wide" href="#inscricao"><img src="@img_icones_menuinscricao" alt="">@inscricao_botao_breve</a><!-- @fim -->
   </nav>
 </header>
-<button class="totop" type="button" id="toTop" aria-label="Voltar ao topo">
+<button class="totop" type="button" id="toTop" aria-label="@menu_topo">
   <svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring" id="toRing" cx="32" cy="32" r="29" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>
   <svg class="arr" viewBox="0 0 22 26" aria-hidden="true" style="position:relative;inset:auto;transform:none;width:22px;height:26px"><path d="M11 24 V4 M3 11 L11 3 L19 11" fill="none" stroke="#161125" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  <span class="tip">Voltar ao topo</span>
+  <span class="tip">@menu_topo</span>
 </button>
 
 <main>
@@ -1042,221 +1064,222 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 <section class="hero" id="topo" aria-labelledby="t-hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <h1 class="hero-logo" id="t-hero"><img src="_media/pagina/marca/logo-pc.webp" alt="Ministério da Cultura apresenta: Pequeno Chef" width="900" height="567" fetchpriority="high"></h1>
+      <h1 class="hero-logo" id="t-hero"><img src="@img_marca_logo" alt="@hero_logo_alt" width="900" height="567" fetchpriority="high"></h1>
       <div class="hero-text">
-        <p class="eyebrow">Oficina de culinária<!-- @se gratuito = sim --> gratuita<!-- @fim --></p>
-        <p class="h-title" role="heading" aria-level="2" style="font-family:var(--f-display);font-weight:900;line-height:.95;text-transform:uppercase;text-wrap:balance">Aprender, cozinhar <span class="pop">e compartilhar</span></p>
-        <p class="lead">Uma <strong>carreta-cozinha itinerante</strong>, <strong>aulas<!-- @se gratuito = sim --> gratuitas<!-- @fim --></strong> e experiências gastronômicas que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira.</p>
+        <p class="eyebrow"><!-- @se gratuito = sim -->@hero_selo_gratuito<!-- @senao -->@hero_selo<!-- @fim --></p>
+        <p class="h-title" role="heading" aria-level="2" style="font-family:var(--f-display);font-weight:900;line-height:.95;text-transform:uppercase;text-wrap:balance">@hero_titulo <span class="pop">@hero_titulo_destaque</span></p>
+        <p class="lead">@hero_texto_inicio <strong>@hero_texto_destaque1</strong>, <strong><!-- @se gratuito = sim -->@hero_texto_destaque2_gratuito<!-- @senao -->@hero_texto_destaque2<!-- @fim --></strong> @hero_texto_fim</p>
         <ul class="chips">
-          <li class="chip">A partir de 16 anos</li>
-          <li class="chip">@total_cidades cidades</li>
-          <!-- @se temporada --><li class="chip">@temporada</li><!-- @fim -->
+          <li class="chip"><span class="cap">@publico</span></li>
+          <li class="chip">@total_cidades @hero_cidades</li>
+          <li class="chip tp" aria-label="@hero_periodo_rotulo"><!-- @repetir cidades --><span class="tp-i"><span class="tp-a">@data_inicio_mes_abrev/@data_inicio_ano</span><span class="tp-b"><!-- @se data_fim -->@data_fim_mes_abrev/@data_fim_ano<!-- @senao -->@data_inicio_mes_abrev/@data_inicio_ano<!-- @fim --></span></span><!-- @fim --></li>
         </ul>
         <div class="actions" id="heroActions">
-          <a class="btn btn-orange" href="#inscricao">Fazer minha inscrição</a>
-          <a class="link" href="#contagem">Ver datas por cidade</a>
+          <!-- @se link_inscricao --><a class="btn btn-orange" href="@link_inscricao">@inscricao_botao</a><!-- @senao --><a class="btn btn-orange" href="#inscricao">@inscricao_botao_breve</a><!-- @fim -->
+          <a class="link" href="#contagem">@hero_link_datas</a>
         </div>
       </div>
     </div>
     <div class="hero-art" id="heroArt">
       <div class="art-btn">
-        <div class="art-stage" id="artStage" role="img" aria-label="Ilustração de um chef com uma tigela azul cheia de legumes, temperando com a outra mão">
-          <div class="px" data-d="6"><img class="ly base" src="_media/pagina/hero/hero-base.webp" alt="" width="1300" height="1142"></div>
-          <div class="px" data-d="10"><img class="ly pontos" src="_media/pagina/hero/hero-pontos.webp" alt="" width="647" height="259"></div>
-          <div class="px" data-d="22"><img class="ly folhas" src="_media/pagina/hero/hero-folhas.webp" alt="" width="211" height="181"></div>
-          <div class="px" data-d="16"><img class="ly tomate" src="_media/pagina/hero/hero-tomate.webp" alt="" width="177" height="176"></div>
+        <div class="art-stage" id="artStage" role="img" aria-label="@hero_ilustracao_alt">
+          <div class="px" data-d="6"><img class="ly base" src="@img_hero_base" alt="" width="1300" height="1142"></div>
+          <div class="px" data-d="10"><img class="ly pontos" src="@img_hero_pontos" alt="" width="647" height="259"></div>
+          <div class="px" data-d="22"><img class="ly folhas" src="@img_hero_folhas" alt="" width="211" height="181"></div>
+          <div class="px" data-d="16"><img class="ly tomate" src="@img_hero_tomate" alt="" width="177" height="176"></div>
         </div>
       </div>
-      <span class="float" data-d="-26" style="--i:0;left:44%;bottom:-7%" aria-hidden="true"><span><img src="_media/pagina/icones/queijo.webp" alt=""></span></span>
-      <span class="float" data-d="30" style="--i:1;left:-7%;bottom:-9%" aria-hidden="true"><span><img src="_media/pagina/icones/batedor.webp" alt="" style="width:62%"></span></span>
-      <span class="float" data-d="-20" style="--i:2;right:-2%;bottom:6%" aria-hidden="true"><span><img src="_media/pagina/icones/pimenta.webp" alt=""></span></span>
+      <span class="float" data-d="-26" style="--i:0;left:44%;bottom:-7%" aria-hidden="true"><span><img src="@img_icones_queijo" alt=""></span></span>
+      <span class="float" data-d="30" style="--i:1;left:-7%;bottom:-9%" aria-hidden="true"><span><img src="@img_icones_batedor" alt="" style="width:62%"></span></span>
+      <span class="float" data-d="-20" style="--i:2;right:-2%;bottom:6%" aria-hidden="true"><span><img src="@img_icones_pimenta" alt=""></span></span>
     </div>
   </div>
 </section>
 
-
-
-<!-- ============ EXPERIÊNCIA ============ -->
+<!-- ============ SOBRE O PROJETO ============
+     Passos: até 8. Cada passo aparece quando o título (@passoN_titulo) está preenchido. -->
 <section class="how" id="sobre" aria-labelledby="t-exp">
   <div class="wrap">
     <header class="sec-head">
-      <div class="head-icons" aria-hidden="true"><img src="_media/pagina/icones/avental.webp" alt=""><img src="_media/pagina/icones/tomate.webp" alt=""><img src="_media/pagina/icones/rolo.webp" alt=""></div>
-      <p class="eyebrow">Sobre o projeto</p>
-      <h2 id="t-exp">Uma cozinha sobre rodas</h2>
-      <p class="sub">O projeto transforma uma carreta em uma cozinha adaptada e em um espaço de encontro. Em cada cidade, o público é convidado a participar de atividades práticas, descobrir novas possibilidades na cozinha e trocar conhecimentos sobre alimentação e cultura.</p>
+      <div class="head-icons" aria-hidden="true"><img src="@img_icones_avental" alt=""><img src="@img_icones_tomate" alt=""><img src="@img_icones_rolo" alt=""></div>
+      <p class="eyebrow">@sobre_eyebrow</p>
+      <h2 id="t-exp">@sobre_titulo</h2>
+      <p class="sub">@sobre_texto</p>
     </header>
     <ol class="steps">
-      <li class="step">
+      <!-- @se passo1_titulo -->
+      <li class="step s1">
         <span class="step-num" aria-hidden="true">1</span>
-        <div class="step-media"><svg class="truck-ill" id="truckIll" viewBox="0 -40 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustração da carreta do Pequeno Chef chegando à cidade puxada pelo caminhão: ela estaciona, a parte expansível desliza para fora, a porta abre, a escada desce e o elevador para PCD baixa até o chão">
-          <g fill="#EAD3B9"><rect x="0" y="92" width="64" height="310"/><rect x="72" y="40" width="58" height="360"/><rect x="138" y="110" width="80" height="290"/><rect x="226" y="64" width="54" height="336"/><rect x="288" y="128" width="92" height="272"/><rect x="388" y="30" width="62" height="370"/><rect x="458" y="98" width="84" height="302"/><rect x="550" y="56" width="58" height="344"/><rect x="616" y="118" width="88" height="282"/><rect x="712" y="74" width="88" height="326"/></g>
-          <g fill="#F3DFCA"><rect x="86" y="58" width="10" height="14"/><rect x="106" y="58" width="10" height="14"/><rect x="86" y="84" width="10" height="14"/><rect x="402" y="48" width="10" height="14"/><rect x="424" y="48" width="10" height="14"/><rect x="402" y="74" width="10" height="14"/><rect x="564" y="74" width="10" height="14"/><rect x="584" y="74" width="10" height="14"/><rect x="726" y="92" width="10" height="14"/><rect x="746" y="92" width="10" height="14"/><rect x="240" y="82" width="10" height="14"/><rect x="260" y="82" width="10" height="14"/></g>
-          <rect x="0" y="396" width="800" height="164" fill="#E2C6A5"/>
-          <rect x="0" y="396" width="800" height="6" fill="#D2B490"/>
-          <path d="M-20 478 H820" stroke="#F3DFCA" stroke-width="7" stroke-dasharray="44 30"/>
-          <g id="tiTruck">
-            <ellipse cx="410" cy="398" rx="356" ry="9" fill="#161125" opacity=".2"/>
-            <g id="tiDust" fill="#D2B490"><circle cx="34" cy="390" r="0" opacity="0"/><circle cx="62" cy="384" r="0" opacity="0"/><circle cx="96" cy="392" r="0" opacity="0"/></g>
-            <g id="tiLegs"><rect x="600" y="346" width="10" height="44" fill="#6E737A"/><rect x="592" y="388" width="26" height="7" rx="2" fill="#161125"/></g>
-            <g id="tiBody">
-              <rect x="40" y="110" width="596" height="226" rx="16" fill="#00AD64"/>
-              <g fill="none" stroke="#0B9C57" stroke-width="22" stroke-linecap="round"><path d="M56 300 C136 230 176 330 276 260 C376 200 496 230 624 280"/><path d="M56 190 C156 130 236 230 356 160 C446 110 536 130 624 176"/></g>
-              <rect x="40" y="110" width="596" height="12" rx="6" fill="#F3DFCA"/>
-              <image href="_media/pagina/icones/cebola.webp" x="52" y="190" width="66" height="70"/>
-              <image href="_media/pagina/icones/pimenta.webp" x="80" y="140" width="58" height="47" transform="rotate(-20 109 164)"/>
-              <rect x="42" y="330" width="594" height="16" rx="5" fill="#155C3F"/>
-              <rect x="636" y="316" width="18" height="16" fill="#161125"/>
-              <path d="M652 190 H730 Q758 190 768 216 L786 262 V346 H652Z" fill="#144C40" stroke="#161125" stroke-width="3" stroke-linejoin="round"/>
-              <path d="M664 202 H724 Q740 202 748 222 L762 256 H664Z" fill="#CFE9F7" stroke="#161125" stroke-width="3" stroke-linejoin="round"/>
-              <path d="M676 214 l14 30" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".7"/>
-              <image href="_media/pagina/marca/logo-pc-sm.webp" x="668" y="266" width="58" height="48"/>
-              <circle cx="776" cy="300" r="7" fill="#F9B233" stroke="#161125" stroke-width="3"/>
-              <rect x="648" y="340" width="142" height="12" rx="4" fill="#161125"/>
-              <rect x="136" y="236" width="40" height="96" rx="3" fill="#CFD3D6" stroke="#161125" stroke-width="3"/>
-              <g id="tiSign"><rect x="141" y="200" width="30" height="30" rx="4" fill="#1F5FBF"/><circle cx="155" cy="207" r="3.2" fill="#fff"/><path d="M154 212 V222 H163 L166 228 M154 217 H162" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M149 219 A7 7 0 1 0 160 227" stroke="#fff" stroke-width="2.6" fill="none"/></g>
-              <rect x="572" y="196" width="44" height="136" fill="#0E3B2C"/><rect x="576" y="200" width="36" height="5" rx="2" fill="#F9B233"/><path d="M576 205 L612 205 L606 250 L582 250Z" fill="#F9B233" opacity=".14"/>
-              <g id="tiDoor" transform="matrix(0.1449 -0.4313 0 1 526.74 265.69)"><rect x="572" y="196" width="44" height="136" rx="4" fill="#DFE3E6" stroke="#161125" stroke-width="3"/><rect x="578" y="204" width="32" height="122" fill="#BFC5CA"/><circle cx="582" cy="268" r="3.5" fill="#161125"/></g>
-              <polygon id="tiTop" points="200,126 552,126 538,152 186,152" fill="#5FD39A" stroke="#0B9C57" stroke-width="2" stroke-linejoin="round"/>
-              <polygon id="tiSide" points="552,126 552,316 538,342 538,152" fill="#0B8A4F" stroke="#0B9C57" stroke-width="2" stroke-linejoin="round"/>
-              <g id="tiFront" transform="translate(186 152)">
-                <rect width="352" height="190" rx="10" fill="#1DBF78" stroke="#0B9C57" stroke-width="3"/>
-                <ellipse cx="92" cy="88" rx="78" ry="70" fill="#144C40"/>
-                <g stroke="#F3DFCA" stroke-width="6" stroke-linecap="round"><path d="M14 30 H60"/><path d="M14 48 H52"/><path d="M14 66 H56"/></g>
-                <image href="_media/pagina/ilustracoes/chef-panela.webp" x="24" y="36" width="206" height="141"/>
-                <image href="_media/pagina/marca/logo-pc-sm.webp" x="246" y="30" width="96" height="80"/>
-              </g>
-              <g id="tiSkirt" transform="translate(190 342)"><rect width="344" height="54" rx="4" fill="#0E3B2C"/><g stroke="#0A2A20" stroke-width="3"><path d="M54 4 V50"/><path d="M114 4 V50"/><path d="M174 4 V50"/><path d="M234 4 V50"/><path d="M294 4 V50"/></g></g>
-              <g id="tiSteps" fill="#B3B9BF" stroke="#161125" stroke-width="2.5"><path d="M568 336 H620 V348 H568Z"/><path d="M564 348 H624 V360 H564Z"/><path d="M560 360 H628 V372 H560Z"/><path d="M556 372 H632 V384 H556Z"/><path d="M552 384 H636 V396 H552Z"/></g>
-            </g>
-            <g id="tiW1"><circle cx="76" cy="366" r="28" fill="#161125"/><circle cx="76" cy="366" r="11" fill="#F3DFCA"/><rect x="72" y="344" width="8" height="44" rx="3" fill="#161125"/></g>
-            <g id="tiW2"><circle cx="122" cy="366" r="28" fill="#161125"/><circle cx="122" cy="366" r="11" fill="#F3DFCA"/><rect x="118" y="344" width="8" height="44" rx="3" fill="#161125"/></g>
-            <g id="tiW3"><circle cx="720" cy="368" r="30" fill="#161125"/><circle cx="720" cy="368" r="12" fill="#F3DFCA"/><rect x="716" y="344" width="8" height="48" rx="3" fill="#161125"/></g>
-            <g id="tiRails" fill="#6E737A"><rect x="130" y="330" width="4" height="66"/><rect x="178" y="330" width="4" height="66"/></g>
-            <g id="tiPlat"><rect x="128" y="360" width="56" height="4" fill="#F2C230"/><rect x="128" y="360" width="4" height="28" fill="#161125"/><rect x="180" y="360" width="4" height="28" fill="#161125"/><rect x="126" y="388" width="60" height="6" fill="#9AA0A6" stroke="#161125" stroke-width="2.5"/></g>
-          </g>
-        </svg></div>
-        <h3>A carreta chega</h3>
-        <p>A carreta-cozinha itinerante chega à cidade e se abre como uma cozinha adaptada e um espaço de encontro.</p>
+        <div class="step-media"><img class="truck-ill" id="truckIll" src="@img_sobre_carreta" alt="@passo1_imagem_alt" loading="lazy"></div>
+        <h3>@passo1_titulo</h3>
+        <p>@passo1_texto</p>
       </li>
-      <li class="step">
+      <!-- @fim -->
+      <!-- @se passo2_titulo -->
+      <li class="step s2">
         <span class="step-num" aria-hidden="true">2</span>
-        <div class="step-media"><div class="sm-art" style="--ar:800/530"><span class="sm-glow" aria-hidden="true"></span><img class="ly ly-chef" src="_media/pagina/sobre/massa-chef.webp" alt="Ilustração de uma chef sovando massa sobre a bancada, com uma tigela de ingredientes, um saco de farinha e um rolo de massa" loading="lazy" width="800" height="530"><img class="ly ly-left" src="_media/pagina/sobre/massa-tigela.webp" alt="" aria-hidden="true" loading="lazy" width="800" height="530"><img class="ly ly-right" src="_media/pagina/sobre/massa-saco.webp" alt="" aria-hidden="true" loading="lazy" width="800" height="530"><img class="ly ly-flour" src="_media/pagina/sobre/massa-farinha.webp" alt="" aria-hidden="true" loading="lazy" width="800" height="530"><span class="fx puff" aria-hidden="true"><i style="--x:-46px;--y:-20px"></i><i style="--x:-30px;--y:-34px"></i><i style="--x:-12px;--y:-40px"></i><i style="--x:10px;--y:-38px"></i><i style="--x:30px;--y:-30px"></i><i style="--x:48px;--y:-16px"></i><i style="--x:-56px;--y:-6px"></i><i style="--x:58px;--y:-4px"></i></span></div></div>
-        <h3>Aprender com o chef</h3>
-        <p>Nas aulas<!-- @se gratuito = sim --> gratuitas<!-- @fim -->, você aprende a cozinhar com um chef, dentro da carreta.</p>
+        <div class="step-media"><div class="sm-art" style="--ar:800/530"><span class="sm-glow" aria-hidden="true"></span><img class="ly ly-chef" src="@img_sobre_massachef" alt="@passo2_imagem_alt" loading="lazy" width="800" height="530"><img class="ly ly-left" src="@img_sobre_massatigela" alt="" aria-hidden="true" loading="lazy" width="800" height="530"><img class="ly ly-right" src="@img_sobre_massasaco" alt="" aria-hidden="true" loading="lazy" width="800" height="530"><img class="ly ly-flour" src="@img_sobre_massafarinha" alt="" aria-hidden="true" loading="lazy" width="800" height="530"><span class="fx puff" aria-hidden="true"><i style="--x:-46px;--y:-20px"></i><i style="--x:-30px;--y:-34px"></i><i style="--x:-12px;--y:-40px"></i><i style="--x:10px;--y:-38px"></i><i style="--x:30px;--y:-30px"></i><i style="--x:48px;--y:-16px"></i><i style="--x:-56px;--y:-6px"></i><i style="--x:58px;--y:-4px"></i></span></div></div>
+        <h3>@passo2_titulo</h3>
+        <p><!-- @se gratuito = sim -->@passo2_texto_gratuito<!-- @senao -->@passo2_texto<!-- @fim --></p>
       </li>
-      <li class="step">
+      <!-- @fim -->
+      <!-- @se passo3_titulo -->
+      <li class="step s3">
         <span class="step-num" aria-hidden="true">3</span>
-        <div class="step-media"><div class="sm-art" style="--ar:800/547"><span class="sm-glow" aria-hidden="true"></span><img class="ly ly-pot" src="_media/pagina/sobre/panela-base.webp" alt="Ilustração de um chef mexendo uma panela azul cercada de legumes" loading="lazy" width="800" height="547"><img class="ly ly-vapor" src="_media/pagina/sobre/panela-vapor.webp" alt="" aria-hidden="true" loading="lazy" width="800" height="547"><img class="ly ly-bubbles" src="_media/pagina/sobre/panela-bolhas.webp" alt="" aria-hidden="true" loading="lazy" width="800" height="547"><span class="fx boil" aria-hidden="true"><i style="--i:0;--x:-48px"></i><i style="--i:1;--x:-8px"></i><i style="--i:2;--x:34px"></i><i style="--i:3;--x:-28px"></i></span></div></div>
-        <h3>Cozinhar na prática</h3>
-        <p>Atividades práticas para descobrir novas possibilidades na cozinha e os sabores da culinária brasileira.</p>
+        <div class="step-media"><div class="sm-art" style="--ar:800/547"><span class="sm-glow" aria-hidden="true"></span><img class="ly ly-pot" src="@img_sobre_panelabase" alt="@passo3_imagem_alt" loading="lazy" width="800" height="547"><img class="ly ly-vapor" src="@img_sobre_panelavapor" alt="" aria-hidden="true" loading="lazy" width="800" height="547"><img class="ly ly-bubbles" src="@img_sobre_panelabolhas" alt="" aria-hidden="true" loading="lazy" width="800" height="547"><span class="fx boil" aria-hidden="true"><i style="--i:0;--x:-48px"></i><i style="--i:1;--x:-8px"></i><i style="--i:2;--x:34px"></i><i style="--i:3;--x:-28px"></i></span></div></div>
+        <h3>@passo3_titulo</h3>
+        <p>@passo3_texto</p>
       </li>
-      <li class="step">
+      <!-- @fim -->
+      <!-- @se passo4_titulo -->
+      <li class="step s4">
         <span class="step-num" aria-hidden="true">4</span>
-        <div class="step-media"><div class="sm-art" style="--ar:800/532"><span class="sm-glow" aria-hidden="true"></span><div class="sm-scene"><img class="ly" src="_media/pagina/sobre/prato-base.webp" alt="Ilustração de um chef sorridente servindo um prato colorido" loading="lazy" width="800" height="532"><img class="ly ly-plate" src="_media/pagina/sobre/prato-prato.webp" alt="" aria-hidden="true" loading="lazy" width="800" height="532"></div><svg class="wisp" viewBox="0 0 100 100" aria-hidden="true"><path pathLength="100" style="--i:0" d="M30 100 C18 80 42 66 30 46 C20 30 38 18 32 0"/><path pathLength="100" style="--i:1" d="M64 100 C52 82 76 68 64 48 C56 34 72 20 66 4"/></svg><span class="fx spark" aria-hidden="true"><svg viewBox="0 0 24 24" style="--i:0;left:56%;top:16%"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="#FBF3EA"/></svg><svg viewBox="0 0 24 24" style="--i:1;left:93%;top:10%"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="#FBF3EA"/></svg><svg viewBox="0 0 24 24" style="--i:2;left:96%;top:47%"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="#161125"/></svg><svg viewBox="0 0 24 24" style="--i:3;left:52%;top:46%"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="#FBF3EA"/></svg><svg viewBox="0 0 24 24" style="--i:4;left:80%;top:2%"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="#161125"/></svg><svg viewBox="0 0 24 24" style="--i:5;left:70%;top:52%"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="#FBF3EA"/></svg></span></div></div>
-        <h3>Compartilhar</h3>
-        <p>Um espaço para trocar saberes sobre alimentação, cultura e as tradições da nossa cozinha.</p>
+        <div class="step-media"><div class="sm-art" style="--ar:800/532"><span class="sm-glow" aria-hidden="true"></span><div class="sm-scene"><img class="ly" src="@img_sobre_pratobase" alt="@passo4_imagem_alt" loading="lazy" width="800" height="532"><img class="ly ly-plate" src="@img_sobre_pratoprato" alt="" aria-hidden="true" loading="lazy" width="800" height="532"></div><span class="wisp" aria-hidden="true"><img src="@img_sobre_vapor" alt="" loading="lazy"></span><span class="fx spark" aria-hidden="true"><img src="@img_sobre_brilhoclaro" alt="" style="--i:0;left:56%;top:16%"><img src="@img_sobre_brilhoclaro" alt="" style="--i:1;left:93%;top:10%"><img src="@img_sobre_brilhoescuro" alt="" style="--i:2;left:96%;top:47%"><img src="@img_sobre_brilhoclaro" alt="" style="--i:3;left:52%;top:46%"><img src="@img_sobre_brilhoescuro" alt="" style="--i:4;left:80%;top:2%"><img src="@img_sobre_brilhoclaro" alt="" style="--i:5;left:70%;top:52%"></span></div></div>
+        <h3>@passo4_titulo</h3>
+        <p>@passo4_texto</p>
       </li>
+      <!-- @fim -->
+      <!-- @se passo5_titulo -->
+      <li class="step s5">
+        <span class="step-num" aria-hidden="true">5</span>
+        <div class="step-media"><div class="sm-art gen" style="--ar:4/3"><span class="sm-glow" aria-hidden="true"></span><img class="ly" src="@img_sobre_passo5" alt="" loading="lazy"></div></div>
+        <h3>@passo5_titulo</h3>
+        <p>@passo5_texto</p>
+      </li>
+      <!-- @fim -->
+      <!-- @se passo6_titulo -->
+      <li class="step s6">
+        <span class="step-num" aria-hidden="true">6</span>
+        <div class="step-media"><div class="sm-art gen" style="--ar:4/3"><span class="sm-glow" aria-hidden="true"></span><img class="ly" src="@img_sobre_passo6" alt="" loading="lazy"></div></div>
+        <h3>@passo6_titulo</h3>
+        <p>@passo6_texto</p>
+      </li>
+      <!-- @fim -->
+      <!-- @se passo7_titulo -->
+      <li class="step s7">
+        <span class="step-num" aria-hidden="true">7</span>
+        <div class="step-media"><div class="sm-art gen" style="--ar:4/3"><span class="sm-glow" aria-hidden="true"></span><img class="ly" src="@img_sobre_passo7" alt="" loading="lazy"></div></div>
+        <h3>@passo7_titulo</h3>
+        <p>@passo7_texto</p>
+      </li>
+      <!-- @fim -->
+      <!-- @se passo8_titulo -->
+      <li class="step s8">
+        <span class="step-num" aria-hidden="true">8</span>
+        <div class="step-media"><div class="sm-art gen" style="--ar:4/3"><span class="sm-glow" aria-hidden="true"></span><img class="ly" src="@img_sobre_passo8" alt="" loading="lazy"></div></div>
+        <h3>@passo8_titulo</h3>
+        <p>@passo8_texto</p>
+      </li>
+      <!-- @fim -->
     </ol>
-    <ul class="facts-strip" aria-label="Informações das aulas">
-      <li><b>Aulas</b><span><!-- @se gratuito = sim -->Gratuitas e abertas ao público geral<!-- @senao --><!-- @se preco_vista -->R$@preco_vista · abertas ao público geral<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></span></li>
-      <li><b>Idade</b><span>A partir de 16 anos</span></li>
-      <li><b>Duração de cada aula</b><span><!-- @se duracao_aula -->@duracao_aula<!-- @senao -->A confirmar<!-- @fim --></span></li>
+    <ul class="facts-strip" aria-label="@sobre_rotulo_aulas">
+      <li><b>@sobre_rotulo_aulas</b><span><!-- @se gratuito = sim -->@sobre_aulas_gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista · @sobre_aulas_pago<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></span></li>
+      <li><b>@sobre_rotulo_idade</b><span class="cap">@publico</span></li>
+      <li><b>@sobre_rotulo_duracao</b><span><!-- @se duracao_aula -->@duracao_aula<!-- @senao -->A confirmar<!-- @fim --></span></li>
     </ul>
   </div>
 </section>
 
-<!-- ============ CARRETA 3D ============ -->
+<!-- ============ CARRETA 3D ============
+     Os textos dos 9 pontos da carreta ficam em @carreta_pontoN_titulo / @carreta_pontoN_texto (lista escondida no fim da página). -->
 <section class="truck" id="carreta" aria-labelledby="t-car">
-  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 V18 C 200 40 400 0 620 20 C 840 40 1040 2 1240 20 C 1340 28 1400 22 1440 16 V40 Z" fill="currentColor"/></svg>
+  <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_onda1);mask-image:url(@img_icones_onda1)"></span>
   <div class="wrap">
     <header class="sec-head">
-      <div class="head-icons" aria-hidden="true"><img src="_media/pagina/icones/tomate.webp" alt=""><img src="_media/pagina/icones/tigela.webp" alt=""><img src="_media/pagina/icones/tabua2.webp" alt=""></div>
-      <p class="eyebrow">Por fora e por dentro</p>
-      <h2 id="t-car">Dê uma volta pela carreta</h2>
-      <p class="sub">Gire a carreta, abra e recolha a parte expansível, espie o lado de dentro e toque nos pontos laranja para ver cada espaço.</p>
+      <div class="head-icons" aria-hidden="true"><img src="@img_icones_tomate" alt=""><img src="@img_icones_tigela" alt=""><img src="@img_icones_tabua2" alt=""></div>
+      <p class="eyebrow">@carreta_eyebrow</p>
+      <h2 id="t-car">@carreta_titulo</h2>
+      <p class="sub">@carreta_texto</p>
     </header>
-    <div class="t-center"><div class="t-modes" role="group" aria-label="Vista da carreta">
-      <button type="button" data-mode="fora" aria-pressed="true">Por fora</button>
-      <button type="button" data-mode="dentro" aria-pressed="false">Por dentro</button>
+    <div class="t-center"><div class="t-modes" role="group" aria-label="@carreta_eyebrow">
+      <button type="button" data-mode="fora" aria-pressed="true">@carreta_fora</button>
+      <button type="button" data-mode="dentro" aria-pressed="false">@carreta_dentro</button>
     </div></div>
     <div class="t-layout" id="truckMod">
       <div class="t-view">
-        <div class="viewer" id="viewer" role="img" aria-label="Representação 3D interativa da carreta do Pequeno Chef">
+        <div class="viewer" id="viewer" role="img" aria-label="@carreta_nota">
           <canvas id="truckCanvas"></canvas>
-          <div class="v-rot"><button type="button" id="rotL" aria-label="Girar para a esquerda">&#8634;</button><button type="button" id="rotR" aria-label="Girar para a direita">&#8635;</button></div>
-          <span class="v-hint" id="vHint">Arraste para os lados para girar</span>
-          <button type="button" class="v-exp" id="expBtn" aria-pressed="true">Recolher a parte expansível</button>
+          <div class="v-rot"><button type="button" id="rotL" aria-label="@carreta_girar_esquerda">&#8634;</button><button type="button" id="rotR" aria-label="@carreta_girar_direita">&#8635;</button></div>
+          <span class="v-hint" id="vHint">@carreta_dica</span>
+          <button type="button" class="v-exp" id="expBtn" aria-pressed="true">@carreta_recolher</button>
         </div>
       </div>
       <div class="t-side">
         <article class="panel" aria-live="polite">
-          <div class="ph" id="spPh"><img id="spImg" src="_media/pagina/carreta/carreta.webp" alt="" width="1600" height="900"></div>
+          <div class="ph" id="spPh"><img id="spImg" src="@img_carreta_externa" alt="" width="1600" height="900"></div>
           <div class="pt">
-            <h3 id="spTitle">A carreta</h3>
+            <h3 id="spTitle"></h3>
             <p id="spText"></p>
             <small id="spCap"></small>
-            <small>Representação 3D feita a partir da planta do projeto.</small>
+            <small>@carreta_nota</small>
           </div>
         </article>
       </div>
     </div>
-    <ul class="spots" id="spotList" aria-label="Espaços da carreta"></ul>
+    <ul class="spots" id="spotList" aria-label="@carreta_eyebrow"></ul>
   </div>
 </section>
 
 <!-- ============ VÍDEOS (YouTube) ============
-     Para publicar um vídeo: no script, em VIDEOS, cole o link do YouTube (ou só o código) em "id".
-     O vídeo só carrega quando a pessoa aperta o play (página mais leve). -->
+     Até 6 vídeos. Cada um aparece quando o link do YouTube (@ytN_link) está preenchido.
+     O vídeo só carrega quando a pessoa aperta o play. -->
 <section class="vids" id="videos" aria-labelledby="t-vid">
   <div class="wrap">
     <header class="sec-head vd-head">
-      <p class="eyebrow">Vídeos do projeto</p>
-      <h2 id="t-vid">A carreta <span>em cena</span></h2>
-      <p class="sub">Escolha um vídeo da lista e aperte o play.</p>
+      <p class="eyebrow">@videos_eyebrow</p>
+      <h2 id="t-vid">@videos_titulo <span>@videos_titulo_destaque</span></h2>
+      <p class="sub">@videos_texto</p>
     </header>
     <div class="vd-layout">
       <div class="vd-tv">
         <div class="vd-screen" id="vdScreen"></div>
         <div class="vd-bar">
-          <span class="vd-rec" aria-hidden="true"><i></i>Pequeno Chef</span>
+          <span class="vd-rec" aria-hidden="true"><i></i>@evento</span>
           <span class="vd-now" id="vdNow" aria-live="polite"></span>
           <span class="vd-knobs" aria-hidden="true"><i></i><i></i></span>
         </div>
       </div>
       <div class="vd-side">
-        <ol class="vd-list" id="vdList" aria-label="Lista de vídeos"></ol>
-        <!-- Vídeos: até 6. Cada um aparece quando o link do YouTube (@ytN_link) está preenchido. -->
+        <ol class="vd-list" id="vdList" aria-label="@videos_eyebrow"></ol>
         <ul class="vd-src" id="vdSrc" hidden><!-- @se yt1_link --><li data-yt="@yt1_link" data-titulo="@yt1_titulo" data-duracao="@yt1_duracao"></li><!-- @fim --><!-- @se yt2_link --><li data-yt="@yt2_link" data-titulo="@yt2_titulo" data-duracao="@yt2_duracao"></li><!-- @fim --><!-- @se yt3_link --><li data-yt="@yt3_link" data-titulo="@yt3_titulo" data-duracao="@yt3_duracao"></li><!-- @fim --><!-- @se yt4_link --><li data-yt="@yt4_link" data-titulo="@yt4_titulo" data-duracao="@yt4_duracao"></li><!-- @fim --><!-- @se yt5_link --><li data-yt="@yt5_link" data-titulo="@yt5_titulo" data-duracao="@yt5_duracao"></li><!-- @fim --><!-- @se yt6_link --><li data-yt="@yt6_link" data-titulo="@yt6_titulo" data-duracao="@yt6_duracao"></li><!-- @fim --></ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ EQUIPE ============ -->
+<!-- ============ EQUIPE ============
+     Até 8 pessoas. Cada bloco aparece quando o nome (@equipeN_nome) está preenchido. -->
 <section class="team" id="equipe" aria-labelledby="t-team">
-  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 V22 C 180 0 360 40 540 22 C 720 4 900 40 1080 22 C 1260 4 1350 30 1440 18 V40 Z" fill="currentColor"/></svg>
+  <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_onda2);mask-image:url(@img_icones_onda2)"></span>
   <div class="wrap">
     <header class="sec-head">
-      <div class="head-icons" aria-hidden="true"><img src="_media/pagina/icones/avental.webp" alt=""><img src="_media/pagina/icones/m-equipe.svg" alt=""><img src="_media/pagina/icones/rolo.webp" alt=""></div>
-      <p class="eyebrow">Equipe</p>
-      <h2 id="t-team">Quem vai cozinhar com você</h2>
-      <p class="sub">Conheça quem conduz as aulas dentro da carreta.</p>
+      <div class="head-icons" aria-hidden="true"><img src="@img_icones_avental" alt=""><img src="@img_icones_menuequipe" alt=""><img src="@img_icones_rolo" alt=""></div>
+      <p class="eyebrow">@equipe_eyebrow</p>
+      <h2 id="t-team">@equipe_titulo</h2>
+      <p class="sub">@equipe_texto</p>
     </header>
-        <!-- Equipe: até 6 pessoas. Cada bloco aparece quando o nome (@equipeN_nome) está preenchido. -->
     <ul class="members">
-      <!-- @se equipe1_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto1 --><img class="mb-foto" src="@img_equipe_foto1" alt="Foto de @equipe1_nome"><!-- @senao --><img src="_media/pagina/icones/chapeu.webp" alt=""><span>Foto em breve</span><!-- @fim --></div><div class="mb-tx"><b>@equipe1_nome</b><small>Função: <!-- @se equipe1_funcao -->@equipe1_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe1_bio -->@equipe1_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @se equipe2_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto2 --><img class="mb-foto" src="@img_equipe_foto2" alt="Foto de @equipe2_nome"><!-- @senao --><img src="_media/pagina/icones/avental.webp" alt=""><span>Foto em breve</span><!-- @fim --></div><div class="mb-tx"><b>@equipe2_nome</b><small>Função: <!-- @se equipe2_funcao -->@equipe2_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe2_bio -->@equipe2_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim --><!-- @se equipe3_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto3 --><img class="mb-foto" src="@img_equipe_foto3" alt="Foto de @equipe3_nome"><!-- @senao --><img src="_media/pagina/icones/rolo.webp" alt=""><span>Foto em breve</span><!-- @fim --></div><div class="mb-tx"><b>@equipe3_nome</b><small>Função: <!-- @se equipe3_funcao -->@equipe3_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe3_bio -->@equipe3_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim --><!-- @se equipe4_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto4 --><img class="mb-foto" src="@img_equipe_foto4" alt="Foto de @equipe4_nome"><!-- @senao --><img src="_media/pagina/icones/chapeu.webp" alt=""><span>Foto em breve</span><!-- @fim --></div><div class="mb-tx"><b>@equipe4_nome</b><small>Função: <!-- @se equipe4_funcao -->@equipe4_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe4_bio -->@equipe4_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim --><!-- @se equipe5_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto5 --><img class="mb-foto" src="@img_equipe_foto5" alt="Foto de @equipe5_nome"><!-- @senao --><img src="_media/pagina/icones/avental.webp" alt=""><span>Foto em breve</span><!-- @fim --></div><div class="mb-tx"><b>@equipe5_nome</b><small>Função: <!-- @se equipe5_funcao -->@equipe5_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe5_bio -->@equipe5_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim --><!-- @se equipe6_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto6 --><img class="mb-foto" src="@img_equipe_foto6" alt="Foto de @equipe6_nome"><!-- @senao --><img src="_media/pagina/icones/rolo.webp" alt=""><span>Foto em breve</span><!-- @fim --></div><div class="mb-tx"><b>@equipe6_nome</b><small>Função: <!-- @se equipe6_funcao -->@equipe6_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe6_bio -->@equipe6_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim --><!-- @senao --><li class="mb"><div class="mb-ph"><img src="_media/pagina/icones/chapeu.webp" alt=""><span>Foto em breve</span></div><div class="mb-tx"><b>Equipe</b><small>Em breve</small></div></li><li class="mb"><div class="mb-ph"><img src="_media/pagina/icones/avental.webp" alt=""><span>Foto em breve</span></div><div class="mb-tx"><b>Equipe</b><small>Em breve</small></div></li><li class="mb"><div class="mb-ph"><img src="_media/pagina/icones/rolo.webp" alt=""><span>Foto em breve</span></div><div class="mb-tx"><b>Equipe</b><small>Em breve</small></div></li><!-- @fim -->
+      <!-- @se equipe1_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto1 --><img class="mb-foto" src="@img_equipe_foto1" alt="@equipe1_nome" loading="lazy"><!-- @senao --><img src="@img_icones_chapeu" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe1_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe1_funcao -->@equipe1_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe1_bio -->@equipe1_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li>
+      <!-- @se equipe2_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto2 --><img class="mb-foto" src="@img_equipe_foto2" alt="@equipe2_nome" loading="lazy"><!-- @senao --><img src="@img_icones_avental" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe2_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe2_funcao -->@equipe2_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe2_bio -->@equipe2_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @se equipe3_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto3 --><img class="mb-foto" src="@img_equipe_foto3" alt="@equipe3_nome" loading="lazy"><!-- @senao --><img src="@img_icones_rolo" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe3_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe3_funcao -->@equipe3_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe3_bio -->@equipe3_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @se equipe4_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto4 --><img class="mb-foto" src="@img_equipe_foto4" alt="@equipe4_nome" loading="lazy"><!-- @senao --><img src="@img_icones_chapeu" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe4_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe4_funcao -->@equipe4_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe4_bio -->@equipe4_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @se equipe5_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto5 --><img class="mb-foto" src="@img_equipe_foto5" alt="@equipe5_nome" loading="lazy"><!-- @senao --><img src="@img_icones_avental" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe5_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe5_funcao -->@equipe5_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe5_bio -->@equipe5_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @se equipe6_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto6 --><img class="mb-foto" src="@img_equipe_foto6" alt="@equipe6_nome" loading="lazy"><!-- @senao --><img src="@img_icones_rolo" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe6_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe6_funcao -->@equipe6_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe6_bio -->@equipe6_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @se equipe7_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto7 --><img class="mb-foto" src="@img_equipe_foto7" alt="@equipe7_nome" loading="lazy"><!-- @senao --><img src="@img_icones_chapeu" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe7_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe7_funcao -->@equipe7_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe7_bio -->@equipe7_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @se equipe8_nome --><li class="mb"><div class="mb-ph"><!-- @se img_equipe_foto8 --><img class="mb-foto" src="@img_equipe_foto8" alt="@equipe8_nome" loading="lazy"><!-- @senao --><img src="@img_icones_avental" alt=""><span>@equipe_sem_foto</span><!-- @fim --></div><div class="mb-tx"><b>@equipe8_nome</b><small>@equipe_rotulo_funcao <!-- @se equipe8_funcao -->@equipe8_funcao<!-- @senao -->A confirmar<!-- @fim --></small><p><!-- @se equipe8_bio -->@equipe8_bio<!-- @senao -->A confirmar<!-- @fim --></p></div></li><!-- @fim -->
+      <!-- @senao --><li class="mb"><div class="mb-ph"><img src="@img_icones_chapeu" alt=""><span>@equipe_sem_foto</span></div><div class="mb-tx"><b>@equipe_vazio_titulo</b><small>@equipe_vazio_texto</small></div></li><li class="mb"><div class="mb-ph"><img src="@img_icones_avental" alt=""><span>@equipe_sem_foto</span></div><div class="mb-tx"><b>@equipe_vazio_titulo</b><small>@equipe_vazio_texto</small></div></li><li class="mb"><div class="mb-ph"><img src="@img_icones_rolo" alt=""><span>@equipe_sem_foto</span></div><div class="mb-tx"><b>@equipe_vazio_titulo</b><small>@equipe_vazio_texto</small></div></li><!-- @fim -->
     </ul>
   </div>
 </section>
 
-<!-- ============ CONTAGEM REGRESSIVA (inscrição no meio da página) ============ -->
-<!-- As cidades vêm do cadastro (@repetir cidades). O status de cada cidade vem do publicador; o timer só conta os dias até @data_inicio. -->
+<!-- ============ CONTAGEM REGRESSIVA ============
+     As cidades vêm do cadastro (@repetir cidades). O status de cada cidade vem do publicador; o timer só conta os dias até @data_inicio. -->
 <section class="timer" id="contagem" aria-labelledby="t-timer">
   <div class="wrap tm-grid">
     <div class="tm-copy">
-      <p class="eyebrow">Contagem regressiva</p>
-      <h2 id="t-timer">A cozinha está <span>quase no ponto</span></h2>
-      <p class="tm-lead">Escolha a sua cidade e veja quanto falta para a carreta chegar. <!-- @se gratuito = sim -->Aulas gratuitas, abertas a participantes a partir de 16 anos.<!-- @senao -->Aulas abertas a participantes a partir de 16 anos.<!-- @fim --></p>
+      <p class="eyebrow">@contagem_eyebrow</p>
+      <h2 id="t-timer">@contagem_titulo <span>@contagem_titulo_destaque</span></h2>
+      <p class="tm-lead">@contagem_texto <!-- @se gratuito = sim -->@contagem_aviso_gratuito<!-- @senao -->@contagem_aviso<!-- @fim --> @publico.</p>
     </div>
     <div class="tm-dial">
       <svg class="tm-svg" id="tmSvg" viewBox="0 0 400 440" aria-hidden="true">
@@ -1272,19 +1295,19 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
             <g id="tmHand"><path d="M200 236 V92" stroke="#161125" stroke-width="5" stroke-linecap="round"/><circle cx="200" cy="92" r="8" fill="#EE3B3B" stroke="#161125" stroke-width="3"/></g>
             <circle cx="200" cy="236" r="80" fill="#161125"/>
             <text class="tm-num" id="tmNum" x="200" y="262" text-anchor="middle">0</text>
-            <text class="tm-unit" id="tmUnit" x="200" y="292" text-anchor="middle">DIAS</text>
+            <text class="tm-unit" id="tmUnit" x="200" y="292" text-anchor="middle">@contagem_dias</text>
           </svg>
     </div>
     <div class="tm-pick">
-      <div class="tm-sel" id="tmSel"><span class="tm-sel-l" id="tmSelL">Escolha sua cidade</span><button type="button" class="tm-sel-b" id="tmSelB" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="tmSelL tmSelB"><span class="c"><b id="tmSelN"></b><small id="tmSelD"></small></span><span class="ch" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><ul class="tm-list" id="tmList" role="listbox" aria-labelledby="tmSelL" tabindex="-1" hidden></ul></div>
-      <div class="tm-cities" role="radiogroup" aria-label="Escolha a cidade" id="tmCities">
+      <div class="tm-sel" id="tmSel"><span class="tm-sel-l" id="tmSelL">@contagem_escolha</span><button type="button" class="tm-sel-b" id="tmSelB" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="tmSelL tmSelB"><span class="c"><b id="tmSelN"></b><small id="tmSelD"></small></span><span class="ch" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><ul class="tm-list" id="tmList" role="listbox" aria-labelledby="tmSelL" tabindex="-1" hidden></ul></div>
+      <div class="tm-cities" role="radiogroup" aria-label="@contagem_escolha" id="tmCities">
 <!-- @repetir cidades -->
 <!-- @se status = aberta -->
-<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>De @periodo_extenso</b><br>Local: <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --> · Horário: <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --></span></button>
-<!-- @senao --><!-- @se status = em breve -->
-<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>De @periodo_extenso</b><br>Local: <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --> · Horário: <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --></span></button>
+<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@periodo_extenso</b><br>@rotulo_local <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --> · @rotulo_horario <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --></span><span class="tm-go-t" hidden>@contagem_botao <b>@cidade</b></span></button>
+<!-- @senao --><!-- @se status = realizado -->
+<button type="button" role="radio" aria-checked="false" class="past" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@contagem_encerrada_status</b> @contagem_encerrada_texto</span><span class="tm-go-t" hidden>@contagem_botao_encerrada</span></button>
 <!-- @senao -->
-<button type="button" role="radio" aria-checked="false" class="past" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>Encerrada</b>. Veja as próximas cidades.</span></button>
+<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@periodo_extenso</b><br>@rotulo_local <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --> · @rotulo_horario <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --></span><span class="tm-go-t" hidden>@contagem_botao <b>@cidade</b></span></button>
 <!-- @fim -->
 <!-- @fim -->
 <!-- @fim -->
@@ -1292,99 +1315,136 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       <p class="tm-status" id="tmStatus" aria-live="polite"></p>
     </div>
     <div class="tm-cta">
-      <a class="btn btn-orange tm-go" id="tmGo" href="#inscricao"><span>Quero minha vaga</span></a>
-      <a class="tm-tell" id="tmTell" href="https://wa.me/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v12M7 8l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avisar quem vai comigo</a>
+      <a class="btn btn-orange tm-go" id="tmGo" href="#inscricao"><span>@contagem_botao</span></a>
+      <a class="tm-tell" id="tmTell" href="#contagem"><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_compartilhar);mask-image:url(@img_icones_compartilhar)"></span>@contagem_compartilhar</a>
     </div>
   </div>
 </section>
 
 <!-- ============ MATERIAL DA AULA (um PDF) ============
-     @link_material = endereço do PDF; @material_paginas e @material_tamanho = textos. -->
+     @arquivo_material_aula = o PDF (passo Mídia, pasta _media/pagina/material/). -->
 <section class="mat" id="material" aria-labelledby="t-mat">
   <div class="wrap mat-grid">
     <div class="mat-copy">
-      <p class="eyebrow">Material da aula</p>
-      <h2 id="t-mat">Leve a aula <span>com você</span></h2>
-      <p class="sub">O conteúdo da aula em um único PDF, para baixar e consultar quando quiser.</p>
-      <div class="mf" id="matFile"><div class="mf-row"><svg viewBox="0 0 44 54" aria-hidden="true"><path d="M4 3h25l11 11v37H4z" fill="#FBF3EA"/><path d="M29 3v11h11" fill="#F3DFCA"/><rect x="0" y="28" width="34" height="15" rx="4" fill="#EE3B3B"/><text x="17" y="39.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="10.5" fill="#fff">PDF</text></svg><div class="mf-name"><b>Material da aula</b><small>Arquivo em PDF</small></div><!-- @se link_material --><span class="mf-st ok">Disponível</span><!-- @senao --><span class="mf-st">Em breve</span><!-- @fim --></div><dl class="mf-meta"><div><dt>Páginas</dt><dd><!-- @se material_paginas -->@material_paginas<!-- @senao -->A confirmar<!-- @fim --></dd></div><div><dt>Tamanho</dt><dd><!-- @se material_tamanho -->@material_tamanho<!-- @senao -->A confirmar<!-- @fim --></dd></div></dl><!-- @se link_material --><a class="mf-dl" href="@link_material" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Baixar PDF</a><a class="mf-open" href="@link_material" target="_blank" rel="noopener">Abrir no navegador <span aria-hidden="true">↗</span></a><!-- @senao --><span class="mf-dl off" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Disponível em breve</span><!-- @fim --></div>
+      <p class="eyebrow">@material_eyebrow</p>
+      <h2 id="t-mat">@material_titulo <span>@material_titulo_destaque</span></h2>
+      <p class="sub">@material_texto</p>
+      <div class="mf" id="matFile"><div class="mf-row"><img class="mf-ic" src="@img_icones_pdf" alt=""><div class="mf-name"><b>@material_arquivo_nome</b><small>@material_arquivo_tipo</small></div><!-- @se arquivo_material_aula --><span class="mf-st ok">@material_disponivel</span><!-- @senao --><span class="mf-st">@material_breve</span><!-- @fim --></div><dl class="mf-meta"><div><dt>@material_rotulo_paginas</dt><dd><!-- @se material_paginas -->@material_paginas<!-- @senao -->A confirmar<!-- @fim --></dd></div><div><dt>@material_rotulo_tamanho</dt><dd><!-- @se material_tamanho -->@material_tamanho<!-- @senao -->A confirmar<!-- @fim --></dd></div></dl><!-- @se arquivo_material_aula --><a class="mf-dl" href="@arquivo_material_aula" download><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_baixar);mask-image:url(@img_icones_baixar)"></span>@material_botao</a><a class="mf-open" href="@arquivo_material_aula" target="_blank" rel="noopener">@material_abrir <span aria-hidden="true">↗</span></a><!-- @senao --><span class="mf-dl off" aria-disabled="true"><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_baixar);mask-image:url(@img_icones_baixar)"></span>@material_botao_breve</span><!-- @fim --></div>
     </div>
-    <div class="bk" id="matBook" role="button" tabindex="0" aria-pressed="false" aria-label="Abrir a capa do material da aula">
+    <div class="bk" id="matBook" role="button" tabindex="0" aria-pressed="false" aria-label="@material_livro_abrir">
       <span class="bk-sheet s1" aria-hidden="true"></span>
       <span class="bk-sheet s2" aria-hidden="true"></span>
-      <div class="bk-page" aria-hidden="true"><small>Página 1</small><b>Conteúdo da aula</b><i></i><i></i><i></i><i></i><i></i><i></i><img src="_media/pagina/icones/batedor.webp" alt=""></div>
+      <div class="bk-page" aria-hidden="true"><small>@material_livro_pagina</small><b>@material_livro_titulo</b><i></i><i></i><i></i><i></i><i></i><i></i><img src="@img_icones_batedor" alt=""></div>
       <div class="bk-cover" aria-hidden="true">
-        <div class="bk-front"><span class="tag">PDF</span><span class="t">Material<br>da <span>aula</span></span><img class="ic a" src="_media/pagina/icones/tomate.webp" alt=""><img class="ic b" src="_media/pagina/icones/cenoura.webp" alt=""><img class="ic c" src="_media/pagina/icones/alecrim.webp" alt=""><span class="ft">Pequeno Chef</span></div>
+        <div class="bk-front"><span class="tag">@material_capa_selo</span><span class="t">@material_capa_linha1<br>@material_capa_linha2 <span>@material_capa_destaque</span></span><img class="ic a" src="@img_icones_tomate" alt=""><img class="ic b" src="@img_icones_cenoura" alt=""><img class="ic c" src="@img_icones_alecrim" alt=""><span class="ft">@evento</span></div>
         <div class="bk-back"></div>
       </div>
-      <span class="bk-hint" aria-hidden="true" id="bkHint">Toque para abrir</span>
+      <span class="bk-hint" aria-hidden="true" id="bkHint">@material_livro_abrir</span>
     </div>
   </div>
 </section>
 
-<!-- ============ DÚVIDAS ============ -->
+<!-- ============ DÚVIDAS ============
+     Até 12 perguntas (@faqN_pergunta). As 6 primeiras têm respostas ligadas aos dados do cadastro
+     (preço, idade, cidades, duração, alergia, inscrição e contato); da 7 à 12 a resposta é @faqN_resposta. -->
 <section class="info" id="duvidas" aria-labelledby="t-info">
-  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 V18 C 200 40 400 0 620 20 C 840 40 1040 2 1240 20 C 1340 28 1400 22 1440 16 V40 Z" fill="currentColor"/></svg>
+  <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_onda1);mask-image:url(@img_icones_onda1)"></span>
   <div class="wrap">
     <header class="sec-head">
-      <div class="head-icons" aria-hidden="true"><img src="_media/pagina/icones/panela.webp" alt=""><img src="_media/pagina/icones/m-duvidas.svg" alt=""><img src="_media/pagina/icones/tomate.webp" alt=""></div>
-      <p class="eyebrow">Antes de se inscrever</p>
-      <h2 id="t-info">Dúvidas rápidas</h2>
-      <p class="sub">Toque na pergunta para ver a resposta.</p>
+      <div class="head-icons" aria-hidden="true"><img src="@img_icones_panela" alt=""><img src="@img_icones_menuduvidas" alt=""><img src="@img_icones_tomate" alt=""></div>
+      <p class="eyebrow">@duvidas_eyebrow</p>
+      <h2 id="t-info">@duvidas_titulo</h2>
+      <p class="sub">@duvidas_texto</p>
     </header>
     <div class="info-bar">
       <span></span>
-      <button type="button" id="toggleAll">Abrir todas</button>
+      <button type="button" id="toggleAll">@duvidas_abrir_todas</button>
     </div>
-    <!-- Para adicionar uma pergunta, copie um <li> inteiro. -->
     <ul class="qa" id="qa">
-      <li><details open><summary><img src="_media/pagina/icones/f-gratis.svg" alt=""><span class="q">Quanto custa?</span><span class="chev" aria-hidden="true">+</span></summary>
-        <div class="a"><p class="big"><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></p><p><!-- @se gratuito = sim -->Sem custo de inscrição. As aulas são abertas ao público geral.<!-- @senao --><!-- @se preco_vista -->Valor da inscrição, à vista.<!-- @senao -->Valor divulgado na abertura das inscrições.<!-- @fim --><!-- @fim --></p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-quem.svg" alt=""><span class="q">Quem pode participar?</span><span class="chev" aria-hidden="true">+</span></summary>
-        <div class="a"><p>Qualquer pessoa a partir de 16 anos.</p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-onde.svg" alt=""><span class="q">Onde e quando acontece?</span><span class="chev" aria-hidden="true">+</span></summary>
-        <div class="a"><p>Dentro da carreta-cozinha, em @total_cidades cidades:</p><ul class="qa-cities"><!-- @repetir cidades --><li><b>@cidade</b> · @periodo_extenso</li><!-- @fim --></ul><a class="link" href="#contagem">Ver local e horário de cada cidade</a></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-tempo.svg" alt=""><span class="q">Quanto tempo dura cada aula?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <!-- @se faq1_pergunta -->
+      <li><details open><summary><img src="@img_duvidas_icone1" alt=""><span class="q">@faq1_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p class="big"><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></p><p><!-- @se gratuito = sim -->@faq1_resposta_gratuito<!-- @senao --><!-- @se preco_vista -->@faq1_resposta_preco<!-- @senao -->@faq1_resposta_breve<!-- @fim --><!-- @fim --></p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq2_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone2" alt=""><span class="q">@faq2_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq2_resposta @publico.</p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq3_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone3" alt=""><span class="q">@faq3_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq3_resposta</p><ul class="qa-cities"><!-- @repetir cidades --><li><b>@cidade</b> · @periodo_extenso</li><!-- @fim --></ul><a class="link" href="#contagem">@faq3_link</a></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq4_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone4" alt=""><span class="q">@faq4_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p><!-- @se duracao_aula -->@duracao_aula<!-- @senao -->A confirmar<!-- @fim --></p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-alergia.svg" alt=""><span class="q">E se eu tiver alergia ou restrição alimentar?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <!-- @fim -->
+      <!-- @se faq5_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone5" alt=""><span class="q">@faq5_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p><!-- @se info_alergia -->@info_alergia<!-- @senao -->A confirmar<!-- @fim --></p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-contato.svg" alt=""><span class="q">Como faço a inscrição e com quem falo?</span><span class="chev" aria-hidden="true">+</span></summary>
-        <div class="a"><p class="row"><b>Link de inscrição:</b><span><!-- @se link_inscricao --><a href="@link_inscricao">Fazer minha inscrição</a><!-- @senao -->A confirmar<!-- @fim --></span></p><p class="row"><b>Contato:</b><span><!-- @se contato -->@contato<!-- @senao -->A confirmar<!-- @fim --></span></p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq6_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone6" alt=""><span class="q">@faq6_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p class="row"><b>@rotulo_link_inscricao</b><span><!-- @se link_inscricao --><a href="@link_inscricao">@inscricao_botao</a><!-- @senao -->A confirmar<!-- @fim --></span></p><p class="row"><b>@rotulo_contato</b><span><!-- @se contato -->@contato<!-- @senao -->A confirmar<!-- @fim --></span></p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq7_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone7" alt=""><span class="q">@faq7_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq7_resposta</p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq8_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone8" alt=""><span class="q">@faq8_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq8_resposta</p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq9_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone9" alt=""><span class="q">@faq9_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq9_resposta</p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq10_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone10" alt=""><span class="q">@faq10_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq10_resposta</p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq11_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone11" alt=""><span class="q">@faq11_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq11_resposta</p></div></details></li>
+      <!-- @fim -->
+      <!-- @se faq12_pergunta -->
+      <li><details><summary><img src="@img_duvidas_icone12" alt=""><span class="q">@faq12_pergunta</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="a"><p>@faq12_resposta</p></div></details></li>
+      <!-- @fim -->
     </ul>
   </div>
 </section>
 
 <!-- ============ GALERIA DE FOTOS ============
-     Até 12 fotos (@img_galeria_fotoN, pasta _media/pagina/galeria/), cada uma com cidade e legenda.
-     Sem nenhuma foto, aparecem espaços reservados "Foto em breve" para cada cidade do cadastro. -->
+     As fotos entram no passo Mídia (lista "galeria"), quantas quiser, cada uma marcada com a cidade.
+     Sem nenhuma foto, aparecem espaços reservados para cada cidade do cadastro. -->
 <section class="gal" id="galeria" aria-labelledby="t-gal">
   <div class="wrap">
     <header class="gal-head">
-      <p class="eyebrow">Galeria</p>
-      <h2 id="t-gal">Álbum <span>da estrada</span></h2>
-      <p class="sub">As fotos das aulas em cada cidade entram aqui. Veja todas juntas no mural ou uma de cada vez.</p>
+      <p class="eyebrow">@galeria_eyebrow</p>
+      <h2 id="t-gal">@galeria_titulo <span>@galeria_titulo_destaque</span></h2>
+      <p class="sub">@galeria_texto</p>
     </header>
     <div class="gal-bar">
-      <div class="gal-modes" id="galModes" data-mode="mural" role="group" aria-label="Modo de visualização">
+      <div class="gal-modes" id="galModes" data-mode="mural" role="group" aria-label="@galeria_eyebrow">
         <span class="ind" aria-hidden="true"></span>
-        <button type="button" data-mode="mural" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="10" rx="2"/><rect x="13" y="3" width="8" height="6" rx="2"/><rect x="13" y="11" width="8" height="10" rx="2"/><rect x="3" y="15" width="8" height="6" rx="2"/></svg>Mural</button>
-        <button type="button" data-mode="uma" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M2 8v8M22 8v8"/></svg>Uma a uma</button>
+        <button type="button" data-mode="mural" aria-pressed="true"><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_mural);mask-image:url(@img_icones_mural)"></span>@galeria_mural</button>
+        <button type="button" data-mode="uma" aria-pressed="false"><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_umauma);mask-image:url(@img_icones_umauma)"></span>@galeria_uma</button>
       </div>
-      <div class="gal-filt" id="galFilt" role="group" aria-label="Filtrar por cidade"></div>
+      <div class="gal-filt" id="galFilt" role="group" aria-label="@galeria_filtro"></div>
     </div>
 
-    <ul class="g-src" id="gSrc" hidden><!-- @se img_galeria_foto1 --><li><img src="@img_galeria_foto1" alt="@galeria_foto1_legenda" data-cidade="@galeria_foto1_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto2 --><li><img src="@img_galeria_foto2" alt="@galeria_foto2_legenda" data-cidade="@galeria_foto2_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto3 --><li><img src="@img_galeria_foto3" alt="@galeria_foto3_legenda" data-cidade="@galeria_foto3_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto4 --><li><img src="@img_galeria_foto4" alt="@galeria_foto4_legenda" data-cidade="@galeria_foto4_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto5 --><li><img src="@img_galeria_foto5" alt="@galeria_foto5_legenda" data-cidade="@galeria_foto5_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto6 --><li><img src="@img_galeria_foto6" alt="@galeria_foto6_legenda" data-cidade="@galeria_foto6_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto7 --><li><img src="@img_galeria_foto7" alt="@galeria_foto7_legenda" data-cidade="@galeria_foto7_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto8 --><li><img src="@img_galeria_foto8" alt="@galeria_foto8_legenda" data-cidade="@galeria_foto8_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto9 --><li><img src="@img_galeria_foto9" alt="@galeria_foto9_legenda" data-cidade="@galeria_foto9_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto10 --><li><img src="@img_galeria_foto10" alt="@galeria_foto10_legenda" data-cidade="@galeria_foto10_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto11 --><li><img src="@img_galeria_foto11" alt="@galeria_foto11_legenda" data-cidade="@galeria_foto11_cidade" loading="lazy"></li><!-- @fim --><!-- @se img_galeria_foto12 --><li><img src="@img_galeria_foto12" alt="@galeria_foto12_legenda" data-cidade="@galeria_foto12_cidade" loading="lazy"></li><!-- @fim --></ul>
+    <ul class="g-src galeria" id="gSrc" hidden><!-- @repetir galeria --><li class="galeria__item"><img src="@galeria_foto" alt="@galeria_legenda" data-cidade="@galeria_cidade" data-n="@galeria_numero" loading="lazy"></li><!-- @fim --></ul>
     <div class="g-mural" id="gMural"></div>
     <div class="g-one" id="gOne" hidden>
-      <div class="g-stage" id="gStage" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Fotos, uma de cada vez. Use as setas para navegar.">
+      <div class="g-stage" id="gStage" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="@galeria_uma">
         <div class="g-slides" id="gSlides"></div>
         <div class="g-track" aria-hidden="true"><i id="gTrack"></i></div>
-        <button type="button" class="g-nav prev" id="gPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button type="button" class="g-nav next" id="gNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        <button type="button" class="g-nav prev" id="gPrev" aria-label="@galeria_anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="g-nav next" id="gNext" aria-label="@galeria_proxima"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
         <div class="g-cap"><span class="g-city" id="gCity"></span><p id="gLeg"></p><span class="g-count" aria-live="polite"><b id="gNum">01</b>/<span id="gTot">01</span></span></div>
       </div>
       <div class="g-under">
-        <div class="g-strip" id="gStrip" aria-label="Miniaturas"></div>
-        <button type="button" class="g-auto" id="gAuto" aria-pressed="false"><svg viewBox="0 0 40 40" aria-hidden="true"><circle class="rg" cx="20" cy="20" r="17"/><circle class="rf" id="gRing" cx="20" cy="20" r="17" pathLength="100"/><path class="pl" d="M16 13l11 7-11 7z"/><path class="pa" d="M15 13v14M25 13v14"/></svg><span>Apresentação</span></button>
+        <div class="g-strip" id="gStrip" aria-label="@galeria_miniaturas"></div>
+        <button type="button" class="g-auto" id="gAuto" aria-pressed="false"><svg viewBox="0 0 40 40" aria-hidden="true"><circle class="rg" cx="20" cy="20" r="17"/><circle class="rf" id="gRing" cx="20" cy="20" r="17" pathLength="100"/><path class="pl" d="M16 13l11 7-11 7z"/><path class="pa" d="M15 13v14M25 13v14"/></svg><span>@galeria_apresentacao</span></button>
       </div>
     </div>
   </div>
@@ -1395,23 +1455,25 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   <div class="wrap">
     <div class="cta-panel">
       <div class="cta-main">
-        <p class="eyebrow">Inscrição</p>
-        <h2 id="t-insc">Garanta sua participação</h2>
-        <p class="cta-lead"><!-- @se gratuito = sim -->As aulas são gratuitas e abertas ao público geral, a partir de 16 anos.<!-- @senao -->As aulas são abertas ao público geral, a partir de 16 anos.<!-- @fim --></p>
+        <p class="eyebrow">@inscricao_eyebrow</p>
+        <h2 id="t-insc">@inscricao_titulo</h2>
+        <p class="cta-lead"><!-- @se gratuito = sim -->@inscricao_texto_gratuito<!-- @senao -->@inscricao_texto<!-- @fim --> @publico.</p>
         <ul class="cta-list">
-          <!-- @se gratuito = sim --><li>Aulas gratuitas</li><!-- @fim -->
-          <li>A partir de 16 anos</li>
-          <li>Aulas práticas com um chef</li>
-          <li>@total_cidades cidades<!-- @se temporada --> · @temporada<!-- @fim --></li>
+          <!-- @se gratuito = sim --><li>@inscricao_item_gratuito</li><!-- @fim -->
+          <li><span class="cap">@publico</span></li>
+          <!-- @se inscricao_item1 --><li>@inscricao_item1</li><!-- @fim -->
+          <!-- @se inscricao_item2 --><li>@inscricao_item2</li><!-- @fim -->
+          <!-- @se inscricao_item3 --><li>@inscricao_item3</li><!-- @fim -->
+          <li>@total_cidades @hero_cidades · <span class="tp"><!-- @repetir cidades --><span class="tp-i"><span class="tp-a">@data_inicio_mes_abrev/@data_inicio_ano</span><span class="tp-b"><!-- @se data_fim -->@data_fim_mes_abrev/@data_fim_ano<!-- @senao -->@data_inicio_mes_abrev/@data_inicio_ano<!-- @fim --></span></span><!-- @fim --></span></li>
         </ul>
         <div class="cta-actions">
-          <!-- @se link_inscricao --><a class="btn btn-orange" href="@link_inscricao" id="ctaFinal">Fazer minha inscrição</a><!-- @senao --><span class="btn btn-orange is-off" id="ctaFinal" aria-disabled="true">Inscrições em breve</span>
-          <span class="cta-note">Link de inscrição: A confirmar</span><!-- @fim -->
+          <!-- @se link_inscricao --><a class="btn btn-orange" href="@link_inscricao" id="ctaFinal">@inscricao_botao</a><!-- @senao --><span class="btn btn-orange is-off" id="ctaFinal" aria-disabled="true">@inscricao_botao_breve</span>
+          <span class="cta-note">@rotulo_link_inscricao A confirmar</span><!-- @fim -->
         </div>
-              </div>
+      </div>
       <div class="cta-art">
-        <div class="cta-chefwrap"><img class="cta-chef" src="_media/pagina/ilustracoes/chef-batedeira-b.webp" alt="Ilustração de um chef batendo massa numa tigela azul com a batedeira, ao lado de um pacote de farinha" width="528" height="570" loading="lazy"></div>
-        <a class="cta-next" href="#contagem"><small>Próxima parada</small><!-- @repetir cidades --><!-- @se status = aberta --><span class="nx"><b>@cidade</b><span>@periodo_extenso</span></span><!-- @senao --><!-- @se status = em breve --><span class="nx"><b>@cidade</b><span>@periodo_extenso</span></span><!-- @fim --><!-- @fim --><!-- @fim --></a>
+        <div class="cta-chefwrap"><img class="cta-chef" src="@img_inscricao_chef" alt="@inscricao_imagem_alt" width="528" height="570" loading="lazy"></div>
+        <a class="cta-next" href="#contagem"><small>@inscricao_proxima</small><!-- @repetir cidades --><!-- @se status = aberta --><span class="nx"><b>@cidade</b><span>@periodo_extenso</span></span><!-- @senao --><!-- @se status = realizado --><!-- @senao --><span class="nx"><b>@cidade</b><span>@periodo_extenso</span></span><!-- @fim --><!-- @fim --><!-- @fim --></a>
       </div>
     </div>
   </div>
@@ -1419,52 +1481,52 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 
 <!-- ============ COMPARTILHAR ============ -->
 <section class="share" id="compartilhe" aria-labelledby="t-share">
-  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 V18 C 200 40 400 0 620 20 C 840 40 1040 2 1240 20 C 1340 28 1400 22 1440 16 V40 Z" fill="currentColor"/></svg>
+  <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(@img_icones_onda1);mask-image:url(@img_icones_onda1)"></span>
   <div class="wrap">
     <header class="sec-head">
-      <div class="head-icons" aria-hidden="true"><img src="_media/pagina/icones/folha.webp" alt=""><img src="_media/pagina/icones/tigela.webp" alt=""><img src="_media/pagina/icones/chapeu.webp" alt=""></div>
-      <p class="eyebrow">Já se inscreveu?</p>
-      <h2 id="t-share">Conte para todo mundo</h2>
-      <p class="sub">Monte um card com o seu nome e compartilhe nas suas redes.</p>
+      <div class="head-icons" aria-hidden="true"><img src="@img_icones_folha" alt=""><img src="@img_icones_tigela" alt=""><img src="@img_icones_chapeu" alt=""></div>
+      <p class="eyebrow">@compartilhe_eyebrow</p>
+      <h2 id="t-share">@compartilhe_titulo</h2>
+      <p class="sub">@compartilhe_texto</p>
     </header>
     <div class="sh">
       <div class="sh-form">
         <div class="field">
-          <label for="kidName">Seu nome</label>
-          <input id="kidName" type="text" maxlength="16" placeholder="Ex.: Laura" autocomplete="off">
+          <label for="kidName">@compartilhe_nome</label>
+          <input id="kidName" type="text" maxlength="16" placeholder="@compartilhe_nome_exemplo" autocomplete="off">
         </div>
         <div class="field">
-          <span class="lbl" id="lblTheme">Cor do card</span>
+          <span class="lbl" id="lblTheme">@compartilhe_cor</span>
           <div class="opts" role="group" aria-labelledby="lblTheme" id="themeOpts">
-            <button type="button" data-v="verde" aria-pressed="true"><i style="background:#00AD64"></i>Verde</button>
-            <button type="button" data-v="laranja" aria-pressed="false"><i style="background:#F57E32"></i>Laranja</button>
-            <button type="button" data-v="noite" aria-pressed="false"><i style="background:#144C40"></i>Noite</button>
+            <button type="button" data-v="verde" aria-pressed="true"><i style="background:#00AD64"></i>@compartilhe_cor_verde</button>
+            <button type="button" data-v="laranja" aria-pressed="false"><i style="background:#F57E32"></i>@compartilhe_cor_laranja</button>
+            <button type="button" data-v="noite" aria-pressed="false"><i style="background:#144C40"></i>@compartilhe_cor_noite</button>
           </div>
         </div>
         <div class="field">
-          <span class="lbl" id="lblFmt">Formato</span>
+          <span class="lbl" id="lblFmt">@compartilhe_formato</span>
           <div class="opts" role="group" aria-labelledby="lblFmt" id="fmtOpts">
-            <button type="button" data-v="stories" aria-pressed="true">Stories</button>
-            <button type="button" data-v="post" aria-pressed="false">Post</button>
+            <button type="button" data-v="stories" aria-pressed="true">@compartilhe_formato_stories</button>
+            <button type="button" data-v="post" aria-pressed="false">@compartilhe_formato_post</button>
           </div>
         </div>
         <div class="sh-actions">
-          <button class="btn btn-ink" type="button" id="shareBtn">Compartilhar</button>
-          <button class="btn btn-cream" type="button" id="saveBtn">Salvar imagem</button>
+          <button class="btn btn-ink" type="button" id="shareBtn">@compartilhe_botao</button>
+          <button class="btn btn-cream" type="button" id="saveBtn">@compartilhe_salvar</button>
         </div>
         <div class="socials">
-          <button type="button" id="igBtn">Instagram</button>
-          <a id="lnkWa" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
-          <a id="lnkFb" href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener">Facebook</a>
-          <button type="button" id="copyBtn">Copiar texto</button>
+          <button type="button" id="igBtn">@compartilhe_instagram</button>
+          <a id="lnkWa" href="#compartilhe" target="_blank" rel="noopener">@compartilhe_whatsapp</a>
+          <a id="lnkFb" href="#compartilhe" target="_blank" rel="noopener">@compartilhe_facebook</a>
+          <button type="button" id="copyBtn">@compartilhe_copiar</button>
         </div>
         <p class="sh-msg" id="shMsg" aria-live="polite"></p>
-        <p class="sh-note">No celular, o botão Instagram abre direto o compartilhamento. No computador, a imagem é salva para você publicar.</p>
-        <a class="link" id="igOpen" href="https://www.instagram.com/" target="_blank" rel="noopener" hidden style="text-align:center">Abrir o Instagram</a>
+        <p class="sh-note">@compartilhe_nota</p>
+        <!-- @se link_instagram --><a class="link" id="igOpen" href="@link_instagram" target="_blank" rel="noopener" hidden style="text-align:center">@compartilhe_abrir_instagram</a><!-- @fim -->
       </div>
       <div class="sh-preview">
-        <canvas id="card" width="1080" height="1920" aria-label="Prévia do card para compartilhar" role="img"></canvas>
-        <p>Prévia do card</p>
+        <canvas id="card" width="1080" height="1920" aria-label="@compartilhe_previa" role="img"></canvas>
+        <p>@compartilhe_previa</p>
       </div>
     </div>
   </div>
@@ -1473,16 +1535,17 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 
 <footer class="foot">
   <div class="wrap">
-    <img src="_media/pagina/marca/logo-pc-sm.webp" alt="Pequeno Chef" width="240" height="136" style="width:150px">
-    <p>Oficina de culinária<!-- @se gratuito = sim --> gratuita<!-- @fim --> · a partir de 16 anos</p>
-    <p>Contato: <!-- @se contato -->@contato<!-- @senao -->A confirmar<!-- @fim --></p>
+    <img src="@img_marca_logopequeno" alt="@evento" width="240" height="136" style="width:150px">
+    <p><!-- @se gratuito = sim -->@hero_selo_gratuito<!-- @senao -->@hero_selo<!-- @fim --> · @publico</p>
+    <p>@rotulo_contato <!-- @se contato -->@contato<!-- @senao -->A confirmar<!-- @fim --></p>
   </div>
 </footer>
 
-<a class="dock hide" id="dock" href="#inscricao"><span class="dk-t"><b>Quero me inscrever</b></span><span class="dk-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+<!-- @se link_inscricao --><a class="dock hide" id="dock" href="@link_inscricao"><span class="dk-t"><b>@inscricao_botao</b></span><span class="dk-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><!-- @senao --><a class="dock hide" id="dock" href="#inscricao"><span class="dk-t"><b>@inscricao_botao_breve</b></span><span class="dk-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><!-- @fim -->
 
-<!-- Arquivos fixos usados pelo JavaScript (não remover: garante que o publicador inclua estes arquivos) -->
-<div class="media-refs" hidden aria-hidden="true"><img data-f="carreta" src="_media/pagina/carreta/carreta.webp" alt="" loading="lazy"><img data-f="int-agua" src="_media/pagina/carreta/int-agua.webp" alt="" loading="lazy"><img data-f="int-bancada" src="_media/pagina/carreta/int-bancada.webp" alt="" loading="lazy"><img data-f="int-corredor" src="_media/pagina/carreta/int-corredor.webp" alt="" loading="lazy"><img data-f="int-cozinha" src="_media/pagina/carreta/int-cozinha.webp" alt="" loading="lazy"><img data-f="int-plateia" src="_media/pagina/carreta/int-plateia.webp" alt="" loading="lazy"><img data-f="hero-base" src="_media/pagina/hero/hero-base.webp" alt="" loading="lazy"><img data-f="hero-chef" src="_media/pagina/hero/hero-chef.webp" alt="" loading="lazy"><img data-f="hero-folhas" src="_media/pagina/hero/hero-folhas.webp" alt="" loading="lazy"><img data-f="hero-pontos" src="_media/pagina/hero/hero-pontos.webp" alt="" loading="lazy"><img data-f="hero-tomate" src="_media/pagina/hero/hero-tomate.webp" alt="" loading="lazy"><img data-f="alecrim" src="_media/pagina/icones/alecrim.webp" alt="" loading="lazy"><img data-f="alho" src="_media/pagina/icones/alho.webp" alt="" loading="lazy"><img data-f="avental" src="_media/pagina/icones/avental.webp" alt="" loading="lazy"><img data-f="azeite" src="_media/pagina/icones/azeite.webp" alt="" loading="lazy"><img data-f="balanca" src="_media/pagina/icones/balanca.webp" alt="" loading="lazy"><img data-f="batedor" src="_media/pagina/icones/batedor.webp" alt="" loading="lazy"><img data-f="bolo" src="_media/pagina/icones/bolo.webp" alt="" loading="lazy"><img data-f="cebola" src="_media/pagina/icones/cebola.webp" alt="" loading="lazy"><img data-f="cenoura" src="_media/pagina/icones/cenoura.webp" alt="" loading="lazy"><img data-f="chapeu" src="_media/pagina/icones/chapeu.webp" alt="" loading="lazy"><img data-f="cogumelo" src="_media/pagina/icones/cogumelo.webp" alt="" loading="lazy"><img data-f="concha" src="_media/pagina/icones/concha.webp" alt="" loading="lazy"><img data-f="copo" src="_media/pagina/icones/copo.webp" alt="" loading="lazy"><img data-f="dolma" src="_media/pagina/icones/dolma.webp" alt="" loading="lazy"><img data-f="escorredor" src="_media/pagina/icones/escorredor.webp" alt="" loading="lazy"><img data-f="espatula" src="_media/pagina/icones/espatula.webp" alt="" loading="lazy"><img data-f="f-alergia" src="_media/pagina/icones/f-alergia.svg" alt="" loading="lazy"><img data-f="f-contato" src="_media/pagina/icones/f-contato.svg" alt="" loading="lazy"><img data-f="f-gratis" src="_media/pagina/icones/f-gratis.svg" alt="" loading="lazy"><img data-f="f-onde" src="_media/pagina/icones/f-onde.svg" alt="" loading="lazy"><img data-f="f-quem" src="_media/pagina/icones/f-quem.svg" alt="" loading="lazy"><img data-f="f-tempo" src="_media/pagina/icones/f-tempo.svg" alt="" loading="lazy"><img data-f="farelo" src="_media/pagina/icones/farelo.webp" alt="" loading="lazy"><img data-f="folha" src="_media/pagina/icones/folha.webp" alt="" loading="lazy"><img data-f="frigideira" src="_media/pagina/icones/frigideira.webp" alt="" loading="lazy"><img data-f="m-carreta" src="_media/pagina/icones/m-carreta.svg" alt="" loading="lazy"><img data-f="m-duvidas" src="_media/pagina/icones/m-duvidas.svg" alt="" loading="lazy"><img data-f="m-equipe" src="_media/pagina/icones/m-equipe.svg" alt="" loading="lazy"><img data-f="m-experiencia" src="_media/pagina/icones/m-experiencia.svg" alt="" loading="lazy"><img data-f="m-inscrever" src="_media/pagina/icones/m-inscrever.svg" alt="" loading="lazy"><img data-f="m-noturna" src="_media/pagina/icones/m-noturna.svg" alt="" loading="lazy"><img data-f="m-quando" src="_media/pagina/icones/m-quando.svg" alt="" loading="lazy"><img data-f="m-teatro" src="_media/pagina/icones/m-teatro.svg" alt="" loading="lazy"><img data-f="moedor" src="_media/pagina/icones/moedor.webp" alt="" loading="lazy"><img data-f="panela" src="_media/pagina/icones/panela.webp" alt="" loading="lazy"><img data-f="pao" src="_media/pagina/icones/pao.webp" alt="" loading="lazy"><img data-f="pegador" src="_media/pagina/icones/pegador.webp" alt="" loading="lazy"><img data-f="pimenta" src="_media/pagina/icones/pimenta.webp" alt="" loading="lazy"><img data-f="pizza" src="_media/pagina/icones/pizza.webp" alt="" loading="lazy"><img data-f="pontos" src="_media/pagina/icones/pontos.webp" alt="" loading="lazy"><img data-f="q-16" src="_media/pagina/icones/q-16.svg" alt="" loading="lazy"><img data-f="q-alergia" src="_media/pagina/icones/q-alergia.svg" alt="" loading="lazy"><img data-f="q-galera" src="_media/pagina/icones/q-galera.svg" alt="" loading="lazy"><img data-f="q-idade" src="_media/pagina/icones/q-idade.svg" alt="" loading="lazy"><img data-f="q-pais" src="_media/pagina/icones/q-pais.svg" alt="" loading="lazy"><img data-f="q-preco" src="_media/pagina/icones/q-preco.svg" alt="" loading="lazy"><img data-f="queijo" src="_media/pagina/icones/queijo.webp" alt="" loading="lazy"><img data-f="ralador" src="_media/pagina/icones/ralador.webp" alt="" loading="lazy"><img data-f="rolo" src="_media/pagina/icones/rolo.webp" alt="" loading="lazy"><img data-f="sopa" src="_media/pagina/icones/sopa.webp" alt="" loading="lazy"><img data-f="sorvete" src="_media/pagina/icones/sorvete.webp" alt="" loading="lazy"><img data-f="tabua" src="_media/pagina/icones/tabua.webp" alt="" loading="lazy"><img data-f="tabua2" src="_media/pagina/icones/tabua2.webp" alt="" loading="lazy"><img data-f="tigela" src="_media/pagina/icones/tigela.webp" alt="" loading="lazy"><img data-f="tomate" src="_media/pagina/icones/tomate.webp" alt="" loading="lazy"><img data-f="tracos" src="_media/pagina/icones/tracos.webp" alt="" loading="lazy"><img data-f="xicara" src="_media/pagina/icones/xicara.webp" alt="" loading="lazy"><img data-f="chef-batedeira-b" src="_media/pagina/ilustracoes/chef-batedeira-b.webp" alt="" loading="lazy"><img data-f="chef-batedeira" src="_media/pagina/ilustracoes/chef-batedeira.webp" alt="" loading="lazy"><img data-f="chef-bolo" src="_media/pagina/ilustracoes/chef-bolo.webp" alt="" loading="lazy"><img data-f="chef-cortando-noite" src="_media/pagina/ilustracoes/chef-cortando-noite.webp" alt="" loading="lazy"><img data-f="chef-cortando" src="_media/pagina/ilustracoes/chef-cortando.webp" alt="" loading="lazy"><img data-f="chef-massa" src="_media/pagina/ilustracoes/chef-massa.webp" alt="" loading="lazy"><img data-f="chef-panela" src="_media/pagina/ilustracoes/chef-panela.webp" alt="" loading="lazy"><img data-f="chef-prato" src="_media/pagina/ilustracoes/chef-prato.webp" alt="" loading="lazy"><img data-f="chef-provando" src="_media/pagina/ilustracoes/chef-provando.webp" alt="" loading="lazy"><img data-f="chef-tempero" src="_media/pagina/ilustracoes/chef-tempero.webp" alt="" loading="lazy"><img data-f="logo-pc-full-ink" src="_media/pagina/marca/logo-pc-full-ink.webp" alt="" loading="lazy"><img data-f="logo-pc-ink" src="_media/pagina/marca/logo-pc-ink.webp" alt="" loading="lazy"><img data-f="logo-pc-sm" src="_media/pagina/marca/logo-pc-sm.webp" alt="" loading="lazy"><img data-f="logo-pc" src="_media/pagina/marca/logo-pc.webp" alt="" loading="lazy"><img data-f="logo-sm" src="_media/pagina/marca/logo-sm.webp" alt="" loading="lazy"><img data-f="logo" src="_media/pagina/marca/logo.webp" alt="" loading="lazy"><img data-f="massa-chef" src="_media/pagina/sobre/massa-chef.webp" alt="" loading="lazy"><img data-f="massa-farinha" src="_media/pagina/sobre/massa-farinha.webp" alt="" loading="lazy"><img data-f="massa-saco" src="_media/pagina/sobre/massa-saco.webp" alt="" loading="lazy"><img data-f="massa-tigela" src="_media/pagina/sobre/massa-tigela.webp" alt="" loading="lazy"><img data-f="panela-base" src="_media/pagina/sobre/panela-base.webp" alt="" loading="lazy"><img data-f="panela-bolhas" src="_media/pagina/sobre/panela-bolhas.webp" alt="" loading="lazy"><img data-f="panela-vapor" src="_media/pagina/sobre/panela-vapor.webp" alt="" loading="lazy"><img data-f="prato-base" src="_media/pagina/sobre/prato-base.webp" alt="" loading="lazy"><img data-f="prato-prato" src="_media/pagina/sobre/prato-prato.webp" alt="" loading="lazy"></div>
+<!-- Imagens e textos usados pelo JavaScript (não remover). As imagens trocam no passo Mídia; os textos, no cadastro. -->
+<div class="media-refs" hidden aria-hidden="true"><img data-f="carreta" src="@img_carreta_externa" alt="" loading="lazy"><img data-f="int-agua" src="@img_carreta_agua" alt="" loading="lazy"><img data-f="int-bancada" src="@img_carreta_bancada" alt="" loading="lazy"><img data-f="int-corredor" src="@img_carreta_corredor" alt="" loading="lazy"><img data-f="int-cozinha" src="@img_carreta_cozinha" alt="" loading="lazy"><img data-f="int-plateia" src="@img_carreta_plateia" alt="" loading="lazy"><img data-f="chef-panela" src="@img_carreta_adesivochef" alt="" loading="lazy"><img data-f="hero-chef" src="@img_hero_chef" alt="" loading="lazy"><img data-f="logo-pc" src="@img_marca_logo" alt="" loading="lazy"><img data-f="logo-pc-full-ink" src="@img_marca_logocard" alt="" loading="lazy"><img data-f="logo-pc-sm" src="@img_marca_logopequeno" alt="" loading="lazy"><img data-f="alecrim" src="@img_icones_alecrim" alt="" loading="lazy"><img data-f="alho" src="@img_icones_alho" alt="" loading="lazy"><img data-f="avental" src="@img_icones_avental" alt="" loading="lazy"><img data-f="azeite" src="@img_icones_azeite" alt="" loading="lazy"><img data-f="balanca" src="@img_icones_balanca" alt="" loading="lazy"><img data-f="batedor" src="@img_icones_batedor" alt="" loading="lazy"><img data-f="bolo" src="@img_icones_bolo" alt="" loading="lazy"><img data-f="cebola" src="@img_icones_cebola" alt="" loading="lazy"><img data-f="cenoura" src="@img_icones_cenoura" alt="" loading="lazy"><img data-f="chapeu" src="@img_icones_chapeu" alt="" loading="lazy"><img data-f="cogumelo" src="@img_icones_cogumelo" alt="" loading="lazy"><img data-f="concha" src="@img_icones_concha" alt="" loading="lazy"><img data-f="copo" src="@img_icones_copo" alt="" loading="lazy"><img data-f="dolma" src="@img_icones_dolma" alt="" loading="lazy"><img data-f="escorredor" src="@img_icones_escorredor" alt="" loading="lazy"><img data-f="espatula" src="@img_icones_espatula" alt="" loading="lazy"><img data-f="farelo" src="@img_icones_farelo" alt="" loading="lazy"><img data-f="folha" src="@img_icones_folha" alt="" loading="lazy"><img data-f="frigideira" src="@img_icones_frigideira" alt="" loading="lazy"><img data-f="moedor" src="@img_icones_moedor" alt="" loading="lazy"><img data-f="panela" src="@img_icones_panela" alt="" loading="lazy"><img data-f="pao" src="@img_icones_pao" alt="" loading="lazy"><img data-f="pegador" src="@img_icones_pegador" alt="" loading="lazy"><img data-f="pimenta" src="@img_icones_pimenta" alt="" loading="lazy"><img data-f="pizza" src="@img_icones_pizza" alt="" loading="lazy"><img data-f="pontos" src="@img_icones_pontos" alt="" loading="lazy"><img data-f="queijo" src="@img_icones_queijo" alt="" loading="lazy"><img data-f="ralador" src="@img_icones_ralador" alt="" loading="lazy"><img data-f="rolo" src="@img_icones_rolo" alt="" loading="lazy"><img data-f="sopa" src="@img_icones_sopa" alt="" loading="lazy"><img data-f="sorvete" src="@img_icones_sorvete" alt="" loading="lazy"><img data-f="tabua" src="@img_icones_tabua" alt="" loading="lazy"><img data-f="tabua2" src="@img_icones_tabua2" alt="" loading="lazy"><img data-f="tigela" src="@img_icones_tigela" alt="" loading="lazy"><img data-f="tomate" src="@img_icones_tomate" alt="" loading="lazy"><img data-f="tracos" src="@img_icones_tracos" alt="" loading="lazy"><img data-f="xicara" src="@img_icones_xicara" alt="" loading="lazy"></div>
+<div class="txt-src" id="txtSrc" hidden aria-hidden="true"><span data-k="evento">@evento</span><span data-k="publico">@publico</span><span data-k="contagem_dia">@contagem_dia</span><span data-k="contagem_dias">@contagem_dias</span><span data-k="contagem_fim">@contagem_fim</span><span data-k="contagem_encerrada">@contagem_encerrada</span><span data-k="contagem_msg">@contagem_msg</span><span data-k="contagem_msg_encerrada">@contagem_msg_encerrada</span><span data-k="videos_rotulo">@videos_rotulo</span><span data-k="videos_contador">@videos_contador</span><span data-k="videos_vazio">@videos_vazio</span><span data-k="videos_play">@videos_play</span><span data-k="videos_assistir">@videos_assistir</span><span data-k="videos_breve">@videos_breve</span><span data-k="videos_nao_publicado">@videos_nao_publicado</span><span data-k="material_livro_abrir">@material_livro_abrir</span><span data-k="material_livro_fechar">@material_livro_fechar</span><span data-k="galeria_todas">@galeria_todas</span><span data-k="galeria_sem_foto">@galeria_sem_foto</span><span data-k="galeria_reservado">@galeria_reservado</span><span data-k="galeria_eyebrow">@galeria_eyebrow</span><span data-k="galeria_uma">@galeria_uma</span><span data-k="duvidas_abrir_todas">@duvidas_abrir_todas</span><span data-k="duvidas_fechar_todas">@duvidas_fechar_todas</span><span data-k="compartilhe_msg">@compartilhe_msg</span><span data-k="compartilhe_card_selo">@compartilhe_card_selo</span><span data-k="compartilhe_card_eu">@compartilhe_card_eu</span><span data-k="compartilhe_card_nome">@compartilhe_card_nome</span><span data-k="compartilhe_card_titulo">@compartilhe_card_titulo</span><span data-k="compartilhe_card_rodape">@compartilhe_card_rodape</span><span data-k="compartilhe_ok">@compartilhe_ok</span><span data-k="compartilhe_erro">@compartilhe_erro</span><span data-k="compartilhe_sem_suporte">@compartilhe_sem_suporte</span><span data-k="compartilhe_erro_imagem">@compartilhe_erro_imagem</span><span data-k="compartilhe_salva">@compartilhe_salva</span><span data-k="compartilhe_erro_salvar">@compartilhe_erro_salvar</span><span data-k="compartilhe_download">@compartilhe_download</span><span data-k="compartilhe_salva_instagram">@compartilhe_salva_instagram</span><span data-k="compartilhe_copiado">@compartilhe_copiado</span><span data-k="carreta_recolher">@carreta_recolher</span><span data-k="carreta_abrir">@carreta_abrir</span><span data-k="carreta_legenda">@carreta_legenda</span><span data-k="carreta_ponto1_titulo">@carreta_ponto1_titulo</span><span data-k="carreta_ponto1_texto">@carreta_ponto1_texto</span><span data-k="carreta_ponto2_titulo">@carreta_ponto2_titulo</span><span data-k="carreta_ponto2_texto">@carreta_ponto2_texto</span><span data-k="carreta_ponto3_titulo">@carreta_ponto3_titulo</span><span data-k="carreta_ponto3_texto">@carreta_ponto3_texto</span><span data-k="carreta_ponto4_titulo">@carreta_ponto4_titulo</span><span data-k="carreta_ponto4_texto">@carreta_ponto4_texto</span><span data-k="carreta_ponto5_titulo">@carreta_ponto5_titulo</span><span data-k="carreta_ponto5_texto">@carreta_ponto5_texto</span><span data-k="carreta_ponto6_titulo">@carreta_ponto6_titulo</span><span data-k="carreta_ponto6_texto">@carreta_ponto6_texto</span><span data-k="carreta_ponto7_titulo">@carreta_ponto7_titulo</span><span data-k="carreta_ponto7_texto">@carreta_ponto7_texto</span><span data-k="carreta_ponto8_titulo">@carreta_ponto8_titulo</span><span data-k="carreta_ponto8_texto">@carreta_ponto8_texto</span><span data-k="carreta_ponto9_titulo">@carreta_ponto9_titulo</span><span data-k="carreta_ponto9_texto">@carreta_ponto9_texto</span></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
@@ -1493,16 +1556,22 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   function siteUrl(){ return SITE_URL || (location.origin + location.pathname); }
   /* caminho das imagens fixas dentro de _media/pagina/<seção>/ */
   var MEDIA = {};
-  [].forEach.call(document.querySelectorAll('.media-refs img'), function(im){ MEDIA[im.getAttribute('data-f')] = im.getAttribute('src'); });
+  [].forEach.call(document.querySelectorAll('.media-refs img'), function(im){ var v = im.getAttribute('src') || ''; MEDIA[im.getAttribute('data-f')] = /^@/.test(v) ? '' : v; });
   function MID(p){
     var f = p.split('/').pop(), k = f.replace(/\.(webp|svg)$/, '');
-    if(MEDIA[k]) return MEDIA[k];
-    if(!/\./.test(f)) f += '.webp';
-    var sec = p.indexOf('ic/') === 0 ? 'icones' : /^hero-/.test(f) ? 'hero' : /^logo/.test(f) ? 'marca' : /^(carreta|int-)/.test(f) ? 'carreta' : 'ilustracoes';
-    return ['_media', 'pagina', sec, f].join('/');
+    return MEDIA[k] || '';
   }
   function setSrc(el, v){ el['s' + 'rc'] = v; }
   var PNG_NOME = 'pequeno-chef.' + 'png';
+  /* Textos editáveis usados pelo script: lista escondida #txtSrc, preenchida pelo publicador.
+     {evento}, {publico}, {cidade}, {dias}, {n} e {total} dentro do texto viram o valor certo. */
+  var TXT = {};
+  [].forEach.call(document.querySelectorAll('#txtSrc [data-k]'), function(e){ var v = e.textContent.trim(); TXT[e.getAttribute('data-k')] = /^@/.test(v) ? '' : v; });
+  function TX(k, o){
+    var r = {evento: TXT.evento || '', publico: TXT.publico || ''};
+    if(o) for(var q in o) r[q] = o[q];
+    return (TXT[k] || '').replace(/\{(\w+)\}/g, function(x, n){ return n in r ? r[n] : x; });
+  }
 
 
   /* ---------- Barra fixa (mobile) e logo do header (desktop) ---------- */
@@ -1600,7 +1669,24 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       play: function(){ cancelAnimationFrame(raf); t0 = performance.now(); raf = requestAnimationFrame(loop); }
     };
   }
-  var truckIll = document.getElementById('truckIll'), truck = truckScene(truckIll);
+  var truckIll = document.getElementById('truckIll'), truck = {render:function(){}, play:function(){ truck.want = 1; }};
+  (function(){
+    var im = truckIll, u = im && im.getAttribute('src');
+    if(!im || im.tagName !== 'IMG' || !u || /^@/.test(u) || !window.fetch || !window.DOMParser) return;
+    fetch(u).then(function(r){ return r.ok ? r.text() : ''; }).then(function(t){
+      if(t.indexOf('<svg') < 0) return;
+      var doc = new DOMParser().parseFromString(t, 'image/svg+xml'), sv = doc.documentElement;
+      if(!sv || sv.nodeName.toLowerCase() !== 'svg' || !sv.querySelector('#tiTruck')) return;
+      sv = document.importNode(sv, true);
+      [].forEach.call(sv.querySelectorAll('image[data-f]'), function(g){ var v = MEDIA[g.getAttribute('data-f')]; if(v) g.setAttribute('href', v); });
+      sv.setAttribute('class', 'truck-ill'); sv.setAttribute('id', 'truckIll'); sv.setAttribute('role', 'img'); sv.setAttribute('aria-label', im.getAttribute('alt') || '');
+      var sc = truckScene(sv), want = truck.want, anim = document.documentElement.classList.contains('js-anim');
+      if(anim) sc.render(want ? 1e5 : 0);
+      im.parentNode.replaceChild(sv, im); truckIll = sv;
+      truck.render = sc.render; truck.play = sc.play;
+      if(anim && want) sc.play();
+    }).catch(function(){});
+  })();
 
   /* ---------- Contagem regressiva: timer de cozinha por cidade ---------- */
   var tm = (function(){
@@ -1615,9 +1701,10 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     /* a data vem do cadastro (dd/mm/aaaa); aqui só se contam os dias que faltam */
     function d(v){ var p = String(v || '').split('/'); return p.length === 3 ? new Date(+p[2], p[1] - 1, +p[0]) : null; }
     function today(){ var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+    function UN(n){ return TX(n === 1 ? 'contagem_dia' : 'contagem_dias').toUpperCase(); }
     function info(b){
       var st = d(b.dataset.start), days = st ? Math.max(0, Math.round((st - today()) / 864e5)) : 0;
-      return {name: b.firstChild.nodeValue.trim(), days: days, past: b.classList.contains('past'), html: (b.querySelector('.tm-info') || {}).innerHTML || ''};
+      return {name: b.firstChild.nodeValue.trim(), days: days, past: b.classList.contains('past'), html: (b.querySelector('.tm-info') || {}).innerHTML || '', go: (b.querySelector('.tm-go-t') || {}).innerHTML || ''};
     }
     function wedgePath(v){
       if(v <= .05) return '';
@@ -1635,27 +1722,26 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       (function step(now){
         var p = Math.min(1, (now - t0) / dur), k = 1.25, e = 1 + (k + 1) * Math.pow(p - 1, 3) + k * Math.pow(p - 1, 2);
         curV = v0 + (tv - v0) * e; draw(Math.max(0, Math.min(100, curV)));
-        if(!txt){ curN = Math.round(n0 + (tn - n0) * Math.min(1, e)); label(curN, tn === 1 ? 'DIA' : 'DIAS'); }
+        if(!txt){ curN = Math.round(n0 + (tn - n0) * Math.min(1, e)); label(curN, UN(tn)); }
         if(p < 1) raf = requestAnimationFrame(step); else { curV = tv; curN = tn || 0; if(done) done(); }
       })(performance.now());
     }
-    function target(c){ return c.past ? {v:0, n:0, txt:['FIM', 'ENCERRADA']} : {v:Math.min(c.days, 100), n:c.days, txt:null}; }
+    function target(c){ return c.past ? {v:0, n:0, txt:[TX('contagem_fim').toUpperCase(), TX('contagem_encerrada').toUpperCase()]} : {v:Math.min(c.days, 100), n:c.days, txt:null}; }
     function msg(c){
-      if(c.past) return 'Conheça o Pequeno Chef, uma carreta-cozinha com aulas de culinária. Bora junto?';
-      return 'A carreta do Pequeno Chef chega em ' + c.name + ' em ' + c.days + (c.days === 1 ? ' dia' : ' dias') + '. Aulas de culinária com um chef, para quem tem a partir de 16 anos. Bora junto?';
+      if(c.past) return TX('contagem_msg_encerrada');
+      return TX('contagem_msg', {cidade: c.name, dias: c.days + ' ' + TX(c.days === 1 ? 'contagem_dia' : 'contagem_dias')});
     }
     function select(i, anim){
       idx = i;
       btns.forEach(function(b, j){ b.setAttribute('aria-checked', j === i ? 'true' : 'false'); b.tabIndex = j === i ? 0 : -1; });
       var c = info(btns[i]), t = target(c);
       status.innerHTML = c.html;
-      if(c.past){ go.innerHTML = '<span>Ver próximas cidades</span>'; go.setAttribute('href', '#contagem'); }
-      else { go.innerHTML = '<span>Quero minha vaga em <b></b></span>'; go.querySelector('b').textContent = c.name; go.setAttribute('href', '#inscricao'); }
+      go.innerHTML = '<span>' + c.go + '</span>'; go.setAttribute('href', c.past ? '#contagem' : '#inscricao');
       tell.href = 'https://wa.me/?text=' + encodeURIComponent(msg(c) + ' ' + siteUrl() + '#contagem');
       tell.dataset.msg = msg(c);
       if(dd) dd.sync(i, c);
       if(anim) animateTo(t.v, t.n, t.txt, 900);
-      else { cancelAnimationFrame(raf); curV = t.v; curN = t.n; draw(t.v); if(t.txt) label(t.txt[0], t.txt[1]); else label(t.n, t.n === 1 ? 'DIA' : 'DIAS'); }
+      else { cancelAnimationFrame(raf); curV = t.v; curN = t.n; draw(t.v); if(t.txt) label(t.txt[0], t.txt[1]); else label(t.n, UN(t.n)); }
     }
     var dd = (function(){
       var wrap = document.getElementById('tmSel'), bt = document.getElementById('tmSelB'), ul = document.getElementById('tmList'),
@@ -1699,14 +1785,14 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       if(!navigator.share) return;
       e.preventDefault();
       var href = tell.href;
-      navigator.share({title: 'Pequeno Chef', text: tell.dataset.msg, url: siteUrl() + '#contagem'}).catch(function(err){ if(err && err.name !== 'AbortError') window.open(href, '_blank', 'noopener'); });
+      navigator.share({title: TX('evento'), text: tell.dataset.msg, url: siteUrl() + '#contagem'}).catch(function(err){ if(err && err.name !== 'AbortError') window.open(href, '_blank', 'noopener'); });
     });
     /* abre na primeira cidade que ainda não foi realizada (status vem do publicador) */
     var first = btns.length - 1;
     for(var i = 0; i < btns.length; i++){ if(!btns[i].classList.contains('past')){ first = i; break; } }
     var animOK = !reduce && 'IntersectionObserver' in window;
     select(first, false);
-    if(animOK){ curV = 0; curN = 0; draw(0); label(0, 'DIAS'); }
+    if(animOK){ curV = 0; curN = 0; draw(0); label(0, UN(0)); }
     return {
       play: function(){
         if(played) return; played = true;
@@ -1720,7 +1806,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 
   /* Vídeos, material e fotos vêm do HTML (variáveis do publicador): veja #vdSrc, #matFile e #gSrc. */
   function rd(el, a){ var v = (el.getAttribute(a) || '').trim(); return /^@/.test(v) ? '' : v; }
-  var VIDEOS = [].map.call(document.querySelectorAll('#vdSrc li'), function(li, k){ return {id: rd(li, 'data-yt'), titulo: rd(li, 'data-titulo') || 'Vídeo ' + (k + 1), duracao: rd(li, 'data-duracao')}; });
+  var VIDEOS = [].map.call(document.querySelectorAll('#vdSrc li'), function(li, k){ return {id: rd(li, 'data-yt'), titulo: rd(li, 'data-titulo') || TX('videos_rotulo') + ' ' + (k + 1), duracao: rd(li, 'data-duracao')}; });
   var FOTOS = [].map.call(document.querySelectorAll('#gSrc img'), function(im){ return {src: rd(im, 'src'), alt: rd(im, 'alt'), cidade: rd(im, 'data-cidade'), legenda: rd(im, 'alt')}; }).filter(function(f){ return f.src; });
   var ROTA = [].map.call(document.querySelectorAll('#tmCities button'), function(b){ return b.firstChild.nodeValue.trim(); });
 
@@ -1733,7 +1819,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     var list = document.getElementById('vdList'), now = document.getElementById('vdNow');
     var cur = 0, msgT = 0;
     var vazio = !VIDEOS.length;
-    if(vazio){ VIDEOS = [{id:'', titulo:'Vídeos em breve', duracao:''}]; list.hidden = true; }
+    if(vazio){ VIDEOS = [{id:'', titulo:TX('videos_vazio'), duracao:''}]; list.hidden = true; }
     function ytId(v){
       if(!v) return '';
       var m = String(v).match(/(?:youtu\.be\/|[?&]v=|embed\/|shorts\/|live\/)([\w-]{11})/);
@@ -1743,15 +1829,15 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     function poster(i){
       var v = VIDEOS[i], id = ytId(v.id), ic = ICS[i % ICS.length];
       screen.innerHTML =
-        '<button type="button" class="vd-poster" aria-label="Assistir: ' + esc(v.titulo) + (id ? '' : ' (vídeo em breve)') + '">' +
+        '<button type="button" class="vd-poster" aria-label="' + esc(TX('videos_assistir')) + ': ' + esc(v.titulo) + (id ? '' : ' (' + esc(TX('videos_breve')) + ')') + '">' +
           (id ? '<img class="th" src="https://i.ytimg.com/vi/' + id + '/hqdefault.' + 'jpg" alt="" onerror="this.remove()">' :
                 '<img class="ic a" src="' + MID('ic/' + ic[0] + '.webp') + '" alt=""><img class="ic b" src="' + MID('ic/' + ic[1] + '.webp') + '" alt="">') +
           '<span class="big" aria-hidden="true">' + pad(i + 1) + '</span>' +
           '<span class="vd-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></svg></span>' +
-          (vazio ? '' : '<span class="lab">Vídeo ' + pad(i + 1) + ' de ' + pad(VIDEOS.length) + '</span>') +
+          (vazio ? '' : '<span class="lab">' + esc(TX('videos_contador', {n: pad(i + 1), total: pad(VIDEOS.length)})) + '</span>') +
           '<span class="ttl">' + esc(v.titulo) + '</span>' +
-          '<span class="st">' + (id ? (v.duracao ? esc(v.duracao) : 'Aperte o play') : 'Em breve') + '</span>' +
-        '</button><span class="vd-msg" role="status">Este vídeo ainda não foi publicado</span>';
+          '<span class="st">' + (id ? (v.duracao ? esc(v.duracao) : esc(TX('videos_play'))) : esc(TX('videos_breve'))) + '</span>' +
+        '</button><span class="vd-msg" role="status">' + esc(TX('videos_nao_publicado')) + '</span>';
       screen.querySelector('.vd-poster').addEventListener('click', function(){ play(i); });
     }
     function play(i){
@@ -1767,13 +1853,13 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     function pick(i, zap){
       cur = i;
       list.querySelectorAll('.vd-ep').forEach(function(b, j){ b.setAttribute('aria-pressed', j === i ? 'true' : 'false'); b.classList.remove('playing'); });
-      now.textContent = 'Vídeo ' + pad(i + 1) + ' · ' + VIDEOS[i].titulo;
+      now.textContent = TX('videos_rotulo') + ' ' + pad(i + 1) + ' · ' + VIDEOS[i].titulo;
       poster(i);
       if(zap && !reduce){ screen.classList.remove('zap'); void screen.offsetWidth; screen.classList.add('zap'); }
     }
     VIDEOS.forEach(function(v, i){
       var li = document.createElement('li'); li.style.setProperty('--i', i);
-      li.innerHTML = '<button type="button" class="vd-ep" aria-pressed="false"><span class="n">' + pad(i + 1) + '</span><span class="t"><b>' + esc(v.titulo) + '</b><small>' + (ytId(v.id) ? (v.duracao ? esc(v.duracao) : 'Assistir') : 'Em breve') + '</small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>';
+      li.innerHTML = '<button type="button" class="vd-ep" aria-pressed="false"><span class="n">' + pad(i + 1) + '</span><span class="t"><b>' + esc(v.titulo) + '</b><small>' + (ytId(v.id) ? (v.duracao ? esc(v.duracao) : esc(TX('videos_assistir'))) : esc(TX('videos_breve'))) + '</small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>';
       li.firstChild.addEventListener('click', function(){
         if(i === cur && !screen.querySelector('iframe')){ play(i); return; }
         pick(i, true);
@@ -1789,7 +1875,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   (function(){
     var book = document.getElementById('matBook'); if(!book) return;
     var hint = document.getElementById('bkHint');
-    function toggle(){ var on = book.classList.toggle('open'); book.setAttribute('aria-pressed', on ? 'true' : 'false'); hint.textContent = on ? 'Toque para fechar' : 'Toque para abrir'; }
+    function toggle(){ var on = book.classList.toggle('open'); book.setAttribute('aria-pressed', on ? 'true' : 'false'); hint.textContent = TX(on ? 'material_livro_fechar' : 'material_livro_abrir'); book.setAttribute('aria-label', hint.textContent); }
     book.addEventListener('click', toggle);
     book.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
   })();
@@ -1812,13 +1898,13 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     var city = '', view = [], idx = 0, mode = 'mural', timer = 0, DUR = 4500;
 
     function vars(it, i){ return '--bg:' + it.bg + ';--fg:' + it.fg + ';--r:' + it.r + ';--i:' + i; }
-    function label(it, i){ return (it.ph ? 'Espaço reservado para foto' : (it.alt || 'Foto')) + (it.cidade ? ', ' + it.cidade : '') + ', ' + (i + 1) + ' de ' + view.length; }
+    function label(it, i){ return (it.ph ? TX('galeria_reservado') : (it.alt || TX('galeria_eyebrow'))) + (it.cidade ? ', ' + it.cidade : '') + ', ' + (i + 1) + ' de ' + view.length; }
     /* mosaico em ciclos que fecham sem buracos: celular (2 colunas) a cada 6 fotos, computador (4 colunas) a cada 11 */
     function shape(i){ var m = i % 6, d = i % 11; return (m === 0 ? ' m-wide' : m === 3 ? ' m-tall' : '') + (d === 0 ? ' d-big' : d === 6 ? ' d-tall' : d === 7 ? ' d-wide' : ''); }
 
     function buildFilters(){
       if(cidades.length < 2){ filt.hidden = true; return; }
-      var opts = [['', 'Todas', items.length]].concat(cidades.map(function(c){ return [c, c, items.filter(function(it){ return it.cidade === c; }).length]; }));
+      var opts = [['', TX('galeria_todas'), items.length]].concat(cidades.map(function(c){ return [c, c, items.filter(function(it){ return it.cidade === c; }).length]; }));
       filt.innerHTML = opts.map(function(o){ return '<button type="button" data-c="' + esc(o[0]) + '" aria-pressed="' + (o[0] === city) + '">' + esc(o[1]) + ' <small>' + o[2] + '</small></button>'; }).join('');
       filt.querySelectorAll('button').forEach(function(b){ b.addEventListener('click', function(){ setCity(b.dataset.c); }); });
     }
@@ -1830,8 +1916,8 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     function render(){
       view = items.filter(function(it){ return !city || it.cidade === city; });
       mural.innerHTML = view.map(function(it, i){
-        return '<button type="button" class="g-tile' + shape(i) + '" style="' + vars(it, i) + '" data-i="' + i + '" aria-label="' + esc(label(it, i)) + ' — ver uma a uma">' +
-          (it.ph ? '<img class="ph-ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt="" loading="lazy"><span class="ph-l"><small>Foto em breve</small><b>' + esc(it.cidade) + '</b></span>'
+        return '<button type="button" class="g-tile' + shape(i) + '" style="' + vars(it, i) + '" data-i="' + i + '" aria-label="' + esc(label(it, i)) + ' — ' + esc(TX('galeria_uma')) + '">' +
+          (it.ph ? '<img class="ph-ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt="" loading="lazy"><span class="ph-l"><small>' + esc(TX('galeria_sem_foto')) + '</small><b>' + esc(it.cidade) + '</b></span>'
                  : '<img class="photo" src="' + esc(it.src) + '" alt="" loading="lazy">' + (it.legenda || it.cidade ? '<span class="cap">' + esc(it.legenda || it.cidade) + '</span>' : '')) +
           '<span class="num" aria-hidden="true">' + pad(i + 1) + '</span>' +
           '<span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>';
@@ -1839,7 +1925,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       mural.querySelectorAll('.g-tile').forEach(function(t){ t.addEventListener('click', function(){ openOne(+t.dataset.i); }); });
       slidesEl.innerHTML = view.map(function(it, i){
         return '<figure class="g-slide" style="' + vars(it, i) + '" aria-hidden="true">' +
-          (it.ph ? '<img class="ph-ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt=""><span class="ph-tag">Foto em breve</span>'
+          (it.ph ? '<img class="ph-ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt=""><span class="ph-tag">' + esc(TX('galeria_sem_foto')) + '</span>'
                  : '<img class="photo" data-src="' + esc(it.src) + '" alt="' + esc(it.alt || '') + '">') + '</figure>';
       }).join('');
       strip.innerHTML = view.map(function(it, i){
@@ -1859,8 +1945,8 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       cur.classList.add('on'); cur.setAttribute('aria-hidden', 'false');
       if(dir && !reduce && prev && prev !== cur){ prev.classList.add('was'); cur.classList.add(dir === 1 ? 'in-r' : 'in-l'); }
       var it = view[i];
-      cityEl.textContent = it.cidade || 'Galeria'; cityEl.hidden = !it.cidade && !PH;
-      legEl.textContent = it.ph ? 'Espaço reservado para a foto.' : (it.legenda || '');
+      cityEl.textContent = it.cidade || TX('galeria_eyebrow'); cityEl.hidden = !it.cidade && !PH;
+      legEl.textContent = it.ph ? TX('galeria_reservado') : (it.legenda || '');
       numEl.textContent = pad(i + 1);
       track.style.width = ((i + 1) / view.length * 100) + '%';
       strip.querySelectorAll('.g-th').forEach(function(b, j){ b.setAttribute('aria-current', j === i ? 'true' : 'false'); });
@@ -1921,7 +2007,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
         var el = e.target, d = k++ * .16;
         el.style.setProperty('--sd', d + 's');
         el.classList.add('play'); aio.unobserve(el);
-        if(truckIll && el.contains(truckIll)) setTimeout(truck.play, 450 + d * 1000);
+        if(truckIll && el.contains(truckIll)) setTimeout(function(){ truck.play(); }, 450 + d * 1000);
         if(el.id === 'contagem' && tm) tm.play();
       });
     }, {threshold:[0, .05, .1, .15, .2, .25, .3], rootMargin:'0px 0px -8% 0px'});
@@ -2011,7 +2097,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   tAll.addEventListener('click', function(){
     allOpen = !allOpen;
     items.forEach(function(li){ li.querySelector('details').open = allOpen; });
-    tAll.textContent = allOpen ? 'Fechar todas' : 'Abrir todas';
+    tAll.textContent = TX(allOpen ? 'duvidas_fechar_todas' : 'duvidas_abrir_todas');
   });
 
   /* ---------- Confete de ícones ---------- */
@@ -2048,7 +2134,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   var theme = 'verde', fmt = 'stories', IM = {};
   var nameIn = document.getElementById('kidName'), shMsg = document.getElementById('shMsg');
   function kid(){ return nameIn.value.trim(); }
-  function msg(){ return 'Acabei de me inscrever nas aulas de culinária do Pequeno Chef, dentro de uma carreta-cozinha itinerante! Inscreva-se também: ' + siteUrl(); }
+  function msg(){ return TX('compartilhe_msg') + ' ' + siteUrl(); }
   function fitText(t, max, size, weight, fam){ var s = size; do{ cx.font = weight + ' ' + s + 'px ' + fam; s -= 4; } while(cx.measureText(t).width > max && s > 40); return s + 4; }
   function drawPost(){
     var W = 1080, H = 1350, fam = '"Big Shoulders Display", "Arial Narrow", sans-serif';
@@ -2065,17 +2151,17 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     [['tomate',86,260,140,-.3],['cenoura',880,250,120,.4],['queijo',70,760,150,.2],['cebola',880,760,135,-.2]].forEach(function(k){ var im = IM[k[0]]; if(!im) return; var w = k[3], h = w*im.height/im.width; cx.save(); cx.translate(k[1] + w/2, k[2] + h/2); cx.rotate(k[4]); cx.drawImage(im, -w/2, -h/2, w, h); cx.restore(); });
     if(IM.logoW){ var lw = 210, lh = lw*IM.logoW.height/IM.logoW.width; cx.drawImage(IM.logoW, 44, 40, lw, lh); }
     cx.textAlign = 'center'; cx.textBaseline = 'middle';
-    var pill = 'INSCRIÇÃO FEITA!'; cx.font = '800 34px Outfit, sans-serif';
+    var pill = TX('compartilhe_card_selo').toUpperCase(); cx.font = '800 34px Outfit, sans-serif';
     var pw = cx.measureText(pill).width + 60, ph = 64;
     cx.fillStyle = '#161125'; roundRect(W - 44 - pw, 70, pw, ph, ph/2); cx.fill();
     cx.fillStyle = '#FBF3EA'; cx.fillText(pill, W - 44 - pw/2, 70 + ph/2 + 2);
-    var l1 = (kid() ? kid() + ' vai cozinhar no' : 'Eu vou cozinhar no').toUpperCase(), s1 = fitText(l1, 940, 104, '900', fam);
+    var l1 = (kid() ? kid() + ' ' + TX('compartilhe_card_nome') : TX('compartilhe_card_eu')).toUpperCase(), s1 = fitText(l1, 940, 104, '900', fam);
     cx.font = '900 ' + s1 + 'px ' + fam; cx.fillStyle = P.l1; cx.fillText(l1, W/2, 1018);
-    var l2 = 'PEQUENO CHEF!', s2 = fitText(l2, 980, 170, '900', fam);
+    var l2 = TX('compartilhe_card_titulo').toUpperCase(), s2 = fitText(l2, 980, 170, '900', fam);
     cx.font = '900 ' + s2 + 'px ' + fam; cx.fillStyle = '#161125'; cx.fillText(l2, W/2 + 8, 1160 + 8);
     cx.fillStyle = P.l2; cx.fillText(l2, W/2, 1160);
     cx.font = '600 30px Outfit, sans-serif'; cx.fillStyle = P.ft;
-    cx.fillText('Pequeno Chef · Aulas de culinária', W/2, 1295);
+    cx.fillText(TX('compartilhe_card_rodape'), W/2, 1295);
   }
   function draw(){
     var T = THEMES[theme], W = 1080, H = fmt === 'stories' ? 1920 : 1350;
@@ -2090,20 +2176,20 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     var ic = [['tomate',70,cyC-360*S,150,-.3],['cenoura',900,cyC-420*S,130,.4],['queijo',60,cyC+260*S,160,.2],['cebola',880,cyC+240*S,140,-.2]];
     ic.forEach(function(k){ var im = IM[k[0]]; if(!im) return; var w = k[3]*S, h = w*im.height/im.width; cx.save(); cx.translate(k[1] + w/2, k[2] + h/2); cx.rotate(k[4]); cx.drawImage(im, -w/2, -h/2, w, h); cx.restore(); });
     var y = cyC + R + 90*S;
-    var pill = 'INSCRIÇÃO FEITA!'; cx.font = '800 ' + Math.round(40*S) + 'px Outfit, sans-serif';
+    var pill = TX('compartilhe_card_selo').toUpperCase(); cx.font = '800 ' + Math.round(40*S) + 'px Outfit, sans-serif';
     var pw = cx.measureText(pill).width + 70*S, ph = 72*S;
     cx.fillStyle = T.pill; roundRect((W-pw)/2, y - ph/2, pw, ph, ph/2); cx.fill();
     cx.fillStyle = T.pillTx; cx.textAlign = 'center'; cx.textBaseline = 'middle'; cx.fillText(pill, W/2, y + 2);
     var fam = '"Big Shoulders Display", "Arial Narrow", sans-serif';
-    var l1 = (kid() ? kid() + ' vai cozinhar no' : 'Eu vou cozinhar no').toUpperCase();
+    var l1 = (kid() ? kid() + ' ' + TX('compartilhe_card_nome') : TX('compartilhe_card_eu')).toUpperCase();
     var s1 = fitText(l1, 940, Math.round(120*S), '900', fam);
     cx.font = '900 ' + s1 + 'px ' + fam; cx.fillStyle = T.ink; cx.fillText(l1, W/2, y + 130*S);
-    var l2 = 'PEQUENO CHEF!', s2 = fitText(l2, 980, Math.round(190*S), '900', fam);
+    var l2 = TX('compartilhe_card_titulo').toUpperCase(), s2 = fitText(l2, 980, Math.round(190*S), '900', fam);
     cx.font = '900 ' + s2 + 'px ' + fam;
     cx.fillStyle = '#161125'; cx.fillText(l2, W/2 + 8, y + 290*S + 8);
     cx.fillStyle = T.accent; cx.fillText(l2, W/2, y + 290*S);
     cx.font = '600 ' + Math.round(38*S) + 'px Outfit, sans-serif'; cx.fillStyle = T.ink;
-    cx.fillText('Pequeno Chef · Aulas de culinária', W/2, ST ? H - 70 : H - 56);
+    cx.fillText(TX('compartilhe_card_rodape'), W/2, ST ? H - 70 : H - 56);
   }
   function roundRect(x, y, w, h, r){ cx.beginPath(); cx.moveTo(x + r, y); cx.arcTo(x + w, y, x + w, y + h, r); cx.arcTo(x + w, y + h, x, y + h, r); cx.arcTo(x, y + h, x, y, r); cx.arcTo(x, y, x + w, y, r); cx.closePath(); }
   function links(){
@@ -2126,42 +2212,42 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       var file = blob && window.File ? new File([blob], PNG_NOME, {type:'image/png'}) : null;
       var data = file && navigator.canShare && navigator.canShare({files:[file]}) ? {files:[file], text:msg()} : {text:msg(), url:siteUrl()};
       if(navigator.share){
-        navigator.share(data).then(function(){ shMsg.textContent = 'Obrigado por compartilhar!'; })
-          .catch(function(e){ if(!e || e.name !== 'AbortError') shMsg.textContent = 'Não foi possível abrir o compartilhamento aqui. Use “Salvar imagem” ou os botões abaixo.'; });
-      } else shMsg.textContent = 'Seu navegador não abre o compartilhamento direto. Use “Salvar imagem” ou os botões abaixo.';
+        navigator.share(data).then(function(){ shMsg.textContent = TX('compartilhe_ok'); })
+          .catch(function(e){ if(!e || e.name !== 'AbortError') shMsg.textContent = TX('compartilhe_erro'); });
+      } else shMsg.textContent = TX('compartilhe_sem_suporte');
     });
   });
   function saveImg(after){
     toBlob().then(function(blob){
-      if(!blob){ shMsg.textContent = 'Não foi possível gerar a imagem.'; return; }
+      if(!blob){ shMsg.textContent = TX('compartilhe_erro_imagem'); return; }
       if(DL){
-        DL.save({filename:PNG_NOME, data:blob}).then(function(){ shMsg.textContent = 'Imagem salva!'; if(after) after(); })
-          .catch(function(e){ shMsg.textContent = (e && e.code === 'declined') ? '' : 'Não foi possível salvar aqui. Toque e segure a prévia para salvar.'; });
+        DL.save({filename:PNG_NOME, data:blob}).then(function(){ shMsg.textContent = TX('compartilhe_salva'); if(after) after(); })
+          .catch(function(e){ shMsg.textContent = (e && e.code === 'declined') ? '' : TX('compartilhe_erro_salvar'); });
         return;
       }
       var a = document.createElement('a'); a['hr' + 'ef'] = URL.createObjectURL(blob); a.download = PNG_NOME;
       document.body.appendChild(a); a.click(); a.remove();
-      shMsg.textContent = 'Se o download não começar, toque e segure a prévia para salvar.';
+      shMsg.textContent = TX('compartilhe_download');
       if(after) after();
     });
   }
   document.getElementById('saveBtn').addEventListener('click', function(){ saveImg(); });
   document.getElementById('igBtn').addEventListener('click', function(){
-    var igOpen = document.getElementById('igOpen');
+    var igOpen = document.getElementById('igOpen') || {};
     toBlob().then(function(blob){
       var file = blob && window.File ? new File([blob], PNG_NOME, {type:'image/png'}) : null;
       if(file && navigator.canShare && navigator.canShare({files:[file]})){
-        navigator.share({files:[file]}).then(function(){ shMsg.textContent = 'Obrigado por compartilhar!'; })
+        navigator.share({files:[file]}).then(function(){ shMsg.textContent = TX('compartilhe_ok'); })
           .catch(function(e){ if(!e || e.name !== 'AbortError'){ saveImg(); igOpen.hidden = false; } });
       } else {
-        saveImg(function(){ shMsg.textContent = 'Imagem salva! Agora é só publicar no Instagram.'; });
+        saveImg(function(){ shMsg.textContent = TX('compartilhe_salva_instagram'); });
         igOpen.hidden = false;
       }
     });
   });
   document.getElementById('copyBtn').addEventListener('click', function(){
     var t = msg();
-    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function(){ shMsg.textContent = 'Texto copiado!'; })
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function(){ shMsg.textContent = TX('compartilhe_copiado'); })
       .catch(function(){ shMsg.textContent = t; });
   });
   links(); draw();
@@ -2174,17 +2260,17 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   var L = 14.73, W = 2.57, H = 2.7, F = 1.25, EX0 = 3.66, EX1 = 12.67, ED = 2.19, EH = 2.45;
   function PX(p){ return p - L/2; }
   var EXC = PX((EX0 + EX1)/2), EXL = EX1 - EX0;
-  var FOTO = 'Foto real da carreta em montagem', ILU = 'Imagem ilustrativa do projeto';
+  var ILU = TX('carreta_legenda');
   var SPOTS = [
-    {mode:'fora', pos:[PX(13.35), F+2.25, W/2+.08], n:[0,0,1], title:'Porta de entrada', text:'A entrada é por uma única porta, com escada, que leva ao hall de entrada.', img:'carreta', alt:'Projeção externa da carreta estacionada', cap:ILU},
-    {mode:'fora', pos:[PX(2.9), F+1.5, W/2+1.15], title:'Elevador para PCD', text:'Uma plataforma elevatória na lateral dá acesso a pessoas com deficiência ou mobilidade reduzida.', img:'carreta', alt:'Projeção externa da carreta estacionada', cap:ILU},
-    {mode:'fora', pos:[EXC, F+EH+.2, W/2+ED-.1], title:'Parte expansível', text:'A lateral se abre e amplia a carreta. É ali que ficam as cadeiras e o banco-baú do auditório.', img:'carreta', alt:'Projeção externa da carreta com a lateral aberta', cap:ILU},
-    {mode:'fora', pos:[PX(8.5), F+1.7, -W/2-.05], n:[0,0,-1], title:'Ilustrações da marca', text:'Por fora, a carreta é toda adesivada com as ilustrações do Pequeno Chef.', img:'carreta', alt:'Projeção externa da carreta verde com as ilustrações da marca', cap:ILU},
-    {mode:'dentro', pos:[PX(8.3), F+1.05, 0], title:'Cozinha', text:'Bancada central com cuba, calha para lavar legumes e hortaliças e cooktop.', img:'int-cozinha', alt:'Cozinha com bancada central verde-clara e utensílios pendurados', cap:ILU},
-    {mode:'dentro', pos:[PX(10.6), F+1.75, -W/2+.15], title:'Parede de utensílios', text:'Painel ripado com prateleiras, tábuas de corte e monitores.', img:'int-bancada', alt:'Parede ripada com tábuas de corte, prateleiras e monitor', cap:ILU},
-    {mode:'dentro', pos:[EXC, F+.9, W/2+1.1], title:'Auditório', text:'Na parte expansível ficam as cadeiras e o banco-baú. É aqui que o público se acomoda durante as atividades.', img:'int-plateia', alt:'Cadeiras universitárias e banco estofado junto à parede verde', cap:ILU},
-    {mode:'dentro', pos:[PX(12.25), F+1.6, -W/2+.5], title:'Fornos e água', text:'Torre de fornos com espaço para filtro de água e porta-copos.', img:'int-agua', alt:'Móvel de madeira com fornos e bebedouro', cap:ILU},
-    {mode:'dentro', pos:[PX(14.1), F+1.5, .2], title:'Hall de entrada', text:'Logo na entrada, um painel de tábuas de corte com o logo iluminado, pronto para fotos.', img:'int-corredor', alt:'Parede de tábuas de corte coloridas com o logo do projeto', cap:ILU}
+    {mode:'fora', pos:[PX(13.35), F+2.25, W/2+.08], n:[0,0,1], title:TX('carreta_ponto1_titulo'), text:TX('carreta_ponto1_texto'), img:'carreta', alt:'Projeção externa da carreta estacionada', cap:ILU},
+    {mode:'fora', pos:[PX(2.9), F+1.5, W/2+1.15], title:TX('carreta_ponto2_titulo'), text:TX('carreta_ponto2_texto'), img:'carreta', alt:'Projeção externa da carreta estacionada', cap:ILU},
+    {mode:'fora', pos:[EXC, F+EH+.2, W/2+ED-.1], title:TX('carreta_ponto3_titulo'), text:TX('carreta_ponto3_texto'), img:'carreta', alt:'Projeção externa da carreta com a lateral aberta', cap:ILU},
+    {mode:'fora', pos:[PX(8.5), F+1.7, -W/2-.05], n:[0,0,-1], title:TX('carreta_ponto4_titulo'), text:TX('carreta_ponto4_texto'), img:'carreta', alt:'Projeção externa da carreta verde com as ilustrações da marca', cap:ILU},
+    {mode:'dentro', pos:[PX(8.3), F+1.05, 0], title:TX('carreta_ponto5_titulo'), text:TX('carreta_ponto5_texto'), img:'int-cozinha', alt:'Cozinha com bancada central verde-clara e utensílios pendurados', cap:ILU},
+    {mode:'dentro', pos:[PX(10.6), F+1.75, -W/2+.15], title:TX('carreta_ponto6_titulo'), text:TX('carreta_ponto6_texto'), img:'int-bancada', alt:'Parede ripada com tábuas de corte, prateleiras e monitor', cap:ILU},
+    {mode:'dentro', pos:[EXC, F+.9, W/2+1.1], title:TX('carreta_ponto7_titulo'), text:TX('carreta_ponto7_texto'), img:'int-plateia', alt:'Cadeiras universitárias e banco estofado junto à parede verde', cap:ILU},
+    {mode:'dentro', pos:[PX(12.25), F+1.6, -W/2+.5], title:TX('carreta_ponto8_titulo'), text:TX('carreta_ponto8_texto'), img:'int-agua', alt:'Móvel de madeira com fornos e bebedouro', cap:ILU},
+    {mode:'dentro', pos:[PX(14.1), F+1.5, .2], title:TX('carreta_ponto9_titulo'), text:TX('carreta_ponto9_texto'), img:'int-corredor', alt:'Parede de tábuas de corte coloridas com o logo do projeto', cap:ILU}
   ];
   var mode = 'fora', active = 0;
   var list = document.getElementById('spotList'), viewer = document.getElementById('viewer'), mod = document.getElementById('truckMod');
@@ -2410,7 +2496,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       else { goal.tx = s.pos[0] * .5; goal.ty = F + 1.2; goal.tz = .8; goal.r = fitR(16); goal.yaw = s.n && s.n[2] < 0 ? Math.PI - .25 : .1 + s.pos[0] * .03; }
       idle = 0; kick();
     };
-    function setExp(open){ expGoal = open ? 1 : 0; expBtn.textContent = open ? 'Recolher a parte expansível' : 'Abrir a parte expansível'; expBtn.setAttribute('aria-pressed', open ? 'true' : 'false'); idle = 0; kick(); }
+    function setExp(open){ expGoal = open ? 1 : 0; expBtn.textContent = TX(open ? 'carreta_recolher' : 'carreta_abrir'); expBtn.setAttribute('aria-pressed', open ? 'true' : 'false'); idle = 0; kick(); }
     expBtn.addEventListener('click', function(){ setExp(expGoal < .5); });
     goal.r = cur.r = fitR(21);
 
@@ -2501,35 +2587,53 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 <!--
   VARIÁVEIS — Pequeno Chef — One page (index.html)
 
+  TUDO EDITÁVEL: todo texto da página é variável (lista completa com os valores atuais em valores-iniciais.csv).
+  Nome = <seção>_<parte>: @menu_…, @hero_…, @sobre_…, @passoN_…, @carreta_…, @videos_…, @equipe_…, @contagem_…,
+  @material_…, @duvidas_…, @faqN_…, @galeria_…, @inscricao_…, @compartilhe_…, @rotulo_….
+  Textos usados pelo JavaScript ficam na lista escondida #txtSrc (antes dos scripts); nela, {evento}, {publico},
+  {cidade}, {dias}, {n} e {total} viram o valor certo.
+
   Gerais:
-    @evento            — nome do evento (título da aba)
+    @evento            — nome do evento (aba, cabeçalho, rodapé, card de compartilhar)
+    @publico           — faixa etária, um texto só para a página inteira (ex.: "a partir de 16 anos")
   Base usadas:
-    @gratuito          — "sim" para aulas gratuitas (o preço só aparece se não for gratuito)
-    @preco_vista       — preço à vista, só número (o "R$" está no HTML) — só se não for gratuito
-    @link_inscricao    — link do botão "Fazer minha inscrição"
-    @total_cidades     — automática (quantidade de cidades)
+    @gratuito          — "sim" para aulas gratuitas (testado sempre antes do preço)
+    @preco_vista       — preço à vista, só número (o "R$" está no HTML)
+    @link_inscricao    — link de TODOS os botões de inscrição (cabeçalho, menu, topo, barra fixa, dúvidas, inscrição).
+                         Vazio: todos mostram @inscricao_botao_breve ao mesmo tempo.
+    @total_cidades     — automática
   Cidades (@repetir cidades — uma linha por cidade):
-    @cidade, @status (em breve | aberta | realizado), @data_inicio, @data_fim, @local
-    formatos usados: @data_inicio_curta, @periodo_extenso
-    O timer da contagem só conta os dias até @data_inicio; "Encerrada" aparece quando @status não é "aberta" nem "em breve" (realizado).
-    O cartão "Próxima parada" mostra a primeira cidade que não está realizada.
+    @cidade, @status (aberta | em breve | realizado), @data_inicio, @data_fim, @local, @horario
+    Formatos: @data_inicio_curta, @periodo_extenso, @data_inicio_mes_abrev, @data_inicio_ano, @data_fim_mes_abrev, @data_fim_ano.
+    O período do topo e da inscrição (ex.: "out/2026 – jan/2027") vem da 1ª e da última cidade da tabela:
+    mantenha as cidades em ordem de data. Assim a data do topo é sempre a mesma das cidades.
+    O timer só conta os dias até @data_inicio; o status vem do publicador (@se status = aberta / realizado).
   Próprias deste evento:
-    @temporada         — texto curto do período geral (ex.: "out/2026 a jan/2027"), aparece no topo e na inscrição
-    @horario           — (por cidade) horário das aulas
-    @duracao_aula      — duração de cada aula (ex.: "2 horas")
-    @info_alergia      — resposta da dúvida sobre alergia e restrição alimentar
-    @contato           — contato (e-mail ou telefone), aparece nas dúvidas e no rodapé
-    @link_material     — endereço do PDF do material da aula
-    @material_paginas  — número de páginas do PDF
-    @material_tamanho  — tamanho do arquivo (ex.: "2,4 MB")
-    Equipe (até 6): @equipe1_nome, @equipe1_funcao, @equipe1_bio … @equipe6_… (o bloco aparece quando o nome existe)
-    Vídeos (até 6): @yt1_link (link do YouTube), @yt1_titulo, @yt1_duracao … @yt6_… (o vídeo aparece quando o link existe)
-    Galeria (até 12): @galeria_foto1_cidade, @galeria_foto1_legenda … @galeria_foto12_…
-  Imagens (pasta _media/pagina/):
-    @img_equipe_foto1 … @img_equipe_foto6       — equipe/, foto de cada pessoa (sem foto: ícone + "Foto em breve")
-    @img_galeria_foto1 … @img_galeria_foto12    — galeria/, fotos do evento (sem fotos: espaços "Foto em breve" por cidade)
-    Fixas (sem variável): hero/, sobre/, carreta/, ilustracoes/, icones/, marca/
-  Opcionais: O2 Prime não usado. Sem parcelamento e sem desconto (evento à vista / gratuito).
+    @duracao_aula, @info_alergia, @contato, @material_paginas, @material_tamanho
+    Passos (até 8): @passoN_titulo, @passoN_texto (o passo aparece quando o título existe)
+    Equipe (até 8): @equipeN_nome, @equipeN_funcao, @equipeN_bio (comece pela 1)
+    Vídeos (até 6): @ytN_link (YouTube), @ytN_titulo, @ytN_duracao
+    Dúvidas (até 12): @faqN_pergunta; 1 a 6 respondem com os dados do cadastro, 7 a 12 com @faqN_resposta
+    Inscrição: @inscricao_item1 … @inscricao_item3 (itens extras da lista, opcionais)
+    Carreta 3D: @carreta_ponto1_titulo/_texto … @carreta_ponto9_… (posições fixas no modelo 3D)
+  Links: @link_inscricao, @link_instagram. Compartilhar no WhatsApp/Facebook usa o endereço da própria página.
+  Arquivo para baixar:
+    @arquivo_material_aula — PDF do material (passo Mídia, pasta material/). Vazio: "Disponível em breve".
+  Imagens (pasta _media/pagina/, cada uma troca no passo Mídia):
+    marca/     @img_marca_logo, @img_marca_logopequeno, @img_marca_logocard (card de compartilhar)
+    hero/      @img_hero_base, @img_hero_pontos, @img_hero_folhas, @img_hero_tomate (camadas), @img_hero_chef (card e carreta 3D)
+    sobre/     @img_sobre_carreta (.svg animado), @img_sobre_massa…, @img_sobre_panela…, @img_sobre_prato…, @img_sobre_vapor,
+               @img_sobre_brilhoclaro, @img_sobre_brilhoescuro, @img_sobre_passo5 … @img_sobre_passo8
+    carreta/   @img_carreta_externa, _cozinha, _bancada, _plateia, _agua, _corredor (fotos dos pontos), @img_carreta_adesivochef (lateral 3D)
+    equipe/    @img_equipe_foto1 … @img_equipe_foto8 (sem foto: ícone + @equipe_sem_foto)
+    duvidas/   @img_duvidas_icone1 … @img_duvidas_icone12
+    inscricao/ @img_inscricao_chef
+    icones/    @img_icones_<nome> (ingredientes e utensílios .webp; menu…, onda1, onda2, compartilhar, baixar, mural, umauma, pdf .svg)
+               Ondas e ícones de botão usam mask-image: a cor vem do CSS.
+  Galeria: @repetir galeria com @galeria_foto, @galeria_legenda, @galeria_cidade, @galeria_numero (passo Mídia).
+           Sem fotos: espaços reservados por cidade.
+  Fica no código: o mostrador do timer (desenho que se move com os dias), setas, "+", play e o anel do "voltar ao topo".
+  Opcionais: O2 Prime não usado. Sem parcelamento e sem desconto.
 -->
 </body>
 </html>
