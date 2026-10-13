@@ -2368,7 +2368,13 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     INT.visible = false;
 
     /* imagens da marca nas texturas */
-    function loadImg(src, cb){ fetch(src).then(function(r){ return r.blob(); }).then(function(bl){ var im = new Image(); im.onload = function(){ try{ cb(im); }catch(e){} }; setSrc(im, URL.createObjectURL(bl)); }).catch(function(){}); }
+    /* carrega a imagem; se o fetch falhar (prévia do publicador), tenta direto; se ainda falhar, segue sem ela */
+    function loadImg(src, cb){
+      var done = false; function fin(im){ if(done) return; done = true; try{ cb(im); }catch(e){} }
+      function direct(){ var im = new Image(); im.onload = function(){ fin(im); }; im.onerror = function(){ fin(null); }; setSrc(im, src); }
+      fetch(src).then(function(r){ if(!r.ok) throw 0; return r.blob(); }).then(function(bl){ var im = new Image(); im.onload = function(){ fin(im); }; im.onerror = direct; setSrc(im, URL.createObjectURL(bl)); }).catch(direct);
+      setTimeout(function(){ fin(null); }, 8000);
+    }
     var IMG = {}, need = ['logo-pc','hero-chef','chef-panela','ic/cebola','ic/pimenta','ic/folha','ic/queijo','ic/alho','ic/tomate','ic/chapeu','ic/cogumelo'], got = 0;
     need.forEach(function(n){ loadImg(MID(n), function(im){ IMG[n] = im; if(++got === need.length) paint(); }); });
     function paint(){
