@@ -405,9 +405,7 @@
       "ignorar": false
     }
   },
-  "gerais": {
-    "preco_vista": "G"
-  },
+  "gerais": {},
   "cidades": [],
   "etapas": [],
   "ordem": {},
@@ -416,5 +414,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:28:12.336Z"
+  "atualizadoEm": "2026-10-13T17:28:19.214Z"
 }
