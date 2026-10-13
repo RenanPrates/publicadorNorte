@@ -435,11 +435,12 @@
     "img_galeria_foto8": "_media/pagina/galeria/foto2.png",
     "img_galeria_foto9": "_media/pagina/galeria/foto2.png",
     "img_galeria_foto10": "_media/pagina/galeria/foto1.png",
-    "img_galeria_foto11": "_media/pagina/galeria/foto2.png"
+    "img_galeria_foto11": "_media/pagina/galeria/foto2.png",
+    "img_equipe_foto1": "_media/pagina/equipe/foto1.png"
   },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T17:37:56.151Z"
+  "atualizadoEm": "2026-10-13T17:38:14.836Z"
 }
