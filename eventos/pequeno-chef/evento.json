@@ -2135,7 +2135,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:27:20.847Z",
+  "atualizadoEm": "2026-10-13T21:27:31.626Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2200,6 +2200,9 @@
   },
   "seo": {
     "favicon": "_media/pagina/sobre/brilhoclaro.svg",
-    "titulo": "Pequeno Chef"
+    "titulo": "Pequeno Chef",
+    "share": {
+      "imagem": "_media/pagina/carreta/carreta.webp"
+    }
   }
 }
