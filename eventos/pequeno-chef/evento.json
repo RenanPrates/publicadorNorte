@@ -2135,7 +2135,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:22:48.829Z",
+  "atualizadoEm": "2026-10-13T21:22:53.118Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2180,5 +2180,20 @@
     ],
     "porLinha": {},
     "ordem": {}
+  },
+  "rodape": {
+    "ativo": true,
+    "geral": {
+      "fonte": "",
+      "corFundo": "#16181d",
+      "corTexto": "#f1f2ee",
+      "corLinks": "#f1f2ee",
+      "logo": "",
+      "descricao": "",
+      "tituloLinks": "",
+      "links": [],
+      "redes": []
+    },
+    "porLinha": {}
   }
 }
