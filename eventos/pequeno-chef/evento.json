@@ -2135,7 +2135,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:27:14.094Z",
+  "atualizadoEm": "2026-10-13T21:27:17.476Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -2199,7 +2199,7 @@
     "porLinha": {}
   },
   "seo": {
-    "favicon": "_media/pagina/sobre/brilhoescuro.svg",
+    "favicon": "_media/pagina/sobre/brilhoclaro.svg",
     "titulo": "Pequeno "
   }
 }
