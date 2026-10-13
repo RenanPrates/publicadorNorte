@@ -783,9 +783,25 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:46:10.879Z",
+  "atualizadoEm": "2026-10-13T20:47:12.464Z",
   "automacao": {
     "ativo": false,
     "horas": 8
+  },
+  "galerias": {
+    "galeria": [
+      {
+        "id": "ezl19s0g",
+        "arquivo": "_media/galerias/galeria/fortaleza/logo-catuai-palladium-versao-negativa.png",
+        "cidade": "1448c3b4",
+        "legenda": ""
+      },
+      {
+        "id": "r8vbrb0p",
+        "arquivo": "_media/galerias/galeria/fortaleza/logo-catuai-palladium-aplicacao-principal.png",
+        "cidade": "1448c3b4",
+        "legenda": ""
+      }
+    ]
   }
 }
