@@ -2141,7 +2141,7 @@
     "img_galeria_foto10": "_media/pagina/galeria/foto1.png",
     "img_galeria_foto11": "_media/pagina/galeria/foto2.png",
     "img_equipe_foto1": "_media/pagina/equipe/foto1.png",
-    "img_carreta_externa": "_media/pagina/carreta/int-agua.webp"
+    "img_carreta_externa": "_media/pagina/carreta/int-bancada.webp"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -2156,7 +2156,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:51:03.068Z",
+  "atualizadoEm": "2026-10-13T20:51:06.684Z",
   "automacao": {
     "ativo": false,
     "horas": 8
