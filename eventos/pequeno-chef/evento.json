@@ -783,7 +783,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T20:47:51.422Z",
+  "atualizadoEm": "2026-10-13T20:47:54.885Z",
   "automacao": {
     "ativo": false,
     "horas": 8
@@ -805,13 +805,13 @@
       {
         "id": "3xcloyql",
         "arquivo": "_media/galerias/galeria/fortaleza/mala-tubo-mmsp-27.png",
-        "cidade": "1448c3b4",
+        "cidade": "26203233",
         "legenda": ""
       },
       {
         "id": "bqrp9y3l",
         "arquivo": "_media/galerias/galeria/fortaleza/camiseta-frente-mmsp-27-1.png",
-        "cidade": "1448c3b4",
+        "cidade": "26203233",
         "legenda": ""
       },
       {
