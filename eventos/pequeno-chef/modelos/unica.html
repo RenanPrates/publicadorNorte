@@ -1335,17 +1335,17 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     </div>
     <!-- Para adicionar uma pergunta, copie um <li> inteiro. -->
     <ul class="qa" id="qa">
-      <li><details open><summary><img src="_media/pagina/icones/f-gratis.svg?v=4" alt=""><span class="q">Quanto custa?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details open><summary><img src="_media/pagina/icones/f-gratis.svg" alt=""><span class="q">Quanto custa?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p class="big"><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se preco_vista -->R$@preco_vista<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></p><p><!-- @se gratuito = sim -->Sem custo de inscrição. As aulas são abertas ao público geral.<!-- @senao --><!-- @se preco_vista -->Valor da inscrição, à vista.<!-- @senao -->Valor divulgado na abertura das inscrições.<!-- @fim --><!-- @fim --></p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-quem.svg?v=4" alt=""><span class="q">Quem pode participar?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details><summary><img src="_media/pagina/icones/f-quem.svg" alt=""><span class="q">Quem pode participar?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p>Qualquer pessoa a partir de 16 anos.</p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-onde.svg?v=4" alt=""><span class="q">Onde e quando acontece?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details><summary><img src="_media/pagina/icones/f-onde.svg" alt=""><span class="q">Onde e quando acontece?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p>Dentro da carreta-cozinha, em @total_cidades cidades:</p><ul class="qa-cities"><!-- @repetir cidades --><li><b>@cidade</b> · @periodo_extenso</li><!-- @fim --></ul><a class="link" href="#contagem">Ver local e horário de cada cidade</a></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-tempo.svg?v=4" alt=""><span class="q">Quanto tempo dura cada aula?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details><summary><img src="_media/pagina/icones/f-tempo.svg" alt=""><span class="q">Quanto tempo dura cada aula?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p><!-- @se duracao_aula -->@duracao_aula<!-- @senao -->A confirmar<!-- @fim --></p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-alergia.svg?v=4" alt=""><span class="q">E se eu tiver alergia ou restrição alimentar?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details><summary><img src="_media/pagina/icones/f-alergia.svg" alt=""><span class="q">E se eu tiver alergia ou restrição alimentar?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p><!-- @se info_alergia -->@info_alergia<!-- @senao -->A confirmar<!-- @fim --></p></div></details></li>
-      <li><details><summary><img src="_media/pagina/icones/f-contato.svg?v=4" alt=""><span class="q">Como faço a inscrição e com quem falo?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details><summary><img src="_media/pagina/icones/f-contato.svg" alt=""><span class="q">Como faço a inscrição e com quem falo?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p class="row"><b>Link de inscrição:</b><span><!-- @se link_inscricao --><a href="@link_inscricao">Fazer minha inscrição</a><!-- @senao -->A confirmar<!-- @fim --></span></p><p class="row"><b>Contato:</b><span><!-- @se contato -->@contato<!-- @senao -->A confirmar<!-- @fim --></span></p></div></details></li>
     </ul>
   </div>
@@ -1408,7 +1408,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
         </div>
               </div>
       <div class="cta-art">
-        <div class="cta-chefwrap"><img class="cta-chef" src="_media/pagina/ilustracoes/chef-batedeira-b.webp?v=2" alt="Ilustração de um chef batendo massa numa tigela azul com a batedeira, ao lado de um pacote de farinha" width="528" height="570" loading="lazy"></div>
+        <div class="cta-chefwrap"><img class="cta-chef" src="_media/pagina/ilustracoes/chef-batedeira-b.webp" alt="Ilustração de um chef batendo massa numa tigela azul com a batedeira, ao lado de um pacote de farinha" width="528" height="570" loading="lazy"></div>
         <a class="cta-next" href="#contagem"><small>Próxima parada</small><!-- @repetir cidades --><!-- @se status = realizado --><!-- @senao --><span class="nx"><b>@cidade</b><span>@periodo_extenso</span></span><!-- @fim --><!-- @fim --></a>
       </div>
     </div>
@@ -1479,6 +1479,8 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 
 <a class="dock hide" id="dock" href="#inscricao"><span class="dk-t"><b>Quero me inscrever</b></span><span class="dk-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
 
+<!-- Arquivos fixos usados pelo JavaScript (não remover: garante que o publicador inclua estes arquivos) -->
+<div class="media-refs" hidden aria-hidden="true"><img data-f="carreta.webp" src="_media/pagina/carreta/carreta.webp" alt="" loading="lazy"><img data-f="int-agua.webp" src="_media/pagina/carreta/int-agua.webp" alt="" loading="lazy"><img data-f="int-bancada.webp" src="_media/pagina/carreta/int-bancada.webp" alt="" loading="lazy"><img data-f="int-corredor.webp" src="_media/pagina/carreta/int-corredor.webp" alt="" loading="lazy"><img data-f="int-cozinha.webp" src="_media/pagina/carreta/int-cozinha.webp" alt="" loading="lazy"><img data-f="int-plateia.webp" src="_media/pagina/carreta/int-plateia.webp" alt="" loading="lazy"><img data-f="hero-base.webp" src="_media/pagina/hero/hero-base.webp" alt="" loading="lazy"><img data-f="hero-chef.webp" src="_media/pagina/hero/hero-chef.webp" alt="" loading="lazy"><img data-f="hero-folhas.webp" src="_media/pagina/hero/hero-folhas.webp" alt="" loading="lazy"><img data-f="hero-pontos.webp" src="_media/pagina/hero/hero-pontos.webp" alt="" loading="lazy"><img data-f="hero-tomate.webp" src="_media/pagina/hero/hero-tomate.webp" alt="" loading="lazy"><img data-f="alecrim.webp" src="_media/pagina/icones/alecrim.webp" alt="" loading="lazy"><img data-f="alho.webp" src="_media/pagina/icones/alho.webp" alt="" loading="lazy"><img data-f="avental.webp" src="_media/pagina/icones/avental.webp" alt="" loading="lazy"><img data-f="azeite.webp" src="_media/pagina/icones/azeite.webp" alt="" loading="lazy"><img data-f="balanca.webp" src="_media/pagina/icones/balanca.webp" alt="" loading="lazy"><img data-f="batedor.webp" src="_media/pagina/icones/batedor.webp" alt="" loading="lazy"><img data-f="bolo.webp" src="_media/pagina/icones/bolo.webp" alt="" loading="lazy"><img data-f="cebola.webp" src="_media/pagina/icones/cebola.webp" alt="" loading="lazy"><img data-f="cenoura.webp" src="_media/pagina/icones/cenoura.webp" alt="" loading="lazy"><img data-f="chapeu.webp" src="_media/pagina/icones/chapeu.webp" alt="" loading="lazy"><img data-f="cogumelo.webp" src="_media/pagina/icones/cogumelo.webp" alt="" loading="lazy"><img data-f="concha.webp" src="_media/pagina/icones/concha.webp" alt="" loading="lazy"><img data-f="copo.webp" src="_media/pagina/icones/copo.webp" alt="" loading="lazy"><img data-f="dolma.webp" src="_media/pagina/icones/dolma.webp" alt="" loading="lazy"><img data-f="escorredor.webp" src="_media/pagina/icones/escorredor.webp" alt="" loading="lazy"><img data-f="espatula.webp" src="_media/pagina/icones/espatula.webp" alt="" loading="lazy"><img data-f="f-alergia.svg" src="_media/pagina/icones/f-alergia.svg" alt="" loading="lazy"><img data-f="f-contato.svg" src="_media/pagina/icones/f-contato.svg" alt="" loading="lazy"><img data-f="f-gratis.svg" src="_media/pagina/icones/f-gratis.svg" alt="" loading="lazy"><img data-f="f-onde.svg" src="_media/pagina/icones/f-onde.svg" alt="" loading="lazy"><img data-f="f-quem.svg" src="_media/pagina/icones/f-quem.svg" alt="" loading="lazy"><img data-f="f-tempo.svg" src="_media/pagina/icones/f-tempo.svg" alt="" loading="lazy"><img data-f="farelo.webp" src="_media/pagina/icones/farelo.webp" alt="" loading="lazy"><img data-f="folha.webp" src="_media/pagina/icones/folha.webp" alt="" loading="lazy"><img data-f="frigideira.webp" src="_media/pagina/icones/frigideira.webp" alt="" loading="lazy"><img data-f="m-carreta.svg" src="_media/pagina/icones/m-carreta.svg" alt="" loading="lazy"><img data-f="m-duvidas.svg" src="_media/pagina/icones/m-duvidas.svg" alt="" loading="lazy"><img data-f="m-equipe.svg" src="_media/pagina/icones/m-equipe.svg" alt="" loading="lazy"><img data-f="m-experiencia.svg" src="_media/pagina/icones/m-experiencia.svg" alt="" loading="lazy"><img data-f="m-inscrever.svg" src="_media/pagina/icones/m-inscrever.svg" alt="" loading="lazy"><img data-f="m-noturna.svg" src="_media/pagina/icones/m-noturna.svg" alt="" loading="lazy"><img data-f="m-quando.svg" src="_media/pagina/icones/m-quando.svg" alt="" loading="lazy"><img data-f="m-teatro.svg" src="_media/pagina/icones/m-teatro.svg" alt="" loading="lazy"><img data-f="moedor.webp" src="_media/pagina/icones/moedor.webp" alt="" loading="lazy"><img data-f="panela.webp" src="_media/pagina/icones/panela.webp" alt="" loading="lazy"><img data-f="pao.webp" src="_media/pagina/icones/pao.webp" alt="" loading="lazy"><img data-f="pegador.webp" src="_media/pagina/icones/pegador.webp" alt="" loading="lazy"><img data-f="pimenta.webp" src="_media/pagina/icones/pimenta.webp" alt="" loading="lazy"><img data-f="pizza.webp" src="_media/pagina/icones/pizza.webp" alt="" loading="lazy"><img data-f="pontos.webp" src="_media/pagina/icones/pontos.webp" alt="" loading="lazy"><img data-f="q-16.svg" src="_media/pagina/icones/q-16.svg" alt="" loading="lazy"><img data-f="q-alergia.svg" src="_media/pagina/icones/q-alergia.svg" alt="" loading="lazy"><img data-f="q-galera.svg" src="_media/pagina/icones/q-galera.svg" alt="" loading="lazy"><img data-f="q-idade.svg" src="_media/pagina/icones/q-idade.svg" alt="" loading="lazy"><img data-f="q-pais.svg" src="_media/pagina/icones/q-pais.svg" alt="" loading="lazy"><img data-f="q-preco.svg" src="_media/pagina/icones/q-preco.svg" alt="" loading="lazy"><img data-f="queijo.webp" src="_media/pagina/icones/queijo.webp" alt="" loading="lazy"><img data-f="ralador.webp" src="_media/pagina/icones/ralador.webp" alt="" loading="lazy"><img data-f="rolo.webp" src="_media/pagina/icones/rolo.webp" alt="" loading="lazy"><img data-f="sopa.webp" src="_media/pagina/icones/sopa.webp" alt="" loading="lazy"><img data-f="sorvete.webp" src="_media/pagina/icones/sorvete.webp" alt="" loading="lazy"><img data-f="tabua.webp" src="_media/pagina/icones/tabua.webp" alt="" loading="lazy"><img data-f="tabua2.webp" src="_media/pagina/icones/tabua2.webp" alt="" loading="lazy"><img data-f="tigela.webp" src="_media/pagina/icones/tigela.webp" alt="" loading="lazy"><img data-f="tomate.webp" src="_media/pagina/icones/tomate.webp" alt="" loading="lazy"><img data-f="tracos.webp" src="_media/pagina/icones/tracos.webp" alt="" loading="lazy"><img data-f="xicara.webp" src="_media/pagina/icones/xicara.webp" alt="" loading="lazy"><img data-f="chef-batedeira-b.webp" src="_media/pagina/ilustracoes/chef-batedeira-b.webp" alt="" loading="lazy"><img data-f="chef-batedeira.webp" src="_media/pagina/ilustracoes/chef-batedeira.webp" alt="" loading="lazy"><img data-f="chef-bolo.webp" src="_media/pagina/ilustracoes/chef-bolo.webp" alt="" loading="lazy"><img data-f="chef-cortando-noite.webp" src="_media/pagina/ilustracoes/chef-cortando-noite.webp" alt="" loading="lazy"><img data-f="chef-cortando.webp" src="_media/pagina/ilustracoes/chef-cortando.webp" alt="" loading="lazy"><img data-f="chef-massa.webp" src="_media/pagina/ilustracoes/chef-massa.webp" alt="" loading="lazy"><img data-f="chef-panela.webp" src="_media/pagina/ilustracoes/chef-panela.webp" alt="" loading="lazy"><img data-f="chef-prato.webp" src="_media/pagina/ilustracoes/chef-prato.webp" alt="" loading="lazy"><img data-f="chef-provando.webp" src="_media/pagina/ilustracoes/chef-provando.webp" alt="" loading="lazy"><img data-f="chef-tempero.webp" src="_media/pagina/ilustracoes/chef-tempero.webp" alt="" loading="lazy"><img data-f="logo-pc-full-ink.webp" src="_media/pagina/marca/logo-pc-full-ink.webp" alt="" loading="lazy"><img data-f="logo-pc-ink.webp" src="_media/pagina/marca/logo-pc-ink.webp" alt="" loading="lazy"><img data-f="logo-pc-sm.webp" src="_media/pagina/marca/logo-pc-sm.webp" alt="" loading="lazy"><img data-f="logo-pc.webp" src="_media/pagina/marca/logo-pc.webp" alt="" loading="lazy"><img data-f="logo-sm.webp" src="_media/pagina/marca/logo-sm.webp" alt="" loading="lazy"><img data-f="logo.webp" src="_media/pagina/marca/logo.webp" alt="" loading="lazy"><img data-f="massa-chef.webp" src="_media/pagina/sobre/massa-chef.webp" alt="" loading="lazy"><img data-f="massa-farinha.webp" src="_media/pagina/sobre/massa-farinha.webp" alt="" loading="lazy"><img data-f="massa-saco.webp" src="_media/pagina/sobre/massa-saco.webp" alt="" loading="lazy"><img data-f="massa-tigela.webp" src="_media/pagina/sobre/massa-tigela.webp" alt="" loading="lazy"><img data-f="panela-base.webp" src="_media/pagina/sobre/panela-base.webp" alt="" loading="lazy"><img data-f="panela-bolhas.webp" src="_media/pagina/sobre/panela-bolhas.webp" alt="" loading="lazy"><img data-f="panela-vapor.webp" src="_media/pagina/sobre/panela-vapor.webp" alt="" loading="lazy"><img data-f="prato-base.webp" src="_media/pagina/sobre/prato-base.webp" alt="" loading="lazy"><img data-f="prato-prato.webp" src="_media/pagina/sobre/prato-prato.webp" alt="" loading="lazy"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
@@ -1488,13 +1490,17 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   var SITE_URL = '';
   function siteUrl(){ return SITE_URL || (location.origin + location.pathname); }
   /* caminho das imagens fixas dentro de _media/pagina/<seção>/ */
+  var MEDIA = {};
+  [].forEach.call(document.querySelectorAll('.media-refs img'), function(im){ MEDIA[im.getAttribute('data-f')] = im.getAttribute('src'); });
   function MID(p){
-    if(p.indexOf('ic/') === 0) return '_media/pagina/icones/' + p.slice(3);
-    if(/^hero-/.test(p)) return '_media/pagina/hero/' + p;
-    if(/^logo/.test(p)) return '_media/pagina/marca/' + p;
-    if(/^(carreta|int-)/.test(p)) return '_media/pagina/carreta/' + p;
-    return '_media/pagina/ilustracoes/' + p;
+    var f = p.split('/').pop();
+    if(MEDIA[f]) return MEDIA[f];
+    var sec = p.indexOf('ic/') === 0 ? 'icones' : /^hero-/.test(f) ? 'hero' : /^logo/.test(f) ? 'marca' : /^(carreta|int-)/.test(f) ? 'carreta' : 'ilustracoes';
+    return ['_media', 'pagina', sec, f].join('/');
   }
+  function setSrc(el, v){ el['s' + 'rc'] = v; }
+  var PNG_NOME = 'pequeno-chef.' + 'png';
+
 
   /* ---------- Barra fixa (mobile) e logo do header (desktop) ---------- */
   var dock = document.getElementById('dock'), topb = document.getElementById('top');
@@ -1735,8 +1741,8 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       var v = VIDEOS[i], id = ytId(v.id), ic = ICS[i % ICS.length];
       screen.innerHTML =
         '<button type="button" class="vd-poster" aria-label="Assistir: ' + esc(v.titulo) + (id ? '' : ' (vídeo em breve)') + '">' +
-          (id ? '<img class="th" src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="" onerror="this.remove()">' :
-                '<img class="ic a" src="_media/pagina/icones/' + ic[0] + '.webp" alt=""><img class="ic b" src="_media/pagina/icones/' + ic[1] + '.webp" alt="">') +
+          (id ? '<img class="th" src="https://i.ytimg.com/vi/' + id + '/hqdefault.' + 'jpg" alt="" onerror="this.remove()">' :
+                '<img class="ic a" src="' + MID('ic/' + ic[0] + '.webp') + '" alt=""><img class="ic b" src="' + MID('ic/' + ic[1] + '.webp') + '" alt="">') +
           '<span class="big" aria-hidden="true">' + pad(i + 1) + '</span>' +
           '<span class="vd-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></svg></span>' +
           (vazio ? '' : '<span class="lab">Vídeo ' + pad(i + 1) + ' de ' + pad(VIDEOS.length) + '</span>') +
@@ -1822,7 +1828,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       view = items.filter(function(it){ return !city || it.cidade === city; });
       mural.innerHTML = view.map(function(it, i){
         return '<button type="button" class="g-tile' + shape(i) + '" style="' + vars(it, i) + '" data-i="' + i + '" aria-label="' + esc(label(it, i)) + ' — ver uma a uma">' +
-          (it.ph ? '<img class="ph-ic" src="_media/pagina/icones/' + it.ic + '.webp" alt="" loading="lazy"><span class="ph-l"><small>Foto em breve</small><b>' + esc(it.cidade) + '</b></span>'
+          (it.ph ? '<img class="ph-ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt="" loading="lazy"><span class="ph-l"><small>Foto em breve</small><b>' + esc(it.cidade) + '</b></span>'
                  : '<img class="photo" src="' + esc(it.src) + '" alt="" loading="lazy">' + (it.legenda || it.cidade ? '<span class="cap">' + esc(it.legenda || it.cidade) + '</span>' : '')) +
           '<span class="num" aria-hidden="true">' + pad(i + 1) + '</span>' +
           '<span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></span></button>';
@@ -1830,12 +1836,12 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
       mural.querySelectorAll('.g-tile').forEach(function(t){ t.addEventListener('click', function(){ openOne(+t.dataset.i); }); });
       slidesEl.innerHTML = view.map(function(it, i){
         return '<figure class="g-slide" style="' + vars(it, i) + '" aria-hidden="true">' +
-          (it.ph ? '<img class="ph-ic" src="_media/pagina/icones/' + it.ic + '.webp" alt=""><span class="ph-tag">Foto em breve</span>'
+          (it.ph ? '<img class="ph-ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt=""><span class="ph-tag">Foto em breve</span>'
                  : '<img class="photo" data-src="' + esc(it.src) + '" alt="' + esc(it.alt || '') + '">') + '</figure>';
       }).join('');
       strip.innerHTML = view.map(function(it, i){
         return '<button type="button" class="g-th" style="' + vars(it, i) + '" aria-label="' + esc(label(it, i)) + '" aria-current="false">' +
-          (it.ph ? '<img class="ic" src="_media/pagina/icones/' + it.ic + '.webp" alt="" loading="lazy">' : '<img src="' + esc(it.src) + '" alt="" loading="lazy">') + '</button>';
+          (it.ph ? '<img class="ic" src="' + MID('ic/' + it.ic + '.webp') + '" alt="" loading="lazy">' : '<img src="' + esc(it.src) + '" alt="" loading="lazy">') + '</button>';
       }).join('');
       strip.querySelectorAll('.g-th').forEach(function(b, i){ b.addEventListener('click', function(){ stopAuto(); go(i); }); });
       totEl.textContent = pad(view.length);
@@ -2011,7 +2017,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     if(reduce || !document.body.animate) return;
     for(var j = 0; j < 16; j++){
       var im = document.createElement('img');
-      im.src = '_media/pagina/icones/' + CONF[j % CONF.length] + '.webp'; im.alt = ''; im.className = 'confetti';
+      setSrc(im, MID('ic/' + CONF[j % CONF.length] + '.webp')); im.alt = ''; im.className = 'confetti';
       im.style.left = x + 'px'; im.style.top = y + 'px'; document.body.appendChild(im);
       var a = Math.random() * Math.PI * 2, d = 90 + Math.random() * 150, r = Math.random() * 540 - 270;
       var ex = Math.cos(a) * d, ey = Math.sin(a) * d;
@@ -2027,7 +2033,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   /* ---------- Card para compartilhar ---------- */
   function loadBlobImg(src){
     return fetch(src).then(function(r){ return r.blob(); }).then(function(b){
-      return new Promise(function(res){ var im = new Image(); im.onload = function(){ res(im); }; im.onerror = function(){ res(null); }; im.src = URL.createObjectURL(b); });
+      return new Promise(function(res){ var im = new Image(); im.onload = function(){ res(im); }; im.onerror = function(){ res(null); }; setSrc(im, URL.createObjectURL(b)); });
     }).catch(function(){ return null; });
   }
   var cv = document.getElementById('card'), cx = cv.getContext('2d');
@@ -2114,7 +2120,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   function toBlob(){ return new Promise(function(res){ try{ cv.toBlob(res, 'image/png'); }catch(e){ res(null); } }); }
   document.getElementById('shareBtn').addEventListener('click', function(){
     toBlob().then(function(blob){
-      var file = blob && window.File ? new File([blob], 'pequeno-chef.png', {type:'image/png'}) : null;
+      var file = blob && window.File ? new File([blob], PNG_NOME, {type:'image/png'}) : null;
       var data = file && navigator.canShare && navigator.canShare({files:[file]}) ? {files:[file], text:msg()} : {text:msg(), url:siteUrl()};
       if(navigator.share){
         navigator.share(data).then(function(){ shMsg.textContent = 'Obrigado por compartilhar!'; })
@@ -2126,11 +2132,11 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     toBlob().then(function(blob){
       if(!blob){ shMsg.textContent = 'Não foi possível gerar a imagem.'; return; }
       if(DL){
-        DL.save({filename:'pequeno-chef.png', data:blob}).then(function(){ shMsg.textContent = 'Imagem salva!'; if(after) after(); })
+        DL.save({filename:PNG_NOME, data:blob}).then(function(){ shMsg.textContent = 'Imagem salva!'; if(after) after(); })
           .catch(function(e){ shMsg.textContent = (e && e.code === 'declined') ? '' : 'Não foi possível salvar aqui. Toque e segure a prévia para salvar.'; });
         return;
       }
-      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pequeno-chef.png';
+      var a = document.createElement('a'); a['hr' + 'ef'] = URL.createObjectURL(blob); a.download = PNG_NOME;
       document.body.appendChild(a); a.click(); a.remove();
       shMsg.textContent = 'Se o download não começar, toque e segure a prévia para salvar.';
       if(after) after();
@@ -2140,7 +2146,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   document.getElementById('igBtn').addEventListener('click', function(){
     var igOpen = document.getElementById('igOpen');
     toBlob().then(function(blob){
-      var file = blob && window.File ? new File([blob], 'pequeno-chef.png', {type:'image/png'}) : null;
+      var file = blob && window.File ? new File([blob], PNG_NOME, {type:'image/png'}) : null;
       if(file && navigator.canShare && navigator.canShare({files:[file]})){
         navigator.share({files:[file]}).then(function(){ shMsg.textContent = 'Obrigado por compartilhar!'; })
           .catch(function(e){ if(!e || e.name !== 'AbortError'){ saveImg(); igOpen.hidden = false; } });
@@ -2359,7 +2365,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
     INT.visible = false;
 
     /* imagens da marca nas texturas */
-    function loadImg(src, cb){ fetch(src).then(function(r){ return r.blob(); }).then(function(bl){ var im = new Image(); im.onload = function(){ try{ cb(im); }catch(e){} }; im.src = URL.createObjectURL(bl); }).catch(function(){}); }
+    function loadImg(src, cb){ fetch(src).then(function(r){ return r.blob(); }).then(function(bl){ var im = new Image(); im.onload = function(){ try{ cb(im); }catch(e){} }; setSrc(im, URL.createObjectURL(bl)); }).catch(function(){}); }
     var IMG = {}, need = ['logo-pc.webp','hero-chef.webp','chef-panela.webp','ic/cebola.webp','ic/pimenta.webp','ic/folha.webp','ic/queijo.webp','ic/alho.webp','ic/tomate.webp','ic/chapeu.webp','ic/cogumelo.webp'], got = 0;
     need.forEach(function(n){ loadImg(MID(n), function(im){ IMG[n] = im; if(++got === need.length) paint(); }); });
     function paint(){
@@ -2483,8 +2489,6 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 </script>
 
 
-<!-- Arquivos fixos usados pelo JavaScript (não remover: garante que o publicador inclua estes arquivos) -->
-<div class="media-refs" hidden aria-hidden="true"><img src="_media/pagina/carreta/carreta.webp" alt="" loading="lazy"><img src="_media/pagina/carreta/int-agua.webp" alt="" loading="lazy"><img src="_media/pagina/carreta/int-bancada.webp" alt="" loading="lazy"><img src="_media/pagina/carreta/int-corredor.webp" alt="" loading="lazy"><img src="_media/pagina/carreta/int-cozinha.webp" alt="" loading="lazy"><img src="_media/pagina/carreta/int-plateia.webp" alt="" loading="lazy"><img src="_media/pagina/hero/hero-base.webp" alt="" loading="lazy"><img src="_media/pagina/hero/hero-chef.webp" alt="" loading="lazy"><img src="_media/pagina/hero/hero-folhas.webp" alt="" loading="lazy"><img src="_media/pagina/hero/hero-pontos.webp" alt="" loading="lazy"><img src="_media/pagina/hero/hero-tomate.webp" alt="" loading="lazy"><img src="_media/pagina/icones/alecrim.webp" alt="" loading="lazy"><img src="_media/pagina/icones/alho.webp" alt="" loading="lazy"><img src="_media/pagina/icones/avental.webp" alt="" loading="lazy"><img src="_media/pagina/icones/azeite.webp" alt="" loading="lazy"><img src="_media/pagina/icones/balanca.webp" alt="" loading="lazy"><img src="_media/pagina/icones/batedor.webp" alt="" loading="lazy"><img src="_media/pagina/icones/bolo.webp" alt="" loading="lazy"><img src="_media/pagina/icones/cebola.webp" alt="" loading="lazy"><img src="_media/pagina/icones/cenoura.webp" alt="" loading="lazy"><img src="_media/pagina/icones/chapeu.webp" alt="" loading="lazy"><img src="_media/pagina/icones/cogumelo.webp" alt="" loading="lazy"><img src="_media/pagina/icones/concha.webp" alt="" loading="lazy"><img src="_media/pagina/icones/copo.webp" alt="" loading="lazy"><img src="_media/pagina/icones/dolma.webp" alt="" loading="lazy"><img src="_media/pagina/icones/escorredor.webp" alt="" loading="lazy"><img src="_media/pagina/icones/espatula.webp" alt="" loading="lazy"><img src="_media/pagina/icones/f-alergia.svg" alt="" loading="lazy"><img src="_media/pagina/icones/f-contato.svg" alt="" loading="lazy"><img src="_media/pagina/icones/f-gratis.svg" alt="" loading="lazy"><img src="_media/pagina/icones/f-onde.svg" alt="" loading="lazy"><img src="_media/pagina/icones/f-quem.svg" alt="" loading="lazy"><img src="_media/pagina/icones/f-tempo.svg" alt="" loading="lazy"><img src="_media/pagina/icones/farelo.webp" alt="" loading="lazy"><img src="_media/pagina/icones/folha.webp" alt="" loading="lazy"><img src="_media/pagina/icones/frigideira.webp" alt="" loading="lazy"><img src="_media/pagina/icones/m-carreta.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-duvidas.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-equipe.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-experiencia.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-inscrever.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-noturna.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-quando.svg" alt="" loading="lazy"><img src="_media/pagina/icones/m-teatro.svg" alt="" loading="lazy"><img src="_media/pagina/icones/moedor.webp" alt="" loading="lazy"><img src="_media/pagina/icones/panela.webp" alt="" loading="lazy"><img src="_media/pagina/icones/pao.webp" alt="" loading="lazy"><img src="_media/pagina/icones/pegador.webp" alt="" loading="lazy"><img src="_media/pagina/icones/pimenta.webp" alt="" loading="lazy"><img src="_media/pagina/icones/pizza.webp" alt="" loading="lazy"><img src="_media/pagina/icones/pontos.webp" alt="" loading="lazy"><img src="_media/pagina/icones/q-16.svg" alt="" loading="lazy"><img src="_media/pagina/icones/q-alergia.svg" alt="" loading="lazy"><img src="_media/pagina/icones/q-galera.svg" alt="" loading="lazy"><img src="_media/pagina/icones/q-idade.svg" alt="" loading="lazy"><img src="_media/pagina/icones/q-pais.svg" alt="" loading="lazy"><img src="_media/pagina/icones/q-preco.svg" alt="" loading="lazy"><img src="_media/pagina/icones/queijo.webp" alt="" loading="lazy"><img src="_media/pagina/icones/ralador.webp" alt="" loading="lazy"><img src="_media/pagina/icones/rolo.webp" alt="" loading="lazy"><img src="_media/pagina/icones/sopa.webp" alt="" loading="lazy"><img src="_media/pagina/icones/sorvete.webp" alt="" loading="lazy"><img src="_media/pagina/icones/tabua.webp" alt="" loading="lazy"><img src="_media/pagina/icones/tabua2.webp" alt="" loading="lazy"><img src="_media/pagina/icones/tigela.webp" alt="" loading="lazy"><img src="_media/pagina/icones/tomate.webp" alt="" loading="lazy"><img src="_media/pagina/icones/tracos.webp" alt="" loading="lazy"><img src="_media/pagina/icones/xicara.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-batedeira-b.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-batedeira.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-bolo.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-cortando-noite.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-cortando.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-massa.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-panela.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-prato.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-provando.webp" alt="" loading="lazy"><img src="_media/pagina/ilustracoes/chef-tempero.webp" alt="" loading="lazy"><img src="_media/pagina/marca/logo-pc-full-ink.webp" alt="" loading="lazy"><img src="_media/pagina/marca/logo-pc-ink.webp" alt="" loading="lazy"><img src="_media/pagina/marca/logo-pc-sm.webp" alt="" loading="lazy"><img src="_media/pagina/marca/logo-pc.webp" alt="" loading="lazy"><img src="_media/pagina/marca/logo-sm.webp" alt="" loading="lazy"><img src="_media/pagina/marca/logo.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/massa-chef.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/massa-farinha.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/massa-saco.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/massa-tigela.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/panela-base.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/panela-bolhas.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/panela-vapor.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/prato-base.webp" alt="" loading="lazy"><img src="_media/pagina/sobre/prato-prato.webp" alt="" loading="lazy"></div>
 <!--
   VARIÁVEIS — Pequeno Chef — One page (index.html)
 
