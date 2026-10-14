@@ -3,8 +3,99 @@
   "slug": "teste-combo-estacoes-2027",
   "nome": "[TESTE] Combo Estaçoes - 2027",
   "formato": "tapume_praca",
-  "paginas": {},
-  "vars": {},
+  "paginas": {
+    "tapume": {
+      "arquivo": "combo-estacoes-tapume.html",
+      "bytes": 21017,
+      "enviadoEm": "2026-10-14T23:16:42.420Z"
+    }
+  },
+  "vars": {
+    "ano": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_marca_logo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_selos_estacoes": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_anotacoes": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_medalha_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "total_aberta": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "total_breve": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "regiao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "total_cidades": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "url": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "uf": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_outono_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_inverno_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_primavera_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "mes_verao_abrev": {
+      "dono": "cidade",
+      "ignorar": false
+    }
+  },
   "gerais": {},
   "cidades": [],
   "etapas": [],
@@ -14,5 +105,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T21:33:59.338Z"
+  "atualizadoEm": "2026-10-14T23:16:46.309Z"
 }
