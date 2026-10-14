@@ -2088,21 +2088,6 @@
       "contagem_encerrada_status": "Encerrada.",
       "contagem_encerrada_texto": "Veja as próximas cidades.",
       "contagem_botao_encerrada": "Ver próximas cidades"
-    },
-    {
-      "_id": "ad56a3e2",
-      "cidade": "São Paulo",
-      "status": "em breve",
-      "local": "",
-      "data_inicio": "11/01/2027",
-      "data_fim": "23/01/2027",
-      "rotulo_local": "Local:",
-      "rotulo_horario": "Horário:",
-      "horario": "",
-      "contagem_botao": "Quero minha vaga em",
-      "contagem_encerrada_status": "Encerrada.",
-      "contagem_encerrada_texto": "Veja as próximas cidades.",
-      "contagem_botao_encerrada": "Ver próximas cidades"
     }
   ],
   "etapas": [],
@@ -2151,7 +2136,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-13T21:33:29.875Z",
+  "atualizadoEm": "2026-10-14T14:02:31.948Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
