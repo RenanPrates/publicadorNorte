@@ -1766,8 +1766,17 @@
     "img_mandala_medalha_verao": "_media/tapume/mandala/medalha-verao.webp"
   },
   "baseUrl": "",
-  "publicacoes": [],
-  "versaoAtiva": null,
+  "publicacoes": [
+    {
+      "versao": 1,
+      "commit": "9df68617033985c0543b937470154ff86dcb7575",
+      "em": "2026-10-14T23:25:24.358Z",
+      "paginas": 18,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-combo-estacoes-2027/"
+    }
+  ],
+  "versaoAtiva": 1,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:25:20.633Z"
+  "atualizadoEm": "2026-10-14T23:25:37.509Z"
 }
