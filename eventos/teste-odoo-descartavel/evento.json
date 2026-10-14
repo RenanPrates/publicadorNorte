@@ -6,7 +6,20 @@
   "paginas": {},
   "vars": {},
   "gerais": {},
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "sp1",
+      "cidade": "São Paulo",
+      "status": "aberta",
+      "preco_vista": "799",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346"
+    },
+    {
+      "_id": "pa1",
+      "cidade": "Porto Alegre",
+      "preco_vista": "549"
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -14,5 +27,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T23:07:27.108Z",
-  "atualizadoEm": "2026-10-14T23:07:27.108Z"
+  "atualizadoEm": "2026-10-14T23:07:32.594Z"
 }
