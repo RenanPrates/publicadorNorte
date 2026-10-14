@@ -1380,7 +1380,12 @@
     "compartilhar_anexar": "e anexar a imagem.",
     "compartilhar_dica_instagram": "No Instagram, abra os Stories e escolha a imagem na galeria."
   },
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "71de0d85",
+      "cidade": ""
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {
@@ -1394,5 +1399,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:18:24.570Z"
+  "atualizadoEm": "2026-10-14T23:18:53.201Z"
 }
