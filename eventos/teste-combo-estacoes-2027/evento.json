@@ -1383,10 +1383,12 @@
   "cidades": [],
   "etapas": [],
   "ordem": {},
-  "imagens": {},
+  "imagens": {
+    "img_mandala_anotacoes": "_media/tapume/mandala/medalha-inverno.webp"
+  },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:17:46.479Z"
+  "atualizadoEm": "2026-10-14T23:18:02.944Z"
 }
