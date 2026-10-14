@@ -1384,11 +1384,12 @@
   "etapas": [],
   "ordem": {},
   "imagens": {
-    "img_mandala_anotacoes": "_media/tapume/mandala/medalha-inverno.webp"
+    "img_mandala_anotacoes": "_media/tapume/mandala/medalha-inverno.webp",
+    "img_mandala_medalha_outono": "_media/tapume/mandala/medalha-outono.webp"
   },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:18:02.944Z"
+  "atualizadoEm": "2026-10-14T23:18:06.561Z"
 }
