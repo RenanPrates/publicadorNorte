@@ -1386,11 +1386,12 @@
   "imagens": {
     "img_mandala_anotacoes": "_media/tapume/mandala/anotacoes.webp",
     "img_mandala_medalha_outono": "_media/tapume/mandala/medalha-outono.webp",
-    "img_mandala_medalha_inverno": "_media/tapume/mandala/medalha-verao.webp"
+    "img_mandala_medalha_inverno": "_media/tapume/mandala/medalha-inverno.webp",
+    "img_mandala_medalha_primavera": "_media/tapume/mandala/medalha-verao.webp"
   },
   "baseUrl": "",
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:18:16.637Z"
+  "atualizadoEm": "2026-10-14T23:18:21.179Z"
 }
