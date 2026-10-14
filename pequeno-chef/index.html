@@ -611,6 +611,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .cta-list li:nth-of-type(1){--i:0}.cta-list li:nth-of-type(2){--i:1}.cta-list li:nth-of-type(3){--i:2}.cta-list li:nth-of-type(4){--i:3}
 .cta-next .nx{display:contents}
 .cta-next .nx:not(:first-of-type){display:none}
+.cta-next small,.cta-next b{justify-self:start;text-align:left}
 .btn.is-off{opacity:.6;cursor:default}
 @keyframes nextUp{from{transform:translateY(140%);opacity:0}to{transform:none;opacity:1}}
 @keyframes liIn{from{transform:translateX(-14px);opacity:0}to{transform:none;opacity:1}}
@@ -1207,29 +1208,7 @@ img.truck-ill{object-fit:cover}
 <!-- ============ VÍDEOS (YouTube) ============
      Até 6 vídeos. Cada um aparece quando o link do YouTube (@ytN_link) está preenchido.
      O vídeo só carrega quando a pessoa aperta o play. -->
-<section class="vids" id="videos" aria-labelledby="t-vid">
-  <div class="wrap">
-    <header class="sec-head vd-head">
-      <p class="eyebrow">Vídeos do projeto</p>
-      <h2 id="t-vid">A carreta <span>em cena</span></h2>
-      <p class="sub">Escolha um vídeo da lista e aperte o play.</p>
-    </header>
-    <div class="vd-layout">
-      <div class="vd-tv">
-        <div class="vd-screen" id="vdScreen"></div>
-        <div class="vd-bar">
-          <span class="vd-rec" aria-hidden="true"><i></i>Pequeno Chef</span>
-          <span class="vd-now" id="vdNow" aria-live="polite"></span>
-          <span class="vd-knobs" aria-hidden="true"><i></i><i></i></span>
-        </div>
-      </div>
-      <div class="vd-side">
-        <ol class="vd-list" id="vdList" aria-label="Vídeos do projeto"></ol>
-        <ul class="vd-src" id="vdSrc" hidden></ul>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ============ EQUIPE ============
      Até 8 pessoas. Cada bloco aparece quando o nome (@equipeN_nome) está preenchido. -->
