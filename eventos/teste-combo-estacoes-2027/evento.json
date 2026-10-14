@@ -8,6 +8,11 @@
       "arquivo": "combo-estacoes-tapume.html",
       "bytes": 21017,
       "enviadoEm": "2026-10-14T23:16:42.420Z"
+    },
+    "praca": {
+      "arquivo": "combo-estacoes-praca.html",
+      "bytes": 465248,
+      "enviadoEm": "2026-10-14T23:16:50.792Z"
     }
   },
   "vars": {
@@ -94,6 +99,1086 @@
     "mes_verao_abrev": {
       "dono": "cidade",
       "ignorar": false
+    },
+    "intro_pular": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "intro_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_preco": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_beneficios": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_kits": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_tema": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_duvidas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "botao_combo_realizado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "topo_botao_curto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "botao_combo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "botao_combo_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "combo_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "barra_resumo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "gratuito": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "valor_parcelado": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_vista / parcelamento"
+    },
+    "parcelamento": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_vista": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "parcelamento * valor_parcelado"
+    },
+    "preco_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_prime_parcelado": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_prime / parcelamento"
+    },
+    "barra_prime": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "barra_botao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "barra_botao_depois": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_quimica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_quimica_tag": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_etapa1_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_distancias": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "etapa2_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_quimica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_quimica_tag": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_etapa2_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_distancias": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "etapa3_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_quimica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_quimica_tag": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_etapa3_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_distancias": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "etapa4_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_quimica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_quimica_tag": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_etapa4_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_distancias": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "img_quimica_serotonina": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_ocitocina": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_dopamina": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_endorfina": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_mandala_completa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_botao_proxima": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_botao_assinar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_contador": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p1_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p1_etapa1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p1_etapa2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p1_etapa3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p1_etapa4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p2_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p2_etapa1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p2_etapa2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p2_etapa3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p2_etapa4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p3_pergunta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p3_etapa1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p3_etapa2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p3_etapa3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_p3_etapa4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_resultado_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_resultado_etapa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_card_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_card_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_card_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_compartilhar_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_contador": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_alerta_rapido": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_alerta_lento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_total": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_card_total": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_card_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_compartilhar_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_enviando": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_envio_ok": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_envio_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_nome_padrao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_erro_imagem": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_pronto_whatsapp": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_pronto_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_cancelado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_download_aberto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_salvo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_abrir_whatsapp": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_anexar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_dica_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_titulo_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_titulo_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "media_hero_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_alt_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "media_hero_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_alt_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_compra_kit_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_kit_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_compra_kit_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_titulo_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_titulo_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "porcentagem_desconto": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_info_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_resumo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_item1": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_item2": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_item3": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_item4": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_item5": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_item6": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "preco_comum": {
+      "dono": "cidade",
+      "ignorar": false,
+      "formula": "preco_vista / (1 - porcentagem_desconto / 100)"
+    },
+    "compra_separado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_prime_tag": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_prime_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_prime_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_prime_por": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "porcentagem_desconto_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item1": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item2": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item3": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item4": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item5": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item6": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item7": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_item8": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_nota": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_botao_realizado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_inscricao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_botao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_botao_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hoodie_desktop": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_hoodie_mobile": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_titulo_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_titulo_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_titulo_linha3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapas_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_kits_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_kit_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_nome_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "img_kits_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_kit_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_nome_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "img_kits_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_kit_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_nome_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "img_kits_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_kit_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_nome_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "quim_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_titulo_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_titulo_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_titulo_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_formula_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_frase": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_final_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_final_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_final_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_final_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_final_botao_teste": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duvidas_ajuda": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_atendimento": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "duvidas_ajuda_botao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq1_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq1_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq2_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq2_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq3_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq3_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq4_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq4_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq5_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq5_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq6_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq6_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq7_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq7_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq8_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq8_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq9_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq9_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq10_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq10_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq11_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq11_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "faq12_pergunta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faq12_resposta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "extras_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "extras_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "extras_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_teste_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_capa_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_capa_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_intro_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_botao_comecar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_intro_nota": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "botao_voltar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_nome_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_nome_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_nome_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_nome_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_botao_gerar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_stories": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_feed": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_whatsapp": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_icones_instagram": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compartilhar_baixar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_refazer": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_carta_selo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_capa_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_distancia_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_distancia_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_tempo_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_tempo_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_pace_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_assina_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_assina_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_assina_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_nome_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_nome_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_nome_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_email_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_email_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_email_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_cpf_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_cpf_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_cpf_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_aceite": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_aceite_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_botao_selar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_selada_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_selada_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_share_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_share_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_share_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_editar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "fecho_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_regulamento": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "rodape_regulamento": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {},
@@ -105,5 +1190,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:16:46.309Z"
+  "atualizadoEm": "2026-10-14T23:16:54.614Z"
 }
