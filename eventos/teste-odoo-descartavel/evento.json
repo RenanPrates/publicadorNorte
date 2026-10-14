@@ -27,5 +27,30 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-14T23:07:27.108Z",
-  "atualizadoEm": "2026-10-14T23:07:32.594Z"
+  "atualizadoEm": "2026-10-14T23:07:51.917Z",
+  "odoo": {
+    "ativo": true,
+    "ultima": {
+      "em": "2026-10-14T23:07:49.001Z",
+      "ok": false,
+      "mudou": 0,
+      "mensagem": "1 de 1 cidade(s) sem resposta do Odoo: São Paulo.",
+      "cidades": [
+        {
+          "id": "sp1",
+          "nome": "São Paulo",
+          "combo": 346,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+        },
+        {
+          "id": "pa1",
+          "nome": "Porto Alegre",
+          "combo": null,
+          "ok": true,
+          "mensagem": "sem link do combo: fica como está"
+        }
+      ]
+    }
+  }
 }
