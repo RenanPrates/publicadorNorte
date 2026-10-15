@@ -1485,7 +1485,8 @@
     "etapa4_onde_linha1": "Na subida que parecia impossível.\nUm pouco depois do “só mais um”.\n\n\n\n",
     "teste_capa_kicker": "TESTE RÁPIDO",
     "teste_capa_titulo": "Enquanto a largada não chega.",
-    "carta_capa_kicker": "DESAFIO PESSOAL"
+    "carta_capa_kicker": "DESAFIO PESSOAL",
+    "carta_capa_titulo": "Quanto você vai correr em 2027?"
   },
   "cidades": [
     {
@@ -1967,7 +1968,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:41:02.403Z",
+  "atualizadoEm": "2026-10-15T17:41:10.186Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
