@@ -1964,11 +1964,19 @@
       "paginas": 18,
       "avisos": 2,
       "url": "https://renanprates.github.io/publicadorNorte/teste-combo-estacoes-2027/"
+    },
+    {
+      "versao": 7,
+      "commit": "5a22140d3fb465a74d8ed1516591e079dbc9591e",
+      "em": "2026-10-15T18:16:14.489Z",
+      "paginas": 18,
+      "avisos": 2,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-combo-estacoes-2027/"
     }
   ],
-  "versaoAtiva": 6,
+  "versaoAtiva": 7,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T18:16:11.216Z",
+  "atualizadoEm": "2026-10-15T18:16:26.961Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
