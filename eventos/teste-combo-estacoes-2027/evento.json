@@ -1547,7 +1547,7 @@
     "topo_botao_complemento": "meu combo",
     "preco_esgotado": "Esgotado",
     "preco_esgotado_texto": "As vagas do combo nesta cidade acabaram.",
-    "hero_titulo": "<i>Complete<br>sua <span class=\"hl\">mandala.</span></i>",
+    "hero_titulo": "Complete<br>sua <span class=\"hl\">mandala.</span>",
     "compra_titulo": "Comprar junto<br>custa bem menos.",
     "hoodie_titulo": "<span class=\"ln\">Um hoodie exclusivo</span> <span class=\"ln\">para quem garantir</span> <span class=\"ln\">as 4 etapas.</span>",
     "quim_titulo": "A Química<br>da <span class=\"hl\">Corrida.</span>",
@@ -2048,7 +2048,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T20:13:31.146Z",
+  "atualizadoEm": "2026-10-15T20:13:39.902Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
