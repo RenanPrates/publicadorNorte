@@ -537,8 +537,7 @@
     },
     "hero_alt_desktop": {
       "dono": "geral",
-      "ignorar": false,
-      "mover": -1
+      "ignorar": false
     },
     "media_hero_mobile": {
       "dono": "geral",
@@ -2049,7 +2048,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T20:17:18.184Z",
+  "atualizadoEm": "2026-10-15T20:17:25.180Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
