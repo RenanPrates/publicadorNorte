@@ -2644,7 +2644,7 @@
       "local": "Praça da Imprensa Chanceler Edson Queiroz, Dionísio Torres, Fortaleza - CE",
       "data_inicio": "17/10/2026",
       "data_fim": "29/10/2026",
-      "rotulo_local": "Local: Praça da Imprensa Chanceler Edson Queiroz, Dionísio Torres, Fortaleza - CE",
+      "rotulo_local": "Local: ",
       "rotulo_horario": "Horário:",
       "horario": "",
       "contagem_botao": "Quero minha vaga em",
@@ -2760,7 +2760,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-15T21:18:14.465Z",
+  "atualizadoEm": "2026-10-15T21:18:52.549Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
