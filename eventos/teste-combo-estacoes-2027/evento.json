@@ -1290,7 +1290,8 @@
     },
     "hero_titulo": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "ocultar": "texto"
     },
     "compra_titulo": {
       "dono": "geral",
@@ -2048,7 +2049,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T20:13:39.902Z",
+  "atualizadoEm": "2026-10-15T20:13:59.413Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
