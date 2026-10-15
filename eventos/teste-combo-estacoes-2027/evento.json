@@ -1908,7 +1908,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:00:21.521Z",
+  "atualizadoEm": "2026-10-15T14:00:51.969Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -1920,10 +1920,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-15T14:00:02.791Z",
+      "em": "2026-10-15T14:00:31.943Z",
       "ok": true,
-      "mudou": 68,
-      "mensagem": "68 valor(es) atualizados em 9 cidade(s).",
+      "mudou": 0,
+      "mensagem": "Tudo igual ao Odoo (9 cidade(s)).",
       "cidades": [
         {
           "id": "f227a601",
