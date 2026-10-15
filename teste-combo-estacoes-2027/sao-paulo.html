@@ -3845,6 +3845,13 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 /* fecho: +50px de respiro em cima e embaixo */
 .fecho.sec{padding-block:calc(clamp(1.3rem,2vw,1.6rem) + 50px) !important}
 
+/* topo: voltar para as cidades; no celular o botão de compra sai do topo (fica na barra fixa) */
+.tb-voltar{display:inline-flex; align-items:center; gap:.35rem; padding:.45rem .75rem; border-radius:999px; box-shadow:inset 0 0 0 1px rgba(22,20,27,.18); color:var(--ink); font:700 .78rem/1 Archivo,sans-serif; text-decoration:none; white-space:nowrap; flex:none}
+.tb-voltar svg{width:16px; height:16px}
+.tb-voltar:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+@media (max-width:699px){ #topbar .cta--sm{display:none !important} .tb-voltar span{display:none} .tb-voltar{padding:.45rem} }
+a.wordmark{cursor:pointer}
+
 /* rodapé: mesma marca do topo (wordmark + selos das estações) */
 .foot-marca{display:inline-flex; align-items:center; gap:.65rem}
 .foot-selos{display:block; height:18px; width:auto; flex:none}
@@ -3854,13 +3861,13 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 <meta property="og:type" content="website">
 <meta property="og:title" content="São Paulo - Combo 2027 — Circuito das Estações">
 <meta property="og:description" content="Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Escolha sua cidade.">
-<meta property="og:image" content="https://combos.circuitodasestacoes.com.br/_media/tapume/selos/estacoes.png">
-<link rel="image_src" href="_media/tapume/selos/estacoes.png">
+<meta property="og:image" content="https://combos.circuitodasestacoes.com.br/_media/seo/compartilhar.jpg">
+<link rel="image_src" href="_media/seo/compartilhar.jpg">
 <meta property="og:url" content="https://combos.circuitodasestacoes.com.br/sao-paulo.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="São Paulo - Combo 2027 — Circuito das Estações">
 <meta name="twitter:description" content="Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Escolha sua cidade.">
-<meta name="twitter:image" content="https://combos.circuitodasestacoes.com.br/_media/tapume/selos/estacoes.png">
+<meta name="twitter:image" content="https://combos.circuitodasestacoes.com.br/_media/seo/compartilhar.jpg">
 </head>
 <body>
 <script>document.documentElement.classList.add("js")</script>
@@ -3916,9 +3923,10 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 <header class="topbar" id="topbar">
   <div class="ctr tb">
     <div class="tb-marca">
-      <a class="wordmark" href="#topo" aria-label="Circuito das Estações — início"></a>
+      <a class="wordmark" href="index.html" aria-label="Circuito das Estações — página inicial"></a>
       <img class="tb-selos" src="_media/praca/marca/selos.png" alt="" width="640" height="139">
     </div>
+    <a class="tb-voltar" href="index.html#cidades"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4.5m4.5-4.5L4.5 10 9 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voltar para as cidades</span></a>
     <nav class="tb-nav" aria-label="Seções da página">
       <a href="#compra">Preço</a>
       <a href="#incluso">Benefícios</a>
@@ -3926,7 +3934,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <a href="#como-funciona">Tema</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="cta cta--sm" href="#compra">Garantir meu combo<span class="long">&nbsp;</span></a>
+    <a class="cta cta--sm" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346" target="_blank" rel="noopener">Garantir<span class="long">&nbsp;meu combo</span></a>
   </div>
   <span class="scroll-prog" aria-hidden="true"></span>
 </header>
@@ -3937,7 +3945,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   <div class="st-price st-price--combo"><b>10x R$84,99</b><span>ou R$849,90 à vista</span></div>
   <div class="st-price st-price--prime"><b>10x R$76,49</b><span>Assinante O2 Prime · ou R$764,91 à vista</span></div>
   
-  <a class="cta cta--lime cta--sm" href="#compra" tabindex="-1" id="stickyBtn">Ver preço</a>
+  <a class="cta cta--lime cta--sm" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346" tabindex="-1" id="stickyBtn" target="_blank" rel="noopener">Ver preço</a>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -3991,9 +3999,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 
     <div class="hero-copy">
       <p class="ho-frase">Corra o ano inteiro!</p>
-      <p class="ho-sub">Participe das quatro estações do ano e complete sua mandala.</p>
+      <p class="ho-sub">Participe das quatro estações e complete sua mandala.</p>
       <div class="hero-actions">
-        <a class="cta" href="#compra">Garantir meu combo
+        <a class="cta" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346" target="_blank" rel="noopener">Garantir meu combo
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
@@ -4015,20 +4023,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     </div>
     <div class="cp" id="buyBox">
       <div class="cp-card reveal d1">
-        <span class="cp-top"><button class="cp-i" type="button" aria-expanded="false" aria-controls="cpInfo1" aria-label="O que vem no Combo 2027"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1.15" fill="currentColor"/></svg></button></span>
+        <span class="cp-top"></span>
         <span class="cp-name">Combo 2027</span>
         <span class="cp-plus">4 etapas, 4 medalhas e o hoodie exclusivo</span>
-        <div class="cp-pop" id="cpInfo1" role="dialog" aria-label="O que vem no Combo 2027" hidden>
-          <p class="cp-pop-t">O que vem no Combo 2027</p>
-          <ul class="cp-list">
-            
-            
-            
-            
-            
-            
-          </ul>
-        </div>
         <span class="cp-price">
             
             
@@ -4040,29 +4037,14 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
         
         <div class="cp-up">
           <span class="cp-up-tag">O2 Prime</span>
-          <p class="cp-up-txt">Assine o Prime agora e já leve esse benefício: <b>1 ano por apenas R$ 99,99.</b>.</p>
-          <button class="cp-i cp-i--o2" type="button" aria-expanded="false" aria-controls="cpInfo2" aria-label="O que vem no O2 Prime"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1.15" fill="currentColor"/></svg></button>
-          <div class="cp-pop cp-pop--o2" id="cpInfo2" role="dialog" aria-label="O que vem no O2 Prime" hidden>
-            <p class="cp-pop-t"></p>
-            <ul class="cp-list">
-            
-            
-            
-            
-            
-            
-            
-            
-            </ul>
-            
-          </div>
+          <p class="cp-up-txt">Assine o Prime agora e já leve esse benefício: <b>1 ano por apenas R$ 99,99</b>.</p>
         </div>
         
       </div>
 
       <div class="cp-cta reveal d2">
         
-        <a class="cta cta--lime cp-go" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346">Quero aproveitar
+        <a class="cta cta--lime cp-go" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346" target="_blank" rel="noopener">Quero aproveitar
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         
       </div>
@@ -4159,39 +4141,35 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <h3 class="qp-name">Serotonina</h3>
           <p class="qp-tag">a química do equilíbrio</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Serotonina"></span>
-          <p class="qp-quote">Por alguns quilômetros, os problemas ficam mais silenciosos.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">No ritmo que encaixa sem esforço.
-No silêncio que fica depois da corrida.</p></div>
+          <p class="qp-quote">Por alguns quilômetros, os problemas ficam mais silenciosos.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">No ritmo que encaixa sem esforço.<br>No silêncio que fica depois da corrida.</p></div>
         </article>
         <article class="qp qp--inv" data-step="2" style="--mol:url('_media/praca/quimica/ocitocina.png'); --mr:1.472">
           <p class="qp-meta"><img class="qp-el" src="_media/praca/quimica/selo_inverno.webp" alt="Inverno · Ocitocina" width="240" height="241"></p>
           <h3 class="qp-name">Ocitocina</h3>
           <p class="qp-tag">a química da conexão</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Ocitocina"></span>
-          <p class="qp-quote">Existem corridas que começam sozinhas. Quase nenhuma termina assim.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">Na largada compartilhada.
-No abraço depois da chegada.</p></div>
+          <p class="qp-quote">Existem corridas que começam sozinhas. Quase nenhuma termina assim.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">Na largada compartilhada.<br>No abraço depois da chegada.</p></div>
         </article>
         <article class="qp qp--pri" data-step="3" style="--mol:url('_media/praca/quimica/dopamina.png'); --mr:1.356">
           <p class="qp-meta"><img class="qp-el" src="_media/praca/quimica/selo_primavera.webp" alt="Primavera · Dopamina" width="240" height="241"></p>
           <h3 class="qp-name">Dopamina</h3>
           <p class="qp-tag">a química da recompensa</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Dopamina"></span>
-          <p class="qp-quote">Aparece quando você acredita que vale a pena tentar.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">No primeiro passo de um treino difícil.
-Muito antes da linha de chegada.</p></div>
+          <p class="qp-quote">Aparece quando você acredita que vale a pena tentar.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">No primeiro passo de um treino difícil.<br>Muito antes da linha de chegada.</p></div>
         </article>
         <article class="qp qp--ver" data-step="4" style="--mol:url('_media/praca/quimica/endorfina.png'); --mr:1.702">
           <p class="qp-meta"><img class="qp-el" src="_media/praca/quimica/selo_verao.webp" alt="Verão · Endorfina" width="240" height="241"></p>
           <h3 class="qp-name">Endorfina</h3>
           <p class="qp-tag">a química do prazer</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Endorfina"></span>
-          <p class="qp-quote">Não elimina o cansaço, muda a forma como você sente.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">Na subida que parecia impossível.
-Um pouco depois do “só mais um”.</p></div>
+          <p class="qp-quote">Não elimina o cansaço, muda a forma como você sente.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">Na subida que parecia impossível.<br>Um pouco depois do “só mais um”.</p></div>
         </article>
         <article class="qp qp--final" data-step="5">
           <span class="kicker"><span class="dot"></span> A recompensa</span>
           <h2 class="qp-h">Mandala<br><span class="hl">completa.</span></h2>
           <p class="lead">Quando a última medalha encaixa, as quatro estações viram uma peça só. É o troféu de quem corre o ano inteiro — para pendurar, emoldurar e mostrar.</p>
           <div class="qp-ctas">
-            <a class="cta cta--lime" href="#compra">Garantir meu combo <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="cta cta--lime" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346" target="_blank" rel="noopener">Garantir meu combo <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </article>
       </div>
@@ -4225,7 +4203,7 @@ Um pouco depois do “só mais um”.</p></div>
           <span class="selo-q"></span>
         </div>
         <div class="capa-txt">
-          <span class="kicker capa-kicker"><span class="dot"></span> TESTE RÁPIDO</span>
+          <span class="kicker capa-kicker"><span class="dot"></span> Teste rápido</span>
           <h2 class="h2 capa-h">Enquanto a largada não chega.</h2>
           <p class="so-leitor">Qual a sua química?</p>
           <img class="quatro" src="_media/praca/teste/titulo.png" alt="" width="640" height="139">
@@ -4264,7 +4242,7 @@ Um pouco depois do “só mais um”.</p></div>
       <p class="g-prose" style="margin-top:1rem; max-width:36ch">O nome entra no card. Pode ser o primeiro nome, o apelido, o nome do grupo de corrida.</p>
       <div class="field">
         <label for="nome">Seu nome</label>
-        <input id="nome" type="text" maxlength="22" autocomplete="given-name" placeholder="Ex.: Pipo" enterkeyhint="done">
+        <input id="nome" type="text" maxlength="22" autocomplete="given-name" placeholder="Seu nome" enterkeyhint="done">
       </div>
       <p style="margin-top:1.8rem"><button class="g-cta" id="gerar" disabled>Gerar meu card</button></p>
     </div>
@@ -4307,8 +4285,8 @@ Um pouco depois do “só mais um”.</p></div>
       <summary class="mod-abre capa capa-c">
         <div class="capa-art" aria-hidden="true"><span class="cq-hex"></span><img class="selo-c" src="_media/praca/carta/selo.webp" alt="" width="760" height="866"></div>
         <div class="capa-txt">
-          <span class="kicker capa-kicker"><span class="dot"></span> DESAFIO PESSOAL</span>
-          <h2 class="h2 capa-h">Quanto você vai correr em 2027?</h2>
+          <span class="kicker capa-kicker"><span class="dot"></span> Desafio pessoal</span>
+          <h2 class="h2 capa-h">Quanto você vai correr em {ano}?</h2>
           <p class="so-leitor">Cartas para o futuro</p>
           <p>Registre aqui seus tempos planejados em cada uma das etapas e acompanhe sua evolução.</p>
           <span class="capa-btn"></span>
@@ -4421,8 +4399,8 @@ Um pouco depois do “só mais um”.</p></div>
       <img src="_media/praca/icones/primavera.webp" alt="" width="394" height="395" loading="lazy">
       <img src="_media/praca/icones/verao.webp" alt="" width="393" height="395" loading="lazy">
     </div>
-    <h2 class="reveal d1">Feche {ano} com a mandala completa.</h2>
-    <a class="cta reveal d2" href="#compra">Garantir meu combo
+    <h2 class="reveal d1">Feche {ano} com a sua mandala completa</h2>
+    <a class="cta reveal d2" href="https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346" target="_blank" rel="noopener">Garantir meu combo
       <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
@@ -4470,7 +4448,7 @@ Um pouco depois do “só mais um”.</p></div>
 
 <footer>
   <div class="ctr foot">
-    <span class="foot-marca"><span class="wordmark" role="img" aria-label="Circuito das Estações"></span><img class="foot-selos" src="_media/praca/marca/selos.png" alt="" width="640" height="139" loading="lazy"></span>
+    <span class="foot-marca"><a class="wordmark" href="index.html" aria-label="Circuito das Estações — página inicial"></a><img class="foot-selos" src="_media/praca/marca/selos.png" alt="" width="640" height="139" loading="lazy"></span>
     <span>Circuito das Estações 2027 — São Paulo</span>
     
   </div>
@@ -5825,7 +5803,9 @@ carrega();
   Status (3 casos, realizado primeiro): botão da compra = @compra_botao (aberta), @compra_botao_breve (em breve),
           @compra_botao_realizado (realizado). Os botões que levam ao preço (topo, abertura, química, fecho e
           barra fixa) seguem o mesmo status: @botao_combo / @botao_combo_breve / @botao_combo_realizado.
-  Links: @link_inscricao_1 (compra), @link_regulamento (rodapé; vazio = some).
+  Links: @link_inscricao_1 (carrinho: todos os botões de compra com a cidade aberta), @link_regulamento (rodapé; vazio = some),
+         @link_inicio (logos do topo e do rodapé), @link_cidades + @topo_voltar_cidades (botão do topo).
+  Textos com mais de uma linha ou destaque (títulos) são um campo só: a quebra e a cor vêm da formatação do cadastro.
   Textos (todos editáveis no cadastro; iguais em todas as páginas, menos os que terminam em _1):
     Abertura animada (intro):
       @intro_pular, @intro_frase
@@ -5838,18 +5818,16 @@ carrega();
     Barra fixa (preço):
       @barra_resumo, @barra_prime, @barra_botao, @barra_botao_depois
     #topo:
-      @hero_titulo_linha1, @hero_titulo_linha2, @hero_titulo_destaque, @hero_alt_desktop, @hero_alt_mobile,
+      @hero_titulo, @hero_alt_desktop, @hero_alt_mobile,
       @hero_frase, @hero_texto
     #compra:
-      @compra_kit_alt, @compra_kicker, @compra_titulo_linha1, @compra_titulo_linha2, @compra_info_titulo,
-      @compra_resumo, @compra_lista_titulo, @compra_item1, @compra_item2, @compra_item3, @compra_item4, @compra_item5,
-      @compra_item6, @compra_nota, @compra_separado, @compra_prime_tag, @compra_prime_texto, @compra_prime_destaque,
-      @compra_prime_lista_titulo,
+      @compra_kit_alt, @compra_kicker, @compra_titulo,
+      @compra_resumo, @compra_separado, @compra_prime_tag, @compra_prime_texto,
       @compra_prime_item1, @compra_prime_item2, @compra_prime_item3, @compra_prime_item4, @compra_prime_item5,
       @compra_prime_item6, @compra_prime_item7, @compra_prime_item8, @compra_prime_nota, @compra_botao,
       @compra_botao_breve, @compra_botao_realizado
     #incluso (hoodie):
-      @hoodie_alt, @hoodie_kicker, @hoodie_titulo_linha1, @hoodie_titulo_linha2, @hoodie_titulo_linha3,
+      @hoodie_alt, @hoodie_kicker, @hoodie_titulo,
       @hoodie_texto
     #etapas (kits):
       @etapas_kicker, @etapas_titulo
@@ -5860,7 +5838,7 @@ carrega();
       @etapa4_nome, @etapa4_quimica, @etapa4_quimica_tag, @etapa4_frase, @etapa4_linha, @etapa4_kit_alt
     #mod-gerador (teste "Qual a sua química?"):
       @teste_etapa1_onde, @teste_etapa2_onde, @teste_etapa3_onde, @teste_etapa4_onde, @teste_titulo, @teste_capa_kicker, @teste_capa_titulo,
-      @teste_capa_linha1, @teste_capa_linha2, @teste_intro_texto, @teste_botao_comecar, @teste_intro_nota,
+      @teste_capa_texto, @teste_intro_texto, @teste_botao_comecar, @teste_intro_nota,
       @teste_nome_titulo, @teste_nome_texto, @teste_nome_rotulo, @teste_nome_exemplo, @teste_botao_gerar,
       @teste_refazer, @teste_contador, @teste_p1_pergunta, @teste_p1_etapa1, @teste_p1_etapa2, @teste_p1_etapa3,
       @teste_p1_etapa4, @teste_p2_pergunta, @teste_p2_etapa1, @teste_p2_etapa2, @teste_p2_etapa3, @teste_p2_etapa4,
@@ -5878,9 +5856,9 @@ carrega();
       @carta_alerta_rapido, @carta_alerta_lento, @carta_total, @carta_card_total, @carta_card_selo,
       @carta_compartilhar_texto, @carta_enviando, @carta_envio_ok, @carta_envio_erro
     #como-funciona (química da corrida):
-      @quim_formula_alt, @quim_kicker, @quim_titulo_linha1, @quim_titulo_linha2, @quim_titulo_destaque, @quim_texto,
-      @quim_dica, @quim_onde_titulo, @etapa1_onde_linha1, @etapa1_onde_linha2 … @etapa4_onde_linha1, @etapa4_onde_linha2,
-      @quim_final_kicker, @quim_final_titulo, @quim_final_destaque, @quim_final_texto,
+      @quim_formula_alt, @quim_kicker, @quim_titulo, @quim_texto,
+      @quim_dica, @quim_onde_titulo, @etapa1_onde … @etapa4_onde,
+      @quim_final_kicker, @quim_final_titulo, @quim_final_texto,
       @quim_final_botao_teste
     #duvidas:
       @duvidas_kicker, @duvidas_titulo, @faq1_pergunta, @faq1_resposta,
@@ -5918,7 +5896,7 @@ carrega();
     @img_teste_titulo — teste/; @img_carta_selo — carta/
     Todas iguais em todas as páginas.
   Fixos (sem variável, no CSS): marca/ (wordmark e logo dos cards), teste/selo.png, teste/whatsapp.png, teste/instagram.png.
-  Setas, (i), check, estrela do Prime, WhatsApp, Instagram e "baixar" são <svg> de interface escritos no HTML.
+  Setas, check, estrela do Prime, WhatsApp, Instagram e "baixar" são <svg> de interface escritos no HTML.
   Seções (podem ser escondidas ou mudar de ordem; cada uma se sustenta sozinha):
     #topo, #compra, #incluso (hoodie), #etapas (kits), #como-funciona (química da corrida), #duvidas,
     #mod-gerador, #mod-carta, #fecho, #duvidas (depois do fecho).
