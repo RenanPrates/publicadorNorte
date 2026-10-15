@@ -3433,6 +3433,8 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 .cp-radio::after{content:""; width:12px; height:12px; border-radius:50%; background:currentColor; transform:scale(0); transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
 .cp-badge{padding:.45rem .8rem; border-radius:999px; background:var(--lime); color:#16141B; font:800 .78rem/1 Archivo,sans-serif; letter-spacing:.08em; text-transform:uppercase}
 .cp-badge--o2{background:#EE366F; color:#fff}
+.cp-badge--esgotado{background:#16141B; color:#F4F1EA}
+.cp-parc.cp-esgotado{text-transform:uppercase; letter-spacing:.04em}
 .cp-name{font-family:Outfit,sans-serif; font-weight:800; font-size:clamp(1.5rem,2.6vw,2rem); letter-spacing:-.02em; line-height:1.05}
 .cp-list{list-style:none; margin:0; padding:0; display:grid; gap:.5rem; font-size:.95rem}
 .cp-list li{display:flex; align-items:center; gap:.6rem}
@@ -3831,6 +3833,22 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 /* v98 — leads do capitulo da quimica na serif do sistema (a mesma do subtitulo da abertura) */
 .quim .lead{font-family:"Newsreader",Georgia,serif; font-weight:300; font-size:clamp(1.1rem,1.45vw,1.38rem); line-height:1.5}
 @media (max-width:760px){ .quim .lead{font-size:1.05rem; line-height:1.48} }
+/* capa do teste com EXTRAS + título da antiga abertura dos extras (a seção #extras saiu) */
+#mod-gerador .capa-txt .capa-kicker{color:rgba(244,241,234,.78); margin:0}
+#mod-gerador .capa-txt .capa-h{font-family:Outfit,sans-serif; color:#F4F1EA; margin:.1rem 0 .2rem; max-width:16ch; text-wrap:balance}
+#mod-gerador .mod-fold[open] .capa-kicker, #mod-gerador .mod-fold[open] .capa-h{display:none}
+
+/* capa da Carta: tag + título como na capa do teste (texto escuro sobre o fundo claro) */
+#mod-carta .capa-c .capa-txt .capa-kicker{color:rgba(22,20,27,.7); margin:0}
+#mod-carta .capa-c .capa-txt .capa-h{font-family:Outfit,sans-serif; color:#16141B; margin:.1rem 0 .2rem; max-width:16ch; text-wrap:balance}
+#mod-carta .mod-fold[open] .capa-kicker, #mod-carta .mod-fold[open] .capa-h{display:none}
+
+/* fecho: +50px de respiro em cima e embaixo */
+.fecho.sec{padding-block:calc(clamp(1.3rem,2vw,1.6rem) + 50px) !important}
+
+/* rodapé: mesma marca do topo (wordmark + selos das estações) */
+.foot-marca{display:inline-flex; align-items:center; gap:.65rem}
+.foot-selos{display:block; height:18px; width:auto; flex:none}
 </style>
 </head>
 <body>
@@ -3904,8 +3922,11 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 
 <div class="sticky" id="sticky" aria-hidden="true">
   <div class="st-value"><b>@combo_nome @ano</b><span>@barra_resumo</span></div>
+  <!-- @se status = esgotado --><div class="st-price st-price--combo st-price--esgotado"><b>@preco_esgotado</b><span>@preco_esgotado_texto</span></div>
+  <!-- @senao -->
   <div class="st-price st-price--combo"><b><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se valor_parcelado -->@{parcelamento_1}x R$@valor_parcelado_1<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></b><span><!-- @se gratuito = sim -->Sem custo de inscrição.<!-- @senao --><!-- @se preco_vista -->ou R$@preco_vista_1 à vista<!-- @senao -->Valor divulgado na abertura das inscrições.<!-- @fim --><!-- @fim --></span></div>
   <!-- @se preco_prime --><div class="st-price st-price--prime"><b><!-- @se parcelamento -->@{parcelamento_1}x R$@preco_prime_parcelado_1<!-- @senao -->R$@preco_prime_1<!-- @fim --></b><span>@barra_prime<!-- @se parcelamento --> · ou R$@preco_prime_1 à vista<!-- @fim --></span></div><!-- @fim -->
+  <!-- @fim -->
   <a class="cta cta--lime cta--sm" href="#compra" tabindex="-1" id="stickyBtn">@barra_botao</a>
 </div>
 
@@ -3986,7 +4007,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     </div>
     <div class="cp" id="buyBox">
       <div class="cp-card reveal d1">
-        <span class="cp-top"><!-- @se gratuito = sim --><!-- @senao --><!-- @se porcentagem_desconto --><span class="cp-badge">@porcentagem_desconto_1% OFF</span><!-- @fim --><!-- @fim --><button class="cp-i" type="button" aria-expanded="false" aria-controls="cpInfo1" aria-label="@compra_info_titulo @combo_nome @ano"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1.15" fill="currentColor"/></svg></button></span>
+        <span class="cp-top"><!-- @se status = esgotado --><span class="cp-badge cp-badge--esgotado">@preco_esgotado</span><!-- @senao --><!-- @se gratuito = sim --><!-- @senao --><!-- @se porcentagem_desconto --><span class="cp-badge">@porcentagem_desconto_1% OFF</span><!-- @fim --><!-- @fim --><!-- @fim --><button class="cp-i" type="button" aria-expanded="false" aria-controls="cpInfo1" aria-label="@compra_info_titulo @combo_nome @ano"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1.15" fill="currentColor"/></svg></button></span>
         <span class="cp-name">@combo_nome @ano</span>
         <span class="cp-plus">@compra_resumo</span>
         <div class="cp-pop" id="cpInfo1" role="dialog" aria-label="@compra_info_titulo @combo_nome @ano" hidden>
@@ -4001,10 +4022,15 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           </ul><!-- @se compra_nota --><p class="cp-pop-nota">@compra_nota</p><!-- @fim -->
         </div>
         <span class="cp-price">
+            <!-- @se status = esgotado -->
+            <b class="cp-parc cp-esgotado">@preco_esgotado</b>
+            <span class="cp-vista">@preco_esgotado_texto</span>
+            <!-- @senao -->
             <!-- @se gratuito = sim --><!-- @senao --><!-- @se preco_comum --><span class="cp-de">@compra_separado <s>R$@preco_comum_1</s></span><!-- @fim --><!-- @fim -->
             <b class="cp-parc"><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se valor_parcelado -->@{parcelamento_1}x R$@valor_parcelado_1<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></b>
             <span class="cp-vista"><!-- @se gratuito = sim -->Sem custo de inscrição.<!-- @senao --><!-- @se preco_vista -->ou R$@preco_vista_1 à vista<!-- @senao -->Valor divulgado na abertura das inscrições.<!-- @fim --><!-- @fim --></span>
             <!-- @se preco_prime --><span class="cp-prime"><svg class="cp-star" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .9l1.55 3.14 3.47.5-2.51 2.45.59 3.45L6 8.81l-3.1 1.63.59-3.45L.98 4.54l3.47-.5z" fill="currentColor"/></svg><span class="cp-prime-l">@compra_prime_tag</span><span class="cp-prime-v"><!-- @se parcelamento -->@{parcelamento_1}x <b>R$@preco_prime_parcelado_1</b> &middot; <!-- @fim -->R$@preco_prime_1 à vista</span></span><!-- @fim -->
+            <!-- @fim -->
           </span>
         <!-- @se preco_prime -->
         <div class="cp-up">
@@ -4186,98 +4212,6 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   </div>
 </section>
 
-<!-- ================= 7 · DÚVIDAS ================= -->
-<section class="faq sec" id="duvidas" aria-label="Dúvidas">
-  <div class="ctr faq-grid">
-    <div>
-      <span class="kicker reveal"><span class="dot"></span> @duvidas_kicker</span>
-      <h2 class="h2 reveal d1">@duvidas_titulo</h2>
-    </div>
-    <div class="faq-list reveal">
-      <!-- @se faq1_pergunta -->
-      <details class="faq-item">
-        <summary>@faq1_pergunta</summary>
-        <p>@faq1_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq2_pergunta -->
-      <details class="faq-item">
-        <summary>@faq2_pergunta</summary>
-        <p>@faq2_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq3_pergunta -->
-      <details class="faq-item">
-        <summary>@faq3_pergunta</summary>
-        <p>@faq3_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq4_pergunta -->
-      <details class="faq-item">
-        <summary>@faq4_pergunta</summary>
-        <p>@faq4_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq5_pergunta -->
-      <details class="faq-item">
-        <summary>@faq5_pergunta</summary>
-        <p>@faq5_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq6_pergunta -->
-      <details class="faq-item">
-        <summary>@faq6_pergunta</summary>
-        <p>@faq6_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq7_pergunta -->
-      <details class="faq-item">
-        <summary>@faq7_pergunta</summary>
-        <p>@faq7_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq8_pergunta -->
-      <details class="faq-item">
-        <summary>@faq8_pergunta</summary>
-        <p>@faq8_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq9_pergunta -->
-      <details class="faq-item">
-        <summary>@faq9_pergunta</summary>
-        <p>@faq9_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq10_pergunta -->
-      <details class="faq-item">
-        <summary>@faq10_pergunta</summary>
-        <p>@faq10_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq11_pergunta -->
-      <details class="faq-item">
-        <summary>@faq11_pergunta</summary>
-        <p>@faq11_resposta</p>
-      </details>
-      <!-- @fim -->
-      <!-- @se faq12_pergunta -->
-      <details class="faq-item">
-        <summary>@faq12_pergunta</summary>
-        <p>@faq12_resposta</p>
-      </details>
-      <!-- @fim -->
-    </div>
-  </div>
-</section>
-
-<!-- ================= 8 · EXTRAS ================= -->
-<section class="extras" id="extras" aria-label="Extras">
-<div class="ctr extras-head">
-  <span class="kicker reveal"><span class="dot"></span> @extras_kicker</span>
-  <h2 class="h2 reveal d1">@extras_titulo</h2>
-  <p class="lead reveal d2">@extras_texto</p>
-</div>
-</section>
   <section class="modulo" id="mod-gerador" aria-label="Teste: qual a sua química?">
     <details class="mod-fold">
       <summary class="mod-abre capa">
@@ -4286,7 +4220,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <span class="selo-q"></span>
         </div>
         <div class="capa-txt">
-          <h2 class="so-leitor">@teste_titulo</h2>
+          <span class="kicker capa-kicker"><span class="dot"></span> @teste_capa_kicker</span>
+          <h2 class="h2 capa-h">@teste_capa_titulo</h2>
+          <p class="so-leitor">@teste_titulo</p>
           <img class="quatro" src="@img_teste_titulo" alt="" width="640" height="139">
           <p>@teste_capa_linha1<br>@teste_capa_linha2</p>
           <span class="mod-selos"><i class="ic ic-wa" aria-hidden="true"></i><i class="ic ic-ig" aria-hidden="true"></i></span>
@@ -4366,7 +4302,9 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <summary class="mod-abre capa capa-c">
         <div class="capa-art" aria-hidden="true"><span class="cq-hex"></span><img class="selo-c" src="@img_carta_selo" alt="" width="760" height="866"></div>
         <div class="capa-txt">
-          <h2 class="so-leitor">@carta_titulo</h2>
+          <span class="kicker capa-kicker"><span class="dot"></span> @carta_capa_kicker</span>
+          <h2 class="h2 capa-h">@carta_capa_titulo</h2>
+          <p class="so-leitor">@carta_titulo</p>
           <p>@carta_capa_texto</p>
           <span class="capa-btn"></span>
         </div>
@@ -4486,11 +4424,95 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   </div>
 </section>
 
+<!-- ================= 7 · DÚVIDAS ================= -->
+<section class="faq sec" id="duvidas" aria-label="Dúvidas">
+  <div class="ctr faq-grid">
+    <div>
+      <span class="kicker reveal"><span class="dot"></span> @duvidas_kicker</span>
+      <h2 class="h2 reveal d1">@duvidas_titulo</h2>
+    </div>
+    <div class="faq-list reveal">
+      <!-- @se faq1_pergunta -->
+      <details class="faq-item">
+        <summary>@faq1_pergunta</summary>
+        <p>@faq1_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq2_pergunta -->
+      <details class="faq-item">
+        <summary>@faq2_pergunta</summary>
+        <p>@faq2_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq3_pergunta -->
+      <details class="faq-item">
+        <summary>@faq3_pergunta</summary>
+        <p>@faq3_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq4_pergunta -->
+      <details class="faq-item">
+        <summary>@faq4_pergunta</summary>
+        <p>@faq4_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq5_pergunta -->
+      <details class="faq-item">
+        <summary>@faq5_pergunta</summary>
+        <p>@faq5_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq6_pergunta -->
+      <details class="faq-item">
+        <summary>@faq6_pergunta</summary>
+        <p>@faq6_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq7_pergunta -->
+      <details class="faq-item">
+        <summary>@faq7_pergunta</summary>
+        <p>@faq7_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq8_pergunta -->
+      <details class="faq-item">
+        <summary>@faq8_pergunta</summary>
+        <p>@faq8_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq9_pergunta -->
+      <details class="faq-item">
+        <summary>@faq9_pergunta</summary>
+        <p>@faq9_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq10_pergunta -->
+      <details class="faq-item">
+        <summary>@faq10_pergunta</summary>
+        <p>@faq10_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq11_pergunta -->
+      <details class="faq-item">
+        <summary>@faq11_pergunta</summary>
+        <p>@faq11_resposta</p>
+      </details>
+      <!-- @fim -->
+      <!-- @se faq12_pergunta -->
+      <details class="faq-item">
+        <summary>@faq12_pergunta</summary>
+        <p>@faq12_resposta</p>
+      </details>
+      <!-- @fim -->
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="ctr foot">
-    <span class="wordmark" role="img" aria-label="@evento"></span>
+    <span class="foot-marca"><span class="wordmark" role="img" aria-label="@evento"></span><img class="foot-selos" src="@img_marca_selos" alt="" width="640" height="139" loading="lazy"></span>
     <span>@evento @ano — @cidade_1</span>
     <!-- @se link_regulamento --><a href="@link_regulamento">@rodape_regulamento</a><!-- @fim -->
   </div>
@@ -5840,6 +5862,8 @@ carrega();
                @porcentagem_desconto, @preco_comum, @desconto_em_reais, @link_inscricao
   O2 Prime (desconto de assinante, vem do Odoo): @preco_prime, @preco_prime_parcelado. Sem @preco_prime, a linha
                "O2 Prime" do preço, a caixa "Assine o Prime" e a linha Prime da barra fixa somem.
+  Status esgotado (vem do Odoo: saiu de venda depois de ter vendido): página e botões continuam abertos (como "aberta");
+          o preço (bloco de compra e barra fixa) mostra @preco_esgotado e @preco_esgotado_texto.
   Status (3 casos, realizado primeiro): botão da compra = @compra_botao (aberta), @compra_botao_breve (em breve),
           @compra_botao_realizado (realizado). Os botões que levam ao preço (topo, abertura, química, fecho e
           barra fixa) seguem o mesmo status: @botao_combo / @botao_combo_breve / @botao_combo_realizado.
@@ -5877,7 +5901,7 @@ carrega();
       @etapa3_nome, @etapa3_quimica, @etapa3_quimica_tag, @etapa3_frase, @etapa3_linha, @etapa3_kit_alt,
       @etapa4_nome, @etapa4_quimica, @etapa4_quimica_tag, @etapa4_frase, @etapa4_linha, @etapa4_kit_alt
     #mod-gerador (teste "Qual a sua química?"):
-      @teste_etapa1_onde, @teste_etapa2_onde, @teste_etapa3_onde, @teste_etapa4_onde, @teste_titulo,
+      @teste_etapa1_onde, @teste_etapa2_onde, @teste_etapa3_onde, @teste_etapa4_onde, @teste_titulo, @teste_capa_kicker, @teste_capa_titulo,
       @teste_capa_linha1, @teste_capa_linha2, @teste_intro_texto, @teste_botao_comecar, @teste_intro_nota,
       @teste_nome_titulo, @teste_nome_texto, @teste_nome_rotulo, @teste_nome_exemplo, @teste_botao_gerar,
       @teste_refazer, @teste_contador, @teste_p1_pergunta, @teste_p1_etapa1, @teste_p1_etapa2, @teste_p1_etapa3,
@@ -5886,7 +5910,7 @@ carrega();
       @teste_resultado_titulo, @teste_resultado_etapa, @teste_card_frase, @teste_card_rotulo, @teste_card_selo,
       @teste_compartilhar_texto
     #mod-carta (Cartas para o futuro):
-      @etapa1_distancias_1, @etapa2_distancias_1, @etapa3_distancias_1, @etapa4_distancias_1, @carta_titulo,
+      @etapa1_distancias_1, @etapa2_distancias_1, @etapa3_distancias_1, @etapa4_distancias_1, @carta_titulo, @carta_capa_kicker, @carta_capa_titulo,
       @carta_capa_texto, @carta_distancia_rotulo, @carta_distancia_erro, @carta_tempo_rotulo, @carta_tempo_erro,
       @carta_pace_rotulo, @carta_assina_kicker, @carta_assina_titulo, @carta_assina_texto, @carta_nome_rotulo,
       @carta_nome_erro, @carta_email_rotulo, @carta_email_erro, @carta_cpf_rotulo, @carta_cpf_erro, @carta_aceite,
@@ -5906,8 +5930,6 @@ carrega();
       @faq5_resposta, @faq6_pergunta, @faq6_resposta, @faq7_pergunta, @faq7_resposta, @faq8_pergunta, @faq8_resposta,
       @faq9_pergunta, @faq9_resposta, @faq10_pergunta, @faq10_resposta, @faq11_pergunta, @faq11_resposta,
       @faq12_pergunta, @faq12_resposta
-    #extras:
-      @extras_kicker, @extras_titulo, @extras_texto
     Compartilhar cards (teste e carta):
       @compartilhar_stories, @compartilhar_feed, @compartilhar_baixar, @compartilhar_nome_padrao,
       @compartilhar_erro_imagem, @compartilhar_pronto_whatsapp, @compartilhar_pronto_instagram,
@@ -5934,15 +5956,14 @@ carrega();
     @img_icones_whatsapp, @img_icones_instagram — icones/ (.svg brancos, botões de compartilhar)
     @img_quimica_serotonina, @img_quimica_ocitocina, @img_quimica_dopamina, @img_quimica_endorfina — quimica/ (fórmulas)
     @img_quimica_selo_outono, @img_quimica_selo_inverno, @img_quimica_selo_primavera, @img_quimica_selo_verao — quimica/ (selo de cada química)
-    @img_marca_selos — marca/ (selos das estações no topo)
+    @img_marca_selos — marca/ (selos das estações no topo e no rodapé)
     @img_teste_titulo — teste/; @img_carta_selo — carta/
     Todas iguais em todas as páginas.
   Fixos (sem variável, no CSS): marca/ (wordmark e logo dos cards), teste/selo.png, teste/whatsapp.png, teste/instagram.png.
   Setas, (i), check, estrela do Prime, WhatsApp, Instagram e "baixar" são <svg> de interface escritos no HTML.
   Seções (podem ser escondidas ou mudar de ordem; cada uma se sustenta sozinha):
     #topo, #compra, #incluso (hoodie), #etapas (kits), #como-funciona (química da corrida), #duvidas,
-    #extras (abertura do teste e da carta), #mod-gerador, #mod-carta, #fecho.
-    Se esconder #mod-gerador e #mod-carta, esconda #extras junto.
+    #mod-gerador, #mod-carta, #fecho, #duvidas (depois do fecho).
   Patrocinadores: não há seção no HTML (o publicador insere antes do rodapé).
   Rodapé: <footer> fora das seções.
 -->
