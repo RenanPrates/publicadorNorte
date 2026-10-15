@@ -1858,5 +1858,13 @@
   ],
   "versaoAtiva": 2,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T01:02:48.481Z"
+  "atualizadoEm": "2026-10-15T13:56:06.158Z",
+  "producao": {
+    "dominios": [
+      "combos.circuitodasestacoes.com.br"
+    ],
+    "versao": null,
+    "commit": null,
+    "historico": []
+  }
 }
