@@ -1290,7 +1290,7 @@
     "botao_combo": "Garantir meu combo",
     "botao_combo_breve": "Conheça o combo",
     "botao_combo_realizado": "Conheça o combo",
-    "topo_botao_curto": "Garantir",
+    "topo_botao_curto": "Garantir ",
     "combo_nome": "Combo",
     "barra_resumo": "4 etapas + 4 medalhas + hoodie",
     "barra_prime": "Assinante O2 Prime",
@@ -1968,7 +1968,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:41:10.186Z",
+  "atualizadoEm": "2026-10-15T17:41:52.344Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
