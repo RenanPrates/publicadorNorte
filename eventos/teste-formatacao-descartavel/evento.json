@@ -24,7 +24,9 @@
   },
   "gerais": {
     "titulo": "<b>Complete sua mandala.</b>",
-    "texto": "Este bloco vai sumir."
+    "texto": "Este bloco vai sumir.",
+    "rodape_texto": "Este fica.",
+    "link_site": "https://norte.com"
   },
   "cidades": [],
   "etapas": [],
@@ -34,5 +36,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-15T19:53:00.903Z",
-  "atualizadoEm": "2026-10-15T19:55:11.709Z"
+  "atualizadoEm": "2026-10-15T19:55:14.995Z"
 }
