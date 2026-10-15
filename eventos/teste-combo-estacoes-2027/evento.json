@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 641067,
-      "enviadoEm": "2026-10-15T17:36:37.006Z"
+      "bytes": 635859,
+      "enviadoEm": "2026-10-15T20:06:34.788Z"
     }
   },
   "vars": {
@@ -1275,6 +1275,54 @@
     "carta_capa_titulo": {
       "dono": "geral",
       "ignorar": false
+    },
+    "link_inicio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_cidades": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "topo_voltar_cidades": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hero_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "hoodie_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_onde": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_capa_texto": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -1976,7 +2024,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T19:14:11.424Z",
+  "atualizadoEm": "2026-10-15T20:06:39.043Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
