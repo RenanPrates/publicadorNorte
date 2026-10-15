@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 465248,
-      "enviadoEm": "2026-10-14T23:16:50.792Z"
+      "bytes": 639038,
+      "enviadoEm": "2026-10-15T01:01:19.846Z"
     }
   },
   "vars": {
@@ -592,27 +592,27 @@
       "ignorar": false
     },
     "compra_item1": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_item2": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_item3": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_item4": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_item5": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_item6": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "preco_comum": {
@@ -645,39 +645,39 @@
       "ignorar": false
     },
     "compra_prime_item1": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item2": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item3": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item4": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item5": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item6": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item7": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_item8": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_prime_nota": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "compra_botao_realizado": {
@@ -869,7 +869,7 @@
       "ignorar": false
     },
     "faq1_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq1_resposta": {
@@ -877,7 +877,7 @@
       "ignorar": false
     },
     "faq2_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq2_resposta": {
@@ -885,7 +885,7 @@
       "ignorar": false
     },
     "faq3_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq3_resposta": {
@@ -893,7 +893,7 @@
       "ignorar": false
     },
     "faq4_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq4_resposta": {
@@ -901,7 +901,7 @@
       "ignorar": false
     },
     "faq5_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq5_resposta": {
@@ -909,7 +909,7 @@
       "ignorar": false
     },
     "faq6_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq6_resposta": {
@@ -917,7 +917,7 @@
       "ignorar": false
     },
     "faq7_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq7_resposta": {
@@ -925,7 +925,7 @@
       "ignorar": false
     },
     "faq8_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq8_resposta": {
@@ -933,7 +933,7 @@
       "ignorar": false
     },
     "faq9_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq9_resposta": {
@@ -941,7 +941,7 @@
       "ignorar": false
     },
     "faq10_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq10_resposta": {
@@ -949,7 +949,7 @@
       "ignorar": false
     },
     "faq11_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq11_resposta": {
@@ -957,7 +957,7 @@
       "ignorar": false
     },
     "faq12_pergunta": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "faq12_resposta": {
@@ -1173,10 +1173,82 @@
       "ignorar": false
     },
     "link_regulamento": {
-      "dono": "cidade",
+      "dono": "geral",
       "ignorar": false
     },
     "rodape_regulamento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_marca_selos": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "topo_botao_complemento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_lista_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_nota": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "compra_prime_lista_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_selo_outono": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "quim_onde_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_onde_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_onde_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_selo_inverno": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_onde_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_onde_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_selo_primavera": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_onde_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_onde_linha2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_quimica_selo_verao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_onde_linha1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa4_onde_linha2": {
       "dono": "geral",
       "ignorar": false
     }
@@ -1778,5 +1850,5 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-14T23:25:37.509Z"
+  "atualizadoEm": "2026-10-15T01:01:23.702Z"
 }
