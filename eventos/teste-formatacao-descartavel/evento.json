@@ -11,7 +11,8 @@
     },
     "texto": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "ocultar": "bloco"
     },
     "rodape_texto": {
       "dono": "geral",
@@ -36,5 +37,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-15T19:53:00.903Z",
-  "atualizadoEm": "2026-10-15T19:55:18.014Z"
+  "atualizadoEm": "2026-10-15T19:55:23.959Z"
 }
