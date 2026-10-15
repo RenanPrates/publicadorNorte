@@ -3432,6 +3432,8 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 .cp-radio::after{content:""; width:12px; height:12px; border-radius:50%; background:currentColor; transform:scale(0); transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
 .cp-badge{padding:.45rem .8rem; border-radius:999px; background:var(--lime); color:#16141B; font:800 .78rem/1 Archivo,sans-serif; letter-spacing:.08em; text-transform:uppercase}
 .cp-badge--o2{background:#EE366F; color:#fff}
+.cp-badge--esgotado{background:#16141B; color:#F4F1EA}
+.cp-parc.cp-esgotado{text-transform:uppercase; letter-spacing:.04em}
 .cp-name{font-family:Outfit,sans-serif; font-weight:800; font-size:clamp(1.5rem,2.6vw,2rem); letter-spacing:-.02em; line-height:1.05}
 .cp-list{list-style:none; margin:0; padding:0; display:grid; gap:.5rem; font-size:.95rem}
 .cp-list li{display:flex; align-items:center; gap:.6rem}
@@ -3830,6 +3832,22 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 /* v98 — leads do capitulo da quimica na serif do sistema (a mesma do subtitulo da abertura) */
 .quim .lead{font-family:"Newsreader",Georgia,serif; font-weight:300; font-size:clamp(1.1rem,1.45vw,1.38rem); line-height:1.5}
 @media (max-width:760px){ .quim .lead{font-size:1.05rem; line-height:1.48} }
+/* capa do teste com EXTRAS + título da antiga abertura dos extras (a seção #extras saiu) */
+#mod-gerador .capa-txt .capa-kicker{color:rgba(244,241,234,.78); margin:0}
+#mod-gerador .capa-txt .capa-h{font-family:Outfit,sans-serif; color:#F4F1EA; margin:.1rem 0 .2rem; max-width:16ch; text-wrap:balance}
+#mod-gerador .mod-fold[open] .capa-kicker, #mod-gerador .mod-fold[open] .capa-h{display:none}
+
+/* capa da Carta: tag + título como na capa do teste (texto escuro sobre o fundo claro) */
+#mod-carta .capa-c .capa-txt .capa-kicker{color:rgba(22,20,27,.7); margin:0}
+#mod-carta .capa-c .capa-txt .capa-h{font-family:Outfit,sans-serif; color:#16141B; margin:.1rem 0 .2rem; max-width:16ch; text-wrap:balance}
+#mod-carta .mod-fold[open] .capa-kicker, #mod-carta .mod-fold[open] .capa-h{display:none}
+
+/* fecho: +50px de respiro em cima e embaixo */
+.fecho.sec{padding-block:calc(clamp(1.3rem,2vw,1.6rem) + 50px) !important}
+
+/* rodapé: mesma marca do topo (wordmark + selos das estações) */
+.foot-marca{display:inline-flex; align-items:center; gap:.65rem}
+.foot-selos{display:block; height:18px; width:auto; flex:none}
 </style>
 <style>:where(video[data-pub-midia],img[data-pub-midia]){display:block;width:100%;height:100%;object-fit:cover}</style><title>Fortaleza - Combo 2027 — Circuito das Estações</title>
 <meta name="description" content="Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Escolha sua cidade.">
@@ -3908,14 +3926,16 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <a href="#como-funciona">Tema</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="cta cta--sm" href="#compra">Garantir<span class="long">&nbsp;</span></a>
+    <a class="cta cta--sm" href="#compra">Garantir meu combo<span class="long">&nbsp;</span></a>
   </div>
   <span class="scroll-prog" aria-hidden="true"></span>
 </header>
 
 <div class="sticky" id="sticky" aria-hidden="true">
   <div class="st-value"><b>Combo 2027</b><span>4 etapas + 4 medalhas + hoodie</span></div>
+  
   <div class="st-price st-price--combo"><b>10x R$59,99</b><span>ou R$599,90 à vista</span></div>
+  
   
   <a class="cta cta--lime cta--sm" href="#compra" tabindex="-1" id="stickyBtn">Ver preço</a>
 </div>
@@ -4011,8 +4031,10 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
         </div>
         <span class="cp-price">
             
+            
             <b class="cp-parc">10x R$59,99</b>
             <span class="cp-vista">ou R$599,90 à vista</span>
+            
             
           </span>
         
@@ -4109,7 +4131,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
         <article class="qp qp--intro is-on" data-step="0">
           <span class="kicker"><span class="dot"></span> As 4 medalhas – 1 mandala</span>
           <h2 class="qp-h">A Química<br>da <span class="hl">Corrida.</span></h2>
-          <p class="lead">Cada estação desperta uma substância diferente no corpo. E cada etapa te entrega uma peça da medalha.</p>
+          <p class="lead">Cada estação desperta uma substância diferente no corpo. E cada etapa uma nova medalha para sua Mandala.</p>
           <p class="qp-hint"><span class="mouse" aria-hidden="true"></span>Role para montar a sua mandala</p>
         </article>
         <article class="qp qp--out" data-step="1" style="--mol:url('_media/praca/quimica/serotonina.png'); --mr:1.823">
@@ -4117,28 +4139,32 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <h3 class="qp-name">Serotonina</h3>
           <p class="qp-tag">a química do equilíbrio</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Serotonina"></span>
-          <p class="qp-quote">Por alguns quilômetros, os problemas ficam mais silenciosos.</p><div class="qp-onde"><p class="qp-onde-t"></p><p class="qp-onde-l"></p></div>
+          <p class="qp-quote">Por alguns quilômetros, os problemas ficam mais silenciosos.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">No ritmo que encaixa sem esforço.
+No silêncio que fica depois da corrida.</p></div>
         </article>
         <article class="qp qp--inv" data-step="2" style="--mol:url('_media/praca/quimica/ocitocina.png'); --mr:1.472">
           <p class="qp-meta"><img class="qp-el" src="_media/praca/quimica/selo_inverno.webp" alt="Inverno · Ocitocina" width="240" height="241"></p>
           <h3 class="qp-name">Ocitocina</h3>
           <p class="qp-tag">a química da conexão</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Ocitocina"></span>
-          <p class="qp-quote">Existem corridas que começam sozinhas. Quase nenhuma termina assim.</p><div class="qp-onde"><p class="qp-onde-t"></p><p class="qp-onde-l"></p></div>
+          <p class="qp-quote">Existem corridas que começam sozinhas. Quase nenhuma termina assim.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">Na largada compartilhada.
+No abraço depois da chegada.</p></div>
         </article>
         <article class="qp qp--pri" data-step="3" style="--mol:url('_media/praca/quimica/dopamina.png'); --mr:1.356">
           <p class="qp-meta"><img class="qp-el" src="_media/praca/quimica/selo_primavera.webp" alt="Primavera · Dopamina" width="240" height="241"></p>
           <h3 class="qp-name">Dopamina</h3>
           <p class="qp-tag">a química da recompensa</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Dopamina"></span>
-          <p class="qp-quote">Aparece quando você acredita que vale a pena tentar.</p><div class="qp-onde"><p class="qp-onde-t"></p><p class="qp-onde-l"></p></div>
+          <p class="qp-quote">Aparece quando você acredita que vale a pena tentar.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">No primeiro passo de um treino difícil.
+Muito antes da linha de chegada.</p></div>
         </article>
         <article class="qp qp--ver" data-step="4" style="--mol:url('_media/praca/quimica/endorfina.png'); --mr:1.702">
           <p class="qp-meta"><img class="qp-el" src="_media/praca/quimica/selo_verao.webp" alt="Verão · Endorfina" width="240" height="241"></p>
           <h3 class="qp-name">Endorfina</h3>
           <p class="qp-tag">a química do prazer</p>
           <span class="qp-mol" role="img" aria-label="Fórmula estrutural ilustrada da Endorfina"></span>
-          <p class="qp-quote">Não elimina o cansaço, muda a forma como você sente.</p><div class="qp-onde"><p class="qp-onde-t"></p><p class="qp-onde-l"></p></div>
+          <p class="qp-quote">Não elimina o cansaço, muda a forma como você sente.</p><div class="qp-onde"><p class="qp-onde-t">Onde encontrar</p><p class="qp-onde-l">Na subida que parecia impossível.
+Um pouco depois do “só mais um”.</p></div>
         </article>
         <article class="qp qp--final" data-step="5">
           <span class="kicker"><span class="dot"></span> A recompensa</span>
@@ -4171,38 +4197,6 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   </div>
 </section>
 
-<!-- ================= 7 · DÚVIDAS ================= -->
-<section class="faq sec" id="duvidas" aria-label="Dúvidas">
-  <div class="ctr faq-grid">
-    <div>
-      <span class="kicker reveal"><span class="dot"></span> Dúvidas</span>
-      <h2 class="h2 reveal d1">Antes de garantir.</h2>
-    </div>
-    <div class="faq-list reveal">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </div>
-  </div>
-</section>
-
-<!-- ================= 8 · EXTRAS ================= -->
-<section class="extras" id="extras" aria-label="Extras">
-<div class="ctr extras-head">
-  <span class="kicker reveal"><span class="dot"></span> Extras</span>
-  <h2 class="h2 reveal d1">Enquanto a largada não chega.</h2>
-  <p class="lead reveal d2">Descubra qual das quatro químicas combina com você e escreva a carta com os tempos que você promete para {ano}.</p>
-</div>
-</section>
   <section class="modulo" id="mod-gerador" aria-label="Teste: qual a sua química?">
     <details class="mod-fold">
       <summary class="mod-abre capa">
@@ -4211,9 +4205,11 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <span class="selo-q"></span>
         </div>
         <div class="capa-txt">
-          <h2 class="so-leitor">Qual a sua química?</h2>
+          <span class="kicker capa-kicker"><span class="dot"></span> TESTE RÁPIDO</span>
+          <h2 class="h2 capa-h">Enquanto a largada não chega.</h2>
+          <p class="so-leitor">Qual a sua química?</p>
           <img class="quatro" src="_media/praca/teste/titulo.png" alt="" width="640" height="139">
-          <p>Quatro substâncias. Uma é a sua.<br>Descubra aqui e compartilhe.</p>
+          <p>Quatro substâncias. Uma é a sua.<br>Descubra qual das quatro químicas combina com você e compartilhe.</p>
           <span class="mod-selos"><i class="ic ic-wa" aria-hidden="true"></i><i class="ic ic-ig" aria-hidden="true"></i></span>
           <span class="capa-btn"></span>
         </div>
@@ -4291,8 +4287,10 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <summary class="mod-abre capa capa-c">
         <div class="capa-art" aria-hidden="true"><span class="cq-hex"></span><img class="selo-c" src="_media/praca/carta/selo.webp" alt="" width="760" height="866"></div>
         <div class="capa-txt">
-          <h2 class="so-leitor">Cartas para o futuro</h2>
-          <p>Registre aqui seus tempos planejados em cada uma das etapas e acompanhe sua evolução. 😉</p>
+          <span class="kicker capa-kicker"><span class="dot"></span> DESAFIO PESSOAL</span>
+          <h2 class="h2 capa-h">Quanto você vai correr em 2027?</h2>
+          <p class="so-leitor">Cartas para o futuro</p>
+          <p>Registre aqui seus tempos planejados em cada uma das etapas e acompanhe sua evolução.</p>
           <span class="capa-btn"></span>
         </div>
       </summary>
@@ -4409,11 +4407,50 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   </div>
 </section>
 
+<!-- ================= 7 · DÚVIDAS ================= -->
+<section class="faq sec" id="duvidas" aria-label="Dúvidas">
+  <div class="ctr faq-grid">
+    <div>
+      <span class="kicker reveal"><span class="dot"></span> Dúvidas</span>
+      <h2 class="h2 reveal d1">Antes de garantir.</h2>
+    </div>
+    <div class="faq-list reveal">
+      
+      <details class="faq-item">
+        <summary>Posso escolher percursos diferentes em cada etapa?</summary>
+        <p>Pode. O combo garante sua vaga nas quatro etapas e você escolhe o percurso de cada uma delas, até o prazo de alteração de cada prova.</p>
+      </details>
+      
+      
+      <details class="faq-item">
+        <summary>Posso transferir minha inscrição para outra pessoa?</summary>
+        <p>Não. A inscrição é pessoal e intransferível. O que dá para mudar é a distância e o tamanho da camiseta, até 20 dias antes de cada etapa.</p>
+      </details>
+      
+      
+      <details class="faq-item">
+        <summary>Quando recebo o hoodie?</summary>
+        <p>Na retirada do kit da primeira etapa que você correr. O tamanho é escolhido no momento da compra do combo.</p>
+      </details>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="ctr foot">
-    <span class="wordmark" role="img" aria-label="Circuito das Estações"></span>
+    <span class="foot-marca"><span class="wordmark" role="img" aria-label="Circuito das Estações"></span><img class="foot-selos" src="_media/praca/marca/selos.png" alt="" width="640" height="139" loading="lazy"></span>
     <span>Circuito das Estações 2027 — Fortaleza</span>
     
   </div>
@@ -5763,6 +5800,8 @@ carrega();
                @porcentagem_desconto, @preco_comum, @desconto_em_reais, @link_inscricao
   O2 Prime (desconto de assinante, vem do Odoo): @preco_prime, @preco_prime_parcelado. Sem @preco_prime, a linha
                "O2 Prime" do preço, a caixa "Assine o Prime" e a linha Prime da barra fixa somem.
+  Status esgotado (vem do Odoo: saiu de venda depois de ter vendido): página e botões continuam abertos (como "aberta");
+          o preço (bloco de compra e barra fixa) mostra @preco_esgotado e @preco_esgotado_texto.
   Status (3 casos, realizado primeiro): botão da compra = @compra_botao (aberta), @compra_botao_breve (em breve),
           @compra_botao_realizado (realizado). Os botões que levam ao preço (topo, abertura, química, fecho e
           barra fixa) seguem o mesmo status: @botao_combo / @botao_combo_breve / @botao_combo_realizado.
@@ -5800,7 +5839,7 @@ carrega();
       @etapa3_nome, @etapa3_quimica, @etapa3_quimica_tag, @etapa3_frase, @etapa3_linha, @etapa3_kit_alt,
       @etapa4_nome, @etapa4_quimica, @etapa4_quimica_tag, @etapa4_frase, @etapa4_linha, @etapa4_kit_alt
     #mod-gerador (teste "Qual a sua química?"):
-      @teste_etapa1_onde, @teste_etapa2_onde, @teste_etapa3_onde, @teste_etapa4_onde, @teste_titulo,
+      @teste_etapa1_onde, @teste_etapa2_onde, @teste_etapa3_onde, @teste_etapa4_onde, @teste_titulo, @teste_capa_kicker, @teste_capa_titulo,
       @teste_capa_linha1, @teste_capa_linha2, @teste_intro_texto, @teste_botao_comecar, @teste_intro_nota,
       @teste_nome_titulo, @teste_nome_texto, @teste_nome_rotulo, @teste_nome_exemplo, @teste_botao_gerar,
       @teste_refazer, @teste_contador, @teste_p1_pergunta, @teste_p1_etapa1, @teste_p1_etapa2, @teste_p1_etapa3,
@@ -5809,7 +5848,7 @@ carrega();
       @teste_resultado_titulo, @teste_resultado_etapa, @teste_card_frase, @teste_card_rotulo, @teste_card_selo,
       @teste_compartilhar_texto
     #mod-carta (Cartas para o futuro):
-      @etapa1_distancias_1, @etapa2_distancias_1, @etapa3_distancias_1, @etapa4_distancias_1, @carta_titulo,
+      @etapa1_distancias_1, @etapa2_distancias_1, @etapa3_distancias_1, @etapa4_distancias_1, @carta_titulo, @carta_capa_kicker, @carta_capa_titulo,
       @carta_capa_texto, @carta_distancia_rotulo, @carta_distancia_erro, @carta_tempo_rotulo, @carta_tempo_erro,
       @carta_pace_rotulo, @carta_assina_kicker, @carta_assina_titulo, @carta_assina_texto, @carta_nome_rotulo,
       @carta_nome_erro, @carta_email_rotulo, @carta_email_erro, @carta_cpf_rotulo, @carta_cpf_erro, @carta_aceite,
@@ -5829,8 +5868,6 @@ carrega();
       @faq5_resposta, @faq6_pergunta, @faq6_resposta, @faq7_pergunta, @faq7_resposta, @faq8_pergunta, @faq8_resposta,
       @faq9_pergunta, @faq9_resposta, @faq10_pergunta, @faq10_resposta, @faq11_pergunta, @faq11_resposta,
       @faq12_pergunta, @faq12_resposta
-    #extras:
-      @extras_kicker, @extras_titulo, @extras_texto
     Compartilhar cards (teste e carta):
       @compartilhar_stories, @compartilhar_feed, @compartilhar_baixar, @compartilhar_nome_padrao,
       @compartilhar_erro_imagem, @compartilhar_pronto_whatsapp, @compartilhar_pronto_instagram,
@@ -5857,15 +5894,14 @@ carrega();
     @img_icones_whatsapp, @img_icones_instagram — icones/ (.svg brancos, botões de compartilhar)
     @img_quimica_serotonina, @img_quimica_ocitocina, @img_quimica_dopamina, @img_quimica_endorfina — quimica/ (fórmulas)
     @img_quimica_selo_outono, @img_quimica_selo_inverno, @img_quimica_selo_primavera, @img_quimica_selo_verao — quimica/ (selo de cada química)
-    @img_marca_selos — marca/ (selos das estações no topo)
+    @img_marca_selos — marca/ (selos das estações no topo e no rodapé)
     @img_teste_titulo — teste/; @img_carta_selo — carta/
     Todas iguais em todas as páginas.
   Fixos (sem variável, no CSS): marca/ (wordmark e logo dos cards), teste/selo.png, teste/whatsapp.png, teste/instagram.png.
   Setas, (i), check, estrela do Prime, WhatsApp, Instagram e "baixar" são <svg> de interface escritos no HTML.
   Seções (podem ser escondidas ou mudar de ordem; cada uma se sustenta sozinha):
     #topo, #compra, #incluso (hoodie), #etapas (kits), #como-funciona (química da corrida), #duvidas,
-    #extras (abertura do teste e da carta), #mod-gerador, #mod-carta, #fecho.
-    Se esconder #mod-gerador e #mod-carta, esconda #extras junto.
+    #mod-gerador, #mod-carta, #fecho, #duvidas (depois do fecho).
   Patrocinadores: não há seção no HTML (o publicador insere antes do rodapé).
   Rodapé: <footer> fora das seções.
 -->
