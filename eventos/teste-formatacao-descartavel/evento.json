@@ -16,7 +16,8 @@
     },
     "rodape_texto": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "mover": -1
     },
     "link_site": {
       "dono": "geral",
@@ -37,5 +38,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-15T19:53:00.903Z",
-  "atualizadoEm": "2026-10-15T19:55:23.959Z"
+  "atualizadoEm": "2026-10-15T19:55:29.864Z"
 }
