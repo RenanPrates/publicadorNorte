@@ -1453,7 +1453,8 @@
     "compartilhar_dica_instagram": "No Instagram, abra os Stories e escolha a imagem na galeria.",
     "faq1_pergunta": "Posso escolher percursos diferentes em cada etapa?",
     "faq2_pergunta": "Posso transferir minha inscrição para outra pessoa?",
-    "faq3_pergunta": "Quando recebo o hoodie?"
+    "faq3_pergunta": "Quando recebo o hoodie?",
+    "etapa1_onde_linha1": "No ritmo que encaixa sem esforço.\nNo silêncio que fica depois da corrida."
   },
   "cidades": [
     {
@@ -1935,7 +1936,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:19:35.367Z",
+  "atualizadoEm": "2026-10-15T17:20:13.871Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
