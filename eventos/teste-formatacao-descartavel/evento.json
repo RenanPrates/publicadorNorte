@@ -4,8 +4,28 @@
   "nome": "teste formatacao descartavel",
   "formato": "unica",
   "paginas": {},
-  "vars": {},
-  "gerais": {},
+  "vars": {
+    "titulo": {
+      "dono": "geral",
+      "ignorar": false,
+      "ocultar": "texto"
+    },
+    "texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "rodape_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "link_site": {
+      "dono": "geral",
+      "ignorar": false
+    }
+  },
+  "gerais": {
+    "titulo": "Complete sua mandala."
+  },
   "cidades": [],
   "etapas": [],
   "ordem": {},
@@ -14,5 +34,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-15T19:53:00.903Z",
-  "atualizadoEm": "2026-10-15T19:53:00.903Z"
+  "atualizadoEm": "2026-10-15T19:53:36.394Z"
 }
