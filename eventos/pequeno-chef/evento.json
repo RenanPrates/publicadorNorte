@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 223790,
-      "enviadoEm": "2026-10-14T20:57:32.939Z"
+      "bytes": 252618,
+      "enviadoEm": "2026-10-15T21:10:03.257Z"
     }
   },
   "vars": {
@@ -1777,6 +1777,498 @@
     "carreta_ponto9_texto": {
       "dono": "geral",
       "ignorar": false
+    },
+    "arquivo_material_extra": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_material_extracapa": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_extra_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_extra_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_extra_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_extra_baixar": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "material_extra_ver": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula1": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "apostila_rotulo_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "apostila_rotulo_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "apostila_rotulo_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula1_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula2": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula2_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula3": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula3_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula4": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula4_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula5": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula5_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula6": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula6_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula7": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula7_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_cor": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_apostila_aula8": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_chamada": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_subtitulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_destaque": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_cardapio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_rendimento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_tecnicas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_etapas": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_etapas_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_dica": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "aula8_dica_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "apostila_indice": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2152,7 +2644,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-14T21:02:08.818Z",
+  "atualizadoEm": "2026-10-15T21:10:07.676Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
