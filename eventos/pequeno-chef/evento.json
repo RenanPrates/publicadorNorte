@@ -2726,8 +2726,7 @@
     "img_galeria_foto10": "_media/pagina/galeria/foto1.png",
     "img_galeria_foto11": "_media/pagina/galeria/foto2.png",
     "img_equipe_foto1": "_media/pagina/equipe/foto1.png",
-    "img_carreta_externa": "_media/pagina/carreta/externa.webp",
-    "img_marca_logopequeno": "_media/pagina/marca/logo-sm.webp"
+    "img_carreta_externa": "_media/pagina/carreta/externa.webp"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -2782,7 +2781,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-15T21:58:54.347Z",
+  "atualizadoEm": "2026-10-15T21:58:57.965Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
