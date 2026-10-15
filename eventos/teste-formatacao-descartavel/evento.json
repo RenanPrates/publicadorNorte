@@ -7,8 +7,7 @@
   "vars": {
     "titulo": {
       "dono": "geral",
-      "ignorar": false,
-      "ocultar": "texto"
+      "ignorar": false
     },
     "texto": {
       "dono": "geral",
@@ -34,5 +33,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-15T19:53:00.903Z",
-  "atualizadoEm": "2026-10-15T19:53:49.036Z"
+  "atualizadoEm": "2026-10-15T19:55:02.154Z"
 }
