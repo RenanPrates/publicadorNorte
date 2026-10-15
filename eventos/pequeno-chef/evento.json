@@ -2760,9 +2760,9 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-15T21:13:26.220Z",
+  "atualizadoEm": "2026-10-15T21:13:30.430Z",
   "automacao": {
-    "ativo": false,
+    "ativo": true,
     "horas": 8,
     "realizados": []
   },
