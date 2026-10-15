@@ -1365,28 +1365,34 @@
       "ignorar": false
     },
     "tapume_tag_esgotado": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     },
     "tapume_tag_aberta": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     },
     "tapume_tag_realizado": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     },
     "tapume_aviso_botao": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     },
     "tapume_aviso_email": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     },
     "tapume_aviso_enviar": {
-      "dono": "cidade",
-      "ignorar": false
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     },
     "tapume_rodape": {
       "dono": "geral",
@@ -1626,7 +1632,24 @@
     "etapa4_onde": "Na subida que parecia impossível.<br>Um pouco depois do “só mais um”.",
     "link_inicio": "index.html",
     "link_cidades": "index.html#cidades",
-    "topo_voltar_cidades": "Voltar para as cidades"
+    "topo_voltar_cidades": "Voltar para as cidades",
+    "tapume_descricao": "Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Escolha sua cidade.",
+    "tapume_titulo": "Escolha sua cidade",
+    "tapume_texto": "Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Comece escolhendo onde você corre.",
+    "tapume_mandala_alt": "Estudo da mandala do Circuito das Estações, com as quatro medalhas, suas fitas e as quatro químicas anotadas à mão",
+    "tapume_busca_exemplo": "Buscar cidade ou estado",
+    "tapume_contagem_aberta": "com inscrição aberta",
+    "tapume_contagem_breve": "em breve",
+    "tapume_vazio": "Nenhuma cidade encontrada.",
+    "tapume_tag_aberta": "inscreva-se",
+    "tapume_tag_esgotado": "esgotado",
+    "tapume_tag_realizado": "realizado",
+    "tapume_aviso_botao": "avise-me quando lançar",
+    "tapume_aviso_email": "seu@email.com",
+    "tapume_aviso_enviar": "Avisar",
+    "tapume_aviso_ok": "Prontinho! Avisamos você por e-mail assim que {cidade} lançar.",
+    "tapume_aviso_erro": "Não deu pra enviar agora. Tenta de novo em instantes.",
+    "tapume_rodape": "Complete sua mandala"
   },
   "cidades": [
     {
@@ -2177,7 +2200,7 @@
   ],
   "versaoAtiva": 9,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T21:28:08.406Z",
+  "atualizadoEm": "2026-10-15T21:29:05.260Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
