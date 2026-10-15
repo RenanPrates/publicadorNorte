@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 639038,
-      "enviadoEm": "2026-10-15T01:01:19.846Z"
+      "bytes": 641067,
+      "enviadoEm": "2026-10-15T17:36:37.006Z"
     }
   },
   "vars": {
@@ -1251,6 +1251,30 @@
     "etapa4_onde_linha2": {
       "dono": "geral",
       "ignorar": false
+    },
+    "preco_esgotado": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "preco_esgotado_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_capa_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_capa_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_capa_kicker": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_capa_titulo": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -1940,7 +1964,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:24:05.379Z",
+  "atualizadoEm": "2026-10-15T17:36:41.184Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
