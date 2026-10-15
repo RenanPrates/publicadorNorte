@@ -1431,7 +1431,7 @@
     "compra_titulo_linha2": "custa bem menos.",
     "compra_info_titulo": "O que vem no",
     "compra_resumo": "4 etapas, 4 medalhas e o hoodie exclusivo",
-    "compra_separado": "De",
+    "compra_separado": "De:",
     "compra_prime_tag": "O2 Prime",
     "compra_prime_texto": "Assine o Prime agora e já leve esse benefício: <b>1 ano por apenas R$ 99,99</b>.",
     "compra_prime_destaque": "1 ano por apenas R$ 99,99.",
@@ -2208,7 +2208,7 @@
   ],
   "versaoAtiva": 10,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T21:46:33.521Z",
+  "atualizadoEm": "2026-10-15T21:46:41.043Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
