@@ -1347,7 +1347,7 @@
     "duvidas_ajuda_botao": "",
     "faq1_resposta": "Pode. O combo garante sua vaga nas quatro etapas e você escolhe o percurso de cada uma delas, até o prazo de alteração de cada prova.",
     "faq2_resposta": "Não. A inscrição é pessoal e intransferível. O que dá para mudar é a distância e o tamanho da camiseta, até 20 dias antes de cada etapa.",
-    "faq3_resposta": "",
+    "faq3_resposta": "Na retirada do kit da primeira etapa que você correr. O tamanho é escolhido no momento da compra do combo.",
     "faq4_resposta": "",
     "faq5_resposta": "",
     "faq6_resposta": "",
@@ -1935,7 +1935,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:39:02.980Z",
+  "atualizadoEm": "2026-10-15T14:39:19.443Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
