@@ -6,8 +6,8 @@
   "paginas": {
     "tapume": {
       "arquivo": "combo-estacoes-tapume.html",
-      "bytes": 21017,
-      "enviadoEm": "2026-10-14T23:16:42.420Z"
+      "bytes": 22015,
+      "enviadoEm": "2026-10-15T21:17:04.140Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
@@ -1323,6 +1323,74 @@
     "teste_capa_texto": {
       "dono": "geral",
       "ignorar": false
+    },
+    "tapume_descricao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_mandala_alt": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_busca_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_contagem_aberta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_contagem_breve": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_vazio": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_aviso_ok": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_aviso_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "tapume_tag_esgotado": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "tapume_tag_aberta": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "tapume_tag_realizado": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "tapume_aviso_botao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "tapume_aviso_email": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "tapume_aviso_enviar": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "tapume_rodape": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2056,7 +2124,7 @@
   ],
   "versaoAtiva": 8,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T20:43:05.686Z",
+  "atualizadoEm": "2026-10-15T21:17:08.417Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
