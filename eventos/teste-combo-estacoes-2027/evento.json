@@ -1908,7 +1908,7 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:00:16.967Z",
+  "atualizadoEm": "2026-10-15T14:00:21.521Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -1920,7 +1920,7 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-15T13:59:56.519Z",
+      "em": "2026-10-15T14:00:02.791Z",
       "ok": true,
       "mudou": 68,
       "mensagem": "68 valor(es) atualizados em 9 cidade(s).",
