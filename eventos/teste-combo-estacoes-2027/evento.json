@@ -1964,7 +1964,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:36:41.184Z",
+  "atualizadoEm": "2026-10-15T17:37:21.215Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2105,9 +2105,7 @@
     "intervalo": 24
   },
   "secoes": {
-    "ocultas": [
-      "praca#mod-gerador"
-    ],
+    "ocultas": [],
     "porLinha": {},
     "ordem": {
       "praca": [
