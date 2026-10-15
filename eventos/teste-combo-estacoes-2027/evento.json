@@ -1452,7 +1452,8 @@
     "compartilhar_anexar": "e anexar a imagem.",
     "compartilhar_dica_instagram": "No Instagram, abra os Stories e escolha a imagem na galeria.",
     "faq1_pergunta": "Posso escolher percursos diferentes em cada etapa?",
-    "faq2_pergunta": "Posso transferir minha inscrição para outra pessoa?"
+    "faq2_pergunta": "Posso transferir minha inscrição para outra pessoa?",
+    "faq3_pergunta": "Quando recebo o hoodie?"
   },
   "cidades": [
     {
@@ -1934,7 +1935,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:38:54.000Z",
+  "atualizadoEm": "2026-10-15T14:39:02.980Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
