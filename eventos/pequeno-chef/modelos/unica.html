@@ -1138,6 +1138,18 @@ img.truck-ill{object-fit:cover}
 .bk{perspective:2200px}
 @media (max-width:520px){ .ls-nav{gap:5px;flex-wrap:nowrap} .ls-nav .ls-tab{padding:0 9px;font-size:.76rem;min-height:38px} }
 .mf-row .mf-ic{flex:none}
+.tm-tur{display:block;margin-top:12px;text-align:left}
+.tm-tur-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.tm-tur-h b{font-weight:800;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream)}
+.tm-tur-h em{font-style:normal;font-weight:800;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:.3em .7em;border-radius:999px;background:var(--orange);color:var(--ink)}
+.tm-tur ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:6px}
+.tm-tur li{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 12px;padding:8px 12px;border-radius:12px;background:rgba(243,223,202,.08);border:1px solid rgba(243,223,202,.18);font-size:.86rem;line-height:1.25}
+.tm-tur li b{color:var(--cream);font-weight:800;white-space:nowrap}
+.tm-tur li span{color:#E4D9CC}
+.tm-tur li small{font-weight:700;font-size:.78rem;color:var(--orange);white-space:nowrap}
+.tm-tur li small{grid-column:2}
+@media (min-width:520px){ .tm-tur ul{grid-template-columns:1fr 1fr} .tm-tur li{grid-template-columns:auto 1fr} .tm-tur li small{grid-column:1 / -1} }
+@media (min-width:900px){ .tm-tur ul{grid-template-columns:1fr} .tm-tur li{grid-template-columns:auto 1fr auto} .tm-tur li small{grid-column:auto} }
 </style>
 </head>
 <body>
@@ -1417,11 +1429,11 @@ img.truck-ill{object-fit:cover}
       <div class="tm-cities" role="radiogroup" aria-label="@contagem_escolha" id="tmCities">
 <!-- @repetir cidades -->
 <!-- @se status = aberta -->
-<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@periodo_extenso</b><br>@rotulo_local <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --> · @rotulo_horario <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --></span><span class="tm-go-t" hidden>@contagem_botao <b>@cidade</b></span></button>
+<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@periodo_extenso</b><br>@rotulo_local <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --><!-- @se turmas --><span class="tm-tur" data-turmas="@turmas"><span class="tm-tur-h"><b>@contagem_turmas_titulo</b><!-- @se contagem_turmas_selo --><em>@contagem_turmas_selo</em><!-- @fim --></span><ul></ul></span><!-- @senao --> · @rotulo_horario <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></span><span class="tm-go-t" hidden>@contagem_botao <b>@cidade</b></span></button>
 <!-- @senao --><!-- @se status = realizado -->
 <button type="button" role="radio" aria-checked="false" class="past" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@contagem_encerrada_status</b> @contagem_encerrada_texto</span><span class="tm-go-t" hidden>@contagem_botao_encerrada</span></button>
 <!-- @senao -->
-<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@periodo_extenso</b><br>@rotulo_local <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --> · @rotulo_horario <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --></span><span class="tm-go-t" hidden>@contagem_botao <b>@cidade</b></span></button>
+<button type="button" role="radio" aria-checked="false" data-start="@data_inicio">@cidade<small>@data_inicio_curta</small><span class="tm-info" hidden><b>@periodo_extenso</b><br>@rotulo_local <!-- @se local -->@local<!-- @senao -->A confirmar<!-- @fim --><!-- @se turmas --><span class="tm-tur" data-turmas="@turmas"><span class="tm-tur-h"><b>@contagem_turmas_titulo</b><!-- @se contagem_turmas_selo --><em>@contagem_turmas_selo</em><!-- @fim --></span><ul></ul></span><!-- @senao --> · @rotulo_horario <!-- @se horario -->@horario<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></span><span class="tm-go-t" hidden>@contagem_botao <b>@cidade</b></span></button>
 <!-- @fim -->
 <!-- @fim -->
 <!-- @fim -->
@@ -1887,6 +1899,16 @@ img.truck-ill{object-fit:cover}
       btns.forEach(function(b, j){ b.setAttribute('aria-checked', j === i ? 'true' : 'false'); b.tabIndex = j === i ? 0 : -1; });
       var c = info(btns[i]), t = target(c);
       status.innerHTML = c.html;
+      /* turmas da cidade: "Turma 1 | Manhã | 08h00 às 12h00 | 17/out a 22/out ; Turma 2 | …" */
+      [].forEach.call(status.querySelectorAll('.tm-tur[data-turmas]'), function(box){
+        var ul = box.querySelector('ul'); ul.innerHTML = '';
+        (box.getAttribute('data-turmas') || '').split(';').forEach(function(t){
+          var f = t.split('|').map(function(x){ return x.trim(); }); if(!f[0] || /^@/.test(f[0])) return;
+          var li = document.createElement('li'), b = document.createElement('b'), sp = document.createElement('span'), sm = document.createElement('small');
+          b.textContent = f[0]; sp.textContent = f.slice(1, -1).filter(Boolean).join(' · ') || ''; sm.textContent = f.length > 1 ? f[f.length - 1] : '';
+          li.appendChild(b); li.appendChild(sp); li.appendChild(sm); ul.appendChild(li);
+        });
+      });
       go.innerHTML = '<span>' + c.go + '</span>'; go.setAttribute('href', c.past ? '#contagem' : '#inscricao');
       tell.href = 'https://wa.me/?text=' + encodeURIComponent(msg(c) + ' ' + siteUrl() + '#contagem');
       tell.dataset.msg = msg(c);
@@ -2879,6 +2901,8 @@ img.truck-ill{object-fit:cover}
     @aulaN_rendimento, @aulaN_tecnicas e @aulaN_etapas (itens separados por " • "), @aulaN_etapas_titulo, @aulaN_dica_titulo,
     @aulaN_dica; imagem @img_apostila_aulaN (pasta apostila/). Rótulos: @apostila_indice, @apostila_rotulo_cardapio,
     @apostila_rotulo_rendimento, @apostila_rotulo_tecnicas. As abas e o índice da capa são montados a partir das folhas.
+  Turmas (por cidade, na contagem): @turmas — "Turma 1 | Manhã | 08h00 às 12h00 | 17/out a 22/out ; Turma 2 | …".
+    Com turmas, elas substituem o horário. Títulos: @contagem_turmas_titulo, @contagem_turmas_selo.
   Material extra (opcional): @arquivo_material_extra (PDF, pasta material/), @img_material_extracapa, @material_extra_rotulo,
     @material_extra_titulo, @material_extra_texto, @material_extra_baixar, @material_extra_ver.
   Opcionais: O2 Prime não usado. Sem parcelamento e sem desconto.
