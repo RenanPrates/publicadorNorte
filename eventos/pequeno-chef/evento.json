@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 252618,
-      "enviadoEm": "2026-10-15T21:10:03.257Z"
+      "bytes": 255438,
+      "enviadoEm": "2026-10-15T21:22:15.799Z"
     }
   },
   "vars": {
@@ -2269,6 +2269,18 @@
     "apostila_indice": {
       "dono": "geral",
       "ignorar": false
+    },
+    "turmas": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "contagem_turmas_titulo": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "contagem_turmas_selo": {
+      "dono": "cidade",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2760,7 +2772,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-15T21:21:57.186Z",
+  "atualizadoEm": "2026-10-15T21:22:20.171Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
