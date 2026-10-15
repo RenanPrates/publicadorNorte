@@ -1334,7 +1334,7 @@
     "quim_titulo_linha1": "A Química",
     "quim_titulo_linha2": "da",
     "quim_titulo_destaque": "Corrida.",
-    "quim_texto": "Cada estação desperta uma substância diferente no corpo. E cada etapa te entrega uma peça da medalha.",
+    "quim_texto": "Cada estação desperta uma substância diferente no corpo. E cada etapa uma nova medalha para sua Mandala.",
     "quim_dica": "Role para montar a sua mandala",
     "quim_final_kicker": "A recompensa",
     "quim_final_titulo": "Mandala",
@@ -1935,7 +1935,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:18:26.159Z",
+  "atualizadoEm": "2026-10-15T17:19:35.367Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
