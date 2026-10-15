@@ -1976,7 +1976,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T18:16:26.961Z",
+  "atualizadoEm": "2026-10-15T19:14:11.424Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2132,6 +2132,11 @@
         "fecho",
         "duvidas"
       ]
+    }
+  },
+  "seo": {
+    "share": {
+      "imagem": "_media/seo/compartilhar.jpg"
     }
   }
 }
