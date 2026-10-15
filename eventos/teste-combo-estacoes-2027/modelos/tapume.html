@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Combo @ano — @evento</title>
-<meta name="description" content="Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Escolha sua cidade.">
+<meta name="description" content="@tapume_descricao">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Schibsted+Grotesk:wght@700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
@@ -15,20 +15,15 @@
     --fg:#11141D; --fg-prose:#2E3442; --muted:#6E7488;
     --rule:rgba(17,20,29,.13); --rule-2:rgba(17,20,29,.17);
     --metal:#8E6F28; --on-metal:#F7F3E8;
+    --cta:#D61B3A; --on-cta:#FFFFFF;
+    --aviso:#8E6F28; --on-aviso:#F7F3E8;
     --t-outono:#CE1432; --t-inverno:#7A1FB8; --t-primavera:#6E9312; --t-verao:#D63B00;
     --a:Archivo,system-ui,sans-serif;
     --g:"Schibsted Grotesk",Archivo,sans-serif;
     --s:"Newsreader",Georgia,serif;
   }
-  :root[data-theme="dark"]{
-    --bg:#070A12; --bg-2:#0D1220; --bg-3:#141B2C;
-    --fg:#F1EEE7; --fg-prose:#D3D7E2; --muted:#8D95AA;
-    --rule:rgba(255,255,255,.09); --rule-2:rgba(255,255,255,.12);
-    --metal:#D8BE80; --on-metal:#1A1305;
-    --t-outono:#FF4D66; --t-inverno:#B45CF0; --t-primavera:#CAF34A; --t-verao:#FF6A2B;
-  }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth; background:var(--bg); color-scheme:light dark}
+  html{scroll-behavior:smooth; background:var(--bg); color-scheme:light}
   body{margin:0; background:var(--bg); color:var(--fg); font-family:var(--a); font-size:17px; line-height:1.55; overflow-x:hidden}
   img{max-width:100%; height:auto}
   h1,h2,h3{font-family:var(--g); font-weight:900; letter-spacing:-.03em; line-height:.98; margin:0}
@@ -37,29 +32,12 @@
   .prose{font-family:var(--s); font-weight:300; font-size:clamp(1.05rem,2.2vw,1.28rem); line-height:1.6; color:var(--fg-prose)}
   .rot{font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--metal)}
 
-  /* barra */
-  .topbar{position:fixed; inset:0 0 auto 0; z-index:50; border-bottom:1px solid transparent;
-    background:color-mix(in srgb, var(--bg) 88%, transparent);
-    -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); transition:border-color .35s}
-  .topbar.solto{border-bottom-color:var(--rule)}
-  .tb-inner{width:var(--shell); margin-inline:auto; height:62px; display:flex; align-items:center; gap:1.4rem}
-  .marca{width:206px; height:21px; flex:none; display:block; background:var(--fg);
-    -webkit-mask:url("@img_marca_logo") no-repeat left center/contain;
-    mask:url("@img_marca_logo") no-repeat left center/contain}
-  .selos{display:none; height:24px; width:auto; flex:none; margin-left:.6rem}
-  .tb-acoes{margin-left:auto; display:flex; align-items:center; gap:.6rem}
-  .tema{width:38px; height:38px; flex:none; border-radius:999px; border:1px solid var(--rule-2);
-    background:transparent; color:var(--fg); display:grid; place-items:center; cursor:pointer}
-  .tema svg{width:19px; height:19px}
-  :root[data-theme="light"] .i-sun{display:none}
-  :root[data-theme="dark"] .i-moon{display:none}
   .cta{display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
     border:0; border-radius:999px; padding:1rem 2rem; cursor:pointer;
     font-family:var(--a); font-weight:700; font-size:1rem; letter-spacing:-.01em;
     background:var(--fg); color:var(--bg); transition:transform .2s, opacity .2s}
   .cta:hover{transform:translateY(-2px)}
   .cta-mini{padding:.62rem 1.15rem; font-size:.88rem; white-space:nowrap}
-  @media (min-width:620px){ .selos{display:block} }
 
   /* abertura compacta */
   .abre{padding-block:clamp(4.5rem,10vh,6.5rem) clamp(1.5rem,3vh,2.2rem)}
@@ -87,7 +65,7 @@
     .abre .shell{width:min(1420px, calc(100% - 3rem))}
     .abre-grade{grid-template-columns:1fr 1.15fr; gap:clamp(1rem,2vw,2rem)}
     .abre h1{font-size:clamp(3rem,4.6vw,5.4rem)}
-    .abre .prose{font-size:clamp(1.15rem,1.5vw,1.5rem); max-width:24ch}
+    .abre .prose{font-size:clamp(1.15rem,1.5vw,1.5rem); max-width:48ch}
     .abre .olho{font-size:.82rem}
     .abre-art{width:min(100%, 76svh); max-width:none; margin-left:auto; margin-right:0}
     .abre-txt{order:0} .abre-art{order:1}
@@ -116,25 +94,42 @@
   @media (min-width:700px){ .grade{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (min-width:1040px){ .grade{grid-template-columns:repeat(3,minmax(0,1fr))} }
   .praca{display:block; text-decoration:none; color:inherit; border:1px solid var(--rule-2);
-    border-radius:16px; padding:1.1rem 1.25rem 1rem; background:var(--bg-2); transition:border-color .2s, transform .2s}
+    border-radius:16px; padding:1.6rem 1.5rem; background:var(--bg-2); transition:border-color .2s, transform .2s;
+    order:1}
+  .praca.aberta{order:0}
   .praca.aberta:hover{border-color:var(--metal); transform:translateY(-3px)}
   .praca.breve{opacity:.62}
-  .p-topo{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.5rem .8rem; margin-bottom:.7rem}
-  .praca h3{font-size:clamp(1.25rem,2.4vw,1.55rem); min-width:0; overflow-wrap:anywhere}
+  .praca h3{font-size:clamp(1.25rem,2.4vw,1.55rem); min-width:0; overflow-wrap:anywhere; margin:0 0 .9rem}
   .uf{font-family:var(--a); font-weight:600; font-size:.72rem; letter-spacing:.14em;
     color:var(--muted); margin-left:.5rem; vertical-align:middle}
-  .tag{flex:0 0 auto; max-width:100%; white-space:nowrap;
-    font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
-    padding:.35rem .65rem; border-radius:999px}
-  .tag.aberta{background:var(--fg); color:var(--bg)}
-  .tag.breve{border:1px solid var(--rule-2); color:var(--muted)}
-  .p-meses{display:flex; flex-wrap:wrap; gap:.55rem; margin:0; font-size:.86rem; font-weight:600}
-  .p-meses .mes{color:var(--ct); position:relative; padding-left:.75rem}
-  .p-meses .mes::before{content:""; position:absolute; left:0; top:.42em; width:6px; height:6px;
-    border-radius:2px; background:var(--c)}
-  .p-ir{display:block; margin-top:.9rem; padding-top:.75rem; border-top:1px solid var(--rule);
-    font-size:.85rem; font-weight:600; letter-spacing:.02em; color:var(--metal)}
-  .praca.breve .p-ir{color:var(--muted)}
+  .tag{display:inline-block; max-width:100%; white-space:nowrap;
+    font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    padding:.45rem .8rem; border-radius:999px}
+  .tag.aberta{background:var(--cta); color:var(--on-cta)}
+  .tag.breve{background:var(--aviso); color:var(--on-aviso); opacity:.55; transition:opacity .2s}
+  .tag.esgotado{background:var(--fg); color:var(--bg)}
+  .tag.realizada{border:1px solid var(--rule-2); color:var(--muted)}
+  .praca.realizada{order:2; opacity:.75}
+  button.tag{font-family:inherit; line-height:inherit; cursor:pointer; border:0; background:none; -webkit-appearance:none; appearance:none}
+  button.tag.breve:hover, button.tag.breve:focus-visible{opacity:1}
+  .aviso-form{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem}
+  .aviso-email{flex:1 1 150px; min-width:0; font:inherit; font-size:.85rem;
+    padding:.5rem .8rem; border-radius:999px; border:1px solid var(--rule-2);
+    background:color-mix(in srgb, var(--metal) 8%, var(--bg)); color:var(--fg)}
+  .aviso-email:focus-visible{outline:2px solid var(--metal); outline-offset:2px}
+  .aviso-email:-webkit-autofill,
+  .aviso-email:-webkit-autofill:hover,
+  .aviso-email:-webkit-autofill:focus{
+    -webkit-text-fill-color:var(--fg);
+    -webkit-box-shadow:0 0 0 1000px color-mix(in srgb, var(--metal) 8%, var(--bg)) inset;
+    box-shadow:0 0 0 1000px color-mix(in srgb, var(--metal) 8%, var(--bg)) inset;
+    transition:background-color 9999s ease-in-out 0s;
+  }
+  .aviso-enviar{flex:0 0 auto; font:inherit; font-size:.76rem; font-weight:700;
+    letter-spacing:.06em; text-transform:uppercase; padding:.5rem 1rem; border-radius:999px;
+    border:0; background:var(--metal); color:var(--on-metal); cursor:pointer}
+  .aviso-enviar:disabled{opacity:.55; cursor:default}
+  .aviso-msg{margin:.8rem 0 0; font-size:.82rem; color:var(--muted)}
 
   /* hoodie */
   .hoodie{--bg:#08080A; --fg:#F1EEE7; --muted:#8D95AA; background:var(--bg); color:var(--fg);
@@ -159,9 +154,8 @@
   /* rodapé */
   footer{padding:3rem 0 4rem; border-top:1px solid var(--rule); text-align:center}
   footer .small{font-size:.85rem; color:var(--muted)}
-  .demo-faixa{background:#C2410C; color:#fff; text-align:center; font-size:.78rem;
-    font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.5rem 1rem}
   @media (max-width:619px){
+    .legenda{display:none}
     .abre{padding-block:clamp(2.5rem,6vh,4rem) clamp(1rem,2vh,1.6rem)}
     .abre-art{
       width:100vw; max-width:100vw;
@@ -169,21 +163,16 @@
       overflow:hidden;
     }
     .abre-grade{gap:clamp(1rem,2.5vh,1.6rem)}
-    .p-ir{display:none}
-    .praca{padding:.95rem 1.1rem}
-    .p-topo{margin-bottom:.5rem}
+    .praca{padding:1.3rem 1.2rem}
+    .praca h3{margin-bottom:.7rem}
     .praca.aberta{position:relative}
     .praca.aberta::after{content:"›"; position:absolute; right:1.1rem; bottom:.8rem;
       font-size:1.4rem; line-height:1; color:var(--metal); opacity:.7}
   }
   @media (max-width:479px){
-    .marca{width:150px; height:16px}
     .cta-mini{padding:.5rem .85rem; font-size:.78rem}
-    .tema{width:34px; height:34px}
-    .tb-inner{height:58px; gap:.5rem}
-    .tag{font-size:.6rem; padding:.3rem .55rem}
+    .tag{font-size:.68rem; padding:.4rem .7rem}
     .praca h3{font-size:1.2rem}
-    .p-topo{flex-direction:column; align-items:flex-start; gap:.55rem}
   }
 
   .barra-busca{display:flex; flex-wrap:wrap; align-items:center; gap:.9rem 1.4rem; margin:.6rem 0 clamp(1.4rem,3.5vh,2.2rem)}
@@ -194,49 +183,20 @@
   }
   #busca:focus{outline:2px solid var(--metal); outline-offset:2px}
   .contagem{margin:0}
-  .regiao{padding:0 0 clamp(1.4rem,3vh,2rem)}
-  .regiao[hidden]{display:none}
-  .reg-nome{
-    font-family:var(--a); font-weight:700; font-size:.76rem; letter-spacing:.18em;
-    text-transform:uppercase; color:var(--muted); margin:0 0 .8rem;
-    display:flex; align-items:center; gap:.6rem;
-  }
-  .reg-nome span{font-size:.7rem; opacity:.7}
-  .reg-nome::after{content:""; flex:1; height:1px; background:var(--rule)}
   .vazio{color:var(--muted); margin:1rem 0 3rem}
   .praca[hidden]{display:none}
 </style>
-<script>
-  (function(){ var t="light";
-    try{ var g=localStorage.getItem("combo2027-tema"); if(g==="dark"||g==="light") t=g; }catch(e){}
-    document.documentElement.setAttribute("data-theme", t); })();
-</script>
 </head>
 <body>
-
-<header class="topbar" id="topbar">
-  <div class="tb-inner">
-    <a class="marca" href="#topo" aria-label="@evento"></a>
-    <img class="selos" src="@img_selos_estacoes" alt="" width="640" height="139">
-    <div class="tb-acoes">
-      <button class="tema" id="tema" type="button" aria-label="Alternar entre tema claro e escuro">
-        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
-        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></svg>
-      </button>
-      
-    </div>
-  </div>
-</header>
-
 
 <section class="abre" id="topo">
   <div class="shell abre-grade">
     <div class="abre-txt">
       <p class="olho">@evento · @ano</p>
-      <h1>Escolha sua cidade</h1>
-      <p class="prose">Quatro etapas, quatro medalhas que se encaixam e um hoodie exclusivo. Comece escolhendo onde você corre.</p>
+      <h1>@tapume_titulo</h1>
+      <p class="prose">@tapume_texto</p>
     </div>
-    <svg class="abre-art" id="mandala" viewBox="-318 -316 640 622" role="img" aria-label="Estudo da mandala do Circuito das Estações, com as quatro medalhas, suas fitas e as quatro químicas anotadas à mão">
+    <svg class="abre-art" id="mandala" viewBox="-318 -316 640 622" role="img" aria-label="@tapume_mandala_alt">
             <g class="notas"><image href="@img_mandala_anotacoes" x="-314.53" y="-313.37" width="620.93" height="613.95"/></g>
             <g class="peca" style="--dx:-140px; --dy:-118px; --giro:-7deg; --atraso:0.15s"><image href="@img_mandala_medalha_outono" x="-298.26" y="-310.47" width="304.07" height="316.28"/></g>
             <g class="peca" style="--dx:140px; --dy:-118px; --giro:7deg; --atraso:0.41s"><image href="@img_mandala_medalha_inverno" x="-5.23" y="-297.09" width="302.33" height="302.91"/></g>
@@ -248,40 +208,43 @@
 
 <section class="cidades" id="cidades">
   <div class="shell">
-    <p class="legenda"><span style="--c:#EE2140">Outono</span><span style="--c:#9426DB">Inverno</span><span style="--c:#CAF34A">Primavera</span><span style="--c:#F7490A">Verão</span></p>
+    <p class="legenda"><span style="--c:#EE2140">@etapa1_nome</span><span style="--c:#9426DB">@etapa2_nome</span><span style="--c:#CAF34A">@etapa3_nome</span><span style="--c:#F7490A">@etapa4_nome</span></p>
     <div class="barra-busca">
-      <input type="search" id="busca" placeholder="Buscar cidade ou estado" autocomplete="off" aria-label="Buscar cidade">
-      <p class="contagem" id="contagem"><b>@total_aberta com inscrição aberta</b> · @total_breve em breve</p>
+      <input type="search" id="busca" placeholder="@tapume_busca_exemplo" autocomplete="off" aria-label="@tapume_busca_exemplo">
+      <p class="contagem" id="contagem"><b>@total_aberta @tapume_contagem_aberta</b> · @total_breve @tapume_contagem_breve</p>
     </div>
-    <p class="vazio" id="vazio" hidden>Nenhuma cidade encontrada.</p>
-<!-- @agrupar por regiao -->
-        <section class="regiao" data-regiao="@regiao">
-          <h3 class="reg-nome">@regiao <span>@total_cidades</span></h3>
-          <div class="grade">
+    <p class="vazio" id="vazio" hidden>@tapume_vazio</p>
+    <div class="grade" data-evento="@evento" data-ano="@ano" data-aviso-ok="@tapume_aviso_ok" data-aviso-erro="@tapume_aviso_erro">
 <!-- @repetir cidades -->
 <!-- @se status = aberta -->
-          <a class="praca aberta" href="@url" data-busca="@cidade @uf @regiao">
-            <div class="p-topo"><h3>@cidade<span class="uf">@uf</span></h3><span class="tag aberta">inscrições abertas</span></div>
-            <p class="p-meses"><span class="mes" style="--c:#EE2140; --ct:var(--t-outono)">@mes_outono_abrev</span><span class="mes" style="--c:#9426DB; --ct:var(--t-inverno)">@mes_inverno_abrev</span><span class="mes" style="--c:#CAF34A; --ct:var(--t-primavera)">@mes_primavera_abrev</span><span class="mes" style="--c:#F7490A; --ct:var(--t-verao)">@mes_verao_abrev</span></p>
-            <span class="p-ir">Ver o Combo desta cidade</span>
-          </a>
+      <a class="praca aberta" href="@url" data-busca="@cidade @uf @regiao">
+        <h3>@cidade<span class="uf">@uf</span></h3>
+        <!-- @se status = esgotado --><span class="tag esgotado">@tapume_tag_esgotado</span><!-- @senao --><span class="tag aberta">@tapume_tag_aberta</span><!-- @fim -->
+      </a>
+<!-- @senao --><!-- @se status = realizado -->
+      <a class="praca realizada" href="@url" data-busca="@cidade @uf @regiao">
+        <h3>@cidade<span class="uf">@uf</span></h3>
+        <span class="tag realizada">@tapume_tag_realizado</span>
+      </a>
 <!-- @senao -->
-          <div class="praca breve" aria-disabled="true" data-busca="@cidade @uf @regiao">
-            <div class="p-topo"><h3>@cidade<span class="uf">@uf</span></h3><span class="tag breve">em breve</span></div>
-            <p class="p-meses"><span class="mes" style="--c:#EE2140; --ct:var(--t-outono)">@mes_outono_abrev</span><span class="mes" style="--c:#9426DB; --ct:var(--t-inverno)">@mes_inverno_abrev</span><span class="mes" style="--c:#CAF34A; --ct:var(--t-primavera)">@mes_primavera_abrev</span><span class="mes" style="--c:#F7490A; --ct:var(--t-verao)">@mes_verao_abrev</span></p>
-            <span class="p-ir">Avise-me quando abrir</span>
-          </div>
+      <div class="praca breve" data-busca="@cidade @uf @regiao" data-cidade="@cidade" data-uf="@uf">
+        <h3>@cidade<span class="uf">@uf</span></h3>
+        <button type="button" class="tag breve aviso-toggle" aria-expanded="false">@tapume_aviso_botao</button>
+        <form class="aviso-form" hidden novalidate>
+          <input type="email" class="aviso-email" placeholder="@tapume_aviso_email" aria-label="@tapume_aviso_email · @cidade" required>
+          <button type="submit" class="aviso-enviar">@tapume_aviso_enviar</button>
+        </form>
+        <p class="aviso-msg" hidden></p>
+      </div>
+<!-- @fim --><!-- @fim -->
 <!-- @fim -->
-<!-- @fim -->
-          </div>
-        </section>
-<!-- @fim -->
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="shell">
-    <p class="small">@evento @ano · Complete sua mandala</p>
+    <p class="small">@evento @ano · @tapume_rodape</p>
   </div>
 </footer>
 
@@ -290,37 +253,75 @@
 
   GERAIS (um valor para todas as páginas)
   - @evento, @ano
+  - Textos desta página: @tapume_descricao (descrição para o Google), @tapume_titulo, @tapume_texto,
+    @tapume_mandala_alt, @tapume_busca_exemplo, @tapume_contagem_aberta, @tapume_contagem_breve,
+    @tapume_vazio, @tapume_tag_aberta, @tapume_tag_esgotado, @tapume_tag_realizado,
+    @tapume_aviso_botao, @tapume_aviso_email, @tapume_aviso_enviar, @tapume_aviso_ok, @tapume_aviso_erro
+    ({cidade} nas mensagens vira o nome da cidade), @tapume_rodape.
+  - Legenda das estações: @etapa1_nome … @etapa4_nome (os mesmos da página da praça).
 
   CARDS DAS PRAÇAS — um card só, repetido pelo publicador
   - O bloco entre "@repetir cidades" e o "@fim" correspondente sai uma vez
     para cada cidade do cadastro, na ordem do cadastro. Cadastrou 10, saem
     10 cards; nenhum fica vazio.
-  - "@agrupar por regiao" separa os cards em uma <section> por região, na
-    ordem em que cada região aparece pela primeira vez no cadastro.
+  - Sem agrupamento por região: todos os cards saem juntos na mesma grade
+    (.grade), na ordem do cadastro. @regiao continua existindo como coluna
+    (e entra em data-busca, pra pesquisar por região funcionar), só não
+    separa mais os cards em seções visuais. Se um dia precisar agrupar de
+    novo, envolver o <div class="grade"> com o comentário que abre o
+    agrupamento por região e o fim correspondente.
+  - Dentro da grade, quem decide a ordem visual é o CSS, não o cadastro:
+    "order:1" no .praca e "order:0" no .praca.aberta (em .grade{display:
+    grid}) fazem as cidades com inscrição aberta aparecerem sempre antes
+    das "em breve", não importa a posição de cada uma no cadastro.
   - "@se status = aberta" / "@senao": cidade com status "aberta" sai como
-    link (<a>, com "inscrições abertas" e "Ver o Combo desta cidade");
-    qualquer outro status sai como card "em breve" sem link. Abrir uma
-    cidade = trocar o status dela no cadastro, sem mexer neste HTML.
+    link (<a>) com a tag "inscreva-se" abaixo do nome, na cor de destaque
+    #D61B3A (tokens --cta/--on-cta do CSS); qualquer outro status sai como
+    card "em breve" sem link, com um BOTÃO "avise-me quando lançar" no
+    lugar, na cor #8E6F28 esmaecida (tokens --aviso/--on-aviso), que volta
+    a 100% de opacidade no hover/focus.
+    Abrir uma cidade = trocar o status dela no cadastro, sem mexer neste
+    HTML. "esgotado" (preços do Odoo) sai como a aberta, com link, e a tag
+    @tapume_tag_esgotado; "realizado" sai com link e a tag @tapume_tag_realizado,
+    depois das em breve.
   - Dentro do card, variáveis SEM número são da cidade do card:
     @cidade, @uf, @regiao (colunas do cadastro).
-  - @mes_outono_abrev, @mes_inverno_abrev, @mes_primavera_abrev,
-    @mes_verao_abrev: colunas da cidade ("Mai"), preenchidas pelo Odoo a partir
-    da data de cada etapa (a praça não mostra mais o mês por extenso).
   - @url: automática, o arquivo gerado para a página daquela cidade.
+  - O card não mostra os meses de cada etapa.
+
+  CAPTAÇÃO "AVISE-ME QUANDO LANÇAR" (só nos cards "em breve")
+  - Clicar no botão "avise-me quando lançar" revela um campo de e-mail e um
+    botão "Avisar" dentro do próprio card (sem sair da página).
+  - Ao enviar, o JS faz um POST em JSON para o webhook abaixo com
+    {email, evento, ano, cidade, uf} e troca o formulário por uma mensagem
+    de confirmação; se o POST falhar, mostra uma mensagem de erro e deixa
+    tentar de novo.
+  - Endpoint fixo (não é variável do Publicador — igual aos arquivos fixos
+    de _media, não muda por evento/publicação):
+    https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar
+    Um único endpoint recebe a captação de todas as cidades (o campo
+    "cidade" no corpo do POST já diferencia qual praça gerou o e-mail). Se
+    um dia esse webhook mudar, atualizar a URL direto nas duas ocorrências
+    deste arquivo (aqui e no fetch() do script, perto do fim do arquivo).
+  - Este formulário não usa o padrão de preço/gratuito/status da seção 12 do
+    guia porque não é dado do cadastro por cidade: é uma captação de lead,
+    então roda em JS mesmo (o guia só proíbe JS para preço/gratuito/status).
 
   CONTAGENS (automáticas)
   - @total_aberta, @total_breve: quantas cidades têm esse status.
-  - @total_cidades dentro da região: quantas cidades a região tem.
+  - @total_cidades não é usado neste HTML (só fazia sentido no cabeçalho
+    de cada região, removido junto com o agrupamento).
 
   IMAGENS (pasta _media/tapume/) — sem número: iguais em todas as visitas,
   não mudam por cidade. Nenhuma é vídeo, por isso @img_ (não @media_):
-  - @img_marca_logo — _media/tapume/marca/, logo da marca (máscara CSS no topbar)
-  - @img_selos_estacoes — _media/tapume/selos/, selo das 4 estações (topbar)
+  - Sem header nesta versão: @img_marca_logo (logo) e @img_selos_estacoes
+    (selo das 4 estações) não são mais usadas no HTML. Se o header voltar,
+    reaproveitar as mesmas variáveis — os arquivos continuam em
+    _media/tapume/marca/ e _media/tapume/selos/.
   - @img_mandala_anotacoes — _media/tapume/mandala/, camada de anotações da mandala de abertura
   - @img_mandala_medalha_outono, @img_mandala_medalha_inverno,
     @img_mandala_medalha_primavera, @img_mandala_medalha_verao —
     _media/tapume/mandala/, as 4 medalhas-peça da mandala de abertura
-
 
   Busca: o JS normaliza (minúsculo, sem acento) os dois lados da comparação,
   então data-busca pode receber cidade/UF/região exatamente como estão no
@@ -328,18 +329,6 @@
 -->
 
 <script>
-  var barra = document.getElementById("topbar");
-  var aoRolar = function(){ barra.classList.toggle("solto", window.scrollY > 24); };
-  aoRolar(); window.addEventListener("scroll", aoRolar, { passive:true });
-
-  var btnTema = document.getElementById("tema");
-  btnTema.addEventListener("click", function(){
-    var atual = document.documentElement.getAttribute("data-theme");
-    var novo = atual === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", novo);
-    try { localStorage.setItem("combo2027-tema", novo); } catch(e){}
-  });
-
   var mandala = document.getElementById("mandala");
   if (mandala) {
     var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -359,7 +348,6 @@
   var campo = document.getElementById("busca");
   if (campo) {
     var cartoes = Array.prototype.slice.call(document.querySelectorAll(".praca"));
-    var regioes = Array.prototype.slice.call(document.querySelectorAll(".regiao"));
     var vazio = document.getElementById("vazio");
     var normaliza = function(s){ return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); };
     campo.addEventListener("input", function(){
@@ -369,12 +357,62 @@
         var ok = !t || normaliza(c.dataset.busca).indexOf(t) !== -1;
         c.hidden = !ok; if (ok) achou++;
       });
-      regioes.forEach(function(r){
-        r.hidden = !r.querySelector(".praca:not([hidden])");
-      });
       vazio.hidden = achou > 0;
     });
   }
+
+  Array.prototype.slice.call(document.querySelectorAll(".aviso-toggle")).forEach(function(botao){
+    botao.addEventListener("click", function(){
+      var card = botao.closest(".praca");
+      var form = card.querySelector(".aviso-form");
+      var msg = card.querySelector(".aviso-msg");
+      var abrindo = form.hidden;
+      form.hidden = !abrindo;
+      botao.hidden = abrindo;
+      botao.setAttribute("aria-expanded", String(abrindo));
+      msg.hidden = true;
+      if (abrindo) {
+        var campoEmail = form.querySelector(".aviso-email");
+        campoEmail.focus();
+      }
+    });
+  });
+
+  Array.prototype.slice.call(document.querySelectorAll(".aviso-form")).forEach(function(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var card = form.closest(".praca");
+      var botao = card.querySelector(".aviso-toggle");
+      var campoEmail = form.querySelector(".aviso-email");
+      var enviar = form.querySelector(".aviso-enviar");
+      var msg = card.querySelector(".aviso-msg");
+      var grade = card.closest(".grade");
+      var email = campoEmail.value.trim();
+      if (!email) return;
+
+      enviar.disabled = true;
+      fetch("https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          evento: grade.dataset.evento,
+          ano: grade.dataset.ano,
+          cidade: card.dataset.cidade,
+          uf: card.dataset.uf
+        })
+      }).then(function(resp){
+        if (!resp.ok) throw new Error("falha no envio");
+        form.hidden = true;
+        msg.textContent = (grade.dataset.avisoOk || "").replace("{cidade}", card.dataset.cidade);
+        msg.hidden = false;
+      }).catch(function(){
+        msg.textContent = (grade.dataset.avisoErro || "").replace("{cidade}", card.dataset.cidade);
+        msg.hidden = false;
+        enviar.disabled = false;
+      });
+    });
+  });
 </script>
 </body>
 </html>
