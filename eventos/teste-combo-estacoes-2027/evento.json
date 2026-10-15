@@ -1362,7 +1362,7 @@
     "extras_texto": "Descubra qual das quatro químicas combina com você e escreva a carta com os tempos que você promete para {ano}.",
     "teste_titulo": "Qual a sua química?",
     "teste_capa_linha1": "Quatro substâncias. Uma é a sua.",
-    "teste_capa_linha2": "Descubra aqui e compartilhe.",
+    "teste_capa_linha2": "Descubra qual das quatro químicas combina com você e compartilhe.",
     "teste_intro_texto": "Descubra aqui e compartilhe.",
     "teste_botao_comecar": "Começar",
     "teste_intro_nota": "Leva menos de um minuto",
@@ -1940,7 +1940,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:21:36.496Z",
+  "atualizadoEm": "2026-10-15T17:23:18.564Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
