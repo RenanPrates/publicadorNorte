@@ -7,7 +7,7 @@
     "unica": {
       "arquivo": "index.html",
       "bytes": 255438,
-      "enviadoEm": "2026-10-15T21:22:15.799Z"
+      "enviadoEm": "2026-10-15T21:27:44.621Z"
     }
   },
   "vars": {
@@ -2772,7 +2772,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-15T21:22:20.171Z",
+  "atualizadoEm": "2026-10-15T21:27:48.989Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
