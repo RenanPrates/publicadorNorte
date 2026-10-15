@@ -1935,7 +1935,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:39:19.443Z",
+  "atualizadoEm": "2026-10-15T14:52:29.210Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2072,6 +2072,7 @@
           "mensagem": "sem link do combo: fica como está"
         }
       ]
-    }
+    },
+    "intervalo": 24
   }
 }
