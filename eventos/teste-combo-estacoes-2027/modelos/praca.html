@@ -3846,6 +3846,13 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 /* fecho: +50px de respiro em cima e embaixo */
 .fecho.sec{padding-block:calc(clamp(1.3rem,2vw,1.6rem) + 50px) !important}
 
+/* topo: voltar para as cidades; no celular o botão de compra sai do topo (fica na barra fixa) */
+.tb-voltar{display:inline-flex; align-items:center; gap:.35rem; padding:.45rem .75rem; border-radius:999px; box-shadow:inset 0 0 0 1px rgba(22,20,27,.18); color:var(--ink); font:700 .78rem/1 Archivo,sans-serif; text-decoration:none; white-space:nowrap; flex:none}
+.tb-voltar svg{width:16px; height:16px}
+.tb-voltar:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+@media (max-width:699px){ #topbar .cta--sm{display:none !important} .tb-voltar span{display:none} .tb-voltar{padding:.45rem} }
+a.wordmark{cursor:pointer}
+
 /* rodapé: mesma marca do topo (wordmark + selos das estações) */
 .foot-marca{display:inline-flex; align-items:center; gap:.65rem}
 .foot-selos{display:block; height:18px; width:auto; flex:none}
@@ -3905,9 +3912,10 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 <header class="topbar" id="topbar">
   <div class="ctr tb">
     <div class="tb-marca">
-      <a class="wordmark" href="#topo" aria-label="@evento — início"></a>
+      <a class="wordmark" href="@link_inicio" aria-label="@evento — página inicial"></a>
       <img class="tb-selos" src="@img_marca_selos" alt="" width="640" height="139">
     </div>
+    <a class="tb-voltar" href="@link_cidades"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4.5m4.5-4.5L4.5 10 9 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>@topo_voltar_cidades</span></a>
     <nav class="tb-nav" aria-label="Seções da página">
       <a href="#compra">@menu_preco</a>
       <a href="#incluso">@menu_beneficios</a>
@@ -3915,7 +3923,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <a href="#como-funciona">@menu_tema</a>
       <a href="#duvidas">@menu_duvidas</a>
     </nav>
-    <!-- @se status = realizado --><a class="cta cta--sm" href="#compra">@botao_combo_realizado</a><!-- @senao --><!-- @se status = aberta --><a class="cta cta--sm" href="#compra">@topo_botao_curto<span class="long">&nbsp;@topo_botao_complemento</span></a><!-- @senao --><a class="cta cta--sm" href="#compra">@botao_combo_breve</a><!-- @fim --><!-- @fim -->
+    <!-- @se status = realizado --><a class="cta cta--sm" href="#compra">@botao_combo_realizado</a><!-- @senao --><!-- @se status = aberta --><a class="cta cta--sm" href="@link_inscricao_1">@topo_botao_curto<span class="long">&nbsp;@topo_botao_complemento</span></a><!-- @senao --><a class="cta cta--sm" href="#compra">@botao_combo_breve</a><!-- @fim --><!-- @fim -->
   </div>
   <span class="scroll-prog" aria-hidden="true"></span>
 </header>
@@ -3927,7 +3935,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
   <div class="st-price st-price--combo"><b><!-- @se gratuito = sim -->Evento gratuito<!-- @senao --><!-- @se valor_parcelado -->@{parcelamento_1}x R$@valor_parcelado_1<!-- @senao -->A confirmar<!-- @fim --><!-- @fim --></b><span><!-- @se gratuito = sim -->Sem custo de inscrição.<!-- @senao --><!-- @se preco_vista -->ou R$@preco_vista_1 à vista<!-- @senao -->Valor divulgado na abertura das inscrições.<!-- @fim --><!-- @fim --></span></div>
   <!-- @se preco_prime --><div class="st-price st-price--prime"><b><!-- @se parcelamento -->@{parcelamento_1}x R$@preco_prime_parcelado_1<!-- @senao -->R$@preco_prime_1<!-- @fim --></b><span>@barra_prime<!-- @se parcelamento --> · ou R$@preco_prime_1 à vista<!-- @fim --></span></div><!-- @fim -->
   <!-- @fim -->
-  <a class="cta cta--lime cta--sm" href="#compra" tabindex="-1" id="stickyBtn">@barra_botao</a>
+  <a class="cta cta--lime cta--sm" href="<!-- @se status = aberta -->@link_inscricao_1<!-- @senao -->#compra<!-- @fim -->" tabindex="-1" id="stickyBtn">@barra_botao</a>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -3965,7 +3973,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <span class="ho-tag">@evento @ano<span class="ho-sp"> · @cidade_1</span></span>
     </div>
 
-    <h1 class="hero-title">@hero_titulo_linha1<br>@hero_titulo_linha2 <span class="hl">@hero_titulo_destaque</span></h1>
+    <h1 class="hero-title">@hero_titulo</h1>
 
     <div class="hero-art" id="heroArt">
       <div class="hx-stage">
@@ -3984,7 +3992,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <p class="ho-sub">@hero_texto</p>
       <div class="hero-actions">
         <!-- @se status = realizado --><a class="cta" href="#compra">@botao_combo_realizado
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><!-- @se status = aberta --><a class="cta" href="#compra">@botao_combo
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><!-- @se status = aberta --><a class="cta" href="@link_inscricao_1">@botao_combo
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><a class="cta" href="#compra">@botao_combo_breve
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @fim --><!-- @fim -->
       </div>
@@ -4003,24 +4011,13 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     <div class="cp-side">
     <div class="cp-head">
       <span class="kicker reveal"><span class="dot"></span> @compra_kicker</span>
-      <h2 class="h2 reveal d1">@compra_titulo_linha1<br>@compra_titulo_linha2</h2>
+      <h2 class="h2 reveal d1">@compra_titulo</h2>
     </div>
     <div class="cp" id="buyBox">
       <div class="cp-card reveal d1">
-        <span class="cp-top"><!-- @se status = esgotado --><span class="cp-badge cp-badge--esgotado">@preco_esgotado</span><!-- @senao --><!-- @se gratuito = sim --><!-- @senao --><!-- @se porcentagem_desconto --><span class="cp-badge">@porcentagem_desconto_1% OFF</span><!-- @fim --><!-- @fim --><!-- @fim --><button class="cp-i" type="button" aria-expanded="false" aria-controls="cpInfo1" aria-label="@compra_info_titulo @combo_nome @ano"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1.15" fill="currentColor"/></svg></button></span>
+        <span class="cp-top"><!-- @se status = esgotado --><span class="cp-badge cp-badge--esgotado">@preco_esgotado</span><!-- @senao --><!-- @se gratuito = sim --><!-- @senao --><!-- @se porcentagem_desconto --><span class="cp-badge">@porcentagem_desconto_1% OFF</span><!-- @fim --><!-- @fim --><!-- @fim --></span>
         <span class="cp-name">@combo_nome @ano</span>
         <span class="cp-plus">@compra_resumo</span>
-        <div class="cp-pop" id="cpInfo1" role="dialog" aria-label="@compra_info_titulo @combo_nome @ano" hidden>
-          <p class="cp-pop-t">@compra_info_titulo @combo_nome @ano</p>
-          <!-- @se compra_lista_titulo --><p class="cp-pop-sub">@compra_lista_titulo</p><!-- @fim --><ul class="cp-list">
-            <!-- @se compra_item1 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_item1</li><!-- @fim -->
-            <!-- @se compra_item2 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_item2</li><!-- @fim -->
-            <!-- @se compra_item3 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_item3</li><!-- @fim -->
-            <!-- @se compra_item4 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_item4</li><!-- @fim -->
-            <!-- @se compra_item5 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_item5</li><!-- @fim -->
-            <!-- @se compra_item6 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_item6</li><!-- @fim -->
-          </ul><!-- @se compra_nota --><p class="cp-pop-nota">@compra_nota</p><!-- @fim -->
-        </div>
         <span class="cp-price">
             <!-- @se status = esgotado -->
             <b class="cp-parc cp-esgotado">@preco_esgotado</b>
@@ -4035,22 +4032,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
         <!-- @se preco_prime -->
         <div class="cp-up">
           <span class="cp-up-tag">@compra_prime_tag</span>
-          <p class="cp-up-txt">@compra_prime_texto <b>@compra_prime_destaque</b>.</p>
-          <button class="cp-i cp-i--o2" type="button" aria-expanded="false" aria-controls="cpInfo2" aria-label="@compra_info_titulo @compra_prime_tag"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1.15" fill="currentColor"/></svg></button>
-          <div class="cp-pop cp-pop--o2" id="cpInfo2" role="dialog" aria-label="@compra_info_titulo @compra_prime_tag" hidden>
-            <p class="cp-pop-t">@compra_prime_lista_titulo</p>
-            <ul class="cp-list">
-            <!-- @se compra_prime_item1 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item1</li><!-- @fim -->
-            <!-- @se compra_prime_item2 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item2</li><!-- @fim -->
-            <!-- @se compra_prime_item3 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item3</li><!-- @fim -->
-            <!-- @se compra_prime_item4 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item4</li><!-- @fim -->
-            <!-- @se compra_prime_item5 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item5</li><!-- @fim -->
-            <!-- @se compra_prime_item6 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item6</li><!-- @fim -->
-            <!-- @se compra_prime_item7 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item7</li><!-- @fim -->
-            <!-- @se compra_prime_item8 --><li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 5 8.6 9.6 3.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>@compra_prime_item8</li><!-- @fim -->
-            </ul>
-            <!-- @se compra_prime_nota --><p class="cp-pop-n">@compra_prime_nota</p><!-- @fim -->
-          </div>
+          <p class="cp-up-txt">@compra_prime_texto</p>
         </div>
         <!-- @fim -->
       </div>
@@ -4080,7 +4062,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
         <img class="hz-mob" src="@img_hoodie_mobile" alt="@hoodie_alt" width="934" height="1330" loading="lazy">
         <div class="hz-txt">
           <span class="kicker"><span class="dot"></span> @hoodie_kicker</span>
-          <h2 class="h2"><span class="ln">@hoodie_titulo_linha1</span> <span class="ln">@hoodie_titulo_linha2</span> <span class="ln">@hoodie_titulo_linha3</span></h2>
+          <h2 class="h2">@hoodie_titulo</h2>
           <p class="lead">@hoodie_texto</p>
         </div>
       </div>
@@ -4149,7 +4131,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
       <div class="quim-txt" aria-live="polite">
         <article class="qp qp--intro is-on" data-step="0">
           <span class="kicker"><span class="dot"></span> @quim_kicker</span>
-          <h2 class="qp-h">@quim_titulo_linha1<br>@quim_titulo_linha2 <span class="hl">@quim_titulo_destaque</span></h2>
+          <h2 class="qp-h">@quim_titulo</h2>
           <p class="lead">@quim_texto</p>
           <p class="qp-hint"><span class="mouse" aria-hidden="true"></span>@quim_dica</p>
         </article>
@@ -4158,35 +4140,35 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <h3 class="qp-name">@etapa1_quimica</h3>
           <p class="qp-tag">@etapa1_quimica_tag</p>
           <span class="qp-mol" role="img" aria-label="@quim_formula_alt @etapa1_quimica"></span>
-          <p class="qp-quote">@etapa1_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa1_onde_linha1<!-- @se etapa1_onde_linha2 --><br>@etapa1_onde_linha2<!-- @fim --></p></div>
+          <p class="qp-quote">@etapa1_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa1_onde</p></div>
         </article>
         <article class="qp qp--inv" data-step="2" style="--mol:url('@img_quimica_ocitocina'); --mr:1.472">
           <p class="qp-meta"><img class="qp-el" src="@img_quimica_selo_inverno" alt="@etapa2_nome · @etapa2_quimica" width="240" height="241"></p>
           <h3 class="qp-name">@etapa2_quimica</h3>
           <p class="qp-tag">@etapa2_quimica_tag</p>
           <span class="qp-mol" role="img" aria-label="@quim_formula_alt @etapa2_quimica"></span>
-          <p class="qp-quote">@etapa2_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa2_onde_linha1<!-- @se etapa2_onde_linha2 --><br>@etapa2_onde_linha2<!-- @fim --></p></div>
+          <p class="qp-quote">@etapa2_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa2_onde</p></div>
         </article>
         <article class="qp qp--pri" data-step="3" style="--mol:url('@img_quimica_dopamina'); --mr:1.356">
           <p class="qp-meta"><img class="qp-el" src="@img_quimica_selo_primavera" alt="@etapa3_nome · @etapa3_quimica" width="240" height="241"></p>
           <h3 class="qp-name">@etapa3_quimica</h3>
           <p class="qp-tag">@etapa3_quimica_tag</p>
           <span class="qp-mol" role="img" aria-label="@quim_formula_alt @etapa3_quimica"></span>
-          <p class="qp-quote">@etapa3_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa3_onde_linha1<!-- @se etapa3_onde_linha2 --><br>@etapa3_onde_linha2<!-- @fim --></p></div>
+          <p class="qp-quote">@etapa3_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa3_onde</p></div>
         </article>
         <article class="qp qp--ver" data-step="4" style="--mol:url('@img_quimica_endorfina'); --mr:1.702">
           <p class="qp-meta"><img class="qp-el" src="@img_quimica_selo_verao" alt="@etapa4_nome · @etapa4_quimica" width="240" height="241"></p>
           <h3 class="qp-name">@etapa4_quimica</h3>
           <p class="qp-tag">@etapa4_quimica_tag</p>
           <span class="qp-mol" role="img" aria-label="@quim_formula_alt @etapa4_quimica"></span>
-          <p class="qp-quote">@etapa4_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa4_onde_linha1<!-- @se etapa4_onde_linha2 --><br>@etapa4_onde_linha2<!-- @fim --></p></div>
+          <p class="qp-quote">@etapa4_frase</p><div class="qp-onde"><p class="qp-onde-t">@quim_onde_titulo</p><p class="qp-onde-l">@etapa4_onde</p></div>
         </article>
         <article class="qp qp--final" data-step="5">
           <span class="kicker"><span class="dot"></span> @quim_final_kicker</span>
-          <h2 class="qp-h">@quim_final_titulo<br><span class="hl">@quim_final_destaque</span></h2>
+          <h2 class="qp-h">@quim_final_titulo</h2>
           <p class="lead">@quim_final_texto</p>
           <div class="qp-ctas">
-            <!-- @se status = realizado --><a class="cta cta--lime" href="#compra">@botao_combo_realizado <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><!-- @se status = aberta --><a class="cta cta--lime" href="#compra">@botao_combo <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><a class="cta cta--lime" href="#compra">@botao_combo_breve <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @fim --><!-- @fim -->
+            <!-- @se status = realizado --><a class="cta cta--lime" href="#compra">@botao_combo_realizado <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><!-- @se status = aberta --><a class="cta cta--lime" href="@link_inscricao_1">@botao_combo <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><a class="cta cta--lime" href="#compra">@botao_combo_breve <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @fim --><!-- @fim -->
           </div>
         </article>
       </div>
@@ -4224,7 +4206,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
           <h2 class="h2 capa-h">@teste_capa_titulo</h2>
           <p class="so-leitor">@teste_titulo</p>
           <img class="quatro" src="@img_teste_titulo" alt="" width="640" height="139">
-          <p>@teste_capa_linha1<br>@teste_capa_linha2</p>
+          <p>@teste_capa_texto</p>
           <span class="mod-selos"><i class="ic ic-wa" aria-hidden="true"></i><i class="ic ic-ig" aria-hidden="true"></i></span>
           <span class="capa-btn"></span>
         </div>
@@ -4418,7 +4400,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
     </div>
     <h2 class="reveal d1">@fecho_titulo</h2>
     <!-- @se status = realizado --><a class="cta reveal d2" href="#compra">@botao_combo_realizado
-      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><!-- @se status = aberta --><a class="cta reveal d2" href="#compra">@botao_combo
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><!-- @se status = aberta --><a class="cta reveal d2" href="@link_inscricao_1">@botao_combo
       <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @senao --><a class="cta reveal d2" href="#compra">@botao_combo_breve
       <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><!-- @fim --><!-- @fim -->
   </div>
@@ -4512,7 +4494,7 @@ html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
 
 <footer>
   <div class="ctr foot">
-    <span class="foot-marca"><span class="wordmark" role="img" aria-label="@evento"></span><img class="foot-selos" src="@img_marca_selos" alt="" width="640" height="139" loading="lazy"></span>
+    <span class="foot-marca"><a class="wordmark" href="@link_inicio" aria-label="@evento — página inicial"></a><img class="foot-selos" src="@img_marca_selos" alt="" width="640" height="139" loading="lazy"></span>
     <span>@evento @ano — @cidade_1</span>
     <!-- @se link_regulamento --><a href="@link_regulamento">@rodape_regulamento</a><!-- @fim -->
   </div>
@@ -5867,7 +5849,9 @@ carrega();
   Status (3 casos, realizado primeiro): botão da compra = @compra_botao (aberta), @compra_botao_breve (em breve),
           @compra_botao_realizado (realizado). Os botões que levam ao preço (topo, abertura, química, fecho e
           barra fixa) seguem o mesmo status: @botao_combo / @botao_combo_breve / @botao_combo_realizado.
-  Links: @link_inscricao_1 (compra), @link_regulamento (rodapé; vazio = some).
+  Links: @link_inscricao_1 (carrinho: todos os botões de compra com a cidade aberta), @link_regulamento (rodapé; vazio = some),
+         @link_inicio (logos do topo e do rodapé), @link_cidades + @topo_voltar_cidades (botão do topo).
+  Textos com mais de uma linha ou destaque (títulos) são um campo só: a quebra e a cor vêm da formatação do cadastro.
   Textos (todos editáveis no cadastro; iguais em todas as páginas, menos os que terminam em _1):
     Abertura animada (intro):
       @intro_pular, @intro_frase
@@ -5880,18 +5864,16 @@ carrega();
     Barra fixa (preço):
       @barra_resumo, @barra_prime, @barra_botao, @barra_botao_depois
     #topo:
-      @hero_titulo_linha1, @hero_titulo_linha2, @hero_titulo_destaque, @hero_alt_desktop, @hero_alt_mobile,
+      @hero_titulo, @hero_alt_desktop, @hero_alt_mobile,
       @hero_frase, @hero_texto
     #compra:
-      @compra_kit_alt, @compra_kicker, @compra_titulo_linha1, @compra_titulo_linha2, @compra_info_titulo,
-      @compra_resumo, @compra_lista_titulo, @compra_item1, @compra_item2, @compra_item3, @compra_item4, @compra_item5,
-      @compra_item6, @compra_nota, @compra_separado, @compra_prime_tag, @compra_prime_texto, @compra_prime_destaque,
-      @compra_prime_lista_titulo,
+      @compra_kit_alt, @compra_kicker, @compra_titulo,
+      @compra_resumo, @compra_separado, @compra_prime_tag, @compra_prime_texto,
       @compra_prime_item1, @compra_prime_item2, @compra_prime_item3, @compra_prime_item4, @compra_prime_item5,
       @compra_prime_item6, @compra_prime_item7, @compra_prime_item8, @compra_prime_nota, @compra_botao,
       @compra_botao_breve, @compra_botao_realizado
     #incluso (hoodie):
-      @hoodie_alt, @hoodie_kicker, @hoodie_titulo_linha1, @hoodie_titulo_linha2, @hoodie_titulo_linha3,
+      @hoodie_alt, @hoodie_kicker, @hoodie_titulo,
       @hoodie_texto
     #etapas (kits):
       @etapas_kicker, @etapas_titulo
@@ -5902,7 +5884,7 @@ carrega();
       @etapa4_nome, @etapa4_quimica, @etapa4_quimica_tag, @etapa4_frase, @etapa4_linha, @etapa4_kit_alt
     #mod-gerador (teste "Qual a sua química?"):
       @teste_etapa1_onde, @teste_etapa2_onde, @teste_etapa3_onde, @teste_etapa4_onde, @teste_titulo, @teste_capa_kicker, @teste_capa_titulo,
-      @teste_capa_linha1, @teste_capa_linha2, @teste_intro_texto, @teste_botao_comecar, @teste_intro_nota,
+      @teste_capa_texto, @teste_intro_texto, @teste_botao_comecar, @teste_intro_nota,
       @teste_nome_titulo, @teste_nome_texto, @teste_nome_rotulo, @teste_nome_exemplo, @teste_botao_gerar,
       @teste_refazer, @teste_contador, @teste_p1_pergunta, @teste_p1_etapa1, @teste_p1_etapa2, @teste_p1_etapa3,
       @teste_p1_etapa4, @teste_p2_pergunta, @teste_p2_etapa1, @teste_p2_etapa2, @teste_p2_etapa3, @teste_p2_etapa4,
@@ -5920,9 +5902,9 @@ carrega();
       @carta_alerta_rapido, @carta_alerta_lento, @carta_total, @carta_card_total, @carta_card_selo,
       @carta_compartilhar_texto, @carta_enviando, @carta_envio_ok, @carta_envio_erro
     #como-funciona (química da corrida):
-      @quim_formula_alt, @quim_kicker, @quim_titulo_linha1, @quim_titulo_linha2, @quim_titulo_destaque, @quim_texto,
-      @quim_dica, @quim_onde_titulo, @etapa1_onde_linha1, @etapa1_onde_linha2 … @etapa4_onde_linha1, @etapa4_onde_linha2,
-      @quim_final_kicker, @quim_final_titulo, @quim_final_destaque, @quim_final_texto,
+      @quim_formula_alt, @quim_kicker, @quim_titulo, @quim_texto,
+      @quim_dica, @quim_onde_titulo, @etapa1_onde … @etapa4_onde,
+      @quim_final_kicker, @quim_final_titulo, @quim_final_texto,
       @quim_final_botao_teste
     #duvidas:
       @duvidas_kicker, @duvidas_titulo, @faq1_pergunta, @faq1_resposta,
@@ -5960,7 +5942,7 @@ carrega();
     @img_teste_titulo — teste/; @img_carta_selo — carta/
     Todas iguais em todas as páginas.
   Fixos (sem variável, no CSS): marca/ (wordmark e logo dos cards), teste/selo.png, teste/whatsapp.png, teste/instagram.png.
-  Setas, (i), check, estrela do Prime, WhatsApp, Instagram e "baixar" são <svg> de interface escritos no HTML.
+  Setas, check, estrela do Prime, WhatsApp, Instagram e "baixar" são <svg> de interface escritos no HTML.
   Seções (podem ser escondidas ou mudar de ordem; cada uma se sustenta sozinha):
     #topo, #compra, #incluso (hoodie), #etapas (kits), #como-funciona (química da corrida), #duvidas,
     #mod-gerador, #mod-carta, #fecho, #duvidas (depois do fecho).
