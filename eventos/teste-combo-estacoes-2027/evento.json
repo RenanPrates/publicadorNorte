@@ -1346,7 +1346,7 @@
     "duvidas_ajuda": "Não achou sua resposta? Fale com a organização.",
     "duvidas_ajuda_botao": "",
     "faq1_resposta": "Pode. O combo garante sua vaga nas quatro etapas e você escolhe o percurso de cada uma delas, até o prazo de alteração de cada prova.",
-    "faq2_resposta": "Posso transferir minha inscrição para outra pessoa?\nNão. A inscrição é pessoal e intransferível. O que dá para mudar é a distância e o tamanho da camiseta, até 20 dias antes de cada etapa.\n ",
+    "faq2_resposta": "Não. A inscrição é pessoal e intransferível. O que dá para mudar é a distância e o tamanho da camiseta, até 20 dias antes de cada etapa.",
     "faq3_resposta": "",
     "faq4_resposta": "",
     "faq5_resposta": "",
@@ -1934,7 +1934,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:38:49.706Z",
+  "atualizadoEm": "2026-10-15T14:38:54.000Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
