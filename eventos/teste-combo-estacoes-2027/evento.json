@@ -1450,7 +1450,8 @@
     "compartilhar_salvo": "Card salvo.",
     "compartilhar_abrir_whatsapp": "Abrir o WhatsApp",
     "compartilhar_anexar": "e anexar a imagem.",
-    "compartilhar_dica_instagram": "No Instagram, abra os Stories e escolha a imagem na galeria."
+    "compartilhar_dica_instagram": "No Instagram, abra os Stories e escolha a imagem na galeria.",
+    "faq1_pergunta": "Posso "
   },
   "cidades": [
     {
@@ -1932,7 +1933,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T14:04:56.549Z",
+  "atualizadoEm": "2026-10-15T14:37:47.415Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
