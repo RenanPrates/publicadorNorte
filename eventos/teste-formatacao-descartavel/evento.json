@@ -23,7 +23,8 @@
     }
   },
   "gerais": {
-    "titulo": "<b>Complete sua mandala.</b>"
+    "titulo": "<b>Complete sua mandala.</b>",
+    "texto": "Este bloco vai sumir."
   },
   "cidades": [],
   "etapas": [],
@@ -33,5 +34,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-15T19:53:00.903Z",
-  "atualizadoEm": "2026-10-15T19:55:02.154Z"
+  "atualizadoEm": "2026-10-15T19:55:11.709Z"
 }
