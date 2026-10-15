@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -40 800 600" preserveAspectRatio="xMidYMid slice">
+          <g fill="#EAD3B9"><rect x="0" y="92" width="64" height="310"/><rect x="72" y="40" width="58" height="360"/><rect x="138" y="110" width="80" height="290"/><rect x="226" y="64" width="54" height="336"/><rect x="288" y="128" width="92" height="272"/><rect x="388" y="30" width="62" height="370"/><rect x="458" y="98" width="84" height="302"/><rect x="550" y="56" width="58" height="344"/><rect x="616" y="118" width="88" height="282"/><rect x="712" y="74" width="88" height="326"/></g>
+          <g fill="#F3DFCA"><rect x="86" y="58" width="10" height="14"/><rect x="106" y="58" width="10" height="14"/><rect x="86" y="84" width="10" height="14"/><rect x="402" y="48" width="10" height="14"/><rect x="424" y="48" width="10" height="14"/><rect x="402" y="74" width="10" height="14"/><rect x="564" y="74" width="10" height="14"/><rect x="584" y="74" width="10" height="14"/><rect x="726" y="92" width="10" height="14"/><rect x="746" y="92" width="10" height="14"/><rect x="240" y="82" width="10" height="14"/><rect x="260" y="82" width="10" height="14"/></g>
+          <rect x="0" y="396" width="800" height="164" fill="#E2C6A5"/>
+          <rect x="0" y="396" width="800" height="6" fill="#D2B490"/>
+          <path d="M-20 478 H820" stroke="#F3DFCA" stroke-width="7" stroke-dasharray="44 30"/>
+          <g id="tiTruck">
+            <ellipse cx="410" cy="398" rx="356" ry="9" fill="#161125" opacity=".2"/>
+            <g id="tiDust" fill="#D2B490"><circle cx="34" cy="390" r="0" opacity="0"/><circle cx="62" cy="384" r="0" opacity="0"/><circle cx="96" cy="392" r="0" opacity="0"/></g>
+            <g id="tiLegs"><rect x="600" y="346" width="10" height="44" fill="#6E737A"/><rect x="592" y="388" width="26" height="7" rx="2" fill="#161125"/></g>
+            <g id="tiBody">
+              <rect x="40" y="110" width="596" height="226" rx="16" fill="#00AD64"/>
+              <g fill="none" stroke="#0B9C57" stroke-width="22" stroke-linecap="round"><path d="M56 300 C136 230 176 330 276 260 C376 200 496 230 624 280"/><path d="M56 190 C156 130 236 230 356 160 C446 110 536 130 624 176"/></g>
+              <rect x="40" y="110" width="596" height="12" rx="6" fill="#F3DFCA"/>
+              <image data-f="cebola" href="../icones/cebola.webp" x="52" y="190" width="66" height="70"/>
+              <image data-f="pimenta" href="../icones/pimenta.webp" x="80" y="140" width="58" height="47" transform="rotate(-20 109 164)"/>
+              <rect x="42" y="330" width="594" height="16" rx="5" fill="#155C3F"/>
+              <rect x="636" y="316" width="18" height="16" fill="#161125"/>
+              <path d="M652 190 H730 Q758 190 768 216 L786 262 V346 H652Z" fill="#144C40" stroke="#161125" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M664 202 H724 Q740 202 748 222 L762 256 H664Z" fill="#CFE9F7" stroke="#161125" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M676 214 l14 30" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+              <image data-f="logo-pc-sm" href="../marca/logopequeno.webp" x="668" y="266" width="58" height="48"/>
+              <circle cx="776" cy="300" r="7" fill="#F9B233" stroke="#161125" stroke-width="3"/>
+              <rect x="648" y="340" width="142" height="12" rx="4" fill="#161125"/>
+              <rect x="136" y="236" width="40" height="96" rx="3" fill="#CFD3D6" stroke="#161125" stroke-width="3"/>
+              <g id="tiSign"><rect x="141" y="200" width="30" height="30" rx="4" fill="#1F5FBF"/><circle cx="155" cy="207" r="3.2" fill="#fff"/><path d="M154 212 V222 H163 L166 228 M154 217 H162" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M149 219 A7 7 0 1 0 160 227" stroke="#fff" stroke-width="2.6" fill="none"/></g>
+              <rect x="572" y="196" width="44" height="136" fill="#0E3B2C"/><rect x="576" y="200" width="36" height="5" rx="2" fill="#F9B233"/><path d="M576 205 L612 205 L606 250 L582 250Z" fill="#F9B233" opacity=".14"/>
+              <g id="tiDoor" transform="matrix(0.1449 -0.4313 0 1 526.74 265.69)"><rect x="572" y="196" width="44" height="136" rx="4" fill="#DFE3E6" stroke="#161125" stroke-width="3"/><rect x="578" y="204" width="32" height="122" fill="#BFC5CA"/><circle cx="582" cy="268" r="3.5" fill="#161125"/></g>
+              <polygon id="tiTop" points="200,126 552,126 538,152 186,152" fill="#5FD39A" stroke="#0B9C57" stroke-width="2" stroke-linejoin="round"/>
+              <polygon id="tiSide" points="552,126 552,316 538,342 538,152" fill="#0B8A4F" stroke="#0B9C57" stroke-width="2" stroke-linejoin="round"/>
+              <g id="tiFront" transform="translate(186 152)">
+                <rect width="352" height="190" rx="10" fill="#1DBF78" stroke="#0B9C57" stroke-width="3"/>
+                <ellipse cx="92" cy="88" rx="78" ry="70" fill="#144C40"/>
+                <g stroke="#F3DFCA" stroke-width="6" stroke-linecap="round"><path d="M14 30 H60"/><path d="M14 48 H52"/><path d="M14 66 H56"/></g>
+                <image data-f="chef-panela" href="../carreta/adesivochef.webp" x="24" y="36" width="206" height="141"/>
+                <image data-f="logo-pc-sm" href="../marca/logopequeno.webp" x="246" y="30" width="96" height="80"/>
+              </g>
+              <g id="tiSkirt" transform="translate(190 342)"><rect width="344" height="54" rx="4" fill="#0E3B2C"/><g stroke="#0A2A20" stroke-width="3"><path d="M54 4 V50"/><path d="M114 4 V50"/><path d="M174 4 V50"/><path d="M234 4 V50"/><path d="M294 4 V50"/></g></g>
+              <g id="tiSteps" fill="#B3B9BF" stroke="#161125" stroke-width="2.5"><path d="M568 336 H620 V348 H568Z"/><path d="M564 348 H624 V360 H564Z"/><path d="M560 360 H628 V372 H560Z"/><path d="M556 372 H632 V384 H556Z"/><path d="M552 384 H636 V396 H552Z"/></g>
+            </g>
+            <g id="tiW1"><circle cx="76" cy="366" r="28" fill="#161125"/><circle cx="76" cy="366" r="11" fill="#F3DFCA"/><rect x="72" y="344" width="8" height="44" rx="3" fill="#161125"/></g>
+            <g id="tiW2"><circle cx="122" cy="366" r="28" fill="#161125"/><circle cx="122" cy="366" r="11" fill="#F3DFCA"/><rect x="118" y="344" width="8" height="44" rx="3" fill="#161125"/></g>
+            <g id="tiW3"><circle cx="720" cy="368" r="30" fill="#161125"/><circle cx="720" cy="368" r="12" fill="#F3DFCA"/><rect x="716" y="344" width="8" height="48" rx="3" fill="#161125"/></g>
+            <g id="tiRails" fill="#6E737A"><rect x="130" y="330" width="4" height="66"/><rect x="178" y="330" width="4" height="66"/></g>
+            <g id="tiPlat"><rect x="128" y="360" width="56" height="4" fill="#F2C230"/><rect x="128" y="360" width="4" height="28" fill="#161125"/><rect x="180" y="360" width="4" height="28" fill="#161125"/><rect x="126" y="388" width="60" height="6" fill="#9AA0A6" stroke="#161125" stroke-width="2.5"/></g>
+          </g>
+        </svg>
