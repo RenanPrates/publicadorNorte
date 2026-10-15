@@ -808,23 +808,19 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .mf-open{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;min-height:44px;color:var(--cream);font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .mf-open.off{opacity:.45;pointer-events:none;text-decoration:none}
 /* apostila: capa que abre e mostra a página */
-.bk{position:relative;width:min(78vw,330px);aspect-ratio:3/4;margin:10px auto 0;perspective:1400px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bk{position:relative;width:min(78vw,330px);aspect-ratio:3/4;margin:44px auto 0;perspective:1400px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .bk:focus-visible{outline:3px solid var(--ink);outline-offset:8px;border-radius:12px}
 .bk-sheet{position:absolute;inset:0;border-radius:6px 14px 14px 6px;background:#FBF3EA;box-shadow:0 2px 0 rgba(22,17,37,.08);transform-origin:0 100%;transition:transform .6s cubic-bezier(.3,1.3,.5,1)}
 .bk-sheet.s1{transform:rotate(4deg) translate(10px,4px);background:#F3DFCA}
 .bk-sheet.s2{transform:rotate(2deg) translate(5px,2px)}
-.bk-page{position:absolute;inset:0;border-radius:6px 14px 14px 6px;background:#fff repeating-linear-gradient(transparent 0 25px,rgba(22,17,37,.08) 25px 26px);background-position:0 54px;padding:22px 20px 20px 40px;overflow:hidden;box-shadow:0 18px 40px rgba(22,17,37,.3)}
+.bk-page{position:absolute;inset:0;border-radius:6px 14px 14px 6px;background:#fff;padding:0;overflow:hidden;box-shadow:0 18px 40px rgba(22,17,37,.3)}
 .bk-page::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:2px;background:rgba(238,59,59,.45)}
-.bk-page small{display:block;font-weight:800;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
-.bk-page b{display:block;margin:4px 0 14px;font-family:var(--f-display);font-weight:900;font-size:1.6rem;line-height:1;text-transform:uppercase}
-.bk-page i{display:block;height:9px;margin:0 0 17px;border-radius:5px;background:rgba(22,17,37,.13)}
-.bk-page i:nth-of-type(2){width:82%}.bk-page i:nth-of-type(3){width:90%}.bk-page i:nth-of-type(4){width:64%}
-.bk-page img{position:absolute;right:16px;bottom:16px;height:36%;width:auto;transform:rotate(18deg)}
 .bk-cover{position:absolute;inset:0;border-radius:6px 14px 14px 6px;transform-origin:0 50%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.6,0,.2,1);z-index:2}
 .bk-front,.bk-back{position:absolute;inset:0;border-radius:6px 14px 14px 6px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
 .bk-front{background:var(--deep);color:var(--cream);padding:24px 20px 20px 34px;display:flex;flex-direction:column;box-shadow:inset 14px 0 0 rgba(0,0,0,.18),0 18px 40px rgba(22,17,37,.35)}
 .bk-front::after{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:rgba(243,223,202,.18)}
-.bk-back{transform:rotateY(180deg);background:#0E3B2C}
+.bk-back{transform:rotateY(180deg);background:#0E3B2C;color:var(--cream);padding:22px 24px 20px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
+.bk-back .bb-l{margin-top:6px;font-weight:800;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
 .bk-front .tag{align-self:flex-start;padding:.3em .7em;border-radius:6px;background:var(--orange);color:#fff;font-weight:800;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
 .bk-front .t{margin-top:14px;font-family:var(--f-display);font-weight:900;font-size:clamp(2.2rem,11vw,3rem);line-height:.9;text-transform:uppercase}
 .bk-front .t span{color:var(--orange)}
@@ -833,8 +829,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .bk-front .ic.b{right:34%;bottom:8%;width:18%;transform:rotate(16deg)}
 .bk-front .ic.c{right:6%;bottom:4%;width:16%;transform:rotate(-30deg)}
 .bk-front .ft{margin-top:auto;font-weight:700;font-size:.72rem;letter-spacing:.06em;opacity:.8}
-.bk-hint{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);white-space:nowrap;font-weight:800;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
-.bk.open .bk-cover{transform:rotateY(-150deg)}
+.bk-hint{position:absolute;left:50%;top:-34px;transform:translateX(-50%);white-space:nowrap;font-weight:800;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
 .bk.open .bk-sheet.s1{transform:rotate(7deg) translate(18px,6px)}
 .bk.open .bk-sheet.s2{transform:rotate(3.5deg) translate(10px,3px)}
 @media (hover:hover){ .bk:not(.open):hover .bk-cover{transform:rotateY(-22deg)} }
@@ -848,7 +843,7 @@ body.dock-on .totop{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   .mat-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px}
   .mat-copy{align-items:flex-start;text-align:left}
   .mat-act{justify-content:flex-start}
-  .bk{width:min(100%,360px);margin:0 auto 40px}
+  .bk{width:min(100%,360px);margin:44px auto 40px}
 }
 
 /* ================= GALERIA ================= */
@@ -1024,6 +1019,136 @@ img.truck-ill{object-fit:cover}
 .hero-copy,.hero-text{min-width:0;max-width:100%}
 .hero-text .h-title,.sec-head h2{overflow-wrap:break-word}
 .mb-tx,.qa .q,.qa .a,.step p,.tm-cities button{overflow-wrap:break-word}
+/* ===== apostila (igual ao site) ===== */
+.mat-copy{position:relative;z-index:3}
+.bk.open .bk-cover{pointer-events:none}
+/* apostila: páginas das aulas */
+.bk-page{padding:0!important;background:#fff!important;container-type:inline-size;display:flex;flex-direction:column}
+.bk-page::before{display:none}
+.ls{position:relative;flex:1;min-height:0}
+.lsn{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateX(18px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.3,1),visibility 0s .45s}
+.lsn.on{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.3,1)}
+.lsn{--c:var(--green);--c2:rgba(0,173,100,.13)}
+.lsn[data-c="laranja"]{--c:var(--orange);--c2:rgba(245,126,50,.15)}
+.lsn[data-c="vermelho"]{--c:#EE3B3B;--c2:rgba(238,59,59,.12)}
+.lsn[data-c="amarelo"]{--c:#EAA21F;--c2:rgba(234,162,31,.16)}
+.lsn[data-c="noite"]{--c:var(--deep);--c2:rgba(20,76,64,.12)}
+.lsn-h{position:relative;display:flex;align-items:center;gap:3.2cqw;padding:3.8cqw 4.5cqw 3.8cqw 5cqw;background:var(--c);color:#fff;overflow:hidden}
+.lsn-h::after{content:"";position:absolute;right:-12cqw;top:-14cqw;width:40cqw;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.12)}
+.lsn-ic{flex:none;width:21cqw;height:21cqw;border-radius:50%;background:#fff;box-shadow:0 0 0 1.2cqw rgba(255,255,255,.35);position:relative;z-index:1}
+.lsn-t{position:relative;z-index:1;min-width:0}
+.lsn-t small{display:block;font-weight:800;font-size:2.7cqw;letter-spacing:.16em;text-transform:uppercase;opacity:.9}
+.lsn-t b{display:block;margin:.5cqw 0 .8cqw;font-family:var(--f-display);font-weight:900;font-size:6.6cqw;line-height:.92;text-transform:uppercase}
+.lsn-t em{display:block;font-style:normal;font-weight:700;font-size:2.9cqw;line-height:1.2}
+.lsn-b{flex:1;padding:3.2cqw 4.5cqw 2.6cqw 5cqw;display:flex;flex-direction:column;gap:.6cqw;color:var(--ink);overflow:hidden}
+.lsn-b h4{margin:1.4cqw 0 .7cqw;font-weight:800;font-size:2.4cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+.lsn-b p{margin:0;font-size:2.95cqw;line-height:1.3;font-weight:600}
+.lsn-b p strong{font-weight:800}
+.lsn-two{display:grid;grid-template-columns:1.25fr 1fr;gap:4cqw}
+.lsn-two h4{margin-top:0}
+.lsn-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.1cqw}
+.lsn-tags li{font-size:2.6cqw;font-weight:700;line-height:1;padding:1.1cqw 2.1cqw;border-radius:999px;background:var(--c2);color:var(--ink)}
+.lsn-tip{margin-top:auto;border:.5cqw solid var(--c);border-radius:3cqw;padding:2cqw 3cqw 2.4cqw;background:var(--c2)}
+.lsn-tip h4{margin:0 0 .8cqw}
+.lsn-lead{font-size:3.3cqw!important;font-style:italic;color:var(--c)}
+.lsn-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1.6cqw 3cqw;counter-reset:st}
+.lsn-steps li{counter-increment:st;display:flex;align-items:center;gap:1.8cqw;font-size:2.9cqw;font-weight:700;line-height:1.15}
+.lsn-steps li::before{content:counter(st);flex:none;width:6cqw;height:6cqw;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font-size:3cqw;font-weight:800}
+.ls-nav{flex:none;display:flex;align-items:center;justify-content:center;gap:1.4cqw;padding:1.8cqw 3cqw 2.4cqw;border-top:1px solid rgba(22,17,37,.08)}
+.ls-tab,.ls-arr{min-height:34px;border:1.5px solid rgba(22,17,37,.2);background:#fff;color:var(--ink);border-radius:999px;font:800 3cqw var(--f-body);cursor:pointer;padding:0 3.4cqw;transition:background .2s,color .2s,border-color .2s}
+.ls-arr{width:34px;padding:0;font-size:20px;line-height:1}
+.ls-tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.ls-tab:focus-visible,.ls-arr:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+@media (hover:hover){ .ls-tab:hover,.ls-arr:hover{border-color:var(--ink)} }
+.bk:not(.open) .ls-nav{visibility:hidden}
+.bk-back .bb-idx{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px;width:100%}
+.bk-back .bb-idx li{display:flex;align-items:center;gap:10px;text-align:left}
+.bk-back .bb-idx img{flex:none;width:44px;height:44px;margin:0;border:2px solid rgba(243,223,202,.3);border-radius:50%;background:#fff}
+.bk-back .bb-idx small{display:block;font-weight:800;font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.bk-back .bb-idx span{font-family:var(--f-display);font-weight:900;font-size:.92rem;line-height:1;text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){ .lsn,.lsn.on{transition:none} }
+.ls-dots{display:flex;gap:5px;align-items:center}
+.ls-dots i{width:7px;height:7px;border-radius:50%;background:rgba(22,17,37,.2);transition:background .3s,transform .3s}
+.ls-dots i.on{background:var(--ink);transform:scale(1.3)}
+.ls-count{font-weight:800;font-size:3cqw;min-width:9cqw;text-align:center;font-variant-numeric:tabular-nums}
+.ls-nav{gap:2.6cqw}
+.bk-flip{position:absolute;inset:0;z-index:4;transform-origin:0 50%;transform-style:preserve-3d;pointer-events:none}
+.bk-flip > .bk-page,.bk-flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:6px 14px 14px 6px;overflow:hidden}
+.bk-flip-back{transform:rotateY(180deg);background:linear-gradient(90deg,#efe6da,#fff 70%);box-shadow:inset -10px 0 18px rgba(22,17,37,.12)}
+.bk-flip-shade{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,rgba(22,17,37,.0),rgba(22,17,37,.25));opacity:0;pointer-events:none}
+.bk-under{position:absolute;inset:0;z-index:3;pointer-events:none}
+.bk-flip .lsn,.bk-under .lsn{transition:none!important}
+.lsn-t b.lg{font-size:5.6cqw}
+.lsn-steps--row{display:flex;flex-wrap:wrap;gap:1.2cqw 2.4cqw}
+.lsn-steps--row li{font-size:2.7cqw}
+.lsn-steps--row li::before{width:4.8cqw;height:4.8cqw;font-size:2.5cqw}
+/* ===== apostila: folhas que viram e se acumulam ===== */
+.bk{--ca:-150deg;transform-origin:0 50%;container-type:inline-size}
+.bk-sheet{display:none}
+.bk-base{position:absolute;inset:0;border-radius:6px 14px 14px 6px;background:#0E3B2C;transform:translate(9px,9px);box-shadow:0 18px 40px rgba(22,17,37,.35)}
+.bk-leaves{position:absolute;inset:0;perspective:2200px;z-index:50}
+.bk-leaf{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.45,.05,.25,1)}
+.bk-leaf-f,.bk-leaf-b{position:absolute;inset:0;border-radius:6px 14px 14px 6px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.bk-leaf-f{box-shadow:1px 1px 0 #d8cdbd,0 0 0 1px rgba(22,17,37,.06)}
+.bk-leaf-b{transform:rotateY(180deg);background:linear-gradient(90deg,#fff 0%,#f6efe5 80%,#ebe1d4);box-shadow:inset -1px 0 0 rgba(22,17,37,.08)}
+
+.bk-leaf .lsn{position:absolute;inset:0;opacity:1;visibility:visible;transform:none;transition:none}
+.bk-leaf .lsn-b{padding-bottom:14cqw}
+.bk-cover{z-index:100;transition:transform .9s cubic-bezier(.6,0,.2,1),z-index 0s .42s}
+.bk.open .bk-cover{transform:rotateY(var(--ca));z-index:1}
+.bk.open{transform:translateX(var(--bx,0px)) scale(var(--bs,1))}
+.bk{transition:transform .9s cubic-bezier(.6,0,.2,1)}
+.ls-nav{position:absolute;left:0;right:0;bottom:0;z-index:200;justify-content:center;gap:1.4cqw;padding:2.2cqw 3cqw 2.8cqw;border-top:1px solid rgba(22,17,37,.08);background:rgba(255,255,255,.94);border-radius:0 0 14px 6px;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.bk.open .ls-nav{opacity:1;visibility:visible;transition:opacity .4s .5s}
+.ls-tab{min-height:34px;padding:0 2.6cqw;font-size:2.9cqw}
+.lsn-rec{display:flex;flex-wrap:wrap;gap:1cqw;margin-top:1.6cqw}
+.lsn-rec button{min-height:0;padding:.9cqw 2cqw;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;font:800 2.4cqw var(--f-body);cursor:pointer}
+.lsn-rec button[aria-pressed="true"]{background:#fff;color:var(--c);border-color:#fff}
+.mf-open{text-decoration:none!important}
+.mf-open .u{text-decoration:underline;text-underline-offset:4px}
+.mf-extra{display:flex;align-items:center;gap:12px;width:100%;margin-top:14px;padding:10px 12px;border-radius:14px;background:rgba(22,17,37,.14);color:#fff;text-align:left}
+.mf-extra img{flex:none;width:42px;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.mx-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.mx-t small{font-weight:800;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.mx-t b{font-weight:800;font-size:.86rem;line-height:1.2}
+.mx-t span{font-size:.72rem;opacity:.85;line-height:1.3}
+.mx-a{flex:none;display:flex;flex-direction:column;gap:4px}
+.mx-a a{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:0 12px;border-radius:999px;border:1.5px solid rgba(255,255,255,.7);color:#fff;font-weight:800;font-size:.76rem;text-decoration:none}
+.mx-a a:first-child{background:#fff;color:var(--deep);border-color:#fff}
+@media (hover:hover){ .mx-a a:hover{transform:translateY(-1px)} }
+.mf-extra .mx-note{display:block}
+@media (prefers-reduced-motion:reduce){ .bk-leaf,.bk-cover,.bk{transition:none!important} }
+/* ===== v51: abas embaixo do livro, livro maior ===== */
+.ls-nav{top:calc(100% + 22px);bottom:auto;left:-4%;right:-4%;z-index:-1;background:none;border:0;border-radius:0;padding:0;gap:8px;flex-wrap:wrap;transform:translateY(-70px) scale(.9);opacity:0;visibility:hidden;transition:transform .45s cubic-bezier(.6,0,.2,1),opacity .25s,visibility 0s .45s}
+.bk.open .ls-nav{transform:none;opacity:1;visibility:visible;transition:transform .7s cubic-bezier(.2,.9,.25,1.15) .55s,opacity .35s .55s,visibility 0s}
+.ls-nav .ls-tab{min-height:40px;padding:0 16px;font-size:.86rem;border:2px solid var(--ink);background:#fff;color:var(--ink);box-shadow:0 3px 0 var(--ink)}
+.ls-nav .ls-tab[aria-pressed="true"]{background:var(--ink);color:#fff}
+@media (hover:hover){ .ls-nav .ls-tab:hover{transform:translateY(-2px)} }
+.bk-leaf .lsn-b{padding-bottom:3cqw}
+.bk{width:min(92vw,420px);margin:48px auto 96px}
+.bk-leaf{transition:none;will-change:transform}
+.bk-leaf-shade{position:absolute;inset:0;pointer-events:none;opacity:0;border-radius:inherit}
+.bk-leaf-f .bk-leaf-shade{background:linear-gradient(90deg,rgba(22,17,37,.0) 0%,rgba(22,17,37,.08) 55%,rgba(22,17,37,.32) 100%)}
+.bk-leaf-b .bk-leaf-shade{background:linear-gradient(270deg,rgba(255,255,255,0),rgba(22,17,37,.22))}
+@media (min-width:900px){
+  .mat-grid{max-width:1180px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px}
+  .bk{width:min(100%,440px);margin:48px auto 100px}
+}
+.bk{perspective:2200px}
+@media (max-width:520px){ .ls-nav{gap:5px;flex-wrap:nowrap} .ls-nav .ls-tab{padding:0 9px;font-size:.76rem;min-height:38px} }
+.mf-row .mf-ic{flex:none}
+.tm-tur{display:block;margin-top:12px;text-align:left}
+.tm-tur-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.tm-tur-h b{font-weight:800;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream)}
+.tm-tur-h em{font-style:normal;font-weight:800;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:.3em .7em;border-radius:999px;background:var(--orange);color:var(--ink)}
+.tm-tur ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:6px}
+.tm-tur li{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 12px;padding:8px 12px;border-radius:12px;background:rgba(243,223,202,.08);border:1px solid rgba(243,223,202,.18);font-size:.86rem;line-height:1.25}
+.tm-tur li b{color:var(--cream);font-weight:800;white-space:nowrap}
+.tm-tur li span{color:#E4D9CC}
+.tm-tur li small{font-weight:700;font-size:.78rem;color:var(--orange);white-space:nowrap}
+.tm-tur li small{grid-column:2}
+@media (min-width:520px){ .tm-tur ul{grid-template-columns:1fr 1fr} .tm-tur li{grid-template-columns:auto 1fr} .tm-tur li small{grid-column:1 / -1} }
+@media (min-width:900px){ .tm-tur ul{grid-template-columns:1fr} .tm-tur li{grid-template-columns:auto 1fr auto} .tm-tur li small{grid-column:auto} }
 </style>
 <title>Pequeno Chef</title>
 <meta name="description" content="Uma carreta-cozinha itinerante , aulas gratuitas e experiências gastronômicas que aproximam o público dos sabores, dos saberes e das tradições da…">
@@ -1053,7 +1178,7 @@ img.truck-ill{object-fit:cover}
       <a href="#duvidas"><img src="_media/pagina/icones/menuduvidas.svg" alt="">Dúvidas</a>
     </nav>
     <div class="fh-right">
-    <a class="btn btn-orange fh-cta" href="#inscricao">Inscrição</a>
+    <a class="btn btn-orange fh-cta" href="https://www.sympla.com.br/evento/memorias-do-pequeno-chef-curso-de-culinaria/3607138" target="_blank" rel="noopener">Inscrição</a>
     <button class="fh-burger" type="button" id="fhBurger" aria-expanded="false" aria-controls="fhMenu" aria-label="Abrir menu"><i></i></button>
     </div>
     <span class="fh-prog" id="fhProg" aria-hidden="true"></span>
@@ -1063,7 +1188,7 @@ img.truck-ill{object-fit:cover}
     <a href="#carreta"><img src="_media/pagina/icones/menucarreta.svg" alt="">A carreta</a>
     
     <a href="#contagem"><img src="_media/pagina/icones/menudatas.svg" alt="">Datas</a>
-    <a class="wide" href="#inscricao"><img src="_media/pagina/icones/menuinscricao.svg" alt="">Inscrições em breve</a>
+    <a class="wide" href="https://www.sympla.com.br/evento/memorias-do-pequeno-chef-curso-de-culinaria/3607138" target="_blank" rel="noopener"><img src="_media/pagina/icones/menuinscricao.svg" alt="">Fazer minha inscrição</a>
   </nav>
 </header>
 <button class="totop" type="button" id="toTop" aria-label="Voltar ao topo">
@@ -1088,7 +1213,7 @@ img.truck-ill{object-fit:cover}
           <li class="chip tp" aria-label="Período"><span class="tp-i"><span class="tp-a">out/2026</span><span class="tp-b">out/2026</span></span><span class="tp-i"><span class="tp-a">out/2026</span><span class="tp-b">nov/2026</span></span><span class="tp-i"><span class="tp-a">nov/2026</span><span class="tp-b">nov/2026</span></span><span class="tp-i"><span class="tp-a">dez/2026</span><span class="tp-b">dez/2026</span></span></li>
         </ul>
         <div class="actions" id="heroActions">
-          <a class="btn btn-orange" href="#inscricao">Inscrições em breve</a>
+          <a class="btn btn-orange" href="https://www.sympla.com.br/evento/memorias-do-pequeno-chef-curso-de-culinaria/3607138" target="_blank" rel="noopener">Fazer minha inscrição</a>
           <a class="link" href="#contagem">Ver datas por cidade</a>
         </div>
       </div>
@@ -1160,7 +1285,7 @@ img.truck-ill{object-fit:cover}
     <ul class="facts-strip" aria-label="Aulas">
       <li><b>Aulas</b><span>Gratuitas e abertas ao público geral</span></li>
       <li><b>Idade</b><span class="cap">a partir de 16 anos</span></li>
-      <li><b>Duração de cada aula</b><span>Curso de 20 horas de formação</span></li>
+      <li><b>Duração do curso</b><span>Curso de 20 horas de formação</span></li>
     </ul>
   </div>
 </section>
@@ -1245,16 +1370,16 @@ img.truck-ill{object-fit:cover}
       <div class="tm-cities" role="radiogroup" aria-label="Escolha sua cidade" id="tmCities">
 
 
-<button type="button" role="radio" aria-checked="false" data-start="17/10/2026">Fortaleza<small>17/10</small><span class="tm-info" hidden><b>17 a 29 de outubro de 2026</b><br>Local: A confirmar · Horário: A confirmar</span><span class="tm-go-t" hidden>Quero minha vaga em <b>Fortaleza</b></span></button>
+<button type="button" role="radio" aria-checked="false" data-start="17/10/2026">Fortaleza<small>17/10</small><span class="tm-info" hidden><b>17 a 29 de outubro de 2026</b><br>Local: Praça da Imprensa Chanceler Edson Queiroz, Dionísio Torres, Fortaleza - CE<span class="tm-tur" data-turmas="Turma 1 | Manhã | 08h00 às 12h00 | 17/out a 22/out ; Turma 2 | Noite | 18h30 às 22h00 | 17/out a 22/out ; Turma 3 | Manhã | 08h00 às 12h15 | 23/out a 28/out ; Turma 4 | Noite | 18h20 às 22h40 | 23/out a 28/out"><span class="tm-tur-h"><b></b></span><ul></ul></span></span><span class="tm-go-t" hidden>Quero minha vaga em <b>Fortaleza</b></span></button>
 
 
 
-<button type="button" role="radio" aria-checked="false" data-start="31/10/2026">Maracanaú<small>31/10</small><span class="tm-info" hidden><b>31 de outubro a 12 de novembro de 2026</b><br>Local: A confirmar · Horário: A confirmar</span><span class="tm-go-t" hidden>Quero minha vaga em <b>Maracanaú</b></span></button>
+<button type="button" role="radio" aria-checked="false" data-start="31/10/2026">Maracanaú<small>31/10</small><span class="tm-info" hidden><b>31 de outubro a 12 de novembro de 2026</b><br>Local: IFCE – Campus Maracanaú, Av. Parque Central, 1315 – Jereissati – Setor A, Maracanaú - CE · Horário: A confirmar</span><span class="tm-go-t" hidden>Quero minha vaga em <b>Maracanaú</b></span></button>
 
 
 
 
-<button type="button" role="radio" aria-checked="false" data-start="16/11/2026">Salvador<small>16/11</small><span class="tm-info" hidden><b>16 a 26 de novembro de 2026</b><br>Local: A confirmar · Horário: A confirmar</span><span class="tm-go-t" hidden>Quero minha vaga em <b>Salvador</b></span></button>
+<button type="button" role="radio" aria-checked="false" data-start="16/11/2026">Salvador<small>16/11</small><span class="tm-info" hidden><b>16 a 26 de novembro de 2026</b><br>Local: Praça da Pronaica, Cajazeiras – Fazenda Grande I, Salvador - BA · Horário: A confirmar</span><span class="tm-go-t" hidden>Quero minha vaga em <b>Salvador</b></span></button>
 
 
 
@@ -1281,17 +1406,45 @@ img.truck-ill{object-fit:cover}
       <p class="eyebrow">Material da aula</p>
       <h2 id="t-mat">Leve a aula <span>com você</span></h2>
       <p class="sub">O conteúdo da aula em um único PDF, para baixar e consultar quando quiser.</p>
-      <div class="mf" id="matFile"><div class="mf-row"><img class="mf-ic" src="_media/pagina/icones/pdf.svg" alt=""><div class="mf-name"><b>Material da aula</b><small>Arquivo em PDF</small></div><span class="mf-st">Em breve</span></div><dl class="mf-meta"><div><dt>Páginas</dt><dd>A confirmar</dd></div><div><dt>Tamanho</dt><dd>A confirmar</dd></div></dl><span class="mf-dl off" aria-disabled="true"><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(_media/pagina/icones/baixar.svg);mask-image:url(_media/pagina/icones/baixar.svg)"></span>Disponível em breve</span></div>
+      <div class="mf" id="matFile"><div class="mf-row"><img class="mf-ic" src="_media/pagina/icones/pdf.svg" alt=""><div class="mf-name"><b>Material da aula</b><small>Arquivo em PDF</small></div><span class="mf-st ok">Disponível</span></div><dl class="mf-meta"><div><dt>Páginas</dt><dd>21</dd></div><div><dt>Tamanho</dt><dd>10,8 MB</dd></div></dl><a class="mf-dl" href="_media/pagina/material/aula.pdf" download><span class="ico" aria-hidden="true" style="-webkit-mask-image:url(_media/pagina/icones/baixar.svg);mask-image:url(_media/pagina/icones/baixar.svg)"></span>Baixar PDF</a><a class="mf-open" href="_media/pagina/material/aula.pdf" rel="noopener"><span class="u">Abrir no navegador</span><span aria-hidden="true">↗</span></a></div>
+      <!-- Material extra (opcional): aparece quando houver o arquivo @arquivo_material_extra -->
+      <div class="mf-extra"><img src="_media/pagina/material/extracapa.webp" alt="" width="160" height="220" loading="lazy"><div class="mx-t"><small>Também para baixar</small><b>Coisas que todo Pequeno Chef precisa saber</b><span>Cartilha de segurança na cozinha · Nacional Gás · 12 páginas</span></div><div class="mx-a"><a href="_media/pagina/material/extra.pdf" download>Baixar</a><a href="_media/pagina/material/extra.pdf" rel="noopener">Ver</a></div></div>
     </div>
+    <!-- Apostila: até 8 aulas (cada folha aparece quando @aulaN_titulo existe). Abas e índice são montados a partir das folhas.
+         @aulaN_cor = verde | laranja | vermelho | amarelo | noite. Listas (@aulaN_tecnicas, @aulaN_etapas): itens separados por " • ". -->
     <div class="bk" id="matBook" role="button" tabindex="0" aria-pressed="false" aria-label="Toque para abrir">
-      <span class="bk-sheet s1" aria-hidden="true"></span>
-      <span class="bk-sheet s2" aria-hidden="true"></span>
-      <div class="bk-page" aria-hidden="true"><small>Página 1</small><b>Conteúdo da aula</b><i></i><i></i><i></i><i></i><i></i><i></i><img src="_media/pagina/icones/batedor.webp" alt=""></div>
+      <span class="bk-hint" aria-hidden="true" id="bkHint">Toque para abrir</span>
+      <span class="bk-base" aria-hidden="true"></span>
+      <div class="bk-leaves" id="bkLeaves">
+      
+      <div class="bk-leaf"><div class="bk-leaf-f bk-page"><i class="bk-leaf-shade"></i><article class="lsn" data-c="verde" aria-label="Aula 1"><header class="lsn-h"><img class="lsn-ic" src="_media/pagina/apostila/aula1.webp" alt="" loading="lazy"><div class="lsn-t"><small>Aula 1</small><b>Pequeno Chefe, Grandes Quiches</b><em>Massas, recheios &amp; pequenos detalhes</em></div></header>
+        <div class="lsn-b"><div class="lsn-two"><div><h4>Cardápio</h4><p>Mini Quiche de Palmito com Cebolas Caramelizadas + Mix de Folhas, Croutons Crocantes e Molho de Mostarda &amp; Mel</p></div><div><h4>Rendimento</h4><p>25 participantes · 1 mini quiche + pequena salada por participante</p></div></div><h4>Técnicas que você vai aprender</h4><ul class="lsn-tags" data-itens="Sablage • Descanso • Pré-assamento • Caramelização • Aparelho de quiche • Tostagem • Emulsificação • Montagem"></ul><div class="lsn-tip"><h4>Dica do chef</h4><p>A mostarda entra somente no molho da salada; a quiche mantém o sabor delicado do palmito e da cebola.</p></div></div></article></div><div class="bk-leaf-b" aria-hidden="true"><i class="bk-leaf-shade"></i></div></div>
+      
+      
+      <div class="bk-leaf"><div class="bk-leaf-f bk-page"><i class="bk-leaf-shade"></i><article class="lsn" data-c="laranja" aria-label="Aula 2"><header class="lsn-h"><img class="lsn-ic" src="_media/pagina/apostila/aula2.webp" alt="" loading="lazy"><div class="lsn-t"><small>Aula 2 · Mãos na massa!</small><b>Focaccia Pugliese</b><em>Fermentação, dobras &amp; sabores</em></div></header>
+        <div class="lsn-b"><div class="lsn-two"><div><h4>Cardápio</h4><p>Focaccia Pugliese com Tomates, Azeitonas, Alecrim e Azeite</p></div><div><h4>Rendimento</h4><p>25 participantes · aproximadamente 3 focaccias médias para degustação</p></div></div><h4>Técnicas que você vai aprender</h4><ul class="lsn-tags" data-itens="Pré-fermento • Fermentação biológica • Hidratação • Desenvolvimento de glúten • Dobras • Modelagem • Dimpling • Cocção"></ul><div class="lsn-tip"><h4>Dica do chef</h4><p>Na panificação, o relógio orienta. A massa confirma. Temperatura, umidade e farinha mudam de cidade para cidade.</p></div></div></article></div><div class="bk-leaf-b" aria-hidden="true"><i class="bk-leaf-shade"></i></div></div>
+      
+      
+      <div class="bk-leaf"><div class="bk-leaf-f bk-page"><i class="bk-leaf-shade"></i><article class="lsn" data-c="vermelho" aria-label="Aula 3"><header class="lsn-h"><img class="lsn-ic" src="_media/pagina/apostila/aula3.webp" alt="" loading="lazy"><div class="lsn-t"><small>Aula 3</small><b>Brownie</b><em>Chocolate 40% e Nozes</em></div></header>
+        <div class="lsn-b"><p class="lsn-lead">Intenso, úmido, denso e com casquinha crocante.</p><h4>Modo de preparo em 6 etapas</h4><ol class="lsn-steps" data-itens="Derretimento • Ovos e açúcar • Emulsificação • Incorporação dos secos • Assamento • Resfriamento e corte"></ol><div class="lsn-tip"><h4>Características esperadas</h4><p>Interior: denso, úmido, macio e com textura cremosa. Superfície: casquinha fina, delicada e levemente crocante. Sabor: chocolate intenso, amargor equilibrado e notas tostadas de nozes.</p></div></div></article></div><div class="bk-leaf-b" aria-hidden="true"><i class="bk-leaf-shade"></i></div></div>
+      
+      
+      <div class="bk-leaf"><div class="bk-leaf-f bk-page"><i class="bk-leaf-shade"></i><article class="lsn" data-c="amarelo" aria-label="Aula 4"><header class="lsn-h"><img class="lsn-ic" src="_media/pagina/apostila/aula4.webp" alt="" loading="lazy"><div class="lsn-t"><small>Aula 4</small><b>La Pasta!</b><em>Da farinha e dos ovos à massa fresca artesanal</em></div></header>
+        <div class="lsn-b"><div class="lsn-two"><div><h4>Cardápio</h4><p>Tagliatelle ao Molho Basílico + Ravioli de Ricota e Ervas ao Béchamel</p></div><div><h4>Rendimento</h4><p>25 participantes · cada participante produz pequena porção de tagliatelle e ravioli</p></div></div><h4>Técnicas que você vai aprender</h4><ul class="lsn-tags" data-itens="Sova • Glúten • Descanso • Cilindro • Espessura • Tagliatelle • Ravioli • Selagem • Roux • Béchamel • Molho basílico • Cocção"></ul><div class="lsn-tip"><h4>Dica do chef</h4><p>A massa-base é simples: farinha + ovos. A técnica transforma esses dois ingredientes em muitos formatos e possibilidades.</p></div></div></article></div><div class="bk-leaf-b" aria-hidden="true"><i class="bk-leaf-shade"></i></div></div>
+      
+      
+      <div class="bk-leaf"><div class="bk-leaf-f bk-page"><i class="bk-leaf-shade"></i><article class="lsn" data-c="noite" aria-label="Aula 5"><header class="lsn-h"><img class="lsn-ic" src="_media/pagina/apostila/aula5.webp" alt="" loading="lazy"><div class="lsn-t"><small>Aula 5</small><b>Pequenas porções, grandes mesas!</b><em>Finger Foods &amp; Arte de Montar um Buffet</em></div></header>
+        <div class="lsn-b"><div class="lsn-two"><div><h4>Cardápio</h4><p>Canapés de Azeitonas · Creme de Palmito · Mini Tarteletes · Bruschettas · Mini Sanduíches · Bolo Redondo</p></div><div><h4>Rendimento</h4><p>25 participantes · produção coletiva + montagem demonstrativa de mesa</p></div></div><h4>Técnicas que você vai aprender</h4><ul class="lsn-tags" data-itens="Pastas • Saco de confeitar • Canapé • Tartelete • Confit • Tostagem • Mini sanduíches • Padronização • Corte de bolo • Volumetria • Alturas • Ponto focal • Montagem de buffet"></ul><div class="lsn-tip"><h4>Dica do chef</h4><p>Uma mesa bonita precisa funcionar: altura e volume criam impacto, mas o convidado deve conseguir acessar cada preparação com facilidade.</p></div></div></article></div><div class="bk-leaf-b" aria-hidden="true"><i class="bk-leaf-shade"></i></div></div>
+      
+      
+      
+      
+      </div>
       <div class="bk-cover" aria-hidden="true">
         <div class="bk-front"><span class="tag">PDF</span><span class="t">Material<br>da <span>aula</span></span><img class="ic a" src="_media/pagina/icones/tomate.webp" alt=""><img class="ic b" src="_media/pagina/icones/cenoura.webp" alt=""><img class="ic c" src="_media/pagina/icones/alecrim.webp" alt=""><span class="ft">Pequeno Chef</span></div>
-        <div class="bk-back"></div>
+        <div class="bk-back"><span class="bb-l">Nesta apostila</span><ul class="bb-idx" id="bkIdx"></ul></div>
       </div>
-      <span class="bk-hint" aria-hidden="true" id="bkHint">Toque para abrir</span>
+      <div class="ls-nav" id="bkTabs" role="group" aria-label="Nesta apostila"></div>
     </div>
   </div>
 </section>
@@ -1326,16 +1479,13 @@ img.truck-ill{object-fit:cover}
         <div class="a"><p>Dentro da carreta-cozinha, nestas cidades:</p><ul class="qa-cities"><li><b>Fortaleza</b> · 17 a 29 de outubro de 2026</li><li><b>Maracanaú</b> · 31 de outubro a 12 de novembro de 2026</li><li><b>Salvador</b> · 16 a 26 de novembro de 2026</li><li><b>Campos do Jordão</b> · 7 a 19 de dezembro de 2026</li></ul><a class="link" href="#contagem">Ver local e horário de cada cidade</a></div></details></li>
       
       
-      <li><details><summary><img src="_media/pagina/duvidas/icone4.svg" alt=""><span class="q">Quanto tempo dura cada aula?</span><span class="chev" aria-hidden="true">+</span></summary>
+      <li><details><summary><img src="_media/pagina/duvidas/icone4.svg" alt=""><span class="q">Quanto tempo dura o curso?</span><span class="chev" aria-hidden="true">+</span></summary>
         <div class="a"><p>Curso de 20 horas de formação</p></div></details></li>
       
       
-      <li><details><summary><img src="_media/pagina/duvidas/icone5.svg" alt=""><span class="q">E se eu tiver alergia ou restrição alimentar?</span><span class="chev" aria-hidden="true">+</span></summary>
-        <div class="a"><p>A confirmar</p></div></details></li>
-      
       
       <li><details><summary><img src="_media/pagina/duvidas/icone6.svg" alt=""><span class="q">Como faço a inscrição e com quem falo?</span><span class="chev" aria-hidden="true">+</span></summary>
-        <div class="a"><p class="row"><b>Link de inscrição:</b><span>A confirmar</span></p><p class="row"><b>Contato:</b><span>A confirmar</span></p></div></details></li>
+        <div class="a"><p class="row"><b>Link de inscrição:</b><span><a href="https://www.sympla.com.br/evento/memorias-do-pequeno-chef-curso-de-culinaria/3607138" target="_blank" rel="noopener">Fazer minha inscrição</a></span></p><p class="row"><b>Contato:</b><span>David França - (71) 99294-3793</span></p></div></details></li>
       
       
       
@@ -1369,8 +1519,7 @@ img.truck-ill{object-fit:cover}
           <li>4 cidades · <span class="tp"><span class="tp-i"><span class="tp-a">out/2026</span><span class="tp-b">out/2026</span></span><span class="tp-i"><span class="tp-a">out/2026</span><span class="tp-b">nov/2026</span></span><span class="tp-i"><span class="tp-a">nov/2026</span><span class="tp-b">nov/2026</span></span><span class="tp-i"><span class="tp-a">dez/2026</span><span class="tp-b">dez/2026</span></span></span></li>
         </ul>
         <div class="cta-actions">
-          <span class="btn btn-orange is-off" id="ctaFinal" aria-disabled="true">Inscrições em breve</span>
-          <span class="cta-note">Link de inscrição: A confirmar</span>
+          <a class="btn btn-orange" href="https://www.sympla.com.br/evento/memorias-do-pequeno-chef-curso-de-culinaria/3607138" id="ctaFinal" target="_blank" rel="noopener">Fazer minha inscrição</a>
         </div>
       </div>
       <div class="cta-art">
@@ -1437,7 +1586,7 @@ img.truck-ill{object-fit:cover}
 
 
 
-<a class="dock hide" id="dock" href="#inscricao"><span class="dk-t"><b>Inscrições em breve</b></span><span class="dk-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+<a class="dock hide" id="dock" href="https://www.sympla.com.br/evento/memorias-do-pequeno-chef-curso-de-culinaria/3607138" target="_blank" rel="noopener"><span class="dk-t"><b>Fazer minha inscrição</b></span><span class="dk-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
 
 <!-- Imagens e textos usados pelo JavaScript (não remover). As imagens trocam no passo Mídia; os textos, no cadastro. -->
 <div class="media-refs" hidden aria-hidden="true"><img data-f="carreta" src="_media/pagina/carreta/externa.webp" alt="" loading="lazy"><img data-f="int-agua" src="_media/pagina/carreta/agua.webp" alt="" loading="lazy"><img data-f="int-bancada" src="_media/pagina/carreta/bancada.webp" alt="" loading="lazy"><img data-f="int-corredor" src="_media/pagina/carreta/corredor.webp" alt="" loading="lazy"><img data-f="int-cozinha" src="_media/pagina/carreta/cozinha.webp" alt="" loading="lazy"><img data-f="int-plateia" src="_media/pagina/carreta/plateia.webp" alt="" loading="lazy"><img data-f="chef-panela" src="_media/pagina/carreta/adesivochef.webp" alt="" loading="lazy"><img data-f="hero-chef" src="_media/pagina/hero/chef.webp" alt="" loading="lazy"><img data-f="logo-pc" src="_media/pagina/marca/logo.webp" alt="" loading="lazy"><img data-f="logo-pc-full-ink" src="_media/pagina/marca/logocard.webp" alt="" loading="lazy"><img data-f="logo-pc-sm" src="_media/pagina/marca/logopequeno.webp" alt="" loading="lazy"><img data-f="alecrim" src="_media/pagina/icones/alecrim.webp" alt="" loading="lazy"><img data-f="alho" src="_media/pagina/icones/alho.webp" alt="" loading="lazy"><img data-f="avental" src="_media/pagina/icones/avental.webp" alt="" loading="lazy"><img data-f="azeite" src="_media/pagina/icones/azeite.webp" alt="" loading="lazy"><img data-f="balanca" src="_media/pagina/icones/balanca.webp" alt="" loading="lazy"><img data-f="batedor" src="_media/pagina/icones/batedor.webp" alt="" loading="lazy"><img data-f="bolo" src="_media/pagina/icones/bolo.webp" alt="" loading="lazy"><img data-f="cebola" src="_media/pagina/icones/cebola.webp" alt="" loading="lazy"><img data-f="cenoura" src="_media/pagina/icones/cenoura.webp" alt="" loading="lazy"><img data-f="chapeu" src="_media/pagina/icones/chapeu.webp" alt="" loading="lazy"><img data-f="cogumelo" src="_media/pagina/icones/cogumelo.webp" alt="" loading="lazy"><img data-f="concha" src="_media/pagina/icones/concha.webp" alt="" loading="lazy"><img data-f="copo" src="_media/pagina/icones/copo.webp" alt="" loading="lazy"><img data-f="dolma" src="_media/pagina/icones/dolma.webp" alt="" loading="lazy"><img data-f="escorredor" src="_media/pagina/icones/escorredor.webp" alt="" loading="lazy"><img data-f="espatula" src="_media/pagina/icones/espatula.webp" alt="" loading="lazy"><img data-f="farelo" src="_media/pagina/icones/farelo.webp" alt="" loading="lazy"><img data-f="folha" src="_media/pagina/icones/folha.webp" alt="" loading="lazy"><img data-f="frigideira" src="_media/pagina/icones/frigideira.webp" alt="" loading="lazy"><img data-f="moedor" src="_media/pagina/icones/moedor.webp" alt="" loading="lazy"><img data-f="panela" src="_media/pagina/icones/panela.webp" alt="" loading="lazy"><img data-f="pao" src="_media/pagina/icones/pao.webp" alt="" loading="lazy"><img data-f="pegador" src="_media/pagina/icones/pegador.webp" alt="" loading="lazy"><img data-f="pimenta" src="_media/pagina/icones/pimenta.webp" alt="" loading="lazy"><img data-f="pizza" src="_media/pagina/icones/pizza.webp" alt="" loading="lazy"><img data-f="pontos" src="_media/pagina/icones/pontos.webp" alt="" loading="lazy"><img data-f="queijo" src="_media/pagina/icones/queijo.webp" alt="" loading="lazy"><img data-f="ralador" src="_media/pagina/icones/ralador.webp" alt="" loading="lazy"><img data-f="rolo" src="_media/pagina/icones/rolo.webp" alt="" loading="lazy"><img data-f="sopa" src="_media/pagina/icones/sopa.webp" alt="" loading="lazy"><img data-f="sorvete" src="_media/pagina/icones/sorvete.webp" alt="" loading="lazy"><img data-f="tabua" src="_media/pagina/icones/tabua.webp" alt="" loading="lazy"><img data-f="tabua2" src="_media/pagina/icones/tabua2.webp" alt="" loading="lazy"><img data-f="tigela" src="_media/pagina/icones/tigela.webp" alt="" loading="lazy"><img data-f="tomate" src="_media/pagina/icones/tomate.webp" alt="" loading="lazy"><img data-f="tracos" src="_media/pagina/icones/tracos.webp" alt="" loading="lazy"><img data-f="xicara" src="_media/pagina/icones/xicara.webp" alt="" loading="lazy"></div>
@@ -1632,6 +1781,16 @@ img.truck-ill{object-fit:cover}
       btns.forEach(function(b, j){ b.setAttribute('aria-checked', j === i ? 'true' : 'false'); b.tabIndex = j === i ? 0 : -1; });
       var c = info(btns[i]), t = target(c);
       status.innerHTML = c.html;
+      /* turmas da cidade: "Turma 1 | Manhã | 08h00 às 12h00 | 17/out a 22/out ; Turma 2 | …" */
+      [].forEach.call(status.querySelectorAll('.tm-tur[data-turmas]'), function(box){
+        var ul = box.querySelector('ul'); ul.innerHTML = '';
+        (box.getAttribute('data-turmas') || '').split(';').forEach(function(t){
+          var f = t.split('|').map(function(x){ return x.trim(); }); if(!f[0] || /^@/.test(f[0])) return;
+          var li = document.createElement('li'), b = document.createElement('b'), sp = document.createElement('span'), sm = document.createElement('small');
+          b.textContent = f[0]; sp.textContent = f.slice(1, -1).filter(Boolean).join(' · ') || ''; sm.textContent = f.length > 1 ? f[f.length - 1] : '';
+          li.appendChild(b); li.appendChild(sp); li.appendChild(sm); ul.appendChild(li);
+        });
+      });
       go.innerHTML = '<span>' + c.go + '</span>'; go.setAttribute('href', c.past ? '#contagem' : '#inscricao');
       tell.href = 'https://wa.me/?text=' + encodeURIComponent(msg(c) + ' ' + siteUrl() + '#contagem');
       tell.dataset.msg = msg(c);
@@ -1767,13 +1926,103 @@ img.truck-ill{object-fit:cover}
     pick(0, false);
   })();
 
-  /* ---------- Material da aula: apostila que abre a capa + download ---------- */
+  /* ---------- Material da aula: apostila com as aulas (folhas que viram e se acumulam sobre a capa) ---------- */
   (function(){
     var book = document.getElementById('matBook'); if(!book) return;
     var hint = document.getElementById('bkHint');
-    function toggle(){ var on = book.classList.toggle('open'); book.setAttribute('aria-pressed', on ? 'true' : 'false'); hint.textContent = TX(on ? 'material_livro_fechar' : 'material_livro_abrir'); book.setAttribute('aria-label', hint.textContent); }
-    book.addEventListener('click', toggle);
-    book.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
+    /* ---- Apostila: folhas que viram e ficam empilhadas sobre a capa aberta ---- */
+    var leaves = [].slice.call(book.querySelectorAll('.bk-leaf')), N = leaves.length, cur = 0, timers = [];
+    /* listas "a • b • c" viram itens; abas e índice da capa saem das próprias folhas */
+    [].forEach.call(book.querySelectorAll('[data-itens]'), function(ul){ (ul.getAttribute('data-itens') || '').split(/\s*[•·|;]\s*/).forEach(function(t){ if(!t || /^@/.test(t)) return; var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); }); });
+    var tabsBox = document.getElementById('bkTabs'), idx = document.getElementById('bkIdx');
+    leaves.forEach(function(l, i){
+      var art = l.querySelector('.lsn'), rot = art.getAttribute('aria-label') || '', tit = (art.querySelector('.lsn-t b') || {}).textContent || '', ic = art.querySelector('.lsn-ic');
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'ls-tab'; b.setAttribute('data-go', i); b.textContent = rot; tabsBox.appendChild(b);
+      var li = document.createElement('li'); li.innerHTML = '<img alt="" loading="lazy"><span><small></small></span>'; if(ic) li.querySelector('img').src = ic.getAttribute('src');
+      li.querySelector('small').textContent = rot; li.querySelector('span').appendChild(document.createTextNode(tit)); idx.appendChild(li);
+    });
+    var tabs = [].slice.call(book.querySelectorAll('.ls-tab')), TAB = leaves.map(function(l, i){ return i; });
+    if(!N){ tabsBox.hidden = true; }
+    function wide(){ return window.innerWidth >= 900; }
+    function angle(){ return wide() ? -116 : -158; }
+    function pose(i){
+      var A = angle();
+      if(i < cur) return {t:'translate3d(0px,0px,0px) rotateY(' + (A + 1.4 + i * 1.6).toFixed(1) + 'deg)', z:110 + i};
+      var r = i - cur; return {t:'translate3d(' + (r * 3) + 'px,' + (r * 2.4) + 'px,0px) rotateY(0deg)', z:60 - r};
+    }
+    function marks(){
+      leaves.forEach(function(l, i){ l.setAttribute('aria-hidden', i === cur ? 'false' : 'true'); });
+      tabs.forEach(function(t, k){ t.setAttribute('aria-pressed', k === TAB[cur] ? 'true' : 'false'); });
+    }
+    function layout(){ leaves.forEach(function(l, i){ if(l._an) return; var p = pose(i); l.style.transform = p.t; l.style.zIndex = p.z; }); marks(); }
+    /* uma folha vira: sai da pose atual, levanta no meio do caminho e assenta na nova pose */
+    function turn(l, from, to, order){
+      if(reduce || !l.animate){ l.style.transform = to.t; l.style.zIndex = to.z; return; }
+      var fa = parseFloat(from.t.split('rotateY(')[1]), ta = parseFloat(to.t.split('rotateY(')[1]), mid = (fa + ta) / 2;
+      l.style.zIndex = 150 + order;
+      if(l._an) l._an.cancel();
+      var an = l._an = l.animate([
+        {transform: from.t},
+        {transform: 'translate3d(0px,-6px,46px) rotateY(' + mid.toFixed(1) + 'deg)', offset:.5},
+        {transform: to.t}
+      ], {duration:900, easing:'cubic-bezier(.36,.06,.24,1)'});
+      var sh = l.querySelectorAll('.bk-leaf-shade');
+      sh.forEach(function(e){ e.animate([{opacity:0}, {opacity:1, offset:.5}, {opacity:0}], {duration:900, easing:'ease-in-out'}); });
+      an.onfinish = function(){ l._an = null; l.style.transform = to.t; l.style.zIndex = to.z; layout(); };
+      an.oncancel = function(){ l._an = null; };
+      l.style.transform = to.t;
+    }
+    /* vai até a página "to" virando uma folha de cada vez */
+    function goTo(to){
+      timers.forEach(clearTimeout); timers = [];
+      if(to === cur) return;
+      var dir = to > cur ? 1 : -1, steps = Math.abs(to - cur);
+      for(var s = 0; s < steps; s++) (function(s){
+        timers.push(setTimeout(function(){
+          var idx = dir > 0 ? cur : cur - 1, l = leaves[idx], from = pose(idx);
+          cur += dir; var dest = pose(idx);
+          turn(l, from, dest, s);
+          leaves.forEach(function(o, i){ if(i !== idx && !o._an){ var p = pose(i); o.style.transform = p.t; o.style.zIndex = p.z; } });
+          marks();
+        }, reduce ? 0 : s * 220));
+      })(s);
+    }
+    /* computador: a apostila aberta não pode ficar atrás do texto. Mede o espaço livre e ajusta posição/escala */
+    function fit(){
+      book.style.setProperty('--ca', angle() + 'deg');
+      if(!book.classList.contains('open') || !wide()){ book.style.setProperty('--bx', '0px'); book.style.setProperty('--bs', 1); return; }
+      var prev = book.style.transform; book.style.transition = 'none'; book.style.transform = 'none';
+      var br = book.getBoundingClientRect(), copy = book.closest('.mat-grid').querySelector('.mat-copy').getBoundingClientRect(),
+          wrap = book.closest('.mat-grid').getBoundingClientRect();
+      book.style.transform = prev; void book.offsetWidth; book.style.transition = '';
+      var W = br.width, P = W * 0.66 + 10, /* largura que a capa aberta ocupa à esquerda (medida com perspectiva 2200px e capa a -116°) */
+          minL = copy.right + 36, maxR = Math.min(wrap.right, window.innerWidth - 12) - 16,
+          sc = Math.min(1, (maxR - minL) / (W + P)), spine = Math.max(br.left, minL + P * sc);
+      if(spine + W * sc > maxR) spine = maxR - W * sc;
+      book.style.setProperty('--bs', sc.toFixed(3)); book.style.setProperty('--bx', (spine - br.left).toFixed(1) + 'px');
+    }
+    function setOpen(on){
+      book.classList.toggle('open', on); book.setAttribute('aria-pressed', on ? 'true' : 'false');
+      hint.textContent = TX(on ? 'material_livro_fechar' : 'material_livro_abrir'); book.setAttribute('aria-label', hint.textContent); fit();
+      if(!on){ timers.forEach(clearTimeout); timers = []; if(cur) goTo(0); }
+    }
+    layout(); fit();
+    window.addEventListener('resize', function(){ layout(); fit(); });
+    book.querySelector('.ls-nav').addEventListener('click', function(e){ e.stopPropagation(); var b = e.target.closest('[data-go]'); if(b) goTo(+b.dataset.go); });
+    book.addEventListener('click', function(e){
+      var b = e.target.closest('.lsn-rec [data-go]'); if(b){ e.stopPropagation(); goTo(+b.dataset.go); return; }
+      if(book.dataset.swiped){ delete book.dataset.swiped; return; }
+      setOpen(!book.classList.contains('open'));
+    });
+    book.addEventListener('keydown', function(e){
+      if(e.target !== book) return;
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); setOpen(!book.classList.contains('open')); }
+      else if(book.classList.contains('open') && e.key === 'ArrowRight'){ e.preventDefault(); goTo(Math.min(N - 1, cur + 1)); }
+      else if(book.classList.contains('open') && e.key === 'ArrowLeft'){ e.preventDefault(); goTo(Math.max(0, cur - 1)); }
+    });
+    var sx = null;
+    book.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+    book.addEventListener('touchend', function(e){ if(sx == null || !book.classList.contains('open')) return; var dx = e.changedTouches[0].clientX - sx; sx = null; if(Math.abs(dx) > 40){ book.dataset.swiped = '1'; goTo(Math.max(0, Math.min(N - 1, cur + (dx < 0 ? 1 : -1)))); } });
   })();
 
   /* ---------- Galeria: mural (todas juntas) e uma a uma (com apresentação) ---------- */
@@ -2529,6 +2778,15 @@ img.truck-ill{object-fit:cover}
   Galeria: @repetir galeria com @galeria_foto, @galeria_legenda, @galeria_cidade, @galeria_numero (passo Mídia).
            Sem fotos: espaços reservados por cidade.
   Fica no código: o mostrador do timer (desenho que se move com os dias), setas, "+", play e o anel do "voltar ao topo".
+  Apostila (livro do material, até 8 aulas): @aulaN_rotulo, @aulaN_titulo (a folha aparece quando existe), @aulaN_cor
+    (verde | laranja | vermelho | amarelo | noite), @aulaN_chamada, @aulaN_subtitulo, @aulaN_destaque, @aulaN_cardapio,
+    @aulaN_rendimento, @aulaN_tecnicas e @aulaN_etapas (itens separados por " • "), @aulaN_etapas_titulo, @aulaN_dica_titulo,
+    @aulaN_dica; imagem @img_apostila_aulaN (pasta apostila/). Rótulos: @apostila_indice, @apostila_rotulo_cardapio,
+    @apostila_rotulo_rendimento, @apostila_rotulo_tecnicas. As abas e o índice da capa são montados a partir das folhas.
+  Turmas (por cidade, na contagem): @turmas — "Turma 1 | Manhã | 08h00 às 12h00 | 17/out a 22/out ; Turma 2 | …".
+    Com turmas, elas substituem o horário. Títulos: @contagem_turmas_titulo, @contagem_turmas_selo.
+  Material extra (opcional): @arquivo_material_extra (PDF, pasta material/), @img_material_extracapa, @material_extra_rotulo,
+    @material_extra_titulo, @material_extra_texto, @material_extra_baixar, @material_extra_ver.
   Opcionais: O2 Prime não usado. Sem parcelamento e sem desconto.
 -->
 <footer class="pub-rodape" data-pub-rodape><style>.pub-rodape{background:#16181d;color:#f1f2ee;font-family:inherit;padding:56px 24px;font-size:16px;line-height:1.55}.pub-rodape *{box-sizing:border-box}.pub-rodape__in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:40px 64px;align-items:start}.pub-rodape__esq{display:flex;flex-direction:column;gap:24px;align-items:flex-start}.pub-rodape__logo{display:block;max-height:80px;max-width:240px;width:auto;height:auto}.pub-rodape__desc{margin:0;white-space:pre-line;max-width:62ch}.pub-rodape__desc strong{font-weight:700}.pub-rodape__dir{display:flex;flex-direction:column;gap:12px;}.pub-rodape__titulo{margin:0;font-weight:700;font-size:1.05em}.pub-rodape__links{display:flex;flex-direction:column;gap:6px}.pub-rodape__links a{color:#f1f2ee;text-decoration:none}.pub-rodape__links a:hover{text-decoration:underline}.pub-rodape__redes{display:flex;flex-direction:column;gap:8px;list-style:none;margin:10px 0 0;padding:0}.pub-rodape__redes a{color:#f1f2ee;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px}.pub-rodape__redes a:hover{opacity:.75}.pub-rodape__redes svg{width:20px;height:20px;flex:none}@media (max-width:760px){.pub-rodape{padding:48px 20px}.pub-rodape__in{grid-template-columns:minmax(0,1fr);gap:48px;text-align:center;justify-items:center}.pub-rodape__esq,.pub-rodape__dir{align-items:center;justify-self:center}.pub-rodape__titulo{font-size:1.4em}.pub-rodape__links{gap:14px;font-size:1.1em}.pub-rodape__redes{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:18px}}</style><div class="pub-rodape__in"><div class="pub-rodape__esq"><img class="pub-rodape__logo" src="_media/pagina/marca/logo-pc-sm.webp" alt=""><p class="pub-rodape__desc">Uma carreta-cozinha itinerante, aulas gratuitas e experiências gastronômicas que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira. 
