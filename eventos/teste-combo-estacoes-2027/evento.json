@@ -1940,7 +1940,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-15T17:23:31.141Z",
+  "atualizadoEm": "2026-10-15T17:23:56.757Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2079,5 +2079,23 @@
       ]
     },
     "intervalo": 24
+  },
+  "secoes": {
+    "ocultas": [],
+    "porLinha": {},
+    "ordem": {
+      "praca": [
+        "topo",
+        "compra",
+        "incluso",
+        "etapas",
+        "como-funciona",
+        "extras",
+        "mod-gerador",
+        "mod-carta",
+        "fecho",
+        "duvidas"
+      ]
+    }
   }
 }
