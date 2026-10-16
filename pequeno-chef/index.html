@@ -1236,6 +1236,10 @@ img.truck-ill{object-fit:cover}
 
 <!-- ============ SOBRE O PROJETO ============
      Passos: até 8. Cada passo aparece quando o título (@passoN_titulo) está preenchido. -->
+<section id="pub-img-7rag04" class="pub-modulo" aria-label="Imagem: Grupo_Edson_Queiroz.png" data-pub-modulo style="--pub-larg:45%;--pub-esp:clamp(12px,3vw,24px);--pub-fundo:#ffffff"><div class="pub-modulo__in"><img class="pub-modulo__img" src="_media/modulos/grupo-edson-queiroz-3.png" alt="Logo_Edson-Queiroz" loading="lazy"></div></section>
+
+<!-- ============ CARRETA 3D ============
+     Os textos dos 9 pontos da carreta ficam em @carreta_pontoN_titulo / @carreta_pontoN_texto (lista escondida no fim da página). -->
 <section class="how" id="sobre" aria-labelledby="t-exp">
   <div class="wrap">
     <header class="sec-head">
@@ -1290,8 +1294,9 @@ img.truck-ill{object-fit:cover}
   </div>
 </section>
 
-<!-- ============ CARRETA 3D ============
-     Os textos dos 9 pontos da carreta ficam em @carreta_pontoN_titulo / @carreta_pontoN_texto (lista escondida no fim da página). -->
+<!-- ============ VÍDEOS (YouTube) ============
+     Até 6 vídeos. Cada um aparece quando o link do YouTube (@ytN_link) está preenchido.
+     O vídeo só carrega quando a pessoa aperta o play. -->
 <section class="truck" id="carreta" aria-labelledby="t-car">
   <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(_media/pagina/icones/onda1.svg);mask-image:url(_media/pagina/icones/onda1.svg)"></span>
   <div class="wrap">
@@ -1330,13 +1335,12 @@ img.truck-ill{object-fit:cover}
   </div>
 </section>
 
-<!-- ============ VÍDEOS (YouTube) ============
-     Até 6 vídeos. Cada um aparece quando o link do YouTube (@ytN_link) está preenchido.
-     O vídeo só carrega quando a pessoa aperta o play. -->
-
-
 <!-- ============ EQUIPE ============
      Até 8 pessoas. Cada bloco aparece quando o nome (@equipeN_nome) está preenchido. -->
+
+
+<!-- ============ CONTAGEM REGRESSIVA ============
+     As cidades vêm do cadastro (@repetir cidades). O status de cada cidade vem do publicador; o timer só conta os dias até @data_inicio. -->
 <section class="team" id="equipe" aria-labelledby="t-team">
   <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(_media/pagina/icones/onda2.svg);mask-image:url(_media/pagina/icones/onda2.svg)"></span>
   <div class="wrap">
@@ -1360,8 +1364,8 @@ img.truck-ill{object-fit:cover}
   </div>
 </section>
 
-<!-- ============ CONTAGEM REGRESSIVA ============
-     As cidades vêm do cadastro (@repetir cidades). O status de cada cidade vem do publicador; o timer só conta os dias até @data_inicio. -->
+<!-- ============ MATERIAL DA AULA (um PDF) ============
+     @arquivo_material_aula = o PDF (passo Mídia, pasta _media/pagina/material/). -->
 <section class="timer" id="contagem" aria-labelledby="t-timer">
   <div class="wrap tm-grid">
     <div class="tm-copy">
@@ -1419,8 +1423,9 @@ img.truck-ill{object-fit:cover}
   </div>
 </section>
 
-<!-- ============ MATERIAL DA AULA (um PDF) ============
-     @arquivo_material_aula = o PDF (passo Mídia, pasta _media/pagina/material/). -->
+<!-- ============ DÚVIDAS ============
+     Até 12 perguntas (@faqN_pergunta). As 6 primeiras têm respostas ligadas aos dados do cadastro
+     (preço, idade, cidades, duração, alergia, inscrição e contato); da 7 à 12 a resposta é @faqN_resposta. -->
 <section class="mat" id="material" aria-labelledby="t-mat">
   <div class="wrap mat-grid">
     <div class="mat-copy">
@@ -1470,9 +1475,9 @@ img.truck-ill{object-fit:cover}
   </div>
 </section>
 
-<!-- ============ DÚVIDAS ============
-     Até 12 perguntas (@faqN_pergunta). As 6 primeiras têm respostas ligadas aos dados do cadastro
-     (preço, idade, cidades, duração, alergia, inscrição e contato); da 7 à 12 a resposta é @faqN_resposta. -->
+<!-- ============ GALERIA DE FOTOS ============
+     As fotos entram no passo Mídia (lista "galeria"), quantas quiser, cada uma marcada com a cidade.
+     Sem nenhuma foto, aparecem espaços reservados para cada cidade do cadastro. -->
 <section class="info" id="duvidas" aria-labelledby="t-info">
   <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(_media/pagina/icones/onda1.svg);mask-image:url(_media/pagina/icones/onda1.svg)"></span>
   <div class="wrap">
@@ -1518,12 +1523,10 @@ img.truck-ill{object-fit:cover}
   </div>
 </section>
 
-<!-- ============ GALERIA DE FOTOS ============
-     As fotos entram no passo Mídia (lista "galeria"), quantas quiser, cada uma marcada com a cidade.
-     Sem nenhuma foto, aparecem espaços reservados para cada cidade do cadastro. -->
-
-
 <!-- ============ INSCRIÇÃO ============ -->
+
+
+<!-- ============ COMPARTILHAR ============ -->
 <section class="signup" id="inscricao" aria-labelledby="t-insc">
   <div class="wrap">
     <div class="cta-panel">
@@ -1549,10 +1552,7 @@ img.truck-ill{object-fit:cover}
       </div>
     </div>
   </div>
-</section>
-
-<!-- ============ COMPARTILHAR ============ -->
-<section class="share" id="compartilhe" aria-labelledby="t-share">
+</section><style id="pub-modulo-css">section.pub-modulo{display:block;margin:0;min-height:0;height:auto;padding:var(--pub-esp,0px) 16px;background:var(--pub-fundo,transparent)}.pub-modulo__in{max-width:1200px;margin:0 auto;display:flex;justify-content:center}.pub-modulo__img{display:block;width:var(--pub-larg,100%);max-width:100%;height:auto}.pub-modulo__img svg{display:block;width:100%;height:auto}@media (max-width:640px){.pub-modulo__img{width:min(100%,calc(var(--pub-larg,100%) * 1.6))}}</style><section class="share" id="compartilhe" aria-labelledby="t-share">
   <span class="wave" aria-hidden="true" style="-webkit-mask-image:url(_media/pagina/icones/onda1.svg);mask-image:url(_media/pagina/icones/onda1.svg)"></span>
   <div class="wrap">
     <header class="sec-head">
