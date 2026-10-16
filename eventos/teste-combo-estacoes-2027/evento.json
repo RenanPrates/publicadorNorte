@@ -5,9 +5,9 @@
   "formato": "tapume_praca",
   "paginas": {
     "tapume": {
-      "arquivo": "combo-estacoes-tapume.html",
-      "bytes": 21731,
-      "enviadoEm": "2026-10-16T16:51:38.104Z"
+      "arquivo": "combo-estacoes-2027-tapume-variaveis.html",
+      "bytes": 21695,
+      "enviadoEm": "2026-10-16T16:54:56.013Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
@@ -2220,7 +2220,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T16:51:42.797Z",
+  "atualizadoEm": "2026-10-16T16:55:01.186Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
