@@ -272,7 +272,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T19:00:49.722Z",
+  "atualizadoEm": "2026-10-16T19:11:39.460Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
@@ -284,5 +284,14 @@
     "ok": true,
     "versao": 1,
     "mensagem": "Versão 1 publicada no teste."
+  },
+  "producao": {
+    "dominios": [
+      "memoriaspequenochef.com.br",
+      "www.memoriaspequenochef.com.br"
+    ],
+    "versao": null,
+    "commit": null,
+    "historico": []
   }
 }
