@@ -263,11 +263,16 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T18:56:45.603Z",
+  "atualizadoEm": "2026-10-16T18:57:04.222Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
       "imagem": "_media/pagina/elenco/duo.webp"
     }
+  },
+  "agendamento": {
+    "em": "2026-10-16T18:59:00.000Z",
+    "producao": false,
+    "criadoEm": "2026-10-16T18:57:03.018Z"
   }
 }
