@@ -112,6 +112,7 @@
   .praca.realizada{order:2; opacity:.75}
   button.tag{font-family:inherit; line-height:inherit; cursor:pointer; border:0; background:none; -webkit-appearance:none; appearance:none}
   button.tag.breve:hover, button.tag.breve:focus-visible{opacity:1}
+  [hidden]{display:none !important}
   .aviso-form{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem}
   .aviso-email{flex:1 1 150px; min-width:0; font:inherit; font-size:.85rem;
     padding:.5rem .8rem; border-radius:999px; border:1px solid var(--rule-2);
@@ -214,7 +215,7 @@
       <p class="contagem" id="contagem"><b>@total_aberta @tapume_contagem_aberta</b> · @total_breve @tapume_contagem_breve</p>
     </div>
     <p class="vazio" id="vazio" hidden>@tapume_vazio</p>
-    <div class="grade" data-evento="@evento" data-ano="@ano" data-aviso-ok="@tapume_aviso_ok" data-aviso-erro="@tapume_aviso_erro">
+    <div class="grade" data-evento="@evento" data-ano="@ano" data-webhook="@webhook_aviso" data-aviso-ok="@tapume_aviso_ok" data-aviso-erro="@tapume_aviso_erro">
 <!-- @repetir cidades -->
 <!-- @se status = aberta -->
       <a class="praca aberta" href="@url" data-busca="@cidade @uf @regiao">
@@ -296,13 +297,9 @@
     {email, evento, ano, cidade, uf} e troca o formulário por uma mensagem
     de confirmação; se o POST falhar, mostra uma mensagem de erro e deixa
     tentar de novo.
-  - Endpoint fixo (não é variável do Publicador — igual aos arquivos fixos
-    de _media, não muda por evento/publicação):
-    https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar
-    Um único endpoint recebe a captação de todas as cidades (o campo
-    "cidade" no corpo do POST já diferencia qual praça gerou o e-mail). Se
-    um dia esse webhook mudar, atualizar a URL direto nas duas ocorrências
-    deste arquivo (aqui e no fetch() do script, perto do fim do arquivo).
+  - Endereço: @webhook_aviso (geral, no cadastro). Um único endereço recebe a
+    captação de todas as cidades (o campo "cidade" no corpo do POST já
+    diferencia qual praça gerou o e-mail).
   - Este formulário não usa o padrão de preço/gratuito/status da seção 12 do
     guia porque não é dado do cadastro por cidade: é uma captação de lead,
     então roda em JS mesmo (o guia só proíbe JS para preço/gratuito/status).
@@ -391,7 +388,7 @@
       if (!email) return;
 
       enviar.disabled = true;
-      fetch("https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar", {
+      fetch(grade.dataset.webhook, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
