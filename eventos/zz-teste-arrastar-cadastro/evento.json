@@ -8,15 +8,15 @@
   "gerais": {
     "titulo": "T",
     "sub": "S",
-    "etapa1_nome": "Outono",
-    "etapa1_linha": "L1",
-    "etapa1_frase": "F1",
-    "etapa2_nome": "Inverno",
-    "etapa2_linha": "L2",
-    "etapa2_frase": "F2",
-    "etapa3_nome": "Primavera",
-    "etapa3_linha": "L3",
-    "etapa3_frase": "F3"
+    "etapa1_nome": "Primavera",
+    "etapa1_linha": "L3",
+    "etapa1_frase": "F3",
+    "etapa2_nome": "Outono",
+    "etapa2_linha": "L1",
+    "etapa2_frase": "F1",
+    "etapa3_nome": "Inverno",
+    "etapa3_linha": "L2",
+    "etapa3_frase": "F2"
   },
   "cidades": [],
   "etapas": [],
@@ -26,5 +26,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T18:08:31.241Z",
-  "atualizadoEm": "2026-10-16T18:08:39.955Z"
+  "atualizadoEm": "2026-10-16T18:08:58.893Z"
 }
