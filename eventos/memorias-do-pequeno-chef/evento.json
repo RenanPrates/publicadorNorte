@@ -3,8 +3,187 @@
   "slug": "memorias-do-pequeno-chef",
   "nome": "Memórias do Pequeno Chef",
   "formato": "unica",
-  "paginas": {},
-  "vars": {},
+  "paginas": {
+    "unica": {
+      "arquivo": "index.html",
+      "bytes": 241202,
+      "enviadoEm": "2026-10-16T18:45:10.820Z"
+    }
+  },
+  "vars": {
+    "evento": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "status": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_inicio_dia": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "data_inicio_mes_abrev": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "cidade": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "uf": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "periodo_extenso": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "media_hero_arte": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "media_sobre_foto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_cenario_fundo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_elenco_duo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_elenco_joao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_elenco_vo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "img_elenco_fantoche": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe1_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe1_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe2_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe2_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe3_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe3_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe4_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe4_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe5_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe5_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe6_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe6_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe7_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe7_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe8_funcao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "equipe8_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "total_cidades": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "ano": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "data_fim": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "data_inicio_curta": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "data_fim_curta": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "periodo": {
+      "dono": "auto",
+      "ignorar": false
+    },
+    "local": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "endereco": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "horario": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "link_inscricao": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "faixa_etaria": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "duracao": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "data_inicio": {
+      "dono": "cidade",
+      "ignorar": false
+    }
+  },
   "gerais": {},
   "cidades": [],
   "etapas": [],
@@ -14,5 +193,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T18:20:46.301Z"
+  "atualizadoEm": "2026-10-16T18:46:37.022Z"
 }
