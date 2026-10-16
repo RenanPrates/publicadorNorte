@@ -2814,7 +2814,7 @@
   ],
   "versaoAtiva": 10,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T18:08:20.905Z",
+  "atualizadoEm": "2026-10-16T19:01:13.251Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2886,7 +2886,8 @@
           "fundo": "#ffffff",
           "arquivo": "_media/modulos/grupo-edson-queiroz-3.png",
           "nome": "Grupo_Edson_Queiroz.png",
-          "alt": "Logo_Edson-Queiroz"
+          "alt": "Logo_Edson-Queiroz",
+          "altura": 470
         }
       ]
     }
