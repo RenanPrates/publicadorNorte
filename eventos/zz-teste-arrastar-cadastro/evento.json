@@ -4,7 +4,64 @@
   "nome": "zz teste arrastar cadastro",
   "formato": "unica",
   "paginas": {},
-  "vars": {},
+  "vars": {
+    "titulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "sub": {
+      "dono": "geral",
+      "ignorar": false,
+      "junto": {
+        "de": "titulo"
+      }
+    },
+    "etapa1_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa1_frase": {
+      "dono": "geral",
+      "ignorar": false,
+      "junto": {
+        "de": "etapa1_nome"
+      }
+    },
+    "etapa2_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa2_frase": {
+      "dono": "geral",
+      "ignorar": false,
+      "junto": {
+        "de": "etapa2_nome"
+      }
+    },
+    "etapa3_nome": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_linha": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "etapa3_frase": {
+      "dono": "geral",
+      "ignorar": false,
+      "junto": {
+        "de": "etapa3_nome"
+      }
+    }
+  },
   "gerais": {
     "titulo": "T",
     "sub": "S",
@@ -26,5 +83,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T18:08:31.241Z",
-  "atualizadoEm": "2026-10-16T18:08:58.893Z"
+  "atualizadoEm": "2026-10-16T18:09:29.230Z"
 }
