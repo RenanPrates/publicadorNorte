@@ -2798,7 +2798,7 @@
   ],
   "versaoAtiva": 8,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:58:33.454Z",
+  "atualizadoEm": "2026-10-16T16:10:04.787Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2841,7 +2841,6 @@
   "secoes": {
     "ocultas": [
       "unica#galeria",
-      "unica#equipe",
       "unica#videos",
       "unica#@rodape"
     ],
