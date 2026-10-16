@@ -519,7 +519,7 @@
     "hero_texto_fim": {
       "dono": "geral",
       "ignorar": false,
-      "ocultar": "bloco"
+      "ocultar": "texto"
     },
     "publico": {
       "dono": "geral",
@@ -2793,7 +2793,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:42:12.768Z",
+  "atualizadoEm": "2026-10-16T12:42:16.094Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
