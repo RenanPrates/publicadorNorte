@@ -509,7 +509,8 @@
     },
     "hero_texto_destaque2_gratuito": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "ocultar": "bloco"
     },
     "hero_texto_destaque2": {
       "dono": "geral",
@@ -2791,7 +2792,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:40:08.698Z",
+  "atualizadoEm": "2026-10-16T12:40:13.801Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
