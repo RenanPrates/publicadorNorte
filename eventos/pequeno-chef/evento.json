@@ -2806,7 +2806,7 @@
   ],
   "versaoAtiva": 9,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T16:10:42.429Z",
+  "atualizadoEm": "2026-10-16T18:03:30.555Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2853,7 +2853,19 @@
       "unica#@rodape"
     ],
     "porLinha": {},
-    "ordem": {}
+    "ordem": {},
+    "modulos": {
+      "unica": [
+        {
+          "id": "pub-img-7rag04",
+          "largura": 60,
+          "espaco": "m",
+          "fundo": "",
+          "arquivo": "_media/modulos/grupo-edson-queiroz.png",
+          "nome": "Grupo_Edson_Queiroz.png"
+        }
+      ]
+    }
   },
   "rodape": {
     "ativo": true,
