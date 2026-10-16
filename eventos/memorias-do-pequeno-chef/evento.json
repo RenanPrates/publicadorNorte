@@ -187,8 +187,8 @@
   "gerais": {
     "evento": "Memórias do Pequeno Chef",
     "ano": "2026",
-    "faixa_etaria": "",
-    "duracao": "",
+    "faixa_etaria": "Livre",
+    "duracao": "1h",
     "equipe1_funcao": "Produção e dramaturgia",
     "equipe1_nome": "Marcelo Ferraz",
     "equipe2_funcao": "Atriz",
@@ -216,7 +216,7 @@
       "data_fim": "29/10/2026",
       "local": "Praça da Imprensa Chanceler Edson Queiroz",
       "endereco": "Dionísio Torres, Fortaleza – CE, 60125-160",
-      "horario": "",
+      "horario": "Segunda a sexta (2 sessões): 14h30 às 15h30 e 16h00 às 17h00.\nSábados (3 sessões): 14h30 às 15h30, 16h00 às 17h00 e 17h30 às 18h30.",
       "link_inscricao": "https://www.sympla.com.br/evento/memorias-de-um-pequeno-chef/3619734"
     },
     {
@@ -272,7 +272,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T19:33:25.374Z",
+  "atualizadoEm": "2026-10-16T19:34:39.480Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
