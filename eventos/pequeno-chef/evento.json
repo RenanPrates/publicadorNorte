@@ -2309,7 +2309,7 @@
     "hero_texto_inicio": "Uma <b>carreta-cozinha itinerante, aulas gratuitas, experiências gastronômicas e conteúdos sobre empreendedorismo</b>",
     "hero_texto_destaque1": "que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira.",
     "hero_texto_destaque2_gratuito": "Na cozinha nascem sabores.",
-    "hero_texto_destaque2": "aulas",
+    "hero_texto_destaque2": "",
     "hero_texto_fim": "Do conhecimento, novos caminhos para empreender.",
     "publico": "a partir de 16 anos",
     "hero_cidades": "cidades",
@@ -2790,7 +2790,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:36:13.049Z",
+  "atualizadoEm": "2026-10-16T12:36:44.634Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
