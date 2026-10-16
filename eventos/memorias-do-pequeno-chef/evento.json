@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 241202,
-      "enviadoEm": "2026-10-16T18:45:10.820Z"
+      "bytes": 243836,
+      "enviadoEm": "2026-10-16T19:31:59.178Z"
     }
   },
   "vars": {
@@ -272,7 +272,7 @@
   ],
   "versaoAtiva": 1,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T19:11:39.460Z",
+  "atualizadoEm": "2026-10-16T19:33:25.374Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
