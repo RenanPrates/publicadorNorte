@@ -129,6 +129,16 @@
       "sha": "8e9658fd3be52697af33a4e63b60f4eb345a3ee7",
       "bytes": 11511,
       "criadoEm": "2026-10-16T21:46:07.789Z"
+    },
+    {
+      "id": "viaapia",
+      "nome": "ViaApia",
+      "url": "",
+      "ativo": true,
+      "logo": "viaapia-3112303.png",
+      "sha": "3112303751c60550f827cd8d001fa609daf5ede1",
+      "bytes": 26338,
+      "criadoEm": "2026-10-16T21:46:12.005Z"
     }
   ],
   "cotas": [
@@ -169,5 +179,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-16T21:46:13.007Z"
+  "atualizadoEm": "2026-10-16T21:46:16.895Z"
 }
