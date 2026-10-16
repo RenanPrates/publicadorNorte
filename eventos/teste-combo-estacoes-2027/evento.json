@@ -229,7 +229,10 @@
     },
     "etapa1_quimica": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "junto": {
+        "de": "etapa1_nome"
+      }
     },
     "etapa1_quimica_tag": {
       "dono": "geral",
@@ -254,7 +257,9 @@
     "etapa2_quimica": {
       "dono": "geral",
       "ignorar": false,
-      "mover": -2
+      "junto": {
+        "de": "etapa2_nome"
+      }
     },
     "etapa2_quimica_tag": {
       "dono": "geral",
@@ -278,7 +283,10 @@
     },
     "etapa3_quimica": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "junto": {
+        "de": "etapa3_nome"
+      }
     },
     "etapa3_quimica_tag": {
       "dono": "geral",
@@ -302,7 +310,10 @@
     },
     "etapa4_quimica": {
       "dono": "geral",
-      "ignorar": false
+      "ignorar": false,
+      "junto": {
+        "de": "etapa4_nome"
+      }
     },
     "etapa4_quimica_tag": {
       "dono": "geral",
@@ -2232,7 +2243,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T18:39:24.404Z",
+  "atualizadoEm": "2026-10-16T18:39:27.589Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
