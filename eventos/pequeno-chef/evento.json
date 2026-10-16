@@ -2806,7 +2806,7 @@
   ],
   "versaoAtiva": 9,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T18:03:42.830Z",
+  "atualizadoEm": "2026-10-16T18:03:46.214Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2856,12 +2856,12 @@
     "ordem": {
       "unica": [
         "topo",
+        "pub-img-7rag04",
         "sobre",
         "carreta",
         "videos",
         "equipe",
         "contagem",
-        "pub-img-7rag04",
         "material",
         "duvidas",
         "galeria",
