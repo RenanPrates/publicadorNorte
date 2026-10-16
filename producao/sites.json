@@ -17,6 +17,18 @@
       "commit": "d2e7ebd90f5d60c8d03bc7af8572dae45f22ec15",
       "versao": 10,
       "principal": "projetopequenochef.com.br"
+    },
+    "memoriaspequenochef.com.br": {
+      "slug": "memorias-do-pequeno-chef",
+      "commit": "4894fffbf5cab741ec119e9fd2899ca5aa2d0895",
+      "versao": 2,
+      "principal": "memoriaspequenochef.com.br"
+    },
+    "www.memoriaspequenochef.com.br": {
+      "slug": "memorias-do-pequeno-chef",
+      "commit": "4894fffbf5cab741ec119e9fd2899ca5aa2d0895",
+      "versao": 2,
+      "principal": "memoriaspequenochef.com.br"
     }
   }
 }
