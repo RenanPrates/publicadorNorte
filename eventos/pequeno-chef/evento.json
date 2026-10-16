@@ -2307,7 +2307,7 @@
     "hero_titulo": "Aprender, cozinhar",
     "hero_titulo_destaque": "e compartilhar",
     "hero_texto_inicio": "Uma carreta-cozinha itinerante, aulas gratuitas, experiências gastronômicas e conteúdos sobre empreendedorismo",
-    "hero_texto_destaque1": "que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira",
+    "hero_texto_destaque1": "que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira.",
     "hero_texto_destaque2_gratuito": "Na cozinha nascem sabores.",
     "hero_texto_destaque2": "aulas",
     "hero_texto_fim": "Do conhecimento, novos caminhos para empreender.",
@@ -2790,7 +2790,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:35:33.380Z",
+  "atualizadoEm": "2026-10-16T12:35:36.567Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
