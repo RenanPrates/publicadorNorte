@@ -2319,7 +2319,7 @@
     "sobre_eyebrow": "Sobre o projeto",
     "sobre_titulo": "Uma cozinha sobre rodas",
     "sobre_texto": "O projeto transforma uma carreta em uma cozinha adaptada e em um espaço de encontro. Em cada cidade, o público é convidado a participar de atividades práticas, descobrir novas possibilidades na cozinha e trocar conhecimentos sobre alimentação e cultura.",
-    "passo1_titulo": "SABORE QUE VIRAM NEGÓCIO ",
+    "passo1_titulo": "SABOREs QUE VIRAM NEGÓCIO ",
     "passo1_imagem_alt": "Ilustração da carreta do Pequeno Chef chegando à cidade puxada pelo caminhão: ela estaciona, a parte expansível desliza para fora, a porta abre, a escada desce e o elevador para PCD baixa até o chão",
     "passo1_texto": "A carreta-cozinha itinerante chega à cidade e se abre como uma cozinha adaptada e um espaço de encontro.",
     "passo2_titulo": "Aprender com o chef",
@@ -2790,7 +2790,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:44:26.634Z",
+  "atualizadoEm": "2026-10-16T12:44:29.862Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
