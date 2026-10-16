@@ -2686,7 +2686,7 @@
       "status": "em breve",
       "local": "Praça da Pronaica, Cajazeiras – Fazenda Grande I, Salvador - BA",
       "data_inicio": "16/11/2026",
-      "data_fim": "26/11/2026",
+      "data_fim": "02/11/2026",
       "rotulo_local": "Local: ",
       "rotulo_horario": "Horário:",
       "horario": "",
@@ -2814,7 +2814,7 @@
   ],
   "versaoAtiva": 10,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T21:05:12.191Z",
+  "atualizadoEm": "2026-10-16T21:05:22.458Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
