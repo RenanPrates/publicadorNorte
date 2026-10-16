@@ -2818,11 +2818,19 @@
       "paginas": 1,
       "avisos": 2,
       "url": "https://renanprates.github.io/publicadorNorte/pequeno-chef/"
+    },
+    {
+      "versao": 12,
+      "commit": "70a30a30a99115cb3b9519a7c3174b204200669f",
+      "em": "2026-10-16T21:09:38.024Z",
+      "paginas": 1,
+      "avisos": 2,
+      "url": "https://renanprates.github.io/publicadorNorte/pequeno-chef/"
     }
   ],
-  "versaoAtiva": 11,
+  "versaoAtiva": 12,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T21:09:38.022Z",
+  "atualizadoEm": "2026-10-16T21:09:47.055Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
