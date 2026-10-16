@@ -2822,7 +2822,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T21:09:16.917Z",
+  "atualizadoEm": "2026-10-16T21:09:24.875Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2916,7 +2916,7 @@
     "porLinha": {}
   },
   "seo": {
-    "favicon": "_media/pagina/icones/queijo.webp",
+    "favicon": "_media/pagina/marca/logo-pc-ink.webp",
     "titulo": "Pequeno Chef",
     "share": {
       "imagem": "_media/pagina/carreta/carreta.webp"
