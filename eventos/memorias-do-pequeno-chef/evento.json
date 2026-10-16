@@ -206,7 +206,56 @@
     "equipe8_funcao": "",
     "equipe8_nome": ""
   },
-  "cidades": [],
+  "cidades": [
+    {
+      "_id": "a79c4a2b",
+      "cidade": "Fortaleza",
+      "uf": "CE",
+      "status": "aberta",
+      "data_inicio": "17/10/2026",
+      "data_fim": "29/10/2026",
+      "local": "Praça da Imprensa Chanceler Edson Queiroz",
+      "endereco": "Dionísio Torres, Fortaleza – CE, 60125-160",
+      "horario": "",
+      "link_inscricao": "https://www.sympla.com.br/evento/memorias-de-um-pequeno-chef/3619734"
+    },
+    {
+      "_id": "be803f6b",
+      "cidade": "Maracanaú",
+      "uf": "CE",
+      "status": "em breve",
+      "data_inicio": "31/10/2026",
+      "data_fim": "12/11/2026",
+      "local": "IFCE – Campus Maracanaú",
+      "endereco": "Av. Parque Central, 1315 – Jereissati, Setor A, Maracanaú – CE, 61939-140",
+      "horario": "",
+      "link_inscricao": ""
+    },
+    {
+      "_id": "0af605f8",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "status": "em breve",
+      "data_inicio": "16/11/2026",
+      "data_fim": "26/11/2026",
+      "local": "Praça da Pronaica",
+      "endereco": "Cajazeiras, Fazenda Grande I, Salvador – BA, 41340-270",
+      "horario": "",
+      "link_inscricao": ""
+    },
+    {
+      "_id": "98f455d3",
+      "cidade": "Campos do Jordão",
+      "uf": "SP",
+      "status": "em breve",
+      "data_inicio": "07/12/2026",
+      "data_fim": "19/12/2026",
+      "local": "",
+      "endereco": "",
+      "horario": "",
+      "link_inscricao": ""
+    }
+  ],
   "etapas": [],
   "ordem": {},
   "imagens": {},
@@ -214,5 +263,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T18:48:55.584Z"
+  "atualizadoEm": "2026-10-16T18:49:02.940Z"
 }
