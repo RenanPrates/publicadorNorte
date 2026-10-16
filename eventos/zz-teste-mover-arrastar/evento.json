@@ -4,7 +4,25 @@
   "nome": "zz teste mover arrastar",
   "formato": "unica",
   "paginas": {},
-  "vars": {},
+  "vars": {
+    "titulo": {
+      "dono": "geral",
+      "ignorar": false,
+      "mover": 2
+    },
+    "texto": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "outro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "menu_abrir": {
+      "dono": "geral",
+      "ignorar": false
+    }
+  },
   "gerais": {
     "titulo": "TITULO",
     "texto": "TEXTO",
@@ -19,5 +37,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T17:26:13.480Z",
-  "atualizadoEm": "2026-10-16T17:26:55.560Z"
+  "atualizadoEm": "2026-10-16T17:27:44.698Z"
 }
