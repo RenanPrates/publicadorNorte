@@ -1662,7 +1662,7 @@
     "tapume_aviso_ok": "Prontinho! Avisamos você por e-mail assim que {cidade} lançar.",
     "tapume_aviso_erro": "Não deu pra enviar agora. Tenta de novo em instantes.",
     "tapume_rodape": "Complete sua mandala",
-    "webhook_carta": "https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar"
+    "webhook_carta": ""
   },
   "cidades": [
     {
@@ -2229,7 +2229,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T16:55:59.264Z",
+  "atualizadoEm": "2026-10-16T16:56:02.695Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
