@@ -2306,7 +2306,7 @@
     "hero_selo": "Oficina de culinária",
     "hero_titulo": "Aprender, cozinhar",
     "hero_titulo_destaque": "e compartilhar",
-    "hero_texto_inicio": "Uma carreta-cozinha itinerante, aulas gratuitas, experiências gastronômicas e conteúdos sobre empreendedorismo",
+    "hero_texto_inicio": "Uma <b>carreta-cozinha itinerante, aulas gratuitas, experiências gastronômicas e conteúdos sobre empreendedorismo</b>",
     "hero_texto_destaque1": "que aproximam o público dos sabores, dos saberes e das tradições da culinária brasileira.",
     "hero_texto_destaque2_gratuito": "Na cozinha nascem sabores.",
     "hero_texto_destaque2": "aulas",
@@ -2790,7 +2790,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:35:42.471Z",
+  "atualizadoEm": "2026-10-16T12:36:13.049Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
