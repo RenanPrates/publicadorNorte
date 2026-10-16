@@ -229,8 +229,7 @@
     },
     "etapa1_quimica": {
       "dono": "geral",
-      "ignorar": false,
-      "mover": -1
+      "ignorar": false
     },
     "etapa1_quimica_tag": {
       "dono": "geral",
@@ -2240,7 +2239,7 @@
   ],
   "versaoAtiva": 12,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T21:42:54.403Z",
+  "atualizadoEm": "2026-10-16T21:43:01.816Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
