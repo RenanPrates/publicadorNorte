@@ -516,8 +516,7 @@
     },
     "hero_texto_fim": {
       "dono": "geral",
-      "ignorar": false,
-      "ocultar": "texto"
+      "ignorar": false
     },
     "publico": {
       "dono": "geral",
@@ -2791,7 +2790,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T12:42:40.100Z",
+  "atualizadoEm": "2026-10-16T12:42:44.556Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
