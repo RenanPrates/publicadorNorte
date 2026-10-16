@@ -119,6 +119,16 @@
       "sha": "d693340ec5bcacbaecfd72624cc442e885bfb108",
       "bytes": 21348,
       "criadoEm": "2026-10-08T21:57:32.909Z"
+    },
+    {
+      "id": "vibraenergia",
+      "nome": "VibraEnergia",
+      "url": "",
+      "ativo": true,
+      "logo": "vibraenergia-8e9658f.png",
+      "sha": "8e9658fd3be52697af33a4e63b60f4eb345a3ee7",
+      "bytes": 11511,
+      "criadoEm": "2026-10-16T21:46:07.789Z"
     }
   ],
   "cotas": [
@@ -159,5 +169,5 @@
       "aoLado": true
     }
   ],
-  "atualizadoEm": "2026-10-08T22:31:45.982Z"
+  "atualizadoEm": "2026-10-16T21:46:13.007Z"
 }
