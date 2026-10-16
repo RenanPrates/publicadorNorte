@@ -184,7 +184,28 @@
       "ignorar": false
     }
   },
-  "gerais": {},
+  "gerais": {
+    "evento": "Memórias do Pequeno Chef",
+    "ano": "2026",
+    "faixa_etaria": "",
+    "duracao": "",
+    "equipe1_funcao": "Produção e dramaturgia",
+    "equipe1_nome": "Marcelo Ferraz",
+    "equipe2_funcao": "Atriz",
+    "equipe2_nome": "Ana Pereira",
+    "equipe3_funcao": "Ator",
+    "equipe3_nome": "Jean Marques",
+    "equipe4_funcao": "Figurino",
+    "equipe4_nome": "Divina Núbia",
+    "equipe5_funcao": "Iluminação",
+    "equipe5_nome": "Raphael Gomes",
+    "equipe6_funcao": "Produção",
+    "equipe6_nome": "André Teixeira",
+    "equipe7_funcao": "",
+    "equipe7_nome": "",
+    "equipe8_funcao": "",
+    "equipe8_nome": ""
+  },
   "cidades": [],
   "etapas": [],
   "ordem": {},
@@ -193,5 +214,5 @@
   "publicacoes": [],
   "versaoAtiva": null,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T18:46:37.022Z"
+  "atualizadoEm": "2026-10-16T18:48:55.584Z"
 }
