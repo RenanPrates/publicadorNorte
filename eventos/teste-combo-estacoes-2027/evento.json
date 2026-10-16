@@ -1663,7 +1663,8 @@
     "tapume_aviso_erro": "Não deu pra enviar agora. Tenta de novo em instantes.",
     "tapume_rodape": "Complete sua mandala",
     "webhook_carta": "https://webhooksha.inteligencianorte.cloud/webhook/cartas-para-futuro",
-    "webhook_teste": "https://webhooksha.inteligencianorte.cloud/webhook/descubra-sua-quimica"
+    "webhook_teste": "https://webhooksha.inteligencianorte.cloud/webhook/descubra-sua-quimica",
+    "webhook_aviso": "https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar"
   },
   "cidades": [
     {
@@ -2230,7 +2231,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T16:56:14.138Z",
+  "atualizadoEm": "2026-10-16T16:56:19.855Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
