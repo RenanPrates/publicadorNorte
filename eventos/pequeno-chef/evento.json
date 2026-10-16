@@ -2671,7 +2671,7 @@
       "status": "em breve",
       "local": "IFCE – Campus Maracanaú, Av. Parque Central, 1315 – Jereissati – Setor A, Maracanaú - CE",
       "data_inicio": "31/10/2026",
-      "data_fim": "12/11/2026",
+      "data_fim": "13/11/2026",
       "rotulo_local": "Local:",
       "rotulo_horario": "Horário:",
       "horario": "",
@@ -2814,7 +2814,7 @@
   ],
   "versaoAtiva": 10,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T19:01:26.143Z",
+  "atualizadoEm": "2026-10-16T21:05:12.191Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
