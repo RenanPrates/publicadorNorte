@@ -20,14 +20,14 @@
     },
     "memoriaspequenochef.com.br": {
       "slug": "memorias-do-pequeno-chef",
-      "commit": "4894fffbf5cab741ec119e9fd2899ca5aa2d0895",
-      "versao": 2,
+      "commit": "8fc1cac4894cea0ff9e71aa4c8aef5e1b90610a4",
+      "versao": 3,
       "principal": "memoriaspequenochef.com.br"
     },
     "www.memoriaspequenochef.com.br": {
       "slug": "memorias-do-pequeno-chef",
-      "commit": "4894fffbf5cab741ec119e9fd2899ca5aa2d0895",
-      "versao": 2,
+      "commit": "8fc1cac4894cea0ff9e71aa4c8aef5e1b90610a4",
+      "versao": 3,
       "principal": "memoriaspequenochef.com.br"
     }
   }
