@@ -253,8 +253,7 @@
     },
     "etapa2_quimica": {
       "dono": "geral",
-      "ignorar": false,
-      "mover": -1
+      "ignorar": false
     },
     "etapa2_quimica_tag": {
       "dono": "geral",
@@ -2232,7 +2231,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T18:39:07.210Z",
+  "atualizadoEm": "2026-10-16T18:39:12.922Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
