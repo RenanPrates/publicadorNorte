@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 635859,
-      "enviadoEm": "2026-10-15T21:17:07.735Z"
+      "bytes": 384061,
+      "enviadoEm": "2026-10-16T16:55:16.308Z"
     }
   },
   "vars": {
@@ -1401,6 +1401,14 @@
     "webhook_aviso": {
       "dono": "geral",
       "ignorar": false
+    },
+    "webhook_carta": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "webhook_teste": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2220,7 +2228,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-16T16:55:17.626Z",
+  "atualizadoEm": "2026-10-16T16:55:24.808Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
