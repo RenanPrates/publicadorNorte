@@ -2361,6 +2361,11 @@ html.hdr-off .scroll-prog{transform:translateY(0) scaleX(var(--sp,0))}
     border-radius:12px; padding:.95rem 1.1rem;
   }
 #mod-gerador .field input:focus{outline:2px solid var(--metal); outline-offset:2px}
+#mod-gerador .field + .field{margin-top:1.2rem}
+#mod-gerador .t-erro{margin:.5rem 0 0; font-size:.85rem; color:#FF8A7A}
+#mod-gerador .t-erro[hidden]{display:none}
+#mod-gerador .t-aceite{display:flex; gap:.7rem; align-items:flex-start; max-width:420px; margin-top:1.2rem; cursor:pointer; font-size:.85rem; line-height:1.5; color:rgba(244,241,234,.8)}
+#mod-gerador .t-aceite input{width:18px; height:18px; margin-top:2px; flex:none; accent-color:#F4F1EA}
 #mod-gerador .g-cta{
     display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
     background:var(--metal); color:#1A1305; font-weight:600; font-size:1rem;
@@ -3956,7 +3961,7 @@ a.wordmark{cursor:pointer}
   <span data-t="teste_p1_etapa4">@teste_p1_etapa4</span><span data-t="teste_p2_pergunta">@teste_p2_pergunta</span><span data-t="teste_p2_etapa1">@teste_p2_etapa1</span><span data-t="teste_p2_etapa2">@teste_p2_etapa2</span>
   <span data-t="teste_p2_etapa3">@teste_p2_etapa3</span><span data-t="teste_p2_etapa4">@teste_p2_etapa4</span><span data-t="teste_p3_pergunta">@teste_p3_pergunta</span><span data-t="teste_p3_etapa1">@teste_p3_etapa1</span>
   <span data-t="teste_p3_etapa2">@teste_p3_etapa2</span><span data-t="teste_p3_etapa3">@teste_p3_etapa3</span><span data-t="teste_p3_etapa4">@teste_p3_etapa4</span><span data-t="teste_resultado_titulo">@teste_resultado_titulo</span>
-  <span data-t="teste_resultado_etapa">@teste_resultado_etapa</span><span data-t="teste_card_frase">@teste_card_frase</span><span data-t="teste_card_rotulo">@teste_card_rotulo</span><span data-t="teste_card_selo">@teste_card_selo</span>
+  <span data-t="teste_resultado_etapa">@teste_resultado_etapa</span><span data-t="teste_card_frase">@teste_card_frase</span><span data-t="teste_card_rotulo">@teste_card_rotulo</span><span data-t="teste_card_selo">@teste_card_selo</span><span data-t="teste_card_link">@teste_card_link</span>
   <span data-t="teste_compartilhar_texto">@teste_compartilhar_texto</span><span data-t="carta_contador">@carta_contador</span><span data-t="carta_alerta_rapido">@carta_alerta_rapido</span><span data-t="carta_alerta_lento">@carta_alerta_lento</span>
   <span data-t="carta_total">@carta_total</span><span data-t="carta_card_total">@carta_card_total</span><span data-t="carta_card_selo">@carta_card_selo</span><span data-t="carta_compartilhar_texto">@carta_compartilhar_texto</span>
   <span data-t="carta_enviando">@carta_enviando</span><span data-t="carta_envio_ok">@carta_envio_ok</span><span data-t="carta_envio_erro">@carta_envio_erro</span><span data-t="compartilhar_nome_padrao">@compartilhar_nome_padrao</span>
@@ -4242,8 +4247,14 @@ a.wordmark{cursor:pointer}
       <p class="g-prose" style="margin-top:1rem; max-width:36ch">@teste_nome_texto</p>
       <div class="field">
         <label for="nome">@teste_nome_rotulo</label>
-        <input id="nome" type="text" maxlength="22" autocomplete="given-name" placeholder="@teste_nome_exemplo" enterkeyhint="done">
+        <input id="nome" type="text" maxlength="22" autocomplete="given-name" placeholder="@teste_nome_exemplo" enterkeyhint="next">
       </div>
+      <div class="field">
+        <label for="t-email">@teste_email_rotulo</label>
+        <input id="t-email" type="email" inputmode="email" maxlength="120" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="@teste_email_exemplo" enterkeyhint="done">
+        <p class="t-erro" id="t-email-erro" hidden>@teste_email_erro</p>
+      </div>
+      <label class="t-aceite"><input type="checkbox" id="t-aceite"><span>@teste_aceite</span></label>
       <p style="margin-top:1.8rem"><button class="g-cta" id="gerar" disabled>@teste_botao_gerar</button></p>
     </div>
 
@@ -5088,6 +5099,7 @@ a.wordmark{cursor:pointer}
       C.txt(ctx, q.tag, W/2, yS + 70, { fam: C.SER, peso: "italic 400", tam: 46, cor: BR, a: .85 });
       linhaEtapas(ctx, W/2, 1540, 190, 24, k, "center");
       C.txt(ctx, (TX("combo") + " " + TX("ano") + " · " + TX("teste_card_selo")).toUpperCase(), W/2, 1672, { tam: 24, peso: "700", esp: 6, cor: cor });
+      linkCard(ctx, W/2, 1800, 34, 900);
     } else {
       C.logo(ctx, LOGO, 80, 74, 190, BR, "left");
       var L = 80, larg = 440;
@@ -5105,7 +5117,18 @@ a.wordmark{cursor:pointer}
       ctx.strokeStyle = "rgba(244,241,234,.1)"; ctx.lineWidth = 2; ctx.stroke();
       linhaEtapas(ctx, 60 + (W - 120) / 8, 862, (W - 120) / 4, 24, k, "left");
       C.txt(ctx, (TX("combo") + " " + TX("ano") + " · " + TX("teste_card_selo")).toUpperCase(), W / 2, 988, { tam: 20, peso: "700", esp: 6, cor: cor });
+      linkCard(ctx, W/2, 1058, 24, 940);
     }
+  }
+  /* "Faça o seu em: endereço" (@teste_card_link): o que vem antes dos dois-pontos mais leve, o endereço em negrito */
+  function linkCard(ctx, x, y, tam, larg){
+    var C = window.CardShare, F = C.F, t = TX("teste_card_link") || "Faça o seu em: combos.circuitodasestacoes.com.br";
+    var k = t.indexOf(":"), a = k < 0 ? "" : t.slice(0, k + 1) + " ", b = k < 0 ? t : t.slice(k + 1).trim();
+    var med = function(s, p, z){ ctx.font = p + " " + z + "px " + F; C.ls(ctx, 0); return ctx.measureText(s).width; };
+    while (tam > 14 && med(a, "500", tam) + med(b, "800", tam) > larg) tam -= 1;
+    var wa = med(a, "500", tam), wb = med(b, "800", tam), x0 = x - (wa + wb) / 2;
+    if (a) C.txt(ctx, a, x0, y, { tam: tam, peso: "500", cor: "#F4F1EA", a: .75, al: "left" });
+    C.txt(ctx, b, x0 + wa, y, { tam: tam, peso: "800", cor: "#fff", al: "left" });
   }
   /* as quatro etapas: todas garantidas no combo; a da química da pessoa ganha o anel */
   function linhaEtapas(ctx, x, y, passo, r, atual, al){
@@ -5168,10 +5191,18 @@ a.wordmark{cursor:pointer}
     i = PERGUNTAS.length - 1; respostas.length = i; reconta(); mostra("s-quiz"); pergunta();
   });
 
-  $("nome").addEventListener("input", function(){
-    $("gerar").disabled = this.value.trim().length < 1;
-  });
+  function emailOkT(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((v || "").trim()); }
+  function podeGerar(){
+    $("gerar").disabled = !($("nome").value.trim().length >= 1 && emailOkT($("t-email").value) && $("t-aceite").checked);
+  }
+  $("nome").addEventListener("input", podeGerar);
+  $("t-email").addEventListener("input", function(){ if (emailOkT(this.value)) $("t-email-erro").hidden = true; podeGerar(); });
+  $("t-email").addEventListener("blur", function(){ $("t-email-erro").hidden = !this.value.trim() || emailOkT(this.value); });
+  $("t-aceite").addEventListener("change", podeGerar);
   $("nome").addEventListener("keydown", function(e){
+    if (e.key === "Enter") { e.preventDefault(); $("t-email").focus(); }
+  });
+  $("t-email").addEventListener("keydown", function(e){
     if (e.key === "Enter" && !$("gerar").disabled) $("gerar").click();
   });
 
@@ -5192,7 +5223,8 @@ a.wordmark{cursor:pointer}
     var utm = {};
     try { new URLSearchParams(location.search).forEach(function(v, k){ if (/^utm_/.test(k)) utm[k] = v; }); } catch(e){}
     var dados = {
-      nome: ($("nome").value || "").trim(), quimica: resultado.nome, etapa: resultado.estacao, respostas: respostas.slice(),
+      nome: ($("nome").value || "").trim(), email: ($("t-email").value || "").trim().toLowerCase(),
+      aceite: !!$("t-aceite").checked, aceiteEm: $("t-aceite").checked ? new Date().toISOString() : null, quimica: resultado.nome, etapa: resultado.estacao, respostas: respostas.slice(),
       evento: TX("evento"), ano: TX("ano"), cidade: TX("cidade"), origem: "descubra-sua-quimica",
       pagina: location.href, utm: utm, enviadoEm: new Date().toISOString()
     };
@@ -5218,7 +5250,7 @@ a.wordmark{cursor:pointer}
 
   $("refazer").addEventListener("click", function(){
     i = 0; respostas = []; reconta(); resultado = null;
-    $("nome").value = ""; $("gerar").disabled = true;
+    $("nome").value = ""; podeGerar();
     mostra("s-quiz"); pergunta();
   });
 })();
