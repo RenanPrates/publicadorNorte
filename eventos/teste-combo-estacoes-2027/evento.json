@@ -1514,7 +1514,7 @@
     "hoodie_titulo_linha1": "Um hoodie exclusivo",
     "hoodie_titulo_linha2": "para quem garantir",
     "hoodie_titulo_linha3": "as 4 etapas.",
-    "hoodie_texto": "Seu hoodie será entregue junto com o <brkit da etapa de Outono.",
+    "hoodie_texto": "Seu hoodie será entregue junto com o <br>kit da etapa de Outono.",
     "etapas_kicker": "4 etapas com kit completo",
     "etapas_titulo": "Quatro etapas, quatro químicas.",
     "etapa1_nome": "Outono",
@@ -2373,7 +2373,7 @@
   ],
   "versaoAtiva": 19,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T19:00:51.632Z",
+  "atualizadoEm": "2026-10-19T19:00:54.836Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
