@@ -2830,7 +2830,7 @@
   ],
   "versaoAtiva": 12,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-16T21:09:55.337Z",
+  "atualizadoEm": "2026-10-19T17:44:50.164Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2928,7 +2928,8 @@
     "titulo": "Pequeno Chef",
     "share": {
       "imagem": "_media/pagina/carreta/carreta.webp"
-    }
+    },
+    "gtm": "GTM-MSZJ2K"
   },
   "producao": {
     "dominios": [
