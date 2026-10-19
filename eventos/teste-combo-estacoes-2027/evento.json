@@ -2334,7 +2334,7 @@
   ],
   "versaoAtiva": 17,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:14:38.952Z",
+  "atualizadoEm": "2026-10-19T18:15:21.951Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2346,38 +2346,38 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T18:14:20.511Z",
+      "em": "2026-10-19T18:15:18.872Z",
       "ok": true,
-      "mudou": 37,
-      "mensagem": "37 valor(es) atualizados em 9 cidade(s).",
+      "mudou": 0,
+      "mensagem": "Nenhuma cidade com link de combo do Odoo.",
       "cidades": [
         {
           "id": "f227a601",
           "nome": "São Paulo",
-          "combo": 346,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 849,90 · Prime R$ 764,91 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "d7fbecc3",
           "nome": "Rio de Janeiro",
-          "combo": 407,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 749,90 · Prime R$ 674,91 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "89998b7e",
           "nome": "Brasília",
-          "combo": 409,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 749,90 · Prime R$ 674,91 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "f0d31301",
           "nome": "Belo Horizonte",
-          "combo": 410,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 599,90 · Prime R$ 539,91 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "4379fdd2",
@@ -2389,9 +2389,9 @@
         {
           "id": "1a000d62",
           "nome": "Curitiba",
-          "combo": 415,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 599,90 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "c8a65374",
@@ -2403,30 +2403,30 @@
         {
           "id": "9772978f",
           "nome": "Fortaleza",
-          "combo": 418,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 599,90 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "4c5a1b15",
           "nome": "Recife",
-          "combo": 417,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 599,90 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "fa12088e",
           "nome": "Salvador",
-          "combo": 416,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 599,90 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "f35b1fd3",
           "nome": "Belém",
-          "combo": 419,
+          "combo": null,
           "ok": true,
-          "mensagem": "R$ 599,90 · aberta"
+          "mensagem": "sem link do combo: fica como está"
         },
         {
           "id": "43129f26",
