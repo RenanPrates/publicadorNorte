@@ -1693,7 +1693,7 @@
     "preco_esgotado_texto": "As vagas do combo nesta cidade acabaram.",
     "hero_titulo": "Complete<br>sua <span class=\"hl\">mandala.</span>",
     "compra_titulo": "Comprar junto<br>custa bem menos.",
-    "hoodie_titulo": "<span class=\"ln\">Um hoodie exclusivo</span> <span class=\"ln\">para quem garantir</span> <span class=\"ln\">as 4 etapas.</span>",
+    "hoodie_titulo": "Um hoodie exclusivo para quem garantir as 4 etapas.",
     "quim_titulo": "A Química<br>da <span class=\"hl\">Corrida.</span>",
     "teste_capa_texto": "Quatro substâncias. Uma é a sua.<br>Descubra qual das quatro químicas combina com você e compartilhe.",
     "etapa1_onde": "No ritmo que encaixa sem esforço.<br>No silêncio que fica depois da corrida.",
@@ -2373,7 +2373,7 @@
   ],
   "versaoAtiva": 19,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T19:00:03.674Z",
+  "atualizadoEm": "2026-10-19T19:00:21.618Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
