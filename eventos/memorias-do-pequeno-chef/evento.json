@@ -288,12 +288,13 @@
   ],
   "versaoAtiva": 3,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-16T21:04:27.699Z",
+  "atualizadoEm": "2026-10-19T19:21:28.073Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
       "imagem": "_media/pagina/elenco/duo.webp"
-    }
+    },
+    "gtm": "GTM-PXKPSLRJ"
   },
   "ultimoAgendamento": {
     "em": "2026-10-16T19:00:32.675Z",
