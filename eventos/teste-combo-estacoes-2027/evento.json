@@ -1703,7 +1703,7 @@
     "tapume_aviso_botao": "avise-me quando lançar",
     "tapume_aviso_email": "seu@email.com",
     "tapume_aviso_enviar": "Avisar",
-    "tapume_aviso_ok": "Prontinho! Avisamos você por e-mail assim que {cidade} lançar.",
+    "tapume_aviso_ok": "Prontinho! Avisamos você assim que {cidade} lançar.",
     "tapume_aviso_erro": "Não deu pra enviar agora. Tenta de novo em instantes.",
     "tapume_rodape": "Complete sua mandala",
     "webhook_carta": "https://webhooksha.inteligencianorte.cloud/webhook/cartas-para-futuro",
@@ -1719,7 +1719,10 @@
     "teste_whatsapp_erro": "Confira o número com DDD.",
     "carta_whatsapp_rotulo": "WhatsApp",
     "carta_whatsapp_exemplo": "(00) 00000-0000",
-    "carta_whatsapp_erro": "Confira o número com DDD."
+    "carta_whatsapp_erro": "Confira o número com DDD.",
+    "tapume_aviso_whatsapp": "(00) 00000-0000",
+    "tapume_aviso_aceite": "Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.",
+    "tapume_aviso_invalido": "Confira o e-mail e o WhatsApp com DDD."
   },
   "cidades": [
     {
@@ -2348,7 +2351,7 @@
   ],
   "versaoAtiva": 18,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:38:43.973Z",
+  "atualizadoEm": "2026-10-19T18:41:47.450Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
