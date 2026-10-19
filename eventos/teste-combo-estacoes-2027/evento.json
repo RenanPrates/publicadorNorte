@@ -1550,7 +1550,7 @@
     "carta_email_erro": "Confira o e-mail.",
     "carta_cpf_rotulo": "CPF",
     "carta_cpf_erro": "Confira o CPF.",
-    "carta_aceite": "Autorizo a Norte a guardar meu nome, e-mail e CPF para me enviar os tempos que prometi para {ano}. Posso pedir a exclusão a qualquer momento.",
+    "carta_aceite": "Autorizo a Norte a guardar meu nome, e-mail, WhatsApp e CPF para me enviar os tempos que prometi para {ano}. Posso pedir a exclusão a qualquer momento.",
     "carta_aceite_erro": "Marque a autorização para selar a promessa.",
     "carta_selada_kicker": "Promessa selada",
     "carta_selada_titulo": "Sua carta para {ano}",
@@ -1665,11 +1665,17 @@
     "webhook_carta": "https://webhooksha.inteligencianorte.cloud/webhook/cartas-para-futuro",
     "webhook_teste": "https://webhooksha.inteligencianorte.cloud/webhook/descubra-sua-quimica",
     "webhook_aviso": "https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar",
-    "teste_card_link": "Faça o seu em: combos.circuitodasestacoes.com.br",
+    "teste_card_link": "Descubra sua química em combos.circuitodasestacoes.com.br",
     "teste_email_rotulo": "Seu e-mail",
     "teste_email_exemplo": "voce@email.com",
     "teste_email_erro": "Confira o e-mail.",
-    "teste_aceite": "Autorizo a Norte a guardar meu nome e e-mail para me enviar novidades do {evento}. Posso pedir a exclusão a qualquer momento."
+    "teste_aceite": "Autorizo a Norte a guardar meu nome, e-mail e WhatsApp para me enviar novidades do {evento}. Posso pedir a exclusão a qualquer momento.",
+    "teste_whatsapp_rotulo": "Seu WhatsApp",
+    "teste_whatsapp_exemplo": "(00) 00000-0000",
+    "teste_whatsapp_erro": "Confira o número com DDD.",
+    "carta_whatsapp_rotulo": "WhatsApp",
+    "carta_whatsapp_exemplo": "(00) 00000-0000",
+    "carta_whatsapp_erro": "Confira o número com DDD."
   },
   "cidades": [
     {
@@ -2276,7 +2282,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:05:38.094Z",
+  "atualizadoEm": "2026-10-19T18:10:50.341Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
