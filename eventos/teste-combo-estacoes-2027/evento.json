@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 388801,
-      "enviadoEm": "2026-10-19T18:13:23.061Z"
+      "bytes": 389177,
+      "enviadoEm": "2026-10-19T21:06:38.475Z"
     }
   },
   "vars": {
@@ -1467,6 +1467,14 @@
     "tapume_aviso_invalido": {
       "dono": "geral",
       "ignorar": false
+    },
+    "preco_assinatura_prime": {
+      "dono": "cidade",
+      "ignorar": false
+    },
+    "compra_prime_oferta": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2399,7 +2407,7 @@
   ],
   "versaoAtiva": 22,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T19:20:56.151Z",
+  "atualizadoEm": "2026-10-19T21:06:44.752Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
