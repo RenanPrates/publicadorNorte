@@ -1494,7 +1494,7 @@
     "hero_alt_desktop": "As quatro medalhas sendo encaixadas à mão até formar a mandala",
     "hero_alt_mobile": "As quatro medalhas se encaixando até formar a mandala, com as fitas de Outono, Inverno, Primavera e Verão",
     "hero_frase": "Corra o ano inteiro!",
-    "hero_texto": "Participe das quatro estações e <bcomplete sua mandala.",
+    "hero_texto": "Participe das quatro estações e <br>complete sua mandala.",
     "compra_kit_alt": "Kit completo do combo: as camisetas, bolsas, garrafas e medalhas das quatro etapas, com o hoodie A Química da Corrida no centro",
     "compra_kicker": "Escolha seu combo",
     "compra_titulo_linha1": "Comprar junto",
@@ -2373,7 +2373,7 @@
   ],
   "versaoAtiva": 19,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:59:40.456Z",
+  "atualizadoEm": "2026-10-19T18:59:43.658Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
