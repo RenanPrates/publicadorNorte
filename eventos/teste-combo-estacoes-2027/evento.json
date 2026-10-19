@@ -11,8 +11,8 @@
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
-      "bytes": 384061,
-      "enviadoEm": "2026-10-16T16:55:16.308Z"
+      "bytes": 388801,
+      "enviadoEm": "2026-10-19T18:13:23.061Z"
     }
   },
   "vars": {
@@ -2326,7 +2326,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:13:25.644Z",
+  "atualizadoEm": "2026-10-19T18:13:31.322Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
