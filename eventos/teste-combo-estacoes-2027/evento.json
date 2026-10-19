@@ -1877,7 +1877,7 @@
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
       "_odooStatus": "aberta",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": "119,99"
     },
     {
       "_id": "4379fdd2",
@@ -2424,7 +2424,7 @@
   ],
   "versaoAtiva": 22,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T21:09:11.551Z",
+  "atualizadoEm": "2026-10-19T21:09:15.049Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
