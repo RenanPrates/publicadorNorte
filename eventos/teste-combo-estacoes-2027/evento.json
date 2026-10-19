@@ -1866,11 +1866,13 @@
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "",
+      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
+      "_odooStatus": ""
     },
     {
       "_id": "1a000d62",
@@ -2334,7 +2336,7 @@
   ],
   "versaoAtiva": 17,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:20:39.148Z",
+  "atualizadoEm": "2026-10-19T18:22:34.717Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2346,129 +2348,129 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T18:20:31.592Z",
-      "ok": false,
-      "mudou": 0,
-      "mensagem": "9 de 9 cidade(s) sem resposta do Odoo: São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Fortaleza, Recife, Salvador, Belém.",
+      "em": "2026-10-19T18:22:11.450Z",
+      "ok": true,
+      "mudou": 2,
+      "mensagem": "2 valor(es) atualizados em 10 cidade(s).",
       "cidades": [
         {
           "id": "f227a601",
           "nome": "São Paulo",
           "combo": 346,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 849,90 · Prime R$ 764,91 · aberta"
         },
         {
           "id": "d7fbecc3",
           "nome": "Rio de Janeiro",
           "combo": 407,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 749,90 · Prime R$ 674,91 · aberta"
         },
         {
           "id": "89998b7e",
           "nome": "Brasília",
           "combo": 409,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 749,90 · Prime R$ 674,91 · aberta"
         },
         {
           "id": "f0d31301",
           "nome": "Belo Horizonte",
           "combo": 410,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 599,90 · Prime R$ 539,91 · aberta"
         },
         {
           "id": "4379fdd2",
           "nome": "Porto Alegre",
-          "combo": null,
+          "combo": 452,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "achado pelo código CDE27COMBO4PA: fora de venda (não está publicado na loja) · em breve"
         },
         {
           "id": "1a000d62",
           "nome": "Curitiba",
           "combo": 415,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "c8a65374",
           "nome": "Florianópolis",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         },
         {
           "id": "9772978f",
           "nome": "Fortaleza",
           "combo": 418,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "4c5a1b15",
           "nome": "Recife",
           "combo": 417,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "fa12088e",
           "nome": "Salvador",
           "combo": 416,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "f35b1fd3",
           "nome": "Belém",
           "combo": 419,
-          "ok": false,
-          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
+          "ok": true,
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "43129f26",
           "nome": "Manaus",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         },
         {
           "id": "70a24225",
           "nome": "Campinas",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         },
         {
           "id": "24f37615",
           "nome": "São José dos Campos",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         },
         {
           "id": "2b35e8ce",
           "nome": "Ribeirão Preto",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         },
         {
           "id": "9027f68b",
           "nome": "Palmas",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         },
         {
           "id": "91e04ae8",
           "nome": "Vitória",
           "combo": null,
           "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
         }
       ]
     },
