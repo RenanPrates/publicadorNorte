@@ -12,18 +12,6 @@
       "versao": 10,
       "principal": "circuitocuidar.com.br"
     },
-    "memoriaspequenochef.com.br": {
-      "slug": "memorias-do-pequeno-chef",
-      "commit": "8fc1cac4894cea0ff9e71aa4c8aef5e1b90610a4",
-      "versao": 3,
-      "principal": "memoriaspequenochef.com.br"
-    },
-    "www.memoriaspequenochef.com.br": {
-      "slug": "memorias-do-pequeno-chef",
-      "commit": "8fc1cac4894cea0ff9e71aa4c8aef5e1b90610a4",
-      "versao": 3,
-      "principal": "memoriaspequenochef.com.br"
-    },
     "projetopequenochef.com.br": {
       "slug": "pequeno-chef",
       "commit": "9cfc620bf902e97304e9de62fa8bb7a84c87ac73",
@@ -35,6 +23,18 @@
       "commit": "d0405dad499bfcbe848df1c45b8f8cf5416a3106",
       "versao": 22,
       "principal": "combos.circuitodasestacoes.com.br"
+    },
+    "memoriaspequenochef.com.br": {
+      "slug": "memorias-do-pequeno-chef",
+      "commit": "078405ac2a6aa757fea635fd1cdc66d0da89ca1f",
+      "versao": 4,
+      "principal": "memoriaspequenochef.com.br"
+    },
+    "www.memoriaspequenochef.com.br": {
+      "slug": "memorias-do-pequeno-chef",
+      "commit": "078405ac2a6aa757fea635fd1cdc66d0da89ca1f",
+      "versao": 4,
+      "principal": "memoriaspequenochef.com.br"
     }
   }
 }

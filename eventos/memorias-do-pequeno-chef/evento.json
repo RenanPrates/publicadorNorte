@@ -296,7 +296,7 @@
   ],
   "versaoAtiva": 4,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-19T19:21:40.357Z",
+  "atualizadoEm": "2026-10-19T19:22:52.502Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
@@ -315,8 +315,8 @@
       "memoriaspequenochef.com.br",
       "www.memoriaspequenochef.com.br"
     ],
-    "versao": 3,
-    "commit": "8fc1cac4894cea0ff9e71aa4c8aef5e1b90610a4",
+    "versao": 4,
+    "commit": "078405ac2a6aa757fea635fd1cdc66d0da89ca1f",
     "historico": [
       {
         "versao": 2,
@@ -325,8 +325,12 @@
       {
         "versao": 3,
         "em": "2026-10-16T21:04:27.699Z"
+      },
+      {
+        "versao": 4,
+        "em": "2026-10-19T19:22:52.502Z"
       }
     ],
-    "em": "2026-10-16T21:04:27.699Z"
+    "em": "2026-10-19T19:22:52.502Z"
   }
 }
