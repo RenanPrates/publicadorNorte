@@ -1758,12 +1758,12 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Dez",
       "parcelamento": "10",
-      "preco_vista": "849,90",
-      "valor_parcelado": "84,99",
-      "preco_prime": "764,91",
-      "preco_prime_parcelado": "76,49",
+      "preco_vista": "799",
+      "valor_parcelado": "79,90",
+      "preco_prime": "719,10",
+      "preco_prime_parcelado": "71,91",
       "porcentagem_desconto_prime": "10",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4sp-combo-circuito-das-estacoes-2027-sao-paulo-346",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
@@ -1777,7 +1777,8 @@
       "porcentagem_desconto": "26",
       "desconto_em_reais": "300,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "d7fbecc3",
@@ -1790,16 +1791,16 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Dez",
       "parcelamento": "10",
-      "preco_vista": "749,90",
-      "valor_parcelado": "74,99",
-      "preco_prime": "674,91",
-      "preco_prime_parcelado": "67,49",
+      "preco_vista": "699",
+      "valor_parcelado": "69,90",
+      "preco_prime": "629,10",
+      "preco_prime_parcelado": "62,91",
       "porcentagem_desconto_prime": "10",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4rj-combo-circuito-das-estacoes-2027-rio-de-janeiro-407",
-      "etapa1_distancias": "5, 10, 13",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4rj-combo-circuito-das-estacoes-2027-rio-de-janeiro-407",
+      "etapa1_distancias": "5, 10",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10",
+      "etapa4_distancias": "10",
       "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4rj-combo-circuito-das-estacoes-2027-rio-de-janeiro-407",
       "mes_outono": "Março",
       "mes_inverno": "Maio",
@@ -1809,7 +1810,8 @@
       "porcentagem_desconto": "30",
       "desconto_em_reais": "320,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "89998b7e",
@@ -1822,12 +1824,12 @@
       "mes_primavera_abrev": "Ago",
       "mes_verao_abrev": "Dez",
       "parcelamento": "10",
-      "preco_vista": "749,90",
-      "valor_parcelado": "74,99",
-      "preco_prime": "674,91",
-      "preco_prime_parcelado": "67,49",
+      "preco_vista": "699",
+      "valor_parcelado": "69,90",
+      "preco_prime": "629,10",
+      "preco_prime_parcelado": "62,91",
       "porcentagem_desconto_prime": "10",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4bs-combo-circuito-das-estacoes-2027-brasilia-409",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4bs-combo-circuito-das-estacoes-2027-brasilia-409",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
@@ -1841,7 +1843,8 @@
       "porcentagem_desconto": "30",
       "desconto_em_reais": "320,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "f0d31301",
@@ -1854,12 +1857,12 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Nov",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
-      "preco_prime": "539,91",
-      "preco_prime_parcelado": "53,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
+      "preco_prime": "494,10",
+      "preco_prime_parcelado": "49,41",
       "porcentagem_desconto_prime": "10",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4bh-combo-circuito-das-estacoes-2027-belo-horizonte-410",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4bh-combo-circuito-das-estacoes-2027-belo-horizonte-410",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
@@ -1873,35 +1876,37 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "4379fdd2",
       "cidade": "Porto Alegre",
       "uf": "RS",
       "regiao": "Sul",
-      "status": "aberta",
+      "status": "",
       "mes_outono_abrev": "",
       "mes_inverno_abrev": "",
       "mes_primavera_abrev": "",
       "mes_verao_abrev": "",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
-      "etapa1_distancias": "5, 10",
-      "etapa2_distancias": "5, 10",
-      "etapa3_distancias": "5, 10",
+      "link_inscricao": "",
+      "etapa1_distancias": "5, 10, 13",
+      "etapa2_distancias": "5, 10, 15",
+      "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
       "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
       "_odooStatus": "aberta",
       "preco_comum": "989,96",
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
-      "_odooVendeu": "sim"
+      "_odooVendeu": "sim",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "1a000d62",
@@ -1914,12 +1919,12 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Nov",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4ct-combo-circuito-das-estacoes-2027-curitiba-415",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4ct-combo-circuito-das-estacoes-2027-curitiba-415",
       "etapa1_distancias": "5, 10",
       "etapa2_distancias": "5, 10",
       "etapa3_distancias": "5, 10",
@@ -1933,7 +1938,8 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "c8a65374",
@@ -1955,7 +1961,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "9772978f",
@@ -1968,12 +1975,12 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Nov",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4ft-combo-circuito-das-estacoes-2027-fortaleza-418",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4ft-combo-circuito-das-estacoes-2027-fortaleza-418",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
@@ -1987,7 +1994,8 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "4c5a1b15",
@@ -2000,12 +2008,12 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Nov",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4rc-combo-circuito-das-estacoes-2027-recife-417",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4rc-combo-circuito-das-estacoes-2027-recife-417",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
@@ -2019,7 +2027,8 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "fa12088e",
@@ -2032,12 +2041,12 @@
       "mes_primavera_abrev": "Set",
       "mes_verao_abrev": "Dez",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4sv-combo-circuito-das-estacoes-2027-salvador-416",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4sv-combo-circuito-das-estacoes-2027-salvador-416",
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
@@ -2048,7 +2057,8 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "f35b1fd3",
@@ -2061,12 +2071,12 @@
       "mes_primavera_abrev": "Ago",
       "mes_verao_abrev": "Dez",
       "parcelamento": "10",
-      "preco_vista": "599,90",
-      "valor_parcelado": "59,99",
+      "preco_vista": "549",
+      "valor_parcelado": "54,90",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4bl-combo-circuito-das-estacoes-2027-belem-419",
+      "link_inscricao": "https://beta.runningland.com.br/shop/cde27combo4bl-combo-circuito-das-estacoes-2027-belem-419",
       "etapa1_distancias": "5, 10",
       "etapa2_distancias": "5, 10",
       "etapa3_distancias": "5, 10",
@@ -2080,7 +2090,8 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "_odooStatus": "aberta"
+      "_odooStatus": "aberta",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "43129f26",
@@ -2102,7 +2113,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "70a24225",
@@ -2124,7 +2136,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "24f37615",
@@ -2146,7 +2159,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "2b35e8ce",
@@ -2168,7 +2182,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "9027f68b",
@@ -2190,7 +2205,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     },
     {
       "_id": "91e04ae8",
@@ -2212,7 +2228,8 @@
       "etapa1_distancias": "5, 10, 13",
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
-      "etapa4_distancias": "5, 10"
+      "etapa4_distancias": "5, 10",
+      "preco_assinatura_prime": "99,99"
     }
   ],
   "etapas": [],
@@ -2407,7 +2424,7 @@
   ],
   "versaoAtiva": 22,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T21:06:44.752Z",
+  "atualizadoEm": "2026-10-19T21:07:01.918Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
