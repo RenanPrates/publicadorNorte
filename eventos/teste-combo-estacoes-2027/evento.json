@@ -1906,7 +1906,7 @@
       "porcentagem_desconto": "39",
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "1a000d62",
@@ -1939,7 +1939,7 @@
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
       "_odooStatus": "aberta",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "c8a65374",
@@ -1962,7 +1962,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "9772978f",
@@ -1995,7 +1995,7 @@
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
       "_odooStatus": "aberta",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "4c5a1b15",
@@ -2028,7 +2028,7 @@
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
       "_odooStatus": "aberta",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "fa12088e",
@@ -2058,7 +2058,7 @@
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
       "_odooStatus": "aberta",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "f35b1fd3",
@@ -2091,7 +2091,7 @@
       "desconto_em_reais": "390,06",
       "_odooVendeu": "sim",
       "_odooStatus": "aberta",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "43129f26",
@@ -2114,7 +2114,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "70a24225",
@@ -2137,7 +2137,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "24f37615",
@@ -2160,7 +2160,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "2b35e8ce",
@@ -2183,7 +2183,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "9027f68b",
@@ -2206,7 +2206,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     },
     {
       "_id": "91e04ae8",
@@ -2229,7 +2229,7 @@
       "etapa2_distancias": "5, 10, 15",
       "etapa3_distancias": "5, 10, 18",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": "99,99"
+      "preco_assinatura_prime": ""
     }
   ],
   "etapas": [],
@@ -2424,7 +2424,7 @@
   ],
   "versaoAtiva": 22,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T21:07:37.197Z",
+  "atualizadoEm": "2026-10-19T21:07:51.230Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
