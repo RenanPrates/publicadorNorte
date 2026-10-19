@@ -4254,6 +4254,11 @@ a.wordmark{cursor:pointer}
         <input id="t-email" type="email" inputmode="email" maxlength="120" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="@teste_email_exemplo" enterkeyhint="done">
         <p class="t-erro" id="t-email-erro" hidden>@teste_email_erro</p>
       </div>
+      <div class="field">
+        <label for="t-zap">@teste_whatsapp_rotulo</label>
+        <input id="t-zap" type="tel" inputmode="tel" maxlength="15" autocomplete="tel-national" placeholder="@teste_whatsapp_exemplo" enterkeyhint="done">
+        <p class="t-erro" id="t-zap-erro" hidden>@teste_whatsapp_erro</p>
+      </div>
       <label class="t-aceite"><input type="checkbox" id="t-aceite"><span>@teste_aceite</span></label>
       <p style="margin-top:1.8rem"><button class="g-cta" id="gerar" disabled>@teste_botao_gerar</button></p>
     </div>
@@ -4348,6 +4353,11 @@ a.wordmark{cursor:pointer}
       <label class="cw-rot" for="c-email">@carta_email_rotulo</label>
       <input class="cw-in" type="email" id="c-email" inputmode="email" maxlength="120" placeholder="@carta_email_exemplo" autocomplete="email" autocapitalize="off" spellcheck="false">
       <p class="cw-erro">@carta_email_erro</p>
+    </div>
+    <div class="cw-grupo" id="cwZapG">
+      <label class="cw-rot" for="c-zap">@carta_whatsapp_rotulo</label>
+      <input class="cw-in" type="tel" id="c-zap" inputmode="tel" maxlength="15" placeholder="@carta_whatsapp_exemplo" autocomplete="tel-national">
+      <p class="cw-erro">@carta_whatsapp_erro</p>
     </div>
     <div class="cw-grupo" id="cwCpfG">
       <label class="cw-rot" for="c-cpf">@carta_cpf_rotulo</label>
@@ -5120,10 +5130,10 @@ a.wordmark{cursor:pointer}
       linkCard(ctx, W/2, 1058, 24, 940);
     }
   }
-  /* "Faça o seu em: endereço" (@teste_card_link): o que vem antes dos dois-pontos mais leve, o endereço em negrito */
+  /* "Descubra sua química em endereço" (@teste_card_link): o texto mais leve, o endereço do fim em negrito */
   function linkCard(ctx, x, y, tam, larg){
-    var C = window.CardShare, F = C.F, t = TX("teste_card_link") || "Faça o seu em: combos.circuitodasestacoes.com.br";
-    var k = t.indexOf(":"), a = k < 0 ? "" : t.slice(0, k + 1) + " ", b = k < 0 ? t : t.slice(k + 1).trim();
+    var C = window.CardShare, F = C.F, t = TX("teste_card_link") || "Descubra sua química em combos.circuitodasestacoes.com.br";
+    var m = /^(.*?)\s*((?:https?:\/\/)?[\w-]+(?:\.[\w-]+)+\/?)$/.exec(t.trim()), a = m && m[1] ? m[1] + " " : "", b = m ? m[2] : t;
     var med = function(s, p, z){ ctx.font = p + " " + z + "px " + F; C.ls(ctx, 0); return ctx.measureText(s).width; };
     while (tam > 14 && med(a, "500", tam) + med(b, "800", tam) > larg) tam -= 1;
     var wa = med(a, "500", tam), wb = med(b, "800", tam), x0 = x - (wa + wb) / 2;
@@ -5192,9 +5202,20 @@ a.wordmark{cursor:pointer}
   });
 
   function emailOkT(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((v || "").trim()); }
-  function podeGerar(){
-    $("gerar").disabled = !($("nome").value.trim().length >= 1 && emailOkT($("t-email").value) && $("t-aceite").checked);
+  function soNumT(v){ return (v || "").replace(/\D/g, ""); }
+  function zapOkT(v){ var n = soNumT(v); return n.length === 10 || n.length === 11; }
+  function mascaraZapT(v){
+    var n = soNumT(v).slice(0, 11);
+    if (n.length > 10) return n.replace(/(\d{2})(\d{5})(\d{1,4})/, "($1) $2-$3");
+    if (n.length > 6) return n.replace(/(\d{2})(\d{4})(\d{1,4})/, "($1) $2-$3");
+    if (n.length > 2) return n.replace(/(\d{2})(\d{1,5})/, "($1) $2");
+    return n;
   }
+  function podeGerar(){
+    $("gerar").disabled = !($("nome").value.trim().length >= 1 && emailOkT($("t-email").value) && zapOkT($("t-zap").value) && $("t-aceite").checked);
+  }
+  $("t-zap").addEventListener("input", function(){ this.value = mascaraZapT(this.value); if (zapOkT(this.value)) $("t-zap-erro").hidden = true; podeGerar(); });
+  $("t-zap").addEventListener("blur", function(){ $("t-zap-erro").hidden = !this.value.trim() || zapOkT(this.value); });
   $("nome").addEventListener("input", podeGerar);
   $("t-email").addEventListener("input", function(){ if (emailOkT(this.value)) $("t-email-erro").hidden = true; podeGerar(); });
   $("t-email").addEventListener("blur", function(){ $("t-email-erro").hidden = !this.value.trim() || emailOkT(this.value); });
@@ -5203,6 +5224,9 @@ a.wordmark{cursor:pointer}
     if (e.key === "Enter") { e.preventDefault(); $("t-email").focus(); }
   });
   $("t-email").addEventListener("keydown", function(e){
+    if (e.key === "Enter") { e.preventDefault(); $("t-zap").focus(); }
+  });
+  $("t-zap").addEventListener("keydown", function(e){
     if (e.key === "Enter" && !$("gerar").disabled) $("gerar").click();
   });
 
@@ -5224,7 +5248,7 @@ a.wordmark{cursor:pointer}
     try { new URLSearchParams(location.search).forEach(function(v, k){ if (/^utm_/.test(k)) utm[k] = v; }); } catch(e){}
     var dados = {
       nome: ($("nome").value || "").trim(), email: ($("t-email").value || "").trim().toLowerCase(),
-      aceite: !!$("t-aceite").checked, aceiteEm: $("t-aceite").checked ? new Date().toISOString() : null, quimica: resultado.nome, etapa: resultado.estacao, respostas: respostas.slice(),
+      whatsapp: ($("t-zap").value || "").replace(/\D/g, ""), aceite: !!$("t-aceite").checked, aceiteEm: $("t-aceite").checked ? new Date().toISOString() : null, quimica: resultado.nome, etapa: resultado.estacao, respostas: respostas.slice(),
       evento: TX("evento"), ano: TX("ano"), cidade: TX("cidade"), origem: "descubra-sua-quimica",
       pagina: location.href, utm: utm, enviadoEm: new Date().toISOString()
     };
@@ -5407,7 +5431,7 @@ ETAPAS.forEach(function(e){
 });
 var FUNDO_ASSINA = "#1B1824";
 /* Endereço que recebe a carta (@webhook_carta, no cadastro). Vazio = só guarda no navegador.
-   O envio é um POST JSON com: nome, email, aceite, aceiteEm, evento, ano, cidade, origem, pagina, utm_*, assinadaEm, etapas[]. */
+   O envio é um POST JSON com: nome, email, whatsapp, cpf, aceite, aceiteEm, evento, ano, cidade, origem, pagina, utm_*, assinadaEm, etapas[]. */
 var ENDPOINT = TX("webhook_carta");
 
 /* ============ ESTADO ============ */
@@ -5520,6 +5544,7 @@ function payload(){
   return {
     nome: $("c-nome").value.trim(),
     email: $("c-email").value.trim().toLowerCase(),
+    whatsapp: soNum($("c-zap").value),
     cpf: soNum($("c-cpf").value),
     aceite: !!$("aceite").checked,
     aceiteEm: $("aceite").checked ? new Date().toISOString() : null,
@@ -5541,6 +5566,7 @@ function carrega(){
     var d = JSON.parse(localStorage.getItem("carta2027") || "null"); if (!d) return;
     if (d.nome) $("c-nome").value = d.nome;
     if (d.email) $("c-email").value = d.email;
+    if (d.whatsapp) $("c-zap").value = mascaraZap(d.whatsapp);
     if (d.cpf) $("c-cpf").value = mascaraCpf(d.cpf);
     (d.etapas || []).forEach(function(x){
       var e = ETAPAS.filter(function(z){ return z.id === x.etapa; })[0];
@@ -5656,14 +5682,15 @@ carrega();
 
   $("c-nome").addEventListener("input", function(){ erro("cwNomeG", false); salva(); });
   $("c-email").addEventListener("input", function(){ erro("cwEmailG", false); salva(); });
+  $("c-zap").addEventListener("input", function(){ this.value = mascaraZap(this.value); erro("cwZapG", false); salva(); });
   $("c-cpf").addEventListener("input", function(){ this.value = mascaraCpf(this.value); erro("cwCpfG", false); salva(); });
   $("aceite").addEventListener("change", function(){ erro("cwAceiteG", !this.checked && $("cwAceiteG").classList.contains("tem-erro")); });
 
   $("selar").onclick = function(){
     var prim = null;
-    var nOk = $("c-nome").value.trim().length > 1, zOk = emailOk($("c-email").value), cOk = cpfOk($("c-cpf").value), aOk = $("aceite").checked;
-    erro("cwNomeG", !nOk); erro("cwEmailG", !zOk); erro("cwCpfG", !cOk); erro("cwAceiteG", !aOk);
-    if (!nOk) prim = $("cwNomeG"); else if (!zOk) prim = $("cwEmailG"); else if (!cOk) prim = $("cwCpfG"); else if (!aOk) prim = $("cwAceiteG");
+    var nOk = $("c-nome").value.trim().length > 1, zOk = emailOk($("c-email").value), wN = soNum($("c-zap").value).length, wOk = wN === 10 || wN === 11, cOk = cpfOk($("c-cpf").value), aOk = $("aceite").checked;
+    erro("cwNomeG", !nOk); erro("cwEmailG", !zOk); erro("cwZapG", !wOk); erro("cwCpfG", !cOk); erro("cwAceiteG", !aOk);
+    if (!nOk) prim = $("cwNomeG"); else if (!zOk) prim = $("cwEmailG"); else if (!wOk) prim = $("cwZapG"); else if (!cOk) prim = $("cwCpfG"); else if (!aOk) prim = $("cwAceiteG");
     if (prim) { rolaAte(prim); var f = prim.querySelector("input"); if (f) setTimeout(function(){ f.focus({ preventScroll:true }); }, 350); return; }
     desenhaCarta(); envia(); mostraPasso(5); notaCarta(""); renderCardCarta();
   };
@@ -5946,7 +5973,7 @@ carrega();
       @etapa1_distancias_1, @etapa2_distancias_1, @etapa3_distancias_1, @etapa4_distancias_1, @carta_titulo, @carta_capa_kicker, @carta_capa_titulo,
       @carta_capa_texto, @carta_distancia_rotulo, @carta_distancia_erro, @carta_tempo_rotulo, @carta_tempo_erro,
       @carta_pace_rotulo, @carta_assina_kicker, @carta_assina_titulo, @carta_assina_texto, @carta_nome_rotulo,
-      @carta_nome_erro, @carta_email_rotulo, @carta_email_erro, @carta_cpf_rotulo, @carta_cpf_erro, @carta_aceite,
+      @carta_nome_erro, @carta_email_rotulo, @carta_email_erro, @carta_whatsapp_rotulo, @carta_whatsapp_exemplo, @carta_whatsapp_erro, @carta_cpf_rotulo, @carta_cpf_erro, @carta_aceite,
       @carta_aceite_erro, @carta_selada_kicker, @carta_selada_titulo, @carta_share_kicker, @carta_share_titulo,
       @carta_share_texto, @carta_editar, @carta_nome_exemplo, @carta_email_exemplo, @carta_cpf_exemplo,
       @carta_botao_proxima, @carta_botao_assinar, @carta_botao_selar, @carta_frase, @carta_contador,
