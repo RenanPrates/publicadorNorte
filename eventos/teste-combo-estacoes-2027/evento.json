@@ -1861,18 +1861,21 @@
       "mes_primavera_abrev": "",
       "mes_verao_abrev": "",
       "parcelamento": "10",
-      "preco_vista": "549",
-      "valor_parcelado": "54,90",
+      "preco_vista": "599,90",
+      "valor_parcelado": "59,99",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
       "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
-      "etapa1_distancias": "5, 10, 13",
-      "etapa2_distancias": "5, 10, 15",
-      "etapa3_distancias": "5, 10, 18",
+      "etapa1_distancias": "5, 10",
+      "etapa2_distancias": "5, 10",
+      "etapa3_distancias": "5, 10",
       "etapa4_distancias": "5, 10",
       "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
-      "_odooStatus": ""
+      "_odooStatus": "",
+      "preco_comum": "989,96",
+      "porcentagem_desconto": "39",
+      "desconto_em_reais": "390,06"
     },
     {
       "_id": "1a000d62",
@@ -2336,7 +2339,7 @@
   ],
   "versaoAtiva": 17,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:22:34.717Z",
+  "atualizadoEm": "2026-10-19T18:30:24.410Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2348,10 +2351,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T18:22:11.450Z",
+      "em": "2026-10-19T18:30:03.469Z",
       "ok": true,
-      "mudou": 2,
-      "mensagem": "2 valor(es) atualizados em 10 cidade(s).",
+      "mudou": 8,
+      "mensagem": "8 valor(es) atualizados em 10 cidade(s).",
       "cidades": [
         {
           "id": "f227a601",
@@ -2386,7 +2389,7 @@
           "nome": "Porto Alegre",
           "combo": 452,
           "ok": true,
-          "mensagem": "achado pelo código CDE27COMBO4PA: fora de venda (não está publicado na loja) · em breve"
+          "mensagem": "fora de venda (não está publicado na loja) · em breve"
         },
         {
           "id": "1a000d62",
