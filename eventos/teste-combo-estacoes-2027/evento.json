@@ -7,7 +7,7 @@
     "tapume": {
       "arquivo": "combo-estacoes-tapume.html",
       "bytes": 21731,
-      "enviadoEm": "2026-10-16T16:55:12.953Z"
+      "enviadoEm": "2026-10-19T18:13:19.434Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
@@ -1409,6 +1409,50 @@
     "webhook_teste": {
       "dono": "geral",
       "ignorar": false
+    },
+    "teste_card_link": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_email_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_email_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_email_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_whatsapp_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_whatsapp_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_whatsapp_erro": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "teste_aceite": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_whatsapp_rotulo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_whatsapp_exemplo": {
+      "dono": "geral",
+      "ignorar": false
+    },
+    "carta_whatsapp_erro": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2282,7 +2326,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:10:50.341Z",
+  "atualizadoEm": "2026-10-19T18:13:25.644Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
