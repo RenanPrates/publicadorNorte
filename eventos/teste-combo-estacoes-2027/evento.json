@@ -1453,6 +1453,16 @@
     "carta_whatsapp_erro": {
       "dono": "geral",
       "ignorar": false
+    },
+    "tapume_aviso_whatsapp": {
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
+    },
+    "tapume_aviso_aceite": {
+      "dono": "geral",
+      "ignorar": false,
+      "manual": true
     }
   },
   "gerais": {
@@ -2351,7 +2361,7 @@
   ],
   "versaoAtiva": 18,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:41:47.450Z",
+  "atualizadoEm": "2026-10-19T18:43:05.354Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
