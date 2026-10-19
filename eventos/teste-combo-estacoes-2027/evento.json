@@ -1855,7 +1855,7 @@
       "cidade": "Porto Alegre",
       "uf": "RS",
       "regiao": "Sul",
-      "status": "",
+      "status": "aberta",
       "mes_outono_abrev": "",
       "mes_inverno_abrev": "",
       "mes_primavera_abrev": "",
@@ -1872,10 +1872,11 @@
       "etapa3_distancias": "5, 10",
       "etapa4_distancias": "5, 10",
       "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
-      "_odooStatus": "",
+      "_odooStatus": "aberta",
       "preco_comum": "989,96",
       "porcentagem_desconto": "39",
-      "desconto_em_reais": "390,06"
+      "desconto_em_reais": "390,06",
+      "_odooVendeu": "sim"
     },
     {
       "_id": "1a000d62",
@@ -2339,7 +2340,7 @@
   ],
   "versaoAtiva": 17,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:30:24.410Z",
+  "atualizadoEm": "2026-10-19T18:33:23.496Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2351,10 +2352,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T18:30:03.469Z",
+      "em": "2026-10-19T18:33:00.185Z",
       "ok": true,
-      "mudou": 8,
-      "mensagem": "8 valor(es) atualizados em 10 cidade(s).",
+      "mudou": 1,
+      "mensagem": "1 valor(es) atualizados em 10 cidade(s).",
       "cidades": [
         {
           "id": "f227a601",
@@ -2389,7 +2390,7 @@
           "nome": "Porto Alegre",
           "combo": 452,
           "ok": true,
-          "mensagem": "fora de venda (não está publicado na loja) · em breve"
+          "mensagem": "R$ 599,90 · aberta · marcado como não publicado no Odoo (a página da loja abre assim mesmo)"
         },
         {
           "id": "1a000d62",
