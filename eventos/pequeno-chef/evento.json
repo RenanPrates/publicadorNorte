@@ -2838,7 +2838,7 @@
   ],
   "versaoAtiva": 13,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-19T17:45:09.164Z",
+  "atualizadoEm": "2026-10-19T17:45:53.882Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2943,8 +2943,8 @@
     "dominios": [
       "projetopequenochef.com.br"
     ],
-    "versao": 12,
-    "commit": "70a30a30a99115cb3b9519a7c3174b204200669f",
+    "versao": 13,
+    "commit": "45aa2443ef6b3790c66c2f3de2488ecaebe83531",
     "historico": [
       {
         "versao": 1,
@@ -2997,8 +2997,12 @@
       {
         "versao": 12,
         "em": "2026-10-16T21:09:55.337Z"
+      },
+      {
+        "versao": 13,
+        "em": "2026-10-19T17:45:53.882Z"
       }
     ],
-    "em": "2026-10-16T21:09:55.337Z"
+    "em": "2026-10-19T17:45:53.882Z"
   }
 }
