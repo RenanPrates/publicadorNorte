@@ -2334,7 +2334,7 @@
   ],
   "versaoAtiva": 17,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:17:00.766Z",
+  "atualizadoEm": "2026-10-19T18:20:39.148Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2346,38 +2346,38 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T18:15:29.502Z",
-      "ok": true,
+      "em": "2026-10-19T18:20:31.592Z",
+      "ok": false,
       "mudou": 0,
-      "mensagem": "Nenhuma cidade com link de combo do Odoo.",
+      "mensagem": "9 de 9 cidade(s) sem resposta do Odoo: São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Fortaleza, Recife, Salvador, Belém.",
       "cidades": [
         {
           "id": "f227a601",
           "nome": "São Paulo",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 346,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "d7fbecc3",
           "nome": "Rio de Janeiro",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 407,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "89998b7e",
           "nome": "Brasília",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 409,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "f0d31301",
           "nome": "Belo Horizonte",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 410,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "4379fdd2",
@@ -2389,9 +2389,9 @@
         {
           "id": "1a000d62",
           "nome": "Curitiba",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 415,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "c8a65374",
@@ -2403,30 +2403,30 @@
         {
           "id": "9772978f",
           "nome": "Fortaleza",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 418,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "4c5a1b15",
           "nome": "Recife",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 417,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "fa12088e",
           "nome": "Salvador",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 416,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "f35b1fd3",
           "nome": "Belém",
-          "combo": null,
-          "ok": true,
-          "mensagem": "sem link do combo: fica como está"
+          "combo": 419,
+          "ok": false,
+          "mensagem": "O Odoo não achou o banco \"...\" (ODOO_DB). Confira o nome ou tire essa variável."
         },
         {
           "id": "43129f26",
