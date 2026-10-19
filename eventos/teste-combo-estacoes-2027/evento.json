@@ -6,8 +6,8 @@
   "paginas": {
     "tapume": {
       "arquivo": "combo-estacoes-tapume.html",
-      "bytes": 21731,
-      "enviadoEm": "2026-10-19T18:13:19.434Z"
+      "bytes": 23929,
+      "enviadoEm": "2026-10-19T18:45:59.468Z"
     },
     "praca": {
       "arquivo": "combo-estacoes-praca.html",
@@ -1463,6 +1463,10 @@
       "dono": "geral",
       "ignorar": false,
       "manual": true
+    },
+    "tapume_aviso_invalido": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -2361,7 +2365,7 @@
   ],
   "versaoAtiva": 18,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:45:55.729Z",
+  "atualizadoEm": "2026-10-19T18:46:05.678Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
