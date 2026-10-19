@@ -1664,7 +1664,12 @@
     "tapume_rodape": "Complete sua mandala",
     "webhook_carta": "https://webhooksha.inteligencianorte.cloud/webhook/cartas-para-futuro",
     "webhook_teste": "https://webhooksha.inteligencianorte.cloud/webhook/descubra-sua-quimica",
-    "webhook_aviso": "https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar"
+    "webhook_aviso": "https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar",
+    "teste_card_link": "Faça o seu em: combos.circuitodasestacoes.com.br",
+    "teste_email_rotulo": "Seu e-mail",
+    "teste_email_exemplo": "voce@email.com",
+    "teste_email_erro": "Confira o e-mail.",
+    "teste_aceite": "Autorizo a Norte a guardar meu nome e e-mail para me enviar novidades do {evento}. Posso pedir a exclusão a qualquer momento."
   },
   "cidades": [
     {
@@ -2271,7 +2276,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T17:50:42.875Z",
+  "atualizadoEm": "2026-10-19T18:05:38.094Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
