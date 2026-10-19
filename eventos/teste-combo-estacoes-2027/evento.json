@@ -2399,20 +2399,24 @@
   ],
   "versaoAtiva": 22,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T19:13:28.064Z",
+  "atualizadoEm": "2026-10-19T19:14:38.783Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
     ],
-    "versao": 19,
-    "commit": "26021e47d025b05123745689c22dc326ad243ec6",
+    "versao": 22,
+    "commit": "d0405dad499bfcbe848df1c45b8f8cf5416a3106",
     "historico": [
       {
         "versao": 19,
         "em": "2026-10-19T18:48:18.329Z"
+      },
+      {
+        "versao": 22,
+        "em": "2026-10-19T19:14:38.783Z"
       }
     ],
-    "em": "2026-10-19T18:48:18.329Z"
+    "em": "2026-10-19T19:14:38.783Z"
   },
   "odoo": {
     "ativo": true,
