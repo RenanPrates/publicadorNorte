@@ -5870,6 +5870,8 @@ carrega();
                @porcentagem_desconto, @preco_comum, @desconto_em_reais, @link_inscricao
   O2 Prime (desconto de assinante, vem do Odoo): @preco_prime, @preco_prime_parcelado. Sem @preco_prime, a linha
                "O2 Prime" do preço, a caixa "Assine o Prime" e a linha Prime da barra fixa somem.
+  Assinatura Prime (por cidade, digitado na planilha, não vem do Odoo): @preco_assinatura_prime, só o valor (99,99).
+               Na caixa "Assine o Prime": "@compra_prime_texto: @compra_prime_oferta R$<valor>." Vazio = só "@compra_prime_texto."
   Status esgotado (vem do Odoo: saiu de venda depois de ter vendido): página e botões continuam abertos (como "aberta");
           o preço (bloco de compra e barra fixa) mostra @preco_esgotado e @preco_esgotado_texto.
   Status (3 casos, realizado primeiro): botão da compra = @compra_botao (aberta), @compra_botao_breve (em breve),
@@ -5897,7 +5899,7 @@ carrega();
       @hero_frase, @hero_texto
     #compra:
       @compra_kit_alt, @compra_kicker, @compra_titulo,
-      @compra_resumo, @compra_separado, @compra_prime_tag, @compra_prime_texto,
+      @compra_resumo, @compra_separado, @compra_prime_tag, @compra_prime_texto, @compra_prime_oferta,
       @compra_prime_item1, @compra_prime_item2, @compra_prime_item3, @compra_prime_item4, @compra_prime_item5,
       @compra_prime_item6, @compra_prime_item7, @compra_prime_item8, @compra_prime_nota, @compra_botao,
       @compra_botao_breve, @compra_botao_realizado
