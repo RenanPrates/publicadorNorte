@@ -2838,7 +2838,7 @@
   ],
   "versaoAtiva": 13,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-19T17:45:53.882Z",
+  "atualizadoEm": "2026-10-19T17:51:29.031Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2937,7 +2937,7 @@
     "share": {
       "imagem": "_media/pagina/carreta/carreta.webp"
     },
-    "gtm": "GTM-MSZJ2K"
+    "gtm": "GTM-PXKPSLRJ"
   },
   "producao": {
     "dominios": [
