@@ -112,7 +112,7 @@
   button.tag.breve:hover, button.tag.breve:focus-visible{opacity:1}
   [hidden]{display:none !important}
   .aviso-form{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem}
-  .aviso-email{flex:1 1 150px; min-width:0; font:inherit; font-size:.85rem;
+  .aviso-email{flex:1 1 100%; min-width:0; font:inherit; font-size:.85rem;
     padding:.5rem .8rem; border-radius:999px; border:1px solid var(--rule-2);
     background:color-mix(in srgb, var(--metal) 8%, var(--bg)); color:var(--fg)}
   .aviso-email:focus-visible{outline:2px solid var(--metal); outline-offset:2px}
@@ -128,6 +128,9 @@
     letter-spacing:.06em; text-transform:uppercase; padding:.5rem 1rem; border-radius:999px;
     border:0; background:var(--metal); color:var(--on-metal); cursor:pointer}
   .aviso-enviar:disabled{opacity:.55; cursor:default}
+  .aviso-email.aviso-zap{flex:1 1 140px}
+  .aviso-email[aria-invalid="true"]{border-color:#C0392B}
+  .aviso-nota{flex:1 1 100%; margin:.1rem 0 0; font-size:.72rem; line-height:1.45; color:var(--muted)}
   .aviso-msg{margin:.8rem 0 0; font-size:.82rem; color:var(--muted)}
 
   /* hoodie */
@@ -225,7 +228,7 @@
       <p class="contagem" id="contagem"><b>10 com inscrição aberta</b> · 7 em breve</p>
     </div>
     <p class="vazio" id="vazio" hidden>Nenhuma cidade encontrada.</p>
-    <div class="grade" data-evento="Circuito das Estações" data-ano="2027" data-webhook="https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar" data-aviso-ok="Prontinho! Avisamos você por e-mail assim que {cidade} lançar." data-aviso-erro="Não deu pra enviar agora. Tenta de novo em instantes.">
+    <div class="grade" data-evento="Circuito das Estações" data-ano="2027" data-webhook="https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar" data-aviso-ok="Prontinho! Avisamos você assim que {cidade} lançar." data-aviso-erro="Não deu pra enviar agora. Tenta de novo em instantes." data-aviso-invalido="Confira o e-mail e o WhatsApp com DDD.">
 
 
       <a class="praca aberta" href="sao-paulo.html" data-busca="São Paulo SP Sudeste">
@@ -274,8 +277,10 @@
         <h3>Florianópolis<span class="uf">SC</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · Florianópolis" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Florianópolis" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Florianópolis" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -314,8 +319,10 @@
         <h3>Manaus<span class="uf">AM</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · Manaus" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Manaus" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Manaus" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -326,8 +333,10 @@
         <h3>Campinas<span class="uf">SP</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · Campinas" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Campinas" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Campinas" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -338,8 +347,10 @@
         <h3>São José dos Campos<span class="uf">SP</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · São José dos Campos" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · São José dos Campos" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · São José dos Campos" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -350,8 +361,10 @@
         <h3>Ribeirão Preto<span class="uf">SP</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · Ribeirão Preto" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Ribeirão Preto" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Ribeirão Preto" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -362,8 +375,10 @@
         <h3>Palmas<span class="uf">TO</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · Palmas" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Palmas" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Palmas" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -374,8 +389,10 @@
         <h3>Vitória<span class="uf">ES</span></h3>
         <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
         <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" placeholder="seu@email.com" aria-label="seu@email.com · Vitória" required>
+          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Vitória" required>
+          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Vitória" required>
           <button type="submit" class="aviso-enviar">Avisar</button>
+          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
         </form>
         <p class="aviso-msg" hidden></p>
       </div>
@@ -399,7 +416,8 @@
   - Textos desta página: @tapume_descricao (descrição para o Google), @tapume_titulo, @tapume_texto,
     @tapume_mandala_alt, @tapume_busca_exemplo, @tapume_contagem_aberta, @tapume_contagem_breve,
     @tapume_vazio, @tapume_tag_aberta, @tapume_tag_esgotado, @tapume_tag_realizado,
-    @tapume_aviso_botao, @tapume_aviso_email, @tapume_aviso_enviar, @tapume_aviso_ok, @tapume_aviso_erro
+    @tapume_aviso_botao, @tapume_aviso_email, @tapume_aviso_whatsapp, @tapume_aviso_enviar, @tapume_aviso_aceite,
+    @tapume_aviso_ok, @tapume_aviso_erro, @tapume_aviso_invalido
     ({cidade} nas mensagens vira o nome da cidade), @tapume_rodape.
   - Legenda das estações: @etapa1_nome … @etapa4_nome (os mesmos da página da praça).
 
@@ -517,17 +535,44 @@
     });
   });
 
+  function soNum(v){ return (v || "").replace(/\D/g, ""); }
+  function mascaraZap(v){
+    var n = soNum(v).slice(0, 11);
+    if (n.length > 10) return n.replace(/(\d{2})(\d{5})(\d{1,4})/, "($1) $2-$3");
+    if (n.length > 6) return n.replace(/(\d{2})(\d{4})(\d{1,4})/, "($1) $2-$3");
+    if (n.length > 2) return n.replace(/(\d{2})(\d{1,5})/, "($1) $2");
+    return n;
+  }
+  function emailOk(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((v || "").trim()); }
+  function zapOk(v){ var n = soNum(v).length; return n === 10 || n === 11; }
+  Array.prototype.slice.call(document.querySelectorAll(".aviso-zap")).forEach(function(c){
+    c.addEventListener("input", function(){ c.value = mascaraZap(c.value); c.removeAttribute("aria-invalid"); });
+  });
+  Array.prototype.slice.call(document.querySelectorAll(".aviso-form .aviso-email:not(.aviso-zap)")).forEach(function(c){
+    c.addEventListener("input", function(){ c.removeAttribute("aria-invalid"); });
+  });
+
   Array.prototype.slice.call(document.querySelectorAll(".aviso-form")).forEach(function(form){
     form.addEventListener("submit", function(e){
       e.preventDefault();
       var card = form.closest(".praca");
       var botao = card.querySelector(".aviso-toggle");
-      var campoEmail = form.querySelector(".aviso-email");
+      var campoEmail = form.querySelector(".aviso-email:not(.aviso-zap)");
+      var campoZap = form.querySelector(".aviso-zap");
       var enviar = form.querySelector(".aviso-enviar");
       var msg = card.querySelector(".aviso-msg");
       var grade = card.closest(".grade");
-      var email = campoEmail.value.trim();
-      if (!email) return;
+      var email = campoEmail.value.trim().toLowerCase();
+      var eOk = emailOk(email), zOk = zapOk(campoZap.value);
+      if (!eOk) campoEmail.setAttribute("aria-invalid", "true");
+      if (!zOk) campoZap.setAttribute("aria-invalid", "true");
+      if (!eOk || !zOk) {
+        msg.textContent = grade.dataset.avisoInvalido || "";
+        msg.hidden = !msg.textContent;
+        (eOk ? campoZap : campoEmail).focus();
+        return;
+      }
+      msg.hidden = true;
 
       enviar.disabled = true;
       fetch(grade.dataset.webhook, {
@@ -535,6 +580,9 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email,
+          whatsapp: soNum(campoZap.value),
+          aceite: true,
+          aceiteEm: new Date().toISOString(),
           evento: grade.dataset.evento,
           ano: grade.dataset.ano,
           cidade: card.dataset.cidade,
