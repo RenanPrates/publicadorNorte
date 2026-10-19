@@ -2340,7 +2340,7 @@
   ],
   "versaoAtiva": 17,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T18:33:23.496Z",
+  "atualizadoEm": "2026-10-19T18:36:29.788Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2352,10 +2352,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T18:33:00.185Z",
+      "em": "2026-10-19T18:36:07.392Z",
       "ok": true,
-      "mudou": 1,
-      "mensagem": "1 valor(es) atualizados em 10 cidade(s).",
+      "mudou": 0,
+      "mensagem": "Tudo igual ao Odoo (10 cidade(s)).",
       "cidades": [
         {
           "id": "f227a601",
@@ -2390,7 +2390,7 @@
           "nome": "Porto Alegre",
           "combo": 452,
           "ok": true,
-          "mensagem": "R$ 599,90 · aberta · marcado como não publicado no Odoo (a página da loja abre assim mesmo)"
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "1a000d62",
