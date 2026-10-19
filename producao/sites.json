@@ -29,6 +29,12 @@
       "commit": "9cfc620bf902e97304e9de62fa8bb7a84c87ac73",
       "versao": 14,
       "principal": "projetopequenochef.com.br"
+    },
+    "combos.circuitodasestacoes.com.br": {
+      "slug": "teste-combo-estacoes-2027",
+      "commit": "26021e47d025b05123745689c22dc326ad243ec6",
+      "versao": 19,
+      "principal": "combos.circuitodasestacoes.com.br"
     }
   }
 }
