@@ -2255,7 +2255,7 @@
   ],
   "versaoAtiva": 14,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T14:19:53.293Z",
+  "atualizadoEm": "2026-10-19T17:47:15.287Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2416,6 +2416,7 @@
   "seo": {
     "share": {
       "imagem": "_media/seo/compartilhar.jpg"
-    }
+    },
+    "gtm": "GTM-MSZJ2K"
   }
 }
