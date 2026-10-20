@@ -1,17 +1,5 @@
 {
   "sites": {
-    "circuitocuidar.com.br": {
-      "slug": "cuidar",
-      "commit": "52497baac0b16cc81745ef2e0df32ff5138a926b",
-      "versao": 10,
-      "principal": "circuitocuidar.com.br"
-    },
-    "www.circuitocuidar.com.br": {
-      "slug": "cuidar",
-      "commit": "52497baac0b16cc81745ef2e0df32ff5138a926b",
-      "versao": 10,
-      "principal": "circuitocuidar.com.br"
-    },
     "combos.circuitodasestacoes.com.br": {
       "slug": "teste-combo-estacoes-2027",
       "commit": "e495776994570b752e35257ea53d8005c854ba42",
@@ -35,6 +23,18 @@
       "commit": "985e66560f8604eed43c940804e3f3c9ae357421",
       "versao": 15,
       "principal": "projetopequenochef.com.br"
+    },
+    "circuitocuidar.com.br": {
+      "slug": "cuidar",
+      "commit": "d9da2ed6c361898ad40124b24d81ba37b0a6aa0a",
+      "versao": 11,
+      "principal": "circuitocuidar.com.br"
+    },
+    "www.circuitocuidar.com.br": {
+      "slug": "cuidar",
+      "commit": "d9da2ed6c361898ad40124b24d81ba37b0a6aa0a",
+      "versao": 11,
+      "principal": "circuitocuidar.com.br"
     }
   }
 }
