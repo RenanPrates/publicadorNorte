@@ -2846,7 +2846,7 @@
   ],
   "versaoAtiva": 14,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-19T17:57:18.253Z",
+  "atualizadoEm": "2026-10-20T18:34:01.166Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
@@ -2943,7 +2943,7 @@
     "favicon": "_media/pagina/icones/queijo.webp",
     "titulo": "Pequeno Chef",
     "share": {
-      "imagem": "_media/pagina/carreta/carreta.webp"
+      "imagem": "_media/seo/compartilhar.png"
     },
     "gtm": "GTM-PXKPSLRJ"
   },
