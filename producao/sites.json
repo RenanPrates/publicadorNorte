@@ -18,12 +18,6 @@
       "versao": 5,
       "principal": "memoriaspequenochef.com.br"
     },
-    "projetopequenochef.com.br": {
-      "slug": "pequeno-chef",
-      "commit": "985e66560f8604eed43c940804e3f3c9ae357421",
-      "versao": 15,
-      "principal": "projetopequenochef.com.br"
-    },
     "circuitocuidar.com.br": {
       "slug": "cuidar",
       "commit": "d9da2ed6c361898ad40124b24d81ba37b0a6aa0a",
@@ -35,6 +29,12 @@
       "commit": "d9da2ed6c361898ad40124b24d81ba37b0a6aa0a",
       "versao": 11,
       "principal": "circuitocuidar.com.br"
+    },
+    "projetopequenochef.com.br": {
+      "slug": "pequeno-chef",
+      "commit": "a80169bf07921576174056b31254f81dc126985d",
+      "versao": 16,
+      "principal": "projetopequenochef.com.br"
     }
   }
 }
