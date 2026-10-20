@@ -292,11 +292,19 @@
       "paginas": 1,
       "avisos": 0,
       "url": "https://renanprates.github.io/publicadorNorte/memorias-do-pequeno-chef/"
+    },
+    {
+      "versao": 5,
+      "commit": "317af298d7abc058173278cdf35458d0b4927821",
+      "em": "2026-10-20T18:32:33.954Z",
+      "paginas": 1,
+      "avisos": 0,
+      "url": "https://renanprates.github.io/publicadorNorte/memorias-do-pequeno-chef/"
     }
   ],
-  "versaoAtiva": 4,
+  "versaoAtiva": 5,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-20T18:32:31.022Z",
+  "atualizadoEm": "2026-10-20T18:32:42.858Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
