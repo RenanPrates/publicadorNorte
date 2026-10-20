@@ -18,23 +18,23 @@
       "versao": 14,
       "principal": "projetopequenochef.com.br"
     },
-    "memoriaspequenochef.com.br": {
-      "slug": "memorias-do-pequeno-chef",
-      "commit": "078405ac2a6aa757fea635fd1cdc66d0da89ca1f",
-      "versao": 4,
-      "principal": "memoriaspequenochef.com.br"
-    },
-    "www.memoriaspequenochef.com.br": {
-      "slug": "memorias-do-pequeno-chef",
-      "commit": "078405ac2a6aa757fea635fd1cdc66d0da89ca1f",
-      "versao": 4,
-      "principal": "memoriaspequenochef.com.br"
-    },
     "combos.circuitodasestacoes.com.br": {
       "slug": "teste-combo-estacoes-2027",
       "commit": "e495776994570b752e35257ea53d8005c854ba42",
       "versao": 26,
       "principal": "combos.circuitodasestacoes.com.br"
+    },
+    "memoriaspequenochef.com.br": {
+      "slug": "memorias-do-pequeno-chef",
+      "commit": "317af298d7abc058173278cdf35458d0b4927821",
+      "versao": 5,
+      "principal": "memoriaspequenochef.com.br"
+    },
+    "www.memoriaspequenochef.com.br": {
+      "slug": "memorias-do-pequeno-chef",
+      "commit": "317af298d7abc058173278cdf35458d0b4927821",
+      "versao": 5,
+      "principal": "memoriaspequenochef.com.br"
     }
   }
 }
