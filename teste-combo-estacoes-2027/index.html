@@ -227,7 +227,7 @@
     <p class="legenda"><span style="--c:#EE2140">Outono</span><span style="--c:#9426DB">Inverno</span><span style="--c:#CAF34A">Primavera</span><span style="--c:#F7490A">Verão</span></p>
     <div class="barra-busca">
       <input type="search" id="busca" placeholder="Buscar cidade ou estado" autocomplete="off" aria-label="Buscar cidade ou estado">
-      <p class="contagem" id="contagem"><b>9 com inscrição aberta</b> · 8 em breve</p>
+      <p class="contagem" id="contagem"><b>10 com inscrição aberta</b> · 7 em breve</p>
     </div>
     <p class="vazio" id="vazio" hidden>Nenhuma cidade encontrada.</p>
     <div class="grade" data-evento="Circuito das Estações" data-ano="2027" data-webhook="https://webhooksha.inteligencianorte.cloud/webhook/avise-quando-chegar" data-aviso-ok="Prontinho! Avisamos você assim que {cidade} lançar." data-aviso-erro="Não deu pra enviar agora. Tenta de novo em instantes." data-aviso-invalido="Confira o e-mail e o WhatsApp com DDD.">
@@ -261,17 +261,10 @@
 
 
 
-      <div class="praca breve" data-busca="Porto Alegre RS Sul" data-cidade="Porto Alegre" data-uf="RS">
+      <a class="praca aberta" href="porto-alegre.html" data-busca="Porto Alegre RS Sul">
         <h3>Porto Alegre<span class="uf">RS</span></h3>
-        <button type="button" class="tag breve aviso-toggle" aria-expanded="false">avise-me quando lançar</button>
-        <form class="aviso-form" hidden novalidate>
-          <input type="email" class="aviso-email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="seu@email.com" aria-label="E-mail · Porto Alegre" required>
-          <input type="tel" class="aviso-email aviso-zap" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="(00) 00000-0000" aria-label="WhatsApp · Porto Alegre" required>
-          <button type="submit" class="aviso-enviar">Avisar</button>
-          <p class="aviso-nota">Ao enviar, você autoriza a Norte a guardar seu e-mail e WhatsApp para avisar quando a inscrição abrir.</p>
-        </form>
-        <p class="aviso-msg" hidden></p>
-      </div>
+        <span class="tag aberta">inscreva-se</span>
+      </a>
 
 
 
