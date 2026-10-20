@@ -844,7 +844,7 @@
   ],
   "versaoAtiva": 10,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-13T17:14:51.646Z",
+  "atualizadoEm": "2026-10-20T18:35:37.859Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores",
@@ -937,5 +937,10 @@
       }
     ],
     "em": "2026-10-13T17:14:51.646Z"
+  },
+  "seo": {
+    "share": {
+      "imagem": "_media/seo/compartilhar.png"
+    }
   }
 }
