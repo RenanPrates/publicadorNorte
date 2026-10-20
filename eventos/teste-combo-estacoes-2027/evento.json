@@ -1884,7 +1884,7 @@
       "cidade": "Porto Alegre",
       "uf": "RS",
       "regiao": "Sul",
-      "status": "",
+      "status": "aberta",
       "mes_outono_abrev": "",
       "mes_inverno_abrev": "",
       "mes_primavera_abrev": "",
@@ -2448,7 +2448,7 @@
   ],
   "versaoAtiva": 25,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-20T12:50:46.554Z",
+  "atualizadoEm": "2026-10-20T12:52:44.945Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
