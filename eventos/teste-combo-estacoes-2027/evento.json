@@ -2440,7 +2440,7 @@
   ],
   "versaoAtiva": 24,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-19T21:14:15.370Z",
+  "atualizadoEm": "2026-10-20T12:49:09.561Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2470,10 +2470,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-19T21:07:17.814Z",
+      "em": "2026-10-20T12:48:48.579Z",
       "ok": true,
-      "mudou": 43,
-      "mensagem": "43 valor(es) atualizados em 10 cidade(s).",
+      "mudou": 0,
+      "mensagem": "Tudo igual ao Odoo (10 cidade(s)).",
       "cidades": [
         {
           "id": "f227a601",
@@ -2508,7 +2508,7 @@
           "nome": "Porto Alegre",
           "combo": 452,
           "ok": true,
-          "mensagem": "achado pelo código CDE27COMBO4PA: R$ 599,90 · aberta"
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "1a000d62",
