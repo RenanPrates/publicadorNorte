@@ -296,10 +296,12 @@
   ],
   "versaoAtiva": 4,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-20T18:32:12.633Z",
+  "atualizadoEm": "2026-10-20T18:32:23.262Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
-    "share": {},
+    "share": {
+      "imagem": "_media/seo/compartilhar.png"
+    },
     "gtm": "GTM-PXKPSLRJ"
   },
   "ultimoAgendamento": {
