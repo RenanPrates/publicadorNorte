@@ -1,7 +1,7 @@
 {
   "id": "4780461a-5185-4d5b-92d5-133b486ce286",
   "slug": "combo-estacoes-2027",
-  "nome": "9apagarCombo Estações 2027",
+  "nome": "(apagar)Combo Estações 2027",
   "formato": "tapume_praca",
   "paginas": {
     "tapume": {
@@ -304,7 +304,7 @@
   ],
   "versaoAtiva": 7,
   "criadoEm": "2026-10-07T23:57:41.860Z",
-  "atualizadoEm": "2026-10-20T14:19:07.641Z",
+  "atualizadoEm": "2026-10-20T14:19:11.139Z",
   "patrocinios": {
     "porPagina": {
       "04f0d774": {
