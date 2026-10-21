@@ -262,7 +262,9 @@
   ],
   "etapas": [],
   "ordem": {},
-  "imagens": {},
+  "imagens": {
+    "img_marca_logo": "_media/pagina/marca/joao-rosto.webp"
+  },
   "baseUrl": "",
   "publicacoes": [
     {
@@ -316,7 +318,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:44:24.728Z",
+  "atualizadoEm": "2026-10-21T14:45:01.094Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
