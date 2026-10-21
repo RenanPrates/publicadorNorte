@@ -2675,7 +2675,7 @@
       "rotulo_local": "Local:",
       "rotulo_horario": "Horário:",
       "horario": "",
-      "contagem_botao": "Inscrições em breve",
+      "contagem_botao": "Inscrições em breve para",
       "contagem_encerrada_status": "Encerrada.",
       "contagem_encerrada_texto": "Veja as próximas cidades.",
       "contagem_botao_encerrada": "Ver próximas cidades",
@@ -2863,7 +2863,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-21T14:21:43.335Z",
+  "atualizadoEm": "2026-10-21T14:21:58.489Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
