@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 243714,
-      "enviadoEm": "2026-10-21T14:44:17.572Z"
+      "bytes": 243878,
+      "enviadoEm": "2026-10-21T17:50:14.462Z"
     }
   },
   "vars": {
@@ -186,6 +186,10 @@
     "img_marca_logo": {
       "dono": "geral",
       "ignorar": false
+    },
+    "img_marca_apresenta": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -318,7 +322,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:54:52.697Z",
+  "atualizadoEm": "2026-10-21T17:50:21.664Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
