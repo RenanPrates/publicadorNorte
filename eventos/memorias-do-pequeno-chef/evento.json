@@ -6,8 +6,8 @@
   "paginas": {
     "unica": {
       "arquivo": "index.html",
-      "bytes": 243836,
-      "enviadoEm": "2026-10-16T19:31:59.178Z"
+      "bytes": 243714,
+      "enviadoEm": "2026-10-21T14:44:17.572Z"
     }
   },
   "vars": {
@@ -182,6 +182,10 @@
     "data_inicio": {
       "dono": "cidade",
       "ignorar": false
+    },
+    "img_marca_logo": {
+      "dono": "geral",
+      "ignorar": false
     }
   },
   "gerais": {
@@ -312,7 +316,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:42:02.783Z",
+  "atualizadoEm": "2026-10-21T14:44:24.728Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
