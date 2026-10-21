@@ -169,7 +169,8 @@
     },
     "link_inscricao": {
       "dono": "cidade",
-      "ignorar": false
+      "ignorar": false,
+      "novaAba": false
     },
     "faixa_etaria": {
       "dono": "geral",
@@ -304,7 +305,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:31:03.313Z",
+  "atualizadoEm": "2026-10-21T14:31:27.703Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
