@@ -162,7 +162,7 @@ button{font:inherit;color:inherit}
 .hdr.is-hidden{transform:translateY(-140%)}
 .hdr__bar{pointer-events:auto;position:relative;display:flex;align-items:center;gap:8px;max-width:var(--max);height:60px;margin-inline:auto;padding:0 6px 0 12px;background:var(--creme-claro);border:var(--borda);border-radius:999px;box-shadow:4px 4px 0 var(--noite)}
 .marca{flex:none;display:block;margin-right:auto;align-self:stretch}
-.marca img{height:70px;width:auto;margin-top:-7px;filter:drop-shadow(2px 3px 0 var(--noite));transition:rotate .5s var(--mola),scale .5s var(--mola)}
+.marca__logo{height:70px;width:auto;margin-top:-7px;filter:drop-shadow(2px 3px 0 var(--noite));transition:rotate .5s var(--mola),scale .5s var(--mola)}
 .marca:hover img{rotate:-7deg;scale:1.05}
 .nav{display:none}
 .nav ul{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
@@ -371,7 +371,6 @@ html.trava .topo{opacity:0;pointer-events:none}
 .ator__frente{background:var(--creme-claro);text-align:center;justify-items:center}
 .ator__verso{background:var(--laranja);transform:rotateY(180deg);align-content:space-between}
 .ator__selo{position:relative;width:100%;aspect-ratio:900/747;filter:drop-shadow(3px 4px 0 var(--noite))}
-.ator__foto{position:absolute;inset:0;-webkit-mask:url(_media/pagina/marca/logo.webp?v=d91ae4cd61) center/contain no-repeat;mask:url(_media/pagina/marca/logo.webp?v=d91ae4cd61) center/contain no-repeat;background:var(--verde-escuro);display:grid;place-content:center;justify-items:center;gap:6px}
 .ator__foto img{width:30%;transition:rotate .5s var(--mola)}
 .ator__foto img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ator__foto small{--mono:1;--casl:0;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--creme-claro);color:var(--noite);padding:3px 8px;border-radius:4px}
@@ -768,7 +767,7 @@ html.trava .topo{opacity:0;pointer-events:none}
 .rodape{background:var(--verde-escuro);padding-block:0 calc(env(safe-area-inset-bottom,0px) + 90px)}
 .rodape__grid{display:grid;gap:36px;padding-top:clamp(44px,6vw,80px)}
 .rodape__marca{display:grid;gap:14px;align-content:start}
-.rodape__marca img{width:min(220px,58%)}
+.rodape__logo{width:min(220px,58%)}
 .rodape__marca p{color:var(--mudo-escuro);--casl:1;--slnt:-10;font-weight:650;font-size:1.08rem}
 .rodape__col{display:grid;align-content:start;gap:14px}
 .rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
@@ -864,7 +863,7 @@ html.trava .topo{opacity:0;pointer-events:none}
   .hdr{padding-top:calc(env(safe-area-inset-top,0px) + 14px)}
   .hdr__bar{height:64px;padding:0 10px 0 20px;gap:12px}
   .marca{margin-right:0}
-  .marca img{height:78px;margin-top:-9px}
+  .marca__logo{height:78px;margin-top:-9px}
   .nav{display:block;margin-inline:auto}
   .burger{display:none}
   .menu{display:none}
@@ -1219,7 +1218,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
 <meta property="og:title" content="Memórias do Pequeno Chef">
 <meta property="og:description" content="Memórias do Pequeno Chef: uma história de sabores, família e descobertas. Espetáculo teatral gratuito dentro de uma carreta que se transforma em palco.">
 <meta property="og:image" content="https://memoriaspequenochef.com.br/_media/seo/compartilhar.png">
-<link rel="image_src" href="_media/seo/compartilhar.png?v=0c925d7f01">
+<link rel="image_src" href="_media/seo/compartilhar.png">
 <meta property="og:url" content="https://memoriaspequenochef.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Memórias do Pequeno Chef">
@@ -1356,7 +1355,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
 <!-- ===== Header ===== -->
 <header class="hdr" data-hdr>
   <div class="hdr__bar">
-    <a class="marca" href="#inicio"><img src="_media/pagina/marca/logo.webp?v=d91ae4cd61" width="900" height="747" alt="Memórias do Pequeno Chef, voltar ao início"></a>
+    <a class="marca" href="#inicio"><img class="marca__logo" src="_media/pagina/marca/logo.webp?v=d91ae4cd61" width="900" height="747" alt="Memórias do Pequeno Chef, voltar ao início"></a>
     <nav class="nav" aria-label="Seções da página">
       <ul>
         <li><a href="#a-peca" data-nav="a-peca">A peça</a></li>
@@ -1410,7 +1409,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
     <div class="hero__conteudo">
       <p class="hero__eyebrow">Espetáculo teatral gratuito</p>
       <h1 id="hero-titulo">
-        <img class="hero__logo" src="_media/pagina/marca/logo.webp?v=d91ae4cd61" width="900" height="747" alt="Memórias do Pequeno Chef" fetchpriority="high">
+        <img class="hero__logo" src="_media/pagina/marca/apresenta.webp?v=44183c435d" width="900" height="815" alt="Ministério da Cultura apresenta: Memórias do Pequeno Chef" fetchpriority="high">
         <span class="hero__sub" data-palavras-sobe>Uma história de sabores, família e descobertas</span>
       </h1>
       <p class="hero__lede">Um teatro que chega até o público: uma carreta que se transforma em palco.</p>
@@ -2131,7 +2130,7 @@ Turma 4 (Noite): 18h30 às 21h30, de 09/nov a 13/nov.</dd></div><div><dt>Entrada
   <img class="rodape__banner rodape__pic" src="_media/pagina/rodape/faixa.webp?v=afea2a321f" width="2000" height="547" alt="" aria-hidden="true" loading="lazy">
   <div class="wrap rodape__grid">
     <div class="rodape__marca">
-      <img src="_media/pagina/marca/logo.webp?v=d91ae4cd61" width="900" height="747" alt="Memórias do Pequeno Chef" loading="lazy">
+      <img class="rodape__logo" src="_media/pagina/marca/apresenta.webp?v=44183c435d" width="900" height="815" alt="Ministério da Cultura apresenta: Memórias do Pequeno Chef" loading="lazy">
       <p>Uma história de sabores, família e descobertas.</p>
     </div>
     <nav class="rodape__col" aria-label="Rodapé">
@@ -2981,8 +2980,11 @@ Turma 4 (Noite): 18h30 às 21h30, de 09/nov a 13/nov.</dd></div><div><dt>Entrada
     @media_hero_arte    — hero/, imagem ou vídeo (padrão: arte.webp)
     @media_sobre_foto   — sobre/, imagem ou vídeo (padrão: foto.webp)
     @img_cenario_fundo  — cenario/, só imagem; usada duas vezes (luz apagada e acesa) (padrão: fundo.webp)
+    @img_marca_logo      — marca/, só imagem: logo do espetáculo no header, carregamento, carreta e carteirinha (padrão: logo.webp)
+    @img_marca_apresenta — marca/, só imagem: logo com "Ministério da Cultura apresenta" na abertura e no rodapé
+                           (padrão: apresenta.webp)
     @img_elenco_duo, @img_elenco_joao, @img_elenco_vo, @img_elenco_fantoche — elenco/, só imagem (troca de cena por aba)
-    Fixas (caminho direto): marca/, comum/, apoio/, carreta/, livreto/, ingresso/, duvidas/, rodape/
+    Fixas (caminho direto): marca/textura e marca/joao-rosto, comum/, apoio/, carreta/, livreto/, ingresso/, duvidas/, rodape/
   Seções (podem ser escondidas ou reordenadas): inicio, realizacao, a-peca, sobre, cenario, elenco, livreto, cidades,
     ingresso, carteirinha, duvidas. Rodapé em <footer> fora das seções.
   Observação: a seção "realizacao" é a barra de logos pedida pelo cliente (Lei Rouanet, Jequitibá, MinC). Se o
