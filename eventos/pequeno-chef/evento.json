@@ -2663,7 +2663,7 @@
       "contagem_encerrada_status": "Encerrada.",
       "contagem_encerrada_texto": "Veja as próximas cidades.",
       "contagem_botao_encerrada": "Ver próximas cidades",
-      "turmas": "Turma 1 | Manhã | 08h00 às 12h00 | 17/out a 23/out ; Turma 2 | Noite | 18h30 às 22h00 | 17/out a 23/out ; Turma 3 | Manhã | 08h00 às 12h15 | 23/out a 29/out ; Turma 4 | Noite | 18h20 às 22h40 | 23/out a 29/out"
+      "turmas": "Turma 1 | Manhã | 09h00 às 12h00 | 17/out a 23/out ; Turma 2 | Noite | 18h30 às 22h00 | 17/out a 23/out ; Turma 3 | Manhã | 08h00 às 12h15 | 23/out a 29/out ; Turma 4 | Noite | 18h20 às 22h40 | 23/out a 29/out"
     },
     {
       "_id": "26203233",
@@ -2862,7 +2862,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-20T21:11:30.271Z",
+  "atualizadoEm": "2026-10-21T14:14:07.282Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
