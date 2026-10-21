@@ -228,7 +228,7 @@
       "data_fim": "13/11/2026",
       "local": "IFCE – Campus Maracanaú",
       "endereco": "Av. Parque Central, 1315 – Jereissati, Setor A, Maracanaú – CE, 61939-140",
-      "horario": "Turma 1 (Manhã): 09h00 às 12h00, de 03/nov a 07/nov\nTurma 2 (Noite): 18h30 às 21h30, de 03/nov a 07/nov\nTurma 3 (Manhã): 09h00 às 12h00, de 09/nov a 13/nov. Turma 4 (Noite): 18h30 às 21h30, de 09/nov a 13/nov.",
+      "horario": "Turma 1 (Manhã): 09h00 às 12h00, de 03/nov a 07/nov\nTurma 2 (Noite): 18h30 às 21h30, de 03/nov a 07/nov\nTurma 3 (Manhã): 09h00 às 12h00, de 09/nov a 13/nov\nTurma 4 (Noite): 18h30 às 21h30, de 09/nov a 13/nov.",
       "link_inscricao": ""
     },
     {
@@ -304,7 +304,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:29:53.191Z",
+  "atualizadoEm": "2026-10-21T14:29:56.301Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
