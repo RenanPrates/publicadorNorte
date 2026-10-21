@@ -223,7 +223,7 @@
       "_id": "be803f6b",
       "cidade": "Maracanaú",
       "uf": "CE",
-      "status": "em breve",
+      "status": "aberta",
       "data_inicio": "31/10/2026",
       "data_fim": "13/11/2026",
       "local": "IFCE – Campus Maracanaú",
@@ -304,7 +304,7 @@
   ],
   "versaoAtiva": 5,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:32:07.510Z",
+  "atualizadoEm": "2026-10-21T14:32:14.298Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
