@@ -666,7 +666,7 @@
       "_id": "12f009ec",
       "cidade": "Recife",
       "uf": "PE",
-      "local": "",
+      "local": "Parque Urbano da Macaxeira - Av. Norte Miguel Arraes de Alencar, s/n - Macaxeira, Recife",
       "data_inicio": "03/11/2026",
       "data_fim": "13/11/2026",
       "gratuito": "sim",
@@ -852,7 +852,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-20T18:36:09.071Z",
+  "atualizadoEm": "2026-10-21T18:01:20.528Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores",
