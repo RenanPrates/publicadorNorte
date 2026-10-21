@@ -2476,13 +2476,13 @@
   ],
   "versaoAtiva": 28,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-21T14:26:32.457Z",
+  "atualizadoEm": "2026-10-21T14:32:32.802Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
     ],
-    "versao": 27,
-    "commit": "2f935787e02ddddaab49e2e6a9645bbb71f1ca3b",
+    "versao": 28,
+    "commit": "39b60b8eecfbfcb9a0d0387c673263d5842ea85d",
     "historico": [
       {
         "versao": 19,
@@ -2511,9 +2511,13 @@
       {
         "versao": 27,
         "em": "2026-10-21T13:59:51.507Z"
+      },
+      {
+        "versao": 28,
+        "em": "2026-10-21T14:32:32.802Z"
       }
     ],
-    "em": "2026-10-21T13:59:51.507Z"
+    "em": "2026-10-21T14:32:32.802Z"
   },
   "odoo": {
     "ativo": true,
