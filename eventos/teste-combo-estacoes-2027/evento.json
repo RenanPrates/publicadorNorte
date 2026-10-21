@@ -2242,7 +2242,8 @@
     "img_mandala_medalha_verao": "_media/tapume/mandala/medalha-verao.webp",
     "img_hoodie_desktop": "_media/praca/hoodie/desktop.jpg",
     "img_hoodie_mobile": "_media/praca/hoodie/mobile.jpg",
-    "img_kits_verao": "_media/praca/kits/verao.png"
+    "img_kits_verao": "_media/praca/kits/verao.png",
+    "img_compra_kit_desktop": "_media/praca/compra/kit-desktop.png"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -2457,7 +2458,7 @@
   ],
   "versaoAtiva": 26,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-21T13:53:20.670Z",
+  "atualizadoEm": "2026-10-21T13:58:09.677Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
