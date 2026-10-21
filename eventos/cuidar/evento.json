@@ -672,7 +672,7 @@
       "gratuito": "sim",
       "preco_vista": "",
       "datas_provisorias": "",
-      "horario": "06h00 às 17h00",
+      "horario": "06h00 às 15h00",
       "endereco": "Av. Norte Miguel Arraes de Alencar, s/n - Macaxeira, Recife"
     },
     {
@@ -852,7 +852,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-21T18:02:32.939Z",
+  "atualizadoEm": "2026-10-21T18:02:36.997Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores",
