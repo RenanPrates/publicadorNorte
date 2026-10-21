@@ -960,7 +960,8 @@
     },
     "contagem_botao": {
       "dono": "cidade",
-      "ignorar": false
+      "ignorar": false,
+      "ocultar": "bloco"
     },
     "contagem_encerrada_status": {
       "dono": "cidade",
@@ -2863,7 +2864,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-21T14:21:58.489Z",
+  "atualizadoEm": "2026-10-21T14:22:16.707Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
