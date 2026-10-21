@@ -2244,7 +2244,8 @@
     "img_hoodie_mobile": "_media/praca/hoodie/mobile.jpg",
     "img_kits_verao": "_media/praca/kits/verao.png",
     "img_compra_kit_desktop": "_media/praca/compra/kit-desktop.png",
-    "img_compra_kit_mobile": "_media/praca/compra/kit-mobile.png"
+    "img_compra_kit_mobile": "_media/praca/compra/kit-mobile.png",
+    "img_kits_inverno": "_media/praca/kits/inverno.png"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -2467,7 +2468,7 @@
   ],
   "versaoAtiva": 27,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-21T13:59:51.507Z",
+  "atualizadoEm": "2026-10-21T14:26:07.682Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
