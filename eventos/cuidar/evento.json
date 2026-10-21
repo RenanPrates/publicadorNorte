@@ -673,7 +673,7 @@
       "preco_vista": "",
       "datas_provisorias": "",
       "horario": "",
-      "endereco": " - Av. Norte Miguel Arraes de Alencar, s/n - Macaxeira, Recife"
+      "endereco": "Av. Norte Miguel Arraes de Alencar, s/n - Macaxeira, Recife"
     },
     {
       "_id": "7a08fd00",
@@ -852,7 +852,7 @@
   ],
   "versaoAtiva": 11,
   "criadoEm": "2026-10-09T14:37:05.185Z",
-  "atualizadoEm": "2026-10-21T18:01:50.173Z",
+  "atualizadoEm": "2026-10-21T18:01:54.986Z",
   "secoes": {
     "ocultas": [
       "unica#patrocinadores",
