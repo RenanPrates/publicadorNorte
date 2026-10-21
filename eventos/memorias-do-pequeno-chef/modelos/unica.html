@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap">
-<link rel="preload" as="image" href="_media/pagina/marca/logo.webp">
+<link rel="preload" as="image" href="@img_marca_logo">
 <link rel="preload" as="image" href="_media/pagina/comum/arroz.webp">
 <script>document.documentElement.classList.add("carregando")</script>
 <style>
@@ -166,7 +166,7 @@ button{font:inherit;color:inherit}
 .hdr.is-hidden{transform:translateY(-140%)}
 .hdr__bar{pointer-events:auto;position:relative;display:flex;align-items:center;gap:8px;max-width:var(--max);height:60px;margin-inline:auto;padding:0 6px 0 12px;background:var(--creme-claro);border:var(--borda);border-radius:999px;box-shadow:4px 4px 0 var(--noite)}
 .marca{flex:none;display:block;margin-right:auto;align-self:stretch}
-.marca img{height:70px;width:auto;margin-top:-7px;filter:drop-shadow(2px 3px 0 var(--noite));transition:rotate .5s var(--mola),scale .5s var(--mola)}
+.marca__logo{height:70px;width:auto;margin-top:-7px;filter:drop-shadow(2px 3px 0 var(--noite));transition:rotate .5s var(--mola),scale .5s var(--mola)}
 .marca:hover img{rotate:-7deg;scale:1.05}
 .nav{display:none}
 .nav ul{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
@@ -375,7 +375,6 @@ html.trava .topo{opacity:0;pointer-events:none}
 .ator__frente{background:var(--creme-claro);text-align:center;justify-items:center}
 .ator__verso{background:var(--laranja);transform:rotateY(180deg);align-content:space-between}
 .ator__selo{position:relative;width:100%;aspect-ratio:900/747;filter:drop-shadow(3px 4px 0 var(--noite))}
-.ator__foto{position:absolute;inset:0;-webkit-mask:url(_media/pagina/marca/logo.webp) center/contain no-repeat;mask:url(_media/pagina/marca/logo.webp) center/contain no-repeat;background:var(--verde-escuro);display:grid;place-content:center;justify-items:center;gap:6px}
 .ator__foto img{width:30%;transition:rotate .5s var(--mola)}
 .ator__foto img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ator__foto small{--mono:1;--casl:0;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--creme-claro);color:var(--noite);padding:3px 8px;border-radius:4px}
@@ -772,7 +771,7 @@ html.trava .topo{opacity:0;pointer-events:none}
 .rodape{background:var(--verde-escuro);padding-block:0 calc(env(safe-area-inset-bottom,0px) + 90px)}
 .rodape__grid{display:grid;gap:36px;padding-top:clamp(44px,6vw,80px)}
 .rodape__marca{display:grid;gap:14px;align-content:start}
-.rodape__marca img{width:min(220px,58%)}
+.rodape__logo{width:min(220px,58%)}
 .rodape__marca p{color:var(--mudo-escuro);--casl:1;--slnt:-10;font-weight:650;font-size:1.08rem}
 .rodape__col{display:grid;align-content:start;gap:14px}
 .rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
@@ -868,7 +867,7 @@ html.trava .topo{opacity:0;pointer-events:none}
   .hdr{padding-top:calc(env(safe-area-inset-top,0px) + 14px)}
   .hdr__bar{height:64px;padding:0 10px 0 20px;gap:12px}
   .marca{margin-right:0}
-  .marca img{height:78px;margin-top:-9px}
+  .marca__logo{height:78px;margin-top:-9px}
   .nav{display:block;margin-inline:auto}
   .burger{display:none}
   .menu{display:none}
@@ -1232,7 +1231,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
       <img class="loader__ing" src="_media/pagina/comum/alface.webp" alt="" style="--x:42%;--r:-20deg">
       <img class="loader__ing" src="_media/pagina/comum/pimentao.webp" alt="" style="--x:38%;--r:8deg">
       <img class="loader__tigela" src="_media/pagina/comum/arroz.webp" alt="" data-loader-tigela>
-      <img class="loader__logo" src="_media/pagina/marca/logo.webp" alt="">
+      <img class="loader__logo" src="@img_marca_logo" alt="">
     </div>
     <p class="loader__titulo">Preparando o espetáculo</p>
     <p class="loader__passo" data-loader-passo>Lavando os tomates…</p>
@@ -1347,7 +1346,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
 <!-- ===== Header ===== -->
 <header class="hdr" data-hdr>
   <div class="hdr__bar">
-    <a class="marca" href="#inicio"><img src="_media/pagina/marca/logo.webp" width="900" height="747" alt="Memórias do Pequeno Chef, voltar ao início"></a>
+    <a class="marca" href="#inicio"><img class="marca__logo" src="@img_marca_logo" width="900" height="747" alt="Memórias do Pequeno Chef, voltar ao início"></a>
     <nav class="nav" aria-label="Seções da página">
       <ul>
         <li><a href="#a-peca" data-nav="a-peca">A peça</a></li>
@@ -1401,7 +1400,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
     <div class="hero__conteudo">
       <p class="hero__eyebrow">Espetáculo teatral gratuito</p>
       <h1 id="hero-titulo">
-        <img class="hero__logo" src="_media/pagina/marca/logo.webp" width="900" height="747" alt="Memórias do Pequeno Chef" fetchpriority="high">
+        <img class="hero__logo" src="@img_marca_logo" width="900" height="747" alt="Memórias do Pequeno Chef" fetchpriority="high">
         <span class="hero__sub" data-palavras-sobe>Uma história de sabores, família e descobertas</span>
       </h1>
       <p class="hero__lede">Um teatro que chega até o público: uma carreta que se transforma em palco.</p>
@@ -1498,7 +1497,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
           <g clip-path="url(#clip-modulo)">
             <rect x="470" y="150" width="400" height="196" rx="22" class="f-creme-claro s-noite" stroke-width="4"/>
             <image href="_media/pagina/carreta/letreiro.webp" x="482" y="168" width="376" height="150"/>
-            <image href="_media/pagina/marca/logo.webp" x="884" y="128" width="122" height="101"/>
+            <image href="@img_marca_logo" x="884" y="128" width="122" height="101"/>
             <image href="_media/pagina/comum/brocolis.webp" x="888" y="300" width="72" height="54"/>
             <image href="_media/pagina/comum/queijo.webp" x="940" y="330" width="64" height="49"/>
             <rect x="298" y="426" width="712" height="8" fill="url(#pt-refletivo)"/>
@@ -1519,7 +1518,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
           <rect x="1444" y="262" width="24" height="7" rx="3.5" class="f-noite"/>
           <rect x="1260" y="300" width="300" height="24" class="f-verde"/>
           <rect x="1260" y="324" width="300" height="6" class="f-laranja"/>
-          <image href="_media/pagina/marca/logo.webp" x="1334" y="338" width="68" height="56"/>
+          <image href="@img_marca_logo" x="1334" y="338" width="68" height="56"/>
           <rect x="1260" y="404" width="298" height="8" fill="url(#pt-refletivo)"/>
           <rect x="1548" y="298" width="12" height="60" rx="3" class="f-inox-escuro"/>
           <rect x="1536" y="368" width="24" height="24" rx="6" class="f-queijo s-noite farol" stroke-width="3"/>
@@ -1568,7 +1567,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
         <rect y="119" width="1600" height="120" fill="url(#lg-led)"/>
         <path d="M520 118H560L700 900H360ZM1040 118H1080L1240 900H900Z" class="f-queijo" opacity=".1"/>
         <path d="M742 118L758 170M858 118L842 170" class="s-noite" stroke-width="3"/>
-        <image href="_media/pagina/marca/logo.webp" x="690" y="164" width="220" height="183"/>
+        <image href="@img_marca_logo" x="690" y="164" width="220" height="183"/>
         <rect y="380" width="1600" height="16" class="f-madeira-escura"/>
         <rect y="396" width="1600" height="96" fill="url(#lg-led)"/>
         <g class="f-madeira-clara s-madeira-escura" stroke-width="3"><rect x="84" y="424" width="12" height="28" rx="5"/><rect x="54" y="448" width="72" height="118" rx="12"/><rect x="202" y="424" width="12" height="28" rx="5"/><circle cx="208" cy="494" r="44"/><rect x="320" y="424" width="12" height="28" rx="5"/><rect x="298" y="448" width="56" height="150" rx="10"/><rect x="438" y="424" width="12" height="28" rx="5"/><rect x="408" y="448" width="72" height="118" rx="12"/><rect x="556" y="424" width="12" height="28" rx="5"/><circle cx="562" cy="494" r="44"/><rect x="674" y="424" width="12" height="28" rx="5"/><rect x="652" y="448" width="56" height="150" rx="10"/><rect x="792" y="424" width="12" height="28" rx="5"/><rect x="762" y="448" width="72" height="118" rx="12"/><rect x="910" y="424" width="12" height="28" rx="5"/><circle cx="916" cy="494" r="44"/><rect x="1028" y="424" width="12" height="28" rx="5"/><rect x="1006" y="448" width="56" height="150" rx="10"/><rect x="1146" y="424" width="12" height="28" rx="5"/><rect x="1116" y="448" width="72" height="118" rx="12"/><rect x="1264" y="424" width="12" height="28" rx="5"/><circle cx="1270" cy="494" r="44"/><rect x="1382" y="424" width="12" height="28" rx="5"/><rect x="1360" y="448" width="56" height="150" rx="10"/><rect x="1500" y="424" width="12" height="28" rx="5"/><rect x="1470" y="448" width="72" height="118" rx="12"/></g>
@@ -1883,7 +1882,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
           <div class="cart tem-chef" data-cart role="img" aria-label="Carteirinha de pequeno chef">
             <span class="cart__furo" aria-hidden="true"></span>
             <div class="cart__topo" aria-hidden="true">
-              <img class="cart__logo" src="_media/pagina/marca/logo.webp" width="900" height="747" alt="" loading="lazy">
+              <img class="cart__logo" src="@img_marca_logo" width="900" height="747" alt="" loading="lazy">
               <p class="cart__tipo">Carteirinha de<b>Pequeno Chef</b></p>
             </div>
             <div class="cart__retrato" aria-hidden="true">
@@ -2018,7 +2017,7 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
   <img class="rodape__banner rodape__pic" src="_media/pagina/rodape/faixa.webp" width="2000" height="547" alt="" aria-hidden="true" loading="lazy">
   <div class="wrap rodape__grid">
     <div class="rodape__marca">
-      <img src="_media/pagina/marca/logo.webp" width="900" height="747" alt="Memórias do Pequeno Chef" loading="lazy">
+      <img class="rodape__logo" src="@img_marca_logo" width="900" height="747" alt="Memórias do Pequeno Chef" loading="lazy">
       <p>Uma história de sabores, família e descobertas.</p>
     </div>
     <nav class="rodape__col" aria-label="Rodapé">
@@ -2868,8 +2867,10 @@ html.carregando .hero *,html.carregando .hero{animation-play-state:paused!import
     @media_hero_arte    — hero/, imagem ou vídeo (padrão: arte.webp)
     @media_sobre_foto   — sobre/, imagem ou vídeo (padrão: foto.webp)
     @img_cenario_fundo  — cenario/, só imagem; usada duas vezes (luz apagada e acesa) (padrão: fundo.webp)
+    @img_marca_logo     — marca/, só imagem: o logo do espetáculo em todos os lugares (header, abertura, carregamento,
+                          carreta, carteirinha e PNG baixado, rodapé) (padrão: logo.webp)
     @img_elenco_duo, @img_elenco_joao, @img_elenco_vo, @img_elenco_fantoche — elenco/, só imagem (troca de cena por aba)
-    Fixas (caminho direto): marca/, comum/, apoio/, carreta/, livreto/, ingresso/, duvidas/, rodape/
+    Fixas (caminho direto): marca/textura e marca/joao-rosto, comum/, apoio/, carreta/, livreto/, ingresso/, duvidas/, rodape/
   Seções (podem ser escondidas ou reordenadas): inicio, realizacao, a-peca, sobre, cenario, elenco, livreto, cidades,
     ingresso, carteirinha, duvidas. Rodapé em <footer> fora das seções.
   Observação: a seção "realizacao" é a barra de logos pedida pelo cliente (Lei Rouanet, Jequitibá, MinC). Se o
