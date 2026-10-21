@@ -263,7 +263,7 @@
   "etapas": [],
   "ordem": {},
   "imagens": {
-    "img_marca_logo": "_media/pagina/marca/logo.webp"
+    "img_marca_logo": "_media/pagina/marca/logo.png"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -318,7 +318,7 @@
   ],
   "versaoAtiva": 6,
   "criadoEm": "2026-10-16T18:20:46.301Z",
-  "atualizadoEm": "2026-10-21T14:45:07.227Z",
+  "atualizadoEm": "2026-10-21T14:54:52.697Z",
   "seo": {
     "favicon": "_media/pagina/marca/logo.webp",
     "share": {
