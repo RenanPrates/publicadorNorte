@@ -2728,7 +2728,8 @@
     "img_galeria_foto11": "_media/pagina/galeria/foto2.png",
     "img_equipe_foto1": "_media/pagina/equipe/foto1.png",
     "img_carreta_externa": "_media/pagina/carreta/externa.webp",
-    "img_marca_logo": "_media/pagina/marca/logo-pc-sm.webp"
+    "img_marca_logo": "_media/pagina/marca/logo-pc-sm.webp",
+    "img_marca_logopequeno": "_media/pagina/marca/logo-pc.webp"
   },
   "baseUrl": "",
   "publicacoes": [
@@ -2863,7 +2864,7 @@
   ],
   "versaoAtiva": 16,
   "criadoEm": "2026-10-13T14:34:49.865Z",
-  "atualizadoEm": "2026-10-21T14:22:54.396Z",
+  "atualizadoEm": "2026-10-21T14:25:03.650Z",
   "automacao": {
     "ativo": false,
     "horas": 8,
