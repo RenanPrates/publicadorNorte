@@ -6,12 +6,6 @@
       "versao": 16,
       "principal": "projetopequenochef.com.br"
     },
-    "combos.circuitodasestacoes.com.br": {
-      "slug": "teste-combo-estacoes-2027",
-      "commit": "39b60b8eecfbfcb9a0d0387c673263d5842ea85d",
-      "versao": 28,
-      "principal": "combos.circuitodasestacoes.com.br"
-    },
     "memoriaspequenochef.com.br": {
       "slug": "memorias-do-pequeno-chef",
       "commit": "db43d24168c9794bb6429b4c62f5a702645b227c",
@@ -35,6 +29,12 @@
       "commit": "d031428a1005bd74af427746e8a421c2e6b783f1",
       "versao": 12,
       "principal": "circuitocuidar.com.br"
+    },
+    "combos.circuitodasestacoes.com.br": {
+      "slug": "teste-combo-estacoes-2027",
+      "commit": "157c07bedea9f484c8917bd698c39c9d68dd4f5f",
+      "versao": 29,
+      "principal": "combos.circuitodasestacoes.com.br"
     }
   }
 }
