@@ -2098,69 +2098,87 @@
       "cidade": "Manaus",
       "uf": "AM",
       "regiao": "Norte",
-      "status": "",
+      "status": "aberta",
       "mes_outono_abrev": "",
       "mes_inverno_abrev": "",
       "mes_primavera_abrev": "",
       "mes_verao_abrev": "",
       "parcelamento": "10",
-      "preco_vista": "549",
-      "valor_parcelado": "54,90",
+      "preco_vista": "599,90",
+      "valor_parcelado": "59,99",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "",
-      "etapa1_distancias": "5, 10, 13",
-      "etapa2_distancias": "5, 10, 15",
-      "etapa3_distancias": "5, 10, 18",
+      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4mn-combo-circuito-das-estacoes-2027-manaus-513",
+      "etapa1_distancias": "5, 10",
+      "etapa2_distancias": "5, 10",
+      "etapa3_distancias": "5, 10",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": ""
+      "preco_assinatura_prime": "",
+      "preco_comum": "989,96",
+      "porcentagem_desconto": "39",
+      "desconto_em_reais": "390,06",
+      "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4mn-combo-circuito-das-estacoes-2027-manaus-513",
+      "_odooVendeu": "sim",
+      "_odooStatus": "aberta"
     },
     {
       "_id": "70a24225",
       "cidade": "Campinas",
       "uf": "SP",
       "regiao": "Sudeste",
-      "status": "",
+      "status": "aberta",
       "mes_outono_abrev": "",
       "mes_inverno_abrev": "",
       "mes_primavera_abrev": "",
       "mes_verao_abrev": "",
       "parcelamento": "10",
-      "preco_vista": "549",
-      "valor_parcelado": "54,90",
+      "preco_vista": "599,90",
+      "valor_parcelado": "59,99",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "",
-      "etapa1_distancias": "5, 10, 13",
-      "etapa2_distancias": "5, 10, 15",
-      "etapa3_distancias": "5, 10, 18",
+      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4cp-combo-circuito-das-estacoes-2027-campinas-533",
+      "etapa1_distancias": "5, 10",
+      "etapa2_distancias": "5, 10",
+      "etapa3_distancias": "5, 10",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": ""
+      "preco_assinatura_prime": "",
+      "preco_comum": "989,96",
+      "porcentagem_desconto": "39",
+      "desconto_em_reais": "390,06",
+      "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4cp-combo-circuito-das-estacoes-2027-campinas-533",
+      "_odooVendeu": "sim",
+      "_odooStatus": "aberta"
     },
     {
       "_id": "24f37615",
       "cidade": "São José dos Campos",
       "uf": "SP",
       "regiao": "Sudeste",
-      "status": "",
+      "status": "aberta",
       "mes_outono_abrev": "",
       "mes_inverno_abrev": "",
       "mes_primavera_abrev": "",
       "mes_verao_abrev": "",
       "parcelamento": "10",
-      "preco_vista": "549",
-      "valor_parcelado": "54,90",
+      "preco_vista": "599,90",
+      "valor_parcelado": "59,99",
       "preco_prime": "",
       "preco_prime_parcelado": "",
       "porcentagem_desconto_prime": "",
-      "link_inscricao": "",
-      "etapa1_distancias": "5, 10, 13",
-      "etapa2_distancias": "5, 10, 15",
-      "etapa3_distancias": "5, 10, 18",
+      "link_inscricao": "https://beta.runningland.com.br/shop/combos/cde27combo4sj-combo-circuito-das-estacoes-2027-sao-jose-dos-campos-522",
+      "etapa1_distancias": "5, 10",
+      "etapa2_distancias": "5, 10",
+      "etapa3_distancias": "5, 10",
       "etapa4_distancias": "5, 10",
-      "preco_assinatura_prime": ""
+      "preco_assinatura_prime": "",
+      "preco_comum": "989,96",
+      "porcentagem_desconto": "39",
+      "desconto_em_reais": "390,06",
+      "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4sj-combo-circuito-das-estacoes-2027-sao-jose-dos-campos-522",
+      "_odooVendeu": "sim",
+      "_odooStatus": "aberta"
     },
     {
       "_id": "2b35e8ce",
@@ -2476,7 +2494,7 @@
   ],
   "versaoAtiva": 28,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-10-21T14:32:32.802Z",
+  "atualizadoEm": "2026-11-06T03:01:02.352Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2522,10 +2540,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-10-20T12:48:48.579Z",
+      "em": "2026-11-06T03:00:32.344Z",
       "ok": true,
-      "mudou": 0,
-      "mensagem": "Tudo igual ao Odoo (10 cidade(s)).",
+      "mudou": 33,
+      "mensagem": "33 valor(es) atualizados em 13 cidade(s).",
       "cidades": [
         {
           "id": "f227a601",
@@ -2607,23 +2625,23 @@
         {
           "id": "43129f26",
           "nome": "Manaus",
-          "combo": null,
+          "combo": 513,
           "ok": true,
-          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
+          "mensagem": "achado pelo código CDE27COMBO4MN: R$ 599,90 · aberta"
         },
         {
           "id": "70a24225",
           "nome": "Campinas",
-          "combo": null,
+          "combo": 533,
           "ok": true,
-          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
+          "mensagem": "achado pelo código CDE27COMBO4CP: R$ 599,90 · aberta"
         },
         {
           "id": "24f37615",
           "nome": "São José dos Campos",
-          "combo": null,
+          "combo": 522,
           "ok": true,
-          "mensagem": "sem link do combo e nenhum combo CDE27COMBO4… com esse nome no Odoo: fica como está"
+          "mensagem": "achado pelo código CDE27COMBO4SJ: R$ 599,90 · aberta"
         },
         {
           "id": "2b35e8ce",
@@ -2648,7 +2666,8 @@
         }
       ]
     },
-    "intervalo": 24
+    "intervalo": 24,
+    "pendente": true
   },
   "secoes": {
     "ocultas": [],
