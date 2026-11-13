@@ -1,6 +1,6 @@
 // Odoo: ID pelo link, consulta (Odoo simulado), valores do cadastro, gravação e republicação pela automação
 import { describe, expect, it } from 'vitest';
-import { combosGerais, idDoCombo } from '@/lib/comum/odoo';
+import { combosNumerados, idDoCombo } from '@/lib/comum/odoo';
 import type { Evento, EventoCompleto, ResumoEvento } from '@/lib/comum/tipos';
 import { BANCO_VAZIO, type Armazenamento } from './armazenamento';
 import { horaDoOdoo, rodarAutomacao } from './automacao';
@@ -221,7 +221,7 @@ describe('Odoo', () => {
   });
 
   it('combos gerais (vários na mesma página): o link de cada combo nos gerais traz preço, Prime, economia, selo, por prova e status', async () => {
-    expect(combosGerais({ combo10_link_inscricao: 'https://loja.test/shop/x-7', combo2_link_inscricao: 'https://loja.test/shop/x-415', combo3_link_inscricao: 'https://site.com/x', combo1_nome: 'A' }))
+    expect(combosNumerados({ combo10_link_inscricao: 'https://loja.test/shop/x-7', combo2_link_inscricao: 'https://loja.test/shop/x-415', combo3_link_inscricao: 'https://site.com/x', combo1_nome: 'A' }))
       .toEqual([{ prefixo: 'combo2', id: 415 }, { prefixo: 'combo10', id: 7 }]);
     const gerais = { combo1_nome: 'Combo CT', combo1_provas: '4', combo1_link_inscricao: 'https://loja.test/shop/cde27combo4ct-combo-curitiba-415', combo2_nome: 'Sem loja', combo2_link_inscricao: 'https://site.com/x' };
     const m = memoria(evento({ cidades: [{ _id: 'sp', cidade: 'São Paulo', prime: 'sim', mostra_combo1: 'sim' }], gerais }));
@@ -243,5 +243,33 @@ describe('Odoo', () => {
     // fora de venda: os preços continuam, o status do combo vira em breve
     await sincronizarOdoo(m.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549, { foraDeVenda: true }).f });
     expect(m.atual().gerais).toMatchObject({ combo1_status: 'em breve', combo1_preco_vista: '549' });
+  });
+
+  it('combos numerados na cidade (cada cidade com o link e o preço de cada combo): preenche só a linha daquela cidade', async () => {
+    const link = 'https://loja.test/shop/rp-combo-sp-415';
+    const gerais = { combo1_nome: 'Combo 4 provas', combo1_provas: '4', combo2_nome: 'Combo 2' };
+    const m = memoria(evento({
+      cidades: [
+        { _id: 'sp', cidade: 'São Paulo', prime: 'sim', combo1_link_inscricao: link, combo2_link_inscricao: '' },
+        { _id: 'rj', cidade: 'Rio de Janeiro', combo2_preco_vista: '300' },
+      ],
+      gerais,
+    }));
+    const r = await sincronizarOdoo(m.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549).f });
+    expect(r.resultado.ok).toBe(true);
+    const [sp, rj] = m.atual().cidades;
+    expect(sp).toEqual({
+      _id: 'sp', cidade: 'São Paulo', prime: 'sim', combo1_link_inscricao: link, combo2_link_inscricao: '',
+      combo1_preco_vista: '549', combo1_preco_comum: '1.149,96', combo1_parcelamento: '12', combo1_valor_parcelado: '45,75',
+      combo1_preco_prime: '494,10', combo1_preco_prime_parcelado: '41,17', combo1_status: 'aberta',
+    });
+    // a outra cidade e os gerais ficam como estavam; cidade sem link de combo não entra no resultado
+    expect(rj).toEqual({ _id: 'rj', cidade: 'Rio de Janeiro', combo2_preco_vista: '300' });
+    expect(m.atual().gerais).toEqual(gerais);
+    expect(r.resultado.cidades).toEqual([expect.objectContaining({ id: 'sp:combo1', nome: 'São Paulo · Combo 4 provas', combo: 415, ok: true })]);
+    expect(r.resultado.mensagem).toContain('1 combo(s)');
+    // fora de venda: os preços continuam, o status do combo da cidade vira em breve
+    await sincronizarOdoo(m.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549, { foraDeVenda: true }).f });
+    expect(m.atual().cidades[0]).toMatchObject({ combo1_status: 'em breve', combo1_preco_vista: '549' });
   });
 });

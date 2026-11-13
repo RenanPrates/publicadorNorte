@@ -3,7 +3,7 @@
 // Variáveis de ambiente (nunca no repositório): ODOO_URL, ODOO_API_KEY, ODOO_PRIME_PRICELIST_ID (padrão 4) e,
 // só se o servidor tiver mais de um banco, ODOO_DB (nome errado faz o Odoo responder 404).
 import { fmtBR, type Linha } from '@norte/motor';
-import { combosGerais, idDoCombo } from '@/lib/comum/odoo';
+import { combosNumerados, idDoCombo } from '@/lib/comum/odoo';
 import type { Evento, ResultadoOdoo } from '@/lib/comum/tipos';
 import type { Armazenamento } from './armazenamento';
 
@@ -227,6 +227,12 @@ export function valoresDoComboGeral(c: ComboOdoo, provas: number): Record<string
 }
 
 /**
+ * Combo numerado na linha da cidade (cada cidade com o seu link e o seu preço): só as colunas de base do combo. Desconto,
+ * economia, selo e preço por prova a página calcula a partir delas (menos colunas no cadastro de cidades).
+ */
+export const CAMPOS_COMBO_CIDADE = ['preco_vista', 'preco_comum', 'parcelamento', 'valor_parcelado', 'preco_prime', 'preco_prime_parcelado', 'status'];
+
+/**
  * Status da cidade pelo Odoo: à venda = "aberta"; fora de venda depois de já ter vendido = "esgotado"; nunca vendeu = em breve.
  * `_odooVendeu` guarda que já houve venda; `_odooStatus`, o último status que o Odoo pôs. O status só muda quando a
  * situação no Odoo muda: quem trocar à mão (ex.: de volta para em breve) fica assim até a próxima mudança lá.
@@ -303,20 +309,41 @@ export async function sincronizarOdoo(armazenamento: Armazenamento, slug: string
     } catch { candidatos = []; }
   }
   const usados = new Set(cidades.map((c) => c.combo));
+  const gerais = lido.evento.gerais || {};
+  // evento com combos numerados (comboN_link_inscricao, na cidade ou nos gerais): o link da cidade (link_inscricao) não é usado
+  const numerados = !!combosNumerados(gerais).length || lido.evento.cidades.some((l) => combosNumerados(l).length);
   for (const l of semLink) {
-    const achado = comboDaCidade(nomeDe(l), candidatos.filter((c) => !usados.has(c.id)));
+    const achado = numerados ? null : comboDaCidade(nomeDe(l), candidatos.filter((c) => !usados.has(c.id)));
     if (achado) { usados.add(achado.id); await consultar(l, achado.id, `achado pelo código ${achado.default_code}: `); }
-    // evento com combos gerais (preço por combo, não por cidade): cidade sem link é o normal, não entra no resultado
-    else if (!combosGerais(lido.evento.gerais).length) cidades.push({ id: l._id, nome: nomeDe(l), combo: null, ok: true, mensagem: prefixos.length ? `sem link do combo e nenhum combo ${prefixos.join('/')}… com esse nome no Odoo: fica como está` : 'sem link do combo: fica como está' });
+    else if (!numerados) cidades.push({ id: l._id, nome: nomeDe(l), combo: null, ok: true, mensagem: prefixos.length ? `sem link do combo e nenhum combo ${prefixos.join('/')}… com esse nome no Odoo: fica como está` : 'sem link do combo: fica como está' });
   }
-  // na ordem do cadastro
+  // combos numerados na linha da cidade (cada cidade com o link e o preço de cada combo: combo1_link_inscricao, combo2_…):
+  // os preços vão para a mesma linha, com o prefixo do combo. Fora de venda: os preços continuam (se houver) e só o status muda
+  for (const l of lido.evento.cidades) {
+    for (const { prefixo, id } of combosNumerados(l)) {
+      const nome = `${nomeDe(l)} · ${String(gerais[prefixo + '_nome'] || l[prefixo + '_nome'] || '').trim() || prefixo}`;
+      if (!cache.has(id)) cache.set(id, consultarCombo(cfg, chamar, id));
+      try {
+        const c = await cache.get(id)!;
+        const v = valoresDoComboGeral(c, 0);
+        const campos = c.preco > 0 ? CAMPOS_COMBO_CIDADE : ['status'];
+        const destino = novos.get(l._id) || {};
+        for (const k of campos) destino[`${prefixo}_${k}`] = v[k];
+        novos.set(l._id, destino);
+        cidades.push({ id: `${l._id}:${prefixo}`, nome, combo: id, ok: true, mensagem: (c.aVenda ? `R$ ${fmtBR(c.preco)}${c.prime ? ` · Prime R$ ${fmtBR(c.prime.preco)}` : ''}` : `fora de venda (${c.foraDeVenda})`) + ` · ${v.status}${c.aviso ? ` · ${c.aviso}` : ''}` });
+      } catch (x) {
+        cidades.push({ id: `${l._id}:${prefixo}`, nome, combo: id, ok: false, mensagem: x instanceof ErroOdoo ? x.message : 'sem resposta do Odoo (' + String((x as Error)?.message || x).slice(0, 120) + ')' });
+      }
+    }
+  }
+  // na ordem do cadastro (o combo da cidade, `<_id>:comboN`, fica junto da cidade, na ordem em que foi consultado)
   const ordem = new Map(lido.evento.cidades.map((l, i) => [l._id, i]));
-  cidades.sort((a, b) => (ordem.get(a.id) ?? 0) - (ordem.get(b.id) ?? 0));
+  const posicao = new Map(cidades.map((c, i) => [c, i]));
+  cidades.sort((a, b) => (ordem.get(a.id.split(':')[0]) ?? 0) - (ordem.get(b.id.split(':')[0]) ?? 0) || posicao.get(a)! - posicao.get(b)!);
   // combos gerais (vários na mesma página: combo1_link_inscricao, combo2_…): os preços vão para os gerais do mesmo combo.
   // Fora de venda: os preços continuam vindo (se houver preço) e só o status do combo muda
-  const gerais = lido.evento.gerais || {};
   const novosGerais: Record<string, string> = {};
-  for (const { prefixo, id } of combosGerais(gerais)) {
+  for (const { prefixo, id } of combosNumerados(gerais)) {
     const nome = String(gerais[prefixo + '_nome'] || '').trim() || prefixo;
     if (!cache.has(id)) cache.set(id, consultarCombo(cfg, chamar, id));
     try {
@@ -334,7 +361,7 @@ export async function sincronizarOdoo(armazenamento: Armazenamento, slug: string
   for (const [k, v] of Object.entries(novosGerais)) if (String(gerais[k] ?? '') !== v || !(k in gerais)) mudou++;
   const erros = cidades.filter((c) => !c.ok);
   const comCombo = cidades.filter((c) => c.combo != null).length;
-  const onde = Object.keys(novosGerais).length || erros.some((c) => c.id.startsWith('geral:')) ? 'combo(s)' : 'cidade(s)';
+  const onde = numerados ? 'combo(s)' : 'cidade(s)';
   const resultado: ResultadoOdoo = {
     em: agora.toISOString(),
     ok: !erros.length,

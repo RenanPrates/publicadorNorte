@@ -2,7 +2,7 @@
 // O publicador consulta na hora os eventos com "Preços do Odoo" ligado e republica o que mudou.
 // Chave: ?chave=… ou Authorization: Bearer … (ODOO_AVISO_TOKEN, ou derivada do GITHUB_TOKEN; a tela do evento mostra o endereço).
 // Combos: ?combo=346,407 ou corpo JSON { "combo": 346 } / { "combo": [346, 407] }; sem combo, confere todos os eventos ligados.
-import { combosGerais, idDoCombo } from '@/lib/comum/odoo';
+import { combosNumerados, idDoCombo } from '@/lib/comum/odoo';
 import { atualizarDoOdoo } from '@/lib/servidor/automacao';
 import { chaveAvisoOdoo } from '@/lib/servidor/automacaoChave';
 import { servicos } from '@/lib/servidor/config';
@@ -32,7 +32,7 @@ async function avisar(req: Request): Promise<Response> {
     if (!r.odoo) continue;
     if (combos.length) {
       const e = (await armazenamento.ler(r.slug))?.evento;
-      const usados = e ? [...e.cidades.map((l) => idDoCombo(l.link_inscricao)), ...combosGerais(e.gerais).map((c) => c.id)] : [];
+      const usados = e ? [...e.cidades.flatMap((l) => [idDoCombo(l.link_inscricao), ...combosNumerados(l).map((c) => c.id)]), ...combosNumerados(e.gerais).map((c) => c.id)] : [];
       if (!usados.some((id) => id != null && combos.includes(id))) continue;
     }
     feitos.push((await atualizarDoOdoo(armazenamento, destino, r.slug, agora, { cfg })) ?? { slug: r.slug, resultado: 'Odoo: nada mudou' });

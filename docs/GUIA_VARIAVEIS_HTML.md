@@ -319,24 +319,26 @@ Padrão com Prime em destaque e o preço normal embaixo:
 ```
 
 ### Vários combos na mesma página (ex.: Running Pass)
-Quando a página da cidade mostra **vários combos** (cada um com preço próprio), os combos são **gerais** e numerados (`combo1_…` até `combo10_…`), e a cidade só diz quais aparecem:
+Quando a página da cidade mostra **vários combos** e **cada cidade tem a inscrição, o preço e os combos dela**, o combo é numerado (`combo1_…` até `combo10_…`): o que é igual em todo lugar (nome, provas, imagens) é geral, e o link, o preço e o status são colunas da cidade (com `_1` na praça):
 
 | Onde | Variável | O que é |
 |---|---|---|
-| Planilha de textos (geral) | `@comboN_nome`, `@comboN_provas`, `@comboN_link_inscricao` | nome, número de provas, link do combo na loja (com o Odoo ligado, os preços vêm por ele) |
-| Planilha de textos (geral) | `@comboN_preco_vista`, `_preco_comum`, `_parcelamento`, `_valor_parcelado`, `_desconto_em_reais`, `_porcentagem_desconto` | preço sem Prime (não sócio), cheio, parcelas e desconto |
-| Planilha de textos (geral) | `@comboN_preco_prime`, `_preco_prime_parcelado`, `_economia_prime`, `_selo_prime`, `_prova`, `_prova_prime`, `_status` | preço do sócio O2 Prime, economia e % sobre o cheio, preço por prova, situação (vazio/aberta, em breve, esgotado) |
-| Planilha de cidades | `mostra_comboN` (`sim`) | o combo aparece nesta cidade (usado só em `<!-- @se mostra_comboN = sim -->`, sem texto) |
+| Planilha de textos (geral) | `@comboN_nome`, `@comboN_provas`, `@comboN_secao`… | nome, número de provas e o resto que é igual em todas as cidades |
+| Planilha de cidades | `@comboN_link_inscricao_1`, `@comboN_status_1` | link do combo **naquela cidade** (loja do Odoo) e situação (vazio/aberta, em breve, esgotado) |
+| Planilha de cidades | `@comboN_preco_vista_1`, `_preco_comum_1`, `_parcelamento_1`, `_valor_parcelado_1`, `_preco_prime_1`, `_preco_prime_parcelado_1` | preço (não sócio), cheio, parcelas e os preços do sócio O2 Prime naquela cidade |
 | Planilha de cidades | `prime` (`sim`) | a cidade aceita O2 Prime: preço do sócio em destaque e "Não sócio" embaixo |
 
 ```html
-<!-- @se combo1_nome --><!-- @se mostra_combo1 = sim -->
-  … card do combo 1 com @combo1_nome, R$@combo1_preco_vista …
-  <!-- @se prime = sim --><!-- @se combo1_preco_prime --> … R$@combo1_preco_prime … <!-- @fim --><!-- @fim -->
-<!-- @fim --><!-- @fim -->
+<!-- @se combo1_nome -->
+  <!-- @se combo1_preco_vista --> … card do combo 1: @combo1_nome, R$@combo1_preco_vista_1 …
+    <!-- @se prime = sim --><!-- @se combo1_preco_prime --> … R$@combo1_preco_prime_1 … <!-- @fim --><!-- @fim -->
+  <!-- @fim -->
+<!-- @fim -->
 ```
-- Os campos do combo **não** levam `_1` (são iguais em todas as cidades); só `mostra_comboN` e `prime` são da cidade.
-- Com os **preços do Odoo** ligados, cada `comboN_link_inscricao` com link da loja preenche sozinho todos os campos de preço e o `_status` daquele combo (os preços por prova usam `comboN_provas`).
+- Combo sem link, preço e status na linha da cidade não aparece nela: é assim que se desliga um combo numa cidade (no Running Pass, o script tira o card; num HTML sem script, use `@se comboN_preco_vista`).
+- Desconto, economia e preço por prova saem dessas colunas (fórmula no script, ou mais colunas da cidade se o HTML não calcular).
+- Com os **preços do Odoo** ligados, cada `comboN_link_inscricao` com link da loja na linha da cidade preenche sozinho, nessa linha, `comboN_preco_vista`, `_preco_comum`, `_parcelamento`, `_valor_parcelado`, `_preco_prime`, `_preco_prime_parcelado` e `_status`.
+- (Também funciona com o combo inteiro nos gerais, igual em todas as cidades: `comboN_link_inscricao` nos gerais preenche os preços nos gerais, inclusive `_desconto_em_reais`, `_porcentagem_desconto`, `_economia_prime`, `_selo_prime`, `_prova` e `_prova_prime`.)
 - Seção que ficar sem combo na cidade deve sumir (CSS `:has()` ou o script), e o link do menu acompanhar.
 
 ### Automáticas (o publicador preenche)

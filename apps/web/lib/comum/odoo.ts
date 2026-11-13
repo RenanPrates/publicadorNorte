@@ -7,12 +7,13 @@ export function idDoCombo(link: unknown): number | null {
 }
 
 /**
- * Combos gerais: vários combos na mesma página (ex.: Running Pass), cada um com o link nos gerais (combo1_link_inscricao,
- * combo2_link_inscricao…). Os preços desse combo vão para os gerais com o mesmo prefixo (combo1_preco_vista…).
+ * Combos numerados: vários combos na mesma página (ex.: Running Pass), cada um com o seu link (combo1_link_inscricao,
+ * combo2_link_inscricao…), na linha de cada cidade (preço e link de cada cidade) ou nos gerais. Os preços desse combo vão
+ * para o mesmo lugar, com o mesmo prefixo (combo1_preco_vista…).
  */
-export function combosGerais(gerais: Record<string, unknown> | undefined): { prefixo: string; id: number }[] {
+export function combosNumerados(registro: Record<string, unknown> | undefined): { prefixo: string; id: number }[] {
   const out: { prefixo: string; id: number }[] = [];
-  for (const [k, v] of Object.entries(gerais || {})) {
+  for (const [k, v] of Object.entries(registro || {})) {
     const m = /^(combo\d+)_link_inscricao$/.exec(k);
     const id = m ? idDoCombo(v) : null;
     if (m && id != null) out.push({ prefixo: m[1], id });

@@ -2,7 +2,7 @@
 // Preços do Odoo: liga a consulta (preço, parcelas, O2 Prime, link, distâncias e status de cada cidade vêm do combo no Odoo),
 // escolhe de quanto em quanto tempo conferir e mostra o endereço do aviso para o pessoal do Odoo e o último resultado.
 import { useEffect, useState } from 'react';
-import { combosGerais, idDoCombo } from '@/lib/comum/odoo';
+import { combosNumerados, idDoCombo } from '@/lib/comum/odoo';
 import { INTERVALOS_ODOO, type Evento, type ResultadoOdoo } from '@/lib/comum/tipos';
 import { api, json } from '../api';
 import { useEditor } from '../Editor';
@@ -14,7 +14,8 @@ export function SecaoOdoo() {
   const { evento, alterar, salvarJa, substituir } = useEditor();
   const o = evento.odoo;
   const comLink = evento.cidades.filter((l) => idDoCombo(l.link_inscricao) != null);
-  const gerais = combosGerais(evento.gerais);
+  // combos numerados (comboN_link_inscricao) nos gerais e nas linhas das cidades: um por link
+  const gerais = [...combosNumerados(evento.gerais), ...evento.cidades.flatMap((l) => combosNumerados(l))];
   const [config, setConfig] = useState<Config | null>(null);
   const [ocupado, setOcupado] = useState(false);
   const [erro, setErro] = useState('');
