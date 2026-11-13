@@ -1,6 +1,6 @@
 // Odoo: ID pelo link, consulta (Odoo simulado), valores do cadastro, gravação e republicação pela automação
 import { describe, expect, it } from 'vitest';
-import { idDoCombo } from '@/lib/comum/odoo';
+import { combosGerais, idDoCombo } from '@/lib/comum/odoo';
 import type { Evento, EventoCompleto, ResumoEvento } from '@/lib/comum/tipos';
 import { BANCO_VAZIO, type Armazenamento } from './armazenamento';
 import { horaDoOdoo, rodarAutomacao } from './automacao';
@@ -218,5 +218,30 @@ describe('Odoo', () => {
     await sincronizarOdoo(nova.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549, { foraDeVenda: true }).f });
     // nunca vendeu (ex.: ainda não publicado na loja): os preços já entram, o status fica em breve
     expect(nova.atual().cidades[0]).toMatchObject({ status: '', preco_vista: '549' });
+  });
+
+  it('combos gerais (vários na mesma página): o link de cada combo nos gerais traz preço, Prime, economia, selo, por prova e status', async () => {
+    expect(combosGerais({ combo10_link_inscricao: 'https://loja.test/shop/x-7', combo2_link_inscricao: 'https://loja.test/shop/x-415', combo3_link_inscricao: 'https://site.com/x', combo1_nome: 'A' }))
+      .toEqual([{ prefixo: 'combo2', id: 415 }, { prefixo: 'combo10', id: 7 }]);
+    const gerais = { combo1_nome: 'Combo CT', combo1_provas: '4', combo1_link_inscricao: 'https://loja.test/shop/cde27combo4ct-combo-curitiba-415', combo2_nome: 'Sem loja', combo2_link_inscricao: 'https://site.com/x' };
+    const m = memoria(evento({ cidades: [{ _id: 'sp', cidade: 'São Paulo', prime: 'sim', mostra_combo1: 'sim' }], gerais }));
+    const r = await sincronizarOdoo(m.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549).f });
+    expect(r.resultado.ok).toBe(true);
+    expect(m.atual().gerais).toMatchObject({
+      combo1_preco_vista: '549', combo1_preco_comum: '1.149,96', combo1_porcentagem_desconto: '52', combo1_desconto_em_reais: '600,96',
+      combo1_parcelamento: '12', combo1_valor_parcelado: '45,75', combo1_preco_prime: '494,10', combo1_preco_prime_parcelado: '41,17',
+      combo1_economia_prime: '655,86', combo1_selo_prime: '57', combo1_prova: '137,25', combo1_prova_prime: '123,52', combo1_status: 'aberta',
+      combo1_link_inscricao: gerais.combo1_link_inscricao,
+    });
+    expect(Object.keys(m.atual().gerais).some((k) => k.startsWith('combo2_') && k !== 'combo2_nome' && k !== 'combo2_link_inscricao')).toBe(false);
+    expect(m.atual().cidades[0]).toEqual({ _id: 'sp', cidade: 'São Paulo', prime: 'sim', mostra_combo1: 'sim' });
+    expect(r.resultado.cidades).toEqual([expect.objectContaining({ id: 'geral:combo1', nome: 'Combo CT', combo: 415, ok: true })]);
+    expect(r.resultado.mensagem).toContain('1 combo(s)');
+    expect(m.atual().odoo?.pendente).toBe(true);
+    // sem mudança no Odoo: não grava de novo
+    expect((await sincronizarOdoo(m.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549).f })).versao).toBeNull();
+    // fora de venda: os preços continuam, o status do combo vira em breve
+    await sincronizarOdoo(m.arm, 'combo', CFG, AGORA, { fetch: odooFalso(549, { foraDeVenda: true }).f });
+    expect(m.atual().gerais).toMatchObject({ combo1_status: 'em breve', combo1_preco_vista: '549' });
   });
 });

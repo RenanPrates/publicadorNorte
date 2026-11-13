@@ -326,6 +326,7 @@ Os tapumes de cards fixos dos casos H1–H4 são fixtures sintéticos em `packag
 | Z8 | intervalo 2, 6 e 24 h | confere só na passada do começo do intervalo, contado da 0h de Brasília (padrão 6 h) |
 | Z9 | combo à venda / nunca vendeu e fora de venda / vendeu e saiu de venda; status trocado à mão | aberta / em breve / esgotado (preços ficam); a troca à mão fica até o Odoo mudar de situação |
 | Z10 | combo com `sale_ok` falso numa cidade que já vendeu, evento publicado | esgotado, preço anterior mantido, motivo no resultado, site republicado |
+| Z11 | gerais com `combo1_link_inscricao` da loja (4 provas, R$ 549, cheio 1.149,96, 12x, Prime 10%) e `combo2_link_inscricao` de outro site; cidade sem link | `combo1_`: 549, 1.149,96, 52%, 600,96, 12x 45,75, Prime 494,10 e 41,17, economia 655,86, selo 57, por prova 137,25 e 123,52, aberta; combo2 e a cidade intocados; resultado só com `geral:combo1`; sem mudança não grava; fora de venda vira em breve com os preços |
 
 ## X. Publicação agendada (apps/web, automacao.test.ts)
 

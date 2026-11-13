@@ -2,7 +2,7 @@
 // Preços do Odoo: liga a consulta (preço, parcelas, O2 Prime, link, distâncias e status de cada cidade vêm do combo no Odoo),
 // escolhe de quanto em quanto tempo conferir e mostra o endereço do aviso para o pessoal do Odoo e o último resultado.
 import { useEffect, useState } from 'react';
-import { idDoCombo } from '@/lib/comum/odoo';
+import { combosGerais, idDoCombo } from '@/lib/comum/odoo';
 import { INTERVALOS_ODOO, type Evento, type ResultadoOdoo } from '@/lib/comum/tipos';
 import { api, json } from '../api';
 import { useEditor } from '../Editor';
@@ -14,11 +14,12 @@ export function SecaoOdoo() {
   const { evento, alterar, salvarJa, substituir } = useEditor();
   const o = evento.odoo;
   const comLink = evento.cidades.filter((l) => idDoCombo(l.link_inscricao) != null);
+  const gerais = combosGerais(evento.gerais);
   const [config, setConfig] = useState<Config | null>(null);
   const [ocupado, setOcupado] = useState(false);
   const [erro, setErro] = useState('');
   const [copiado, setCopiado] = useState(false);
-  const visivel = !!o || comLink.length > 0;
+  const visivel = !!o || comLink.length > 0 || gerais.length > 0;
   useEffect(() => {
     if (visivel) api<Config>(`/api/hotsites/${evento.slug}/odoo`).then(setConfig).catch(() => setConfig(null));
   }, [visivel, evento.slug]);
@@ -47,7 +48,11 @@ export function SecaoOdoo() {
           <h2 style={{ fontSize: 18 }}>Preços do Odoo</h2>
           <p className="small muted" style={{ margin: 0 }}>
             {o?.ativo
-              ? 'Ligado: preço, parcelas, O2 Prime, link de compra, distâncias e status vêm do combo de cada cidade no Odoo. Se algo mudar, o cadastro é atualizado e o site, republicado.'
+              ? (gerais.length
+                ? `Ligado: os preços de ${gerais.length} combo(s) (campos combo1_…, combo2_…) vêm do Odoo pelo link de cada combo${comLink.length ? `, e os das ${comLink.length} cidade(s) com link, do combo de cada cidade` : ''}. Se algo mudar, o cadastro é atualizado e o site, republicado.`
+                : 'Ligado: preço, parcelas, O2 Prime, link de compra, distâncias e status vêm do combo de cada cidade no Odoo. Se algo mudar, o cadastro é atualizado e o site, republicado.')
+              : gerais.length
+              ? `Desligado: ${gerais.length} combo(s) com link do Odoo${comLink.length ? ` e ${comLink.length} cidade(s)` : ''}. Ligado, preços e status vêm de lá (pelo número no fim do link).`
               : `Desligado: ${comLink.length} cidade(s) com link de combo do Odoo. Ligado, o preço e o resto vêm de lá (pelo número no fim do link).`}
           </p>
         </div>
