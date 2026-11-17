@@ -1902,9 +1902,9 @@
       "etapa4_distancias": "5, 10",
       "link_inscricao_prime": "https://beta.runningland.com.br/shop/combos/cde27combo4pa-combo-circuito-das-estacoes-2027-porto-alegre-452",
       "_odooStatus": "aberta",
-      "preco_comum": "989,96",
-      "porcentagem_desconto": "39",
-      "desconto_em_reais": "390,06",
+      "preco_comum": "1.159,95",
+      "porcentagem_desconto": "48",
+      "desconto_em_reais": "560,05",
       "_odooVendeu": "sim",
       "preco_assinatura_prime": ""
     },
@@ -2502,7 +2502,7 @@
   ],
   "versaoAtiva": 29,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-11-06T03:01:15.983Z",
+  "atualizadoEm": "2026-11-17T03:00:59.834Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
@@ -2552,10 +2552,10 @@
   "odoo": {
     "ativo": true,
     "ultima": {
-      "em": "2026-11-06T03:00:32.344Z",
+      "em": "2026-11-17T03:00:32.236Z",
       "ok": true,
-      "mudou": 33,
-      "mensagem": "33 valor(es) atualizados em 13 cidade(s).",
+      "mudou": 3,
+      "mensagem": "3 valor(es) atualizados em 13 cidade(s).",
       "cidades": [
         {
           "id": "f227a601",
@@ -2639,21 +2639,21 @@
           "nome": "Manaus",
           "combo": 513,
           "ok": true,
-          "mensagem": "achado pelo código CDE27COMBO4MN: R$ 599,90 · aberta"
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "70a24225",
           "nome": "Campinas",
           "combo": 533,
           "ok": true,
-          "mensagem": "achado pelo código CDE27COMBO4CP: R$ 599,90 · aberta"
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "24f37615",
           "nome": "São José dos Campos",
           "combo": 522,
           "ok": true,
-          "mensagem": "achado pelo código CDE27COMBO4SJ: R$ 599,90 · aberta"
+          "mensagem": "R$ 599,90 · aberta"
         },
         {
           "id": "2b35e8ce",
@@ -2678,7 +2678,8 @@
         }
       ]
     },
-    "intervalo": 24
+    "intervalo": 24,
+    "pendente": true
   },
   "secoes": {
     "ocultas": [],
