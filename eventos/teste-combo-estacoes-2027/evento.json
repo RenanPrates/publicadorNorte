@@ -2498,17 +2498,25 @@
       "paginas": 18,
       "avisos": 1,
       "url": "https://renanprates.github.io/publicadorNorte/teste-combo-estacoes-2027/"
+    },
+    {
+      "versao": 30,
+      "commit": "2e63a6795fc8cc69ebb1f2f9b00135f52a134bd1",
+      "em": "2026-11-17T03:00:32.236Z",
+      "paginas": 18,
+      "avisos": 1,
+      "url": "https://renanprates.github.io/publicadorNorte/teste-combo-estacoes-2027/"
     }
   ],
-  "versaoAtiva": 29,
+  "versaoAtiva": 30,
   "criadoEm": "2026-10-14T21:33:59.338Z",
-  "atualizadoEm": "2026-11-17T03:00:59.834Z",
+  "atualizadoEm": "2026-11-17T03:01:10.727Z",
   "producao": {
     "dominios": [
       "combos.circuitodasestacoes.com.br"
     ],
-    "versao": 29,
-    "commit": "157c07bedea9f484c8917bd698c39c9d68dd4f5f",
+    "versao": 30,
+    "commit": "2e63a6795fc8cc69ebb1f2f9b00135f52a134bd1",
     "historico": [
       {
         "versao": 19,
@@ -2545,9 +2553,13 @@
       {
         "versao": 29,
         "em": "2026-11-06T03:00:32.344Z"
+      },
+      {
+        "versao": 30,
+        "em": "2026-11-17T03:00:32.236Z"
       }
     ],
-    "em": "2026-11-06T03:00:32.344Z"
+    "em": "2026-11-17T03:00:32.236Z"
   },
   "odoo": {
     "ativo": true,
@@ -2678,8 +2690,7 @@
         }
       ]
     },
-    "intervalo": 24,
-    "pendente": true
+    "intervalo": 24
   },
   "secoes": {
     "ocultas": [],
